@@ -1,0 +1,224 @@
+﻿/* ============================================
+   Beppi's Archive — 日式极简 · 匠人美学
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ========== 根变量 ========== */
+:root {
+  /* 字体 */
+  --vp-font-family-base: 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
+  --vp-font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* 日本传统色系 */
+  --ink-black: #1a1a1a;
+  --ink-charcoal: #2d2d2d;
+  --paper-warm: #faf7f2;
+  --paper-cream: #f5f0e8;
+  --vermillion: #ba2e1f;
+  --vermillion-light: #d44535;
+  --gold: #c4a35a;
+  --indigo: #2c3e6b;
+  --moss: #5c6b4e;
+  --stone: #8c8273;
+
+  /* 应用到 VitePress */
+  --vp-c-brand-1: var(--vermillion);
+  --vp-c-brand-2: var(--vermillion-light);
+  --vp-c-brand-3: #9b2213;
+  --vp-c-brand-soft: rgba(186, 46, 31, 0.1);
+
+  --vp-c-bg: var(--paper-warm);
+  --vp-c-bg-alt: var(--paper-cream);
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: var(--paper-cream);
+
+  --vp-c-text-1: var(--ink-black);
+  --vp-c-text-2: #4a4a4a;
+  --vp-c-text-3: var(--stone);
+
+  --vp-c-divider: #e8e2d8;
+  --vp-c-border: #d4cdbf;
+  --vp-c-gutter: #e8e2d8;
+
+  --vp-sidebar-width: 240px;
+  --vp-nav-height: 56px;
+
+  /* 页面过渡 */
+  --vp-layout-max-width: 900px;
+}
+
+/* ========== 暗色模式 ========== */
+.dark {
+  --vp-c-bg: var(--ink-black);
+  --vp-c-bg-alt: #222;
+  --vp-c-bg-elv: var(--ink-charcoal);
+  --vp-c-bg-soft: #242424;
+
+  --vp-c-text-1: #e8e0d5;
+  --vp-c-text-2: #b5a99a;
+  --vp-c-text-3: #7a7065;
+
+  --vp-c-divider: #333;
+  --vp-c-border: #444;
+  --vp-c-gutter: #2a2a2a;
+
+  --vp-c-brand-1: var(--vermillion-light);
+  --vp-c-brand-soft: rgba(212, 69, 53, 0.14);
+}
+
+/* ========== 排版 ========== */
+.vp-doc h1 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-bottom: 1px solid var(--vp-c-divider);
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  color: var(--ink-black);
+}
+.dark .vp-doc h1 { color: #e8e0d5; }
+
+.vp-doc h2 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 2em;
+  padding-left: 0.5em;
+  border-left: 3px solid var(--vermillion);
+}
+
+.vp-doc h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--vp-c-text-2);
+}
+
+.vp-doc p { line-height: 2; font-size: 0.95rem; }
+.vp-doc a { color: var(--indigo); text-decoration: none; border-bottom: 1px dotted var(--indigo); }
+.dark .vp-doc a { color: #7b9cd6; border-color: #5a7ab0; }
+.vp-doc a:hover { border-bottom-style: solid; }
+
+/* ========== 代码块 ========== */
+.vp-doc pre {
+  border-radius: 4px;
+  border: 1px solid var(--vp-c-divider);
+  font-size: 0.85em;
+}
+.vp-doc code { font-size: 0.88em; }
+
+/* ========== 引用块 ========== */
+.vp-doc blockquote {
+  border-left: 2px solid var(--gold);
+  background: linear-gradient(to right, rgba(196, 163, 90, 0.06), transparent);
+  border-radius: 0 4px 4px 0;
+  padding: 1.2em 1.5em;
+  margin: 1.5em 0;
+  font-style: italic;
+  color: var(--vp-c-text-2);
+}
+
+/* ========== 表格 ========== */
+.vp-doc table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+}
+.vp-doc th {
+  background: var(--ink-black);
+  color: var(--paper-warm);
+  padding: 8px 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.dark .vp-doc th {
+  background: #333;
+  color: #e8e0d5;
+}
+.vp-doc td {
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+/* ========== 导航栏 ========== */
+.VPNav {
+  border-bottom: 1px solid var(--vp-c-divider);
+  backdrop-filter: blur(8px);
+}
+.VPNavBarTitle .title {
+  font-family: 'Noto Serif SC', serif;
+  letter-spacing: 3px;
+  font-size: 1rem;
+}
+
+/* ========== 侧边栏 ========== */
+.VPSidebar {
+  border-right: 1px solid var(--vp-c-divider);
+}
+.VPSidebarItem .text {
+  font-size: 0.88em;
+  font-weight: 400;
+}
+
+/* ========== Footer ========== */
+.VPFooter {
+  border-top: 1px solid var(--vp-c-divider);
+  padding: 1.5rem 0;
+  font-size: 0.8em;
+  color: var(--vp-c-text-3);
+}
+
+/* ========== 滚动条 ========== */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #c4b99a; border-radius: 3px; }
+.dark ::-webkit-scrollbar-thumb { background: #4a4030; }
+
+/* ========== 自定义容器 ========== */
+.vp-doc .custom-block {
+  border-radius: 4px;
+  padding: 1em 1.2em;
+  margin: 1.2em 0;
+}
+
+
+/* ========== 移动端适配 ========== */
+@media (max-width: 768px) {
+  .vp-doc h1 { font-size: 1.3rem; }
+  .vp-doc h2 { font-size: 1.05rem; }
+  .vp-doc h3 { font-size: 0.9rem; }
+  .vp-doc p { font-size: 0.85rem; line-height: 1.8; }
+  
+  .VPHero .name { font-size: 1.8rem !important; letter-spacing: 3px; }
+  .VPHero .text { font-size: 0.85rem !important; letter-spacing: 3px; }
+  .VPHero .tagline { font-size: 0.7rem !important; letter-spacing: 2px; }
+  
+  .VPHero { padding: 2rem 1rem 1rem !important; }
+  
+  .vp-doc table { font-size: 0.75em; display: block; overflow-x: auto; }
+  .vp-doc th, .vp-doc td { padding: 6px 8px; }
+  
+  .vp-doc pre { font-size: 0.75em; max-width: 100%; overflow-x: auto; }
+  .vp-doc code { font-size: 0.8em; word-break: break-all; }
+  
+  .vp-doc blockquote { padding: 0.8em 1em; margin: 1em 0; font-size: 0.85em; }
+  
+  .VPNavBarTitle .title { font-size: 0.85rem; }
+  .VPNavBarMenu { display: none; }
+}
+
+@media (max-width: 480px) {
+  .VPHero .name { font-size: 1.5rem !important; }
+  .VPHero .actions .VPButton { padding: 0.5em 1em; font-size: 0.8rem; }
+  
+  .vp-doc h1 { font-size: 1.15rem; }
+  .vp-doc h2 { font-size: 0.95rem; border-left-width: 2px; padding-left: 0.4em; }
+  
+  .vp-doc table { font-size: 0.7em; }
+}/* ========== 响应式 ========== */
+@media (max-width: 768px) {
+  .vp-doc h1 { font-size: 1.4rem; }
+  .vp-doc h2 { font-size: 1.1rem; }
+}
+

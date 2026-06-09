@@ -1,0 +1,2 @@
+﻿# Browser Plugin: Control In-App Browser
+I need to navigate to the local VitePress knowledge base site running at http://localhost:5173 to preview the knowledge base.

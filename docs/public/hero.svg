@@ -1,0 +1,45 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <!-- 行星轨道 -->
+  <ellipse cx="200" cy="150" rx="160" ry="80" stroke="#e5d5a4" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.6"/>
+  <ellipse cx="200" cy="150" rx="110" ry="55" stroke="#d4b96a" stroke-width="1" stroke-dasharray="5 5" opacity="0.4" transform="rotate(-20 200 150)"/>
+  
+  <!-- 中心太阳 -->
+  <circle cx="200" cy="150" r="22" fill="url(#sunGrad)"/>
+  <radialGradient id="sunGrad">
+    <stop offset="0%" stop-color="#fbbf24"/>
+    <stop offset="70%" stop-color="#f59e0b"/>
+    <stop offset="100%" stop-color="#d97706"/>
+  </radialGradient>
+  
+  <!-- 轨道上的行星 -->
+  <circle cx="360" cy="150" r="10" fill="url(#p1Grad)"/>
+  <radialGradient id="p1Grad">
+    <stop offset="0%" stop-color="#93c5fd"/>
+    <stop offset="100%" stop-color="#3b82f6"/>
+  </radialGradient>
+  
+  <circle cx="70" cy="180" r="8" fill="url(#p2Grad)"/>
+  <radialGradient id="p2Grad">
+    <stop offset="0%" stop-color="#fca5a5"/>
+    <stop offset="100%" stop-color="#ef4444"/>
+  </radialGradient>
+  
+  <circle cx="300" cy="100" r="6" fill="url(#p3Grad)"/>
+  <radialGradient id="p3Grad">
+    <stop offset="0%" stop-color="#a5b4fc"/>
+    <stop offset="100%" stop-color="#6366f1"/>
+  </radialGradient>
+  
+  <!-- 连接线 -->
+  <line x1="200" y1="150" x2="360" y2="150" stroke="#d4b96a" stroke-width="1" opacity="0.3"/>
+  <line x1="200" y1="150" x2="70" y2="180" stroke="#d4b96a" stroke-width="1" opacity="0.3"/>
+  <line x1="200" y1="150" x2="300" y2="100" stroke="#d4b96a" stroke-width="1" opacity="0.3"/>
+  
+  <!-- 散布的星星 -->
+  <circle cx="320" cy="60" r="1.5" fill="#eab308" opacity="0.6"/>
+  <circle cx="100" cy="70" r="1" fill="#eab308" opacity="0.4"/>
+  <circle cx="50" cy="130" r="1.5" fill="#eab308" opacity="0.5"/>
+  <circle cx="350" cy="200" r="1" fill="#eab308" opacity="0.3"/>
+  <circle cx="160" cy="250" r="1" fill="#eab308" opacity="0.4"/>
+  <circle cx="280" cy="240" r="1.5" fill="#eab308" opacity="0.5"/>
+</svg>
