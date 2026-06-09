@@ -2,7 +2,7 @@
 
 export default defineConfig({
   lang: "zh-CN",
-  title: "Beppi's Archive",
+  title: "YUTATA",
   description: "通识 · 产品 · 思考 · 记录",
   head: [
     ["link", { rel: "icon", href: "/favicon.svg" }],
