@@ -1,7 +1,5 @@
 ﻿# 歌词翻译 · 疯狂周四编辑部
 
-> *2025.08.21 · 「荣幸、荣幸、荣幸。」*
-
 本人来到网易曲库实习不到两个月的作品，第一期为小范围投放试点，故只写了数据汇总；第二期为正式策划运营活动，分为策划案、复盘总结、配置与成本三个板块。
 
 荣幸、荣幸、荣幸。
@@ -88,41 +86,51 @@
 歌词与翻译各配置三个阶梯任务：
 
 <div class="img-group">
-  <div class="img-row wide">
+  <figure class="dish">
     <img src="/crazy-thursday/阶梯任务1.png" alt="阶梯任务 1" />
+  </figure>
+  <figure class="dish">
     <img src="/crazy-thursday/阶梯任务2.png" alt="阶梯任务 2" />
-  </div>
-  <div class="img-row wide">
+  </figure>
+  <figure class="dish">
     <img src="/crazy-thursday/阶梯任务3.png" alt="阶梯任务 3" />
+  </figure>
+  <figure class="dish">
     <img src="/crazy-thursday/阶梯任务4.png" alt="阶梯任务 4" />
-  </div>
+  </figure>
 </div>
 
 **计数工具**（活动期间上传量统计，不设上限）：
 
 <div class="img-group">
-  <div class="img-row wide">
+  <figure class="dish">
     <img src="/crazy-thursday/歌词翻译计数工具1.png" alt="计数工具 1" />
+  </figure>
+  <figure class="dish">
     <img src="/crazy-thursday/歌词翻译计数工具2.png" alt="计数工具 2" />
-  </div>
+  </figure>
 </div>
 
 **奖励积分发放**（周四 & 周五双倍积分）：
 
 <div class="img-group">
-  <div class="img-row wide">
+  <figure class="dish">
     <img src="/crazy-thursday/歌词翻译奖励积分1.png" alt="奖励积分 1" />
+  </figure>
+  <figure class="dish">
     <img src="/crazy-thursday/歌词翻译奖励积分2.png" alt="奖励积分 2" />
-  </div>
+  </figure>
 </div>
 
 **鸡腿获取**（20 份歌词 / 10 份翻译 → 1 个炸鸡腿）：
 
 <div class="img-group">
-  <div class="img-row wide">
+  <figure class="dish">
     <img src="/crazy-thursday/歌词翻译鸡腿获取1.png" alt="鸡腿获取 1" />
+  </figure>
+  <figure class="dish">
     <img src="/crazy-thursday/歌词翻译鸡腿获取2.png" alt="鸡腿获取 2" />
-  </div>
+  </figure>
 </div>
 
 ---
@@ -270,3 +278,4 @@
 ---
 
 > *毕竟，让喜欢的歌更完整，本身就是件浪漫的事呀～*
+
