@@ -55,11 +55,11 @@
 海胆、鸡油菇、红金眼鲷还有鲜花派，采用液氮、真空机、瞬间冷冻、发酵烹饪，能将这些食材的全新魅力发挥到淋漓尽致。P2 为仅由烤干李子果汁制成的类似软糖的薄垫，直接用手卷起来品尝。
 
 <div class="img-group">
-  <div class="img-row">
+  <div class="img-row square">
     <img src="/tokyo/Gaku特色餐品1.jpg" alt="Gaku 特色餐品" />
     <img src="/tokyo/Gaku特色餐品2.jpg" alt="Gaku 特色餐品" />
   </div>
-  <div class="img-row">
+  <div class="img-row square">
     <img src="/tokyo/Gaku特色餐品3.jpg" alt="Gaku 特色餐品" />
     <img src="/tokyo/Gaku特色餐品4.jpg" alt="Gaku 特色餐品" />
   </div>
@@ -114,7 +114,7 @@
 传说中的野味食材猎手。与其他猎手的猎枪式击杀不同，峰岸先生采用**最传统的陷阱式捕猎**，带到仓库后进行放血处理，从而使肉质与生前保持一致，且**没有腥味**。
 
 <div class="img-group">
-  <div class="img-row">
+  <div class="img-row square">
     <img src="/tokyo/峰岸先生的烤鹿肉1.png" alt="峰岸先生的烤鹿肉" />
     <img src="/tokyo/峰岸先生的烤鹿肉2.png" alt="峰岸先生的烤鹿肉" />
   </div>
@@ -164,7 +164,7 @@
 而关于清汤：用大腿骨和剩余的筋骨肉，加上蔬菜熬煮五小时左右。原本想采用蛋清来吸附杂质，但总觉得太高级了——于是采用**鹿血吸附杂质**（血红蛋白也是蛋白！）。这样肉是野的，汤也是野的，浑身充斥着天然风味。
 
 <div class="img-group">
-  <div class="img-row">
+  <div class="img-row square">
     <img src="/tokyo/清汤鹿肉1.png" alt="清汤鹿肉" />
     <img src="/tokyo/清汤鹿肉2.png" alt="清汤鹿肉" />
   </div>
@@ -180,7 +180,7 @@
 
 <div class="img-group">
   <span class="img-group-label">左：尾花作品 · 右：萌绘作品</span>
-  <div class="img-row">
+  <div class="img-row square">
     <img src="/tokyo/尾花甜点作品.jpg" alt="尾花甜点作品" />
     <img src="/tokyo/萌绘甜点作品.jpg" alt="萌绘甜点作品" />
   </div>
@@ -211,7 +211,7 @@
 | **烤箱烘焙** | 借鉴糖炒栗子灵感，干火烘出外壳芳香 | ✓ 涩味衬托甘甜，余味柔和 |
 
 <div class="img-group">
-  <div class="img-row">
+  <div class="img-row square">
     <img src="/tokyo/最终甜点作品1.jpg" alt="最终甜点作品" />
     <img src="/tokyo/最终甜点作品2.jpg" alt="最终甜点作品" />
   </div>
@@ -240,7 +240,7 @@
 用南瓜籽的清汤温煮鳃棘鲈，搭配胡桃、山毛榉香草、麦曲酱。偏清淡口，各国人民都能吃得惯，但并未在口感上发挥出新奇的体验。
 
 <div class="img-group">
-  <div class="img-row">
+  <div class="img-row square">
     <img src="/tokyo/鳃棘鲈1.png" alt="鳃棘鲈" />
     <img src="/tokyo/鳃棘鲈2.png" alt="鳃棘鲈" />
   </div>
@@ -251,7 +251,7 @@
 用无花果叶包裹鱼肉，放进蘑菇和海藻熬出的汤汁里蒸煮。鮟鱇鱼搭配海带，风味浓厚，再附着蘑菇汤的鲜味，口感更加丰富。
 
 <div class="img-group">
-  <div class="img-row">
+  <div class="img-row square">
     <img src="/tokyo/鮟鱇鱼1.png" alt="鮟鱇鱼" />
     <img src="/tokyo/鮟鱇鱼2.png" alt="鮟鱇鱼" />
   </div>
@@ -268,6 +268,7 @@
 ---
 
 > *本文内容来源于日剧《东京大饭店》（グランメゾン東京），为个人观剧笔记，非专业烹饪指南。*
+
 
 
 
