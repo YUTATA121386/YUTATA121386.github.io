@@ -269,52 +269,5 @@
 
 > *本文内容来源于日剧《东京大饭店》（グランメゾン東京），为个人观剧笔记，非专业烹饪指南。*
 
-<style scoped>
-.img-group {
-  margin: 20px 0;
-}
-.img-group-label {
-  display: block;
-  font-size: 0.78rem;
-  color: var(--vp-c-text-2);
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-  padding-left: 2px;
-}
-.img-row {
-  display: flex;
-  gap: 12px;
-  margin: 8px 0;
-  align-items: flex-start;
-}
-.img-row img {
-  flex: 1;
-  min-width: 0;
-  border-radius: 6px;
-  border: 1px solid var(--vp-c-divider);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.img-row img:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(186, 46, 31, 0.1);
-}
 
-figure.dish {
-  max-width: 640px;
-  margin: 16px 0;
-}
-figure.dish img {
-  width: 100%;
-  border-radius: 6px;
-  border: 1px solid var(--vp-c-divider);
-}
 
-@media (max-width: 640px) {
-  .img-row {
-    flex-direction: column;
-  }
-  figure.dish {
-    max-width: 100%;
-  }
-}
-</style>

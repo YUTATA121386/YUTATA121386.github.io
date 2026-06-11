@@ -1,5 +1,5 @@
 ﻿/* ============================================
-   Beppi's Archive — 日式极简 · 匠人美学
+   YUTATA's Archive — 日式极简 · 匠人美学
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap');
@@ -182,6 +182,121 @@
   margin: 1.2em 0;
 }
 
+/* ========== 图片通用样式 ========== */
+
+/* 图片组 */
+.img-group {
+  margin: 24px 0;
+}
+.img-group-label {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--vp-c-text-2);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  padding-left: 2px;
+}
+
+/* 双栏图片行 — 同组等高等宽 */
+.img-row {
+  display: flex;
+  gap: 12px;
+  margin: 8px 0;
+  align-items: stretch;
+}
+.img-row img {
+  flex: 1;
+  min-width: 0;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  border-radius: 6px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+  cursor: zoom-in;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.img-row img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(186, 46, 31, 0.1);
+}
+
+/* 单图展示 */
+figure.dish {
+  max-width: 640px;
+  margin: 16px 0;
+}
+figure.dish img {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--vp-c-divider);
+  cursor: zoom-in;
+}
+
+/* 海报居中 */
+figure.poster {
+  max-width: 480px;
+  margin: 24px auto;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+}
+figure.poster img {
+  width: 100%;
+  display: block;
+  cursor: zoom-in;
+}
+
+/* ========== 图片灯箱 ========== */
+.img-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.img-lightbox.active {
+  display: flex;
+}
+.img-lightbox-bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  cursor: zoom-out;
+}
+.img-lightbox-inner {
+  position: relative;
+  max-width: 92vw;
+  max-height: 92vh;
+  z-index: 1;
+  animation: lightboxIn 0.25s ease;
+}
+.img-lightbox-inner img {
+  max-width: 92vw;
+  max-height: 88vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+.img-lightbox-close {
+  position: absolute;
+  top: -36px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+.img-lightbox-close:hover { opacity: 1; }
+
+@keyframes lightboxIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
 
 /* ========== 移动端适配 ========== */
 @media (max-width: 768px) {
@@ -206,6 +321,13 @@
   
   .VPNavBarTitle .title { font-size: 0.85rem; }
   .VPNavBarMenu { display: none; }
+
+  .img-row {
+    flex-direction: column;
+  }
+  figure.dish {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -216,9 +338,4 @@
   .vp-doc h2 { font-size: 0.95rem; border-left-width: 2px; padding-left: 0.4em; }
   
   .vp-doc table { font-size: 0.7em; }
-}/* ========== 响应式 ========== */
-@media (max-width: 768px) {
-  .vp-doc h1 { font-size: 1.4rem; }
-  .vp-doc h2 { font-size: 1.1rem; }
 }
-

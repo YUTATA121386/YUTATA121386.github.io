@@ -7,6 +7,7 @@ export default defineConfig({
   head: [
     ["link", { rel: "icon", href: "/favicon.svg" }],
     ["link", { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" }],
+    ["script", { src: "/lightbox.js" }],
   ],
 
   themeConfig: {
@@ -82,4 +83,3 @@ export default defineConfig({
     math: true,
   },
 })
-
