@@ -1,4 +1,4 @@
-# 东京大饭店 · 法餐与日式材料的可能性
+﻿# 东京大饭店 · 法餐与日式材料的可能性
 
 > 从日剧《东京大饭店》中提取的法餐技法、米其林体系与菜品研发实录。
 
@@ -44,21 +44,25 @@
 
 ### 鮟鱇鱼肝酱
 
-通过将鮍鱇鱼肝与豆浆真空处理，制造出蓬松气泡后冻结成固态。推荐搭配干蓝靛果忍冬泥、鱼鳞云杉染香油食用。
+通过将鮟鱇鱼肝与豆浆真空处理，制造出蓬松气泡后冻结成固态。推荐搭配干蓝靛果忍冬泥、鱼鳞云杉染香油食用。
 
-![鮟鱇鱼肝酱](/tokyo/鮟鱇鱼肝酱.png)
+<figure class="dish">
+  <img src="/tokyo/鮟鱇鱼肝酱.png" alt="鮟鱇鱼肝酱" />
+</figure>
 
 ### Gaku 特色餐品
 
 海胆、鸡油菇、红金眼鲷还有鲜花派，采用液氮、真空机、瞬间冷冻、发酵烹饪，能将这些食材的全新魅力发挥到淋漓尽致。P2 为仅由烤干李子果汁制成的类似软糖的薄垫，直接用手卷起来品尝。
 
-<div class="img-row">
-  <img src="/tokyo/Gaku特色餐品1.jpg" alt="Gaku特色餐品">
-  <img src="/tokyo/Gaku特色餐品2.jpg" alt="Gaku特色餐品">
-</div>
-<div class="img-row">
-  <img src="/tokyo/Gaku特色餐品3.jpg" alt="Gaku特色餐品">
-  <img src="/tokyo/Gaku特色餐品4.jpg" alt="Gaku特色餐品">
+<div class="img-group">
+  <div class="img-row">
+    <img src="/tokyo/Gaku特色餐品1.jpg" alt="Gaku 特色餐品" />
+    <img src="/tokyo/Gaku特色餐品2.jpg" alt="Gaku 特色餐品" />
+  </div>
+  <div class="img-row">
+    <img src="/tokyo/Gaku特色餐品3.jpg" alt="Gaku 特色餐品" />
+    <img src="/tokyo/Gaku特色餐品4.jpg" alt="Gaku 特色餐品" />
+  </div>
 </div>
 
 ---
@@ -71,13 +75,17 @@
 
 抹茶搭配意面，和红酒的味道很搭，富有创新且符合日本人的口味。
 
-![抹茶奶油芝士意面](/tokyo/抹茶奶油芝士意面.png)
+<figure class="dish">
+  <img src="/tokyo/抹茶奶油芝士意面.png" alt="抹茶奶油芝士意面" />
+</figure>
 
 ### 鳕鱼子松露风味烤土豆
 
 传统法餐，依赖黑松露这种高级食材——但并不符合家庭主妇的生活格调。
 
-![鳕鱼子松露风味烤土豆](/tokyo/鳕鱼子松露风味烤土豆.png)
+<figure class="dish">
+  <img src="/tokyo/鳕鱼子松露风味烤土豆.png" alt="鳕鱼子松露风味烤土豆" />
+</figure>
 
 ### ⭐ 茄子白鸡肝精碎
 
@@ -93,7 +101,9 @@
 - 鸡肝要用**小豆蔻慢慢去掉臭味**
 - 烤可可时为了不让焦味盖过香味，必须**慢火轻烤**
 
-![茄子白鸡肝精碎](/tokyo/茄子白鸡肝精碎.png)
+<figure class="dish">
+  <img src="/tokyo/茄子白鸡肝精碎.png" alt="茄子白鸡肝精碎" />
+</figure>
 
 ---
 
@@ -101,44 +111,51 @@
 
 ### 峰岸先生的烤鹿肉
 
-传说中的野味食材猎手。与其他猎手的猎枪式击杀不同，峰岸先生采用**最传统的陷阱式捕猎**，带到仓库后进行放血处理，从而使肉质与动物生前保持一致，且**没有腥味**。
+传说中的野味食材猎手。与其他猎手的猎枪式击杀不同，峰岸先生采用**最传统的陷阱式捕猎**，带到仓库后进行放血处理，从而使肉质与生前保持一致，且**没有腥味**。
 
-![峰岸先生的烤鹿肉](/tokyo/峰岸先生的烤鹿肉1.png)
-
-![峰岸先生的烤鹿肉](/tokyo/峰岸先生的烤鹿肉2.png)
+<div class="img-group">
+  <div class="img-row">
+    <img src="/tokyo/峰岸先生的烤鹿肉1.png" alt="峰岸先生的烤鹿肉" />
+    <img src="/tokyo/峰岸先生的烤鹿肉2.png" alt="峰岸先生的烤鹿肉" />
+  </div>
+</div>
 
 - **拍松鹿里脊肉**：使用酸橘和酸橙做出的橙汁，加上虾米增添鲜味
 - **鹿眼肉**：只用粗盐和胡椒简单调味，保留肉质中的野性，鹿肉的独特风味被发挥得淋漓尽致
 
 > 好想试试在木屋里围着木炭烤鹿肉吃的感觉啊。
-![围炉烤鹿肉](/tokyo/围炉烤鹿肉图.png)
 
+<figure class="dish">
+  <img src="/tokyo/围炉烤鹿肉图.png" alt="围炉烤鹿肉" />
+</figure>
 
 ### 清汤制作
 
 芹田发问：「既然市面上有清汤粉和清汤块，一冲一泡就好了，制作能有什么难的呢？」
 
-实际上清汤制作步骤虽然流程固定——一般用骨头、筋骨肉和蔬菜熬煮而成——但产生的浮沫、骨渣等杂质难以去除。此时需要加入蛋清，**蛋白质可吸附杂质**，最后只剩下**干净透明的液体**。步骤虽简单，但火候难以把控，**需要有人一直看着**。若每次使用的蔬菜和肉不一样，味道也会完全不同。
+实际上清汤制作步骤虽然流程固定——一般用骨头、筋骨肉和蔬菜熬煮而成——但产生的浮沫、油脂与蔬菜浮渣必须持续手工清除，否则成品浑浊。这也是尾花起初拒绝芹田担任副厨的原因。
 
-![清汤制作](/tokyo/清汤制作.png)
+<figure class="dish">
+  <img src="/tokyo/清汤制作.png" alt="清汤制作" />
+</figure>
 
-### 丹后的备赛菜品
+芹田不服，向相泽求教。相泽让他品尝了自己的清汤，芹田尝了一口后震惊不已。于是下定决定花了整整一周，反复改良。
 
-**第一道 · 熟成里脊肉**
+### 菇夹鹿肉
 
-![熟成里脊肉](/tokyo/熟成里脊肉1.png)
+试做菜品时，试了三种搭配：
 
-![熟成里脊肉](/tokyo/熟成里脊肉2.png)
+**第一回合**
 
-采用熟成方式处理鹿里脊，但鹿肉的熟成很难，要花很久才能找到最佳状态。
+用网油包裹鹿肉，加胡椒和粗盐简单调味，放进蒸笼里蒸。一边蒸肉，另一边让菌菇吸收汤汁。
 
-**第二道 · 菇夹肉**
+结果：肉很好吃，但作为法餐过于朴素，整体操作下来更像中餐。而且没有表现出肉质的纹理，用蒸笼不够专业。
 
-![菇夹肉](/tokyo/菇夹肉1.png)
+**第二回合**
 
-![菇夹肉](/tokyo/菇夹肉2.png)
+借鉴京料理的**秘传烧**手法——不使用油，像烤海苔一样在明火上翻动，既能烤出焦痕锁住肉汁，也能烤出油脂滴落产生的烟熏风味。
 
-个人评价：菇夹肉远不如第一道的视觉冲击与野性来得强，但第二道着重于把菌菇和鹿肉放在一起吃，确实能够丰富味道，造型上是一种山野幽深的静谧感。
+结果：虽然第一道肉菜已经用了烤的手法，但第二道着重于把菌菇和鹿肉放在一起吃，确实能够丰富味道，造型上是一种山野幽深的静谧感。
 
 **最终方案**
 
@@ -146,9 +163,12 @@
 
 而关于清汤：用大腿骨和剩余的筋骨肉，加上蔬菜熬煮五小时左右。原本想采用蛋清来吸附杂质，但总觉得太高级了——于是采用**鹿血吸附杂质**（血红蛋白也是蛋白！）。这样肉是野的，汤也是野的，浑身充斥着天然风味。
 
-![清汤鹿肉](/tokyo/清汤鹿肉1.png)
-
-![清汤鹿肉](/tokyo/清汤鹿肉2.png)
+<div class="img-group">
+  <div class="img-row">
+    <img src="/tokyo/清汤鹿肉1.png" alt="清汤鹿肉" />
+    <img src="/tokyo/清汤鹿肉2.png" alt="清汤鹿肉" />
+  </div>
+</div>
 
 ---
 
@@ -158,9 +178,12 @@
 
 临近餐厅试营业，还缺一道甜品收尾。尾花听闻当地自助餐厅有位出名的甜品新人萌绘——虽年纪小但履历丰富，不到两年便拿下了日本西点新人奖、世界糕点设计奖以及代表世界糖艺巅峰的卢瓦尔奖。
 
-<div class="img-row">
-  <img src="/tokyo/尾花甜点作品.jpg" alt="尾花甜点作品">
-  <img src="/tokyo/萌绘甜点作品.jpg" alt="萌绘甜点作品">
+<div class="img-group">
+  <span class="img-group-label">左：尾花作品 · 右：萌绘作品</span>
+  <div class="img-row">
+    <img src="/tokyo/尾花甜点作品.jpg" alt="尾花甜点作品" />
+    <img src="/tokyo/萌绘甜点作品.jpg" alt="萌绘甜点作品" />
+  </div>
 </div>
 
 她信心满满地拿出自己的作品，但大家品尝后并不买账：
@@ -187,9 +210,12 @@
 | 细砂糖调整 | 减少糖比例 | ✕ 要的是香气，而非甜度 |
 | **烤箱烘焙** | 借鉴糖炒栗子灵感，干火烘出外壳芳香 | ✓ 涩味衬托甘甜，余味柔和 |
 
-![最终甜点作品](/tokyo/最终甜点作品1.jpg)
-
-![最终甜点作品](/tokyo/最终甜点作品2.jpg)
+<div class="img-group">
+  <div class="img-row">
+    <img src="/tokyo/最终甜点作品1.jpg" alt="最终甜点作品" />
+    <img src="/tokyo/最终甜点作品2.jpg" alt="最终甜点作品" />
+  </div>
+</div>
 
 > 借烤栗子的香气和涩味，衬托出栗仁的芳香与甘甜。余味很柔和，也起到了为所有菜肴收尾的作用。
 
@@ -213,45 +239,82 @@
 
 用南瓜籽的清汤温煮鳃棘鲈，搭配胡桃、山毛榉香草、麦曲酱。偏清淡口，各国人民都能吃得惯，但并未在口感上发挥出新奇的体验。
 
-![鳃棘鲈](/tokyo/鳃棘鲈1.png)
-
-![鳃棘鲈](/tokyo/鳃棘鲈2.png)
+<div class="img-group">
+  <div class="img-row">
+    <img src="/tokyo/鳃棘鲈1.png" alt="鳃棘鲈" />
+    <img src="/tokyo/鳃棘鲈2.png" alt="鳃棘鲈" />
+  </div>
+</div>
 
 **鮟鱇鱼**
 
 用无花果叶包裹鱼肉，放进蘑菇和海藻熬出的汤汁里蒸煮。鮟鱇鱼搭配海带，风味浓厚，再附着蘑菇汤的鲜味，口感更加丰富。
 
-![鮟鱇鱼](/tokyo/鮟鱇鱼1.png)
-
-![鮟鱇鱼](/tokyo/鮟鱇鱼2.png)
+<div class="img-group">
+  <div class="img-row">
+    <img src="/tokyo/鮟鱇鱼1.png" alt="鮟鱇鱼" />
+    <img src="/tokyo/鮟鱇鱼2.png" alt="鮟鱇鱼" />
+  </div>
+</div>
 
 ### ⭐ 香烤马鲛鱼配水晶柚子酱
 
 要想充分发挥鱼肉的鲜味，尾花优先想到了熏制或发酵。但熏鱼过火就变成香煎，丧失了生鲜口感。虽然可以通过控制火候来调整，但每条鱼的状态、当天的空气湿度、温度都不可控。而且法餐不是重口味的菜，需要搭配酱汁来中和火气。
 
-![香烤马鲛鱼](/tokyo/香烤马鲛鱼配水晶柚子酱.png)
+<figure class="dish">
+  <img src="/tokyo/香烤马鲛鱼配水晶柚子酱.png" alt="香烤马鲛鱼配水晶柚子酱" />
+</figure>
 
 ---
 
 > *本文内容来源于日剧《东京大饭店》（グランメゾン東京），为个人观剧笔记，非专业烹饪指南。*
 
-<style>
+<style scoped>
+.img-group {
+  margin: 20px 0;
+}
+.img-group-label {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--vp-c-text-2);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  padding-left: 2px;
+}
 .img-row {
   display: flex;
   gap: 12px;
-  margin: 16px 0;
+  margin: 8px 0;
+  align-items: flex-start;
 }
 .img-row img {
-  width: calc(50% - 6px);
-  border-radius: 4px;
+  flex: 1;
+  min-width: 0;
+  border-radius: 6px;
+  border: 1px solid var(--vp-c-divider);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.img-row img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(186, 46, 31, 0.1);
+}
+
+figure.dish {
+  max-width: 640px;
+  margin: 16px 0;
+}
+figure.dish img {
+  width: 100%;
+  border-radius: 6px;
   border: 1px solid var(--vp-c-divider);
 }
+
 @media (max-width: 640px) {
   .img-row {
     flex-direction: column;
   }
-  .img-row img {
-    width: 100%;
+  figure.dish {
+    max-width: 100%;
   }
 }
 </style>
