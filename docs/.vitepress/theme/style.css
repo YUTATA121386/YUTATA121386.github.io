@@ -1,5 +1,6 @@
 ﻿/* ============================================
-   YUTATA's Archive — 体系与温度
+   YUTATA's Archive
+   .VPDoc 前缀确保覆盖 VitePress 默认值
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap');
@@ -54,10 +55,10 @@
   --vermillion-faded: rgba(212, 69, 53, 0.08);
 }
 
-/* ========== 排版 ========== */
-.vp-doc { line-height: 1.85; font-size: 0.95rem; letter-spacing: 0.02em; }
+/* ========== 排版 — 高优先级覆盖 VitePress ========== */
+.VPDoc .vp-doc { line-height: 1.85; font-size: 0.95rem; letter-spacing: 0.02em; }
 
-.vp-doc h1 {
+.VPDoc .vp-doc h1 {
   font-family: 'Noto Serif SC', serif;
   font-size: 2rem;
   font-weight: 700;
@@ -66,9 +67,9 @@
   padding-bottom: 0.5em;
   border-bottom: 2px solid var(--vp-c-divider);
 }
-.dark .vp-doc h1 { color: #e8e0d5; }
+.dark .VPDoc .vp-doc h1 { color: #e8e0d5; }
 
-.vp-doc h2 {
+.VPDoc .vp-doc h2 {
   font-family: 'Noto Serif SC', serif;
   font-size: 1.25rem;
   font-weight: 600;
@@ -77,9 +78,11 @@
   margin-bottom: 0.8em;
   padding-left: 0.6em;
   border-left: 3px solid var(--vermillion);
+  border-top: none;
+  padding-top: 0;
 }
 
-.vp-doc h3 {
+.VPDoc .vp-doc h3 {
   font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -88,19 +91,19 @@
   color: var(--vp-c-text-2);
 }
 
-.vp-doc p { line-height: 1.9; margin: 0.8em 0; }
+.VPDoc .vp-doc p { line-height: 1.9; margin: 0.8em 0; }
 
-.vp-doc a {
+.VPDoc .vp-doc a {
   color: var(--indigo);
   text-decoration: none;
   border-bottom: 1px dotted var(--indigo);
   transition: border-color 0.15s;
 }
-.dark .vp-doc a { color: #7b9cd6; border-color: #5a7ab0; }
-.vp-doc a:hover { border-bottom-style: solid; }
+.dark .VPDoc .vp-doc a { color: #7b9cd6; border-color: #5a7ab0; }
+.VPDoc .vp-doc a:hover { border-bottom-style: solid; }
 
 /* ========== 引用块 ========== */
-.vp-doc blockquote {
+.VPDoc .vp-doc blockquote {
   border-left: 2px solid var(--gold);
   background: linear-gradient(to right, rgba(196, 163, 90, 0.07), transparent 60%);
   border-radius: 0 4px 4px 0;
@@ -110,12 +113,12 @@
   color: var(--vp-c-text-2);
   font-size: 0.92em;
 }
-.vp-doc blockquote p { margin: 0.3em 0; }
-.vp-doc blockquote p:first-child { margin-top: 0; }
-.vp-doc blockquote p:last-child { margin-bottom: 0; }
+.VPDoc .vp-doc blockquote p { margin: 0.3em 0; }
+.VPDoc .vp-doc blockquote p:first-child { margin-top: 0; }
+.VPDoc .vp-doc blockquote p:last-child { margin-bottom: 0; }
 
-/* ========== 表格 — 全站核心元素 ========== */
-.vp-doc table {
+/* ========== 表格 ========== */
+.VPDoc .vp-doc table {
   display: table;
   width: 100%;
   border-collapse: separate;
@@ -126,7 +129,7 @@
   border-radius: 4px;
   overflow: hidden;
 }
-.vp-doc th {
+.VPDoc .vp-doc th {
   background: var(--ink-charcoal);
   color: var(--paper-warm);
   padding: 11px 16px;
@@ -136,27 +139,27 @@
   text-align: left;
   white-space: nowrap;
 }
-.dark .vp-doc th { background: #3a3a3a; color: #e8e0d5; }
-.vp-doc td {
+.dark .VPDoc .vp-doc th { background: #3a3a3a; color: #e8e0d5; }
+.VPDoc .vp-doc td {
   padding: 10px 16px;
   border-bottom: 1px solid var(--vp-c-divider);
   vertical-align: middle;
   line-height: 1.65;
 }
-.vp-doc tbody tr:last-child td { border-bottom: none; }
-.vp-doc tbody tr:nth-child(even) td { background: rgba(0,0,0,0.025); }
-.dark .vp-doc tbody tr:nth-child(even) td { background: rgba(255,255,255,0.03); }
-.vp-doc tbody tr:hover td { background: var(--vermillion-faded) !important; }
+.VPDoc .vp-doc tbody tr:last-child td { border-bottom: none; }
+.VPDoc .vp-doc tbody tr:nth-child(even) td { background: rgba(0,0,0,0.025); }
+.dark .VPDoc .vp-doc tbody tr:nth-child(even) td { background: rgba(255,255,255,0.03); }
+.VPDoc .vp-doc tbody tr:hover td { background: var(--vermillion-faded); }
 
 /* ========== 代码 ========== */
-.vp-doc pre {
+.VPDoc .vp-doc pre {
   border-radius: 4px;
   border: 1px solid var(--vp-c-divider);
   font-size: 0.83em;
-  background: var(--vp-c-bg-soft) !important;
+  background: var(--vp-c-bg-soft);
 }
-.vp-doc code { font-size: 0.88em; font-family: var(--vp-font-family-mono); }
-.vp-doc :not(pre) > code {
+.VPDoc .vp-doc code { font-size: 0.88em; font-family: var(--vp-font-family-mono); }
+.VPDoc .vp-doc p > code, .VPDoc .vp-doc li > code, .VPDoc .vp-doc td > code {
   background: var(--vp-c-bg-soft);
   padding: 0.15em 0.4em;
   border-radius: 3px;
@@ -165,15 +168,10 @@
 }
 
 /* ========== 分隔线 ========== */
-.vp-doc hr { border: none; border-top: 1px solid var(--vp-c-divider); margin: 2.5em 0; }
+.VPDoc .vp-doc hr { border: none; border-top: 1px solid var(--vp-c-divider); margin: 2.5em 0; }
 
 /* ========== 自定义容器 ========== */
-.vp-doc .custom-block {
-  border-radius: 4px;
-  padding: 1em 1.2em;
-  margin: 1.2em 0;
-  font-size: 0.9em;
-}
+.VPDoc .vp-doc .custom-block { border-radius: 4px; padding: 1em 1.2em; margin: 1.2em 0; font-size: 0.9em; }
 
 /* ========== 导航栏 ========== */
 .VPNav { border-bottom: 1px solid var(--vp-c-divider); backdrop-filter: blur(8px); }
@@ -198,24 +196,9 @@
    图片系统
    ============================================ */
 .img-group { margin: 24px 0; }
-.img-group-label {
-  display: block;
-  font-size: 0.75rem;
-  color: var(--vp-c-text-3);
-  letter-spacing: 0.06em;
-  margin-bottom: 10px;
-  padding-left: 2px;
-}
+.img-group-label { display: block; font-size: 0.75rem; color: var(--vp-c-text-3); letter-spacing: 0.06em; margin-bottom: 10px; padding-left: 2px; }
 .img-row { display: flex; gap: 12px; margin: 8px 0; align-items: flex-start; }
-.img-row img {
-  flex: 1;
-  min-width: 0;
-  border-radius: 6px;
-  border: 1px solid var(--vp-c-divider);
-  background: var(--vp-c-bg-soft);
-  cursor: zoom-in;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+.img-row img { flex: 1; min-width: 0; border-radius: 6px; border: 1px solid var(--vp-c-divider); background: var(--vp-c-bg-soft); cursor: zoom-in; transition: transform 0.2s ease, box-shadow 0.2s ease; }
 .img-row img:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(186, 46, 31, 0.1); }
 .img-row.square img { aspect-ratio: 4 / 3; object-fit: cover; }
 .img-row.wide img { aspect-ratio: 16 / 9; object-fit: contain; }
@@ -239,29 +222,29 @@ figure.poster img { width: 100%; display: block; cursor: zoom-in; }
 
 /* ========== 桌面端宽屏 ========== */
 @media (min-width: 769px) {
-  .VPDoc .container { max-width: 100% !important; }
-  .VPDoc .content { max-width: 960px !important; margin: 0 auto !important; }
-  .VPDoc .content-container { max-width: 960px !important; }
-  .vp-doc { max-width: 960px !important; }
+  .VPDoc .container { max-width: 100%; }
+  .VPDoc .content { max-width: 960px; margin: 0 auto; }
+  .VPDoc .content-container { max-width: 960px; }
+  .VPDoc .vp-doc { max-width: 960px; }
 }
 
 /* ========== 移动端 ========== */
 @media (max-width: 768px) {
-  .vp-doc h1 { font-size: 1.4rem; letter-spacing: 0.04em; }
-  .vp-doc h2 { font-size: 1.08rem; border-left-width: 2px; padding-left: 0.5em; margin-top: 2em; }
-  .vp-doc h3 { font-size: 0.92rem; }
-  .vp-doc p { font-size: 0.88rem; line-height: 1.8; }
-  .vp-doc table { font-size: 0.78em; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .vp-doc th, .vp-doc td { padding: 7px 10px; }
-  .vp-doc pre { font-size: 0.78em; max-width: 100%; overflow-x: auto; }
-  .vp-doc blockquote { padding: 0.8em 1em; font-size: 0.88em; }
+  .VPDoc .vp-doc h1 { font-size: 1.4rem; letter-spacing: 0.04em; }
+  .VPDoc .vp-doc h2 { font-size: 1.08rem; border-left-width: 2px; padding-left: 0.5em; margin-top: 2em; }
+  .VPDoc .vp-doc h3 { font-size: 0.92rem; }
+  .VPDoc .vp-doc p { font-size: 0.88rem; line-height: 1.8; }
+  .VPDoc .vp-doc table { font-size: 0.78em; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .VPDoc .vp-doc th, .VPDoc .vp-doc td { padding: 7px 10px; }
+  .VPDoc .vp-doc pre { font-size: 0.78em; max-width: 100%; overflow-x: auto; }
+  .VPDoc .vp-doc blockquote { padding: 0.8em 1em; font-size: 0.88em; }
   .VPNavBarTitle .title { font-size: 0.88rem; letter-spacing: 0.1em; }
   .img-row { flex-direction: column; }
   figure.dish { max-width: 100%; }
 }
 
 @media (max-width: 480px) {
-  .vp-doc h1 { font-size: 1.2rem; }
-  .vp-doc h2 { font-size: 0.98rem; }
-  .vp-doc table { font-size: 0.72em; }
+  .VPDoc .vp-doc h1 { font-size: 1.2rem; }
+  .VPDoc .vp-doc h2 { font-size: 0.98rem; }
+  .VPDoc .vp-doc table { font-size: 0.72em; }
 }
