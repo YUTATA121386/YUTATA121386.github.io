@@ -178,6 +178,8 @@
   transition: opacity 0.2s;
 }
 .VPNavBarMenuLink:hover { opacity: 1; color: var(--red); }
+.VPNavBarMenuLink { transition: color 0.3s ease; }
+.VPNavBarMenuLink:hover { text-shadow: 0 0 20px rgba(181,52,46,0.15); }
 .VPNavBarMenuLink.active { opacity: 1; color: var(--ink); }
 
 /* 搜索框：完全隐藏 */
@@ -291,6 +293,22 @@
 .VPDocAsideOutline .outline-link.active {
   color: var(--red);
   border-left-color: var(--red);
+}
+
+
+/* ═════════════════════════════════════
+   全局卡片渐变hover
+   ═════════════════════════════════════ */
+@media (min-width: 769px) {
+  .vp-doc .grid-card:hover {
+    border-color: transparent !important;
+    background: linear-gradient(135deg, rgba(181,52,46,0.04) 0%, rgba(184,148,75,0.06) 100%) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  }
+  .vp-doc .grid-card {
+    transition: all 0.35s ease;
+  }
 }
 
 /* ═════════════════════════════════════

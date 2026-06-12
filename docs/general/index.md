@@ -1,4 +1,4 @@
-﻿# 通识积累
+# 通识积累
 
 > 影视 · 音乐 · 烹饪 · 运营 —— 跨领域的知识沉淀
 
@@ -14,7 +14,7 @@
 
   <a href="/general/grand-maison-tokyo" class="grid-card">
     <span class="grid-icon">🍳</span>
-    <strong>东京大饭店 · 法餐考</strong>
+    <strong>东京大饭店 · 烹饪技法拆解</strong>
     <span>剧中的烹饪技法深度拆解</span>
   </a>
 
@@ -26,8 +26,8 @@
 
   <a href="/general/music-library-ops" class="grid-card">
     <span class="grid-icon">📋</span>
-    <strong>曲库运营 · 多视角</strong>
-    <span>不同角色下的曲库运营思考</span>
+    <strong>曲库运营 · 平台与角色视角</strong>
+    <span>从用户、编辑到运营者的多维职责拆解</span>
   </a>
 
 </div>

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: page
 ---
 
@@ -7,8 +7,8 @@ layout: page
 <header class="home-hero">
 <div class="hero-mark">私人档案馆 · 知识手帖</div>
 <h1 class="hero-name">YUTATA</h1>
-<p class="hero-line">一个人的知识谱系。</p>
-<p class="hero-desc">从日剧评级到法餐笔记，从产品实战到面试复盘。<br>每一次点击红心，都是在赋格自己今后的人生。</p>
+<p class="hero-line">把学过的东西、踩过的坑、想过的事，都记在这里。</p>
+<p class="hero-desc">从影视评级到料理笔记，从产品实战到面试复盘。<br>不为表演，只为自己。</p>
 <div class="hero-rule"></div>
 </header>
 
