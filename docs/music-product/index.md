@@ -48,6 +48,26 @@
 
 </div>
 
+---
+
+## 线上交流（用户时期）
+
+<div class="grid">
+
+  <a href="/user-period/feedback-reply" class="grid-card">
+    <span class="grid-icon">📝</span>
+    <strong>反馈与回复</strong>
+    <span>2024.04 · 榜单激励 · 云保存 · 打轴优化 · 积分提现</span>
+  </a>
+
+  <a href="/user-period/library-optimization" class="grid-card">
+    <span class="grid-icon">🔧</span>
+    <strong>曲库优化方案</strong>
+    <span>2025.03 · 脚本防控 · 报错机制 · AI 助手 · 实践证明</span>
+  </a>
+
+</div>
+
 <style scoped>
 .grid {
   display: grid;
