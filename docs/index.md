@@ -4,118 +4,198 @@ layout: home
 hero:
   name: "YUTATA"
   text: "知識の手帖"
-  tagline: 影视 · 音乐 · 烹饪 · 产品 · 思考
+  tagline: 私人札記 · 影視 · 音樂 · 烹飪 · 產品 · 面試
   actions:
     - theme: brand
-      text: 通识积累 →
+      text: 通識積累
       link: /general/
     - theme: alt
-      text: 产品学习 →
+      text: 產品學習
       link: /music-product/
 ---
 
 <div class="home-sections">
 
 <div class="section-group">
-<div class="group-label">📚 知识沉淀</div>
+  <div class="group-label">歸檔目錄</div>
 
-<a href="/general/" class="section-card ready">
-<div class="card-left"><span class="card-icon">🎬</span></div>
-<div class="card-body">
-<div class="card-header"><h3>通识积累</h3></div>
-<p>日剧评级 · 法餐技法 · 唱片评价 · 曲库运营</p>
-</div>
-<span class="card-arrow">→</span>
-</a>
+  <a href="/general/" class="catalog-card">
+    <span class="card-mark">Ⅰ</span>
+    <div class="card-body">
+      <h3>通識積累</h3>
+      <p>日劇評級&ensp;·&ensp;法餐技法&ensp;·&ensp;唱片評價&ensp;·&ensp;曲庫運營</p>
+    </div>
+    <span class="card-status ready">已歸檔</span>
+  </a>
 
-<a href="/pilgrimage/" class="section-card building">
-<div class="card-left"><span class="card-icon">⛩️</span></div>
-<div class="card-body">
-<div class="card-header"><h3>圣地巡礼</h3><span class="badge">施工中</span></div>
-<p>足迹 · 取景地 · 文化见闻</p>
-</div>
-<span class="card-arrow">→</span>
-</a>
-</div>
+  <a href="/pilgrimage/" class="catalog-card">
+    <span class="card-mark">Ⅱ</span>
+    <div class="card-body">
+      <h3>聖地巡禮</h3>
+      <p>足跡&ensp;·&ensp;取景地&ensp;·&ensp;文化見聞</p>
+    </div>
+    <span class="card-status pending">待整理</span>
+  </a>
 
-<div class="section-group">
-<div class="group-label">🚀 职业成长</div>
+  <a href="/music-product/" class="catalog-card">
+    <span class="card-mark">Ⅲ</span>
+    <div class="card-body">
+      <h3>雲音樂產品學習</h3>
+      <p>年報&ensp;·&ensp;翻譯編輯部&ensp;·&ensp;AI項目&ensp;·&ensp;線下活動&ensp;·&ensp;用戶時期</p>
+    </div>
+    <span class="card-status ready">已歸檔</span>
+  </a>
 
-<a href="/growth/" class="section-card building">
-<div class="card-left"><span class="card-icon">📈</span></div>
-<div class="card-body">
-<div class="card-header"><h3>上升清单</h3><span class="badge">施工中</span></div>
-<p>成长轨迹 · 自我剖析 · 关键决策</p>
-</div>
-<span class="card-arrow">→</span>
-</a>
+  <a href="/growth/" class="catalog-card">
+    <span class="card-mark">Ⅳ</span>
+    <div class="card-body">
+      <h3>上升清單</h3>
+      <p>成長軌跡&ensp;·&ensp;自我剖析&ensp;·&ensp;關鍵決策</p>
+    </div>
+    <span class="card-status pending">待整理</span>
+  </a>
 
-<a href="/music-product/" class="section-card ready">
-<div class="card-left"><span class="card-icon">🎧</span></div>
-<div class="card-body">
-<div class="card-header"><h3>云音乐产品学习</h3></div>
-<p>年报 · 翻译编辑部 · AI项目 · 线下活动 · 用户时期</p>
-</div>
-<span class="card-arrow">→</span>
-</a>
+  <a href="/interview/" class="catalog-card">
+    <span class="card-mark">Ⅴ</span>
+    <div class="card-body">
+      <h3>校招面試話術</h3>
+      <p>實習準備&ensp;·&ensp;通用高頻問題&ensp;·&ensp;六家公司面經</p>
+    </div>
+    <span class="card-status ready">已歸檔</span>
+  </a>
 
-<a href="/interview/" class="section-card ready">
-<div class="card-left"><span class="card-icon">💬</span></div>
-<div class="card-body">
-<div class="card-header"><h3>校招面试话术</h3></div>
-<p>实习准备 · 通用高频问题 · 六家公司面经</p>
 </div>
-<span class="card-arrow">→</span>
-</a>
-</div>
-
 </div>
 
 <style>
-.VPHero { padding: 3rem 0 2rem !important; }
-.VPHero .container { max-width: 640px !important; }
-.VPHero .name { font-size: 2.8rem !important; font-weight: 700; letter-spacing: 0.2em; font-family: 'Noto Serif SC', serif; line-height: 1.2; }
-.VPHero .text { font-size: 0.95rem !important; font-weight: 400; letter-spacing: 0.3em; color: var(--vp-c-text-2); margin-top: 0.3rem; }
-.VPHero .tagline { font-size: 0.78rem !important; letter-spacing: 0.2em; color: var(--vp-c-text-3); margin-top: 0.5rem; }
-.VPHero .actions { margin-top: 2rem; }
-.VPHero .VPButton.brand { border-radius: 3px; font-size: 0.85rem; letter-spacing: 0.06em; padding: 0.6em 1.6em; }
-.VPHero .VPButton.alt { border-radius: 3px; font-size: 0.85rem; letter-spacing: 0.06em; }
-
-.home-sections { max-width: 640px; margin: 0 auto; padding: 0 1.5rem 3rem; }
-.section-group { margin-bottom: 2.2rem; }
-.group-label { font-family: 'Noto Serif SC', serif; font-size: 0.7rem; letter-spacing: 0.25em; color: var(--vp-c-text-3); margin-bottom: 12px; padding-left: 4px; }
-
-.section-card {
-  display: flex; align-items: center; gap: 14px;
-  padding: 17px 20px; margin-bottom: 9px;
-  border: 1px solid var(--vp-c-divider); border-radius: 4px;
-  background: var(--vp-c-bg-elv);
-  text-decoration: none !important; color: var(--vp-c-text-1) !important;
-  transition: border-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+/* ── Hero ── */
+.VPHero {
+  padding: 3rem 0 1.5rem !important;
+  text-align: center;
 }
-.section-card:hover { border-color: var(--vermillion); transform: translateX(4px); box-shadow: 2px 2px 0 var(--vermillion-faded); }
-.section-card.building { opacity: 0.5; }
-.section-card.building:hover { opacity: 0.75; border-color: var(--vp-c-divider); transform: none; box-shadow: none; }
+.VPHero .container { max-width: 560px !important; }
+.VPHero .name {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 2.4rem !important;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--ink);
+  line-height: 1.3;
+}
+.VPHero .text {
+  font-size: 0.85rem !important;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: var(--ink-muted);
+  margin-top: 0.4rem;
+  font-family: 'Noto Serif SC', serif;
+}
+.VPHero .tagline {
+  font-size: 0.7rem !important;
+  letter-spacing: 0.15em;
+  color: var(--ink-muted);
+  margin-top: 0.8rem;
+}
+.VPHero .actions { margin-top: 1.8rem; justify-content: center; }
+.VPHero .VPButton.brand {
+  border-radius: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  padding: 0.55em 1.8em;
+  font-family: 'Noto Serif SC', serif;
+  border: 1px solid var(--red-seal);
+  background: transparent;
+  color: var(--red-seal);
+}
+.VPHero .VPButton.brand:hover { background: var(--red-seal); color: #fff; }
+.VPHero .VPButton.alt {
+  border-radius: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  padding: 0.55em 1.8em;
+  font-family: 'Noto Serif SC', serif;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink-soft);
+}
+.VPHero .VPButton.alt:hover { border-color: var(--ink); color: var(--ink); }
 
-.card-left { display: flex; align-items: center; }
-.card-icon { font-size: 1.4rem; width: 38px; text-align: center; }
+/* ── 目錄卡片 ── */
+.home-sections { max-width: 560px; margin: 0 auto; padding: 0 1.5rem 3rem; }
+.section-group { }
+.group-label {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  color: var(--ink-muted);
+  margin-bottom: 14px;
+  padding-left: 4px;
+}
+
+.catalog-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+  margin-bottom: 1px;
+  border: none;
+  border-bottom: 1px solid var(--line-soft);
+  background: transparent;
+  text-decoration: none !important;
+  color: var(--ink) !important;
+  transition: background 0.2s ease;
+}
+.catalog-card:hover { background: var(--paper-warm); }
+.catalog-card:first-of-type { border-top: 1px solid var(--line-soft); }
+
+.card-mark {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  width: 28px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
 .card-body { flex: 1; min-width: 0; }
-.card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 3px; }
-.card-header h3 { font-family: 'Noto Serif SC', serif; font-size: 0.92rem; font-weight: 600; margin: 0; letter-spacing: 0.08em; }
-.badge { font-size: 0.6rem; font-family: 'JetBrains Mono', monospace; padding: 2px 8px; border-radius: 2px; border: 1px solid var(--vp-c-divider); color: var(--vp-c-text-3); letter-spacing: 0.06em; background: var(--vp-c-bg-soft); }
-.section-card p { font-size: 0.76rem; color: var(--vp-c-text-2); margin: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.card-arrow { font-family: 'JetBrains Mono', monospace; color: var(--vp-c-text-3); font-size: 0.85rem; transition: color 0.2s; }
-.section-card.ready:hover .card-arrow { color: var(--vermillion); }
+.card-body h3 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin: 0 0 3px 0;
+  color: var(--ink);
+}
+.card-body p {
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
+.card-status {
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+  padding: 2px 8px;
+  border-radius: 0;
+}
+.card-status.ready { color: var(--ink-muted); border: 1px solid var(--line); }
+.card-status.pending { color: var(--ink-muted); border: 1px dashed var(--line); opacity: 0.5; }
+
+/* ── 移動端 ── */
 @media (max-width: 768px) {
-  .VPHero .name { font-size: 2rem !important; letter-spacing: 0.12em; }
-  .VPHero .text { font-size: 0.82rem !important; letter-spacing: 0.15em; }
+  .VPHero .name { font-size: 1.6rem !important; letter-spacing: 0.1em; }
+  .VPHero .text { font-size: 0.72rem !important; letter-spacing: 0.12em; }
   .VPHero { padding: 2rem 1rem 1rem !important; }
   .home-sections { padding: 0 1rem 2rem; max-width: 100%; }
-  .section-card p { font-size: 0.72rem; }
+  .catalog-card { padding: 14px 12px; }
+  .card-body p { font-size: 0.68rem; }
 }
 @media (max-width: 480px) {
-  .VPHero .name { font-size: 1.5rem !important; letter-spacing: 0.1em; }
-  .section-card p { display: none; }
+  .VPHero .name { font-size: 1.3rem !important; }
+  .card-body p { display: none; }
 }
 </style>
