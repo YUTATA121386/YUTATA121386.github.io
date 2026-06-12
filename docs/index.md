@@ -54,7 +54,16 @@ hero:
 <div class="card-left"><span class="card-icon">🎧</span></div>
 <div class="card-body">
 <div class="card-header"><h3>云音乐产品学习</h3></div>
-<p>年报 · 翻译编辑部 · AI项目 · H5活动 · 线下活动</p>
+<p>年报 · 翻译编辑部 · AI项目 · 线下活动</p>
+</div>
+<span class="card-arrow">→</span>
+</a>
+
+<a href="/user-period/" class="section-card ready">
+<div class="card-left"><span class="card-icon">📋</span></div>
+<div class="card-body">
+<div class="card-header"><h3>用户时期</h3></div>
+<p>反馈与回复 · 曲库优化方案</p>
 </div>
 <span class="card-arrow">→</span>
 </a>
