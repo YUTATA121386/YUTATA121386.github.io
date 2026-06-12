@@ -22,7 +22,7 @@ layout: page
 <span class="entry-num">01</span>
 <div class="entry-body">
 <span class="entry-title">通识积累</span>
-<span class="entry-meta">日剧评级 · 法餐技法 · 唱片评价 · 曲库运营</span>
+<span class="entry-meta">影视评鉴 · 法餐考据 · 唱片评鉴 · 多方视角</span>
 </div>
 <span class="entry-arrow">→</span>
 </a>
@@ -31,7 +31,7 @@ layout: page
 <span class="entry-num">02</span>
 <div class="entry-body">
 <span class="entry-title">圣地巡礼</span>
-<span class="entry-meta">足迹 · 取景地 · 文化见闻</span>
+<span class="entry-meta">旅行记录 · 文化考察</span>
 </div>
 <span class="entry-badge">施工中</span>
 </a>
@@ -47,7 +47,7 @@ layout: page
 <span class="entry-num">03</span>
 <div class="entry-body">
 <span class="entry-title">云音乐产品学习</span>
-<span class="entry-meta">年报 · 翻译编辑部 · AI 项目 · H5 活动 · 线下活动 · 用户时期</span>
+<span class="entry-meta">产品分析 · 活动运营 · 用户反馈</span>
 </div>
 <span class="entry-arrow">→</span>
 </a>
@@ -56,7 +56,7 @@ layout: page
 <span class="entry-num">04</span>
 <div class="entry-body">
 <span class="entry-title">上升清单</span>
-<span class="entry-meta">成长轨迹 · 自我剖析 · 关键决策</span>
+<span class="entry-meta">自我剖析 · 关键决策</span>
 </div>
 <span class="entry-badge">施工中</span>
 </a>
@@ -65,7 +65,7 @@ layout: page
 <span class="entry-num">05</span>
 <div class="entry-body">
 <span class="entry-title">校招面试话术</span>
-<span class="entry-meta">实习准备 · 通用高频题 · 六家公司面经</span>
+<span class="entry-meta">简历策略 · 高频问答 · 企业面经</span>
 </div>
 <span class="entry-arrow">→</span>
 </a>

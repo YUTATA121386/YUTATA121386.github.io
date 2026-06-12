@@ -11,7 +11,7 @@
   <a href="/interview/internship" class="grid-card">
     <span class="grid-icon">🎯</span>
     <strong>实习准备 · 要点攻略与事后复盘</strong>
-    <span>STAR法则 · 面经 · HR面 · 复盘</span>
+    <span>简历策略 · 面试复盘</span>
   </a>
 
 </div>
@@ -25,7 +25,7 @@
   <a href="/interview/campus/" class="grid-card">
     <span class="grid-icon">🏢</span>
     <strong>校招面试全记录</strong>
-    <span>高频问题 · 六家公司 · 面试复盘</span>
+    <span>高频问答 · 企业面经</span>
   </a>
 
 </div>

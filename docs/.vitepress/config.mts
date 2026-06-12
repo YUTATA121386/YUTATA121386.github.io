@@ -31,7 +31,7 @@ export default defineConfig({
             { text: "日本影视剧 · 评级", link: "/general/japanese-dramas" },
             { text: "东京大饭店 · 烹饪技法拆解", link: "/general/grand-maison-tokyo" },
             { text: "音乐鉴赏 · 唱片评价", link: "/general/music-appreciation" },
-            { text: "曲库运营 · 平台与角色视角", link: "/general/music-library-ops" },
+            { text: "曲库运营 · 多方视角", link: "/general/music-library-ops" },
           ],
         },
       ],

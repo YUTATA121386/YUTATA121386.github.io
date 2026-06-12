@@ -1,4 +1,4 @@
-﻿# 云音乐产品学习
+# 云音乐产品学习
 
 > 曲库运营 · 活动策划 · 产品优化 · 用户运营 —— 在网易云音乐的实战记录
 
@@ -11,19 +11,19 @@
   <a href="/music-product/annual-report" class="grid-card">
     <span class="grid-icon">📊</span>
     <strong>年度报告</strong>
-    <span>立项 · 视觉 · 配套活动 · 迎新</span>
+    <span>项目立项 · 视觉设计 · 活动策划</span>
   </a>
 
   <a href="/music-product/lyrics-translation" class="grid-card">
     <span class="grid-icon">🌐</span>
     <strong>歌词翻译编辑部</strong>
-    <span>H5 策划 · 复盘 · 成本 · 试点数据</span>
+    <span>活动运营 · 数据分析 · 成本管控</span>
   </a>
 
   <a href="/music-product/ai-project" class="grid-card">
     <span class="grid-icon">🤖</span>
     <strong>AI 歌曲资料补充</strong>
-    <span>众包 + AI 资料库建设</span>
+    <span>众包协作 · 数据建设</span>
   </a>
 
 </div>
@@ -37,13 +37,13 @@
   <a href="/music-product/tea-party" class="grid-card">
     <span class="grid-icon">☕</span>
     <strong>云小编茶话会</strong>
-    <span>2023.11 · 线下交流记录</span>
+    <span>线下交流</span>
   </a>
 
   <a href="/music-product/cloud-village-festival" class="grid-card">
     <span class="grid-icon">🎉</span>
     <strong>云村用户节</strong>
-    <span>2024.09 · 年度庆典活动</span>
+    <span>年度庆典</span>
   </a>
 
 </div>
@@ -57,13 +57,13 @@
   <a href="/user-period/feedback-reply" class="grid-card">
     <span class="grid-icon">📝</span>
     <strong>反馈与回复</strong>
-    <span>2024.04 · 榜单激励 · 云保存 · 打轴优化 · 积分提现</span>
+    <span>功能反馈 · 流程优化</span>
   </a>
 
   <a href="/user-period/library-optimization" class="grid-card">
     <span class="grid-icon">🔧</span>
     <strong>曲库优化方案</strong>
-    <span>2025.03 · 脚本防控 · 报错机制 · AI 助手 · 实践证明</span>
+    <span>脚本防控 · 流程优化 · AI提效</span>
   </a>
 
 </div>
