@@ -170,6 +170,8 @@
 
 分析了三款目前主流的音频领域大模型的能力，调研结论如下：
 
+<div class="img-group"><span class="img-group-label">调研结论</span><img src="/library-ai/调研结论.png" alt="调研结论" /></div>
+
 详细报告：Gemini 2.0 Flash 大模型音频内容理解评测报告（内部文档）
 
 - **从分析中可以看出，Gemini 2\.0 Flash是当前最能满足生产环境调用的模型，我们使用它的能力进行了基于音频理解进行内容生产的测试，该模型在绝大部分场景均可提高较高质量的生产结果，如：**
@@ -197,6 +199,8 @@
 > 📎 *原文此处为飞书电子表格/截图，内容已嵌入页面或见备注*
 
 **各场景对应的AI能力和模型：**
+
+<div class="img-group"><span class="img-group-label">各场景对应的AI能力和模型</span><img src="/library-ai/各场景对应的AI能力和模型.png" alt="AI能力矩阵" /></div>
 
 **其他未来可应用的场景：**
 
@@ -264,6 +268,8 @@
 
 ### **2、项目目标**
 
+<div class="img-group"><span class="img-group-label">项目目标</span><img src="/library-ai/项目目标.png" alt="项目目标" /></div>
+
 - *必填*
 
 - *遵循smart原则，具体/可衡量/可达到/有相关性/有时限，含论证演算，量化目标需引入BI协助评估合理性以及数据口径，关联到业务OKR（如有）*
@@ -291,6 +297,9 @@
 \- 安全性：检查数据流的安全性（权限控制）。
 
 ### **3、项目成本 **
+
+<div class="img-group"><span class="img-group-label">AI大模型调用成本</span><img src="/library-ai/AI大模型调用成本.png" alt="AI成本" /></div>
+<div class="img-group"><span class="img-group-label">人力成本预估投入</span><img src="/library-ai/人力成本预估投入.png" alt="人力成本" /></div>
 
 *基于项目范围和期望时间，对项目投入进行预估，通常包括以下方面成本预估：*
 
@@ -358,13 +367,19 @@
 
 ### **1、<img src="/library-ai/项目里程碑.jpg" alt="项目里程碑" />**
 
+<div class="img-group"><span class="img-group-label">里程碑节点</span><img src="/library-ai/里程碑节点.png" alt="里程碑" /></div>
+
 - *里程碑就是项目生命周期的关键时间节点，可列出业务方期望的启动、规划、上线、宣发、目标验收，结项等关键时间节点，立项之后由PM负责人再进行更精确的评估；*
+
+<div class="img-group"><span class="img-group-label">里程碑节点</span><img src="/library-ai/里程碑节点.png" alt="里程碑" /></div>
 
 > 📎 *原文此处为飞书电子表格/截图，内容已嵌入页面或见备注*
 
 2、详细计划
 
 ## **五、项目关键风险**
+
+<div class="img-group"><span class="img-group-label">项目关键风险</span><img src="/library-ai/项目关键风险.png" alt="关键风险" /></div>
 
 - *列举在立项阶段识别到的风险*
 
