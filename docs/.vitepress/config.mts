@@ -28,6 +28,7 @@ export default defineConfig({
       { text: "通识积累", link: "/general/" },
       { text: "圣地巡礼", link: "/pilgrimage/" },
       { text: "产品学习", link: "/music-product/" },
+      { text: "用户时期", link: "/user-period/" },
       { text: "面试话术", link: "/interview/" },
     ],
 
@@ -60,10 +61,14 @@ export default defineConfig({
             { text: "云村用户节", link: "/music-product/cloud-village-festival" },
           ],
         },
+      ],
+      "/user-period/": [
         {
-          text: "线上沟通",
+          text: "用户时期",
           items: [
-            { text: "曲库优化 + 反馈回复", link: "/music-product/online-communication" },
+            { text: "概述", link: "/user-period/" },
+            { text: "反馈与回复", link: "/user-period/feedback-reply" },
+            { text: "曲库优化方案", link: "/user-period/library-optimization" },
           ],
         },
       ],

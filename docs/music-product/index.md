@@ -48,20 +48,6 @@
 
 </div>
 
----
-
-## 线上沟通
-
-<div class="grid">
-
-  <a href="/music-product/online-communication" class="grid-card">
-    <span class="grid-icon">💬</span>
-    <strong>曲库优化 + 反馈回复</strong>
-    <span>产品优化与用户沟通记录</span>
-  </a>
-
-</div>
-
 <style scoped>
 .grid {
   display: grid;
