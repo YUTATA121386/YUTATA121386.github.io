@@ -76,16 +76,21 @@
    - 脉脉 × 网易云音乐人认证
 3. 办得好的话，甚至还可以增加类似"杭州网易研究院开放日"的线下实习绿色通道，可以覆盖到不少岗位
 
+
 ### 网易云动态笔记社区
 
 <div class="img-group">
-  <div class="img-row wide">
+  <div class="img-row tall">
     <img src="/library-opt/网易云动态笔记社区1.jpg" alt="网易云动态笔记社区 1" />
     <img src="/library-opt/网易云动态笔记社区2.jpg" alt="网易云动态笔记社区 2" />
   </div>
 </div>
 
 ### 汽水音乐曲库
+
+<figure class="dish">
+  <img src="/library-opt/汽水音乐启航计划证书.jpg" alt="汽水音乐启航计划证书" />
+</figure>
 
 <div class="img-group">
   <div class="img-row">
