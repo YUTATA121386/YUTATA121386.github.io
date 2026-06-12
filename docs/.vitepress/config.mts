@@ -86,8 +86,6 @@ export default defineConfig({
             { text: "实习准备 · 要点攻略", link: "/interview/internship" },
           ],
         },
-      ],
-      "/interview/campus/": [
         {
           text: "校招面试",
           items: [

@@ -41,6 +41,9 @@
   --vp-sidebar-width: 240px;
   --vp-nav-height: 56px;
   --vp-layout-max-width: 900px;
+
+  /* 桌面端内容区加宽 */
+  --vp-content-max-width: 100%;
 }
 
 .dark {
@@ -268,6 +271,16 @@ figure.poster img {
 @keyframes lightboxIn {
   from { opacity: 0; transform: scale(0.92); }
   to { opacity: 1; transform: scale(1); }
+}
+
+
+
+/* ========== 桌面端宽屏适配 ========== */
+@media (min-width: 769px) {
+  .VPDoc .container { max-width: 100% !important; }
+  .VPDoc .content { max-width: 960px !important; margin: 0 auto !important; }
+  .VPDoc .content-container { max-width: 960px !important; }
+  .vp-doc { max-width: 960px !important; }
 }
 
 /* ========== 移动端 ========== */
