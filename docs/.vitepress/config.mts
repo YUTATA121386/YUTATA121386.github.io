@@ -78,9 +78,31 @@ export default defineConfig({
           ],
         },
       ],
+      "/interview/": [
+        {
+          text: "面试话术",
+          items: [
+            { text: "概述", link: "/interview/" },
+            { text: "实习准备 · 要点攻略", link: "/interview/internship" },
+          ],
+        },
+      ],
+      "/interview/campus/": [
+        {
+          text: "校招面试",
+          items: [
+            { text: "通用高频问题", link: "/interview/campus/" },
+            { text: "网易云音乐", link: "/interview/campus/net-ease" },
+            { text: "昆仑天工", link: "/interview/campus/kunlun" },
+            { text: "东西世界", link: "/interview/campus/dongxi" },
+            { text: "荔枝", link: "/interview/campus/lizhi" },
+            { text: "橙果视界", link: "/interview/campus/chengguo" },
+            { text: "优趣汇", link: "/interview/campus/youquhui" },
+          ],
+        },
+      ],
       "/growth/": [{ text: "上升清单", items: [{ text: "概述", link: "/growth/" }] }],
       "/pilgrimage/": [{ text: "圣地巡礼", items: [{ text: "概述", link: "/pilgrimage/" }] }],
-      "/interview/": [{ text: "面试话术", items: [{ text: "概述", link: "/interview/" }, { text: "实习准备 · 要点攻略", link: "/interview/internship" }, { text: "校招面试全记录", link: "/interview/campus-recruitment" }] }],
     },
 
     outline: { level: [2, 3], label: "目录" },

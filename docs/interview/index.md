@@ -22,7 +22,7 @@
 
 <div class="grid">
 
-  <a href="/interview/campus-recruitment" class="grid-card">
+  <a href="/interview/campus/" class="grid-card">
     <span class="grid-icon">🏢</span>
     <strong>校招面试全记录</strong>
     <span>通用高频问题归类 · 网易 / 昆仑 / 东西世界 / 荔枝 / 橙果 / 优趣汇</span>
