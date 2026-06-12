@@ -88,9 +88,12 @@
 
 ### 汽水音乐曲库
 
-<figure class="dish">
-  <img src="/library-opt/汽水音乐启航计划证书1.jpg" alt="汽水音乐启航计划证书" />
-</figure>
+<div class="img-group">
+  <div class="img-row wide">
+    <img src="/library-opt/汽水音乐启航计划证书1.jpg" alt="汽水音乐启航计划证书 1" />
+    <img src="/library-opt/汽水音乐启航计划证书2.jpg" alt="汽水音乐启航计划证书 2" />
+  </div>
+</div>
 
 ---
 
