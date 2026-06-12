@@ -18,7 +18,7 @@ export default defineConfig({
       { text: "上升清单", link: "/growth/" },
       { text: "通识积累", link: "/general/" },
       { text: "圣地巡礼", link: "/pilgrimage/" },
-      { text: "产品学习", link: "/music-product/" },
+      { text: "云音乐产品学习", link: "/music-product/" },
       { text: "面试话术", link: "/interview/" },
     ],
 
@@ -42,6 +42,8 @@ export default defineConfig({
             { text: "年度报告", link: "/music-product/annual-report" },
             { text: "歌词翻译编辑部", link: "/music-product/lyrics-translation" },
             { text: "AI 歌曲资料补充", link: "/music-product/ai-project" },
+            { text: "歌词 AB 实验", link: "/music-product/lyrics-ab-test" },
+            { text: "曲库 AI 专项", link: "/music-product/library-ai-project" },
           ],
         },
         {
