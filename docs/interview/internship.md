@@ -148,6 +148,22 @@
 
 3、云音乐账号运营的相关思路，可以把之前运营直播讲课时给的PPT拿出来整理一下，并给出自己数据来源的真实性，其中可以讲讲自己对云音乐主站最新情况的了解。
 
+
+<div class="img-group">
+  <span class="img-group-label">账号运营思路</span>
+  <div class="img-row">
+    <img src="/interview/账号运营思路1.png" alt="账号运营思路 1" />
+  </div>
+  <div class="img-row">
+    <img src="/interview/账号运营思路2.png" alt="账号运营思路 2" />
+    <img src="/interview/账号运营思路3.png" alt="账号运营思路 3" />
+  </div>
+  <div class="img-row">
+    <img src="/interview/账号运营思路4.png" alt="账号运营思路 4" />
+    <img src="/interview/账号运营思路5.png" alt="账号运营思路 5" />
+  </div>
+</div>
+
 4、大创项目属于和岗位关联不大的内容了，可以大致讲讲自己的思路，不用过于夸大功劳，但求真实与专业。
 
 ## ①主站曲库建设
@@ -183,6 +199,17 @@
 ### SOP与规则
 
 附链接，就是一个细致且概括能力强，着重在奖项和媒资
+
+<div class="img-group">
+  <span class="img-group-label">汽水曲库 SOP 与规则</span>
+  <div class="img-row">
+    <img src="/interview/SOP与规则.png" alt="汽水曲库 SOP 与规则 1" />
+  </div>
+  <div class="img-row">
+    <img src="/interview/SOP与规则2.png" alt="汽水曲库 SOP 与规则 2" />
+    <img src="/interview/SOP与规则3.png" alt="汽水曲库 SOP 与规则 3" />
+  </div>
+</div>
 
 ### 最新近况
 
