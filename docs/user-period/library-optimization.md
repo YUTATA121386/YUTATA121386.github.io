@@ -80,7 +80,7 @@
 ### 网易云动态笔记社区
 
 <div class="img-group">
-  <div class="img-row tall">
+  <div class="img-row">
     <img src="/library-opt/网易云动态笔记社区1.jpg" alt="网易云动态笔记社区 1" />
     <img src="/library-opt/网易云动态笔记社区2.jpg" alt="网易云动态笔记社区 2" />
   </div>
@@ -91,8 +91,6 @@
 <div class="img-group">
   <div class="img-row">
     <img src="/library-opt/汽水音乐启航计划证书1.jpg" alt="汽水音乐启航计划证书 1" />
-  </div>
-  <div class="img-row">
     <img src="/library-opt/汽水音乐启航计划证书2.jpg" alt="汽水音乐启航计划证书 2" />
   </div>
 </div>
