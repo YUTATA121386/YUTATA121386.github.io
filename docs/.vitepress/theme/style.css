@@ -273,6 +273,26 @@
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--line); border-radius: 2px; }
 
+
+/* ═════════════════════════════════════
+   右侧目录间距优化
+   ═════════════════════════════════════ */
+.VPDocAsideOutline .outline-link {
+  padding: 5px 16px;
+  line-height: 1.5;
+  font-size: 0.82rem;
+  color: var(--ink-light);
+  border-left: 2px solid transparent;
+}
+.VPDocAsideOutline .outline-link:hover {
+  color: var(--ink);
+  border-left-color: var(--line);
+}
+.VPDocAsideOutline .outline-link.active {
+  color: var(--red);
+  border-left-color: var(--red);
+}
+
 /* ═════════════════════════════════════
    图片
    ═════════════════════════════════════ */
