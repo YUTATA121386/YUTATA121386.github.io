@@ -42,6 +42,11 @@ export default defineConfig({
             { text: "年度报告", link: "/music-product/annual-report" },
             { text: "歌词翻译编辑部", link: "/music-product/lyrics-translation" },
             { text: "AI 歌曲资料补充", link: "/music-product/ai-project" },
+          ],
+        },
+        {
+          text: "实验与专项",
+          items: [
             { text: "歌词 AB 实验", link: "/music-product/lyrics-ab-test" },
             { text: "曲库 AI 专项", link: "/music-product/library-ai-project" },
           ],
