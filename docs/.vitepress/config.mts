@@ -23,18 +23,18 @@ export default defineConfig({
     },
 
     nav: [
-      { text: "首頁", link: "/" },
-      { text: "上升清單", link: "/growth/" },
-      { text: "通識積累", link: "/general/" },
-      { text: "聖地巡禮", link: "/pilgrimage/" },
-      { text: "產品學習", link: "/music-product/" },
-      { text: "面試話術", link: "/interview/" },
+      { text: "首页", link: "/" },
+      { text: "上升清单", link: "/growth/" },
+      { text: "通识积累", link: "/general/" },
+      { text: "圣地巡礼", link: "/pilgrimage/" },
+      { text: "产品学习", link: "/music-product/" },
+      { text: "面试话术", link: "/interview/" },
     ],
 
     sidebar: {
       "/general/": [
         {
-          text: "通識積累",
+          text: "通识积累",
           items: [
             { text: "概述", link: "/general/" },
             { text: "日本影视剧 · 评级", link: "/general/japanese-dramas" },
@@ -80,7 +80,7 @@ export default defineConfig({
       ],
       "/interview/": [
         {
-          text: "面試話術",
+          text: "面试话术",
           items: [
             { text: "概述", link: "/interview/" },
             { text: "实习准备 · 要点攻略", link: "/interview/internship" },
@@ -99,8 +99,8 @@ export default defineConfig({
           ],
         },
       ],
-      "/growth/": [{ text: "上升清單", items: [{ text: "概述", link: "/growth/" }] }],
-      "/pilgrimage/": [{ text: "聖地巡禮", items: [{ text: "概述", link: "/pilgrimage/" }] }],
+      "/growth/": [{ text: "上升清单", items: [{ text: "概述", link: "/growth/" }] }],
+      "/pilgrimage/": [{ text: "圣地巡礼", items: [{ text: "概述", link: "/pilgrimage/" }] }],
     },
 
     outline: { level: [2, 3], label: "目录" },
