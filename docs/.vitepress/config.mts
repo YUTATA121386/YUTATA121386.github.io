@@ -115,6 +115,8 @@ export default defineConfig({
     returnToTopLabel: "回到顶部",
   },
 
+  ignoreDeadLinks: true,
+
   markdown: {
     math: true,
   },
