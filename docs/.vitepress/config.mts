@@ -1,4 +1,4 @@
-﻿import { defineConfig } from "vitepress"
+import { defineConfig } from "vitepress"
 
 export default defineConfig({
   lang: "zh-CN",
@@ -12,15 +12,6 @@ export default defineConfig({
 
   themeConfig: {
     logo: "/logo.svg",
-    search: {
-      provider: "local",
-      options: {
-        translations: {
-          button: { buttonText: "检索" },
-          modal: { noResultsText: "未找到相关内容", displayDetails: "展开详情" },
-        },
-      },
-    },
 
     nav: [
       { text: "首页", link: "/" },
@@ -90,6 +81,12 @@ export default defineConfig({
           text: "校招面试",
           items: [
             { text: "通用高频问题", link: "/interview/campus/" },
+          ],
+          collapsed: false,
+        },
+        {
+          text: "校招面试 · 各家记录",
+          items: [
             { text: "网易云音乐", link: "/interview/campus/net-ease" },
             { text: "昆仑天工", link: "/interview/campus/kunlun" },
             { text: "东西世界", link: "/interview/campus/dongxi" },
@@ -97,6 +94,7 @@ export default defineConfig({
             { text: "橙果视界", link: "/interview/campus/chengguo" },
             { text: "优趣汇", link: "/interview/campus/youquhui" },
           ],
+          collapsed: false,
         },
       ],
       "/growth/": [{ text: "上升清单", items: [{ text: "概述", link: "/growth/" }] }],
