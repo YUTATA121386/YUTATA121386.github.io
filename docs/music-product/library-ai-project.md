@@ -33,12 +33,16 @@
 
     - 仅靠人工登记核查时容易错漏，重点发行内容无法完全保障。部分邮件内容例如：
 
+<div class="img-group"><span class="img-group-label">资产管理痛点示例</span><div class="img-row"><img src="/library-ai/资产管理痛点1.png" alt="痛点1" /><img src="/library-ai/资产管理痛点2.png" alt="痛点2" /></div><div class="img-row"><img src="/library-ai/资产管理痛点3.png" alt="痛点3" /></div></div>
+
+
 
 - 痛点2：人工入库场景中，版权方提供的物料格式多种多样，难以标准化，需人工拆分转换
 
     - 目前大版权部分厂牌依然采用邮件发送物料包，由曲库运营人工入库。今年人工入库共计2000张专辑6400首歌（平均35张/周）。工作室部分合作的音乐人也通过线下提供物料的方式从曲库后台入库，在这些场景中，合作方发来的压缩包文件格式、命名方式、语种、内容多种多样。依赖人工进行大量的格式、语种转换，信息提取、拆分等工作，物料转化成云音乐能识别的标准格式之后才能入库，内容整理耗时长、效率低。
 
     - 现有的物料压缩包解析功能仅通过硬编码实现，转换成功率和准确率都有限。部分物料例子如下：
+
 
 
 - 痛点3：曲库每天的信息查询、更新需求频繁，复杂场景操作成本高：
@@ -50,6 +54,7 @@
 例如：
 
 
+
 ###### 1.1.2 内容供给
 
 - 痛点1：覆盖率参差不齐、C端依赖的字段覆盖率不高，尤其中长尾歌曲覆盖率更低
@@ -58,7 +63,7 @@
 
 各重点字段覆盖率如下：
 
-<div class="img-group"><span class="img-group-label">重点字段覆盖率对比</span><img src="/library-ai/资产管理痛点1.png" alt="覆盖率" /></div>
+<div class="img-group"><span class="img-group-label">各重点字段覆盖率对比</span><img src="/library-ai/资产管理痛点1.png" alt="字段覆盖率" /></div>
 
 - 痛点2：UGC歌词时效性不足、耗时长、成本高
 
@@ -69,6 +74,7 @@
 - 成本：一首原文滚动歌词是0\.25元/首，翻译歌词是1元/首，加起来一首非中文歌的歌词成本为1.25元/首（AI成本是0\.099元/首），且如果要覆盖top200w，需耗时一两年才能完成。
 
 
+
 - 痛点3：人工滚词慢、自动滚词不准
 
     - 人效低：重点内容业务一般会手动制作滚词，这就需借助滚词工具功能来手动打轴制作滚词，整个操作过程较慢，平均制作一首歌的LRC耗时约6min，翻译歌词约30min，效率非常低；
@@ -77,11 +83,15 @@
 
 当前滚词工具：
 
+<div class="img-group"><span class="img-group-label">当前滚词工具界面</span><img src="/library-ai/当前滚词工具.png" alt="滚词工具" /></div>
+
 ##### 1.2 应用场景AI能力探索
 
 ###### 1\. 物料解析：
 
 面向「曲库后台-物料包解析」功能进行优化，该功能主要用于公邮人工入库，物料由版权方打包发送至曲库公邮。后台页面如下：
+
+<div class="img-group"><span class="img-group-label">曲库后台 · 物料包解析页面</span><img src="/library-ai/后台页面如下.png" alt="后台页面" /></div>
 
 通过工作流模式进行编排，使用模型：chatgpt-3\.5-turbo，实验结果如下：
 
@@ -91,9 +101,11 @@
 
     - 物料包格式，共尝试了9种不同格式，基本都能解析出来。如：
 
-<div class="img-group"><span class="img-group-label">物料格式示例</span><img src="/library-ai/9种不同格式.png" alt="9种格式" /></div>
+<div class="img-group"><span class="img-group-label">物料格式示例 · 9 种不同格式均能解析</span><img src="/library-ai/9种不同格式.png" alt="9种格式" /></div>
 
 - 解析结果
+
+<div class="img-group"><span class="img-group-label">物料解析结果示例</span><img src="/library-ai/解析结果.png" alt="解析结果" /></div>
 
 - 效果分析：
 
@@ -115,7 +127,7 @@
 
 2. 验证手段：使用Gemini 2\.0 Flash生成歌词，对比曲库原有歌词 & 通过有道ASR算法生成的歌词
 
-3. 输出结果：AI歌词生成调研（内部文档）
+3. 输出结果：（AI歌词生成调研 · 内部文档）
 
 4. 效果分析：
 
@@ -151,9 +163,11 @@
 
 ② 面向「音频内容理解」：计划使用Gemini 2\.0 Flash。
 
-分析了三款目前主流的音频领域大模型的能力，调研结论如下：
+分析了三款目前主流的音频领域大模型的能力，调研结论
 
-详细报告：Gemini 2.0 Flash 评测报告（内部文档）
+<div class="img-group"><span class="img-group-label">调研结论</span><img src="/library-ai/调研结论.png" alt="调研结论" /></div>如下：
+
+详细报告：（Gemini 2.0 Flash 评测报告 · 内部文档）
 
 - 从分析中可以看出，Gemini 2\.0 Flash是当前最能满足生产环境调用的模型，我们使用它的能力进行了基于音频理解进行内容生产的测试，该模型在绝大部分场景均可提高较高质量的生产结果，如：
 
@@ -170,22 +184,30 @@
     - 歌曲赏析（难度：高）：准确率高
 
 
+
 ### 3、解决思路
 
-##### 3\.1 应用场景
+### 3.1 应用场景
 
-[https://office\.netease\.com/api/admin/file/download?path=cowork/2025/03/27/632a2686a6094b7f8dd3d260e6174bd7\.svg](（内部文件）)
+<div class="img-group"><span class="img-group-label">AI Agent 应用场景概览</span><img src="/library-ai/应用场景.png" alt="应用场景" /></div>
+
+[https://office\.netease\.com/api/admin/file/download?path=cowork/2025/03/27/632a2686a6094b7f8dd3d260e6174bd7\.svg]()
 
 各场景对应的AI能力和模型：
+
+<div class="img-group"><span class="img-group-label">各场景对应的 AI 能力和模型选型</span><img src="/library-ai/各场景对应的AI能力和模型.png" alt="AI能力矩阵" /></div>
 
 其他未来可应用的场景：
 
 - 资源匹配审核、图片清晰度修复、图片尺寸智能加工、文本拼写纠错、乐评分析、智能答疑等。
 
 
-使用AI Agent处理日常工作示例：
 
-##### 3\.2 AI应用技术架构
+使用AI Agent处理日常
+
+<div class="img-group"><span class="img-group-label">使用 AI Agent 处理日常工作示例</span><img src="/library-ai/使用AI Agent处理日常工作示例.png" alt="AI示例" /></div>工作示例：
+
+##### 3.2 AI应用技术架构
 
 - 预期落地项：
 
@@ -197,10 +219,17 @@
 
 - 预期生产流程：
 
+<div class="img-group"><span class="img-group-label">预期生产流程</span><img src="/library-ai/预期生产流程.png" alt="生产流程" /></div>
+
+
 
 - 平台能力拆解：
 
-[https://office\.netease\.com/api/admin/file/download?path=cowork/2025/03/20/987e638ba93947bcb25c97762a2a2297\.svg](（内部文件）)
+[https://office\.netease\.com/api/admin/file/download?path=cowork/2025/03/20/987e638ba93947bcb25c97762a2a2297\.svg]()
+
+
+
+
 
 
 ## 三、项目价值
@@ -218,7 +247,24 @@
     - 曲库Agent 将重构传统曲库资产管理范式，未来可以赋能C端的对话式找歌场景。
 
 
-### 2、项目目标
+
+
+
+
+
+
+
+### 项目目标
+
+<div class="img-group"><span class="img-group-label">项目目标 · 验收标准</span><img src="/library-ai/项目目标.png" alt="项目目标" /></div>
+
+
+
+
+
+
+
+
 
 
 验收标准包括：
@@ -236,10 +282,17 @@
 ### 3、项目成本 
 
 
+
+
+
+
 *如项目在立项阶段范围不确定性高，无法评估投入成本，请填写“无法评估”或者比较笼统的评估结论，如小规模（预计10d以内），中等规模（预计50-100d），较大规模（预计100-200d\)，如果项目周期持续较长，可预估投入的人月（如2个人投入3个月+0\.5人投入3个月）*
 
 
-##### 3\.1 AI大模型调用成本
+
+##### 3.1 AI大模型调用成本
+
+<div class="img-group"><span class="img-group-label">AI 大模型调用成本预估</span><img src="/library-ai/AI大模型调用成本.png" alt="AI成本" /></div>
 
 - 音频理解模型（Gemini 2\.0 Flash）
 
@@ -273,7 +326,9 @@
 
 - 私有化部署：当前伏羲有私有化部署的deepseek r1 模型，成本如下（实际为当前报价5折）
 
-##### 3\.2 外包审核成本
+<div class="img-group"><span class="img-group-label">DeepSeek R1 私有化部署报价方案</span><img src="/library-ai/报价方案.png" alt="报价方案" /></div>
+
+##### 3.2 外包审核成本
 
 【LRC人审成本】审核LRC耗时15s/首，总目标：覆盖35w首歌的LRC
 
@@ -284,11 +339,14 @@
 - 假设：90%内容自动入库，10%进人审，总成本为：24\.1w\*10%\*15s/60/60/7\.5\*230 ≈ 0\.31w元
 
 
+
 ## 四、项目计划
 
-### 1、项目里程碑
+### 项目里程碑
 
-- *里程碑就是项目生命周期的关键时间节点，可列出业务方期望的启动、规划、上线、宣发、目标验收，结项等关键时间节点，立项之后由PM负责人再进行更精确的评估；*
+<div class="img-group"><span class="img-group-label">项目里程碑 · 时间节点</span><img src="/library-ai/项目里程碑.jpg" alt="里程碑" /></div>
+<div class="img-group"><span class="img-group-label">里程碑节点详情</span><img src="/library-ai/里程碑节点.png" alt="里程碑节点" /></div>
+
 
 2、详细计划
 
@@ -309,5 +367,6 @@
 运营：五名
 
 项目经理：一名
+
 
 
