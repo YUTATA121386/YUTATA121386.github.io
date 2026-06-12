@@ -1,5 +1,6 @@
 ﻿/* ============================================
-   YUTATA's Archive — 日式极简 · 匠人美学
+   YUTATA's Archive — 体系与温度
+   基于全站文档审美 DNA 重构
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap');
@@ -15,6 +16,7 @@
   --paper-cream: #f5f0e8;
   --vermillion: #ba2e1f;
   --vermillion-light: #d44535;
+  --vermillion-faded: rgba(186, 46, 31, 0.06);
   --gold: #c4a35a;
   --indigo: #2c3e6b;
   --moss: #5c6b4e;
@@ -23,7 +25,7 @@
   --vp-c-brand-1: var(--vermillion);
   --vp-c-brand-2: var(--vermillion-light);
   --vp-c-brand-3: #9b2213;
-  --vp-c-brand-soft: rgba(186, 46, 31, 0.1);
+  --vp-c-brand-soft: rgba(186, 46, 31, 0.08);
 
   --vp-c-bg: var(--paper-warm);
   --vp-c-bg-alt: var(--paper-cream);
@@ -41,8 +43,6 @@
   --vp-sidebar-width: 240px;
   --vp-nav-height: 56px;
   --vp-layout-max-width: 900px;
-
-  /* 桌面端内容区加宽 */
   --vp-content-max-width: 100%;
 }
 
@@ -58,105 +58,194 @@
   --vp-c-border: #444;
   --vp-c-gutter: #2a2a2a;
   --vp-c-brand-1: var(--vermillion-light);
-  --vp-c-brand-soft: rgba(212, 69, 53, 0.14);
+  --vp-c-brand-soft: rgba(212, 69, 53, 0.1);
+  --vermillion-faded: rgba(212, 69, 53, 0.08);
+  --paper-cream: #2a2824;
 }
 
-/* ========== 排版 ========== */
+/* ========== 排版体系 ========== */
+.vp-doc {
+  line-height: 1.85;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
 .vp-doc h1 {
   font-family: 'Noto Serif SC', serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 2px;
-  border-bottom: 1px solid var(--vp-c-divider);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.6em;
   padding-bottom: 0.5em;
-  margin-bottom: 1em;
+  border-bottom: 2px solid var(--vp-c-divider);
   color: var(--ink-black);
 }
 .dark .vp-doc h1 { color: #e8e0d5; }
 
 .vp-doc h2 {
   font-family: 'Noto Serif SC', serif;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  margin-top: 2em;
-  padding-left: 0.5em;
+  letter-spacing: 0.04em;
+  margin-top: 2.5em;
+  margin-bottom: 0.8em;
+  padding-left: 0.6em;
   border-left: 3px solid var(--vermillion);
 }
 
-.vp-doc h3 { font-size: 1.05rem; font-weight: 600; color: var(--vp-c-text-2); }
-.vp-doc p { line-height: 2; font-size: 0.95rem; }
-.vp-doc a { color: var(--indigo); text-decoration: none; border-bottom: 1px dotted var(--indigo); }
+.vp-doc h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  color: var(--vp-c-text-2);
+}
+
+.vp-doc p {
+  line-height: 1.9;
+  margin: 0.8em 0;
+}
+
+/* ========== 链接 ========== */
+.vp-doc a {
+  color: var(--indigo);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--indigo);
+  transition: border-color 0.15s;
+}
 .dark .vp-doc a { color: #7b9cd6; border-color: #5a7ab0; }
 .vp-doc a:hover { border-bottom-style: solid; }
 
-.vp-doc pre { border-radius: 4px; border: 1px solid var(--vp-c-divider); font-size: 0.85em; }
-.vp-doc code { font-size: 0.88em; }
-
+/* ========== 引用块 ========== */
 .vp-doc blockquote {
   border-left: 2px solid var(--gold);
-  background: linear-gradient(to right, rgba(196, 163, 90, 0.06), transparent);
+  background: linear-gradient(to right, rgba(196, 163, 90, 0.07), transparent 60%);
   border-radius: 0 4px 4px 0;
-  padding: 1.2em 1.5em;
-  margin: 1.5em 0;
+  padding: 1em 1.4em;
+  margin: 1.2em 0;
   font-style: italic;
   color: var(--vp-c-text-2);
+  font-size: 0.92em;
 }
+.vp-doc blockquote p { margin: 0.3em 0; }
+.vp-doc blockquote p:first-child { margin-top: 0; }
+.vp-doc blockquote p:last-child { margin-bottom: 0; }
 
 /* ========== 表格 ========== */
 .vp-doc table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   font-size: 0.9em;
-  table-layout: auto;
+  margin: 1.5em 0;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 4px;
+  overflow: hidden;
 }
 .vp-doc th {
-  background: var(--ink-black);
+  background: var(--ink-charcoal);
   color: var(--paper-warm);
-  padding: 10px 14px;
+  padding: 11px 16px;
   font-weight: 500;
-  letter-spacing: 1px;
+  font-size: 0.85em;
+  letter-spacing: 0.06em;
   text-align: left;
   white-space: nowrap;
 }
-.dark .vp-doc th { background: #333; color: #e8e0d5; }
+.dark .vp-doc th { background: #3a3a3a; color: #e8e0d5; }
 .vp-doc td {
-  padding: 9px 14px;
+  padding: 10px 16px;
   border-bottom: 1px solid var(--vp-c-divider);
-  vertical-align: top;
-  line-height: 1.6;
+  vertical-align: middle;
+  line-height: 1.65;
 }
-.vp-doc tr:last-child td { border-bottom: none; }
-.vp-doc tbody tr:hover td { background: rgba(186, 46, 31, 0.03); }
+.vp-doc tbody tr:last-child td { border-bottom: none; }
+.vp-doc tbody tr:nth-child(even) td { background: rgba(0,0,0,0.015); }
+.dark .vp-doc tbody tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+.vp-doc tbody tr:hover td { background: var(--vermillion-faded); }
+
+/* ========== 代码 ========== */
+.vp-doc pre {
+  border-radius: 4px;
+  border: 1px solid var(--vp-c-divider);
+  font-size: 0.83em;
+  background: var(--vp-c-bg-soft) !important;
+}
+.vp-doc code {
+  font-size: 0.88em;
+  font-family: var(--vp-font-family-mono);
+}
+.vp-doc :not(pre) > code {
+  background: var(--vp-c-bg-soft);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+  font-size: 0.88em;
+  color: var(--vermillion);
+}
+
+/* ========== 分隔线 ========== */
+.vp-doc hr {
+  border: none;
+  border-top: 1px solid var(--vp-c-divider);
+  margin: 2.5em 0;
+}
+
+/* ========== 自定义容器 ========== */
+.vp-doc .custom-block {
+  border-radius: 4px;
+  padding: 1em 1.2em;
+  margin: 1.2em 0;
+  font-size: 0.9em;
+}
 
 /* ========== 导航栏 ========== */
-.VPNav { border-bottom: 1px solid var(--vp-c-divider); backdrop-filter: blur(8px); }
-.VPNavBarTitle .title { font-family: 'Noto Serif SC', serif; letter-spacing: 3px; font-size: 1rem; }
-.VPSidebar { border-right: 1px solid var(--vp-c-divider); }
-.VPSidebarItem .text { font-size: 0.88em; font-weight: 400; }
-.VPFooter { border-top: 1px solid var(--vp-c-divider); padding: 1.5rem 0; font-size: 0.8em; color: var(--vp-c-text-3); }
+.VPNav {
+  border-bottom: 1px solid var(--vp-c-divider);
+  backdrop-filter: blur(8px);
+}
+.VPNavBarTitle .title {
+  font-family: 'Noto Serif SC', serif;
+  letter-spacing: 0.15em;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.VPNavBarMenuLink { font-size: 0.88em; letter-spacing: 0.04em; }
 
+/* ========== 侧边栏 ========== */
+.VPSidebar { border-right: 1px solid var(--vp-c-divider); }
+.VPSidebarItem .text { font-size: 0.87em; font-weight: 400; letter-spacing: 0.03em; }
+.VPSidebarItem.is-active > .item > .text { color: var(--vermillion); font-weight: 600; }
+
+/* ========== 页脚 ========== */
+.VPFooter {
+  border-top: 1px solid var(--vp-c-divider);
+  padding: 1.5rem 0;
+  font-size: 0.8em;
+  color: var(--vp-c-text-3);
+  letter-spacing: 0.04em;
+}
+
+/* ========== 滚动条 ========== */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #c4b99a; border-radius: 3px; }
 .dark ::-webkit-scrollbar-thumb { background: #4a4030; }
 
-.vp-doc .custom-block { border-radius: 4px; padding: 1em 1.2em; margin: 1.2em 0; }
-
 /* ============================================
-   图片系统 — 灵活适配不同宽高比
+   图片系统
    ============================================ */
 
 .img-group { margin: 24px 0; }
 .img-group-label {
   display: block;
-  font-size: 0.78rem;
-  color: var(--vp-c-text-2);
-  letter-spacing: 1px;
-  margin-bottom: 8px;
+  font-size: 0.75rem;
+  color: var(--vp-c-text-3);
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
   padding-left: 2px;
 }
 
-/* 双栏图片行 */
 .img-row {
   display: flex;
   gap: 12px;
@@ -174,30 +263,28 @@
 }
 .img-row img:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(186, 46, 31, 0.1);
+  box-shadow: 0 4px 20px rgba(186, 46, 31, 0.1);
 }
 
-/* 宽图 — 聊天截图、横幅等 */
-.img-row.wide img,
-.img-row.wide img {
-  aspect-ratio: 16 / 9;
-  object-fit: contain;
-  background: var(--vp-c-bg-soft);
-}
-
-/* 方图 — 菜谱、UI 截图等 */
+/* 方图 — 菜品、UI */
 .img-row.square img {
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
-/* 长图 — 竖版截图、海报 */
+/* 宽图 — 聊天截图、横幅 */
+.img-row.wide img {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
+/* 长图 — 竖版 */
 .img-row.tall img {
   aspect-ratio: 3 / 4;
   object-fit: contain;
 }
 
-/* 单图展示 */
+/* 单图 */
 figure.dish {
   max-width: 640px;
   margin: 16px 0;
@@ -236,7 +323,7 @@ figure.poster img {
 .img-lightbox-bg {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.88);
   cursor: zoom-out;
 }
 .img-lightbox-inner {
@@ -273,9 +360,9 @@ figure.poster img {
   to { opacity: 1; transform: scale(1); }
 }
 
-
-
-/* ========== 桌面端宽屏适配 ========== */
+/* ============================================
+   桌面端宽屏适配
+   ============================================ */
 @media (min-width: 769px) {
   .VPDoc .container { max-width: 100% !important; }
   .VPDoc .content { max-width: 960px !important; margin: 0 auto !important; }
@@ -283,31 +370,25 @@ figure.poster img {
   .vp-doc { max-width: 960px !important; }
 }
 
-/* ========== 移动端 ========== */
+/* ============================================
+   移动端
+   ============================================ */
 @media (max-width: 768px) {
-  .vp-doc h1 { font-size: 1.3rem; }
-  .vp-doc h2 { font-size: 1.05rem; }
-  .vp-doc h3 { font-size: 0.9rem; }
-  .vp-doc p { font-size: 0.85rem; line-height: 1.8; }
-  .VPHero .name { font-size: 1.8rem !important; letter-spacing: 3px; }
-  .VPHero .text { font-size: 0.85rem !important; letter-spacing: 3px; }
-  .VPHero .tagline { font-size: 0.7rem !important; letter-spacing: 2px; }
-  .VPHero { padding: 2rem 1rem 1rem !important; }
-  .vp-doc table { font-size: 0.75em; display: block; overflow-x: auto; }
-  .vp-doc th, .vp-doc td { padding: 6px 8px; }
-  .vp-doc pre { font-size: 0.75em; max-width: 100%; overflow-x: auto; }
-  .vp-doc code { font-size: 0.8em; word-break: break-all; }
-  .vp-doc blockquote { padding: 0.8em 1em; margin: 1em 0; font-size: 0.85em; }
-  .VPNavBarTitle .title { font-size: 0.85rem; }
-  .VPNavBarMenu { display: none; }
+  .vp-doc h1 { font-size: 1.4rem; letter-spacing: 0.04em; }
+  .vp-doc h2 { font-size: 1.08rem; border-left-width: 2px; padding-left: 0.5em; margin-top: 2em; }
+  .vp-doc h3 { font-size: 0.92rem; }
+  .vp-doc p { font-size: 0.88rem; line-height: 1.8; }
+  .vp-doc table { font-size: 0.78em; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .vp-doc th, .vp-doc td { padding: 7px 10px; }
+  .vp-doc pre { font-size: 0.78em; max-width: 100%; overflow-x: auto; }
+  .vp-doc blockquote { padding: 0.8em 1em; font-size: 0.88em; }
+  .VPNavBarTitle .title { font-size: 0.88rem; letter-spacing: 0.1em; }
   .img-row { flex-direction: column; }
   figure.dish { max-width: 100%; }
 }
 
 @media (max-width: 480px) {
-  .VPHero .name { font-size: 1.5rem !important; }
-  .VPHero .actions .VPButton { padding: 0.5em 1em; font-size: 0.8rem; }
-  .vp-doc h1 { font-size: 1.15rem; }
-  .vp-doc h2 { font-size: 0.95rem; border-left-width: 2px; padding-left: 0.4em; }
-  .vp-doc table { font-size: 0.7em; }
+  .vp-doc h1 { font-size: 1.2rem; }
+  .vp-doc h2 { font-size: 0.98rem; }
+  .vp-doc table { font-size: 0.72em; }
 }
