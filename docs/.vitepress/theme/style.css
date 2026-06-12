@@ -1,357 +1,235 @@
 ﻿/* ═══════════════════════════════════════════
-   YUTATA · 知識の手帖
-   私人札記本 — Commonplace Book
+   知識の手帖 · 全幅閱讀室
    ═══════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500&display=swap');
 
-/* ── 色彩：墨與紙 ── */
 :root {
-  --ink: #1c1c1c;
-  --ink-soft: #3a3a3a;
-  --ink-muted: #6b6b6b;
-  --paper: #fdfaf3;
-  --paper-warm: #f6f1e4;
-  --paper-card: #fffef9;
-  --red-seal: #b5342e;
-  --red-faded: rgba(181, 52, 46, 0.08);
-  --blue-note: #3a5070;
-  --gold-ink: #b8944b;
-  --gold-wash: rgba(184, 148, 75, 0.08);
-  --line: #e6dfcf;
-  --line-soft: #efe9db;
-
-  --vp-c-brand-1: var(--red-seal);
-  --vp-c-brand-2: #c9453b;
-  --vp-c-brand-3: #8a221a;
-  --vp-c-brand-soft: var(--red-faded);
+  --ink: #1a1a1a;
+  --ink-soft: #444;
+  --ink-light: #888;
+  --paper: #fcf9f2;
+  --paper-warm: #f5efe0;
+  --red: #b5342e;
+  --red-light: #d44535;
+  --gold: #b8944b;
+  --line: #e8e0d0;
 
   --vp-c-bg: var(--paper);
   --vp-c-bg-alt: var(--paper-warm);
-  --vp-c-bg-elv: var(--paper-card);
+  --vp-c-bg-elv: #fffef9;
   --vp-c-bg-soft: var(--paper-warm);
-
   --vp-c-text-1: var(--ink);
   --vp-c-text-2: var(--ink-soft);
-  --vp-c-text-3: var(--ink-muted);
-
+  --vp-c-text-3: var(--ink-light);
   --vp-c-divider: var(--line);
-  --vp-c-border: var(--line-soft);
+  --vp-c-border: var(--line);
   --vp-c-gutter: var(--line);
+  --vp-c-brand-1: var(--red);
+  --vp-c-brand-2: var(--red-light);
+  --vp-c-brand-3: #8a221a;
 
   --vp-font-family-base: 'Noto Serif SC', 'Songti SC', serif;
   --vp-font-family-mono: 'Courier New', monospace;
-
-  --vp-sidebar-width: 260px;
-  --vp-nav-height: 52px;
-  --vp-layout-max-width: 960px;
-  --vp-content-max-width: 100%;
+  --vp-nav-height: 56px;
 }
 
 .dark {
-  --ink: #e0d8c8;
+  --ink: #e0d6c4;
   --ink-soft: #b5aa96;
-  --ink-muted: #7a7060;
-  --paper: #1a1815;
+  --ink-light: #7a7060;
+  --paper: #1a1814;
   --paper-warm: #221f1a;
-  --paper-card: #24211b;
-  --line: #2e2a22;
-  --line-soft: #262219;
-  --red-seal: #d4635a;
-  --red-faded: rgba(212, 99, 90, 0.08);
-  --blue-note: #8aacd6;
-  --gold-ink: #c9a65a;
-  --gold-wash: rgba(201, 166, 90, 0.08);
-  --vp-c-brand-1: var(--red-seal);
+  --line: #2e2a20;
   --vp-c-bg: var(--paper);
   --vp-c-bg-alt: var(--paper-warm);
-  --vp-c-bg-elv: var(--paper-card);
+  --vp-c-bg-elv: #24211b;
   --vp-c-bg-soft: var(--paper-warm);
   --vp-c-text-1: var(--ink);
   --vp-c-text-2: var(--ink-soft);
-  --vp-c-text-3: var(--ink-muted);
+  --vp-c-text-3: var(--ink-light);
   --vp-c-divider: var(--line);
-  --vp-c-border: var(--line-soft);
+  --vp-c-border: var(--line);
   --vp-c-gutter: var(--line);
+  --vp-c-brand-1: #d4635a;
+  --vp-c-brand-2: #e0736a;
 }
 
-/* ── 紙張紋理 ── */
-.VPDoc {
-  background-image:
-    repeating-linear-gradient(0deg, transparent, transparent 28px, var(--line-soft) 28px, var(--line-soft) 29px);
-  background-attachment: local;
-}
-.dark .VPDoc {
-  background-image:
-    repeating-linear-gradient(0deg, transparent, transparent 28px, rgba(255,255,255,0.015) 28px, rgba(255,255,255,0.015) 29px);
+/* ═════════════════════════════════════
+   砍掉側邊欄，全幅佈局
+   ═════════════════════════════════════ */
+.VPSidebar { display: none !important; }
+.VPDoc { padding: 0 !important; }
+.VPDoc .container { max-width: 100% !important; margin: 0 !important; }
+.VPDoc .content { max-width: 100% !important; padding: 0 !important; }
+.VPDoc .content-container { max-width: 100% !important; }
+
+/* 內容區：桌面端左右留 25%，實際內容 50% */
+.vp-doc {
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+  max-width: 820px;
 }
 
-/* ── 排版 ── */
-.vp-doc { line-height: 1.9; font-size: 0.93rem; letter-spacing: 0.01em; color: var(--ink); }
+/* Layout 容器的 sidebar 佔位去掉 */
+.Layout { --vp-sidebar-width: 0px !important; }
+.VPContent { padding-left: 0 !important; padding-right: 0 !important; }
 
-.vp-doc h1 {
-  font-family: 'Noto Serif SC', serif;
-  font-size: 1.75rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  margin: 0 0 1.2em 0;
-  padding-bottom: 0.6em;
+/* ═════════════════════════════════════
+   導航欄：懸浮頂部
+   ═════════════════════════════════════ */
+.VPNav {
   border-bottom: 1px solid var(--line);
-  position: relative;
+  background: rgba(252, 249, 242, 0.92);
+  backdrop-filter: blur(12px);
 }
-.vp-doc h1::after {
-  content: '';
-  position: absolute;
-  bottom: -1px; left: 0;
-  width: 3em;
-  height: 2px;
-  background: var(--red-seal);
-}
+.dark .VPNav { background: rgba(26, 24, 20, 0.92); }
+.VPNavBar { padding: 0 2rem; }
+.VPNavBarTitle .title { font-weight: 700; letter-spacing: 0.1em; font-size: 0.95rem; }
+.VPNavBarMenuLink { font-size: 0.8em; letter-spacing: 0.06em; opacity: 0.6; transition: opacity 0.2s; }
+.VPNavBarMenuLink:hover { opacity: 1; color: var(--red); }
+.VPNavBarMenuLink.active { opacity: 1; color: var(--ink); }
 
+/* 隱藏導航欄的 sidebar 按鈕 */
+.VPNavBarHamburger { display: none !important; }
+
+/* 搜索框靠右 */
+.VPNavBarSearch { margin-left: auto; }
+
+/* ═════════════════════════════════════
+   排版
+   ═════════════════════════════════════ */
+.vp-doc h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  margin: 0 0 1em;
+  line-height: 1.3;
+}
 .vp-doc h2 {
-  font-family: 'Noto Serif SC', serif;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.04em;
-  margin: 2.4em 0 0.6em -0.3em;
-  padding: 0.15em 0 0.15em 0.6em;
-  border-left: 3px solid var(--red-seal);
-  color: var(--ink);
+  margin: 2.5em 0 0.6em;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid var(--line);
 }
-
 .vp-doc h3 {
   font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  margin: 1.6em 0 0.4em 0;
+  font-weight: 700;
+  margin: 1.8em 0 0.3em;
   color: var(--ink-soft);
 }
+.vp-doc p { margin: 0.7em 0; line-height: 2; font-size: 0.93rem; }
+.vp-doc a { color: var(--red); text-decoration: none; border-bottom: 1px solid var(--red); }
+.vp-doc a:hover { opacity: 0.7; }
 
-.vp-doc p { margin: 0.6em 0; line-height: 1.95; }
-
-.vp-doc a {
-  color: var(--blue-note);
-  text-decoration: none;
-  border-bottom: 1px dotted var(--blue-note);
-  transition: border-color 0.15s, color 0.15s;
-}
-.vp-doc a:hover { color: var(--red-seal); border-bottom-color: var(--red-seal); }
-
-/* ── 引用：批註風格 ── */
+/* 引用 */
 .vp-doc blockquote {
-  position: relative;
-  margin: 1.4em 0;
-  padding: 0.9em 1.2em 0.9em 1.6em;
+  margin: 1.6em 0;
+  padding: 1.2em 1.6em;
   border: none;
-  border-left: 3px solid var(--gold-ink);
-  background: var(--gold-wash);
-  border-radius: 0 3px 3px 0;
+  border-left: 4px solid var(--gold);
+  background: none;
   font-style: normal;
-  font-size: 0.9em;
   color: var(--ink-soft);
-  line-height: 1.85;
+  font-size: 0.92em;
+  line-height: 1.9;
 }
-.vp-doc blockquote p { margin: 0.2em 0; }
-.vp-doc blockquote p:first-child { margin-top: 0; }
-.vp-doc blockquote p:last-child { margin-bottom: 0; }
 
-/* ── 表格：資料冊風格 ── */
+/* 表格 */
 .vp-doc table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.88em;
-  margin: 1.5em 0;
-  border: 1px solid var(--line);
+  font-size: 0.86em;
+  margin: 1.6em 0;
 }
-.vp-doc thead { border-bottom: 2px solid var(--ink); }
 .vp-doc th {
-  background: transparent;
-  color: var(--ink);
-  padding: 10px 14px;
   font-weight: 600;
-  font-size: 0.82em;
-  letter-spacing: 0.05em;
   text-align: left;
-  white-space: nowrap;
+  padding: 8px 12px;
   border-bottom: 2px solid var(--ink);
-}
-.dark .vp-doc th { color: var(--ink); border-bottom-color: var(--line-soft); }
-.dark .vp-doc thead { border-bottom-color: var(--line-soft); }
-
-.vp-doc td {
-  padding: 9px 14px;
-  border-bottom: 1px solid var(--line-soft);
-  vertical-align: middle;
-  line-height: 1.6;
-}
-.vp-doc tbody tr:last-child td { border-bottom: none; }
-.vp-doc tbody tr:nth-child(even) td { background: rgba(0,0,0,0.015); }
-.dark .vp-doc tbody tr:nth-child(even) td { background: rgba(255,255,255,0.015); }
-.vp-doc tbody tr:hover td { background: var(--gold-wash); }
-
-/* ── 代碼 ── */
-.vp-doc pre {
-  border-radius: 0;
-  border: 1px solid var(--line);
-  border-left: 3px solid var(--red-seal);
-  font-size: 0.82em;
-  background: var(--paper-card);
-}
-.vp-doc code { font-size: 0.86em; font-family: 'Courier New', monospace; }
-.vp-doc :not(pre) > code {
-  background: var(--paper-warm);
-  padding: 0.12em 0.4em;
-  border-radius: 2px;
-  color: var(--red-seal);
-  font-size: 0.88em;
-}
-
-/* ── 分隔線 ── */
-.vp-doc hr {
-  border: none;
-  text-align: center;
-  margin: 2.5em 0;
-}
-.vp-doc hr::before {
-  content: '· · ·';
-  color: var(--ink-muted);
-  letter-spacing: 0.6em;
   font-size: 0.8em;
-}
-
-/* ── 導航欄：書脊標籤 ── */
-.VPNav {
-  border-bottom: 1px solid var(--line);
-  background: var(--paper);
-  backdrop-filter: none;
-}
-.VPNavBarTitle .title {
-  font-family: 'Noto Serif SC', serif;
-  letter-spacing: 0.12em;
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--ink);
-}
-.VPNavBarMenuLink {
-  font-size: 0.82em;
-  letter-spacing: 0.05em;
-  color: var(--ink-muted);
-  transition: color 0.2s;
-}
-.VPNavBarMenuLink:hover { color: var(--red-seal); }
-.VPNavBarMenuLink.active { color: var(--ink); font-weight: 600; }
-
-/* ── 側邊欄 ── */
-.VPSidebar {
-  border-right: 1px solid var(--line);
-  background: var(--paper);
-}
-.VPSidebarItem .text {
-  font-size: 0.83em;
-  font-weight: 400;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.06em;
   color: var(--ink-soft);
 }
-.VPSidebarItem.is-active > .item > .text {
-  color: var(--ink);
-  font-weight: 600;
+.vp-doc td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  line-height: 1.7;
 }
-.VPSidebarItem .text:hover { color: var(--red-seal); }
+.vp-doc tbody tr:nth-child(even) td { background: rgba(0,0,0,0.012); }
+.dark .vp-doc tbody tr:nth-child(even) td { background: rgba(255,255,255,0.012); }
 
-/* ── 頁尾 ── */
-.VPFooter {
-  border-top: 1px solid var(--line);
-  padding: 1.2rem 0;
-  font-size: 0.75em;
-  color: var(--ink-muted);
-  letter-spacing: 0.06em;
+/* 代碼 */
+.vp-doc pre { border-radius: 0; border: 1px solid var(--line); font-size: 0.82em; }
+.vp-doc :not(pre) > code {
+  background: var(--paper-warm);
+  padding: 0.1em 0.35em;
+  border-radius: 2px;
+  font-size: 0.88em;
+  color: var(--red);
 }
 
-/* ── 滾動條 ── */
+/* 分隔線 */
+.vp-doc hr { border: none; border-top: 1px solid var(--line); margin: 3em 0; }
+
+/* 滾動條 */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--line); border-radius: 2px; }
-::-webkit-scrollbar-thumb:hover { background: var(--ink-muted); }
 
-/* ═══════════════════════════════════════════
-   圖片系統
-   ═══════════════════════════════════════════ */
+/* ═════════════════════════════════════
+   圖片
+   ═════════════════════════════════════ */
 .img-group { margin: 28px 0; }
 .img-group-label {
   display: block;
   font-size: 0.7rem;
   letter-spacing: 0.08em;
-  color: var(--ink-muted);
+  color: var(--ink-light);
   margin-bottom: 10px;
-  padding-left: 2px;
-  text-transform: uppercase;
 }
 .img-row { display: flex; gap: 14px; margin: 8px 0; align-items: flex-start; }
 .img-row img {
   flex: 1;
   min-width: 0;
-  border-radius: 2px;
+  border-radius: 0;
   border: 1px solid var(--line);
-  background: var(--paper-card);
+  background: var(--vp-c-bg-elv);
   cursor: zoom-in;
-  transition: box-shadow 0.25s ease;
-  filter: sepia(0.08);
+  transition: opacity 0.2s;
 }
-.img-row img:hover { box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-.img-row.square img { aspect-ratio: 4 / 3; object-fit: cover; }
-.img-row.wide img { aspect-ratio: 16 / 9; object-fit: contain; }
-.img-row.tall img { aspect-ratio: 3 / 4; object-fit: contain; }
+.img-row img:hover { opacity: 0.85; }
+.img-row.square img { aspect-ratio: 4/3; object-fit: cover; }
+.img-row.wide img { aspect-ratio: 16/9; object-fit: contain; }
+.img-row.tall img { aspect-ratio: 3/4; object-fit: contain; }
 
-figure.dish { max-width: 640px; margin: 20px 0; }
-figure.dish img {
-  width: 100%;
-  border-radius: 2px;
-  border: 1px solid var(--line);
-  cursor: zoom-in;
-}
-
-figure.poster {
-  max-width: 480px;
-  margin: 24px auto;
-  border-radius: 2px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-}
+figure.dish { max-width: 100%; margin: 20px 0; }
+figure.dish img { width: 100%; border-radius: 0; border: 1px solid var(--line); cursor: zoom-in; }
+figure.poster { max-width: 480px; margin: 24px auto; border: 1px solid var(--line); }
 figure.poster img { width: 100%; display: block; cursor: zoom-in; }
 
-/* ── 燈箱 ── */
+/* 燈箱 */
 .img-lightbox { position: fixed; inset: 0; z-index: 9999; display: none; align-items: center; justify-content: center; }
 .img-lightbox.active { display: flex; }
-.img-lightbox-bg { position: absolute; inset: 0; background: rgba(20,18,15,0.92); cursor: zoom-out; }
-.img-lightbox-inner { position: relative; max-width: 94vw; max-height: 94vh; z-index: 1; animation: lightboxIn 0.2s ease; }
-.img-lightbox-inner img { max-width: 94vw; max-height: 90vh; object-fit: contain; border-radius: 2px; box-shadow: 0 8px 48px rgba(0,0,0,0.4); }
-.img-lightbox-close { position: absolute; top: -40px; right: 0; background: none; border: none; color: #ccc; font-size: 1.8rem; cursor: pointer; opacity: 0.6; transition: opacity 0.15s; }
-.img-lightbox-close:hover { opacity: 1; }
-@keyframes lightboxIn { from { opacity: 0; } to { opacity: 1; } }
+.img-lightbox-bg { position: absolute; inset: 0; background: rgba(0,0,0,0.9); cursor: zoom-out; }
+.img-lightbox-inner { position: relative; max-width: 94vw; max-height: 94vh; z-index: 1; }
+.img-lightbox-inner img { max-width: 94vw; max-height: 90vh; object-fit: contain; }
+.img-lightbox-close { position: absolute; top: -40px; right: 0; background: none; border: none; color: #ccc; font-size: 1.8rem; cursor: pointer; }
 
-/* ── 桌面端 ── */
-@media (min-width: 769px) {
-  .VPDoc .container { max-width: 100%; }
-  .VPDoc .content { max-width: 720px; margin: 0 auto; }
-  .VPDoc .content-container { max-width: 720px; }
-  .vp-doc { max-width: 720px; }
-}
-
-/* ── 移動端 ── */
+/* ═════════════════════════════════════
+   移動端
+   ═════════════════════════════════════ */
 @media (max-width: 768px) {
-  .VPDoc { background-image: none; }
-  .vp-doc h1 { font-size: 1.3rem; }
-  .vp-doc h2 { font-size: 1rem; margin-left: 0; border-left-width: 2px; padding-left: 0.5em; }
-  .vp-doc h3 { font-size: 0.88rem; }
-  .vp-doc p { font-size: 0.86rem; line-height: 1.85; }
+  .vp-doc { padding: 2rem 1rem 3rem; }
+  .vp-doc h1 { font-size: 1.4rem; }
+  .vp-doc h2 { font-size: 1rem; }
+  .vp-doc p { font-size: 0.88rem; }
   .vp-doc table { font-size: 0.76em; display: block; overflow-x: auto; }
-  .vp-doc th, .vp-doc td { padding: 6px 10px; }
   .img-row { flex-direction: column; }
-  figure.dish { max-width: 100%; }
-  .VPNavBarTitle .title { font-size: 0.85rem; }
-}
-
-@media (max-width: 480px) {
-  .vp-doc h1 { font-size: 1.15rem; }
-  .vp-doc h2 { font-size: 0.92rem; }
+  .VPNavBar { padding: 0 1rem; }
+  .VPNavBarMenu { display: none; }
+  .VPNavBarHamburger { display: flex !important; }
 }
