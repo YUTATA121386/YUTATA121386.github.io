@@ -1,4 +1,4 @@
-﻿# 校招面试话术
+# 校招面试话术
 
 > 从实习到校招，每一场面试都是一次自我对话。
 
@@ -11,7 +11,7 @@
   <a href="/interview/internship" class="grid-card">
     <span class="grid-icon">🎯</span>
     <strong>实习准备 · 要点攻略与事后复盘</strong>
-    <span>简历 · 面经 · 专业面 · HR面 · 复盘总结</span>
+    <span>STAR法则 · 面经 · HR面 · 复盘</span>
   </a>
 
 </div>
@@ -25,7 +25,7 @@
   <a href="/interview/campus/" class="grid-card">
     <span class="grid-icon">🏢</span>
     <strong>校招面试全记录</strong>
-    <span>通用高频问题归类 · 网易 / 昆仑 / 东西世界 / 荔枝 / 橙果 / 优趣汇</span>
+    <span>高频问题 · 六家公司 · 面试复盘</span>
   </a>
 
 </div>

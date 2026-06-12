@@ -9,25 +9,25 @@
   <a href="/general/japanese-dramas" class="grid-card">
     <span class="grid-icon">🎬</span>
     <strong>日本影视剧 · 评级</strong>
-    <span>S/A/B/C 四级体系，50+ 部作品评鉴</span>
+    <span>剧作评鉴 · 分档体系</span>
   </a>
 
   <a href="/general/grand-maison-tokyo" class="grid-card">
     <span class="grid-icon">🍳</span>
     <strong>东京大饭店 · 烹饪技法拆解</strong>
-    <span>剧中的烹饪技法深度拆解</span>
+    <span>法餐 · 料理拆解</span>
   </a>
 
   <a href="/general/music-appreciation" class="grid-card">
     <span class="grid-icon">🎵</span>
     <strong>音乐鉴赏 · 唱片评价</strong>
-    <span>唱片逐张评价与分析</span>
+    <span>唱片 · 逐张评鉴</span>
   </a>
 
   <a href="/general/music-library-ops" class="grid-card">
     <span class="grid-icon">📋</span>
     <strong>曲库运营 · 平台与角色视角</strong>
-    <span>从用户、编辑到运营者的多维职责拆解</span>
+    <span>曲库运营 · 平台视角 · 用户视角</span>
   </a>
 
 </div>
