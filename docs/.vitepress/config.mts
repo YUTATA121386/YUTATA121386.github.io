@@ -80,7 +80,7 @@ export default defineConfig({
       ],
       "/growth/": [{ text: "上升清单", items: [{ text: "概述", link: "/growth/" }] }],
       "/pilgrimage/": [{ text: "圣地巡礼", items: [{ text: "概述", link: "/pilgrimage/" }] }],
-      "/interview/": [{ text: "面试话术", items: [{ text: "概述", link: "/interview/" }] }],
+      "/interview/": [{ text: "面试话术", items: [{ text: "概述", link: "/interview/" }, { text: "实习准备 · 要点攻略", link: "/interview/internship" }, { text: "校招面试全记录", link: "/interview/campus-recruitment" }] }],
     },
 
     outline: { level: [2, 3], label: "目录" },
