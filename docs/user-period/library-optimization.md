@@ -92,12 +92,6 @@
   <img src="/library-opt/汽水音乐启航计划证书.jpg" alt="汽水音乐启航计划证书" />
 </figure>
 
-<div class="img-group">
-  <div class="img-row">
-    <img src="/library-opt/汽水音乐启航计划证书.jpg" alt="汽水音乐启航计划证书" />
-  </div>
-</div>
-
 ---
 
 ## 五、Leader 回复
