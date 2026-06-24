@@ -274,7 +274,7 @@ async function generateReport(dateCN, categorized, fullTexts) {
 [2] **标题** — 来源 · YYYY-MM-DD · [链接](URL)
 ...
 </div>\n\`\`\`
-每个引用一行，包含标题、来源、发布日期、链接。必须按编号顺序排列。
+每个引用一行，包含标题、来源、发布日期、链接。必须按编号顺序排列。每个引用项必须用<p id=\"ref-N\">包裹，如<p id=\"ref-1\">[1] **标题** ...</p>
 
 ### 6. 长度
 总计1200-2000字。
@@ -293,7 +293,7 @@ ${fulltextContext}
 - 参考链接必须放在<div class="ref-scroll">中
 - 深度解读要有背景、经过、结果，不能浮于表面
 
-现在开始生成今日报告。`;
+⚠️ 不要生成报告大标题（如\"音乐产业日报\"），直接从💬今日引言开始输出。\n\n现在开始生成今日报告。`;
 
   const resp = await fetch(DEEPSEEK_API, {
     method: "POST",
@@ -391,7 +391,17 @@ async function main() {
   let report;
   try {
     report = await generateReport(dateCN, categorized, fullTexts);
-    console.log(`✅ AI 报告生成完成 (${report.length} 字)`);
+    
+  // Post-process: strip AI-generated title if present
+  report = report.replace(/^# 音乐产业日报.*\n+/m, '');
+  report = report.replace(/^# .*日报.*\n+/m, '');
+  
+  // Post-process: ensure reference items have id attributes
+  report = report.replace(/<div class="ref-scroll">([\s\S]*?)<\/div>/g, function(match, inner) {
+    return '<div class="ref-scroll">' + inner.replace(/<p>\s*\[(\d+)\]/g, '<p id="ref-$1">[$1]') + '</div>';
+  });
+
+  console.log(`✅ AI 报告生成完成 (${report.length} 字)`);
   } catch (err) {
     console.log(`❌ AI 生成失败: ${err.message}`);
     console.log(`⚠️  降级为纯链接模式`);
@@ -417,7 +427,7 @@ outline: [2, 3]
 
 # 🛰️ 行业雷达 · ${dateCN}
 
-> 📊 今日采集 ${allItems.length} 篇 | 命中 ${totalMatched} 篇 | 热点集中在 ${topCats}
+> 📊 今日采集 ${allItems.length} 篇 | 命中 ${totalMatched} 篇 | AI 筛选引用并深度分析 | 热点集中在 ${topCats}
 
 ${report}
 
