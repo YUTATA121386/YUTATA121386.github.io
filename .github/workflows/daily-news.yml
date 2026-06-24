@@ -1,0 +1,39 @@
+﻿name: Daily News Radar
+
+on:
+  schedule:
+    # 每天 04:00 UTC = 北京时间 12:00
+    - cron: "0 4 * * *"
+  workflow_dispatch:  # 允许手动触发
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-news
+  cancel-in-progress: true
+
+jobs:
+  fetch-news:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run news radar
+        run: node scripts/daily-news.js
+
+      - name: Commit and push report
+        run: |
+          git config user.name "YUTATA Radar Bot"
+          git config user.email "radar-bot@yutata.dev"
+          git add docs/daily/
+          git diff --cached --quiet || (
+            git commit -m "📡 行业雷达日报 $(date +%Y-%m-%d)"
+            git push
+          )

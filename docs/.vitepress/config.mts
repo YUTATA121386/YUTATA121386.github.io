@@ -1,4 +1,4 @@
-import { defineConfig } from "vitepress"
+﻿import { defineConfig } from "vitepress"
 
 export default defineConfig({
   lang: "zh-CN",
@@ -15,6 +15,7 @@ export default defineConfig({
 
     nav: [
       { text: "首页", link: "/" },
+      { text: "🛰️ 行业雷达", link: "/daily/" },
       { text: "上升清单", link: "/growth/" },
       { text: "通识积累", link: "/general/" },
       { text: "圣地巡礼", link: "/pilgrimage/" },
@@ -104,6 +105,7 @@ export default defineConfig({
           collapsed: false,
         },
       ],
+      "/daily/": [{ text: "行业雷达", items: [{ text: "概述", link: "/daily/" }] }],
       "/growth/": [{ text: "上升清单", items: [{ text: "概述", link: "/growth/" }] }],
       "/pilgrimage/": [{ text: "圣地巡礼", items: [{ text: "概述", link: "/pilgrimage/" }] }],
     },
