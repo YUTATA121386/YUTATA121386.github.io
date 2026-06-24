@@ -1,4 +1,4 @@
-﻿import { defineConfig } from "vitepress"
+import { defineConfig } from "vitepress"
 
 export default defineConfig({
   lang: "zh-CN",
@@ -14,19 +14,19 @@ export default defineConfig({
     logo: "/logo.svg",
 
     nav: [
-      { text: "首页", link: "/" },
+      { text: "🏠 首页", link: "/" },
       { text: "🛰️ 行业雷达", link: "/daily/" },
-      { text: "上升清单", link: "/growth/" },
-      { text: "通识积累", link: "/general/" },
-      { text: "圣地巡礼", link: "/pilgrimage/" },
-      { text: "云音乐产品学习", link: "/music-product/" },
-      { text: "面试话术", link: "/interview/" },
+      { text: "📈 上升清单", link: "/growth/" },
+      { text: "📚 通识积累", link: "/general/" },
+      { text: "🚅 圣地巡礼", link: "/pilgrimage/" },
+      { text: "🎵 云音乐产品学习", link: "/music-product/" },
+      { text: "💼 面试话术", link: "/interview/" },
     ],
 
     sidebar: {
       "/general/": [
         {
-          text: "通识积累",
+          text: "📚 通识积累",
           items: [
             { text: "概述", link: "/general/" },
             { text: "日本影视剧 · 评级", link: "/general/japanese-dramas" },
@@ -38,7 +38,7 @@ export default defineConfig({
       ],
       "/music-product/": [
         {
-          text: "三大活动",
+          text: "🎯 三大活动",
           items: [
             { text: "年度报告", link: "/music-product/annual-report" },
             { text: "歌词翻译编辑部", link: "/music-product/lyrics-translation" },
@@ -46,21 +46,21 @@ export default defineConfig({
           ],
         },
         {
-          text: "实验与专项",
+          text: "🧪 实验与专项",
           items: [
             { text: "歌词 AB 实验", link: "/music-product/lyrics-ab-test" },
             { text: "曲库 AI 专项", link: "/music-product/library-ai-project" },
           ],
         },
         {
-          text: "线下活动",
+          text: "🎪 线下活动",
           items: [
             { text: "云小编茶话会", link: "/music-product/tea-party" },
             { text: "云村用户节", link: "/music-product/cloud-village-festival" },
           ],
         },
         {
-          text: "线上交流（用户时期）",
+          text: "💬 线上交流",
           items: [
             { text: "反馈与回复", link: "/user-period/feedback-reply" },
             { text: "曲库优化方案", link: "/user-period/library-optimization" },
@@ -69,7 +69,7 @@ export default defineConfig({
       ],
       "/user-period/": [
         {
-          text: "线上交流（用户时期）",
+          text: "💬 线上交流",
           items: [
             { text: "概述", link: "/user-period/" },
             { text: "反馈与回复", link: "/user-period/feedback-reply" },
@@ -79,14 +79,14 @@ export default defineConfig({
       ],
       "/interview/": [
         {
-          text: "面试话术",
+          text: "💼 面试话术",
           items: [
             { text: "概述", link: "/interview/" },
             { text: "实习准备 · 要点攻略", link: "/interview/internship" },
           ],
         },
         {
-          text: "校招面试",
+          text: "🎓 校招面试",
           items: [
             { text: "通用高频问题", link: "/interview/campus/" },
           ],
@@ -105,9 +105,9 @@ export default defineConfig({
           collapsed: false,
         },
       ],
-      "/daily/": [{ text: "行业雷达", items: [{ text: "概述", link: "/daily/" }] }],
-      "/growth/": [{ text: "上升清单", items: [{ text: "概述", link: "/growth/" }] }],
-      "/pilgrimage/": [{ text: "圣地巡礼", items: [{ text: "概述", link: "/pilgrimage/" }] }],
+      "/daily/": [{ text: "行业雷达", items: [{ text: "概述", link: "/daily/" }, { text: "关键词覆盖", link: "/daily/keywords" }] }],
+      "/growth/": [{ text: "📈 上升清单", items: [{ text: "概述", link: "/growth/" }] }],
+      "/pilgrimage/": [{ text: "🚅 圣地巡礼", items: [{ text: "概述", link: "/pilgrimage/" }] }],
     },
 
     outline: { level: [2, 3], label: "目录" },

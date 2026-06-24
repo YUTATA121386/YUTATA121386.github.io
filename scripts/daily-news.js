@@ -37,6 +37,15 @@ const SOURCES = [
   { name: "36氪", url: "https://36kr.com/feed", lang: "zh", weight: 7 },
   { name: "Google News 音乐产业", url: "https://news.google.com/rss/search?q=音乐版权+音乐平台+AI音乐+曲库+流媒体+音乐发行&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", lang: "zh", weight: 8 },
   { name: "Google News Music Industry", url: "https://news.google.com/rss/search?q=music+copyright+streaming+royalties+AI+music+DDEX+ISRC&hl=en-US&gl=US&ceid=US:en", lang: "en", weight: 7 },
+  // --- 国内深度源 ---
+  { name: "音乐财经", url: "https://www.musicbusiness.cn/feed/", lang: "zh", weight: 8 },
+  { name: "新音乐产业观察", url: "https://www.takungpao.com.hk/special/music/feed/", lang: "zh", weight: 7 },
+  { name: "Google News 音乐版权", url: "https://news.google.com/rss/search?q=音乐版权+DDEX+ISRC+曲库+版税+音乐平台&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", lang: "zh", weight: 9 },
+  { name: "Google News 网易云+TME", url: "https://news.google.com/rss/search?q=网易云音乐+QQ音乐+TME+腾讯音乐+汽水音乐&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", lang: "zh", weight: 8 },
+  { name: "Google News AI音乐中文", url: "https://news.google.com/rss/search?q=AI音乐+Suno+Udio+音乐生成+人工智能音乐&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", lang: "zh", weight: 8 },
+  // --- 社交媒体 ---
+  { name: "Reddit Music Industry", url: "https://www.reddit.com/r/musicindustry/.rss", lang: "en", weight: 6 },
+  { name: "Reddit WeAreTheMusicMakers", url: "https://www.reddit.com/r/WeAreTheMusicMakers/.rss", lang: "en", weight: 5 },
 ];
 
 // ===================== 关键词库 (100+) =====================
@@ -229,57 +238,60 @@ async function generateReport(dateCN, categorized, fullTexts) {
     }
   }
 
-  const prompt = `你是一位资深的音乐产业分析师，请根据以下行业新闻生成一份中文日报。
+  const prompt = `你是一位资深音乐产业分析师，请根据以下行业新闻撰写一份中文日报。
 
 ## 写作要求
-1. **口吻**：专业但不枯燥，幽默有趣，有网感（像朋友聊天但信息密度高）
-2. **结构**：
-   - 开头：今日引言（一句话点出今天最有意思的事，带点调侃）
-   - 一页总结（TL;DR）：3-5 条核心要点
-   - 深度解读：按主题分 3-5 个小节，每节 100-200 字
-   - 曲库人必看：2-3 条对曲库运营最相关的内容
-   - 冷知识/趣闻：1-2 条轻松内容
-3. **引用**：引用时在文中标注 [1]、[2] 等，对应下方参考链接
-4. **长度**：总计 800-1500 字
-5. 所有输出为简体中文
 
-## 行业背景（供参考）
-用户是网易云音乐的曲库内容产品运营，关注音乐版权、元数据规范(DDEX)、ISRC/UPC标识符、音乐发行、流媒体平台、AI音乐、曲库治理、版税结算等领域。
+### 1. 口吻
+专业但不枯燥，幽默有网感，像朋友聊天但信息密度高。适当使用网络热梗但不过度。敢于表达观点和预判。
+
+### 2. 内容深度（极其重要！）
+每一条深度解读必须包含：背景→经过→结果/影响。不能只是标题复述。
+- 如果是诉讼：谁告谁、为什么告、索赔多少、目前阶段、行业影响
+- 如果是收购：买家/卖家/金额/标的/战略意图
+- 如果是技术：解决了什么问题、和现有方案对比、适用场景
+- 如果是数据：数字对比、趋势分析、背后的原因
+每个小节至少150-300字，让读者看完就能跟同事讲清楚这件事。
+
+### 3. 引用格式（严格遵守！）
+- 文中引用使用HTML角标格式：<sup><a href="#ref-编号">[编号]</a></sup>
+- 例如：SZA直接在社交媒体上开怼<sup><a href="#ref-19">[19]</a></sup>
+- 一个观点引用多个来源时连写
+
+### 4. 结构要求
+- 💬 今日引言：一句话点出今天最有价值的事，带点幽默
+- 📌 一页总结 (TL;DR)：5条核心要点，每条一行
+- 🔍 深度解读：3-5个主题小节，每节150-300字，有背景经过结果
+- 🎯 曲库人必看：3条对曲库运营最相关的实操建议
+- 😄 冷知识 / 趣闻：1-2条轻松但有信息量的内容
+- 📎 参考链接：使用HTML滚动框格式
+
+### 5. 参考链接格式（严格遵守！）
+\`\`\`html
+<div class="ref-scroll">
+
+[1] **标题** — 来源 · YYYY-MM-DD · [链接](URL)
+[2] **标题** — 来源 · YYYY-MM-DD · [链接](URL)
+...
+</div>\n\`\`\`
+每个引用一行，包含标题、来源、发布日期、链接。必须按编号顺序排列。
+
+### 6. 长度
+总计1200-2000字。
+
+## 行业背景
+用户是网易云音乐的曲库内容产品运营，关注音乐版权、元数据规范(DDEX)、ISRC/UPC标识符、音乐发行、流媒体平台、AI音乐、曲库治理、版税结算。
 
 ## 今日新闻素材
 ${newsContext}
 ${fulltextContext}
 
-## 输出格式
-请严格按照以下 Markdown 格式输出：
-
----
-### 💬 今日引言
-...
-
-### 📌 一页总结 (TL;DR)
-- ...
-- ...
-
-### 🔍 深度解读
-
-#### 主题1标题
-... [引用编号]
-
-#### 主题2标题
-... [引用编号]
-
-### 🎯 曲库人必看
-- ...
-
-### 😄 冷知识 / 趣闻
-- ...
-
-### 📎 参考链接
-[1] [标题](URL) — 来源
-[2] ...
-
----
+## 重要提醒
+- 每个引用必须在文中至少出现一次
+- 引用角标格式必须是<sup><a href="#ref-N">[N]</a></sup>
+- 参考链接必须有发布日期（从原文标题或URL推断近似日期）
+- 参考链接必须放在<div class="ref-scroll">中
+- 深度解读要有背景、经过、结果，不能浮于表面
 
 现在开始生成今日报告。`;
 
@@ -420,8 +432,8 @@ ${[...new Set(allItems.map(i => i.source))].map(src => {
   return `| ${src} | ${allItems.find(i => i.source === src)?.lang === "zh" ? "中文" : "EN"} | ${cnt} |`;
 }).join("\n")}
 
-> 🤖 本文由 YUTATA 行业雷达 v2 · AI 驱动自动生成，每日 12:00 更新
-> 生成时间: ${now.toISOString()}
+
+> 生成时间: ${now.toLocaleString('zh-CN', {timeZone: 'Asia/Shanghai'})}
 `;
 
   // 写入
