@@ -1,10 +1,9 @@
-﻿name: Daily News Radar
+name: Daily News Radar
 
 on:
   schedule:
-    # 每天 04:00 UTC = 北京时间 12:00
-    - cron: "0 4 * * *"
-  workflow_dispatch:  # 允许手动触发
+    - cron: "0 4 * * *"  # 北京时间 12:00
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -25,7 +24,9 @@ jobs:
         with:
           node-version: 22
 
-      - name: Run news radar
+      - name: Run AI-powered news radar
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: node scripts/daily-news.js
 
       - name: Commit and push report
