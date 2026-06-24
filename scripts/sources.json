@@ -1,0 +1,65 @@
+{
+  "sources": [
+    {
+      "name": "Music Business Worldwide",
+      "url": "https://www.musicbusinessworldwide.com/feed/",
+      "lang": "en",
+      "weight": 10
+    },
+    {
+      "name": "Billboard",
+      "url": "https://www.billboard.com/feed/",
+      "lang": "en",
+      "weight": 8
+    },
+    {
+      "name": "Music Ally",
+      "url": "https://musically.com/feed/",
+      "lang": "en",
+      "weight": 9
+    },
+    {
+      "name": "Hypebot",
+      "url": "https://hypebot.com/feed/",
+      "lang": "en",
+      "weight": 7
+    },
+    {
+      "name": "Complete Music Update",
+      "url": "https://completemusicupdate.com/feed/",
+      "lang": "en",
+      "weight": 6
+    },
+    {
+      "name": "Digital Music News",
+      "url": "https://www.digitalmusicnews.com/feed/",
+      "lang": "en",
+      "weight": 7
+    },
+    {
+      "name": "MusicTech",
+      "url": "https://musictech.com/feed/",
+      "lang": "en",
+      "weight": 5
+    },
+    {
+      "name": "Synchblog",
+      "url": "https://www.synchtank.com/blog/feed/",
+      "lang": "en",
+      "weight": 6
+    }
+  ],
+  "keywords": {
+    "音乐版权": ["copyright", "licensing", "rights", "publishing", "IP", "infringement", "royalty", "版权", "授权", "侵权"],
+    "元数据与DDEX": ["metadata", "DDEX", "Digital Data Exchange", "ERN", "RIN", "MWL", "元数据"],
+    "ISRC/UPC": ["ISRC", "UPC", "EAN", "ISWC", "IPI", "ISNI", "identifier", "barcode"],
+    "音乐发行": ["distribution", "distributor", "DistroKid", "TuneCore", "CD Baby", "Believe", "发行", "分发"],
+    "音乐平台": ["Spotify", "Apple Music", "Amazon Music", "YouTube Music", "TikTok", "Deezer",
+                 "Tidal", "网易云", "QQ音乐", "汽水", "TME", "NetEase", "streaming", "platform", "平台"],
+    "AI音乐": ["AI music", "AI generated", "Suno", "Udio", "Aimi", "Boomy", "Mubert",
+               "artificial intelligence music", "generative music", "AI作曲", "AI生成"],
+    "曲库治理": ["catalog", "library", "ingestion", "curation", "quality", "曲库", "资产管理", "治理"],
+    "版税结算": ["royalty accounting", "mechanical", "performance rights", "PRO", "CMO",
+                 "SoundExchange", "ASCAP", "BMI", "PRS", "版税", "结算", "集体管理"]
+  }
+}

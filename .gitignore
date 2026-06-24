@@ -1,7 +1,9 @@
-﻿node_modules/
+node_modules/
 dist/
 .vitepress/dist/
 .vitepress/cache/
 *.json
 !package.json
 !package-lock.json
+
+!scripts/sources.json
