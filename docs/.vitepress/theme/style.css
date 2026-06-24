@@ -375,36 +375,7 @@ body::before {
   font-size: 0.85em;
 }
 
-/* 表格 — 米其林菜单质感 */
-.vp-doc table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.8em 0;
-  font-size: 0.88rem;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-}
-.vp-doc thead th {
-  background: var(--paper-warm);
-  padding: 0.7em 1em;
-  font-weight: 600;
-  font-size: 0.8rem;
-  letter-spacing: 0.06em;
-  color: var(--ink);
-  text-align: left;
-  border-bottom: 2px solid var(--line);
-  font-family: 'Noto Sans SC', sans-serif;
-}
-.vp-doc tbody td {
-  padding: 0.6em 1em;
-  vertical-align: top;
-  line-height: 1.8;
-  color: var(--ink-soft);
-  border-bottom: 1px solid var(--line-soft);
-}
-.vp-doc tbody tr:nth-child(even) td { background: var(--tea-wash); }
-.vp-doc tbody tr:hover td { background: var(--gold-soft); }
+
 
 /* 代码 */
 .vp-doc pre {
@@ -573,7 +544,7 @@ figure.poster img { width: 100%; display: block; cursor: zoom-in; }
 }
 
 /* ═══════════════ 表格增强 ═══════════════ */
-.vp-doc table {
+.vp-doc table { table-layout: auto;
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
@@ -613,6 +584,15 @@ figure.poster img { width: 100%; display: block; cursor: zoom-in; }
 .vp-doc tbody tr:hover td {
   background: linear-gradient(90deg, var(--gold-soft), transparent);
   transition: background var(--transition-fast);
+/* 表格列宽优化 */
+.vp-doc table th:first-child,
+.vp-doc table td:first-child {
+  min-width: 10em;
+}
+.vp-doc table th:last-child,
+.vp-doc table td:last-child {
+  white-space: nowrap;
+}
 }
 /* ═══════════════ 移动端 ═══════════════ */
 @media (max-width: 768px) {
@@ -627,7 +607,7 @@ figure.poster img { width: 100%; display: block; cursor: zoom-in; }
   .vp-doc h2 { font-size: 1.1rem; }
   .vp-doc h3 { font-size: 0.95rem; }
   .vp-doc p { font-size: 0.92rem; line-height: 1.85; }
-  .vp-doc table { font-size: 0.8em; display: block; overflow-x: auto; }
+  .vp-doc table { table-layout: auto; font-size: 0.8em; display: block; overflow-x: auto; }
   .img-row { flex-direction: column; }
   .VPNavBar { padding: 0 1rem; }
   .VPNavBarMenu { display: none; }
