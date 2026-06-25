@@ -21,6 +21,14 @@ const OUTPUT_DIR = path.join(__dirname, "..", "docs", "daily");
 const MAX_FULLTEXT = 3;      // 最多抓取全文的篇数
 const MAX_PER_SOURCE = 15;
 const DAYS_BACK = 1;
+// ===================== 前置检查 =====================
+if (!DEEPSEEK_KEY || DEEPSEEK_KEY === "") {
+  console.error("❌ 错误: DEEPSEEK_API_KEY 环境变量未设置!");
+  console.error("   请在 GitHub Repo → Settings → Secrets → Actions 添加 DEEPSEEK_API_KEY");
+  console.error("   或在本地运行时通过环境变量传入");
+  process.exit(1);
+}
+
 
 // ===================== RSS 源 =====================
 const SOURCES = [
@@ -233,7 +241,7 @@ async function generateReport(dateCN, categorized, fullTexts) {
   let fulltextContext = "";
   if (fullTexts.length > 0) {
     fulltextContext = "\n\n=== 部分文章全文内容（供深度分析） ===\n";
-    for (const ft of fullTexts.slice(0, 5)) {
+    for (const ft of fullTexts.slice(0, MAX_FULLTEXT)) {
       fulltextContext += `\n[${ft.title}] (${ft.source})\n${ft.text.slice(0, 1000)}\n---\n`;
     }
   }
