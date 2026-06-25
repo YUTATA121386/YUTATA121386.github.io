@@ -15,10 +15,10 @@ const https = require("https");
 const http = require("http");
 
 // ===================== 配置 =====================
-const DEEPSEEK_KEY = process.env.DEEPSEEK_API_KEY || "REMOVED-SECRET";
+const DEEPSEEK_KEY = process.env.DEEPSEEK_API_KEY;
 const DEEPSEEK_API = "https://api.deepseek.com/chat/completions";
 const OUTPUT_DIR = path.join(__dirname, "..", "docs", "daily");
-const MAX_FULLTEXT = 8;      // 最多抓取全文的篇数
+const MAX_FULLTEXT = 3;      // 最多抓取全文的篇数
 const MAX_PER_SOURCE = 15;
 const DAYS_BACK = 1;
 
@@ -234,7 +234,7 @@ async function generateReport(dateCN, categorized, fullTexts) {
   if (fullTexts.length > 0) {
     fulltextContext = "\n\n=== 部分文章全文内容（供深度分析） ===\n";
     for (const ft of fullTexts.slice(0, 5)) {
-      fulltextContext += `\n[${ft.title}] (${ft.source})\n${ft.text.slice(0, 2000)}\n---\n`;
+      fulltextContext += `\n[${ft.title}] (${ft.source})\n${ft.text.slice(0, 1000)}\n---\n`;
     }
   }
 
@@ -311,6 +311,9 @@ ${fulltextContext}
 
   if (!resp.ok) throw new Error(`DeepSeek API error: ${resp.status}`);
   const data = await resp.json();
+  const usage_in = data.usage ? data.usage.prompt_tokens || 0 : 0;
+  const usage_out = data.usage ? data.usage.completion_tokens || 0 : 0;
+  console.log(`[Token] 输入: ${usage_in} | 输出: ${usage_out} | 总计: ${usage_in + usage_out}`);
   return data.choices[0].message.content;
 }
 
