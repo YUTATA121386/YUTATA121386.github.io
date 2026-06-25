@@ -2,7 +2,7 @@ name: Daily News Radar
 
 on:
   schedule:
-    - cron: "0 4 * * *"  # 北京时间 12:00
+    - cron: "20 6 * * *"  # 北京时间 14:20  # 北京时间 12:00
   workflow_dispatch:
 
 permissions:
