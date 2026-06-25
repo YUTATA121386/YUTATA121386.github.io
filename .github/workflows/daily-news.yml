@@ -1,9 +1,9 @@
 name: Daily News Radar
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "20 6 * * *"  # 北京时间 14:20
-  workflow_dispatch:
 
 permissions:
   contents: write
@@ -40,3 +40,12 @@ jobs:
             git commit -m "📡 行业雷达日报 $(date +%Y-%m-%d)"
             git push
           )
+
+      # 构建并部署 Pages
+      - run: npm ci
+      - run: npm run docs:build
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/.vitepress/dist
+      - uses: actions/deploy-pages@v4
