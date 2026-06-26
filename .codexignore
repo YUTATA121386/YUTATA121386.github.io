@@ -1,0 +1,111 @@
+# ==========================================
+# .codexignore - Codex 文件忽略配置
+# 适用于个人知识库场景
+# 用法：复制到你的知识库项目根目录
+# ==========================================
+
+# ----- 依赖和构建目录 -----
+node_modules/
+vendor/
+dist/
+build/
+.next/
+.nuxt/
+.output/
+.vercel/
+.netlify/
+
+# ----- 版本控制 -----
+.git/
+.svn/
+.hg/
+.gitignore
+.gitattributes
+
+# ----- 缓存和临时文件 -----
+.cache/
+.temp/
+.tmp/
+.temp/
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+
+# ----- 日志文件 -----
+*.log
+logs/
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ----- 环境变量和配置 -----
+.env
+.env.*
+!.env.example
+.local
+*.local
+
+# ----- 锁文件（大且没必要全读） -----
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+bun.lockb
+
+# ----- 图片和媒体文件（大文件，按需读取） -----
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.svg
+*.ico
+*.webp
+*.mp4
+*.mp3
+*.wav
+*.pdf  # 如果知识库主要是PDF，可以注释掉这行
+
+# ----- 压缩包 -----
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# ----- 数据库文件 -----
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# ----- 编辑器和IDE -----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ----- 知识库特定：如果有大量导出/备份文件 -----
+*-backup/
+*_backup/
+*.bak
+*.old
+*.orig
+
+# ----- 如果知识库有大量的历史版本文件 -----
+# history/
+# archive/
+# 归档/
+
+# ==========================================
+# 说明：
+# 1. 语法和 .gitignore 完全一样
+# 2. 被忽略的文件 Codex 不会自动读取
+# 3. 如果你需要 Codex 读某个文件，直接在对话中提到它即可
+# 4. 建议每个项目根目录都放一个
+# ==========================================
