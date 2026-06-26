@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 
 /**
  * YUTATA 行业雷达 v2 · AI 驱动版
@@ -54,6 +54,27 @@ const SOURCES = [
   // --- 社交媒体 ---
   { name: "Reddit Music Industry", url: "https://www.reddit.com/r/musicindustry/.rss", lang: "en", weight: 6 },
   { name: "Reddit WeAreTheMusicMakers", url: "https://www.reddit.com/r/WeAreTheMusicMakers/.rss", lang: "en", weight: 5 },
+  // --- 中文综合源 ---
+  { name: "知乎每日精选", url: "https://www.zhihu.com/rss", lang: "zh", weight: 5 },
+  { name: "知乎热榜", url: "https://rsshub.app/zhihu/hotlist", lang: "zh", weight: 6 },
+  { name: "知乎日报", url: "https://rsshub.app/zhihu/daily", lang: "zh", weight: 5 },
+  { name: "微博热搜", url: "https://rsshub.app/weibo/search/hot", lang: "zh", weight: 6 },
+  { name: "IT之家", url: "https://www.ithome.com/rss/", lang: "zh", weight: 5 },
+  { name: "PMCAFF", url: "https://rsshub.app/pmcaff/list/2", lang: "zh", weight: 4 },
+  { name: "产品经理", url: "https://www.woshipm.com/feed", lang: "zh", weight: 4 },
+  { name: "潮流周刊", url: "https://weekly.tw93.fun/rss.xml", lang: "zh", weight: 4 },
+  { name: "大禹治水", url: "https://droidyue.com/atom.xml", lang: "zh", weight: 3 },
+  { name: "360博客", url: "https://blogs.360.net/rss.html", lang: "zh", weight: 3 },
+  // --- 新闻聚合 ---
+  { name: "早报实时", url: "https://plink.anyfeeder.com/zaobao/realtime/china", lang: "zh", weight: 6 },
+  { name: "微博热搜(plink)", url: "https://plink.anyfeeder.com/weibo/search/hot", lang: "zh", weight: 6 },
+  { name: "新华网", url: "https://plink.anyfeeder.com/newscn/whxw", lang: "zh", weight: 5 },
+  { name: "央视新闻", url: "https://plink.anyfeeder.com/weixin/cctvnewscenter", lang: "zh", weight: 5 },
+  { name: "中国日报", url: "https://plink.anyfeeder.com/chinadaily/china", lang: "zh", weight: 5 },
+  { name: "人民日报", url: "https://plink.anyfeeder.com/people-daily", lang: "zh", weight: 5 },
+  { name: "新京报", url: "https://plink.anyfeeder.com/bjnews", lang: "zh", weight: 5 },
+  { name: "腾讯新闻", url: "https://plink.anyfeeder.com/qq/news/world", lang: "zh", weight: 5 },
+  { name: "人民日报(微信号)", url: "https://plink.anyfeeder.com/weixin/rmrbwx", lang: "zh", weight: 5 },
 ];
 
 // ===================== 关键词库 (100+) =====================
