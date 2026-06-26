@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env node
+#!/usr/bin/env node
 
 /**
  * YUTATA 行业雷达 v2 · AI 驱动版
