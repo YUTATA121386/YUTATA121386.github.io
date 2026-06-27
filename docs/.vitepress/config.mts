@@ -21,7 +21,7 @@ export default defineConfig({
       { text: "📚 通识积累", link: "/general/" },
       { text: "🚅 圣地巡礼", link: "/pilgrimage/" },
       { text: "💼 面试话术", link: "/interview/" },
-    ]
+    ],
 
     sidebar: {
       "/general/": [
