@@ -38,7 +38,7 @@ function scanPersonalContent() {
         const hits = kws.map(k => k.toLowerCase()).filter(kw => content.includes(kw));
         if (hits.length > 0) cov[cat].files.push({ file: rp, matched: hits.length });
       }
-}}}
+}}
   for (const cat of CATEGORY_NAMES) {
     const seen = new Set();
     cov[cat].files = cov[cat].files.filter(f => !f.file.endsWith('/index.md')).filter(f => { if (seen.has(f.file)) return false; seen.add(f.file); return true; });
@@ -62,7 +62,7 @@ function analyzeRadarReports() {
     for (const [cat, kws] of Object.entries(KEYWORDS)) {
       const hits2 = kws.map(k => k.toLowerCase()).filter(kw => c.includes(kw));
       if (hits2.length > 0) hits[cat] += hits2.length;
-}}}
+}}
   return { hits, files };
 }
 
