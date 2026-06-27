@@ -106,7 +106,7 @@ export default defineConfig({
         },
       ],
       "/daily/": [{ text: "行业雷达", items: [{ text: "概述", link: "/daily/" }, { text: "关键词覆盖", link: "/daily/keywords" }] }],
-      "/growth/": [{ text: "📈 上升清单", items: [{ text: "概述", link: "/growth/" }] }],
+      "/growth/": [{ text: "📈 上升清单", items: [{ text: "概述", link: "/growth/" }, { text: "📋 知识缺口报告", link: "/growth/knowledge-gap-report" }] }],
       "/pilgrimage/": [{ text: "🚅 圣地巡礼", items: [{ text: "概述", link: "/pilgrimage/" }] }],
     },
 
