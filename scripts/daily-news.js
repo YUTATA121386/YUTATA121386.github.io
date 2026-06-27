@@ -324,6 +324,9 @@ ${fullTextContext}`;
 
   let report = data.choices[0].message.content;
 
+  // 去掉 AI 自己生成的参考链接（我们后面统一追加）
+  report = report.replace(/<div class=\"ref-scroll\">[\s\S]*?<\/div>/, "");
+
   if (refs.length > 0) {
     report += "\n\n📎 **参考链接**\n\n<div class=\"ref-scroll\">\n";
     for (const r of refs) {
