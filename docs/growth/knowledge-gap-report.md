@@ -8,7 +8,7 @@ outline: [2, 3]
 > Generated: 2026-06-27
 > Window: 2026-06-24 ~ 2026-06-27 (4 reports)
 > 10 categories | 102 keywords
-> 27 notes scanned
+> 28 notes scanned
 
 ---
 
@@ -26,11 +26,6 @@ These topics appear frequently in radar but have no notes.
 - Personal notes: none
 - Suggestion: 音乐行业基础编码体系，可整理一篇标识符速查表。
 
-### AI音乐
-- Radar: **8** times (last 7 days)
-- Personal notes: none
-- Suggestion: AI生成音乐对版权、发行、平台的冲击，雷达已有大量案例可参考。
-
 ---
 
 ## MEDIUM PRIORITY
@@ -41,12 +36,13 @@ None.
 
 ## GOOD COVERAGE
 
-- **AI音乐** - radar 8x <-> notes 2
-- **音乐版权** - radar 21x <-> notes 9
-- **元数据与DDEX** - radar 8x <-> notes 3
-- **音乐发行** - radar 3x <-> notes 12
-- **音乐平台** - radar 13x <-> notes 15
-- **曲库治理** - radar 5x <-> notes 16
+- **版税结算** - radar 21x <-> notes 2
+- **音乐版权** - radar 21x <-> notes 10
+- **元数据与DDEX** - radar 8x <-> notes 4
+- **音乐发行** - radar 3x <-> notes 13
+- **音乐平台** - radar 13x <-> notes 16
+- **AI音乐** - radar 8x <-> notes 3
+- **曲库治理** - radar 5x <-> notes 17
 
 ---
 
@@ -54,16 +50,16 @@ None.
 
 | Status | Category | Radar Hits | Notes | Files |
 |--------|----------|-----------|-------|-------|
-| ~ | **版税结算** | 21 | 1 | `docs/music-product/ai-project.md` |
-| GAP | **ISRC/UPC** | 6 | 0 | - |
-| OK | **AI音乐** | 8 | 2 | `docs/music-product/library-ai-project.md` `docs/interview/campus/kunlun.md` |
-| OK | **音乐版权** | 21 | 9 | `docs/general/music-library-ops.md` `docs/music-product/library-ai-project.md` `docs/music-product/tea-party.md` `docs/interview/internship.md` `docs/interview/campus/chengguo.md` `docs/interview/campus/dongxi.md` `docs/interview/campus/kunlun.md` `docs/interview/campus/lizhi.md` `docs/interview/campus/net-ease.md` |
-| OK | **元数据与DDEX** | 8 | 3 | `docs/interview/campus/dongxi.md` `docs/interview/campus/kunlun.md` `docs/interview/campus/net-ease.md` |
-| OK | **音乐发行** | 3 | 12 | `docs/general/grand-maison-tokyo.md` `docs/general/music-appreciation.md` `docs/general/music-library-ops.md` `docs/music-product/cloud-village-festival.md` `docs/music-product/library-ai-project.md` `docs/music-product/lyrics-translation.md` `docs/user-period/feedback-reply.md` `docs/interview/internship.md` `docs/interview/campus/chengguo.md` `docs/interview/campus/dongxi.md` `docs/interview/campus/kunlun.md` `docs/interview/campus/net-ease.md` |
-| OK | **音乐平台** | 13 | 15 | `docs/general/music-library-ops.md` `docs/music-product/ai-project.md` `docs/music-product/annual-report.md` `docs/music-product/cloud-village-festival.md` `docs/music-product/library-ai-project.md` `docs/music-product/tea-party.md` `docs/user-period/feedback-reply.md` `docs/user-period/library-optimization.md` `docs/interview/internship.md` `docs/interview/campus/chengguo.md` `docs/interview/campus/dongxi.md` `docs/interview/campus/kunlun.md` `docs/interview/campus/lizhi.md` `docs/interview/campus/net-ease.md` `docs/interview/campus/youquhui.md` |
-| OK | **曲库治理** | 5 | 16 | `docs/general/music-library-ops.md` `docs/music-product/ai-project.md` `docs/music-product/annual-report.md` `docs/music-product/library-ai-project.md` `docs/music-product/lyrics-ab-test.md` `docs/music-product/lyrics-translation.md` `docs/music-product/tea-party.md` `docs/user-period/feedback-reply.md` `docs/user-period/library-optimization.md` `docs/interview/internship.md` `docs/interview/campus/chengguo.md` `docs/interview/campus/dongxi.md` `docs/interview/campus/kunlun.md` `docs/interview/campus/lizhi.md` `docs/interview/campus/net-ease.md` `docs/interview/campus/youquhui.md` |
-| OK | **中国音乐市场** | 1 | 11 | `docs/general/music-library-ops.md` `docs/music-product/tea-party.md` `docs/user-period/feedback-reply.md` `docs/user-period/library-optimization.md` `docs/interview/internship.md` `docs/interview/campus/chengguo.md` `docs/interview/campus/dongxi.md` `docs/interview/campus/kunlun.md` `docs/interview/campus/lizhi.md` `docs/interview/campus/net-ease.md` `docs/interview/campus/youquhui.md` |
-| OK | **演出与现场** | 1 | 3 | `docs/interview/internship.md` `docs/interview/campus/kunlun.md` `docs/interview/campus/net-ease.md` |
+| OK | **版税结算** | 21 | 2 | `docs/music-product/ai-project.md` `docs/growth/knowledge-gap-report.md` |
+| ~ | **ISRC/UPC** | 6 | 1 | `docs/growth/knowledge-gap-report.md` |
+| OK | **音乐版权** | 21 | 10 | `docs/general/music-library-ops.md` `docs/music-product/library-ai-project.md` `docs/music-product/tea-party.md` `docs/interview/internship.md` `docs/interview/campus/chengguo.md` `docs/interview/campus/dongxi.md` `docs/interview/campus/kunlun.md` `docs/interview/campus/lizhi.md` `docs/interview/campus/net-ease.md` `docs/growth/knowledge-gap-report.md` |
+| OK | **元数据与DDEX** | 8 | 4 | `docs/interview/campus/dongxi.md` `docs/interview/campus/kunlun.md` `docs/interview/campus/net-ease.md` `docs/growth/knowledge-gap-report.md` |
+| OK | **音乐发行** | 3 | 13 | `docs/general/grand-maison-tokyo.md` `docs/general/music-appreciation.md` `docs/general/music-library-ops.md` `docs/music-product/cloud-village-festival.md` `docs/music-product/library-ai-project.md` `docs/music-product/lyrics-translation.md` `docs/user-period/feedback-reply.md` `docs/interview/internship.md` `docs/interview/campus/chengguo.md` `docs/interview/campus/dongxi.md` `docs/interview/campus/kunlun.md` `docs/interview/campus/net-ease.md` `docs/growth/knowledge-gap-report.md` |
+| OK | **音乐平台** | 13 | 16 | `docs/general/music-library-ops.md` `docs/music-product/ai-project.md` `docs/music-product/annual-report.md` `docs/music-product/cloud-village-festival.md` `docs/music-product/library-ai-project.md` `docs/music-product/tea-party.md` `docs/user-period/feedback-reply.md` `docs/user-period/library-optimization.md` `docs/interview/internship.md` `docs/interview/campus/chengguo.md` `docs/interview/campus/dongxi.md` `docs/interview/campus/kunlun.md` `docs/interview/campus/lizhi.md` `docs/interview/campus/net-ease.md` `docs/interview/campus/youquhui.md` `docs/growth/knowledge-gap-report.md` |
+| OK | **AI音乐** | 8 | 3 | `docs/music-product/library-ai-project.md` `docs/interview/campus/kunlun.md` `docs/growth/knowledge-gap-report.md` |
+| OK | **曲库治理** | 5 | 17 | `docs/general/music-library-ops.md` `docs/music-product/ai-project.md` `docs/music-product/annual-report.md` `docs/music-product/library-ai-project.md` `docs/music-product/lyrics-ab-test.md` `docs/music-product/lyrics-translation.md` `docs/music-product/tea-party.md` `docs/user-period/feedback-reply.md` `docs/user-period/library-optimization.md` `docs/interview/internship.md` `docs/interview/campus/chengguo.md` `docs/interview/campus/dongxi.md` `docs/interview/campus/kunlun.md` `docs/interview/campus/lizhi.md` `docs/interview/campus/net-ease.md` `docs/interview/campus/youquhui.md` `docs/growth/knowledge-gap-report.md` |
+| OK | **中国音乐市场** | 1 | 12 | `docs/general/music-library-ops.md` `docs/music-product/tea-party.md` `docs/user-period/feedback-reply.md` `docs/user-period/library-optimization.md` `docs/interview/internship.md` `docs/interview/campus/chengguo.md` `docs/interview/campus/dongxi.md` `docs/interview/campus/kunlun.md` `docs/interview/campus/lizhi.md` `docs/interview/campus/net-ease.md` `docs/interview/campus/youquhui.md` `docs/growth/knowledge-gap-report.md` |
+| OK | **演出与现场** | 1 | 4 | `docs/interview/internship.md` `docs/interview/campus/kunlun.md` `docs/interview/campus/net-ease.md` `docs/growth/knowledge-gap-report.md` |
 
 ## Referenced Reports
 
