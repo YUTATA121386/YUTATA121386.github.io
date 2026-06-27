@@ -1,1 +1,16 @@
-{"name":"my-knowledge-base","version":"1.0.0","scripts":{"docs:dev":"vitepress dev docs","docs:build":"vitepress build docs","docs:preview":"vitepress preview docs"},"dependencies":{"@nolebase/vitepress-plugin-git-changelog":"^2.18.2","markdown-it-katex":"^2.0.3","markdown-it-mathjax3":"^4.3.2","vitepress":"^1.6.4"}}
+﻿{
+    "name":  "my-knowledge-base",
+    "version":  "1.0.0",
+    "scripts":  {
+                    "docs:dev":  "vitepress dev docs",
+                    "docs:build":  "vitepress build docs",
+                    "docs:preview":  "vitepress preview docs"
+                },
+    "dependencies":  {
+                         "@nolebase/vitepress-plugin-git-changelog":  "^2.18.2",
+                         "markdown-it-katex":  "^2.0.3",
+                         "markdown-it-mathjax3":  "^4.3.2",
+                         "vitepress":  "^1.6.4",
+                         "xml2js":  "^0.6.2"
+                     }
+}

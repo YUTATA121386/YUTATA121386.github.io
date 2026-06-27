@@ -1,9 +1,9 @@
-name: Daily News Radar
+name: Multi-Agent Daily News
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "20 6 * * *"  # 北京时间 14:20
+    - cron: "0 4 * * *"  # 北京时间 14:20
 
 permissions:
   contents: write
@@ -11,11 +11,11 @@ permissions:
   id-token: write
 
 concurrency:
-  group: daily-news
+  group: multi-agent-daily
   cancel-in-progress: true
 
 jobs:
-  fetch-news:
+  multi-agent-news:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -26,23 +26,24 @@ jobs:
         with:
           node-version: 22
 
-      - name: Run AI-powered news radar
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Multi-Agent Daily News
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-        run: node scripts/daily-news.js
+        run: node scripts/multi-agent-daily.js
 
-      - name: Commit and push report
+      - name: Commit and push all outputs
         run: |
-          git config user.name "YUTATA Radar Bot"
-          git config user.email "radar-bot@yutata.dev"
-          git add docs/daily/
+          git config user.name "YUTATA Multi-Agent Bot"
+          git config user.email "multi-agent-bot@yutata.dev"
+          git add docs/daily/ docs/logs/ docs/weekly/ docs/rules/ scripts/reputation.json
           git diff --cached --quiet || (
-            git commit -m "📡 行业雷达日报 $(date +%Y-%m-%d)"
+            git commit -m "📡 多Agent日报 $(date +%Y-%m-%d)"
             git push
           )
 
-      # 构建并部署 Pages
-      - run: npm ci
       - run: npm run docs:build
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
