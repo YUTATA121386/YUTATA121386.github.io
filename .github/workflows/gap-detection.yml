@@ -1,0 +1,57 @@
+name: Knowledge Gap Detection
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 12 * * 0"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: gap-detection
+  cancel-in-progress: true
+
+jobs:
+  detect-gaps:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run knowledge gap detection
+        run: node scripts/gap-detector.js
+
+      - name: Commit and push report
+        run: |
+          git config user.name "YUTATA Gap Bot"
+          git config user.email "gap-bot@yutata.dev"
+          git add docs/growth/knowledge-gap-report.md
+          git diff --cached --quiet || (
+            git commit -m "📋 知识缺口报告 $(date +%Y-%m-%d)"
+            git push
+          )
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run docs:build
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/.vitepress/dist
+
+      - name: Deploy to Pages
+        uses: actions/deploy-pages@v4
