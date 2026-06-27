@@ -1,3 +1,29 @@
+参考日报
+
+<div class="scroll-report-list">
+
+| 日期 | 日报 |
+|------|------|
+';
+  for (const f of rFiles) {
+    r += '| ' + f.replace('.md','') + ' | [查看](./' + f + ') |
+';
+  }
+  r += '
+</div>
+
+<style>
+.scroll-report-list {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 4px;
+  padding: 4px 12px;
+}
+.scroll-report-list table {
+  margin: 0;
+}
+</style>';
 #!/usr/bin/env node
 
 /** YUTATA Knowledge Gap Detector v1 */
