@@ -211,109 +211,123 @@ function fetchArticleText(url) {
 
 // ===================== AI 报告生成 =====================
 async function generateReport(dateCN, categorized, fullTexts, history) {
-  // 构建新闻上下文
   let newsContext = "";
   let refIndex = 1;
   const refs = [];
 
   for (const [cat, items] of Object.entries(categorized)) {
     if (items.length === 0) continue;
+    newsContext += "\n## " + cat + "\n";
     for (const item of items) {
       if (refIndex > 60) break;
-      newsContext += `- [${refIndex}] ${item.title}\n  来源: ${item.source}\n  摘要: ${item.description.slice(0, 200)}\n`;
+      newsContext += "- [" + refIndex + "] " + item.title + "\n  来源: " + item.source + "\n  摘要: " + item.description.slice(0, 200) + "\n";
       refs.push({ num: refIndex, title: item.title, link: item.link, source: item.source });
       refIndex++;
     }
   }
 
-  // 全文信息
   let fullTextContext = "";
   if (fullTexts.length > 0) {
-    fullTextContext += "\n## 深度文章全文（供深入分析参考）\n";
+    fullTextContext += "\n## 深度文章全文\n";
     for (const ft of fullTexts.slice(0, MAX_FULLTEXT)) {
-      fullTextContext += `\n--- ${ft.title} (${ft.source}) ---\n${ft.text.slice(0, 2000)}\n`;
+      fullTextContext += "\n--- " + ft.title + " (" + ft.source + ") ---\n" + ft.text.slice(0, 2000) + "\n";
     }
   }
 
-  // 近期报告摘要（用于冲突检测）
   let historyContext = "";
   if (history.recentReports.length > 0) {
-    historyContext += "\n## 往期重要观点回顾（供对比参考，避免重复和检测冲突）\n";
+    historyContext += "\n## 往期重要观点回顾\n";
     for (const r of history.recentReports.slice(0, 5)) {
-      // 提取今日引言和深度解读部分
-      const introMatch = r.content.match(/\*\*今日引言\*\*[：:]([^#\n]+)/);
-      const keyPoints = r.content.match(/TL;DR[\s\S]*?(?=##|🔍|$)/);
-      historyContext += `\n--- ${r.date} 报告 ---\n`;
-      if (introMatch) historyContext += `核心观点: ${introMatch[1].trim()}\n`;
+      const introMatch = r.content.match(/\*\u7528\u65e5\u5f15\u8a00\*\*[\uff1a:]([^#\n]+)/);
+      const keyPoints = r.content.match(/TL;DR[\s\S]*?(?=##|\ud83d\udd0d|$)/);
+      historyContext += "\n--- " + r.date + " \u62a5\u544a ---\n";
+      if (introMatch) historyContext += "\u6838\u5fc3\u89c2\u70b9: " + introMatch[1].trim() + "\n";
       if (keyPoints) {
-        const lines = keyPoints[0].split("\n").filter(l => l.trim().startsWith("1.") || l.trim().startsWith("2.") || l.trim().startsWith("3.") || l.trim().startsWith("4.") || l.trim().startsWith("5."));
+        const lines = keyPoints[0].split("\n").filter(l => l.trim().match(/^\d+\./));
         historyContext += lines.map(l => l.trim()).join("\n") + "\n";
       }
     }
   }
 
-  const systemPrompt = `你是一位资深音乐产业分析师。今天有新的行业新闻需要你撰写中文日报。
+  const prompt = `你是一位资深音乐产业分析师，请根据以下行业新闻撰写一份中文日报。
 
-【重要规则】
-1. 所有新闻已在下方列出，请基于这些内容撰写报告
-2. **禁止编造新闻**，只基于下方给出的内容进行分析
-3. 如果某条新闻与往期报告中已报道的事件是同一进展，请在正文中注明"*本文是对 [往期日期] 报道的后续跟进*"
-4. **观点冲突检测**: 如果今日新闻中的信息与往期报告观点存在矛盾或重大变化，请用 ⚠️ 标记并在对应段落中说明"*这与 [往期日期] 的报道观点不同，当时认为...*"
-5. 全文分析请用中文撰写，保留英文专有名词原文
-6. 参考链接统一放在文末 <div class="ref-scroll"> 中`;
+## 写作要求
 
-  const userPrompt = `请根据以下行业新闻撰写一份中文日报。
+### 1. 口吻
+专业但不枯燥，幽默有网感，像朋友聊天但信息密度高。适当使用网络热梗但不过度。敢于表达观点和预判。
+
+### 2. 内容深度（极其重要！）
+每一条深度解读必须包含：背景→经过→结果/影响。不能只是标题复述。
+- 如果是诉讼：谁告谁、为什么告、索赔多少、目前阶段、行业影响
+- 如果是收购：买家/卖家/金额/标的/战略意图
+- 如果是技术：解决了什么问题、和现有方案对比、适用场景
+- 如果是数据：数字对比、趋势分析、背后的原因
+每个小节至少150-300字，让读者看完就能跟同事讲清楚这件事。
+
+### 3. 引用格式（严格遵守！）
+- 文中引用使用HTML角标格式：<sup><a href="#ref-编号">[编号]</a></sup>
+- 例如：SZA直接在社交媒体上开怼<sup><a href="#ref-19">[19]</a></sup>
+- 一个观点引用多个来源时连写
+
+### 4. 结构要求
+- 💬 今日引言：一句话点出今天最有价值的事，带点幽默
+- 📌 一页总结 (TL;DR)：5条核心要点，每条一行
+- 🔍 深度解读：3-5个主题小节，每节150-300字，有背景经过结果
+- 🎯 曲库人必看：3条对曲库运营最相关的实操建议
+- 😄 冷知识 / 趣闻：1-2条轻松但有信息量的内容
+- 📎 参考链接：使用HTML滚动框格式
+
+### 5. 去重与冲突检测（重要！）
+- 如果某条新闻在往期报告中已报道过（同一件事的最新进展），在文中注明"*本文是对 [往期日期] 报道的后续跟进*"
+- 如果今日信息与往期报告的观点存在矛盾或重大变化，用 ⚠️ 标出并说明：*这与 [往期日期] 的报道观点不同，当时认为...*
+- 如果只是重复信息没有新进展，不要大篇幅描述，只做简要提及
+
+### 6. 参考链接格式（严格遵守！）
+<div class="ref-scroll">
+[1] **标题** — 来源 · YYYY-MM-DD · [链接](URL)
+[2] **标题** — 来源 · YYYY-MM-DD · [链接](URL)
+...
+</div>
+每个引用一行，包含标题、来源、发布日期、链接。必须按编号顺序排列。
+
+### 7. 长度
+总计1200-2000字。
+
+## 今日新闻
 
 ${historyContext}
 
 ${newsContext}
-${fullTextContext}
-
-请按以下结构撰写:
-1. **今日引言** — 一句话点评今日最大看点
-2. **一页总结 (TL;DR)** — 每条用1-2句话总结，标注引用编号
-3. **深度解读** — 选择3-5条最重要的新闻深入分析，每个话题包含背景、经过、结果/影响
-4. **曲库人必看** — 针对曲库运营者的可操作建议
-5. **冷知识/趣闻** — 1-2条
-
-注意：
-- 如果某条新闻与往期内容重复，仅做简要提及并注明"此前已报道"
-- 如果今日信息与往期观点有冲突，务必用 ⚠️ 标出并说明差异
-- 确保包含国内音乐产业新闻的分析`;
+${fullTextContext}`;
 
   const body = JSON.stringify({
     model: "deepseek-chat",
-    messages: [
-      { role: "system", content: systemPrompt },
-      { role: "user", content: userPrompt }
-    ],
+    messages: [{ role: "user", content: prompt }],
     max_tokens: 4096,
-    temperature: 0.7,
-    stream: false
+    temperature: 0.8
   });
 
   const resp = await fetch(DEEPSEEK_API, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "Authorization": `Bearer ${DEEPSEEK_KEY}`
+      "Authorization": "Bearer " + DEEPSEEK_KEY
     },
     body
   });
 
-  if (!resp.ok) throw new Error(`DeepSeek API error: ${resp.status}`);
+  if (!resp.ok) throw new Error("DeepSeek API error: " + resp.status);
   const data = await resp.json();
   const usage_in = data.usage ? data.usage.prompt_tokens || 0 : 0;
   const usage_out = data.usage ? data.usage.completion_tokens || 0 : 0;
-  console.log(`[Token] 输入: ${usage_in} | 输出: ${usage_out} | 总计: ${usage_in + usage_out}`);
+  console.log("[Token] 输入: " + usage_in + " | 输出: " + usage_out + " | 总计: " + (usage_in + usage_out));
 
   let report = data.choices[0].message.content;
 
-  // 构建参考链接
   if (refs.length > 0) {
     report += "\n\n📎 **参考链接**\n\n<div class=\"ref-scroll\">\n";
     for (const r of refs) {
-      report += `<p id="ref-${r.num}">[${r.num}] **${r.title}** — ${r.source} · <a href="${r.link}">链接</a></p>\n`;
+      report += '<p id="ref-' + r.num + '">[' + r.num + '] **' + r.title + '** — ' + r.source + ' · <a href="' + r.link + '">链接</a></p>\n';
     }
     report += "</div>";
   }
