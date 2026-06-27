@@ -105,7 +105,7 @@ export default defineConfig({
           collapsed: false,
         },
       ],
-      "/daily/": [{ text: "行业雷达", items: [{ text: "概述", link: "/daily/" }, { text: "关键词覆盖", link: "/daily/keywords" }, { text: "📋 知识缺口报告", link: "/daily/knowledge-gap-report" }] }],
+      "/daily/": [{ text: "行业雷达", items: [{ text: "概述", link: "/daily/" }, { text: "关键词覆盖", link: "/daily/keywords" }, { text: "📋 知识缺口报告", link: "/daily/knowledge-gap-report" }, { text: "📋 过程日志", link: "/logs/" }, { text: "📊 周报", link: "/weekly/" }, { text: "📐 规则", link: "/rules/" }] }],
       "/growth/": [{ text: "📈 上升清单", items: [{ text: "概述", link: "/growth/" }] }],
       "/pilgrimage/": [{ text: "🚅 圣地巡礼", items: [{ text: "概述", link: "/pilgrimage/" }] }],
     },
