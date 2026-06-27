@@ -8,7 +8,7 @@ const path = require('path');
 const ROOT_DIR = path.join(__dirname, '..');
 const DAILY_DIR = path.join(ROOT_DIR, 'docs', 'daily');
 const SOURCES_FILE = path.join(__dirname, 'sources.json');
-const OUTPUT_FILE = path.join(ROOT_DIR, 'docs', 'growth', 'knowledge-gap-report.md');
+const OUTPUT_FILE = path.join(ROOT_DIR, 'docs', 'daily', 'knowledge-gap-report.md');
 const LOOKBACK_DAYS = 7;
 const MIN_GAP_HITS = 2;
 

@@ -363,8 +363,8 @@ function updateIndex(latestDate) {
     const date = f.replace(".md", "");
     list += `| ${date} | [📫 查看日报](./${f}) |\n`;
   }
-
-  const indexMd = `---
+  const scrollBox = `<div class="scroll-report-list">\n\n| 日期 | 日报 |\n|------|------|\n${list}</div>\n\n<style>\n.scroll-report-list {\n  max-height: 400px;\n  overflow-y: auto;\n  border: 1px solid var(--vp-c-divider);\n  border-radius: 4px;\n  padding: 4px 12px;\n}\n.scroll-report-list table {\n  margin: 0;\n}\n</style>`;
+const indexMd = `---
 title: 行业雷达
 ---
 
@@ -373,6 +373,7 @@ title: 行业雷达
 > 🚻 AI 驱动 · 每日 12:00 自动更新
 > 覆盖音乐版权、元数据标准、AI音乐、曲库治理等领域
 > v3: 自动去重 + 观点冲突检测 + 国内源增强
+> 📋 每周知识缺口报告 → [查看](./knowledge-gap-report)
 
 ---
 
@@ -400,7 +401,7 @@ ${Object.entries(KEYWORDS).map(([cat, kws]) => `- **${cat}**：${kws.length} 个
 
 | 日期 | 日报 |
 |------|------|
-${list}
+${scrollBox}
 
 > 📕 日报由 DeepSeek V3 自动生成，每日中午更新。
 > 已自动去重，并检测与往期报道的观点冲突。

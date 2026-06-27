@@ -13,19 +13,20 @@ layout: page
 
 <nav class="home-grid">
 
-<a href="/general/" class="home-card">
-<div class="card-emoji">📚</div>
+<a href="/growth/" class="home-card highlight">
+<div class="card-emoji">📈</div>
 <div class="card-num">01</div>
-<h3 class="card-title">通识积累</h3>
-<p class="card-desc">影视评鉴 · 法餐考据 · 唱片评鉴 · 多方视角</p>
+<h3 class="card-title">上升清单</h3>
+<p class="card-desc">自我剖析 · 关键决策</p>
+<span class="card-badge live">LIVE</span>
 </a>
 
-<a href="/pilgrimage/" class="home-card dimmed">
-<div class="card-emoji">🚅</div>
+<a href="/daily/" class="home-card highlight">
+<div class="card-emoji">🛰️</div>
 <div class="card-num">02</div>
-<h3 class="card-title">圣地巡礼</h3>
-<p class="card-desc">旅行记录 · 文化考察</p>
-<span class="card-badge">施工中</span>
+<h3 class="card-title">行业雷达</h3>
+<p class="card-desc">每日自动采集 · AI 深度分析 · 曲库行业动态</p>
+<span class="card-badge live">LIVE</span>
 </a>
 
 <a href="/music-product/" class="home-card">
@@ -35,27 +36,26 @@ layout: page
 <p class="card-desc">产品分析 · 活动运营 · 用户反馈</p>
 </a>
 
-<a href="/growth/" class="home-card dimmed">
-<div class="card-emoji">📈</div>
+<a href="/general/" class="home-card">
+<div class="card-emoji">📚</div>
 <div class="card-num">04</div>
-<h3 class="card-title">上升清单</h3>
-<p class="card-desc">自我剖析 · 关键决策</p>
+<h3 class="card-title">通识积累</h3>
+<p class="card-desc">影视评鉴 · 法餐考据 · 唱片评鉴 · 多方视角</p>
+</a>
+
+<a href="/pilgrimage/" class="home-card dimmed">
+<div class="card-emoji">🚅</div>
+<div class="card-num">05</div>
+<h3 class="card-title">圣地巡礼</h3>
+<p class="card-desc">旅行记录 · 文化考察</p>
 <span class="card-badge">施工中</span>
 </a>
 
 <a href="/interview/" class="home-card">
 <div class="card-emoji">💼</div>
-<div class="card-num">05</div>
+<div class="card-num">06</div>
 <h3 class="card-title">校招面试话术</h3>
 <p class="card-desc">简历策略 · 高频问答 · 企业面经</p>
-</a>
-
-<a href="/daily/" class="home-card highlight">
-<div class="card-emoji">🛰️</div>
-<div class="card-num">06</div>
-<h3 class="card-title">行业雷达</h3>
-<p class="card-desc">每日自动采集 · AI 深度分析 · 曲库行业动态</p>
-<span class="card-badge live">LIVE</span>
 </a>
 
 </nav>

@@ -15,13 +15,13 @@ export default defineConfig({
 
     nav: [
       { text: "🏠 首页", link: "/" },
-      { text: "🛰️ 行业雷达", link: "/daily/" },
       { text: "📈 上升清单", link: "/growth/" },
+      { text: "🛰️ 行业雷达", link: "/daily/" },
+      { text: "🎵 云音乐产品学习", link: "/music-product/" },
       { text: "📚 通识积累", link: "/general/" },
       { text: "🚅 圣地巡礼", link: "/pilgrimage/" },
-      { text: "🎵 云音乐产品学习", link: "/music-product/" },
       { text: "💼 面试话术", link: "/interview/" },
-    ],
+    ]
 
     sidebar: {
       "/general/": [
@@ -105,8 +105,8 @@ export default defineConfig({
           collapsed: false,
         },
       ],
-      "/daily/": [{ text: "行业雷达", items: [{ text: "概述", link: "/daily/" }, { text: "关键词覆盖", link: "/daily/keywords" }] }],
-      "/growth/": [{ text: "📈 上升清单", items: [{ text: "概述", link: "/growth/" }, { text: "📋 知识缺口报告", link: "/growth/knowledge-gap-report" }] }],
+      "/daily/": [{ text: "行业雷达", items: [{ text: "概述", link: "/daily/" }, { text: "关键词覆盖", link: "/daily/keywords" }, { text: "📋 知识缺口报告", link: "/daily/knowledge-gap-report" }] }],
+      "/growth/": [{ text: "📈 上升清单", items: [{ text: "概述", link: "/growth/" }] }],
       "/pilgrimage/": [{ text: "🚅 圣地巡礼", items: [{ text: "概述", link: "/pilgrimage/" }] }],
     },
 
