@@ -1,65 +1,49 @@
 {
   "sources": [
-    {
-      "name": "Music Business Worldwide",
-      "url": "https://www.musicbusinessworldwide.com/feed/",
-      "lang": "en",
-      "weight": 10
-    },
-    {
-      "name": "Billboard",
-      "url": "https://www.billboard.com/feed/",
-      "lang": "en",
-      "weight": 8
-    },
-    {
-      "name": "Music Ally",
-      "url": "https://musically.com/feed/",
-      "lang": "en",
-      "weight": 9
-    },
-    {
-      "name": "Hypebot",
-      "url": "https://hypebot.com/feed/",
-      "lang": "en",
-      "weight": 7
-    },
-    {
-      "name": "Complete Music Update",
-      "url": "https://completemusicupdate.com/feed/",
-      "lang": "en",
-      "weight": 6
-    },
-    {
-      "name": "Digital Music News",
-      "url": "https://www.digitalmusicnews.com/feed/",
-      "lang": "en",
-      "weight": 7
-    },
-    {
-      "name": "MusicTech",
-      "url": "https://musictech.com/feed/",
-      "lang": "en",
-      "weight": 5
-    },
-    {
-      "name": "Synchblog",
-      "url": "https://www.synchtank.com/blog/feed/",
-      "lang": "en",
-      "weight": 6
-    }
+    { "name": "Music Business Worldwide", "url": "https://www.musicbusinessworldwide.com/feed/", "lang": "en", "weight": 10 },
+    { "name": "Billboard", "url": "https://www.billboard.com/feed/", "lang": "en", "weight": 8 },
+    { "name": "Digital Music News", "url": "https://www.digitalmusicnews.com/feed/", "lang": "en", "weight": 8 },
+    { "name": "Music Ally", "url": "https://musically.com/feed/", "lang": "en", "weight": 9 },
+    { "name": "Hypebot", "url": "https://hypebot.com/feed/", "lang": "en", "weight": 7 },
+    { "name": "MusicTech", "url": "https://musictech.com/feed/", "lang": "en", "weight": 6 },
+    { "name": "Synchblog", "url": "https://www.synchtank.com/blog/feed/", "lang": "en", "weight": 6 },
+    { "name": "Complete Music Update", "url": "https://completemusicupdate.com/feed/", "lang": "en", "weight": 6 },
+    { "name": "Google News Music Industry", "url": "https://news.google.com/rss/search?q=music+copyright+streaming+royalties+AI+music+DDEX+ISRC&hl=en-US&gl=US&ceid=US:en", "lang": "en", "weight": 7 },
+    { "name": "Reddit Music Industry", "url": "https://www.reddit.com/r/musicindustry/.rss", "lang": "en", "weight": 6 },
+    { "name": "Reddit WeAreTheMusicMakers", "url": "https://www.reddit.com/r/WeAreTheMusicMakers/.rss", "lang": "en", "weight": 5 },
+    { "name": "36氪", "url": "https://36kr.com/feed", "lang": "zh", "weight": 7 },
+    { "name": "IT之家", "url": "https://www.ithome.com/rss/", "lang": "zh", "weight": 5 },
+    { "name": "产品经理", "url": "https://www.woshipm.com/feed", "lang": "zh", "weight": 4 },
+    { "name": "早报实时", "url": "https://plink.anyfeeder.com/zaobao/realtime/china", "lang": "zh", "weight": 6 },
+    { "name": "微博热搜", "url": "https://plink.anyfeeder.com/weibo/search/hot", "lang": "zh", "weight": 6 },
+    { "name": "新华网", "url": "https://plink.anyfeeder.com/xinhuanet/news", "lang": "zh", "weight": 6 },
+    { "name": "央视新闻", "url": "https://plink.anyfeeder.com/cctv/news", "lang": "zh", "weight": 6 },
+    { "name": "中国日报", "url": "https://plink.anyfeeder.com/chinadaily/news", "lang": "zh", "weight": 5 },
+    { "name": "人民日报", "url": "https://plink.anyfeeder.com/people/news", "lang": "zh", "weight": 5 },
+    { "name": "虎嗅", "url": "https://www.huxiu.com/rss/0.xml", "lang": "zh", "weight": 7 },
+    { "name": "创业邦", "url": "https://www.cyzone.cn/rss/", "lang": "zh", "weight": 5 },
+    { "name": "音乐财经", "url": "https://feed.musicbusiness.cn/rss", "lang": "zh", "weight": 9 },
+    { "name": "Google News 音乐产业", "url": "https://news.google.com/rss/search?q=%E9%9F%B3%E4%B9%90%E7%89%88%E6%9D%83+%E9%9F%B3%E4%B9%90%E5%B9%B3%E5%8F%B0+AI%E9%9F%B3%E4%B9%90+%E6%9B%B2%E5%BA%93+%E6%B5%81%E5%AA%92%E4%BD%93+%E9%9F%B3%E4%B9%90%E5%8F%91%E8%A1%8C&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", "lang": "zh", "weight": 8 },
+    { "name": "Google News 音乐版权+TME", "url": "https://news.google.com/rss/search?q=%E9%9F%B3%E4%B9%90%E7%89%88%E6%9D%83+DDEX+ISRC+%E6%9B%B2%E5%BA%93+%E7%89%88%E7%A8%8E+%E8%85%BE%E8%AE%AF%E9%9F%B3%E4%B9%90+%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", "lang": "zh", "weight": 9 },
+    { "name": "Google News AI音乐中文", "url": "https://news.google.com/rss/search?q=AI%E9%9F%B3%E4%B9%90+Suno+Udio+%E9%9F%B3%E4%B9%90%E7%94%9F%E6%88%90+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E9%9F%B3%E4%B9%90&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", "lang": "zh", "weight": 8 },
+    { "name": "Google News 中国音乐行业", "url": "https://news.google.com/rss/search?q=%E4%B8%AD%E5%9B%BD%E9%9F%B3%E4%B9%90+%E6%B5%81%E9%87%8F+%E6%AD%8C%E6%89%8B+%E6%BC%94%E5%94%B1%E4%BC%9A+%E7%BA%AA%E7%BA%AA%E5%85%AC%E5%8F%B8+%E9%9F%B3%E4%B9%90%E8%8A%82%E7%9B%AE&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", "lang": "zh", "weight": 7 },
+    { "name": "Google News 腾讯音乐/网易云", "url": "https://news.google.com/rss/search?q=%E8%85%BE%E8%AE%AF%E9%9F%B3%E4%B9%90+TME+%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90+QQ%E9%9F%B3%E4%B9%90+%E6%B1%BD%E6%B0%B4%E9%9F%B3%E4%B9%90&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", "lang": "zh", "weight": 8 },
+    { "name": "知乎每日精选", "url": "https://www.zhihu.com/rss", "lang": "zh", "weight": 5 }
   ],
   "keywords": {
-    "音乐版权": ["copyright", "licensing", "rights", "publishing", "IP", "infringement", "royalty", "版权", "授权", "侵权"],
+    "音乐版权": ["copyright", "licensing", "rights", "publishing", "IP", "infringement", "royalty", "版权", "授权", "侵权", "著作权"],
     "元数据与DDEX": ["metadata", "DDEX", "Digital Data Exchange", "ERN", "RIN", "MWL", "元数据"],
     "ISRC/UPC": ["ISRC", "UPC", "EAN", "ISWC", "IPI", "ISNI", "identifier", "barcode"],
     "音乐发行": ["distribution", "distributor", "DistroKid", "TuneCore", "CD Baby", "Believe", "发行", "分发"],
     "音乐平台": ["Spotify", "Apple Music", "Amazon Music", "YouTube Music", "TikTok", "Deezer",
                  "Tidal", "网易云", "QQ音乐", "汽水", "TME", "NetEase", "streaming", "platform", "平台"],
     "AI音乐": ["AI music", "AI generated", "Suno", "Udio", "Aimi", "Boomy", "Mubert",
-               "artificial intelligence music", "generative music", "AI作曲", "AI生成"],
+               "artificial intelligence music", "generative music", "AI作曲", "AI生成", "天工AI"],
     "曲库治理": ["catalog", "library", "ingestion", "curation", "quality", "曲库", "资产管理", "治理"],
     "版税结算": ["royalty accounting", "mechanical", "performance rights", "PRO", "CMO",
-                 "SoundExchange", "ASCAP", "BMI", "PRS", "版税", "结算", "集体管理"]
+                 "SoundExchange", "ASCAP", "BMI", "PRS", "版税", "结算", "集体管理"],
+    "中国音乐市场": ["腾讯音乐", "TME", "网易云音乐", "网易云", "QQ音乐", "汽水音乐",
+                   "中国音乐", "华语音乐", "抖音音乐", "快手音乐", "中国流媒体", "在线音乐"],
+    "演出与现场": ["演唱会", "音乐节", "live house", "巡演", "concert", "festival", "tour", "演出", "现场"]
   }
 }
