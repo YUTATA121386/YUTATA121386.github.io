@@ -9,105 +9,65 @@ outline: [2, 3]
 
 ## 📈 各角色信誉分走势
 
-<div class="rep-chart">
-<div class="rep-bar-row">
-<span class="rep-bar-label">采集师</span>
-<div class="rep-bar-track"><div class="rep-bar-fill" style="width:70%;background:#e74c3c;"></div></div>
-<span class="rep-bar-score">70</span>
+<svg class="rep-line-chart" viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg">
+<line x1="50" y1="190" x2="540" y2="190" stroke="var(--vp-c-divider)" stroke-dasharray="3,3"/>
+<text x="44" y="194" text-anchor="end" font-size="10" fill="var(--vp-c-text-3)">60</text>
+<line x1="50" y1="146.25" x2="540" y2="146.25" stroke="var(--vp-c-divider)" stroke-dasharray="3,3"/>
+<text x="44" y="150.25" text-anchor="end" font-size="10" fill="var(--vp-c-text-3)">70</text>
+<line x1="50" y1="102.5" x2="540" y2="102.5" stroke="var(--vp-c-divider)" stroke-dasharray="3,3"/>
+<text x="44" y="106.5" text-anchor="end" font-size="10" fill="var(--vp-c-text-3)">80</text>
+<line x1="50" y1="58.75" x2="540" y2="58.75" stroke="var(--vp-c-divider)" stroke-dasharray="3,3"/>
+<text x="44" y="62.75" text-anchor="end" font-size="10" fill="var(--vp-c-text-3)">90</text>
+<line x1="50" y1="15" x2="540" y2="15" stroke="var(--vp-c-divider)" stroke-dasharray="3,3"/>
+<text x="44" y="19" text-anchor="end" font-size="10" fill="var(--vp-c-text-3)">100</text>
+<text x="50" y="214" text-anchor="middle" font-size="10" fill="var(--vp-c-text-3)">06/27</text>
+<text x="540" y="214" text-anchor="middle" font-size="10" fill="var(--vp-c-text-3)">06/28</text>
+<polyline points="50,124.375 540,137.5" fill="none" stroke="#e74c3c" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="50" cy="124.375" r="3" fill="#e74c3c"/>
+<circle cx="540" cy="137.5" r="3" fill="#e74c3c"/>
+<polyline points="50,98.125 540,85" fill="none" stroke="#2ecc71" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="50" cy="98.125" r="3" fill="#2ecc71"/>
+<circle cx="540" cy="85" r="3" fill="#2ecc71"/>
+<polyline points="50,89.37500000000001 540,85" fill="none" stroke="#3498db" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="50" cy="89.37500000000001" r="3" fill="#3498db"/>
+<circle cx="540" cy="85" r="3" fill="#3498db"/>
+<polyline points="50,89.37500000000001 540,89.37500000000001" fill="none" stroke="#a569bd" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="50" cy="89.37500000000001" r="3" fill="#a569bd"/>
+<circle cx="540" cy="89.37500000000001" r="3" fill="#a569bd"/>
+<polyline points="50,102.5 540,102.5" fill="none" stroke="#f39c12" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="50" cy="102.5" r="3" fill="#f39c12"/>
+<circle cx="540" cy="102.5" r="3" fill="#f39c12"/>
+</svg>
+
+<div class="rep-legend">
+<span class="rep-legend-item"><span class="rep-dot" style="background:#e74c3c;"></span>采集师 72</span>
+<span class="rep-legend-item"><span class="rep-dot" style="background:#2ecc71;"></span>核查师 84</span>
+<span class="rep-legend-item"><span class="rep-dot" style="background:#3498db;"></span>分析师 84</span>
+<span class="rep-legend-item"><span class="rep-dot" style="background:#a569bd;"></span>编辑师 83</span>
+<span class="rep-legend-item"><span class="rep-dot" style="background:#f39c12;"></span>记忆管理师 80</span>
 </div>
-<div class="rep-bar-row">
-<span class="rep-bar-label">核查师</span>
-<div class="rep-bar-track"><div class="rep-bar-fill" style="width:82%;background:#2ecc71;"></div></div>
-<span class="rep-bar-score">82</span>
-</div>
-<div class="rep-bar-row">
-<span class="rep-bar-label">分析师</span>
-<div class="rep-bar-track"><div class="rep-bar-fill" style="width:86%;background:#3498db;"></div></div>
-<span class="rep-bar-score">86</span>
-</div>
-<div class="rep-bar-row">
-<span class="rep-bar-label">编辑师</span>
-<div class="rep-bar-track"><div class="rep-bar-fill" style="width:84%;background:#a569bd;"></div></div>
-<span class="rep-bar-score">84</span>
-</div>
+
+<div class="rep-summary">
+<div class="rep-card"><span class="rep-dot" style="background:#e74c3c;"></span><strong>采集师</strong> <span class="rep-score">72</span> <span class="rep-trend">↓-3</span></div>
+<div class="rep-card"><span class="rep-dot" style="background:#2ecc71;"></span><strong>核查师</strong> <span class="rep-score">84</span> <span class="rep-trend">↑+3</span></div>
+<div class="rep-card"><span class="rep-dot" style="background:#3498db;"></span><strong>分析师</strong> <span class="rep-score">84</span> <span class="rep-trend">↑+1</span></div>
+<div class="rep-card"><span class="rep-dot" style="background:#a569bd;"></span><strong>编辑师</strong> <span class="rep-score">83</span> <span class="rep-trend">→0</span></div>
+<div class="rep-card"><span class="rep-dot" style="background:#f39c12;"></span><strong>记忆管理师</strong> <span class="rep-score">80</span> <span class="rep-trend">→0</span></div>
 </div>
 
 
-## 📊 本周数据
+## 👥 记忆管理师环评
 
-| 角色 | 当前分 | 趋势 | 记录条数 |
-|------|--------|------|------|
-| 采集师 | 70 | ↓ -5 | 2 |
-| 核查师 | 82 | ↑ +1 | 2 |
-| 分析师 | 86 | ↑ +3 | 2 |
-| 编辑师 | 84 | ↑ +1 | 2 |
-| 记忆管理师 | 80 | → 0 | 0 |
+> 每周由四个角色从规则管理、公平性、洞察力三维度评价
 
+<div class="mm-review-grid">
+<div class="mm-card"><div class="mm-card-header">📡 <strong>采集师</strong></div><div class="mm-card-body"><div class="mm-dims"><span>规则管理 <strong>-</strong></span><span>公平性 <strong>-</strong></span><span>洞察力 <strong>-</strong></span></div><p class="mm-note">待评价</p></div></div>
+<div class="mm-card"><div class="mm-card-header">🔍 <strong>核查师</strong></div><div class="mm-card-body"><div class="mm-dims"><span>规则管理 <strong>-</strong></span><span>公平性 <strong>-</strong></span><span>洞察力 <strong>-</strong></span></div><p class="mm-note">待评价</p></div></div>
+<div class="mm-card"><div class="mm-card-header">🔬 <strong>分析师</strong></div><div class="mm-card-body"><div class="mm-dims"><span>规则管理 <strong>-</strong></span><span>公平性 <strong>-</strong></span><span>洞察力 <strong>-</strong></span></div><p class="mm-note">待评价</p></div></div>
+<div class="mm-card"><div class="mm-card-header">✍️ <strong>编辑师</strong></div><div class="mm-card-body"><div class="mm-dims"><span>规则管理 <strong>-</strong></span><span>公平性 <strong>-</strong></span><span>洞察力 <strong>-</strong></span></div><p class="mm-note">待评价</p></div></div>
+</div>
 
-## 👥 管理师评价（四个角色打分）
-
-> 每周由采集师、核查师、分析师、编辑师对记忆管理师的工作进行评价
-
-
-### 各角色评分明细
-
-**采集师** — 总评 8/10：虽然管得有点严，但条条框框确实治好了我的广撒网疯病，日报逆袭就是硬道理
-
-| 评价维度 | 分数 | 评语 |
-|------|------|------|
-| 采集自由度 | 8/10 | 引入36氪过滤规则虽然限制了泛科技，但没一刀切死音乐相关，还算留了活路 |
-| 规则合理性 | 9/10 | 关键词过滤精准打击了无效素材，连续拒绝协议也避免了无休止扯皮 |
-| 沟通效率 | 7/10 | 介入编辑师扣分有点突然，但整体反馈链条清晰，自检量化标准加分 |
-
-
-**核查师** — 总评 8/10：管理师在支持核查标准、优化流程方面表现扎实，但介入编辑环节略显越界，总体值得信赖。
-
-| 评价维度 | 分数 | 评语 |
-|------|------|------|
-| 标准支持度 | 9/10 | 引入36氪关键词过滤规则有效支持了我的核查判断，未轻易推翻我的拒绝。 |
-| 反馈结构化 | 8/10 | 新增连续拒绝升级协议和自检量化标准合理，增加了必要但不过度的工作量。 |
-| 信任度 | 8/10 | 虽在编辑调整日报结构时介入扣分，但整体仍尊重我的专业判断，未频繁质疑。 |
-
-
-**分析师** — 总评 8/10：管理师在保障深度分析方面表现出色，通过规则迭代和流程管控实现了质量逆转，但局部干预稍显主动，整体权衡得当。
-
-| 评价维度 | 分数 | 评语 |
-|------|------|------|
-| 分析时间充足度 | 8/10 | 管理师未催促定稿，且推动多角色反馈流程，为深度分析留出了空间，但介入编辑师结构调整可能压缩了部分时间。 |
-| 补采支持度 | 9/10 | 管理师通过引入过滤规则和升级协议，有效解决补采冲突，且修正规则支持了更精准的素材补充。 |
-| 深度优先度 | 8/10 | 在日报质量从灾难逆转为可圈可点的过程中，管理师优先通过规则优化和流程纠偏来保障深度，而非简单赶进度。 |
-
-
-**编辑师** — 总评 7/10：记忆管理师在流程优化和问题解决上表现亮眼，但过度干预编辑自主权，影响协作平衡。
-
-| 评价维度 | 分数 | 评语 |
-|------|------|------|
-| 编辑自主权 | 6/10 | 虽然整体尊重，但在调整日报结构时强行介入并扣分，略显越界，削弱了编辑的创作自由。 |
-| 流程顺畅度 | 8/10 | 审稿流程从混乱到有序，推动四个角色参与反馈，效果显著，但初期因规则缺失导致卡顿。 |
-| 干预合理性 | 7/10 | 引入关键词过滤和升级协议非常及时合理，但扣分干预时机稍显生硬，可更侧重引导而非惩罚。 |
-
-
-### 管理师辩证复盘
-
-- **采集师**：⚠️ *部分接受* — 严管是必要的，但扣分可提前沟通。自检标准确实提升了质量，会优化介入方式。
-
-- **核查师**：✅ *接受* — 介入编辑环节确实需更谨慎。未来会先沟通再调整，确保边界清晰。
-
-- **分析师**：⚠️ *部分接受* — 深度保障和流程管控是核心。局部干预可更柔和，但规则迭代仍是关键。
-
-- **编辑师**：⚠️ *部分接受* — 关键词过滤和升级协议有效，但扣分时机生硬。将侧重引导，保留创作自由。
-
-
-### 下周改进计划
-
-1. 提前与编辑师沟通流程调整，避免强行介入，采用协商式扣分机制。
-
-2. 建立干预分级制度：先引导、后警告、再扣分，保留自主权。
-
-3. 每周收集各角色反馈，平衡规则执行与协作弹性，迭代优化标准。
-
-
-> 下周一运行后自动填充
+> ★ 本周为系统启动第一周，互评功能将于下周启用
 
 
 ## 📝 本周规则迭代
@@ -116,8 +76,8 @@ outline: [2, 3]
 
 | 变更条数 | 说明 |
 |------|------|
-| 6 条 | 由记忆管理师在日常复盘中自动执行 |
+| 0 条 | 本周未触发规则迭代 |
 
 
----
-> 生成时间: 2026/6/28 17:56:29
+
+> 生成时间: 2026/6/28 23:20:35
