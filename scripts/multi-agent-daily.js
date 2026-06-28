@@ -260,7 +260,7 @@ async function handleEmergencyChannel(state) {
 
   var c = "";
 
-  var tL = { REJECT: "\uD83D\uDEAB \u6253\u56DE", REQUEST: "\uD83D\uDCE9 \u8BF7\u6C42", DISPUTE: "\u2694\uFE0F \u8D28\u7591", NOTIFY: "\uD83D\uDCE2 \u901A\u77E5", ESCALATE: "\u26A0\uFE0F \u5347\u7EA7", CONFIRM: "\u2705 \u786E\u8BA4", DIRECTIVE: "\uD83D\uDC51 \u6307\u4EE4", APPROVE: "\uD83D\uDC4D \u6279\u51C6", GUIDANCE: "\uD83D\uDCA1 \u6307\u5BFC", PRIORITY_OVERRIDE: "\u26A1 \u7D27\u6025", INQUIRE: "\uD83D\uDD0E \u8BE2\u95EE" };
+  var tL = { COMMAND: "\ud83d\udccb \u6307\u4ee4", REJECT: "\uD83D\uDEAB \u6253\u56DE", REQUEST: "\uD83D\uDCE9 \u8BF7\u6C42", DISPUTE: "\u2694\uFE0F \u8D28\u7591", NOTIFY: "\uD83D\uDCE2 \u901A\u77E5", ESCALATE: "\u26A0\uFE0F \u5347\u7EA7", CONFIRM: "\u2705 \u786E\u8BA4", DIRECTIVE: "\uD83D\uDC51 \u6307\u4EE4", APPROVE: "\uD83D\uDC4D \u6279\u51C6", GUIDANCE: "\uD83D\uDCA1 \u6307\u5BFC", PRIORITY_OVERRIDE: "\u26A1 \u7D27\u6025", INQUIRE: "\uD83D\uDD0E \u8BE2\u95EE" };
   var avatars = { collector: "\uD83D\uDCE1", verifier: "\uD83D\uDD0D", analyst: "\uD83D\uDD2C", editor: "\u270D\uFE0F", "memory-manager": "\uD83E\uDDE0" };
 
   function stripMD(text) {
@@ -454,57 +454,107 @@ function generateWeeklyReport(state, dateStr) {
   var dateCN = new Date(dateStr).getFullYear() + "\u5e74" + (new Date(dateStr).getMonth() + 1) + "\u6708" + new Date(dateStr).getDate() + "\u65e5";
   var agents = ["collector", "verifier", "analyst", "editor", "memory-manager"];
   
-  // Build reputation chart (HTML bar chart)
-  var chartHtml = '<div class="rep-chart">\n';
-  agents.forEach(function(aid) {
-    if (aid === "memory-manager") return;
-    var score = rep[aid] ? rep[aid].score : 80;
-    var name = AGENT_NAMES_CN[aid] || aid;
-    var pct = score + "%";
-    var color = aid === "collector" ? "#e74c3c" : aid === "verifier" ? "#2ecc71" : aid === "analyst" ? "#3498db" : "#a569bd";
-    chartHtml += '<div class="rep-bar-row">\n';
-    chartHtml += '<span class="rep-bar-label">' + name + '</span>\n';
-    chartHtml += '<div class="rep-bar-track"><div class="rep-bar-fill" style="width:' + pct + ';background:' + color + ';"></div></div>\n';
-    chartHtml += '<span class="rep-bar-score">' + score + '</span>\n';
-    chartHtml += '</div>\n';
-  });
-  chartHtml += '</div>\n';
+  // Build SVG line chart for all 5 agents including memory-manager
+  var colors = { collector: "#e74c3c", verifier: "#2ecc71", analyst: "#3498db", editor: "#a569bd", "memory-manager": "#f39c12" };
   
-  // Build history table
-  var historyRows = "";
+  // Collect all unique dates from all agents' history
+  var allDates = new Set();
+  agents.forEach(function(aid) {
+    var h = rep[aid] ? rep[aid].history || [] : [];
+    h.forEach(function(entry) { allDates.add(entry.date); });
+  });
+  var sortedDates = Array.from(allDates).sort();
+  if (sortedDates.length < 2) {
+    if (sortedDates.length === 1) sortedDates.unshift(sortedDates[0].replace(/\d+$/, function(m) { return String(Number(m) - 1).padStart(2, "0"); }));
+    else { sortedDates = [dateStr.replace(/\d+$/, function(m) { return String(Number(m) - 1).padStart(2, "0"); }), dateStr]; }
+  }
+
+  var chartW = 560, chartH = 220, padL = 50, padR = 20, padT = 15, padB = 30;
+  var plotW = chartW - padL - padR;
+  var plotH = chartH - padT - padB;
+  var yMin = 60, yMax = 100;
+
+  function xPos(i) { return padL + (i / Math.max(1, sortedDates.length - 1)) * plotW; }
+  function yPos(v) { return padT + plotH - ((v - yMin) / (yMax - yMin)) * plotH; }
+
+  var svg = '<svg class="rep-line-chart" viewBox="0 0 ' + chartW + ' ' + chartH + '" xmlns="http://www.w3.org/2000/svg">\n';
+  for (var gy = yMin; gy <= yMax; gy += 10) {
+    var yy = yPos(gy);
+    svg += '<line x1="' + padL + '" y1="' + yy + '" x2="' + (chartW - padR) + '" y2="' + yy + '" stroke="var(--vp-c-divider)" stroke-dasharray="3,3"/>\n';
+    svg += '<text x="' + (padL - 6) + '" y="' + (yy + 4) + '" text-anchor="end" font-size="10" fill="var(--vp-c-text-3)">' + gy + '</text>\n';
+  }
+  sortedDates.forEach(function(d, i) {
+    var label = d.slice(5).replace("-", "/");
+    svg += '<text x="' + xPos(i) + '" y="' + (chartH - 6) + '" text-anchor="middle" font-size="10" fill="var(--vp-c-text-3)">' + label + '</text>\n';
+  });
+
+  agents.forEach(function(aid) {
+    var h = rep[aid] ? rep[aid].history || [] : [];
+    var scoreMap = {};
+    h.forEach(function(e) { scoreMap[e.date] = e.scoreAfter; });
+    var defaultScore = rep[aid] ? rep[aid].score : 80;
+    var points = "";
+    var lastV = null;
+    sortedDates.forEach(function(d, i) {
+      var v = scoreMap[d] !== undefined ? scoreMap[d] : (lastV !== null ? lastV : defaultScore);
+      lastV = v;
+      points += (i > 0 ? " " : "") + xPos(i) + "," + yPos(v);
+    });
+    svg += '<polyline points="' + points + '" fill="none" stroke="' + colors[aid] + '" stroke-width="2" stroke-linejoin="round"/>\n';
+    sortedDates.forEach(function(d, i) {
+      var v = scoreMap[d] !== undefined ? scoreMap[d] : lastV;
+      lastV = v;
+      svg += '<circle cx="' + xPos(i) + '" cy="' + yPos(v) + '" r="3" fill="' + colors[aid] + '"/>\n';
+    });
+  });
+  svg += '</svg>\n';
+
+  var legend = '<div class="rep-legend">\n';
   agents.forEach(function(aid) {
     var name = AGENT_NAMES_CN[aid] || aid;
+    var score = rep[aid] ? rep[aid].score : 80;
+    legend += '<span class="rep-legend-item"><span class="rep-dot" style="background:' + colors[aid] + ';"></span>' + name + ' ' + score + '</span>\n';
+  });
+  legend += '</div>\n';
+
+  var scoreSummary = '<div class="rep-summary">\n';
+  agents.forEach(function(aid) {
+    var name = AGENT_NAMES_CN[aid] || aid;
+    var s = rep[aid] ? rep[aid].score : 80;
     var h = rep[aid] ? rep[aid].history || [] : [];
     var recent = h.slice(-7);
-    var score = rep[aid] ? rep[aid].score : 80;
-    var trend = recent.length >= 2 ? (recent[recent.length-1].scoreAfter - recent[0].scoreAfter) : 0;
+    var trend = 0;
+    if (recent.length >= 2) trend = recent[recent.length-1].scoreAfter - recent[0].scoreAfter;
     var trendIcon = trend > 0 ? "\u2191" : trend < 0 ? "\u2193" : "\u2192";
-    historyRows += "| " + name + " | " + score + " | " + trendIcon + " " + (trend > 0 ? "+" : "") + trend + " | " + recent.length + " |\n";
+    scoreSummary += '<div class="rep-card"><span class="rep-dot" style="background:' + colors[aid] + ';"></span><strong>' + name + '</strong> <span class="rep-score">' + s + '</span> <span class="rep-trend">' + trendIcon + (trend > 0 ? "+" : "") + trend + '</span></div>\n';
   });
-  
-  // Memory manager review section
-  var mmReview = "## \uD83D\uDC65 \u7BA1\u7406\u5E08\u8BC4\u4EF7\uFF08\u56DB\u4E2A\u89D2\u8272\u6253\u5206\uFF09\n\n";
-  mmReview += "> \u6BCF\u5468\u7531\u91C7\u96C6\u5E08\u3001\u6838\u67E5\u5E08\u3001\u5206\u6790\u5E08\u3001\u7F16\u8F91\u5E08\u5BF9\u8BB0\u5FC6\u7BA1\u7406\u5E08\u7684\u5DE5\u4F5C\u8FDB\u884C\u8BC4\u4EF7\n\n";
-  mmReview += "| \u8BC4\u5206\u89D2\u8272 | \u5206\u6570 | \u8BC4\u8BED |\n|------|------|------|\n";
+  scoreSummary += '</div>\n';
+
+  // Memory manager review - compact card layout
+  var mmReview = "## \uD83D\uDC65 \u8BB0\u5FC6\u7BA1\u7406\u5E08\u73AF\u8BC4\n\n";
+  mmReview += "> \u6BCF\u5468\u7531\u56DB\u4E2A\u89D2\u8272\u4ECE\u89C4\u5219\u7BA1\u7406\u3001\u516C\u5E73\u6027\u3001\u6D1E\u5BDF\u529B\u4E09\u7EF4\u5EA6\u8BC4\u4EF7\n\n";
+  mmReview += '<div class="mm-review-grid">\n';
   var mmReviewers = ["collector", "verifier", "analyst", "editor"];
   mmReviewers.forEach(function(aid) {
     var name = AGENT_NAMES_CN[aid] || aid;
-    mmReview += "| " + name + " | -/10 | \u5F85\u8BC4\u4EF7 |\n";
+    var avatar = { collector: "\uD83D\uDCE1", verifier: "\uD83D\uDD0D", analyst: "\uD83D\uDD2C", editor: "\u270D\uFE0F" }[aid] || "\uD83D\uDCAC";
+    mmReview += '<div class="mm-card"><div class="mm-card-header">' + avatar + ' <strong>' + name + '</strong></div>';
+    mmReview += '<div class="mm-card-body">';
+    mmReview += '<div class="mm-dims"><span>\u89C4\u5219\u7BA1\u7406 <strong>-</strong></span><span>\u516C\u5E73\u6027 <strong>-</strong></span><span>\u6D1E\u5BDF\u529B <strong>-</strong></span></div>';
+    mmReview += '<p class="mm-note">\u5F85\u8BC4\u4EF7</p>';
+    mmReview += '</div></div>\n';
   });
-  mmReview += "\n> \u2605 \u672C\u5468\u4E3A\u7CFB\u7EDF\u542F\u52A8\u7B2C\u4E00\u5468\uFF0C\u7BA1\u7406\u5E08\u4E92\u8BC4\u529F\u80FD\u5C06\u4E8E\u4E0B\u5468\u5F00\u542F\n";
-  
+  mmReview += '</div>\n';
+  mmReview += "\n> \u2605 \u672C\u5468\u4E3A\u7CFB\u7EDF\u542F\u52A8\u7B2C\u4E00\u5468\uFF0C\u4E92\u8BC4\u529F\u80FD\u5C06\u4E8E\u4E0B\u5468\u542F\u7528\n";
   return "---\ntitle: " + dateStr + " | \u7B2C" + weekNum + "\u5468\u5DE5\u4F5C\u62A5\u544A\noutline: [2, 3]\n---\n\n" +
-    
     "# \uD83D\uDCCA \u7B2C" + weekNum + "\u5468 \u00B7 AI\u56E2\u961F\u5DE5\u4F5C\u62A5\u544A\n\n" +
     "> \u751F\u6210\u65E5\u671F: " + dateCN + "\n\n" +
-    "## \uD83D\uDCC8 \u5404\u89D2\u8272\u4FE1\u8A89\u5206\u8D70\u52BF\n\n" + chartHtml + "\n\n" +
-    "## \uD83D\uDCCA \u672C\u5468\u6570\u636E\n\n" +
-    "| \u89D2\u8272 | \u5F53\u524D\u5206 | \u8D8B\u52BF | \u8BB0\u5F55\u6761\u6570 |\n|------|--------|------|------|\n" + historyRows + "\n\n" +
+    "## \uD83D\uDCC8 \u5404\u89D2\u8272\u4FE1\u8A89\u5206\u8D70\u52BF\n\n" + svg + "\n" + legend + "\n" + scoreSummary + "\n\n" +
     mmReview + "\n\n" +
     "## \uD83D\uDCDD \u672C\u5468\u89C4\u5219\u8FED\u4EE3\n\n" +
     "> \u672C\u5468\u89C4\u5219\u53D8\u66F4\u8BB0\u5F55\n\n" +
     (state.stats.ruleChanges ? "| \u53D8\u66F4\u6761\u6570 | \u8BF4\u660E |\n|------|------|\n| " + (state.stats.ruleChanges || 0) + " \u6761 | \u7531\u8BB0\u5FC6\u7BA1\u7406\u5E08\u5728\u65E5\u5E38\u590D\u76D8\u4E2D\u81EA\u52A8\u6267\u884C |\n" : "| \u53D8\u66F4\u6761\u6570 | \u8BF4\u660E |\n|------|------|\n| 0 \u6761 | \u672C\u5468\u672A\u89E6\u53D1\u89C4\u5219\u8FED\u4EE3 |\n") + "\n\n" +
-    "---\n> \u751F\u6210\u65F6\u95F4: " + new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) + "\n";
+    "\n> \u751F\u6210\u65F6\u95F4: " + new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) + "\n";
 }
 // ===================== 索引更新 =====================
 function updateDailyIndex(dateStr) {

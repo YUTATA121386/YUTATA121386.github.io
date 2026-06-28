@@ -275,3 +275,33 @@ figure.poster img { width:100%; display:block; cursor:zoom-in; }
 .dark .chat-body blockquote { border-left-color: #444; color: #999; }
 .dark .chat-footer { color: #777; }
 .dark .arb-anchor { background: #3d3500; }
+/* Weekly report SVG line chart */
+.rep-line-chart { max-width: 580px; width: 100%; margin: 12px 0; display: block; }
+.rep-line-chart polyline { transition: opacity 0.3s; }
+.rep-line-chart circle { transition: r 0.2s; }
+.rep-line-chart circle:hover { r: 5; }
+
+/* Legend */
+.rep-legend { display: flex; flex-wrap: wrap; gap: 16px; margin: 8px 0 16px; font-size: 0.9em; }
+.rep-legend-item { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+.rep-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+/* Score summary cards */
+.rep-summary { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+.rep-card { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border: 1px solid var(--vp-c-divider); border-radius: 6px; font-size: 0.9em; background: var(--vp-c-bg-elv); }
+.rep-score { font-weight: 700; font-size: 1.1em; min-width: 22px; text-align: center; }
+.rep-trend { font-size: 0.85em; color: var(--vp-c-text-3); }
+
+/* MM review grid */
+.mm-review-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin: 10px 0; }
+.mm-card { border: 1px solid var(--vp-c-divider); border-radius: 8px; padding: 12px; background: var(--vp-c-bg-elv); }
+.mm-card-header { font-size: 0.95em; margin-bottom: 6px; }
+.mm-card-body { font-size: 0.85em; }
+.mm-dims { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; }
+.mm-dims span { white-space: nowrap; }
+.mm-note { color: var(--vp-c-text-3); margin: 0; }
+
+@media (max-width: 640px) {
+  .mm-review-grid { grid-template-columns: 1fr; }
+  .rep-summary { flex-direction: column; }
+}
