@@ -354,8 +354,25 @@ async function handleEmergencyChannel(state) {
       msgs += '</div>\n';
       msgs += '<div class="chat-body">\n';
 
+      var allItems = {};
+      state.rawItems.forEach(function(item) { allItems[item.id] = item.title; });
+      state.verifiedItems.forEach(function(item) { allItems[item.id] = item.title; });
+      state.rejectedItems.forEach(function(item) { allItems[item.id] = item.title; });
+      state.rawItems.forEach(function(item) { var parts = item.id.split('-'); var short = 'RAW-' + parts[parts.length-1]; allItems[short] = item.title; });
+      
       var cleanText = m.coreInfo
-        .replace(/RAW-\d{4}-\d{2}-\d{2}-\d{4}/g, "\u3010\u7D20\u6750\u3011")
+        .replace(/RAW-(\d{4}-\d{2}-\d{2}-\d{4})/g, function(match, idSuffix) {
+          var fullId = "RAW-" + idSuffix;
+          var title = allItems[fullId];
+          if (!title) { var shortId = "RAW-" + idSuffix.slice(-4); title = allItems[shortId]; }
+          if (!title) { for (var k in allItems) { if (k.endsWith(idSuffix)) { title = allItems[k]; break; } } }
+          return title ? "\u3010\u7D20\u6750\uFF1A" + title.slice(0, 30) + "\u3011" : "\u3010\u7D20\u6750\u3011";
+        })
+        .replace(/RAW-(\d{4})\b(?!-)/g, function(match, shortId) {
+          var found = null;
+          for (var k in allItems) { if (k.endsWith("-" + shortId)) { found = allItems[k]; break; } }
+          return found ? "\u3010\u7D20\u6750\uFF1A" + found.slice(0, 30) + "\u3011" : match;
+        })
         .replace(/MSG-[A-Z]{3}-\d{4}-\d{2}-\d{2}-\d{3}/g, "\u3010\u6D88\u606F\u3011")
         .replace(/REQ-[A-Z]{3}-\d{4}-\d{2}-\d{2}-\d{3}/g, "\u3010\u8BF7\u6C42\u3011")
         .replace(/INS-\d{4}-\d{2}-\d{2}-\d{3}/g, "\u3010\u6D1E\u5BDF\u3011");
@@ -415,6 +432,43 @@ async function handleEmergencyChannel(state) {
     emerg = '\n---\n\n## \u26A1 \u7D27\u6025\u901A\u9053\n\n- \u89E6\u53D1\uFF1A' + (state.emergencyChannel.triggered_by || "\u672A\u77E5") + ' | ' + (state.emergencyChannel.topic || "\u672A\u77E5") + '\n';
   }
 
+
+  // ===== ???? + ???? =====
+  var retro = "\n## \uD83D\uDCDD \u4ECA\u65E5\u590D\u76D8\n\n> \u6BCF\u4E2A\u89D2\u8272\u5BF9\u4ECA\u65E5\u5DE5\u4F5C\u7684\u603B\u7ED3\u4E0E\u53CD\u601D\n\n";
+  var agentLastMsg = {};
+  state.messages.forEach(function(m) { agentLastMsg[m.from] = m; });
+  var agentOrder = ["collector", "verifier", "analyst", "editor", "memory-manager"];
+  agentOrder.forEach(function(aid) {
+    var m = agentLastMsg[aid];
+    var name = AGENT_NAMES_CN[aid] || aid;
+    var av = avatars[aid] || "\uD83D\uDCAC";
+    retro += '<div class="chat-msg chat-from-' + aid + '">\n';
+    retro += '<div class="chat-avatar">' + av + '</div>\n';
+    retro += '<div class="chat-content">\n';
+    retro += '<div class="chat-meta"><span class="chat-sender">' + name + '</span><span class="chat-badge">\uD83D\uDCDD \u590D\u76D8</span></div>\n';
+    retro += '<div class="chat-body"><blockquote>';
+    if (m) { retro += stripMD(m.coreInfo.slice(0, 200)); }
+    else { retro += name + '\u672A\u53C2\u4E0E\u4ECA\u65E5\u5DE5\u4F5C\u3002'; }
+    retro += '</blockquote></div>\n';
+    retro += '</div></div>\n\n';
+  });
+  retro += '<div class="chat-round-divider">\u25CF \u5BA1\u7A3F\u53CD\u9988</div>\n';
+  var reviewMsgs = state.messages.filter(function(m) { return m.type === "APPROVE" || m.type === "CONFIRM"; }).slice(-10);
+  if (reviewMsgs.length === 0) {
+    retro += '<p style="color:#999;text-align:center;padding:12px;">\u26A0\uFE0F \u672C\u6B21\u672A\u8FDB\u884C\u6B63\u5F0F\u5BA1\u7A3F\u6D41\u7A0B</p>\n';
+  } else {
+    reviewMsgs.forEach(function(m) {
+      var fn = AGENT_NAMES_CN[m.from] || m.from;
+      var av = avatars[m.from] || "\uD83D\uDCAC";
+      retro += '<div class="chat-msg chat-from-' + m.from + '">\n';
+      retro += '<div class="chat-avatar">' + av + '</div>\n';
+      retro += '<div class="chat-content">\n';
+      retro += '<div class="chat-meta"><span class="chat-sender">' + fn + '</span><span class="chat-badge">\u2705 \u5BA1\u7A3F</span></div>\n';
+      retro += '<div class="chat-body"><blockquote>' + stripMD(m.coreInfo.slice(0, 150)) + '</blockquote></div>\n';
+      retro += '</div></div>\n\n';
+    });
+  }
+
   return "---\ntitle: " + dateStr + " | \u56E2\u961F\u8FC7\u7A0B\u65E5\u5FD7\noutline: [2, 3]\n---\n\n" + c +
     "# \uD83D\uDCCB \u56E2\u961F\u8FC7\u7A0B\u65E5\u5FD7 \u00B7 " + dateCN + "\n\n" +
     "## \uD83D\uDCCA \u4ECA\u65E5\u7EDF\u8BA1\n\n" +
@@ -435,12 +489,71 @@ async function handleEmergencyChannel(state) {
 
 // ===================== 周报生成 =====================
 function generateWeeklyReport(state, dateStr) {
-  const weekNum = Math.ceil(new Date(dateStr).getDate() / 7);
-  const rep = state.reputation;
-  const mermaidBlock = "\`\`\`mermaid\nxychart-beta\n  title \"本周信誉分走势\"\n  x-axis [\"周一\", \"周二\", \"周三\", \"周四\", \"周五\", \"周六\", \"周日\"]\n  y-axis \"信誉分\" 0 --> 100\n  line \"采集师\" [80, 78, 79, 77, 80, 82, 81]\n  line \"核查师\" [82, 83, 85, 84, 86, 86, 87]\n  line \"分析师\" [80, 82, 81, 80, 83, 83, 84]\n  line \"编辑师\" [85, 86, 88, 87, 89, 90, 90]\n\`\`\`";
-  return "---\ntitle: " + dateStr + " | 第" + weekNum + "周工作报告\noutline: [2, 3]\n---\n\n# 📊 第" + weekNum + "周 · AI团队工作报告\n\n## 📈 各角色信誉分走势\n\n" + mermaidBlock + "\n\n> 数据将在每周运行后自动填充\n\n## 各角色本周情况\n\n| 角色 | 周初分 | 周末分 | 变动 | 核心问题 |\n|------|--------|--------|------|----------|\n| 采集师 | " + (rep.collector?.score || 80) + " | " + (rep.collector?.score || 80) + " | 0 | - |\n| 核查师 | " + (rep.verifier?.score || 80) + " | " + (rep.verifier?.score || 80) + " | 0 | - |\n| 分析师 | " + (rep.analyst?.score || 80) + " | " + (rep.analyst?.score || 80) + " | 0 | - |\n| 编辑师 | " + (rep.editor?.score || 80) + " | " + (rep.editor?.score || 80) + " | 0 | - |\n\n## 🧑‍⚖️ 记忆管理师周评\n\n（本周运行后由管理师填写）\n\n## 🗳️ 管理师评分（四个角色打分）\n\n| 评分角色 | 分数 | 评语 |\n|----------|------|------|\n| 采集师 | -/10 | - |\n| 核查师 | -/10 | - |\n| 分析师 | -/10 | - |\n| 编辑师 | -/10 | - |\n\n## 🔧 本周规则迭代\n\n---\n> 生成时间: " + new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) + "\n";
+  var weekNum = (function(d) { var start = new Date(d.getFullYear(), 0, 1); var days = Math.floor((d - start) / 86400000); return Math.ceil((days + start.getDay() + 1) / 7); })(new Date(dateStr));
+  var rep = state.reputation;
+  var dateCN = new Date(dateStr).getFullYear() + "\u5e74" + (new Date(dateStr).getMonth() + 1) + "\u6708" + new Date(dateStr).getDate() + "\u65e5";
+  var agents = ["collector", "verifier", "analyst", "editor", "memory-manager"];
+  
+  // Build reputation chart (HTML bar chart)
+  var chartHtml = '<div class="rep-chart">\n';
+  agents.forEach(function(aid) {
+    if (aid === "memory-manager") return;
+    var score = rep[aid] ? rep[aid].score : 80;
+    var name = AGENT_NAMES_CN[aid] || aid;
+    var pct = score + "%";
+    var color = aid === "collector" ? "#e74c3c" : aid === "verifier" ? "#2ecc71" : aid === "analyst" ? "#3498db" : "#a569bd";
+    chartHtml += '<div class="rep-bar-row">\n';
+    chartHtml += '<span class="rep-bar-label">' + name + '</span>\n';
+    chartHtml += '<div class="rep-bar-track"><div class="rep-bar-fill" style="width:' + pct + ';background:' + color + ';"></div></div>\n';
+    chartHtml += '<span class="rep-bar-score">' + score + '</span>\n';
+    chartHtml += '</div>\n';
+  });
+  chartHtml += '</div>\n';
+  
+  // Build history table
+  var historyRows = "";
+  agents.forEach(function(aid) {
+    var name = AGENT_NAMES_CN[aid] || aid;
+    var h = rep[aid] ? rep[aid].history || [] : [];
+    var recent = h.slice(-7);
+    var score = rep[aid] ? rep[aid].score : 80;
+    var trend = recent.length >= 2 ? (recent[recent.length-1].scoreAfter - recent[0].scoreAfter) : 0;
+    var trendIcon = trend > 0 ? "\u2191" : trend < 0 ? "\u2193" : "\u2192";
+    historyRows += "| " + name + " | " + score + " | " + trendIcon + " " + (trend > 0 ? "+" : "") + trend + " | " + recent.length + " |\n";
+  });
+  
+  // Memory manager review section
+  var mmReview = "## \uD83D\uDC65 \u7BA1\u7406\u5E08\u8BC4\u4EF7\uFF08\u56DB\u4E2A\u89D2\u8272\u6253\u5206\uFF09\n\n";
+  mmReview += "> \u6BCF\u5468\u7531\u91C7\u96C6\u5E08\u3001\u6838\u67E5\u5E08\u3001\u5206\u6790\u5E08\u3001\u7F16\u8F91\u5E08\u5BF9\u8BB0\u5FC6\u7BA1\u7406\u5E08\u7684\u5DE5\u4F5C\u8FDB\u884C\u8BC4\u4EF7\n\n";
+  mmReview += "| \u8BC4\u5206\u89D2\u8272 | \u5206\u6570 | \u8BC4\u8BED |\n|------|------|------|\n";
+  var mmReviewers = ["collector", "verifier", "analyst", "editor"];
+  mmReviewers.forEach(function(aid) {
+    var name = AGENT_NAMES_CN[aid] || aid;
+    mmReview += "| " + name + " | -/10 | \u5F85\u8BC4\u4EF7 |\n";
+  });
+  mmReview += "\n> \u4E0B\u5468\u4E00\u8FD0\u884C\u540E\u81EA\u52A8\u586B\u5145\n";
+  
+  return "---\ntitle: " + dateStr + " | \u7B2C" + weekNum + "\u5468\u5DE5\u4F5C\u62A5\u544A\noutline: [2, 3]\n---\n\n" +
+    "<style>\n" +
+    ".rep-chart { max-width: 600px; margin: 12px 0; }\n" +
+    ".rep-bar-row { display: flex; align-items: center; margin: 6px 0; gap: 10px; }\n" +
+    ".rep-bar-label { width: 70px; font-weight: 600; font-size: 0.9em; text-align: right; flex-shrink: 0; }\n" +
+    ".rep-bar-track { flex: 1; height: 22px; background: #eee; border-radius: 4px; overflow: hidden; }\n" +
+    ".rep-bar-fill { height: 100%; border-radius: 4px; transition: width 0.5s; min-width: 2px; }\n" +
+    ".rep-bar-score { width: 36px; font-weight: 600; font-size: 0.9em; flex-shrink: 0; }\n" +
+    ".dark .rep-bar-track { background: #333; }\n" +
+    "</style>\n\n" +
+    "# \uD83D\uDCCA \u7B2C" + weekNum + "\u5468 \u00B7 AI\u56E2\u961F\u5DE5\u4F5C\u62A5\u544A\n\n" +
+    "> \u751F\u6210\u65E5\u671F: " + dateCN + "\n\n" +
+    "## \uD83D\uDCC8 \u5404\u89D2\u8272\u4FE1\u8A89\u5206\u8D70\u52BF\n\n" + chartHtml + "\n\n" +
+    "## \uD83D\uDCCA \u672C\u5468\u6570\u636E\n\n" +
+    "| \u89D2\u8272 | \u5F53\u524D\u5206 | \u8D8B\u52BF | \u8BB0\u5F55\u6761\u6570 |\n|------|--------|------|------|\n" + historyRows + "\n\n" +
+    mmReview + "\n\n" +
+    "## \uD83D\uDCDD \u672C\u5468\u89C4\u5219\u8FED\u4EE3\n\n" +
+    "> \u672C\u5468\u89C4\u5219\u53D8\u66F4\u8BB0\u5F55\n\n" +
+    (state.stats.ruleChanges ? "| \u53D8\u66F4\u6761\u6570 | \u8BF4\u660E |\n|------|------|\n| " + (state.stats.ruleChanges || 0) + " \u6761 | \u7531\u8BB0\u5FC6\u7BA1\u7406\u5E08\u5728\u65E5\u5E38\u590D\u76D8\u4E2D\u81EA\u52A8\u6267\u884C |\n" : "| \u53D8\u66F4\u6761\u6570 | \u8BF4\u660E |\n|------|------|\n| 0 \u6761 | \u672C\u5468\u672A\u89E6\u53D1\u89C4\u5219\u8FED\u4EE3 |\n") + "\n\n" +
+    "---\n> \u751F\u6210\u65F6\u95F4: " + new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) + "\n";
 }
-
 // ===================== 索引更新 =====================
 function updateDailyIndex(dateStr) {
   var indexPath = path.join(OUTPUT_DIR, "index.md");

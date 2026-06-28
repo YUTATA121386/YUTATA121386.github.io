@@ -95,8 +95,10 @@ function saveReputation(reputation) {
 }
 
 function updateReputation(agentId, delta, reason) {
+  if (!agentId || !AGENTS.includes(agentId)) { console.log('[warn] updateReputation: invalid agentId=' + agentId); return 80; }
   const rep = loadReputation();
   const entry = rep[agentId];
+  if (!entry) { console.log('[warn] updateReputation: no entry for ' + agentId); return 80; }
   const now = new Date(); const today = now.getFullYear() + "-" + String(now.getMonth() + 1).padStart(2, "0") + "-" + String(now.getDate()).padStart(2, "0");
   
   // Remove any existing entry for today (deduplicate)
