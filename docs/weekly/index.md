@@ -9,7 +9,9 @@ outline: [2, 3]
 
 <div class="scroll-list">
 
-- [2026年第1周](./review-2026-W01.md)
+<ul>
+<li><a href=./review-2026-W01>2026年第1周</a></li>
+</ul>
 
 </div>
 

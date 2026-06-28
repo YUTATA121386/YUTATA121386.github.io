@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env node
+#!/usr/bin/env node
 /**
  * YUTATA 多Agent日报系统 v4
  * 五个角色并行博弈: 采集师·核查师·分析师·编辑师·记忆管理师
@@ -254,7 +254,7 @@ async function handleEmergencyChannel(state) {
 }
 
 // ===================== 过程日志生成 =====================
-﻿function generateProcessLog(state, dateStr) {
+function generateProcessLog(state, dateStr) {
   var dateCN = new Date(dateStr).getFullYear() + "\u5e74" + (new Date(dateStr).getMonth() + 1) + "\u6708" + new Date(dateStr).getDate() + "\u65e5";
   var pr = state.stats.collectorSubmitted > 0 ? ((state.stats.verifierPassed / state.stats.collectorSubmitted) * 100).toFixed(1) : "0";
 
@@ -566,6 +566,21 @@ function updateDailyIndex(dateStr) {
     fs.writeFileSync(indexPath, content, "utf-8");
   }
 }
+
+function updateLogsIndex(dateStr) {
+  var indexPath = path.join(LOGS_DIR, "index.md");
+  var content;
+  try { content = fs.readFileSync(indexPath, "utf-8"); } catch (e) { return; }
+  if (content.indexOf(dateStr) >= 0) return;
+  var marker = '<div class="scroll-list">\n<ul>';
+  var insertPos = content.indexOf(marker);
+  if (insertPos > 0) {
+    var lineStart = insertPos + marker.length;
+    var newEntry = "<li><a href=\"./\" + dateStr + \"\">\" + dateStr + \"</a> — 采集师·核查师·分析师·编辑师·记忆管理师</li>\n";
+    content = content.substring(0, lineStart) + newEntry + content.substring(lineStart);
+    fs.writeFileSync(indexPath, content, "utf-8");
+  }
+}
 // ===================== 主流程 =====================
 async function main() {
   const now = new Date();
@@ -806,6 +821,7 @@ async function main() {
   log("system", "日志已保存: logs/" + dateStr + ".md");
 
   updateDailyIndex(dateStr);
+  updateLogsIndex(dateStr);
 
   // ===== 周报 =====
   if (now.getDay() === 0) {
