@@ -1,24 +1,54 @@
 ---
 title: 规则体系
+outline: [2, 3]
 ---
 
 # 📐 规则体系
 
 > 由记忆管理师维护，每周迭代 | 最近更新: 2026-06-29
 
-| 规则文件 | 当前版本 | 最近更新 |
-|----------|----------|----------|
-| [📡 采集规则](./collection-rules.md) | V1.6.27 | 2026-06-29 |
-| [🔍 核查规则](./verification-rules.md) | V1.6.27 | 2026-06-29 |
-| [✍️ 排版规范](./style-guide.md) | V1.6.27 | 2026-06-28 |
+<div class="rules-grid">
+
+## 📡 采集规则
+
+版本: **V1.6.27** · 更新: 2026-06-29
+
+定义信息源、关键词分类、采集策略与去重规则
+
+[查看完整规则 →](./collection-rules.md)
+
+</div>
+
+<div class="rules-grid">
+
+## 🔍 核查规则
+
+版本: **V1.6.27** · 更新: 2026-06-29
+
+定义来源可信度、相关性判断、拒绝标准与审核流程
+
+[查看完整规则 →](./verification-rules.md)
+
+</div>
+
+<div class="rules-grid">
+
+## ✍️ 排版规范
+
+版本: **V1.6.27** · 更新: 2026-06-28
+
+定义日报结构、标题标准、视觉层次与可读性要求
+
+[查看完整规则 →](./style-guide.md)
+
+</div>
 
 ## 📂 历史版本
 
-<details>
-<summary>展开查看归档</summary>
+<div class="scroll-list">
 
 - [collection-rules-V1.6.27](./archive/collection-rules-V1.6.27.md)
 - [verification-rules-V1.6.27](./archive/verification-rules-V1.6.27.md)
 - [style-guide-V1.6.27](./archive/style-guide-V1.6.27.md)
 
-</details>
+</div>
