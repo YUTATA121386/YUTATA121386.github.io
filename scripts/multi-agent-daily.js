@@ -748,6 +748,28 @@ async function main() {
 
   // ===== 收敛: 最终复盘 =====
   log("system", "\n━━━ 收敛阶段 ━━━");
+  // ===== ???????????????????? =====
+  if (state.draft && state.draft.sections && state.draft.sections.length > 0) {
+    log("system", "\n??? ???? ???");
+    state.phase = "review";
+    var reviewAgents = ["collector", "verifier", "analyst", "memory-manager"];
+    var reviewInst = "## ????\n??{role}??????????????????????????????\n- ?????????????????APPROVE????\n- ??: { \"messages\": [{ \"to\": \"editor\", \"type\": \"APPROVE?REQUEST\", \"coreInfo\": \"?????\", \"expectedAction\": \"??????\", \"reason\": \"??\", \"priority\": \"normal\" }], \"internal_thought\": \"...\" }";
+    for (var ri = 0; ri < reviewAgents.length; ri++) {
+      var aid = reviewAgents[ri];
+      var inst = reviewInst.replace("{role}", AGENT_NAMES_CN[aid]);
+      try {
+        var revResult = await runAgent(aid, state, inst);
+        if (revResult && revResult.messages) {
+          for (var rm of revResult.messages) {
+            state.messages.push(createMessage(aid, rm.to || "editor", rm.type || "APPROVE", rm.coreInfo || "", rm.expectedAction || "", rm.reason || "", rm.priority || "normal"));
+          }
+        }
+        if (revResult && revResult.internal_thought) log(aid, "?? [??] " + revResult.internal_thought.slice(0, 120));
+      } catch(e) { log("system", "???? " + aid + ": " + e.message.slice(0, 60)); }
+    }
+    log("system", "????: " + state.messages.filter(function(m) { return m.type === "APPROVE"; }).slice(-4).length + " ???");
+  }
+
   state.phase = "convergence";
 
   const finalInst = "## 最终复盘\n你是记忆管理师，今日" + dateCN + "。评估日报质量（完整性/准确性/深度/可读性0-10分）、优缺点、规则修改建议、信誉分调整。\n输出: { \"review\": { \"quality_scores\": {...}, \"strengths\": [...], \"weaknesses\": [...], \"root_cause\": \"...\" }, \"actions\": [{\"type\":\"update_rule\",\"rule_file\":\"...\",\"change_type\":\"add/modify\",\"after\":\"...\",\"reason\":\"...\"}], \"internal_thought\": \"...\" }";
