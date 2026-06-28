@@ -581,6 +581,23 @@ function updateLogsIndex(dateStr) {
     fs.writeFileSync(indexPath, content, "utf-8");
   }
 }
+function updateWeeklyIndex(dateStr, weekNum) {
+  var indexPath = path.join(WEEKLY_DIR, "index.md");
+  var content;
+  try { content = fs.readFileSync(indexPath, "utf-8"); } catch (e) { return; }
+  var filename = "review-" + dateStr.slice(0, 4) + "-W" + String(weekNum).padStart(2, "0");
+  if (content.indexOf(filename) >= 0) return;
+  var marker = '<div class="scroll-list">\n<ul>';
+  var insertPos = content.indexOf(marker);
+  if (insertPos > 0) {
+    var lineStart = insertPos + marker.length;
+    var weekLabel = dateStr.slice(0, 4) + "年第" + weekNum + "周";
+    var newEntry = "<li><a href=\"./" + filename + "\">" + weekLabel + "</a></li>\n";
+    content = content.substring(0, lineStart) + newEntry + content.substring(lineStart);
+    fs.writeFileSync(indexPath, content, "utf-8");
+  }
+}
+
 // ===================== 主流程 =====================
 async function main() {
   const now = new Date();
@@ -828,6 +845,7 @@ async function main() {
     log("system", "\n━━━ 生成周报 ━━━");
     const wn = (function(d) { var sysStart = new Date(2026, 5, 28); var days = Math.floor((d - sysStart) / 86400000); return Math.ceil((days + 1) / 7); })(now);
     writeFileUTF8(path.join(WEEKLY_DIR, "review-" + dateStr.slice(0, 4) + "-W" + String(wn).padStart(2, "0") + ".md"), generateWeeklyReport(state, dateStr));
+    updateWeeklyIndex(dateStr, wn);
     log("system", "周报已保存");
   }
 
