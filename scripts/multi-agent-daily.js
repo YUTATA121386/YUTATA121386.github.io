@@ -389,8 +389,7 @@ function generateProcessLog(state, dateStr) {
     emerg = '\n---\n\n## \u26a1 \u7d27\u6025\u901a\u9053\n\n- \u89e6\u53d1\uff1a' + (state.emergencyChannel.triggered_by || "\u672a\u77e5") + ' | ' + (state.emergencyChannel.topic || "\u672a\u77e5") + '\n';
   }
 
-  return c +
-    "---\ntitle: " + dateStr + " | \u56e2\u961f\u8fc7\u7a0b\u65e5\u5fd7\noutline: [2, 3]\n---\n\n" +
+  return "---\ntitle: " + dateStr + " | \u56e2\u961f\u8fc7\u7a0b\u65e5\u5fd7\noutline: [2, 3]\n---\n\n" + c ++
     "# \ud83d\udccb \u56e2\u961f\u8fc7\u7a0b\u65e5\u5fd7 \u00b7 " + dateCN + "\n\n" +
     "## \ud83d\udcca \u4eca\u65e5\u7edf\u8ba1\n\n" +
     "| \u6307\u6807 | \u6570\u636e |\n|------|------|\n" +
@@ -417,18 +416,20 @@ function generateWeeklyReport(state, dateStr) {
 
 // ===================== 索引更新 =====================
 function updateDailyIndex(dateStr) {
-  const indexPath = path.join(OUTPUT_DIR, "index.md");
-  let content;
-  try { content = fs.readFileSync(indexPath, "utf-8"); } catch { return; }
-  const newEntry = "| " + dateStr + " | [📋 日报](./" + dateStr + ".md) | [📝 日志](../logs/" + dateStr + ".md) |";
-  if (content.includes("历史日报")) {
-    const lines = content.split("\n");
-    const idx = lines.findIndex(l => l.includes("历史日报")) + 2;
-    lines.splice(idx, 0, newEntry);
-    fs.writeFileSync(indexPath, lines.join("\n"), "utf-8");
+  var indexPath = path.join(OUTPUT_DIR, "index.md");
+  var content;
+  try { content = fs.readFileSync(indexPath, "utf-8"); } catch (e) { return; }
+
+  // Insert new entry in the scroll-list div
+  var marker = '<div class="scroll-list">';
+  var insertPos = content.indexOf(marker);
+  if (insertPos > 0) {
+    var lineStart = content.indexOf("\n", insertPos) + 1;
+    var newEntry = "- [" + dateStr + "](./" + dateStr + ".md) — [📝 过程日志](../logs/" + dateStr + ".md)\n";
+    content = content.substring(0, lineStart) + newEntry + content.substring(lineStart);
+    fs.writeFileSync(indexPath, content, "utf-8");
   }
 }
-
 // ===================== 主流程 =====================
 async function main() {
   const now = new Date();
