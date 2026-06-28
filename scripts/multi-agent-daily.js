@@ -389,7 +389,7 @@ function generateProcessLog(state, dateStr) {
     emerg = '\n---\n\n## \u26a1 \u7d27\u6025\u901a\u9053\n\n- \u89e6\u53d1\uff1a' + (state.emergencyChannel.triggered_by || "\u672a\u77e5") + ' | ' + (state.emergencyChannel.topic || "\u672a\u77e5") + '\n';
   }
 
-  return "---\ntitle: " + dateStr + " | \u56e2\u961f\u8fc7\u7a0b\u65e5\u5fd7\noutline: [2, 3]\n---\n\n" + c ++
+  return "---\ntitle: " + dateStr + " | \u56e2\u961f\u8fc7\u7a0b\u65e5\u5fd7\noutline: [2, 3]\n---\n\n" + c +
     "# \ud83d\udccb \u56e2\u961f\u8fc7\u7a0b\u65e5\u5fd7 \u00b7 " + dateCN + "\n\n" +
     "## \ud83d\udcca \u4eca\u65e5\u7edf\u8ba1\n\n" +
     "| \u6307\u6807 | \u6570\u636e |\n|------|------|\n" +
