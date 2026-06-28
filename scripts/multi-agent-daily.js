@@ -576,7 +576,7 @@ function updateLogsIndex(dateStr) {
   var insertPos = content.indexOf(marker);
   if (insertPos > 0) {
     var lineStart = insertPos + marker.length;
-    var newEntry = "<li><a href=\"./\" + dateStr + \"\">\" + dateStr + \"</a> — 采集师·核查师·分析师·编辑师·记忆管理师</li>\n";
+    var newEntry = "<li><a href=\"./" + dateStr + "\">" + dateStr + "</a> — 采集师·核查师·分析师·编辑师·记忆管理师</li>\n";
     content = content.substring(0, lineStart) + newEntry + content.substring(lineStart);
     fs.writeFileSync(indexPath, content, "utf-8");
   }
