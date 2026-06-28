@@ -3,7 +3,7 @@ name: Knowledge Gap Detection
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 12 * * 0"
+    - cron: "0 4 * * 0"
 
 permissions:
   contents: write
@@ -33,7 +33,7 @@ jobs:
         run: |
           git config user.name "YUTATA Gap Bot"
           git config user.email "gap-bot@yutata.dev"
-          git add docs/growth/knowledge-gap-report.md
+          git add docs/daily/knowledge-gap-report.md
           git diff --cached --quiet || (
             git commit -m "📋 知识缺口报告 $(date +%Y-%m-%d)"
             git push
