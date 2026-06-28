@@ -557,11 +557,11 @@ function updateDailyIndex(dateStr) {
   if (content.indexOf(dateStr) >= 0) return;
 
   // Insert new entry in the scroll-list div
-  var marker = '<div class="scroll-list">';
+  var marker = '<div class="scroll-list">\n<ul>';
   var insertPos = content.indexOf(marker);
   if (insertPos > 0) {
-    var lineStart = content.indexOf("\n", insertPos) + 1;
-    var newEntry = "- [" + dateStr + "](./" + dateStr + ".md)\n";
+    var lineStart = insertPos + marker.length;
+    var newEntry = "<li><a href=\"./" + dateStr + ".md\">" + dateStr + "</a> — <a href=\"../logs/" + dateStr + ".md\">📝 过程日志</a></li>\n";
     content = content.substring(0, lineStart) + newEntry + content.substring(lineStart);
     fs.writeFileSync(indexPath, content, "utf-8");
   }
