@@ -776,7 +776,7 @@ async function main() {
   log("system", "\n━━━ 生成日报 ━━━");
   let report;
   if (state.draft && state.draft.sections) {
-    const filteredSections = state.draft.sections.filter(s => !s.title || (!s.title.includes("????") && !s.title.includes("??") && !s.title.includes("??")));
+    const filteredSections = state.draft.sections.filter(function(s) { return !s.title || !/[\u53C2\u8003\u94FE\u63A5]/.test(s.title.replace(/[^\u4e00-\u9fff]/g, "")); });
     const sections = filteredSections.map(s => "## " + s.title + "\n\n" + s.content + "\n").join("\n---\n\n");
     report = "---\ntitle: " + dateStr + " | 行业雷达日报\noutline: [2, 3]\n---\n\n# 📡 行业雷达 · " + dateCN + "\n\n> 📮 采集 " + state.rawItems.length + " 篇 | 命中 " + state.verifiedItems.length + " 篇 | 多Agent博弈生成\n> 🤖 采集师·核查师·分析师·编辑师·记忆管理师\n\n" + sections + "\n---\n\n## 📮 参考链接\n\n<div class=\"ref-scroll\">\n" + state.verifiedItems.map((item, idx) => "<p id=\"ref-" + (idx + 1) + "\">[" + (idx + 1) + "] **" + item.title + "** · " + item.source + " · <a href=\"" + item.link + "\">链接</a></p>").join("\n") + "\n</div>\n\n---\n\n## 📊 数据统计\n\n| 来源 | 语言 | 采集数 |\n|------|------|--------|\n" + [...new Set(state.rawItems.map(i => i.source))].map(src => "| " + src + " | " + (state.rawItems.find(i => i.source === src)?.lang === "zh" ? "中文" : "EN") + " | " + state.rawItems.filter(i => i.source === src).length + " |").join("\n") + "\n\n> 生成时间: " + now.toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) + "\n> [查看过程日志](../logs/" + dateStr + ".md)\n";
   } else {
