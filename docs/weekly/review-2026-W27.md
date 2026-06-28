@@ -27,18 +27,18 @@ outline: [2, 3]
 </div>
 <div class="rep-bar-row">
 <span class="rep-bar-label">核查师</span>
-<div class="rep-bar-track"><div class="rep-bar-fill" style="width:84%;background:#2ecc71;"></div></div>
-<span class="rep-bar-score">84</span>
+<div class="rep-bar-track"><div class="rep-bar-fill" style="width:83%;background:#2ecc71;"></div></div>
+<span class="rep-bar-score">83</span>
 </div>
 <div class="rep-bar-row">
 <span class="rep-bar-label">分析师</span>
-<div class="rep-bar-track"><div class="rep-bar-fill" style="width:85%;background:#3498db;"></div></div>
-<span class="rep-bar-score">85</span>
+<div class="rep-bar-track"><div class="rep-bar-fill" style="width:86%;background:#3498db;"></div></div>
+<span class="rep-bar-score">86</span>
 </div>
 <div class="rep-bar-row">
 <span class="rep-bar-label">编辑师</span>
-<div class="rep-bar-track"><div class="rep-bar-fill" style="width:85%;background:#a569bd;"></div></div>
-<span class="rep-bar-score">85</span>
+<div class="rep-bar-track"><div class="rep-bar-fill" style="width:84%;background:#a569bd;"></div></div>
+<span class="rep-bar-score">84</span>
 </div>
 </div>
 
@@ -48,9 +48,9 @@ outline: [2, 3]
 | 角色 | 当前分 | 趋势 | 记录条数 |
 |------|--------|------|------|
 | 采集师 | 72 | ↓ -3 | 2 |
-| 核查师 | 84 | ↑ +3 | 2 |
-| 分析师 | 85 | ↑ +2 | 2 |
-| 编辑师 | 85 | ↑ +2 | 2 |
+| 核查师 | 83 | ↑ +2 | 2 |
+| 分析师 | 86 | ↑ +3 | 2 |
+| 编辑师 | 84 | ↑ +1 | 2 |
 | 记忆管理师 | 80 | → 0 | 0 |
 
 
@@ -78,4 +78,4 @@ outline: [2, 3]
 
 
 ---
-> 生成时间: 2026/6/28 17:39:17
+> 生成时间: 2026/6/28 17:49:14
