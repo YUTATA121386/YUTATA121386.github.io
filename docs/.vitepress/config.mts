@@ -33,8 +33,8 @@ export default defineConfig({
             { text: "东京大饭店 · 烹饪技法拆解", link: "/general/grand-maison-tokyo" },
             { text: "音乐鉴赏 · 唱片评价", link: "/general/music-appreciation" },
             { text: "曲库运营 · 多方视角", link: "/general/music-library-ops" },
-          ]
-    },
+          ],
+        },
       ],
       "/music-product/": [
         {
@@ -43,29 +43,29 @@ export default defineConfig({
             { text: "年度报告", link: "/music-product/annual-report" },
             { text: "歌词翻译编辑部", link: "/music-product/lyrics-translation" },
             { text: "AI 歌曲资料补充", link: "/music-product/ai-project" },
-          ]
-    },
+          ],
+        },
         {
           text: "🧪 实验与专项",
           items: [
             { text: "歌词 AB 实验", link: "/music-product/lyrics-ab-test" },
             { text: "曲库 AI 专项", link: "/music-product/library-ai-project" },
-          ]
-    },
+          ],
+        },
         {
           text: "🎪 线下活动",
           items: [
             { text: "云小编茶话会", link: "/music-product/tea-party" },
             { text: "云村用户节", link: "/music-product/cloud-village-festival" },
-          ]
-    },
+          ],
+        },
         {
           text: "💬 线上交流",
           items: [
             { text: "反馈与回复", link: "/user-period/feedback-reply" },
             { text: "曲库优化方案", link: "/user-period/library-optimization" },
-          ]
-    },
+          ],
+        },
       ],
       "/user-period/": [
         {
@@ -74,8 +74,8 @@ export default defineConfig({
             { text: "概述", link: "/user-period/" },
             { text: "反馈与回复", link: "/user-period/feedback-reply" },
             { text: "曲库优化方案", link: "/user-period/library-optimization" },
-          ]
-    },
+          ],
+        },
       ],
       "/interview/": [
         {
@@ -83,15 +83,15 @@ export default defineConfig({
           items: [
             { text: "概述", link: "/interview/" },
             { text: "实习准备 · 要点攻略", link: "/interview/internship" },
-          ]
-    },
+          ],
+        },
         {
           text: "🎓 校招面试",
           items: [
             { text: "通用高频问题", link: "/interview/campus/" },
           ],
-          collapsed: false
-    },
+          collapsed: false,
+        },
         {
           text: "校招面试 · 各家记录",
           items: [
@@ -102,55 +102,52 @@ export default defineConfig({
             { text: "橙果视界", link: "/interview/campus/chengguo" },
             { text: "优趣汇", link: "/interview/campus/youquhui" },
           ],
-          collapsed: false
-    },
+          collapsed: false,
+        },
       ],
-      ,
-      ,
-      
-            "/daily/": [{
-        text: "??? ????",
+      "/daily/": [{
+        text: "🛠️ 行业雷达",
         items: [
-          { text: "?? ????", link: "/daily/" },
-          { text: "?? ????", link: "/logs/" },
-          { text: "?? ??", link: "/weekly/" },
-          { text: "?? ????", link: "/rules/" },
-          { text: "?? ?????", link: "/daily/keywords" },
-          { text: "?? ??????", link: "/daily/knowledge-gap-report" },
-        ]
-    }],
+          { text: "📰 日报概览", link: "/daily/" },
+          { text: "📋 过程日志", link: "/logs/" },
+          { text: "📊 周报", link: "/weekly/" },
+          { text: "📐 规则体系", link: "/rules/" },
+          { text: "🔑 关键词覆盖", link: "/daily/keywords" },
+          { text: "📋 知识缺口报告", link: "/daily/knowledge-gap-report" },
+        ],
+      }],
       "/logs/": [{
-        text: "??? ????",
+        text: "🛠️ 行业雷达",
         items: [
-          { text: "?? ????", link: "/daily/" },
-          { text: "?? ??????", link: "/logs/" },
-          { text: "?? ??", link: "/weekly/" },
-          { text: "?? ????", link: "/rules/" },
-        ]
-    }],
+          { text: "📰 日报概览", link: "/daily/" },
+          { text: "📋 过程日志概览", link: "/logs/" },
+          { text: "📊 周报", link: "/weekly/" },
+          { text: "📐 规则体系", link: "/rules/" },
+        ],
+      }],
       "/weekly/": [{
-        text: "??? ????",
+        text: "🛠️ 行业雷达",
         items: [
-          { text: "?? ????", link: "/daily/" },
-          { text: "?? ????", link: "/logs/" },
-          { text: "?? ????", link: "/weekly/" },
-          { text: "?? ????", link: "/rules/" },
-        ]
-    }],
+          { text: "📰 日报概览", link: "/daily/" },
+          { text: "📋 过程日志", link: "/logs/" },
+          { text: "📊 周报概览", link: "/weekly/" },
+          { text: "📐 规则体系", link: "/rules/" },
+        ],
+      }],
       "/rules/": [{
-        text: "??? ????",
+        text: "🛠️ 行业雷达",
         items: [
-          { text: "?? ????", link: "/daily/" },
-          { text: "?? ????", link: "/logs/" },
-          { text: "?? ??", link: "/weekly/" },
-          { text: "?? ????", link: "/rules/" },
-          { text: "????", link: "/rules/collection-rules" },
-          { text: "????", link: "/rules/verification-rules" },
-          { text: "????", link: "/rules/style-guide" },
-        ]
-    }],
+          { text: "📰 日报概览", link: "/daily/" },
+          { text: "📋 过程日志", link: "/logs/" },
+          { text: "📊 周报", link: "/weekly/" },
+          { text: "📐 规则概览", link: "/rules/" },
+          { text: "采集规则", link: "/rules/collection-rules" },
+          { text: "核查规则", link: "/rules/verification-rules" },
+          { text: "排版规范", link: "/rules/style-guide" },
+        ],
+      }],
       "/growth/": [{ text: "📈 上升清单", items: [{ text: "概述", link: "/growth/" }] }],
-      "/pilgrimage/": [{ text: "🚅 圣地巡礼", items: [{ text: "概述", link: "/pilgrimage/" }] }]
+      "/pilgrimage/": [{ text: "🚅 圣地巡礼", items: [{ text: "概述", link: "/pilgrimage/" }] }],
     },
 
     outline: { level: [2, 3], label: "目录" },
