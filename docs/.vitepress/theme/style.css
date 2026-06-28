@@ -305,3 +305,9 @@ figure.poster img { width:100%; display:block; cursor:zoom-in; }
   .mm-review-grid { grid-template-columns: 1fr; }
   .rep-summary { flex-direction: column; }
 }
+
+.mm-overall { font-size: 1.2em; font-weight: 700; float: right; }
+.mm-summary { margin: 4px 0; font-size: 0.85em; color: var(--vp-c-text-2); }
+.mm-response { border: 1px solid var(--vp-c-divider); border-radius: 8px; padding: 12px 16px; background: var(--vp-c-bg-soft); margin: 8px 0; }
+.mm-resp-item { padding: 4px 0; font-size: 0.9em; line-height: 1.6; }
+.mm-resp-item + .mm-resp-item { border-top: 1px dashed var(--vp-c-divider); }
