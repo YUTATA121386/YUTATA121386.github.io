@@ -8,7 +8,6 @@ outline: [2, 3]
 > AI团队信誉分走势、角色互评、规则迭代记录
 
 <div class="scroll-list">
-
 <ul>
 <li><a href=./review-2026-W01>2026年第1周</a></li>
 </ul>
