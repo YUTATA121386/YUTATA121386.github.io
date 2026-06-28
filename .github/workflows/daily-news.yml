@@ -3,7 +3,7 @@ name: Multi-Agent Daily News
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 4 * * *"  # 北京时间 14:20
+    - cron: "0 4 * * *"  # 北京时间 12:00
 
 permissions:
   contents: write

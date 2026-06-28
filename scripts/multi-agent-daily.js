@@ -6,6 +6,14 @@
 
 const fs = require("fs");
 const path = require("path");
+
+function writeFileUTF8(filepath, content) {
+  fs.writeFileSync(filepath, content, { encoding: "utf-8", flag: "w" });
+  const buf = fs.readFileSync(filepath);
+  if (buf.length >= 3 && buf[0] === 0xEF && buf[1] === 0xBB && buf[2] === 0xBF) {
+    fs.writeFileSync(filepath, buf.slice(3));
+  }
+}
 const http = require("http");
 const https = require("https");
 
@@ -187,7 +195,7 @@ async function runAgent(agentId, state, extraInstructions) {
       if (result.internal_thought) log(agentId, "💭 " + result.internal_thought.slice(0, 120));
       if (result.messages && Array.isArray(result.messages)) {
         for (const msg of result.messages) {
-          const message = createMessage(agentId, msg.to, msg.type, msg.coreInfo, msg.expectedAction, msg.reason, msg.priority);
+          const message = createMessage(agentId, (msg.to === "memory_manager" ? "memory-manager" : msg.to), msg.type, msg.coreInfo, msg.expectedAction, msg.reason, msg.priority);
           state.messages.push(message);
           log(agentId, "📤 → " + msg.to + ": [" + msg.type + "] " + (msg.coreInfo || "").slice(0, 80));
         }
@@ -301,7 +309,7 @@ async function handleEmergencyChannel(state) {
       .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
       .replace(/^- /gm, "\u2022 ")
       .replace(/\n- /g, "\n\u2022 ")
-      .replace(/%/g, "\uFF05");
+      .replace(/%/g, "\uFF05").replace(/TL;DR/gi, "\uD83D\uDCCB \u8981\u70B9\u603B\u7ED3");
   }
 
   var msgs = '<div class="chat-log">\n';
@@ -327,7 +335,7 @@ async function handleEmergencyChannel(state) {
       var tn = AGENT_NAMES_CN[m.to] || m.to;
       var av = avatars[m.from] || "\uD83D\uDCAC";
       var tl = tL[m.type] || m.type;
-      var time = m.timestamp ? m.timestamp.slice(11, 16) : "";
+      var time = m.timestamp ? (function(ts) { if (!ts) return ""; var d = new Date(ts); var h = String((d.getUTCHours() + 8) % 24).padStart(2, "0"); var m = String(d.getUTCMinutes()).padStart(2, "0"); return h + ":" + m; })(m.timestamp) : "";
 
       msgs += '<div class="chat-msg chat-from-' + m.from + '" id="msg-' + mi + '">\n';
       msgs += '<div class="chat-avatar">' + av + '</div>\n';
@@ -353,6 +361,7 @@ async function handleEmergencyChannel(state) {
         .replace(/INS-\d{4}-\d{2}-\d{2}-\d{3}/g, "\u3010\u6D1E\u5BDF\u3011");
       
       cleanText = stripMD(cleanText);
+      cleanText = cleanText.replace(/\[【/g, "【").replace(/】\]/g, "】");
 
       msgs += '<blockquote>' + cleanText.replace(/\n/g, '<br>') + '</blockquote>\n';
       msgs += '</div>\n';
@@ -640,7 +649,7 @@ async function main() {
           fs.writeFileSync(archivePath, "# " + action.rule_file + " - " + version + "\n> 归档: " + dateStr + "\n\n" + oldContent, "utf-8");
         } catch {}
         const header = "---\ntitle: " + action.rule_file.replace(".md", "") + "\nversion: " + version + "\nupdated: " + dateStr + "\noutline: [2, 3]\n---\n\n> 📌 " + version + " | " + dateCN + "\n\n";
-        fs.writeFileSync(rulePath, header + (action.after || ""), "utf-8");
+        writeFileUTF8(rulePath, header + (action.after || ""));
         log("memory-manager", "规则更新: " + action.rule_file + " → " + version);
       }
       if (action.type === "update_reputation" && action.agent) {
@@ -654,17 +663,18 @@ async function main() {
   log("system", "\n━━━ 生成日报 ━━━");
   let report;
   if (state.draft && state.draft.sections) {
-    const sections = state.draft.sections.map(s => "## " + s.title + "\n\n" + s.content + "\n").join("\n---\n\n");
+    const filteredSections = state.draft.sections.filter(s => !s.title || (!s.title.includes("????") && !s.title.includes("??") && !s.title.includes("??")));
+    const sections = filteredSections.map(s => "## " + s.title + "\n\n" + s.content + "\n").join("\n---\n\n");
     report = "---\ntitle: " + dateStr + " | 行业雷达日报\noutline: [2, 3]\n---\n\n# 📡 行业雷达 · " + dateCN + "\n\n> 📮 采集 " + state.rawItems.length + " 篇 | 命中 " + state.verifiedItems.length + " 篇 | 多Agent博弈生成\n> 🤖 采集师·核查师·分析师·编辑师·记忆管理师\n\n" + sections + "\n---\n\n## 📮 参考链接\n\n<div class=\"ref-scroll\">\n" + state.verifiedItems.map((item, idx) => "<p id=\"ref-" + (idx + 1) + "\">[" + (idx + 1) + "] **" + item.title + "** · " + item.source + " · <a href=\"" + item.link + "\">链接</a></p>").join("\n") + "\n</div>\n\n---\n\n## 📊 数据统计\n\n| 来源 | 语言 | 采集数 |\n|------|------|--------|\n" + [...new Set(state.rawItems.map(i => i.source))].map(src => "| " + src + " | " + (state.rawItems.find(i => i.source === src)?.lang === "zh" ? "中文" : "EN") + " | " + state.rawItems.filter(i => i.source === src).length + " |").join("\n") + "\n\n> 生成时间: " + now.toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) + "\n> [查看过程日志](../logs/" + dateStr + ".md)\n";
   } else {
     report = "---\ntitle: " + dateStr + " | 行业雷达日报\noutline: [2, 3]\n---\n\n# 📡 行业雷达 · " + dateCN + "\n\n> ⚠️ 今日多Agent系统未产出完整日报\n> [查看过程日志](../logs/" + dateStr + ".md)\n\n## 采集概况\n- 采集 " + state.rawItems.length + " 篇 | 通过 " + state.verifiedItems.length + " 篇\n";
   }
-  fs.writeFileSync(path.join(OUTPUT_DIR, dateStr + ".md"), report, "utf-8");
+  writeFileUTF8(path.join(OUTPUT_DIR, dateStr + ".md"), report);
   log("system", "日报已保存: " + dateStr + ".md");
 
   // ===== 过程日志 =====
   log("system", "\n━━━ 生成过程日志 ━━━");
-  fs.writeFileSync(path.join(LOGS_DIR, dateStr + ".md"), generateProcessLog(state, dateStr), "utf-8");
+  writeFileUTF8(path.join(LOGS_DIR, dateStr + ".md"), generateProcessLog(state, dateStr));
   log("system", "日志已保存: logs/" + dateStr + ".md");
 
   updateDailyIndex(dateStr);
@@ -672,8 +682,8 @@ async function main() {
   // ===== 周报 =====
   if (now.getDay() === 0) {
     log("system", "\n━━━ 生成周报 ━━━");
-    const wn = Math.ceil(now.getDate() / 7);
-    fs.writeFileSync(path.join(WEEKLY_DIR, "review-" + dateStr.slice(0, 4) + "-W" + String(wn).padStart(2, "0") + ".md"), generateWeeklyReport(state, dateStr), "utf-8");
+    const wn = (function(d) { const start = new Date(d.getFullYear(), 0, 1); const days = Math.floor((d - start) / 86400000); return Math.ceil((days + start.getDay() + 1) / 7); })(now);
+    writeFileUTF8(path.join(WEEKLY_DIR, "review-" + dateStr.slice(0, 4) + "-W" + String(wn).padStart(2, "0") + ".md"), generateWeeklyReport(state, dateStr));
     log("system", "周报已保存");
   }
 

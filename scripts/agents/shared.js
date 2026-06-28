@@ -91,7 +91,7 @@ function loadReputation() {
 }
 
 function saveReputation(reputation) {
-  fs.writeFileSync(REPUTATION_FILE, JSON.stringify(reputation, null, 2), "utf-8");
+  writeFileUTF8(REPUTATION_FILE, JSON.stringify(reputation, null, 2));
 }
 
 function updateReputation(agentId, delta, reason) {
@@ -177,11 +177,12 @@ function callDeepSeek(systemPrompt, userPrompt, temperature = 0.7, maxTokens = 4
     };
 
     const req = https.request(options, (res) => {
-      let data = "";
-      res.on("data", (chunk) => { data += chunk; });
+      let chunks = [];
+      res.on("data", (chunk) => { chunks.push(chunk); });
       res.on("end", () => {
         try {
-          const result = JSON.parse(data);
+          const data = Buffer.concat(chunks).toString("utf-8");
+        const result = JSON.parse(data);
           if (result.choices && result.choices[0]) {
             resolve(result.choices[0].message.content);
           } else if (result.error) {
@@ -278,3 +279,11 @@ module.exports = {
   generateRuleVersion, extractJSON,
   log: logg
 };
+function writeFileUTF8(filepath, content) {
+  fs.writeFileSync(filepath, content, { encoding: "utf-8", flag: "w" });
+  const buf = fs.readFileSync(filepath);
+  if (buf.length >= 3 && buf[0] === 0xEF && buf[1] === 0xBB && buf[2] === 0xBF) {
+    fs.writeFileSync(filepath, buf.slice(3));
+  }
+}
+
