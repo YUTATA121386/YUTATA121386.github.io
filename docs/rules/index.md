@@ -1,11 +1,24 @@
-﻿---
-title: 规则体系
+---
+title: ????
 ---
 
-# 📐 规则体系
+# ?? ????
 
-> 由记忆管理师维护，每周迭代
+> ????????????? | ????: 2026-06-28
 
-- [📡 采集规则](./collection-rules.md)
-- [🔍 核查规则](./verification-rules.md)
-- [✍️ 排版规范](./style-guide.md)
+| ???? | ???? | ???? |
+|----------|----------|----------|
+| [?? ????](./collection-rules.md) | V1.6.27 | 2026-06-28 |
+| [?? ????](./verification-rules.md) | V1.6.27 | 2026-06-28 |
+| [?? ????](./style-guide.md) | V1.6.27 | 2026-06-28 |
+
+## ?? ????
+
+<details>
+<summary>??????</summary>
+
+- [collection-rules-V1.6.27](./archive/collection-rules-V1.6.27.md)
+- [verification-rules-V1.6.27](./archive/verification-rules-V1.6.27.md)
+- [style-guide-V1.6.27](./archive/style-guide-V1.6.27.md)
+
+</details>
