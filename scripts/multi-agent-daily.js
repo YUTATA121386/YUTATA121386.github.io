@@ -797,7 +797,7 @@ async function main() {
   // ===== 周报 =====
   if (now.getDay() === 0) {
     log("system", "\n━━━ 生成周报 ━━━");
-    const wn = (function(d) { const start = new Date(d.getFullYear(), 0, 1); const days = Math.floor((d - start) / 86400000); return Math.ceil((days + start.getDay() + 1) / 7); })(now);
+    const wn = (function(d) { var sysStart = new Date(2026, 5, 28); var days = Math.floor((d - sysStart) / 86400000); return Math.ceil((days + 1) / 7); })(now);
     writeFileUTF8(path.join(WEEKLY_DIR, "review-" + dateStr.slice(0, 4) + "-W" + String(wn).padStart(2, "0") + ".md"), generateWeeklyReport(state, dateStr));
     log("system", "周报已保存");
   }

@@ -25,15 +25,15 @@ outline: [2, 3]
 <polyline points="50,124.375 540,133.125" fill="none" stroke="#e74c3c" stroke-width="2" stroke-linejoin="round"/>
 <circle cx="50" cy="124.375" r="3" fill="#e74c3c"/>
 <circle cx="540" cy="133.125" r="3" fill="#e74c3c"/>
-<polyline points="50,98.125 540,102.5" fill="none" stroke="#2ecc71" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="50,98.125 540,106.875" fill="none" stroke="#2ecc71" stroke-width="2" stroke-linejoin="round"/>
 <circle cx="50" cy="98.125" r="3" fill="#2ecc71"/>
-<circle cx="540" cy="102.5" r="3" fill="#2ecc71"/>
+<circle cx="540" cy="106.875" r="3" fill="#2ecc71"/>
 <polyline points="50,89.37500000000001 540,76.25" fill="none" stroke="#3498db" stroke-width="2" stroke-linejoin="round"/>
 <circle cx="50" cy="89.37500000000001" r="3" fill="#3498db"/>
 <circle cx="540" cy="76.25" r="3" fill="#3498db"/>
-<polyline points="50,89.37500000000001 540,80.625" fill="none" stroke="#a569bd" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="50,89.37500000000001 540,85" fill="none" stroke="#a569bd" stroke-width="2" stroke-linejoin="round"/>
 <circle cx="50" cy="89.37500000000001" r="3" fill="#a569bd"/>
-<circle cx="540" cy="80.625" r="3" fill="#a569bd"/>
+<circle cx="540" cy="85" r="3" fill="#a569bd"/>
 <polyline points="50,102.5 540,102.5" fill="none" stroke="#f39c12" stroke-width="2" stroke-linejoin="round"/>
 <circle cx="50" cy="102.5" r="3" fill="#f39c12"/>
 <circle cx="540" cy="102.5" r="3" fill="#f39c12"/>
@@ -41,17 +41,17 @@ outline: [2, 3]
 
 <div class="rep-legend">
 <span class="rep-legend-item"><span class="rep-dot" style="background:#e74c3c;"></span>采集师 73</span>
-<span class="rep-legend-item"><span class="rep-dot" style="background:#2ecc71;"></span>核查师 80</span>
+<span class="rep-legend-item"><span class="rep-dot" style="background:#2ecc71;"></span>核查师 79</span>
 <span class="rep-legend-item"><span class="rep-dot" style="background:#3498db;"></span>分析师 86</span>
-<span class="rep-legend-item"><span class="rep-dot" style="background:#a569bd;"></span>编辑师 85</span>
+<span class="rep-legend-item"><span class="rep-dot" style="background:#a569bd;"></span>编辑师 84</span>
 <span class="rep-legend-item"><span class="rep-dot" style="background:#f39c12;"></span>记忆管理师 80</span>
 </div>
 
 <div class="rep-summary">
 <div class="rep-card"><span class="rep-dot" style="background:#e74c3c;"></span><strong>采集师</strong> <span class="rep-score">73</span> <span class="rep-trend">↓-2</span></div>
-<div class="rep-card"><span class="rep-dot" style="background:#2ecc71;"></span><strong>核查师</strong> <span class="rep-score">80</span> <span class="rep-trend">↓-1</span></div>
+<div class="rep-card"><span class="rep-dot" style="background:#2ecc71;"></span><strong>核查师</strong> <span class="rep-score">79</span> <span class="rep-trend">↓-2</span></div>
 <div class="rep-card"><span class="rep-dot" style="background:#3498db;"></span><strong>分析师</strong> <span class="rep-score">86</span> <span class="rep-trend">↑+3</span></div>
-<div class="rep-card"><span class="rep-dot" style="background:#a569bd;"></span><strong>编辑师</strong> <span class="rep-score">85</span> <span class="rep-trend">↑+2</span></div>
+<div class="rep-card"><span class="rep-dot" style="background:#a569bd;"></span><strong>编辑师</strong> <span class="rep-score">84</span> <span class="rep-trend">↑+1</span></div>
 <div class="rep-card"><span class="rep-dot" style="background:#f39c12;"></span><strong>记忆管理师</strong> <span class="rep-score">80</span> <span class="rep-trend">→0</span></div>
 </div>
 
@@ -80,4 +80,4 @@ outline: [2, 3]
 
 
 
-> 生成时间: 2026/6/28 23:31:25
+> 生成时间: 2026/6/28 23:30:44
