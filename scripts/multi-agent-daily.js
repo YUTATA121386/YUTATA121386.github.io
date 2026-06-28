@@ -412,7 +412,7 @@ async function handleEmergencyChannel(state) {
     retro += '</div></div>\n\n';
   });
   retro += '<div class="chat-round-divider">\u25CF \u5BA1\u7A3F\u53CD\u9988</div>\n';
-  var reviewMsgs = state.messages.filter(function(m) { return m.type === "APPROVE" || m.type === "CONFIRM"; }).slice(-10);
+  var reviewMsgs = state.messages.filter(function(m) { return m.type === "APPROVE" || m.type === "CONFIRM" || (m.type === "NOTIFY" && m.to === "editor" && m.coreInfo.indexOf("??") >= 0) || (m.type === "REQUEST" && m.to === "editor"); }).slice(-10);
   if (reviewMsgs.length === 0) {
     retro += '<p style="color:#999;text-align:center;padding:12px;">\u26A0\uFE0F \u672C\u6B21\u672A\u8FDB\u884C\u6B63\u5F0F\u5BA1\u7A3F\u6D41\u7A0B</p>\n';
   } else {
