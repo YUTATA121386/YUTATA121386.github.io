@@ -420,12 +420,15 @@ function updateDailyIndex(dateStr) {
   var content;
   try { content = fs.readFileSync(indexPath, "utf-8"); } catch (e) { return; }
 
+  // Check if entry already exists to avoid duplicates
+  if (content.indexOf(dateStr) >= 0) return;
+
   // Insert new entry in the scroll-list div
   var marker = '<div class="scroll-list">';
   var insertPos = content.indexOf(marker);
   if (insertPos > 0) {
     var lineStart = content.indexOf("\n", insertPos) + 1;
-    var newEntry = "- [" + dateStr + "](./" + dateStr + ".md) — [📝 过程日志](../logs/" + dateStr + ".md)\n";
+    var newEntry = "- [" + dateStr + "](./" + dateStr + ".md)\n";
     content = content.substring(0, lineStart) + newEntry + content.substring(lineStart);
     fs.writeFileSync(indexPath, content, "utf-8");
   }

@@ -32,9 +32,8 @@ outline: [2, 3]
 ## 📂 历史日报
 
 <div class="scroll-list">
-- [2026-06-28](./2026-06-28.md) — [📝 过程日志](../logs/2026-06-28.md)
 
-- [2026-06-28](./2026-06-28.md) — Suno vs Warner 矛盾焦点 · Deezer路线分化 · [📝 过程日志](../logs/2026-06-28.md)
+- [2026-06-28](./2026-06-28.md) — [📝 过程日志](../logs/2026-06-28.md)
 - [2026-06-27](./2026-06-27.md)
 - [2026-06-26](./2026-06-26.md)
 - [2026-06-25](./2026-06-25.md)
@@ -45,14 +44,7 @@ outline: [2, 3]
 > 📃 五个AI角色博弈协作生成 | 系统版本 v4
 
 <style>
-.scroll-list {
-  max-height: 500px;
-  overflow-y: auto;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 8px;
-  padding: 12px 16px;
-  background: var(--vp-c-bg-soft);
-}
+.scroll-list { max-height: 500px; overflow-y: auto; border: 1px solid var(--vp-c-divider); border-radius: 8px; padding: 12px 16px; background: var(--vp-c-bg-soft); }
 .scroll-list ul, .scroll-list ol { margin: 0; padding-left: 0; list-style: none; }
 .scroll-list li { padding: 6px 0; border-bottom: 1px solid var(--vp-c-divider-light); font-size: 0.93em; }
 .scroll-list li:last-child { border-bottom: none; }
