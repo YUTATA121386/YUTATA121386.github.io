@@ -227,3 +227,10 @@ figure.poster img { width:100%; display:block; cursor:zoom-in; }
   .VPNavBarMenu { display:none; }
   .VPNavBarHamburger { display:flex!important; }
 }
+/* 周报图表 */
+.rep-chart { max-width: 600px; margin: 12px 0; }
+.rep-bar-row { display: flex; align-items: center; margin: 6px 0; gap: 10px; }
+.rep-bar-label { width: 70px; font-weight: 600; font-size: 0.9em; text-align: right; flex-shrink: 0; }
+.rep-bar-track { flex: 1; height: 22px; background: var(--vp-c-bg-soft); border-radius: 4px; overflow: hidden; }
+.rep-bar-fill { height: 100%; border-radius: 4px; transition: width 0.5s; min-width: 2px; }
+.rep-bar-score { width: 36px; font-weight: 600; font-size: 0.9em; flex-shrink: 0; }

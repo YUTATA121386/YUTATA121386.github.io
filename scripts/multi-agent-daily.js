@@ -534,15 +534,7 @@ function generateWeeklyReport(state, dateStr) {
   mmReview += "\n> \u4E0B\u5468\u4E00\u8FD0\u884C\u540E\u81EA\u52A8\u586B\u5145\n";
   
   return "---\ntitle: " + dateStr + " | \u7B2C" + weekNum + "\u5468\u5DE5\u4F5C\u62A5\u544A\noutline: [2, 3]\n---\n\n" +
-    "<style>\n" +
-    ".rep-chart { max-width: 600px; margin: 12px 0; }\n" +
-    ".rep-bar-row { display: flex; align-items: center; margin: 6px 0; gap: 10px; }\n" +
-    ".rep-bar-label { width: 70px; font-weight: 600; font-size: 0.9em; text-align: right; flex-shrink: 0; }\n" +
-    ".rep-bar-track { flex: 1; height: 22px; background: #eee; border-radius: 4px; overflow: hidden; }\n" +
-    ".rep-bar-fill { height: 100%; border-radius: 4px; transition: width 0.5s; min-width: 2px; }\n" +
-    ".rep-bar-score { width: 36px; font-weight: 600; font-size: 0.9em; flex-shrink: 0; }\n" +
-    ".dark .rep-bar-track { background: #333; }\n" +
-    "</style>\n\n" +
+    
     "# \uD83D\uDCCA \u7B2C" + weekNum + "\u5468 \u00B7 AI\u56E2\u961F\u5DE5\u4F5C\u62A5\u544A\n\n" +
     "> \u751F\u6210\u65E5\u671F: " + dateCN + "\n\n" +
     "## \uD83D\uDCC8 \u5404\u89D2\u8272\u4FE1\u8A89\u5206\u8D70\u52BF\n\n" + chartHtml + "\n\n" +

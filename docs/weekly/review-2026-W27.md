@@ -3,16 +3,6 @@ title: 2026-06-28 | 第27周工作报告
 outline: [2, 3]
 ---
 
-<style>
-.rep-chart { max-width: 600px; margin: 12px 0; }
-.rep-bar-row { display: flex; align-items: center; margin: 6px 0; gap: 10px; }
-.rep-bar-label { width: 70px; font-weight: 600; font-size: 0.9em; text-align: right; flex-shrink: 0; }
-.rep-bar-track { flex: 1; height: 22px; background: #eee; border-radius: 4px; overflow: hidden; }
-.rep-bar-fill { height: 100%; border-radius: 4px; transition: width 0.5s; min-width: 2px; }
-.rep-bar-score { width: 36px; font-weight: 600; font-size: 0.9em; flex-shrink: 0; }
-.dark .rep-bar-track { background: #333; }
-</style>
-
 # 📊 第27周 · AI团队工作报告
 
 > 生成日期: 2026年6月28日
@@ -22,13 +12,13 @@ outline: [2, 3]
 <div class="rep-chart">
 <div class="rep-bar-row">
 <span class="rep-bar-label">采集师</span>
-<div class="rep-bar-track"><div class="rep-bar-fill" style="width:72%;background:#e74c3c;"></div></div>
-<span class="rep-bar-score">72</span>
+<div class="rep-bar-track"><div class="rep-bar-fill" style="width:70%;background:#e74c3c;"></div></div>
+<span class="rep-bar-score">70</span>
 </div>
 <div class="rep-bar-row">
 <span class="rep-bar-label">核查师</span>
-<div class="rep-bar-track"><div class="rep-bar-fill" style="width:83%;background:#2ecc71;"></div></div>
-<span class="rep-bar-score">83</span>
+<div class="rep-bar-track"><div class="rep-bar-fill" style="width:82%;background:#2ecc71;"></div></div>
+<span class="rep-bar-score">82</span>
 </div>
 <div class="rep-bar-row">
 <span class="rep-bar-label">分析师</span>
@@ -47,8 +37,8 @@ outline: [2, 3]
 
 | 角色 | 当前分 | 趋势 | 记录条数 |
 |------|--------|------|------|
-| 采集师 | 72 | ↓ -3 | 2 |
-| 核查师 | 83 | ↑ +2 | 2 |
+| 采集师 | 70 | ↓ -5 | 2 |
+| 核查师 | 82 | ↑ +1 | 2 |
 | 分析师 | 86 | ↑ +3 | 2 |
 | 编辑师 | 84 | ↑ +1 | 2 |
 | 记忆管理师 | 80 | → 0 | 0 |
@@ -74,8 +64,8 @@ outline: [2, 3]
 
 | 变更条数 | 说明 |
 |------|------|
-| 5 条 | 由记忆管理师在日常复盘中自动执行 |
+| 6 条 | 由记忆管理师在日常复盘中自动执行 |
 
 
 ---
-> 生成时间: 2026/6/28 17:49:14
+> 生成时间: 2026/6/28 17:56:29
