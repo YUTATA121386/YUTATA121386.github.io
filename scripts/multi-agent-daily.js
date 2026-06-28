@@ -260,7 +260,7 @@ async function handleEmergencyChannel(state) {
 
   var c = "";
 
-  var tL = { COMMAND: "\ud83d\udccb \u6307\u4ee4", REJECT: "\uD83D\uDEAB \u6253\u56DE", REQUEST: "\uD83D\uDCE9 \u8BF7\u6C42", DISPUTE: "\u2694\uFE0F \u8D28\u7591", NOTIFY: "\uD83D\uDCE2 \u901A\u77E5", ESCALATE: "\u26A0\uFE0F \u5347\u7EA7", CONFIRM: "\u2705 \u786E\u8BA4", DIRECTIVE: "\uD83D\uDC51 \u6307\u4EE4", APPROVE: "\uD83D\uDC4D \u6279\u51C6", GUIDANCE: "\uD83D\uDCA1 \u6307\u5BFC", PRIORITY_OVERRIDE: "\u26A1 \u7D27\u6025", INQUIRE: "\uD83D\uDD0E \u8BE2\u95EE" };
+  var tL = { INFO: "\u2139\ufe0f \u4fe1\u606f", COMMAND: "\ud83d\udccb \u6307\u4ee4", REJECT: "\uD83D\uDEAB \u6253\u56DE", REQUEST: "\uD83D\uDCE9 \u8BF7\u6C42", DISPUTE: "\u2694\uFE0F \u8D28\u7591", NOTIFY: "\uD83D\uDCE2 \u901A\u77E5", ESCALATE: "\u26A0\uFE0F \u5347\u7EA7", CONFIRM: "\u2705 \u786E\u8BA4", DIRECTIVE: "\uD83D\uDC51 \u6307\u4EE4", APPROVE: "\uD83D\uDC4D \u6279\u51C6", GUIDANCE: "\uD83D\uDCA1 \u6307\u5BFC", PRIORITY_OVERRIDE: "\u26A1 \u7D27\u6025", INQUIRE: "\uD83D\uDD0E \u8BE2\u95EE" };
   var avatars = { collector: "\uD83D\uDCE1", verifier: "\uD83D\uDD0D", analyst: "\uD83D\uDD2C", editor: "\u270D\uFE0F", "memory-manager": "\uD83E\uDDE0" };
 
   function stripMD(text) {
@@ -412,20 +412,11 @@ async function handleEmergencyChannel(state) {
     retro += '</div></div>\n\n';
   });
   retro += '<div class="chat-round-divider">\u25CF \u5BA1\u7A3F\u53CD\u9988</div>\n';
-  var reviewMsgs = state.messages.filter(function(m) { return m.type === "APPROVE" || m.type === "CONFIRM" || (m.type === "NOTIFY" && m.to === "editor" && m.coreInfo.indexOf("??") >= 0) || (m.type === "REQUEST" && m.to === "editor"); }).slice(-10);
+  var reviewMsgs = state.messages.filter(function(m) { return m.type === "APPROVE" || m.type === "CONFIRM" || m.type === "REQUEST" && m.to === "editor"; }).slice(-6);
   if (reviewMsgs.length === 0) {
     retro += '<p style="color:#999;text-align:center;padding:12px;">\u26A0\uFE0F \u672C\u6B21\u672A\u8FDB\u884C\u6B63\u5F0F\u5BA1\u7A3F\u6D41\u7A0B</p>\n';
   } else {
-    reviewMsgs.forEach(function(m) {
-      var fn = AGENT_NAMES_CN[m.from] || m.from;
-      var av = avatars[m.from] || "\uD83D\uDCAC";
-      retro += '<div class="chat-msg chat-from-' + m.from + '">\n';
-      retro += '<div class="chat-avatar">' + av + '</div>\n';
-      retro += '<div class="chat-content">\n';
-      retro += '<div class="chat-meta"><span class="chat-sender">' + fn + '</span><span class="chat-badge">\u2705 \u5BA1\u7A3F</span></div>\n';
-      retro += '<div class="chat-body"><blockquote>' + stripMD(m.coreInfo.slice(0, 150)) + '</blockquote></div>\n';
-      retro += '</div></div>\n\n';
-    });
+    retro += '<p style="color:var(--vp-c-text-2);text-align:center;padding:8px;">\u2705 \u5DF2\u6536\u5230 ' + reviewMsgs.length + ' \u6761\u5BA1\u7A3F\u53CD\u9988\uFF0C\u8BE6\u89C1\u4E0A\u65B9\u5B8C\u6574\u901A\u4FE1\u8BB0\u5F55</p>\n';
   }
 
   return "---\ntitle: " + dateStr + " | \u56E2\u961F\u8FC7\u7A0B\u65E5\u5FD7\noutline: [2, 3]\n---\n\n" + c +
@@ -752,7 +743,7 @@ async function main() {
   if (state.draft && state.draft.sections && state.draft.sections.length > 0) {
     log("system", "\n??? ???? ???");
     state.phase = "review";
-    var reviewAgents = ["collector", "verifier", "analyst", "memory-manager"];
+    var reviewAgents = ["collector", "verifier", "analyst", "editor", "memory-manager"];
     var reviewInst = "## ????\n??{role}??????????????????????????????\n- ?????????????????APPROVE????\n- ??: { \"messages\": [{ \"to\": \"editor\", \"type\": \"APPROVE?REQUEST\", \"coreInfo\": \"?????\", \"expectedAction\": \"??????\", \"reason\": \"??\", \"priority\": \"normal\" }], \"internal_thought\": \"...\" }";
     for (var ri = 0; ri < reviewAgents.length; ri++) {
       var aid = reviewAgents[ri];

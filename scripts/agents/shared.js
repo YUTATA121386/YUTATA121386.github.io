@@ -19,7 +19,7 @@ const PROMPTS_DIR = path.join(__dirname, "..", "prompts");
 const REPUTATION_FILE = path.join(ROOT_DIR, "scripts", "reputation.json");
 
 // ===================== 消息协议 =====================
-const MSG_TYPES = ["REJECT", "REQUEST", "DISPUTE", "NOTIFY", "ESCALATE", "CONFIRM", "PRIORITY_OVERRIDE", "COMMAND", "DIRECTIVE", "APPROVE", "GUIDANCE", "INQUIRE"];
+const MSG_TYPES = ["REJECT", "REQUEST", "DISPUTE", "NOTIFY", "ESCALATE", "CONFIRM", "PRIORITY_OVERRIDE", "COMMAND", "DIRECTIVE", "APPROVE", "GUIDANCE", "INQUIRE", "INFO"];
 const AGENTS = ["collector", "verifier", "analyst", "editor", "memory-manager"];
 const AGENT_NAMES_CN = {
   collector: "采集师",
