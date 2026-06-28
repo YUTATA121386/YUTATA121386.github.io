@@ -9,7 +9,7 @@ outline: [2, 3]
 
 <div class="scroll-list">
 
-- [2026年第27周](./review-2026-W27.md)
+- [2026年第26周](./review-2026-W26.md)
 
 </div>
 
