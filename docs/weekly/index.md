@@ -1,4 +1,4 @@
-﻿---
+---
 title: 周报
 outline: [2, 3]
 ---
@@ -9,7 +9,7 @@ outline: [2, 3]
 
 <div class="scroll-list">
 
-- [2026年第4周](./review-2026-W04.md)
+- [2026年第27周](./review-2026-W27.md)
 
 </div>
 
