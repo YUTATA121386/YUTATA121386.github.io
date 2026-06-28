@@ -258,48 +258,7 @@ async function handleEmergencyChannel(state) {
   var dateCN = new Date(dateStr).getFullYear() + "\u5e74" + (new Date(dateStr).getMonth() + 1) + "\u6708" + new Date(dateStr).getDate() + "\u65e5";
   var pr = state.stats.collectorSubmitted > 0 ? ((state.stats.verifierPassed / state.stats.collectorSubmitted) * 100).toFixed(1) : "0";
 
-  var c = "<style>\n" +
-    ".chat-log { max-width: 860px; margin: 0 auto; }\n" +
-    ".chat-msg { display: flex; gap: 12px; margin: 0 0 1px 0; padding: 14px 16px; transition: background 0.15s; border-radius: 6px; }\n" +
-    ".chat-msg:hover { background: rgba(0,0,0,0.02); }\n" +
-    ".chat-round-divider { text-align: center; margin: 24px 0 12px; font-size: 0.85em; color: #999; border-top: 1px solid var(--vp-c-divider); padding-top: 12px; }\n" +
-    ".chat-avatar { flex-shrink: 0; width: 38px; height: 38px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; }\n" +
-    ".chat-from-collector .chat-avatar { background: #fde8e8; }\n" +
-    ".chat-from-verifier .chat-avatar { background: #e6f9ed; }\n" +
-    ".chat-from-analyst .chat-avatar { background: #e3f0fc; }\n" +
-    ".chat-from-editor .chat-avatar { background: #f3eafa; }\n" +
-    ".chat-from-memory-manager .chat-avatar { background: #fef3d5; }\n" +
-    ".chat-content { flex: 1; min-width: 0; }\n" +
-    ".chat-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; font-size: 0.85em; flex-wrap: wrap; }\n" +
-    ".chat-sender { font-weight: 600; }\n" +
-    ".chat-from-collector .chat-sender { color: #c0392b; }\n" +
-    ".chat-from-verifier .chat-sender { color: #1e8449; }\n" +
-    ".chat-from-analyst .chat-sender { color: #2471a3; }\n" +
-    ".chat-from-editor .chat-sender { color: #7d3c98; }\n" +
-    ".chat-from-memory-manager .chat-sender { color: #b7950b; }\n" +
-    ".chat-badge { display: inline-block; padding: 1px 7px; border-radius: 3px; font-size: 0.75em; font-weight: 500; background: #eee; color: #555; white-space: nowrap; }\n" +
-    ".chat-time { color: #999; font-size: 0.8em; margin-left: auto; }\n" +
-    ".chat-body { font-size: 0.93em; line-height: 1.6; color: #333; }\n" +
-    ".chat-body blockquote { margin: 4px 0 0 0; padding: 2px 0 2px 10px; border-left: 2px solid #ddd; color: #555; }\n" +
-    ".chat-footer { margin-top: 6px; font-size: 0.8em; color: #888; display: flex; gap: 12px; flex-wrap: wrap; }\n" +
-    ".arb-anchor { display: inline-block; padding: 1px 8px; border-radius: 3px; font-size: 0.8em; background: #fdebd0; color: #b7950b; text-decoration: none; font-weight: 600; }\n" +
-    ".dark .chat-msg:hover { background: rgba(255,255,255,0.03); }\n" +
-    ".dark .chat-from-collector .chat-avatar { background: #3d1a1a; }\n" +
-    ".dark .chat-from-verifier .chat-avatar { background: #1a3d1a; }\n" +
-    ".dark .chat-from-analyst .chat-avatar { background: #1a1a3d; }\n" +
-    ".dark .chat-from-editor .chat-avatar { background: #3d1a3d; }\n" +
-    ".dark .chat-from-memory-manager .chat-avatar { background: #3d3a1a; }\n" +
-    ".dark .chat-from-collector .chat-sender { color: #e74c3c; }\n" +
-    ".dark .chat-from-verifier .chat-sender { color: #2ecc71; }\n" +
-    ".dark .chat-from-analyst .chat-sender { color: #3498db; }\n" +
-    ".dark .chat-from-editor .chat-sender { color: #a569bd; }\n" +
-    ".dark .chat-from-memory-manager .chat-sender { color: #f1c40f; }\n" +
-    ".dark .chat-body { color: #ccc; }\n" +
-    ".dark .chat-badge { background: #333; color: #aaa; }\n" +
-    ".dark .chat-body blockquote { border-left-color: #444; color: #999; }\n" +
-    ".dark .chat-footer { color: #777; }\n" +
-    ".dark .arb-anchor { background: #3d3500; }\n" +
-    "</style>\n\n";
+  var c = "";
 
   var tL = { REJECT: "\uD83D\uDEAB \u6253\u56DE", REQUEST: "\uD83D\uDCE9 \u8BF7\u6C42", DISPUTE: "\u2694\uFE0F \u8D28\u7591", NOTIFY: "\uD83D\uDCE2 \u901A\u77E5", ESCALATE: "\u26A0\uFE0F \u5347\u7EA7", CONFIRM: "\u2705 \u786E\u8BA4", DIRECTIVE: "\uD83D\uDC51 \u6307\u4EE4", APPROVE: "\uD83D\uDC4D \u6279\u51C6", GUIDANCE: "\uD83D\uDCA1 \u6307\u5BFC", PRIORITY_OVERRIDE: "\u26A1 \u7D27\u6025", INQUIRE: "\uD83D\uDD0E \u8BE2\u95EE" };
   var avatars = { collector: "\uD83D\uDCE1", verifier: "\uD83D\uDD0D", analyst: "\uD83D\uDD2C", editor: "\u270D\uFE0F", "memory-manager": "\uD83E\uDDE0" };
@@ -397,7 +356,7 @@ async function handleEmergencyChannel(state) {
 
   var arb = "";
   if (state.arbitration && state.arbitration.verdict) {
-    arb = '\n---\n\n## \u2696\uFE0F \u4EF2\u88C1\u8BB0\u5F55 <a id="arbitration"></a>\n\n';
+    arb = '\n\n## \u2696\uFE0F \u4EF2\u88C1\u8BB0\u5F55 <a id="arbitration"></a>\n\n';
     var vd = state.arbitration.verdict;
     if (state.arbitration.rounds[0] && state.arbitration.rounds[0].result && state.arbitration.rounds[0].result.fact_list) {
       arb += '### \u521D\u5BA1 \u00B7 \u4E8B\u5B9E\u6E05\u5355\n\n';
@@ -429,7 +388,7 @@ async function handleEmergencyChannel(state) {
 
   var emerg = "";
   if (state.emergencyChannel) {
-    emerg = '\n---\n\n## \u26A1 \u7D27\u6025\u901A\u9053\n\n- \u89E6\u53D1\uFF1A' + (state.emergencyChannel.triggered_by || "\u672A\u77E5") + ' | ' + (state.emergencyChannel.topic || "\u672A\u77E5") + '\n';
+    emerg = '\n\n## \u26A1 \u7D27\u6025\u901A\u9053\n\n- \u89E6\u53D1\uFF1A' + (state.emergencyChannel.triggered_by || "\u672A\u77E5") + ' | ' + (state.emergencyChannel.topic || "\u672A\u77E5") + '\n';
   }
 
 
@@ -483,7 +442,8 @@ async function handleEmergencyChannel(state) {
     emerg +
     "## \uD83D\uDCAC \u5B8C\u6574\u901A\u4FE1\u8BB0\u5F55\n\n" + msgs + "\n" +
     arb +
-    "\n---\n> \u751F\u6210\u65F6\u95F4: " + new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) + "\n";
+    retro +
+    "\n\n> \u751F\u6210\u65F6\u95F4: " + new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) + "\n";
 }
 
 
