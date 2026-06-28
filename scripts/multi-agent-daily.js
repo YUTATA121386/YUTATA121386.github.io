@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 /**
  * YUTATA 多Agent日报系统 v4
  * 五个角色并行博弈: 采集师·核查师·分析师·编辑师·记忆管理师
@@ -561,7 +561,7 @@ function updateDailyIndex(dateStr) {
   var insertPos = content.indexOf(marker);
   if (insertPos > 0) {
     var lineStart = insertPos + marker.length;
-    var newEntry = "<li><a href=\"./" + dateStr + ".md\">" + dateStr + "</a> — <a href=\"../logs/" + dateStr + ".md\">📝 过程日志</a></li>\n";
+    var newEntry = "<li><a href=\"./" + dateStr + "\">" + dateStr + "</a> — <a href=\"../logs/" + dateStr + "\">📝 过程日志</a></li>\n";
     content = content.substring(0, lineStart) + newEntry + content.substring(lineStart);
     fs.writeFileSync(indexPath, content, "utf-8");
   }
