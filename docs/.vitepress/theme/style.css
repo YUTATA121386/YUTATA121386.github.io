@@ -293,7 +293,7 @@ figure.poster img { width:100%; display:block; cursor:zoom-in; }
 .rep-trend { font-size: 0.85em; color: var(--vp-c-text-3); }
 
 /* MM review grid */
-.mm-review-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin: 10px 0; }
+.mm-review-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 10px 0; }
 .mm-card { border: 1px solid var(--vp-c-divider); border-radius: 8px; padding: 12px; background: var(--vp-c-bg-elv); }
 .mm-card-header { font-size: 0.95em; margin-bottom: 6px; }
 .mm-card-body { font-size: 0.85em; }
