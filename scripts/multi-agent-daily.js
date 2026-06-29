@@ -552,6 +552,7 @@ function updateDailyIndex(dateStr) {
   var indexPath = path.join(OUTPUT_DIR, "index.md");
   var content;
   try { content = fs.readFileSync(indexPath, "utf-8"); } catch (e) { return; }
+  content = content.replace(/\r\n/g, "\n");
 
   // Check if entry already exists to avoid duplicates
   if (content.indexOf(dateStr) >= 0) return;
@@ -571,6 +572,7 @@ function updateLogsIndex(dateStr) {
   var indexPath = path.join(LOGS_DIR, "index.md");
   var content;
   try { content = fs.readFileSync(indexPath, "utf-8"); } catch (e) { return; }
+  content = content.replace(/\r\n/g, "\n");
   if (content.indexOf(dateStr) >= 0) return;
   var marker = '<div class="scroll-list">\n<ul>';
   var insertPos = content.indexOf(marker);
@@ -585,6 +587,7 @@ function updateWeeklyIndex(dateStr, weekNum) {
   var indexPath = path.join(WEEKLY_DIR, "index.md");
   var content;
   try { content = fs.readFileSync(indexPath, "utf-8"); } catch (e) { return; }
+  content = content.replace(/\r\n/g, "\n");
   var filename = "review-" + dateStr.slice(0, 4) + "-W" + String(weekNum).padStart(2, "0");
   if (content.indexOf(filename) >= 0) return;
   var marker = '<div class="scroll-list">\n<ul>';
