@@ -19,12 +19,15 @@ const https = require("https");
 
 const SHARED = require("./agents/shared");
 const {
-  DEEPSEEK_KEY, OUTPUT_DIR, LOGS_DIR, WEEKLY_DIR, RULES_DIR,
+  DEEPSEEK_KEY, OUTPUT_DIR, LOGS_DIR, WEEKLY_DIR, RULES_DIR, ROOT_DIR,
   AGENT_NAMES_CN, createInitialState,
   updateReputation, getReputationWeight,
   createMessage, callDeepSeek, loadPrompt,
   generateRuleVersion, extractJSON, log
 } = SHARED;
+const SYSTEM_STATS_FILE = ROOT_DIR + "/scripts/system-stats.json";
+const SYSTEM_MEMORY_FILE = ROOT_DIR + "/scripts/system-memory.json";
+const CHANGELOG_FILE = RULES_DIR + "/CHANGELOG.md";
 
 const CONFIG_FILE = path.join(__dirname, "sources.json");
 let CONFIG;
@@ -132,10 +135,28 @@ function loadHistory() {
 
 // ===================== Agent 上下文构建 =====================
 function buildAgentContext(agentId, state) {
-  const msgs = state.messages.filter(m => m.to === agentId || m.to === "all").slice(-20);
+  const msgs = state.messages.filter(m => (m.to === agentId || m.to === "all") && m.from !== agentId).slice(-20);
   let ctx = "## 当前状态\n日期: " + state.date + " | 轮次: " + state.round + "/" + state.maxRounds + " | 阶段: " + state.phase + "\n";
   ctx += "僵局: " + (state.deadlockDetected ? "⚠️ 已触发" : "正常") + " | 紧急: " + (state.emergencyChannel ? "⚡ 激活" : "未激活") + "\n";
-  ctx += "信誉分: " + (state.reputation[agentId]?.score || 80) + "\n\n";
+  ctx += "信誉分: " + (state.reputation[agentId]?.score || 80) + " | 系统运行: " + (loadSystemStats().totalRuns) + "\n\n";
+  var sysMem = loadSystemMemory();
+  if (sysMem.entries.length > 0) {
+    var lastEntry = sysMem.entries[sysMem.entries.length - 1];
+    ctx += "昨日经验: ";
+    if (lastEntry.learnings) ctx += String(lastEntry.learnings).slice(0, 120) + "\n";
+    if (lastEntry.weaknesses && lastEntry.weaknesses.length > 0)
+      ctx += "  弱点: " + lastEntry.weaknesses.slice(0, 2).join("; ") + "\n";
+
+  // role-specific history
+  if (lastEntry.perRole && lastEntry.perRole[agentId]) {
+    var roleMem = lastEntry.perRole[agentId];
+    ctx += "你的昨日表现: 信誉分 " + roleMem.score;
+    if (roleMem.changes && roleMem.changes.length > 0) {
+      ctx += ' | 最近变动: ' + roleMem.changes.slice(-2).map(function(c) { return (c.delta > 0 ? '+' : '') + c.delta + (c.reason ? '(' + String(c.reason).slice(0, 30) + ')' : ''); }).join('; ');
+    }
+    ctx += "\n";
+  }
+  }
 
   ctx += "## 待处理消息\n";
   if (msgs.length === 0) ctx += "(无新消息)\n";
@@ -175,6 +196,28 @@ function buildAgentContext(agentId, state) {
     ctx += "rawItems: " + state.rawItems.length + " | verified: " + state.verifiedItems.length + " | rejected: " + state.rejectedItems.length + "\n";
     ctx += "insights: " + state.insights.length + " | 消息总数: " + state.messages.length + "\n";
     ctx += "采集提交: " + state.stats.collectorSubmitted + " | 通过: " + state.stats.verifierPassed + " | 拒绝: " + state.stats.verifierRejected + "\n";
+    var sysMem = loadSystemMemory();
+    if (sysMem.entries.length > 0) {
+      ctx += "\n## 近期经验记忆\n";
+      var recentEntries = sysMem.entries.slice(-5);
+      for (var ei = recentEntries.length - 1; ei >= 0; ei--) {
+        var entry = recentEntries[ei];
+        ctx += entry.date + ": ";
+        if (entry.learnings) ctx += String(entry.learnings).slice(0, 150) + "\n";
+        if (entry.weaknesses && entry.weaknesses.length > 0)
+          ctx += "  弱点: " + entry.weaknesses.slice(0, 3).join("; ") + "\n";
+
+  // role-specific history
+  if (lastEntry.perRole && lastEntry.perRole[agentId]) {
+    var roleMem = lastEntry.perRole[agentId];
+    ctx += "你的昨日表现: 信誉分 " + roleMem.score;
+    if (roleMem.changes && roleMem.changes.length > 0) {
+      ctx += ' | 最近变动: ' + roleMem.changes.slice(-2).map(function(c) { return (c.delta > 0 ? '+' : '') + c.delta + (c.reason ? '(' + String(c.reason).slice(0, 30) + ')' : ''); }).join('; ');
+    }
+    ctx += "\n";
+  }
+      }
+    }
   }
   ctx += "\n## 最近消息\n";
   for (const m of state.messages.slice(-30)) ctx += "[" + m.id + "] " + m.from + "→" + m.to + " " + m.type + ": " + m.coreInfo + "\n";
@@ -224,24 +267,40 @@ function detectDeadlock(state) {
 
 // ===================== 仲裁 =====================
 async function runArbitration(state) {
-  log("system", "⚖️ ===== 仲裁会议 =====");
+  log("system", "\u2696\ufe0f ===== \u4ef2\u88c1\u4f1a\u8bae =====");
   state.phase = "arbitration";
   state.arbitration = { rounds: [], verdict: null };
 
-  const r1Inst = "## 仲裁初审（事实陈述）\n你是记忆管理师。请基于所有消息提取客观事实清单和争议规则条款。\n输出: { \"arbitration_round\": 1, \"fact_list\": [...], \"disputed_rules\": [...], \"internal_thought\": \"...\" }";
+  const r1Inst = "## \u4ef2\u88c1\u521d\u5ba1\uff08\u4e8b\u5b9e\u9648\u8ff0\uff09\n\u4f60\u662f\u8bb0\u5fc6\u7ba1\u7406\u5e08\u3002\u8bf7\u57fa\u4e8e\u6240\u6709\u6d88\u606f\u63d0\u53d6\u5ba2\u89c2\u4e8b\u5b9e\u6e05\u5355\u548c\u4e89\u8bae\u89c4\u5219\u6761\u6b3e\u3002\n\u8f93\u51fa: { \"arbitration_round\": 1, \"fact_list\": [...], \"disputed_rules\": [...], \"internal_thought\": \"...\" }";
   const r1 = await runAgent("memory-manager", state, r1Inst);
-  state.arbitration.rounds.push({ round: 1, phase: "初审", result: r1 });
+  state.arbitration.rounds.push({ round: 1, phase: "\u521d\u5ba1", result: r1 });
 
-  const r2Inst = "## 仲裁复审（观点辩论）\n你是记忆管理师。请模拟各方立场。\n输出: { \"arbitration_round\": 2, \"positions\": { \"collector\": \"...\", \"verifier\": \"...\", \"analyst\": \"...\", \"editor\": \"...\" }, \"internal_thought\": \"...\" }";
-  const r2 = await runAgent("memory-manager", state, r2Inst);
-  state.arbitration.rounds.push({ round: 2, phase: "复审", result: r2 });
+  // \u7b2c\u4e8c\u6b65\uff1a\u771f\u5b9e\u4ef2\u88c1\u2014\u2014\u4e89\u8bae\u53cc\u65b9\u5404\u81ea\u53d1\u8a00
+  var disputants = {};
+  state.messages.slice(-50).forEach(function(m) {
+    if (m.type === "DISPUTE" || m.type === "ESCALATE") {
+      disputants[m.from] = true;
+      if (m.to && m.to !== "all") disputants[m.to] = true;
+    }
+  });
+  var disputantIds = Object.keys(disputants);
+  state.arbitration.posStatements = {};
+  if (disputantIds.length === 0) { disputantIds = ["collector", "verifier"]; }
+  for (var di = 0; di < disputantIds.length; di++) {
+    var agentId = disputantIds[di];
+    var pInst = "## \u4ef2\u88c1\u53d1\u8a00\n\u4f60\u662f" + AGENT_NAMES_CN[agentId] + "\u3002\u4ef2\u88c1\u5df2\u89e6\u53d1\uff0c\u8bf7\u9648\u8ff0\u4f60\u5728\u5f53\u524d\u4e89\u8bae\u4e2d\u7684\u7acb\u573a\u548c\u7406\u7531\u3002\n\u8f93\u51fa: { \"position\": \"\u4f60\u7684\u7acb\u573a\u9648\u8ff0\", \"key_evidence\": [...], \"internal_thought\": \"...\" }";
+    var posResult = await runAgent(agentId, state, pInst);
+    state.arbitration.posStatements[agentId] = posResult.position || posResult;
+  }
+  state.arbitration.rounds.push({ round: 2, phase: "\u590d\u5ba1", disputants: disputantIds });
+  log("system", "\u4ef2\u88c1\u590d\u5ba1: " + disputantIds.join(", ") + " \u5df2\u53d1\u8a00");
 
-  const r3Inst = "## 仲裁终审（裁决）\n你是记忆管理师。必须做出最终强制裁决。\n输出: { \"arbitration_round\": 3, \"verdict\": { \"summary\": \"...\", \"decision\": \"...\", \"action_items\": [...], \"rule_changes\": [...], \"reputation_changes\": [...] }, \"internal_thought\": \"...\" }";
+  const r3Inst = "## \u4ef2\u88c1\u7ec8\u5ba1\uff08\u88c1\u51b3\uff09\n\u4f60\u662f\u8bb0\u5fc6\u7ba1\u7406\u5e08\u3002\u5fc5\u987b\u505a\u51fa\u6700\u7ec8\u5f3a\u5236\u88c1\u51b3\u3002\n\u8f93\u51fa: { \"arbitration_round\": 3, \"verdict\": { \"summary\": \"...\", \"decision\": \"...\", \"action_items\": [...], \"rule_changes\": [...], \"reputation_changes\": [...] }, \"internal_thought\": \"...\" }";
   const r3 = await runAgent("memory-manager", state, r3Inst);
-  state.arbitration.rounds.push({ round: 3, phase: "终审", result: r3 });
+  state.arbitration.rounds.push({ round: 3, phase: "\u7ec8\u5ba1", result: r3 });
   state.arbitration.verdict = r3.arbitration_verdict || r3.verdict;
 
-  log("system", "⚖️ ===== 仲裁结束 =====");
+  log("system", "\u2696\ufe0f ===== \u4ef2\u88c1\u7ed3\u675f =====");
   return state.arbitration.verdict;
 }
 
@@ -283,13 +342,18 @@ function generateProcessLog(state, dateStr) {
   });
 
   var rKeys = Object.keys(roundMsgs).sort(function(a,b) { return a-b; });
+  var seenMsgs = {};
   rKeys.forEach(function(rk) {
     var roundLabel = "\u7B2C" + (parseInt(rk)+1) + "\u8F6E";
     msgs += '<div class="chat-round-divider">\u25CF ' + roundLabel + '</div>\n';
-
+
     roundMsgs[rk].forEach(function(entry) {
       var m = entry.msg;
       var mi = entry.idx;
+      // 重复消息跳过：同一轮、同一角色、相同内容（跨轮次也跳过）
+      var dedupKey = m.from + "|" + ((m.coreInfo || "").replace(/\s+/g, " ").trim());
+      if (seenMsgs[dedupKey]) return;
+      seenMsgs[dedupKey] = true;
       var fn = AGENT_NAMES_CN[m.from] || m.from;
       var tn = AGENT_NAMES_CN[m.to] || m.to;
       var av = avatars[m.from] || "\uD83D\uDCAC";
@@ -601,11 +665,36 @@ function updateWeeklyIndex(dateStr, weekNum) {
   }
 }
 
+// ===================== 系统统计 =====================
+function loadSystemStats() {
+  try { return JSON.parse(fs.readFileSync(SYSTEM_STATS_FILE, "utf-8")); }
+  catch { return { totalRuns: 0, firstRunDate: null, lastRunDate: null }; }
+}
+
+function saveSystemStats(stats) {
+  writeFileUTF8(SYSTEM_STATS_FILE, JSON.stringify(stats, null, 2));
+}
+
+function loadSystemMemory() {
+  try { return JSON.parse(fs.readFileSync(SYSTEM_MEMORY_FILE, "utf-8")); }
+  catch { return { entries: [] }; }
+}
+
+function saveSystemMemory(mem) {
+  if (mem.entries.length > 30) mem.entries = mem.entries.slice(-30);
+  writeFileUTF8(SYSTEM_MEMORY_FILE, JSON.stringify(mem, null, 2));
+}
+
 // ===================== 主流程 =====================
 async function main() {
   const now = new Date();
   const dateStr = now.getFullYear() + "-" + String(now.getMonth() + 1).padStart(2, "0") + "-" + String(now.getDate()).padStart(2, "0");
   const dateCN = now.getFullYear() + "年" + (now.getMonth() + 1) + "月" + now.getDate() + "日";
+  const systemStats = loadSystemStats();
+  systemStats.totalRuns++;
+  if (!systemStats.firstRunDate) systemStats.firstRunDate = dateStr;
+  systemStats.lastRunDate = dateStr;
+  saveSystemStats(systemStats);
 
   console.log("\n🤖 YUTATA 多Agent日报系统 v4");
   console.log("📅 " + dateCN + " | " + dateStr);
@@ -747,6 +836,8 @@ async function main() {
           if (action.type === "update_reputation") {
             updateReputation(action.agent, action.delta, action.reason);
             state.reputation = require("./agents/shared").loadReputation();
+            if (!state.reputationChanges[action.agent]) state.reputationChanges[action.agent] = [];
+            state.reputationChanges[action.agent].push({ delta: action.delta, reason: action.reason, date: state.date });
           }
         }
         if (result.review) state.review = result.review;
@@ -755,6 +846,18 @@ async function main() {
 
     state.round = round;
     state.stats.roundExecuted = round;
+
+    // 检测收敛（第3轮起）：编辑师终稿就绪 + 无待补采 + 无活跃争议 + 核查完毕
+    if (round >= 3) {
+      var editorConfirmed = state.draft && state.draft.sections && state.draft.sections.length > 0;
+      var noPendingSupplements = !state.supplementRequests.some(function(r) { return r.status === "pending"; });
+      var noActiveDisputes = !state.messages.slice(-15).some(function(m) { return m.type === "DISPUTE" || m.type === "ESCALATE"; });
+      var verifierDone = !state.rawItems.some(function(i) { return i.status === "pending"; });
+      if (editorConfirmed && noPendingSupplements && noActiveDisputes && verifierDone) {
+        log("system", "\u2713 \u6536\u655b\u6761\u4ef6\u6ee1\u8db3\uff0c\u63d0\u524d\u9000\u51fa\u4e3b\u5faa\u73af");
+        break;
+      }
+    }
 
     // 检测僵局
     if (round >= 3 && detectDeadlock(state)) {
@@ -776,10 +879,10 @@ async function main() {
   log("system", "\n━━━ 收敛阶段 ━━━");
   // ===== ???????????????????? =====
   if (state.draft && state.draft.sections && state.draft.sections.length > 0) {
-    log("system", "\n??? ???? ???");
+    log("system", "\n=== 审稿环节 ===");
     state.phase = "review";
     var reviewAgents = ["collector", "verifier", "analyst", "editor", "memory-manager"];
-    var reviewInst = "## ????\n??{role}??????????????????????????????\n- ?????????????????APPROVE????\n- ??: { \"messages\": [{ \"to\": \"editor\", \"type\": \"APPROVE?REQUEST\", \"coreInfo\": \"?????\", \"expectedAction\": \"??????\", \"reason\": \"??\", \"priority\": \"normal\" }], \"internal_thought\": \"...\" }";
+    var reviewInst = "## 审稿\n你是{role}，请对当前日报草稿做出评价。\n- 如果通过，发送APPROVE消息\n- 输出: { \"messages\": [{ \"to\": \"editor\", \"type\": \"APPROVE/REQUEST\", \"coreInfo\": \"评价内容\", \"expectedAction\": \"修改要求\", \"reason\": \"理由\", \"priority\": \"normal\" }], \"internal_thought\": \"...\" }";
     for (var ri = 0; ri < reviewAgents.length; ri++) {
       var aid = reviewAgents[ri];
       var inst = reviewInst.replace("{role}", AGENT_NAMES_CN[aid]);
@@ -814,13 +917,54 @@ async function main() {
         const header = "---\ntitle: " + action.rule_file.replace(".md", "") + "\nversion: " + version + "\nupdated: " + dateStr + "\noutline: [2, 3]\n---\n\n> 📌 " + version + " | " + dateCN + "\n\n";
         writeFileUTF8(rulePath, header + (action.after || ""));
         log("memory-manager", "规则更新: " + action.rule_file + " → " + version);
+        // 追加到变更日志
+        try {
+          var changelog = "";
+          try { changelog = fs.readFileSync(CHANGELOG_FILE, "utf-8"); } catch { changelog = "# 规则变更日志\n\n"; }
+          changelog += "## " + dateStr + "\n";
+          changelog += "- **" + action.rule_file + "** (" + version + "): " + (action.reason || "更新") + "\n";
+          writeFileUTF8(CHANGELOG_FILE, changelog);
+        } catch (clErr) { log("system", "变更日志写入失败: " + clErr.message.slice(0, 60)); }
       }
       if (action.type === "update_reputation" && action.agent) {
         updateReputation(action.agent, action.delta, action.reason);
+        if (!state.reputationChanges[action.agent]) state.reputationChanges[action.agent] = [];
+        state.reputationChanges[action.agent].push({ delta: action.delta, reason: action.reason, date: state.date });
       }
     }
   }
   state.review = finalReview.review || state.review;
+
+  // ===== 保存经验记忆 =====
+  var sysMem = loadSystemMemory();
+  var memEntry = {
+    date: dateStr,
+    totalRuns: systemStats.totalRuns,
+    scores: (state.review && state.review.quality_scores) || {},
+    strengths: (state.review && state.review.strengths) || [],
+    weaknesses: (state.review && state.review.weaknesses) || [],
+    rootCause: (state.review && state.review.root_cause) || "",
+    ruleChanges: state.stats.ruleChanges || 0,
+    perRole: (function() {
+      var pr = {};
+      var agents = ['collector','verifier','analyst','editor','memory-manager'];
+      for (var aid of agents) {
+        pr[aid] = {
+          score: (state.reputation[aid] && state.reputation[aid].score) || 80,
+          changes: (state.reputationChanges[aid] || []).slice(-5)
+        };
+      }
+      return pr;
+    })()
+  };
+  // 提取 learnings 从复盘（weaknesses + rootCause）
+  var learnings = [];
+  if (memEntry.weaknesses.length > 0) learnings.push("弱点: " + memEntry.weaknesses.slice(0, 2).join("; "));
+  if (memEntry.rootCause) learnings.push("根因: " + memEntry.rootCause);
+  if (state.stats.ruleChanges > 0) learnings.push("规则变更: " + state.stats.ruleChanges + " 条");
+  memEntry.learnings = learnings.join(" | ");
+  sysMem.entries.push(memEntry);
+  saveSystemMemory(sysMem);
 
   // ===== 生成日报 =====
   log("system", "\n━━━ 生成日报 ━━━");

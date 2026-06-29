@@ -57,7 +57,8 @@ function createInitialState(dateStr) {
       analystHitRate: 0,
       emergencyTriggered: false,
       roundExecuted: 0
-    }
+    },
+    reputationChanges: {}
   };
 }
 
