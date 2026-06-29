@@ -36,7 +36,7 @@ jobs:
           git add docs/daily/knowledge-gap-report.md
           git diff --cached --quiet || (
             git commit -m "📋 知识缺口报告 $(date +%Y-%m-%d)"
-            git push
+            git push origin HEAD:main
           )
 
       - name: Install dependencies

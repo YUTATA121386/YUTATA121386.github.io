@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
@@ -41,7 +41,7 @@ jobs:
           git add docs/daily/ docs/logs/ docs/weekly/ docs/rules/ scripts/reputation.json
           git diff --cached --quiet || (
             git commit -m "📡 多Agent日报 $(date +%Y-%m-%d)"
-            git push
+            git push origin HEAD:main
           )
 
       - run: npm run docs:build
