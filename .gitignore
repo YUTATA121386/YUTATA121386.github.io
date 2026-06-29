@@ -5,5 +5,5 @@ dist/
 *.json
 !package.json
 !package-lock.json
-
-!scripts/sources.json\n!scripts/reputation.json
+!scripts/sources.json
+!scripts/reputation.json
