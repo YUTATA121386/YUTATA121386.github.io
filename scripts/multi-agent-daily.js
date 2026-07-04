@@ -249,7 +249,8 @@ async function runAgent(agentId, state, extraInstructions) {
     return { raw_output: response.slice(0, 500), actions: [], messages: [] };
   } catch (err) {
     log(agentId, "❌ 失败: " + err.message);
-    return { error: err.message, actions: [], messages: [] };
+        state.messages.push(createMessage(agentId, "system", "ERROR", "API调用失败(轮次" + state.round + "): " + err.message, "", "", "high"));
+return { error: err.message, actions: [], messages: [] };
   }
 }
 

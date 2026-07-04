@@ -147,65 +147,67 @@ function createMessage(from, to, type, coreInfo, expectedAction, reason, priorit
   return msg;
 }
 
-// ===================== DeepSeek API 调用 =====================
-function callDeepSeek(systemPrompt, userPrompt, temperature = 0.7, maxTokens = 4096) {
-  return new Promise((resolve, reject) => {
-    if (!DEEPSEEK_KEY) {
-      reject(new Error("DEEPSEEK_API_KEY 未设置"));
-      return;
-    }
+// ===================== DeepSeek API 调用（含自动重试） =====================
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-    const body = JSON.stringify({
-      model: "deepseek-chat",
-      messages: [
-        { role: "system", content: systemPrompt },
-        { role: "user", content: userPrompt }
-      ],
-      temperature,
-      max_tokens: maxTokens,
-      stream: false
-    });
-
-    const url = new URL(DEEPSEEK_API);
-    const options = {
-      hostname: url.hostname,
-      path: url.pathname,
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${DEEPSEEK_KEY}`,
-        "Content-Length": Buffer.byteLength(body)
-      },
-      timeout: 120000
-    };
-
-    const req = https.request(options, (res) => {
-      let chunks = [];
-      res.on("data", (chunk) => { chunks.push(chunk); });
-      res.on("end", () => {
-        try {
-          const data = Buffer.concat(chunks).toString("utf-8");
-        const result = JSON.parse(data);
-          if (result.choices && result.choices[0]) {
-            resolve(result.choices[0].message.content);
-          } else if (result.error) {
-            reject(new Error(result.error.message || "API 错误"));
-          } else {
-            reject(new Error("未知 API 响应格式"));
-          }
-        } catch (e) {
-          reject(new Error(`解析响应失败: ${e.message}`));
-        }
-      });
-    });
-
-    req.on("error", (e) => reject(new Error(`网络错误: ${e.message}`)));
-    req.on("timeout", () => { req.destroy(); reject(new Error("请求超时")); });
-    req.write(body);
-    req.end();
-  });
+function callDeepSeek(systemPrompt, userPrompt, temperature, maxTokens) {
+  return callDeepSeekWithRetry(systemPrompt, userPrompt, temperature || 0.7, maxTokens || 4096);
 }
 
+async function callDeepSeekWithRetry(systemPrompt, userPrompt, temperature, maxTokens, maxRetries) {
+  if (maxRetries === undefined) maxRetries = 2;
+  let lastError;
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      return await new Promise((resolve, reject) => {
+        if (!DEEPSEEK_KEY) { reject(new Error("DEEPSEEK_API_KEY 未设置")); return; }
+        const body = JSON.stringify({ model: "deepseek-chat", messages: [
+          { role: "system", content: systemPrompt },
+          { role: "user", content: userPrompt }
+        ], temperature, max_tokens: maxTokens, stream: false });
+        const url = new URL(DEEPSEEK_API);
+        const options = {
+          hostname: url.hostname, path: url.pathname, method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + DEEPSEEK_KEY,
+            "Content-Length": Buffer.byteLength(body)
+          }, timeout: 120000
+        };
+        const req = https.request(options, function(res) {
+          var chunks = [];
+          res.on("data", function(chunk) { chunks.push(chunk); });
+          res.on("end", function() {
+            try {
+              var data = Buffer.concat(chunks).toString("utf-8");
+              var result = JSON.parse(data);
+              if (result.choices && result.choices[0]) {
+                resolve(result.choices[0].message.content);
+              } else if (result.error) {
+                reject(new Error(result.error.message || "API 错误"));
+              } else {
+                reject(new Error("未知 API 响应格式"));
+              }
+            } catch (e) {
+              reject(new Error("解析响应失败: " + e.message));
+            }
+          });
+        });
+        req.on("error", function(e) { reject(new Error("网络错误: " + e.message)); });
+        req.on("timeout", function() { req.destroy(); reject(new Error("请求超时")); });
+        req.write(body);
+        req.end();
+      });
+    } catch (err) {
+      lastError = err;
+      if (attempt < maxRetries) {
+        var backoff = Math.min(2000 * Math.pow(2, attempt - 1), 16000);
+        await delay(backoff);
+      }
+    }
+  }
+  throw lastError;
+}
 // ===================== 加载 Prompt =====================
 function loadPrompt(agentId) {
   const filepath = path.join(PROMPTS_DIR, `${agentId}.md`);
