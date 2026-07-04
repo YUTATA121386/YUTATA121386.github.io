@@ -1,4 +1,4 @@
-name: Multi-Agent Daily News
+﻿name: Multi-Agent Daily News
 
 on:
   workflow_dispatch:
@@ -53,10 +53,3 @@ jobs:
             git commit -m "📡 多Agent日报 $(date +%Y-%m-%d)"
             git push origin HEAD:main
           )
-
-      - run: npm run docs:build
-      - uses: actions/configure-pages@v4
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/.vitepress/dist
-      - uses: actions/deploy-pages@v4
