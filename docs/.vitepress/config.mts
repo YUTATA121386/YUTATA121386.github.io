@@ -144,7 +144,8 @@ export default defineConfig({
           { text: "采集规则", link: "/rules/collection-rules" },
           { text: "核查规则", link: "/rules/verification-rules" },
           { text: "排版规范", link: "/rules/style-guide" },
-        ],
+          { text: "通信规则", link: "/rules/communication-rules" },
+        ]
       }],
       "/growth/": [{ text: "📈 上升清单", items: [{ text: "概述", link: "/growth/" }] }],
       "/pilgrimage/": [{ text: "🚅 圣地巡礼", items: [{ text: "概述", link: "/pilgrimage/" }] }],
