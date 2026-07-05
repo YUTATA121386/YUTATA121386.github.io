@@ -285,8 +285,11 @@ module.exports = {
   log: logg
 };
 function writeFileUTF8(filepath, content) {
-  fs.writeFileSync(filepath, content, { encoding: "utf-8", flag: "w" });
-  const buf = fs.readFileSync(filepath);
+  // Normalize to LF and strip BOM
+  var cleanContent = content.replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+  if (cleanContent.charCodeAt(0) === 0xFEFF) cleanContent = cleanContent.slice(1);
+  fs.writeFileSync(filepath, cleanContent, { encoding: "utf-8", flag: "w" });
+  var buf = fs.readFileSync(filepath);
   if (buf.length >= 3 && buf[0] === 0xEF && buf[1] === 0xBB && buf[2] === 0xBF) {
     fs.writeFileSync(filepath, buf.slice(3));
   }

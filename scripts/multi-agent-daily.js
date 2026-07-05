@@ -459,7 +459,7 @@ function generateProcessLog(state, dateStr) {
 
 
   // ===== ???? + ???? =====
-  var retro = "\n## \uD83D\uDCDD \u4ECA\u65E5\u590D\u76D8\n\n> \u6BCF\u4E2A\u89D2\u8272\u5BF9\u4ECA\u65E5\u5DE5\u4F5C\u7684\u603B\u7ED3\u4E0E\u53CD\u601D\n\n";
+  var retro = "\n<h2>\uD83D\uDCDD \u4ECA\u65E5\u590D\u76D8</h2>\n\n<blockquote>\u6BCF\u4E2A\u89D2\u8272\u5BF9\u4ECA\u65E5\u5DE5\u4F5C\u7684\u603B\u7ED3\u4E0E\u53CD\u601D</blockquote>\n\n";
   var agentLastMsg = {};
   state.messages.forEach(function(m) { agentLastMsg[m.from] = m; });
   var agentOrder = ["collector", "verifier", "analyst", "editor", "memory-manager"];
@@ -482,7 +482,7 @@ function generateProcessLog(state, dateStr) {
   if (reviewMsgs.length === 0) {
     retro += '<p style="color:#999;text-align:center;padding:12px;">\u26A0\uFE0F \u672C\u6B21\u672A\u8FDB\u884C\u6B63\u5F0F\u5BA1\u7A3F\u6D41\u7A0B</p>\n';
   } else {
-    retro += '<p style="color:var(--vp-c-text-2);text-align:center;padding:8px;">\u2705 \u5DF2\u6536\u5230 ' + reviewMsgs.length + ' \u6761\u5BA1\u7A3F\u53CD\u9988\uFF0C\u8BE6\u89C1\u4E0A\u65B9\u5B8C\u6574\u901A\u4FE1\u8BB0\u5F55</p>\n';
+    retro += '<p style="color:#888;text-align:center;padding:8px;">\u2705 \u5DF2\u6536\u5230 ' + reviewMsgs.length + ' \u6761\u5BA1\u7A3F\u53CD\u9988\uFF0C\u8BE6\u89C1\u4E0A\u65B9\u5B8C\u6574\u901A\u4FE1\u8BB0\u5F55</p>\n';
   }
 
   return "---\ntitle: " + dateStr + " | \u56E2\u961F\u8FC7\u7A0B\u65E5\u5FD7\noutline: [2, 3]\n---\n\n" + c +
@@ -1110,4 +1110,7 @@ main().catch((err) => {
   console.error("致命错误:", err);
   process.exit(1);
 });
+
+
+
 

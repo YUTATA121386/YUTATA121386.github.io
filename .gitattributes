@@ -1,0 +1,3 @@
+
+# Force LF line endings for log files to avoid Vue compiler issues on Windows
+docs/logs/*.md text eol=lf
