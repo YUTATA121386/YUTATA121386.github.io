@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env node
+#!/usr/bin/env node
 /**
  * YUTATA 多Agent日报系统 v4
  * 五个角色并行博弈: 采集师·核查师·分析师·编辑师·记忆管理师
@@ -22,7 +22,7 @@ const {
   DEEPSEEK_KEY, OUTPUT_DIR, LOGS_DIR, WEEKLY_DIR, RULES_DIR, ROOT_DIR,
   AGENT_NAMES_CN, createInitialState,
   updateReputation, getReputationWeight,
-  createMessage, callDeepSeek, loadPrompt,
+  createMessage, pushMessage, callDeepSeek, loadPrompt,
   generateRuleVersion, extractJSON, log
 } = SHARED;
 const SYSTEM_STATS_FILE = ROOT_DIR + "/scripts/system-stats.json";
@@ -139,6 +139,16 @@ function buildAgentContext(agentId, state) {
   let ctx = "## 当前状态\n日期: " + state.date + " | 轮次: " + state.round + "/" + state.maxRounds + " | 阶段: " + state.phase + "\n";
   ctx += "僵局: " + (state.deadlockDetected ? "⚠️ 已触发" : "正常") + " | 紧急: " + (state.emergencyChannel ? "⚡ 激活" : "未激活") + "\n";
   ctx += "信誉分: " + (state.reputation[agentId]?.score || 80) + " | 系统运行: " + (loadSystemStats().totalRuns) + "\n\n";
+
+  // 本轮已发送消息摘要：帮助agent自我检查重复
+  var ownRecentMsgs = state.messages.filter(function(m) { return m.from === agentId; }).slice(-5);
+  if (ownRecentMsgs.length > 0) {
+    ctx += "## 你本轮已发送的消息\n";
+    ownRecentMsgs.forEach(function(m) {
+      ctx += "- [" + m.type + "] " + (m.coreInfo || "").slice(0, 80) + "\n";
+    });
+    ctx += "\n";
+  }
   var sysMem = loadSystemMemory();
   if (sysMem.entries.length > 0) {
     var lastEntry = sysMem.entries[sysMem.entries.length - 1];
@@ -239,7 +249,7 @@ async function runAgent(agentId, state, extraInstructions) {
       if (result.messages && Array.isArray(result.messages)) {
         for (const msg of result.messages) {
           const message = createMessage(agentId, (msg.to === "memory_manager" ? "memory-manager" : msg.to), msg.type, msg.coreInfo, msg.expectedAction, msg.reason, msg.priority);
-          state.messages.push(message);
+          pushMessage(state, message);
           log(agentId, "📤 → " + msg.to + ": [" + msg.type + "] " + (msg.coreInfo || "").slice(0, 80));
         }
       }
@@ -249,7 +259,7 @@ async function runAgent(agentId, state, extraInstructions) {
     return { raw_output: response.slice(0, 500), actions: [], messages: [] };
   } catch (err) {
     log(agentId, "❌ 失败: " + err.message);
-        state.messages.push(createMessage(agentId, "system", "ERROR", "API调用失败(轮次" + state.round + "): " + err.message, "", "", "high"));
+        pushMessage(state, createMessage(agentId, "system", "ERROR", "API调用失败(轮次" + state.round + "): " + err.message, "", "", "high"));
 return { error: err.message, actions: [], messages: [] };
   }
 }
@@ -458,7 +468,7 @@ function generateProcessLog(state, dateStr) {
   }
 
 
-  // ===== ???? + ???? =====
+
   var retro = "\n<h2>\uD83D\uDCDD \u4ECA\u65E5\u590D\u76D8</h2>\n\n<blockquote>\u6BCF\u4E2A\u89D2\u8272\u5BF9\u4ECA\u65E5\u5DE5\u4F5C\u7684\u603B\u7ED3\u4E0E\u53CD\u601D</blockquote>\n\n";
   var agentLastMsg = {};
   state.messages.forEach(function(m) { agentLastMsg[m.from] = m; });
@@ -709,7 +719,7 @@ function generateWeeklyReport(state, dateStr) {
     } catch (e) { /* ignore changelog read errors */ }
   }
 
-  }return "---\ntitle: " + dateStr + " | \u7B2C" + weekNum + "\u5468\u5DE5\u4F5C\u62A5\u544A\noutline: [2, 3]\n---\n\n" +
+  return "---\ntitle: " + dateStr + " | \u7B2C" + weekNum + "\u5468\u5DE5\u4F5C\u62A5\u544A\noutline: [2, 3]\n---\n\n" +
     "# \uD83D\uDCCA \u7B2C" + weekNum + "\u5468 \u00B7 AI\u56E2\u961F\u5DE5\u4F5C\u62A5\u544A\n\n" +
     "> \u751F\u6210\u65E5\u671F: " + dateCN + "\n\n" +
     "## \uD83D\uDCC8 \u5404\u89D2\u8272\u4FE1\u8A89\u5206\u8D70\u52BF\n\n" + svg + "\n" + legend + "\n" + scoreSummary + "\n\n" +
@@ -838,7 +848,7 @@ async function main() {
   state.stats.collectorSubmitted = state.rawItems.length;
   log("collector", "首次抓取: " + state.rawItems.length + " 条新内容");
 
-  state.messages.push(createMessage("collector", "verifier", "NOTIFY",
+  pushMessage(state, createMessage("collector", "verifier", "NOTIFY",
     "首次采集完成，" + state.rawItems.length + " 条待审核", "请开始核查", "今日基础素材", "high"));
 
   // ===== 多轮博弈 =====
@@ -909,6 +919,7 @@ async function main() {
           }
           if (action.type === "request_supplement" && action.request) {
             state.supplementRequests.push({
+              round: state.round,
               request_id: "REQ-" + dateStr + "-" + String(state.supplementRequests.length + 1).padStart(3, "0"),
               ...action.request, status: "pending", requested_by: "analyst"
             });
@@ -955,7 +966,14 @@ async function main() {
     state.round = round;
     state.stats.roundExecuted = round;
 
-    // 检测收敛（第3轮起）：编辑师终稿就绪 + 无待补采 + 无活跃争议 + 核查完毕
+        // 自动超时：超过2轮未响应的补采请求标记为timeout
+        state.supplementRequests.forEach(function(r) {
+          if (r.status === "pending" && typeof r.round === "number" && state.round - r.round >= 2) {
+            r.status = "timeout";
+          }
+        });
+
+        // 检测收敛（第3轮起）：编辑师终稿就绪 + 无待补采 + 无活跃争议 + 核查完毕
     if (round >= 3) {
       var editorConfirmed = state.draft && state.draft.sections && state.draft.sections.length > 0;
       var noPendingSupplements = !state.supplementRequests.some(function(r) { return r.status === "pending"; });
@@ -985,7 +1003,8 @@ async function main() {
 
   // ===== 收敛: 最终复盘 =====
   log("system", "\n━━━ 收敛阶段 ━━━");
-  // ===== ???????????????????? =====
+  // ???????2????????????timeout
+  
   if (state.draft && state.draft.sections && state.draft.sections.length > 0) {
     log("system", "\n=== 审稿环节 ===");
     state.phase = "review";
@@ -998,13 +1017,13 @@ async function main() {
         var revResult = await runAgent(aid, state, inst);
         if (revResult && revResult.messages) {
           for (var rm of revResult.messages) {
-            state.messages.push(createMessage(aid, rm.to || "editor", rm.type || "APPROVE", rm.coreInfo || "", rm.expectedAction || "", rm.reason || "", rm.priority || "normal"));
+            pushMessage(state, createMessage(aid, rm.to || "editor", rm.type || "APPROVE", rm.coreInfo || "", rm.expectedAction || "", rm.reason || "", rm.priority || "normal"));
           }
         }
         if (revResult && revResult.internal_thought) log(aid, "?? [??] " + revResult.internal_thought.slice(0, 120));
-      } catch(e) { log("system", "???? " + aid + ": " + e.message.slice(0, 60)); }
+      } catch(e) { log("system", aid + " review: " + e.message); }
     }
-    log("system", "????: " + state.messages.filter(function(m) { return m.type === "APPROVE"; }).slice(-4).length + " ???");
+
   }
 
   state.phase = "convergence";

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 多 Agent 日报系统 - 共享模块
  * 状态管理、消息总线、信誉系统、DeepSeek API 调用
  */
@@ -147,6 +147,18 @@ function createMessage(from, to, type, coreInfo, expectedAction, reason, priorit
   return msg;
 }
 
+function pushMessage(state, msg) {
+  // 去重：检查最近10条消息中是否有完全相同 from+type+coreInfo 的消息
+  var isDup = state.messages.slice(-10).some(function(m) {
+    return m.from === msg.from && m.type === msg.type && m.coreInfo === msg.coreInfo;
+  });
+  if (isDup) {
+    return false;
+  }
+  state.messages.push(msg);
+  return true;
+}
+
 // ===================== DeepSeek API 调用（含自动重试） =====================
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -279,6 +291,7 @@ module.exports = {
   createInitialState, loadCurrentRules,
   loadReputation, saveReputation, updateReputation, getReputationWeight,
   createMessage,
+  pushMessage,
   callDeepSeek,
   loadPrompt,
   generateRuleVersion, extractJSON,
