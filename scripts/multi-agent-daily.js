@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 /**
  * YUTATA 多Agent日报系统 v4
  * 五个角色并行博弈: 采集师·核查师·分析师·编辑师·记忆管理师
@@ -347,7 +347,8 @@ function generateProcessLog(state, dateStr) {
   rKeys.forEach(function(rk) {
     var roundLabel = "\u7B2C" + (parseInt(rk)+1) + "\u8F6E";
     msgs += '<div class="chat-round-divider">\u25CF ' + roundLabel + '</div>\n';
-
+
+
     roundMsgs[rk].forEach(function(entry) {
       var m = entry.msg;
       var mi = entry.idx;
@@ -612,6 +613,17 @@ function generateWeeklyReport(state, dateStr) {
     mmReview += '<div class="mm-card"><div class="mm-card-header">' + avatar + ' <strong>' + name + '</strong></div>';
     mmReview += '<div class="mm-card-body">';
     var agentScore = mmScores[aid];
+    // If dims is empty but _raw contains valid JSON, try to recover
+    if (agentScore && (!agentScore.dims || agentScore.dims.length === 0) && agentScore._raw) {
+      try {
+        var parsed = JSON.parse(agentScore._raw);
+        if (parsed && parsed.dims && parsed.dims.length > 0) {
+          agentScore.dims = parsed.dims;
+          agentScore.overall = parsed.overall;
+          agentScore.summary = parsed.summary;
+        }
+      } catch (e) {}
+    }
     if (agentScore && agentScore.dims && agentScore.dims.length > 0) {
       mmReview += '<div class="mm-dims">';
       agentScore.dims.forEach(function(d) {
@@ -654,6 +666,35 @@ function generateWeeklyReport(state, dateStr) {
     mmReview += "\n> ★ 本周为系统启动第一周，互评功能将于下周启用\n";
   } else {
     mmReview += "\n> ★ 第" + weekNum + "周周报\n";
+  }
+  // ===== 从CHANGELOG提取本周规则变更详情 =====
+  var changelogDetail = "";
+  if (weeklyRuleChanges > 0) {
+    try {
+      var changelogContent = fs.readFileSync(CHANGELOG_FILE, "utf-8");
+      var weekStartDate = dateStr.slice(0, 7) + "-01";
+      var weekEndDate = dateStr;
+      var lines = changelogContent.split("\n");
+      var weekEntries = [];
+      var currentDate = "";
+      for (var li = 0; li < lines.length; li++) {
+        var dateMatch = lines[li].match(/^## (\d{4}-\d{2}-\d{2})/);
+        if (dateMatch) currentDate = dateMatch[1];
+        if (currentDate && currentDate >= weekStartDate && currentDate <= weekEndDate && lines[li].match(/^- \*\*/)) {
+          weekEntries.push(lines[li].replace(/^- /, "").trim());
+        }
+      }
+      if (weekEntries.length > 0) {
+        changelogDetail = "\n### 本周规则变更详情\n\n";
+        var shown = weekEntries.slice(-10);
+        changelogDetail += "<ul>\n";
+        shown.forEach(function(e) { changelogDetail += "<li>" + e + "</li>\n"; });
+        changelogDetail += "</ul>\n";
+        if (weekEntries.length > 10) changelogDetail += "\n> 共 " + weekEntries.length + " 条变更，仅展示最近10条\n";
+      }
+    } catch (e) { /* ignore changelog read errors */ }
+  }
+
   }return "---\ntitle: " + dateStr + " | \u7B2C" + weekNum + "\u5468\u5DE5\u4F5C\u62A5\u544A\noutline: [2, 3]\n---\n\n" +
     "# \uD83D\uDCCA \u7B2C" + weekNum + "\u5468 \u00B7 AI\u56E2\u961F\u5DE5\u4F5C\u62A5\u544A\n\n" +
     "> \u751F\u6210\u65E5\u671F: " + dateCN + "\n\n" +
@@ -661,7 +702,7 @@ function generateWeeklyReport(state, dateStr) {
     mmReview + "\n\n" +
     "## \uD83D\uDCDD \u672C\u5468\u89C4\u5219\u8FED\u4EE3\n\n" +
     "> \u672C\u5468\u89C4\u5219\u53D8\u66F4\u8BB0\u5F55\n\n" +
-    (weeklyRuleChanges ? "| \u53D8\u66F4\u6761\u6570 | \u8BF4\u660E |\n|------|------|\n| " + (weeklyRuleChanges || 0) + " \u6761 | \u7531\u8BB0\u5FC6\u7BA1\u7406\u5E08\u5728\u65E5\u5E38\u590D\u76D8\u4E2D\u81EA\u52A8\u6267\u884C |\n" : "| \u53D8\u66F4\u6761\u6570 | \u8BF4\u660E |\n|------|------|\n| 0 \u6761 | \u672C\u5468\u672A\u89E6\u53D1\u89C4\u5219\u8FED\u4EE3 |\n") + "\n\n" +
+    (weeklyRuleChanges ? "| \u53D8\u66F4\u6761\u6570 | \u8BF4\u660E |\n|------|------|\n| " + (weeklyRuleChanges || 0) + " \u6761 | \u7531\u8BB0\u5FC6\u7BA1\u7406\u5E08\u5728\u65E5\u5E38\u590D\u76D8\u4E2D\u81EA\u52A8\u6267\u884C |\n" : "| \u53D8\u66F4\u6761\u6570 | \u8BF4\u660E |\n|------|------|\n| 0 \u6761 | \u672C\u5468\u672A\u89E6\u53D1\u89C4\u5219\u8FED\u4EE3 |\n") + changelogDetail + "\n\n" +
     "\n> \u751F\u6210\u65F6\u95F4: " + new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) + "\n";
 }
 // ===================== 索引更新 =====================
@@ -1069,3 +1110,4 @@ main().catch((err) => {
   console.error("致命错误:", err);
   process.exit(1);
 });
+

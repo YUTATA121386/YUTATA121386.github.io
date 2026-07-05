@@ -22,7 +22,7 @@ function askDeepSeek(sys, user) {
         { role: "user", content: user }
       ],
       temperature: 0.7,
-      max_tokens: 500
+      max_tokens: 1500
     });
     const url = new URL("https://api.deepseek.com/chat/completions");
     const req = https.request({
@@ -176,16 +176,26 @@ async function runEvals() {
       console.log(agent.name + " 评价完成");
       const match = resp.match(/\{[\s\S]*\}/);
       if (match) {
+        let obj = null;
+        // Try standard parse first
         try {
-          const obj = JSON.parse(match[0]);
+          obj = JSON.parse(match[0]);
+        } catch (parseErr) {
+          // Auto-repair: try stripping invisible chars and common issues
+          try {
+            const cleaned = match[0].replace(/[\u0000-\u001F\u007F-\u009F]/g, '').replace(/\r?\n/g, ' ').replace(/,\s*}/g, '}').replace(/,\s*]/g, ']');
+            obj = JSON.parse(cleaned);
+          } catch (e2) {
+            console.log("  解析失败，保存原始响应");
+            allScores[agent.id] = { _raw: resp.slice(0, 2000), dims: [], overall: 0, summary: "" };
+          }
+        }
+        if (obj) {
           allScores[agent.id] = obj;
           console.log("  综合: " + obj.overall + "/10");
           if (obj.dims) {
             obj.dims.forEach(function(d) { console.log("  " + d.name + ": " + d.score); });
           }
-        } catch (parseErr) {
-          console.log("  解析失败，使用原始响应");
-          allScores[agent.id] = { _raw: resp.slice(0, 500), dims: [], overall: 0, summary: "" };
         }
       }
     } catch(err) {
