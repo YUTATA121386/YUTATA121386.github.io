@@ -509,6 +509,17 @@ function generateWeeklyReport(state, dateStr) {
   var rep = state.reputation;
   var dateCN = new Date(dateStr).getFullYear() + "\u5e74" + (new Date(dateStr).getMonth() + 1) + "\u6708" + new Date(dateStr).getDate() + "\u65e5";
   var agents = ["collector", "verifier", "analyst", "editor", "memory-manager"];
+  // Aggregate weekly rule changes from system memory
+  var sysMem = loadSystemMemory();
+  var weekStart = new Date(new Date(dateStr).getTime() - 6 * 86400000);
+  var weeklyRuleChanges = 0;
+  sysMem.entries.forEach(function(e) {
+    var ed = new Date(e.date);
+    if (ed >= weekStart && ed <= new Date(dateStr)) {
+      weeklyRuleChanges += e.ruleChanges || 0;
+    }
+  });
+
   
   // Build SVG line chart for all 5 agents including memory-manager
   var colors = { collector: "#e74c3c", verifier: "#2ecc71", analyst: "#3498db", editor: "#a569bd", "memory-manager": "#f39c12" };
@@ -601,7 +612,7 @@ function generateWeeklyReport(state, dateStr) {
     mmReview += '</div></div>\n';
   });
   mmReview += '</div>\n';
-  mmReview += "\n> \u2605 \u672C\u5468\u4E3A\u7CFB\u7EDF\u542F\u52A8\u7B2C\u4E00\u5468\uFF0C\u4E92\u8BC4\u529F\u80FD\u5C06\u4E8E\u4E0B\u5468\u542F\u7528\n";
+  mmReview += "\n> " + (weekNum === 1 ? "\u2605 \u672C\u5468\u4E3A\u7CFB\u7EDF\u542F\u52A8\u7B2C\u4E00\u5468\uFF0C\u4E92\u8BC4\u529F\u80FD\u5C06\u4E8E\u4E0B\u5468\u542F\u7528" : "\u2605 \u7B2C" + weekNum + "\u5468\u5468\u62A5") + "\n";
   return "---\ntitle: " + dateStr + " | \u7B2C" + weekNum + "\u5468\u5DE5\u4F5C\u62A5\u544A\noutline: [2, 3]\n---\n\n" +
     "# \uD83D\uDCCA \u7B2C" + weekNum + "\u5468 \u00B7 AI\u56E2\u961F\u5DE5\u4F5C\u62A5\u544A\n\n" +
     "> \u751F\u6210\u65E5\u671F: " + dateCN + "\n\n" +
@@ -609,7 +620,7 @@ function generateWeeklyReport(state, dateStr) {
     mmReview + "\n\n" +
     "## \uD83D\uDCDD \u672C\u5468\u89C4\u5219\u8FED\u4EE3\n\n" +
     "> \u672C\u5468\u89C4\u5219\u53D8\u66F4\u8BB0\u5F55\n\n" +
-    (state.stats.ruleChanges ? "| \u53D8\u66F4\u6761\u6570 | \u8BF4\u660E |\n|------|------|\n| " + (state.stats.ruleChanges || 0) + " \u6761 | \u7531\u8BB0\u5FC6\u7BA1\u7406\u5E08\u5728\u65E5\u5E38\u590D\u76D8\u4E2D\u81EA\u52A8\u6267\u884C |\n" : "| \u53D8\u66F4\u6761\u6570 | \u8BF4\u660E |\n|------|------|\n| 0 \u6761 | \u672C\u5468\u672A\u89E6\u53D1\u89C4\u5219\u8FED\u4EE3 |\n") + "\n\n" +
+    (weeklyRuleChanges ? "| \u53D8\u66F4\u6761\u6570 | \u8BF4\u660E |\n|------|------|\n| " + (weeklyRuleChanges || 0) + " \u6761 | \u7531\u8BB0\u5FC6\u7BA1\u7406\u5E08\u5728\u65E5\u5E38\u590D\u76D8\u4E2D\u81EA\u52A8\u6267\u884C |\n" : "| \u53D8\u66F4\u6761\u6570 | \u8BF4\u660E |\n|------|------|\n| 0 \u6761 | \u672C\u5468\u672A\u89E6\u53D1\u89C4\u5219\u8FED\u4EE3 |\n") + "\n\n" +
     "\n> \u751F\u6210\u65F6\u95F4: " + new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) + "\n";
 }
 // ===================== 索引更新 =====================
