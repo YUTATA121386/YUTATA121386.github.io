@@ -1,9 +1,9 @@
-锘縩ame: Multi-Agent Daily News
+name: Multi-Agent Daily News
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 4 * * *"  # 鍖椾含鏃堕棿 12:00
+    - cron: "0 4 * * *"  # 北京时间 12:00
 
 permissions:
   contents: write
@@ -48,24 +48,8 @@ jobs:
         run: |
           git config user.name "YUTATA Multi-Agent Bot"
           git config user.email "multi-agent-bot@yutata.dev"
-          git add docs/daily/ docs/logs/ docs/weekly/ docs/rules/ scripts/reputation.json scripts/system-stats.json scripts/system-memory.json
+          git add docs/daily/ docs/logs/ docs/weekly/ docs/rules/ scripts/reputation.json scripts/system-stats.json scripts/system-memory.json scripts/mm-scores.json
           git diff --cached --quiet || (
-            git commit -m "馃摗 澶欰gent鏃ユ姤 $(date +%Y-%m-%d)"
+            git commit -m "?? 多Agent日报 $(date +%Y-%m-%d)"
             git push origin HEAD:main
           )
-
-      - name: Build site
-        run: npm run docs:build
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/.vitepress/dist
-
-      - name: Deploy to Pages
-        uses: actions/deploy-pages@v4
-        id: deployment
-

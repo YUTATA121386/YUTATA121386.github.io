@@ -1,4 +1,4 @@
-﻿node_modules/
+node_modules/
 dist/
 .vitepress/dist/
 .vitepress/cache/
@@ -9,3 +9,4 @@ dist/
 !scripts/reputation.json
 !scripts/system-stats.json
 !scripts/system-memory.json
+!scripts/mm-scores.json

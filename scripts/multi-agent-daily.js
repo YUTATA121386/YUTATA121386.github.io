@@ -622,7 +622,19 @@ function generateWeeklyReport(state, dateStr) {
           agentScore.overall = parsed.overall;
           agentScore.summary = parsed.summary;
         }
-      } catch (e) {}
+      } catch (e) {
+        // Repair: fix missing ] before overall/summary and trailing commas
+        try {
+          var cleaned = agentScore._raw.replace(/[\u0000-\u001F\u007F-\u009F]/g, "").replace(/\r?\n/g, " ").replace(/,\s*}/g, "}").replace(/,\s*]/g, "]");
+          cleaned = cleaned.replace(/\}(,\"(?:overall|summary)\")/g, "}]" + "$1");
+          var parsed = JSON.parse(cleaned);
+          if (parsed && parsed.dims && parsed.dims.length > 0) {
+            agentScore.dims = parsed.dims;
+            agentScore.overall = parsed.overall;
+            agentScore.summary = parsed.summary;
+          }
+        } catch (e2) {}
+      }
     }
     if (agentScore && agentScore.dims && agentScore.dims.length > 0) {
       mmReview += '<div class="mm-dims">';
@@ -672,7 +684,9 @@ function generateWeeklyReport(state, dateStr) {
   if (weeklyRuleChanges > 0) {
     try {
       var changelogContent = fs.readFileSync(CHANGELOG_FILE, "utf-8");
-      var weekStartDate = dateStr.slice(0, 7) + "-01";
+      var sysStart = new Date(2026, 5, 28);
+      var weekStartDate = new Date(new Date(dateStr).getTime() - 6 * 86400000);
+      weekStartDate = weekStartDate.getFullYear() + "-" + String(weekStartDate.getMonth() + 1).padStart(2, "0") + "-" + String(weekStartDate.getDate()).padStart(2, "0");
       var weekEndDate = dateStr;
       var lines = changelogContent.split("\n");
       var weekEntries = [];
@@ -1110,6 +1124,7 @@ main().catch((err) => {
   console.error("致命错误:", err);
   process.exit(1);
 });
+
 
 
 
