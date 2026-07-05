@@ -23,22 +23,22 @@ outline: [2, 3]
 <text x="50" y="214" text-anchor="middle" font-size="10" fill="var(--vp-c-text-3)">06/29</text>
 <text x="295" y="214" text-anchor="middle" font-size="10" fill="var(--vp-c-text-3)">07/04</text>
 <text x="540" y="214" text-anchor="middle" font-size="10" fill="var(--vp-c-text-3)">07/05</text>
-<polyline points="50,102.5 295,111.25 540,115.625" fill="none" stroke="#e74c3c" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="50,102.5 295,111.25 540,133.125" fill="none" stroke="#e74c3c" stroke-width="2" stroke-linejoin="round"/>
 <circle cx="50" cy="102.5" r="3" fill="#e74c3c"/>
 <circle cx="295" cy="111.25" r="3" fill="#e74c3c"/>
-<circle cx="540" cy="115.625" r="3" fill="#e74c3c"/>
-<polyline points="50,106.875 295,120 540,128.75" fill="none" stroke="#2ecc71" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="540" cy="133.125" r="3" fill="#e74c3c"/>
+<polyline points="50,106.875 295,120 540,106.875" fill="none" stroke="#2ecc71" stroke-width="2" stroke-linejoin="round"/>
 <circle cx="50" cy="106.875" r="3" fill="#2ecc71"/>
 <circle cx="295" cy="120" r="3" fill="#2ecc71"/>
-<circle cx="540" cy="128.75" r="3" fill="#2ecc71"/>
-<polyline points="50,106.875 295,98.125 540,93.74999999999999" fill="none" stroke="#3498db" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="540" cy="106.875" r="3" fill="#2ecc71"/>
+<polyline points="50,106.875 295,98.125 540,85" fill="none" stroke="#3498db" stroke-width="2" stroke-linejoin="round"/>
 <circle cx="50" cy="106.875" r="3" fill="#3498db"/>
 <circle cx="295" cy="98.125" r="3" fill="#3498db"/>
-<circle cx="540" cy="93.74999999999999" r="3" fill="#3498db"/>
-<polyline points="50,115.625 295,111.25 540,98.125" fill="none" stroke="#a569bd" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="540" cy="85" r="3" fill="#3498db"/>
+<polyline points="50,115.625 295,111.25 540,106.875" fill="none" stroke="#a569bd" stroke-width="2" stroke-linejoin="round"/>
 <circle cx="50" cy="115.625" r="3" fill="#a569bd"/>
 <circle cx="295" cy="111.25" r="3" fill="#a569bd"/>
-<circle cx="540" cy="98.125" r="3" fill="#a569bd"/>
+<circle cx="540" cy="106.875" r="3" fill="#a569bd"/>
 <polyline points="50,124.375 295,141.875 540,150.625" fill="none" stroke="#f39c12" stroke-width="2" stroke-linejoin="round"/>
 <circle cx="50" cy="124.375" r="3" fill="#f39c12"/>
 <circle cx="295" cy="141.875" r="3" fill="#f39c12"/>
@@ -46,18 +46,18 @@ outline: [2, 3]
 </svg>
 
 <div class="rep-legend">
-<span class="rep-legend-item"><span class="rep-dot" style="background:#e74c3c;"></span>采集师 77</span>
-<span class="rep-legend-item"><span class="rep-dot" style="background:#2ecc71;"></span>核查师 74</span>
-<span class="rep-legend-item"><span class="rep-dot" style="background:#3498db;"></span>分析师 82</span>
-<span class="rep-legend-item"><span class="rep-dot" style="background:#a569bd;"></span>编辑师 81</span>
+<span class="rep-legend-item"><span class="rep-dot" style="background:#e74c3c;"></span>采集师 73</span>
+<span class="rep-legend-item"><span class="rep-dot" style="background:#2ecc71;"></span>核查师 79</span>
+<span class="rep-legend-item"><span class="rep-dot" style="background:#3498db;"></span>分析师 84</span>
+<span class="rep-legend-item"><span class="rep-dot" style="background:#a569bd;"></span>编辑师 79</span>
 <span class="rep-legend-item"><span class="rep-dot" style="background:#f39c12;"></span>记忆管理师 69</span>
 </div>
 
 <div class="rep-summary">
-<div class="rep-card"><span class="rep-dot" style="background:#e74c3c;"></span><strong>采集师</strong> <span class="rep-score">77</span> <span class="rep-trend">↓-3</span></div>
-<div class="rep-card"><span class="rep-dot" style="background:#2ecc71;"></span><strong>核查师</strong> <span class="rep-score">74</span> <span class="rep-trend">↓-5</span></div>
-<div class="rep-card"><span class="rep-dot" style="background:#3498db;"></span><strong>分析师</strong> <span class="rep-score">82</span> <span class="rep-trend">↑+3</span></div>
-<div class="rep-card"><span class="rep-dot" style="background:#a569bd;"></span><strong>编辑师</strong> <span class="rep-score">81</span> <span class="rep-trend">↑+4</span></div>
+<div class="rep-card"><span class="rep-dot" style="background:#e74c3c;"></span><strong>采集师</strong> <span class="rep-score">73</span> <span class="rep-trend">↓-7</span></div>
+<div class="rep-card"><span class="rep-dot" style="background:#2ecc71;"></span><strong>核查师</strong> <span class="rep-score">79</span> <span class="rep-trend">→0</span></div>
+<div class="rep-card"><span class="rep-dot" style="background:#3498db;"></span><strong>分析师</strong> <span class="rep-score">84</span> <span class="rep-trend">↑+5</span></div>
+<div class="rep-card"><span class="rep-dot" style="background:#a569bd;"></span><strong>编辑师</strong> <span class="rep-score">79</span> <span class="rep-trend">↑+2</span></div>
 <div class="rep-card"><span class="rep-dot" style="background:#f39c12;"></span><strong>记忆管理师</strong> <span class="rep-score">69</span> <span class="rep-trend">↓-6</span></div>
 </div>
 
@@ -82,8 +82,8 @@ outline: [2, 3]
 
 | 变更条数 | 说明 |
 |------|------|
-| 7 条 | 由记忆管理师在日常复盘中自动执行 |
+| 8 条 | 由记忆管理师在日常复盘中自动执行 |
 
 
 
-> 生成时间: 2026/7/5 12:06:29
+> 生成时间: 2026/7/5 15:33:10
