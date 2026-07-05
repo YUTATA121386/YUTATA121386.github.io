@@ -99,16 +99,16 @@ outline: [2, 3]
 ### 本周规则变更详情
 
 <ul>
-<li>**verification-rules.md** (V2.1.27): 核查师在MSG-048和MSG-051发送了完全重复的审核完成通知，…</li>
-<li>**style-guide.md** (V2.1.27): 连续4天出现重复消息问题，团队已形成不良习惯。需要将'检查重复'提升为第0步，并增加惩罚机制。…</li>
-<li>**verification-rules.md** (V2.1.27): 核查师审核标准从50%骤降到5%，波动45%——团队无法预测什么会被接受。…</li>
-<li>**collection-rules.md** (V2.1.27): 重复消息问题连续五天爆发，每天浪费25-35%通信带宽。规则虽然存在但缺乏执行力度。…</li>
-<li>**style-guide.md** (V2.1.27): 今日核查师两次请求草稿（MSG-VER-040/041），但编辑师因素材不足无法提供。…</li>
-<li>**communication-rules.md** (V2.1.28): 重复消息问题连续六天恶化，从25%到41%通信带宽浪费。…</li>
-<li>**communication-rules.md** (V2.1.28): 今日核查师发送了4组重复消息，核心原因是审核完成通知被分批次发送给不同角色。…</li>
-<li>**communication-rules.md** (V2.1.28): 今日编辑师发送了自APPROVE消息（MSG-057/058），…</li>
-<li>**verification-rules.md** (V2.1.28): 重复消息问题已连续6天恶化，达到历史最严重水平。…</li>
-<li>**verification-rules.md** (V2.1.28): 今日Credits.fm和YouTube Shorts的补采请求状态不明，…</li>
+<li><strong>verification-rules.md</strong> (V2.1.27): 核查师在MSG-048和MSG-051发送了完全重复的审核完成通知，…</li>
+<li><strong>style-guide.md</strong> (V2.1.27): 连续4天出现重复消息问题，团队已形成不良习惯。需要将'检查重复'提升为第0步，并增加惩罚机制。…</li>
+<li><strong>verification-rules.md</strong> (V2.1.27): 核查师审核标准从50%骤降到5%，波动45%——团队无法预测什么会被接受。…</li>
+<li><strong>collection-rules.md</strong> (V2.1.27): 重复消息问题连续五天爆发，每天浪费25-35%通信带宽。规则虽然存在但缺乏执行力度。…</li>
+<li><strong>style-guide.md</strong> (V2.1.27): 今日核查师两次请求草稿（MSG-VER-040/041），但编辑师因素材不足无法提供。…</li>
+<li><strong>communication-rules.md</strong> (V2.1.28): 重复消息问题连续六天恶化，从25%到41%通信带宽浪费。…</li>
+<li><strong>communication-rules.md</strong> (V2.1.28): 今日核查师发送了4组重复消息，核心原因是审核完成通知被分批次发送给不同角色。…</li>
+<li><strong>communication-rules.md</strong> (V2.1.28): 今日编辑师发送了自APPROVE消息（MSG-057/058），…</li>
+<li><strong>verification-rules.md</strong> (V2.1.28): 重复消息问题已连续6天恶化，达到历史最严重水平。…</li>
+<li><strong>verification-rules.md</strong> (V2.1.28): 今日Credits.fm和YouTube Shorts的补采请求状态不明，…</li>
 </ul>
 
 > 共 30 条变更，仅展示最近 10 条
