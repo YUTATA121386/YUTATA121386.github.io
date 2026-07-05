@@ -53,3 +53,19 @@ jobs:
             git commit -m "📡 多Agent日报 $(date +%Y-%m-%d)"
             git push origin HEAD:main
           )
+
+      - name: Build site
+        run: npm run docs:build
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/.vitepress/dist
+
+      - name: Deploy to Pages
+        uses: actions/deploy-pages@v4
+        id: deployment
+
