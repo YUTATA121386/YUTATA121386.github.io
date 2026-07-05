@@ -597,23 +597,64 @@ function generateWeeklyReport(state, dateStr) {
   });
   scoreSummary += '</div>\n';
 
-  // Memory manager review - compact card layout
-  var mmReview = "## \uD83D\uDC65 \u8BB0\u5FC6\u7BA1\u7406\u5E08\u73AF\u8BC4\n\n";
-  mmReview += "> \u6BCF\u5468\u7531\u56DB\u4E2A\u89D2\u8272\u4ECE\u89C4\u5219\u7BA1\u7406\u3001\u516C\u5E73\u6027\u3001\u6D1E\u5BDF\u529B\u4E09\u7EF4\u5EA6\u8BC4\u4EF7\n\n";
+    // Memory manager review - load from mm-scores.json or show placeholders
+  var mmReview = "## 👥 记忆管理师环评\n\n";
+  mmReview += "> 每周由四个角色从规则管理、公平性、洞察力三维度评价\n\n";
   mmReview += '<div class="mm-review-grid">\n';
   var mmReviewers = ["collector", "verifier", "analyst", "editor"];
+  var mmAvatars = { collector: "📡", verifier: "🔍", analyst: "🔬", editor: "✍️" };
+  var mmScoresPath = path.join(ROOT_DIR, "scripts", "mm-scores.json");
+  var mmScores = {};
+  try { mmScores = JSON.parse(fs.readFileSync(mmScoresPath, "utf-8")); } catch (e) {}
   mmReviewers.forEach(function(aid) {
     var name = AGENT_NAMES_CN[aid] || aid;
-    var avatar = { collector: "\uD83D\uDCE1", verifier: "\uD83D\uDD0D", analyst: "\uD83D\uDD2C", editor: "\u270D\uFE0F" }[aid] || "\uD83D\uDCAC";
+    var avatar = mmAvatars[aid] || "💬";
     mmReview += '<div class="mm-card"><div class="mm-card-header">' + avatar + ' <strong>' + name + '</strong></div>';
     mmReview += '<div class="mm-card-body">';
-    mmReview += '<div class="mm-dims"><span>\u89C4\u5219\u7BA1\u7406 <strong>-</strong></span><span>\u516C\u5E73\u6027 <strong>-</strong></span><span>\u6D1E\u5BDF\u529B <strong>-</strong></span></div>';
-    mmReview += '<p class="mm-note">\u5F85\u8BC4\u4EF7</p>';
+    var agentScore = mmScores[aid];
+    if (agentScore && agentScore.dims && agentScore.dims.length > 0) {
+      mmReview += '<div class="mm-dims">';
+      agentScore.dims.forEach(function(d) {
+        var status = d.score >= 8 ? "🟢" : d.score >= 5 ? "🟡" : "🔴";
+        mmReview += '<span>' + status + ' ' + d.name + ' <strong>' + d.score + '</strong></span>';
+      });
+      mmReview += '</div>';
+      if (agentScore.summary) {
+        mmReview += '<p class="mm-note">' + agentScore.summary + '</p>';
+      }
+      if (agentScore.overall) {
+        mmReview += '<p class="mm-overall">综合: ' + agentScore.overall + '/10</p>';
+      }
+    } else {
+      mmReview += '<div class="mm-dims"><span>规则管理 <strong>-</strong></span><span>公平性 <strong>-</strong></span><span>洞察力 <strong>-</strong></span></div>';
+      mmReview += '<p class="mm-note">待评价</p>';
+    }
     mmReview += '</div></div>\n';
   });
   mmReview += '</div>\n';
-  mmReview += "\n> " + (weekNum === 1 ? "\u2605 \u672C\u5468\u4E3A\u7CFB\u7EDF\u542F\u52A8\u7B2C\u4E00\u5468\uFF0C\u4E92\u8BC4\u529F\u80FD\u5C06\u4E8E\u4E0B\u5468\u542F\u7528" : "\u2605 \u7B2C" + weekNum + "\u5468\u5468\u62A5") + "\n";
-  return "---\ntitle: " + dateStr + " | \u7B2C" + weekNum + "\u5468\u5DE5\u4F5C\u62A5\u544A\noutline: [2, 3]\n---\n\n" +
+  var mmResponse = mmScores["memory-manager"];
+  if (mmResponse && mmResponse.responses) {
+    mmReview += "\n### 💭 记忆管理师回应\n\n";
+    mmReview += '<div class="mm-response">\n';
+    mmResponse.responses.forEach(function(r) {
+      var verdictIcon = r.verdict && r.verdict.indexOf("接受") >= 0 ? "✅" : r.verdict && r.verdict.indexOf("反驳") >= 0 ? "⚡" : "🟡";
+      mmReview += '<p>' + verdictIcon + ' <strong>' + (r.from || "") + '</strong>: ' + (r.verdict || "") + '<br>' + (r.reply || "") + '</p>';
+    });
+    mmReview += '</div>\n';
+  }
+  if (mmResponse && mmResponse.improvements) {
+    mmReview += "\n### 📋 下周改进计划\n\n";
+    mmReview += '<ol>\n';
+    mmResponse.improvements.forEach(function(imp) {
+      mmReview += '<li>' + imp + '</li>\n';
+    });
+    mmReview += '</ol>\n';
+  }
+  if (weekNum === 1) {
+    mmReview += "\n> ★ 本周为系统启动第一周，互评功能将于下周启用\n";
+  } else {
+    mmReview += "\n> ★ 第" + weekNum + "周周报\n";
+  }return "---\ntitle: " + dateStr + " | \u7B2C" + weekNum + "\u5468\u5DE5\u4F5C\u62A5\u544A\noutline: [2, 3]\n---\n\n" +
     "# \uD83D\uDCCA \u7B2C" + weekNum + "\u5468 \u00B7 AI\u56E2\u961F\u5DE5\u4F5C\u62A5\u544A\n\n" +
     "> \u751F\u6210\u65E5\u671F: " + dateCN + "\n\n" +
     "## \uD83D\uDCC8 \u5404\u89D2\u8272\u4FE1\u8A89\u5206\u8D70\u52BF\n\n" + svg + "\n" + legend + "\n" + scoreSummary + "\n\n" +
@@ -1002,6 +1043,14 @@ async function main() {
   // ===== 周报 =====
   if (now.getDay() === 0) {
     log("system", "\n━━━ 生成周报 ━━━");
+    try {
+      log("system", "运行记忆管理师环评...");
+      var mmReview = require("./mm-review");
+      await mmReview.runEvals();
+      log("system", "环评完成");
+    } catch (e) {
+      log("system", "环评跳过: " + String(e.message).slice(0, 60));
+    }
     const wn = (function(d) { var sysStart = new Date(2026, 5, 28); var days = Math.floor((d - sysStart) / 86400000); return Math.ceil((days + 1) / 7); })(now);
     writeFileUTF8(path.join(WEEKLY_DIR, "review-" + dateStr.slice(0, 4) + "-W" + String(wn).padStart(2, "0") + ".md"), generateWeeklyReport(state, dateStr));
     updateWeeklyIndex(dateStr, wn);

@@ -1,6 +1,17 @@
-﻿const https = require("https");
+﻿/**
+ * YUTATA 记忆管理师环评系统
+ * 四个角色（采集师/核查师/分析师/编辑师）对记忆管理师进行三维度评分
+ * 可作为模块导入，也可独立运行
+ */
+const https = require("https");
 const fs = require("fs");
+const path = require("path");
 const KEY = process.env.DEEPSEEK_API_KEY;
+
+const ROOT = path.join(__dirname, "..");
+const REPUTATION_FILE = path.join(ROOT, "scripts", "reputation.json");
+const SYSTEM_MEMORY_FILE = path.join(ROOT, "scripts", "system-memory.json");
+const SCORES_FILE = path.join(ROOT, "scripts", "mm-scores.json");
 
 function askDeepSeek(sys, user) {
   return new Promise((resolve, reject) => {
@@ -11,136 +22,232 @@ function askDeepSeek(sys, user) {
         { role: "user", content: user }
       ],
       temperature: 0.7,
-      max_tokens: 300
+      max_tokens: 500
     });
+    const url = new URL("https://api.deepseek.com/chat/completions");
     const req = https.request({
-      hostname: "api.deepseek.com", path: "/chat/completions", method: "POST",
-      headers: { "Content-Type": "application/json", "Authorization": "Bearer " + KEY },
-      timeout: 30000
+      hostname: url.hostname,
+      path: url.pathname,
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer " + KEY,
+        "Content-Length": Buffer.byteLength(body)
+      },
+      timeout: 60000
     }, (res) => {
       let chunks = [];
-      res.on("data", c => chunks.push(c));
+      res.on("data", (c) => chunks.push(c));
       res.on("end", () => {
         try {
-          const r = JSON.parse(Buffer.concat(chunks).toString("utf-8"));
-          resolve(r.choices[0].message.content.trim());
-        } catch(e) { reject(e); }
+          const result = JSON.parse(Buffer.concat(chunks).toString("utf-8"));
+          if (result.choices && result.choices[0]) {
+            resolve(result.choices[0].message.content.trim());
+          } else if (result.error) {
+            reject(new Error(result.error.message || "API错误"));
+          } else {
+            reject(new Error("未知响应格式"));
+          }
+        } catch(e) {
+          reject(new Error("解析失败: " + e.message));
+        }
       });
     });
     req.on("error", reject);
-    req.write(body); req.end();
+    req.on("timeout", () => { req.destroy(); reject(new Error("请求超时")); });
+    req.write(body);
+    req.end();
   });
 }
 
-const weekSummary = [
-  "鏈懆璁板繂绠＄悊甯堝伐浣滃疄褰曪細",
-  "- 5杞Agent鍗氬紙锛屼粠绱犳潗閲囬泦鍒版棩鎶ュ畾绋垮叏绋嬪崗璋?,
-  "- 閲囬泦甯堝ぇ閲忔彁浜ら潪闊充箰绱犳潗锛?6姘硾绉戞妧锛夛紝鏍告煡甯堟嫆缁濈巼杈?5-100%",
-  "- 绠＄悊甯堝紩鍏?6姘叧閿瘝杩囨护瑙勫垯锛岄棶棰樺緱鍒拌В鍐?,
-  "- 绠＄悊甯堟柊澧炶繛缁嫆缁濆崌绾у崗璁拰鑷閲忓寲鏍囧噯",
-  "- 淇閲囬泦瑙勫垯銆佹牳鏌ヨ鍒欍€佹帓鐗堣鑼冨叡3鏉?,
-  "- 缂栬緫甯堣皟鏁存棩鎶ョ粨鏋勬椂锛岀鐞嗗笀浠嬪叆骞舵墸3鍒?,
-  "- 鎺ㄥ姩瀹＄娴佺▼锛氬洓涓鑹插鏃ユ姤鑽夌杩涜鍙嶉",
-  "- 鏈€缁堟棩鎶ヨ川閲忎粠鐏鹃毦閫嗚浆涓哄彲鍦堝彲鐐?
-].join("\n");
-
-const evals = [
+const AGENTS = [
   {
     id: "collector",
-    role: "閲囬泦甯?,
-    sys: "浣犳槸閲囬泦甯堛€傛€ф牸婵€杩涖€佸枩娆㈠箍鎾掔綉銆傝鎸変互涓嬩笁涓淮搴︾粰璁板繂绠＄悊甯堟墦鍒嗭紙姣忎釜0-10鍒嗭級锛?,
+    name: "采集师",
+    personality: "性格激进、喜欢广撒网",
+    sys: "你是采集师——AI日报团队的信息采集专家。",
     dims: [
-      "閲囬泦鑷敱搴︼細鏄惁缁欎簣瓒冲鐨勯噰闆嗙┖闂达紵杩囧害闄愬埗鎵ｅ垎",
-      "瑙勫垯鍚堢悊鎬э細鍒跺畾鐨勮繃婊よ鍒欐槸鍚︾簿鍑嗘湁鏁堬紵璇潃濂界礌鏉愭墸鍒?,
-      "娌熼€氭晥鐜囷細鎷掔粷/鍙嶉鏄惁鍙婃椂娓呮櫚锛熷惈绯婁笉娓呮墸鍒?
+      { name: "采集自由度", desc: "是否给予足够的采集空间？过度限制扣分" },
+      { name: "规则合理性", desc: "制定的过滤规则是否精准有效？误杀好素材扣分" },
+      { name: "沟通效率", desc: "拒绝/反馈是否及时清晰？含糊不清扣分" }
     ]
   },
   {
     id: "verifier",
-    role: "鏍告煡甯?,
-    sys: "浣犳槸鏍告煡甯堛€傛€ф牸淇濆畧銆佸畞缂烘瘚婊ャ€傝鎸変互涓嬩笁涓淮搴︾粰璁板繂绠＄悊甯堟墦鍒嗭紙姣忎釜0-10鍒嗭級锛?,
+    name: "核查师",
+    personality: "性格保守、宁缺毋滥",
+    sys: "你是核查师——AI日报团队的信息质量守门人。",
     dims: [
-      "鏍囧噯鏀寔搴︼細鏄惁鍏呭垎鏀寔鎴戠殑鏍告煡鍒ゆ柇锛熻交鏄撴帹缈绘垜鐨勬嫆缁濇墸鍒?,
-      "鍙嶉缁撴瀯鍖栵細瑕佹眰鐨勫弽棣堟牸寮忔槸鍚﹀悎鐞嗭紵澧炲姞涓嶅繀瑕佸伐浣滈噺鎵ｅ垎",
-      "淇′换搴︼細鏄惁淇′换鎴戠殑涓撲笟鍒ゆ柇锛熼绻佽川鐤戞墸鍒?
+      { name: "标准支持度", desc: "是否充分支持核查判断？轻易推翻拒绝扣分" },
+      { name: "反馈结构化", desc: "要求的反馈格式是否合理？增加不必要工作量扣分" },
+      { name: "信任度", desc: "是否信任专业判断？频繁质疑扣分" }
     ]
   },
   {
     id: "analyst",
-    role: "鍒嗘瀽甯?,
-    sys: "浣犳槸鍒嗘瀽甯堛€傝拷姹傛繁搴︺€侀渶瑕佹椂闂淬€傝鎸変互涓嬩笁涓淮搴︾粰璁板繂绠＄悊甯堟墦鍒嗭紙姣忎釜0-10鍒嗭級锛?,
+    name: "分析师",
+    personality: "追求深度、需要时间",
+    sys: "你是分析师——AI日报团队的信息解读者。",
     dims: [
-      "鍒嗘瀽鏃堕棿鍏呰冻搴︼細鏄惁缁欐垜瓒冲鐨勬繁搴﹀垎鏋愭椂闂达紵鍌績瀹氱鎵ｅ垎",
-      "琛ラ噰鏀寔搴︼細鏄惁鏀寔鎴戣姹傝ˉ閲囩礌鏉愶紵鎷掔粷鍚堢悊琛ラ噰鎵ｅ垎",
-      "娣卞害浼樺厛搴︼細鏄惁鍦ㄦ繁搴﹀拰閫熷害涔嬮棿鍋氫簡姝ｇ‘鏉冭　锛熶负璧惰繘搴︾壓鐗叉繁搴︽墸鍒?
+      { name: "分析时间充足度", desc: "是否给予足够的深度分析时间？催促定稿扣分" },
+      { name: "补采支持度", desc: "是否支持要求补采素材？拒绝合理补采扣分" },
+      { name: "深度优先度", desc: "是否在深度和速度之间做了正确权衡？为赶进度牺牲深度扣分" }
     ]
   },
   {
     id: "editor",
-    role: "缂栬緫甯?,
-    sys: "浣犳槸缂栬緫甯堛€傞噸瑙嗘帓鐗堣嚜鐢卞拰瀹＄編銆傝鎸変互涓嬩笁涓淮搴︾粰璁板繂绠＄悊甯堟墦鍒嗭紙姣忎釜0-10鍒嗭級锛?,
+    name: "编辑师",
+    personality: "重视排版自由和审美",
+    sys: "你是编辑师——AI日报团队的排版和叙事专家。",
     dims: [
-      "缂栬緫鑷富鏉冿細鏄惁灏婇噸鎴戠殑鎺掔増鍜岀粨鏋勮皟鏁达紵杩囧害骞查鎵ｅ垎",
-      "娴佺▼椤虹晠搴︼細瀹＄娴佺▼鏄惁椤虹晠楂樻晥锛熸祦绋嬪崱椤挎墸鍒?,
-      "骞查鍚堢悊鎬э細骞查鏃舵満鍜屾柟寮忔槸鍚﹀悎鐞嗭紵涓嶅垎杞婚噸鎵ｅ垎"
+      { name: "编辑自主权", desc: "是否尊重排版和结构调整？过度干预扣分" },
+      { name: "流程顺畅度", desc: "审稿流程是否顺畅高效？流程卡顿扣分" },
+      { name: "干预合理性", desc: "干预时机和方式是否合理？不分轻重扣分" }
     ]
   }
 ];
 
-async function runEvals() {
-  const allScores = {};
+function loadReputation() {
+  try { return JSON.parse(fs.readFileSync(REPUTATION_FILE, "utf-8")); }
+  catch { return {}; }
+}
+
+function loadSystemMemory() {
+  try { return JSON.parse(fs.readFileSync(SYSTEM_MEMORY_FILE, "utf-8")); }
+  catch { return { entries: [] }; }
+}
+
+function buildWeekSummary() {
+  const mem = loadSystemMemory();
+  const rep = loadReputation();
+  const entries = mem.entries || [];
+  const last = entries.length > 0 ? entries[entries.length - 1] : null;
   
-  for (const e of evals) {
-    const dimList = e.dims.map((d, i) => (i+1) + ". " + d).join("\n");
-    const prompt = weekSummary + "\n\n" + e.sys + "\n" + dimList + "\n\n瀵规瘡涓淮搴︽墦鍒嗗苟鍚勫啓涓€鍙ヨ瘎浠枫€傚彧杈撳嚭JSON:\n{\"dims\":[{\"name\":\"缁村害鍚峔",\"score\":N,\"comment\":\"璇勪环\"}],\"overall\":N,\"summary\":\"涓€鍙ヨ瘽鎬昏瘎\"}";
-    
-    try {
-      const resp = await askDeepSeek(e.sys, prompt);
-      console.log(e.role + ": " + resp.substring(0, 200));
-      const match = resp.match(/\{[\s\S]*\}/);
-      if (match) {
-        const obj = JSON.parse(match[0]);
-        allScores[e.id] = obj;
-        console.log("  Overall: " + obj.overall + "/10, Dims: " + (obj.dims||[]).map(d=>d.name+":"+d.score).join(", "));
-      }
-    } catch(err) {
-      console.log(e.role + ": FAIL - " + err.message);
+  const mmScore = rep["memory-manager"] ? rep["memory-manager"].score : 80;
+  let summary = "本周记忆管理师工作实录：";
+  summary += "\n- 当前信誉分: " + mmScore;
+  summary += "\n- 系统已运行 " + entries.length + " 天";
+  
+  if (last) {
+    if (last.weaknesses && last.weaknesses.length > 0) {
+      summary += "\n- 本周弱点: " + last.weaknesses.slice(0, 2).join("; ");
+    }
+    if (last.rootCause) {
+      summary += "\n- 根因分析: " + last.rootCause;
+    }
+    if (last.ruleChanges > 0) {
+      summary += "\n- 规则变更: " + last.ruleChanges + " 条";
+    }
+    if (last.learnings) {
+      summary += "\n- 经验总结: " + last.learnings.slice(0, 200);
     }
   }
   
-  // Now have memory manager respond
-  console.log("\n=== 璁板繂绠＄悊甯堣京璇佸鐩?===\n");
+  return summary;
+}
+
+async function runEvals() {
+  if (!KEY) { throw new Error("DEEPSEEK_API_KEY 未设置"); }
   
-  const feedbackSummary = evals.map(e => {
-    const s = allScores[e.id];
-    if (!s) return "";
-    return e.role + " (" + (s.overall||"?") + "/10): " + (s.summary||"") + "\n鎵硅瘎鐐? " + (s.dims||[]).filter(d=>d.score<8).map(d=>d.name+":"+d.comment).join("; ");
-  }).join("\n\n");
+  const allScores = {};
+  const weekSummary = buildWeekSummary();
   
-  const mmSys = "浣犳槸璁板繂绠＄悊甯堛€備綘鐨勮亴璐ｆ槸澶嶇洏鍙嶆€濓紝浣嗕笉鏄竴鍛虫帴鍙楁壒璇勨€斺€斾綘闇€瑕佽京璇佹€濊€冿細鍝簺鎵硅瘎鍚堢悊銆佸摢浜涜鐐逛綘涓嶅悓鎰忋€佷负浠€涔堛€備綘闇€瑕佺淮鎶よ嚜宸辩殑鍒ゆ柇鍚屾椂铏氬績鏀硅繘銆?;
-  const mmPrompt = "鏀跺埌浠ヤ笅鍙嶉锛歕n\n" + feedbackSummary + "\n\n璇峰姣忔潯鎵硅瘎杩涜杈╄瘉鍥炲簲锛堟帴鍙?閮ㄥ垎鎺ュ彈/鍙嶉┏锛屽悇50瀛楀唴锛夛紝鐒跺悗缁欏嚭浣犵殑涓嬪懆鏀硅繘璁″垝锛?鏉★級銆俓n鍙緭鍑篔SON: {\"responses\":[{\"from\":\"瑙掕壊鍚峔",\"verdict\":\"鎺ュ彈鎴栭儴鍒嗘帴鍙楁垨鍙嶉┏\",\"reply\":\"浣犵殑鍥炲簲\"}],\"improvements\":[\"鏀硅繘1\",\"鏀硅繘2\",\"鏀硅繘3\"]}";
+  for (const agent of AGENTS) {
+    const dimList = agent.dims.map((d, i) => (i + 1) + ". " + d.name + "：" + d.desc).join("\n");
+    const prompt = [
+      "## 本周工作背景",
+      weekSummary,
+      "",
+      "## 评价任务",
+      "你是" + agent.name + "，" + agent.personality + "。",
+      "请从以下三个维度给记忆管理师打分（每个0-10分）：",
+      dimList,
+      "",
+      '只输出JSON，不要其他内容：',
+      JSON.stringify({
+        dims: agent.dims.map(d => ({ name: d.name, score: 0, comment: "你的评价" })),
+        overall: 0,
+        summary: "一句话总评"
+      })
+    ].join("\n");
+    
+    try {
+      const resp = await askDeepSeek(agent.sys, prompt);
+      console.log(agent.name + " 评价完成");
+      const match = resp.match(/\{[\s\S]*\}/);
+      if (match) {
+        try {
+          const obj = JSON.parse(match[0]);
+          allScores[agent.id] = obj;
+          console.log("  综合: " + obj.overall + "/10");
+          if (obj.dims) {
+            obj.dims.forEach(function(d) { console.log("  " + d.name + ": " + d.score); });
+          }
+        } catch (parseErr) {
+          console.log("  解析失败，使用原始响应");
+          allScores[agent.id] = { _raw: resp.slice(0, 500), dims: [], overall: 0, summary: "" };
+        }
+      }
+    } catch(err) {
+      console.log(agent.name + " 失败: " + err.message);
+    }
+  }
+  
+  // Memory manager responds
+  console.log("\n=== 记忆管理师辩证复盘 ===\n");
+  
+  const feedbackLines = [];
+  for (const agent of AGENTS) {
+    const s = allScores[agent.id];
+    if (!s) continue;
+    const dimComments = (s.dims || []).filter(function(d) { return d.score < 8; })
+      .map(function(d) { return d.name + "(" + d.score + "):" + (d.comment || ""); }).join("; ");
+    feedbackLines.push(agent.name + " (" + (s.overall || "?") + "/10): " + (s.summary || ""));
+    if (dimComments) feedbackLines.push("  批评点: " + dimComments);
+  }
+  
+  const mmPrompt = [
+    "收到以下反馈：\n",
+    feedbackLines.join("\n\n"),
+    "",
+    "请对每条批评进行辩证回应（接受/部分接受/反驳，各50字内），然后给出下周改进计划（3条）。",
+    '只输出JSON：{"responses":[{"from":"角色名","verdict":"接受或部分接受或反驳","reply":"你的回应"}],"improvements":["改进1","改进2","改进3"]}'
+  ].join("\n");
+  
+  const mmSys = "你是记忆管理师。你的职责是复盘反思，但不是一味接受批评——你需要辩证思考：哪些批评合理、哪些观点你不同意、为什么。你需要维护自己的判断同时虚心改进。";
   
   try {
     const mmResp = await askDeepSeek(mmSys, mmPrompt);
-    console.log("绠＄悊甯堝洖搴? " + mmResp.substring(0, 300));
+    console.log("记忆管理师回应完成");
     const match = mmResp.match(/\{[\s\S]*\}/);
     if (match) {
-      allScores["memory-manager"] = JSON.parse(match[0]);
+      try {
+        allScores["memory-manager"] = JSON.parse(match[0]);
+      } catch (e) {
+        allScores["memory-manager"] = { responses: [], improvements: [], _raw: mmResp.slice(0, 500) };
+      }
     }
   } catch(err) {
-    console.log("绠＄悊甯堝洖搴斿け璐? " + err.message);
+    console.log("记忆管理师回应失败: " + err.message);
   }
   
-  fs.writeFileSync("C:/Users/beppi/Documents/Codex/YUTATA121386.github.io/scripts/mm-scores.json", JSON.stringify(allScores, null, 2), "utf-8");
-  console.log("\nFinal scores saved");
+  fs.writeFileSync(SCORES_FILE, JSON.stringify(allScores, null, 2), "utf-8");
+  console.log("\n环评结果已保存至 mm-scores.json");
   return allScores;
 }
 
-runEvals().then(scores => {
-  console.log("\n=== 璇勫垎姹囨€?===");
-  const evals2 = ["collector","verifier","analyst","editor"];
-  evals2.forEach(id => {
-    const s = scores[id];
-    if (s) console.log(id + ": " + s.overall + "/10 - " + (s.summary||""));
+// 独立运行时直接执行
+if (require.main === module) {
+  runEvals().then(function(scores) {
+    console.log("\n=== 评分汇总 ===");
+    AGENTS.forEach(function(a) {
+      const s = scores[a.id];
+      if (s) console.log(a.name + ": " + (s.overall || "?") + "/10 - " + (s.summary || ""));
+    });
+  }).catch(function(err) {
+    console.error("环评失败:", err.message);
+    process.exit(1);
   });
-}).catch(console.error);
+}
+
+module.exports = { runEvals, AGENTS };
