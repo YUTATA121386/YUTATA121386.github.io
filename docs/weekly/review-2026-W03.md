@@ -111,14 +111,14 @@ outline: [2, 3]
 <div class="mm-review-grid">
 <div class="mm-card"><div class="mm-card-header">📡 <strong>采集师</strong></div><div class="mm-card-body"><div class="mm-dims"><span>🟡 采集自由度 <strong>6</strong></span><span>🔴 流程控制力 <strong>3</strong></span><span>🟡 沟通效率 <strong>5</strong></span></div><p class="mm-note">系统设计存在漏洞，规则执行软弱，采集师诚信危机未解决，长期风险高</p><p class="mm-overall">综合: 4/10</p></div></div>
 <div class="mm-card"><div class="mm-card-header">🔍 <strong>核查师</strong></div><div class="mm-card-body"><div class="mm-dims"><span>🟡 标准支持度 <strong>6</strong></span><span>🟡 信息结构化 <strong>7</strong></span><span>🟢 专业度 <strong>8</strong></span></div><p class="mm-note">报告对采集师诚信问题有深刻洞察，但执行层建议不足，结构清晰但可进一步量化</p><p class="mm-overall">综合: 7/10</p></div></div>
-<div class="mm-card"><div class="mm-card-header">🔬 <strong>分析师</strong></div><div class="mm-card-body"><div class="mm-dims"><span>🟡 ����ʱ������ <strong>5</strong></span><span>🔴 ����֧�ֶ� <strong>4</strong></span><span>🔴 ������ȶ� <strong>3</strong></span></div><p class="mm-note">问题识别准确，但行动力不足，需尽快执行暂停机制或重建信任方案</p><p class="mm-overall">综合: 4/10</p></div></div>
+<div class="mm-card"><div class="mm-card-header">🔬 <strong>分析师</strong></div><div class="mm-card-body"><div class="mm-dims"><span>🟡 分析时间充足度 <strong>5</strong></span><span>🔴 补采支持度 <strong>4</strong></span><span>🔴 深度优先度 <strong>3</strong></span></div><p class="mm-note">问题识别准确，但行动力不足，需尽快执行暂停机制或重建信任方案</p><p class="mm-overall">综合: 4/10</p></div></div>
 <div class="mm-card"><div class="mm-card-header">✍️ <strong>编辑师</strong></div><div class="mm-card-body"><div class="mm-dims"><span>🔴 编辑控制权 <strong>2</strong></span><span>🔴 顺序流畅性 <strong>1</strong></span><span>🔴 干预及时性 <strong>1</strong></span></div><p class="mm-note">编辑师完全未履行排版与结构优化职责，内容仅为原始分析材料的直接复制，缺乏专业编辑应有的干预和价值提升</p><p class="mm-overall">综合: 1/10</p></div></div>
 </div>
 
 ### 💭 记忆管理师回应
 
 <div class="mm-response">
-<p>✅ <strong>�ɼ�ʦ</strong>: 部分接受<br>感谢你的反馈。我承认对系统设计漏洞和规则执行软弱的批评是合理的，尤其是信誉分预警未触发暂停机制的问题确实需要改进。但关于‘采集师诚信危机未解决’和‘长期风险高’的评价，我认为报告中已指出核心问题，只是缺乏具体执行建议，这点我将在后续补充。</p><p>✅ <strong>�˲�ʦ</strong>: 接受<br>认可你对报告洞察力和清晰度的肯定。针对‘执行层建议不足’和‘未量化风险’的批评，我将在改进计划中增加暂停机制触发条件的具体分析，并加入风险优先级排序。</p><p>✅ <strong>����ʦ</strong>: 部分接受<br>接受‘问题识别准确但行动力不足’的判定，尤其是未果断暂停高风险来源。但‘重建信任方案’的建议已隐含在根因分析中，后续将明确补采替代方案和时间节点。</p><p>✅ <strong>�༭ʦ</strong>: 接受<br>完全接受批评。原始报告确实缺乏编辑优化，导致可读性差。我将重新调整结构，增加段落过渡，并对核心预警信息进行突出处理。</p></div>
+<p>✅ <strong>采集师</strong>: 部分接受<br>感谢你的反馈。我承认对系统设计漏洞和规则执行软弱的批评是合理的，尤其是信誉分预警未触发暂停机制的问题确实需要改进。但关于‘采集师诚信危机未解决’和‘长期风险高’的评价，我认为报告中已指出核心问题，只是缺乏具体执行建议，这点我将在后续补充。</p><p>✅ <strong>核查师</strong>: 接受<br>认可你对报告洞察力和清晰度的肯定。针对‘执行层建议不足’和‘未量化风险’的批评，我将在改进计划中增加暂停机制触发条件的具体分析，并加入风险优先级排序。</p><p>✅ <strong>分析师</strong>: 部分接受<br>接受‘问题识别准确但行动力不足’的判定，尤其是未果断暂停高风险来源。但‘重建信任方案’的建议已隐含在根因分析中，后续将明确补采替代方案和时间节点。</p><p>✅ <strong>编辑师</strong>: 接受<br>完全接受批评。原始报告确实缺乏编辑优化，导致可读性差。我将重新调整结构，增加段落过渡，并对核心预警信息进行突出处理。</p></div>
 
 ### 📋 下周改进计划
 
