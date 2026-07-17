@@ -241,44 +241,64 @@ function generateRuleVersion(dateStr) {
 
 // ===================== 提取 JSON =====================
 function extractJSON(text) {
-  // Try ```json ... ``` block
-  const blockMatch = text.match(/```json\s*([\s\S]*?)```/);
+  if (!text || typeof text !== "string") {
+    return { _parse_failed: true, raw_output: "", actions: [], messages: [], internal_thought: "" };
+  }
+  function tryParse(str) {
+    try { return JSON.parse(str); } catch (e) { /* continue */ }
+    try {
+      var fixed2 = str.replace(/,(\s*[}\]])/g, "$1");
+      return JSON.parse(fixed2);
+    } catch (e) { /* continue */ }
+    try {
+      var fixed3 = str
+        .replace(/,(\s*[}\]])/g, "$1")
+        .replace(/[\u0000-\u001F\u007F-\u009F]/g, "")
+        .replace(/\\(?![\\\/bfnrtu"])/g, "\\\\");
+      return JSON.parse(fixed3);
+    } catch (e) { /* continue */ }
+    try {
+      var fixed4 = str
+        .replace(/'/g, '"')
+        .replace(/([{,]\s*)(\w+)(\s*:)/g, '$1"$2"$3')
+        .replace(/,(\s*[}\]])/g, "$1");
+      return JSON.parse(fixed4);
+    } catch (e) { /* continue */ }
+    return null;
+  }
+  var blockMatch = text.match(/```(?:json)\s*([\s\S]*?)```/);
   if (blockMatch) {
-    try { return JSON.parse(blockMatch[1]); } catch (e) {
-      // Try fixing common issues: unescaped quotes, trailing commas
-      try {
-        let fixed = blockMatch[1].replace(/,(\s*[}\]])/g, "$1");
-        return JSON.parse(fixed);
-      } catch {}
-    }
+    var result = tryParse(blockMatch[1].trim());
+    if (result) return result;
   }
-  // Try ``` ... ``` (no language tag)
-  const anyBlock = text.match(/```\s*([\s\S]*?)```/);
-  if (anyBlock && anyBlock[1].includes("{")) {
-    try { return JSON.parse(anyBlock[1]); } catch {}
+  var anyBlock = text.match(/```\s*([\s\S]*?)```/);
+  if (anyBlock && anyBlock[1].indexOf("{") !== -1) {
+    var result2 = tryParse(anyBlock[1].trim());
+    if (result2) return result2;
   }
-  // Try raw JSON object
-  const jsonMatch = text.match(/\{[\s\S]*\}/);
-  if (jsonMatch) {
-    try { return JSON.parse(jsonMatch[0]); } catch (e) {
-      // Fix trailing commas
-      try {
-        let fixed = jsonMatch[0].replace(/,(\s*[}\]])/g, "$1");
-        return JSON.parse(fixed);
-      } catch {}
-    }
+  var firstBrace = text.indexOf("{");
+  var lastBrace = text.lastIndexOf("}");
+  if (firstBrace !== -1 && lastBrace > firstBrace) {
+    var jsonCandidate = text.slice(firstBrace, lastBrace + 1);
+    var result3 = tryParse(jsonCandidate);
+    if (result3) return result3;
   }
-  // If nothing worked, return a minimal fallback with the raw text
+  var cleanText = text.replace(/^#+\s*/gm, "").replace(/\*{1,2}/g, "").replace(/`/g, "").trim();
+  var cb = cleanText.indexOf("{");
+  var ce = cleanText.lastIndexOf("}");
+  if (cb !== -1 && ce > cb) {
+    var result4 = tryParse(cleanText.slice(cb, ce + 1));
+    if (result4) return result4;
+  }
   return {
     _parse_failed: true,
-    raw_output: text.slice(0, 2000),
+    raw_output: text.slice(0, 3000),
     actions: [],
     messages: [],
-    internal_thought: text.slice(0, 200)
+    internal_thought: text.slice(0, 300)
   };
 }
 
-// ===================== 日志记录 =====================
 function logg(agent, message) {
   const name = AGENT_NAMES_CN[agent] || agent;
   console.log(`[${name}] ${message}`);

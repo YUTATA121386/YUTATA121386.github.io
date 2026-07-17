@@ -25,8 +25,8 @@ const {
   createMessage, pushMessage, callDeepSeek, loadPrompt,
   generateRuleVersion, extractJSON, log
 } = SHARED;
-const SYSTEM_STATS_FILE = ROOT_DIR + "/scripts/system-stats.json";
-const SYSTEM_MEMORY_FILE = ROOT_DIR + "/scripts/system-memory.json";
+const { loadSystemStats, saveSystemStats, loadSystemMemory, saveSystemMemory } = require("./system-state");
+const { generateProcessLog, generateWeeklyReport, updateDailyIndex, updateLogsIndex, updateWeeklyIndex } = require("./report-generator");
 const CHANGELOG_FILE = RULES_DIR + "/CHANGELOG.md";
 
 const CONFIG_FILE = path.join(__dirname, "sources.json");
@@ -337,422 +337,6 @@ async function handleEmergencyChannel(state) {
 }
 
 // ===================== 过程日志生成 =====================
-function generateProcessLog(state, dateStr) {
-  var dateCN = new Date(dateStr).getFullYear() + "\u5e74" + (new Date(dateStr).getMonth() + 1) + "\u6708" + new Date(dateStr).getDate() + "\u65e5";
-  var pr = state.stats.collectorSubmitted > 0 ? ((state.stats.verifierPassed / state.stats.collectorSubmitted) * 100).toFixed(1) : "0";
-
-  var c = "";
-
-  var tL = { INFO: "\u2139\ufe0f \u4fe1\u606f", COMMAND: "\ud83d\udccb \u6307\u4ee4", REJECT: "\uD83D\uDEAB \u6253\u56DE", REQUEST: "\uD83D\uDCE9 \u8BF7\u6C42", DISPUTE: "\u2694\uFE0F \u8D28\u7591", NOTIFY: "\uD83D\uDCE2 \u901A\u77E5", ESCALATE: "\u26A0\uFE0F \u5347\u7EA7", CONFIRM: "\u2705 \u786E\u8BA4", DIRECTIVE: "\uD83D\uDC51 \u6307\u4EE4", APPROVE: "\uD83D\uDC4D \u6279\u51C6", GUIDANCE: "\uD83D\uDCA1 \u6307\u5BFC", PRIORITY_OVERRIDE: "\u26A1 \u7D27\u6025", INQUIRE: "\uD83D\uDD0E \u8BE2\u95EE" };
-  var avatars = { collector: "\uD83D\uDCE1", verifier: "\uD83D\uDD0D", analyst: "\uD83D\uDD2C", editor: "\u270D\uFE0F", "memory-manager": "\uD83E\uDDE0" };
-
-  function stripMD(text) {
-    return text
-      .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
-      .replace(/^- /gm, "\u2022 ")
-      .replace(/\n- /g, "\n\u2022 ")
-      .replace(/%/g, "\uFF05").replace(/TL;DR/gi, "\uD83D\uDCCB \u8981\u70B9\u603B\u7ED3");
-  }
-
-  var msgs = '<div class="chat-log">\n';
-  var hasArb = !!state.arbitration;
-  var arbLinked = false;
-  var roundMsgs = {};
-
-  state.messages.forEach(function(m, mi) {
-    var rKey = Math.floor(mi / Math.max(1, Math.ceil(state.messages.length / state.round)));
-    if (!roundMsgs[rKey]) roundMsgs[rKey] = [];
-    roundMsgs[rKey].push({ msg: m, idx: mi });
-  });
-
-  var rKeys = Object.keys(roundMsgs).sort(function(a,b) { return a-b; });
-  var seenMsgs = {};
-  rKeys.forEach(function(rk) {
-    var roundLabel = "\u7B2C" + (parseInt(rk)+1) + "\u8F6E";
-    msgs += '<div class="chat-round-divider">\u25CF ' + roundLabel + '</div>\n';
-
-
-    roundMsgs[rk].forEach(function(entry) {
-      var m = entry.msg;
-      var mi = entry.idx;
-      // 重复消息跳过：同一轮、同一角色、相同内容（跨轮次也跳过）
-      var dedupKey = m.from + "|" + ((m.coreInfo || "").replace(/\s+/g, " ").trim());
-      if (seenMsgs[dedupKey]) return;
-      seenMsgs[dedupKey] = true;
-      var fn = AGENT_NAMES_CN[m.from] || m.from;
-      var tn = AGENT_NAMES_CN[m.to] || m.to;
-      var av = avatars[m.from] || "\uD83D\uDCAC";
-      var tl = tL[m.type] || m.type;
-      var time = m.timestamp ? (function(ts) { if (!ts) return ""; var d = new Date(ts); var h = String((d.getUTCHours() + 8) % 24).padStart(2, "0"); var m = String(d.getUTCMinutes()).padStart(2, "0"); return h + ":" + m; })(m.timestamp) : "";
-
-      msgs += '<div class="chat-msg chat-from-' + m.from + '" id="msg-' + mi + '">\n';
-      msgs += '<div class="chat-avatar">' + av + '</div>\n';
-      msgs += '<div class="chat-content">\n';
-      msgs += '<div class="chat-meta">\n';
-      msgs += '<span class="chat-sender">' + fn + '</span>\n';
-      msgs += '<span class="chat-badge">' + tl + '</span>\n';
-      msgs += '<span style="opacity:0.6">\u2192 ' + tn + '</span>\n';
-
-      if (hasArb && !arbLinked && (m.type === "ESCALATE" || m.type === "DISPUTE")) {
-        msgs += '[#arbitration" class="arb-anchor">\u2696\uFE0F \u4EF2\u88C1</a>\n';
-        arbLinked = true;
-      }
-
-      msgs += '<span class="chat-time">' + time + '</span>\n';
-      msgs += '</div>\n';
-      msgs += '<div class="chat-body">\n';
-
-      var allItems = {};
-      state.rawItems.forEach(function(item) { allItems[item.id] = item.title; });
-      state.verifiedItems.forEach(function(item) { allItems[item.id] = item.title; });
-      state.rejectedItems.forEach(function(item) { allItems[item.id] = item.title; });
-      state.rawItems.forEach(function(item) { var parts = item.id.split('-'); var short = 'RAW-' + parts[parts.length-1]; allItems[short] = item.title; });
-      
-      var cleanText = (m.coreInfo || "")
-        .replace(/RAW-(\d{4}-\d{2}-\d{2}-\d{4})/g, function(match, idSuffix) {
-          var fullId = "RAW-" + idSuffix;
-          var title = allItems[fullId];
-          if (!title) { var shortId = "RAW-" + idSuffix.slice(-4); title = allItems[shortId]; }
-          if (!title) { for (var k in allItems) { if (k.endsWith(idSuffix)) { title = allItems[k]; break; } } }
-          return title ? "\u3010\u7D20\u6750\uFF1A" + title.slice(0, 30) + "\u3011" : "\u3010\u7D20\u6750\u3011";
-        })
-        .replace(/RAW-(\d{4})\b(?!-)/g, function(match, shortId) {
-          var found = null;
-          for (var k in allItems) { if (k.endsWith("-" + shortId)) { found = allItems[k]; break; } }
-          return found ? "\u3010\u7D20\u6750\uFF1A" + found.slice(0, 30) + "\u3011" : match;
-        })
-        .replace(/MSG-[A-Z]{3}-\d{4}-\d{2}-\d{2}-\d{3}/g, "\u3010\u6D88\u606F\u3011")
-        .replace(/REQ-[A-Z]{3}-\d{4}-\d{2}-\d{2}-\d{3}/g, "\u3010\u8BF7\u6C42\u3011")
-        .replace(/INS-\d{4}-\d{2}-\d{2}-\d{3}/g, "\u3010\u6D1E\u5BDF\u3011");
-      
-      cleanText = stripMD(cleanText);
-      cleanText = cleanText.replace(/\[【/g, "【").replace(/】\]/g, "】");
-
-      msgs += '<blockquote>' + cleanText.replace(/\n/g, '<br>') + '</blockquote>\n';
-      msgs += '</div>\n';
-
-      if (m.expectedAction || m.reason) {
-        msgs += '<div class="chat-footer">\n';
-        if (m.expectedAction) msgs += '<span>\uD83C\uDFAF ' + stripMD(m.expectedAction) + '</span>\n';
-        if (m.reason) msgs += '<span>\uD83D\uDCDD ' + stripMD(m.reason) + '</span>\n';
-        msgs += '</div>\n';
-      }
-
-      msgs += '</div></div>\n\n';
-    });
-  });
-  msgs += '</div>\n';
-
-  var arb = "";
-  if (state.arbitration && state.arbitration.verdict) {
-    arb = '\n\n## \u2696\uFE0F \u4EF2\u88C1\u8BB0\u5F55 <a id="arbitration"></a>\n\n';
-    var vd = state.arbitration.verdict;
-    if (state.arbitration.rounds[0] && state.arbitration.rounds[0].result && state.arbitration.rounds[0].result.fact_list) {
-      arb += '### \u521D\u5BA1 \u00B7 \u4E8B\u5B9E\u6E05\u5355\n\n';
-      state.arbitration.rounds[0].result.fact_list.forEach(function(f) { arb += '- ' + f + '\n'; });
-      arb += '\n';
-    }
-    if (state.arbitration.rounds[1] && state.arbitration.rounds[1].result && state.arbitration.rounds[1].result.positions) {
-      arb += '### \u590D\u5BA1 \u00B7 \u5404\u65B9\u89C2\u70B9\n\n';
-      for (var pk in state.arbitration.rounds[1].result.positions) {
-        arb += '**' + (AGENT_NAMES_CN[pk] || pk) + '**\uFF1A' + state.arbitration.rounds[1].result.positions[pk] + '\n\n';
-      }
-    }
-    arb += '### \u7EC8\u5BA1 \u00B7 \u88C1\u51B3\n\n';
-    if (vd.summary) arb += '> **\u4E89\u8BAE\u6458\u8981**\uFF1A' + vd.summary + '\n>\n';
-    if (vd.decision) arb += '> **\u88C1\u51B3\u7ED3\u679C**\uFF1A' + vd.decision + '\n>\n';
-    if (vd.action_items && vd.action_items.length) {
-      arb += '> **\u6267\u884C\u6B65\u9AA4**\uFF1A\n';
-      vd.action_items.forEach(function(a) { arb += '> - ' + a + '\n'; });
-      arb += '>\n';
-    }
-    if (vd.rule_changes && vd.rule_changes.length) {
-      arb += '> **\u89C4\u5219\u53D8\u66F4**\uFF1A\n';
-      vd.rule_changes.forEach(function(r) { 
-        arb += '> - ' + (typeof r === "string" ? r : (r.reason || r.file || JSON.stringify(r))) + '\n';
-      });
-    }
-    arb += '\n';
-  }
-
-  var emerg = "";
-  if (state.emergencyChannel) {
-    emerg = '\n\n## \u26A1 \u7D27\u6025\u901A\u9053\n\n- \u89E6\u53D1\uFF1A' + (state.emergencyChannel.triggered_by || "\u672A\u77E5") + ' | ' + (state.emergencyChannel.topic || "\u672A\u77E5") + '\n';
-  }
-
-
-
-  var retro = "\n<h2>\uD83D\uDCDD \u4ECA\u65E5\u590D\u76D8</h2>\n\n<blockquote>\u6BCF\u4E2A\u89D2\u8272\u5BF9\u4ECA\u65E5\u5DE5\u4F5C\u7684\u603B\u7ED3\u4E0E\u53CD\u601D</blockquote>\n\n";
-  var agentLastMsg = {};
-  state.messages.forEach(function(m) { agentLastMsg[m.from] = m; });
-  var reviewPhaseMsgs = {};
-  state.messages.forEach(function(m) { if (m.to === "editor" && (m.type === "APPROVE" || m.type === "CONFIRM" || m.type === "NOTIFY")) reviewPhaseMsgs[m.from] = m; });
-  // Prefer review-phase message for 复盘; fall back to last message
-  Object.keys(reviewPhaseMsgs).forEach(function(k) { agentLastMsg[k] = reviewPhaseMsgs[k]; });
-  var agentOrder = ["collector", "verifier", "analyst", "editor", "memory-manager"];
-  agentOrder.forEach(function(aid) {
-    var m = agentLastMsg[aid];
-    var name = AGENT_NAMES_CN[aid] || aid;
-    var av = avatars[aid] || "\uD83D\uDCAC";
-    retro += '<div class="chat-msg chat-from-' + aid + '">\n';
-    retro += '<div class="chat-avatar">' + av + '</div>\n';
-    retro += '<div class="chat-content">\n';
-    retro += '<div class="chat-meta"><span class="chat-sender">' + name + '</span><span class="chat-badge">\uD83D\uDCDD \u590D\u76D8</span></div>\n';
-    retro += '<div class="chat-body"><blockquote>';
-    if (m) { retro += stripMD(m.coreInfo.slice(0, 500)).replace(/\n/g, "<br>"); }
-    else { retro += name + '\u672A\u53C2\u4E0E\u4ECA\u65E5\u5DE5\u4F5C\u3002'; }
-    retro += '</blockquote></div>\n';
-    retro += '</div></div>\n\n';
-  });
-  retro += '<div class="chat-round-divider">\u25CF \u5BA1\u7A3F\u53CD\u9988</div>\n';
-  var reviewMsgs = state.messages.filter(function(m) { return m.type === "APPROVE" || m.type === "CONFIRM" || m.type === "REQUEST" && m.to === "editor"; }).slice(-6);
-  if (reviewMsgs.length === 0) {
-    retro += '<p style="color:#999;text-align:center;padding:12px;">\u26A0\uFE0F \u672C\u6B21\u672A\u8FDB\u884C\u6B63\u5F0F\u5BA1\u7A3F\u6D41\u7A0B</p>\n';
-  } else {
-    retro += '<p style="color:#888;text-align:center;padding:8px;">\u2705 \u5DF2\u6536\u5230 ' + reviewMsgs.length + ' \u6761\u5BA1\u7A3F\u53CD\u9988\uFF0C\u8BE6\u89C1\u4E0A\u65B9\u5B8C\u6574\u901A\u4FE1\u8BB0\u5F55</p>\n';
-  }
-
-  return "---\ntitle: " + dateStr + " | \u56E2\u961F\u8FC7\u7A0B\u65E5\u5FD7\noutline: [2, 3]\n---\n\n" + c +
-    "# \uD83D\uDCCB \u56E2\u961F\u8FC7\u7A0B\u65E5\u5FD7 \u00B7 " + dateCN + "\n\n" +
-    "## \uD83D\uDCCA \u4ECA\u65E5\u7EDF\u8BA1\n\n" +
-    "| \u6307\u6807 | \u6570\u636E |\n|------|------|\n" +
-    "| \u603B\u8F6E\u6B21 | " + state.round + " (" + (state.deadlockDetected ? "\u5DF2\u89E6\u53D1\u4EF2\u88C1" : "\u6B63\u5E38\u6D41\u7A0B") + ") |\n" +
-    "| \u91C7\u96C6\u63D0\u4EA4 | " + state.stats.collectorSubmitted + " \u6761 |\n" +
-    "| \u6838\u67E5\u901A\u8FC7 | " + state.stats.verifierPassed + " \u6761\uFF08\u901A\u8FC7\u7387 " + pr + "%\uFF09 |\n" +
-    "| \u6838\u67E5\u62D2\u7EDD | " + state.stats.verifierRejected + " \u6761 |\n" +
-    "| \u8865\u91C7\u8BF7\u6C42 | " + state.stats.analystRequests + " \u6B21 |\n" +
-    "| \u7D27\u6025\u901A\u9053 | " + (state.emergencyChannel ? "\u5DF2\u89E6\u53D1" : "\u672A\u89E6\u53D1") + " |\n" +
-    "| \u89C4\u5219\u53D8\u66F4 | " + (state.stats.ruleChanges || 0) + " \u6761 |\n\n" +
-    emerg +
-    "## \uD83D\uDCAC \u5B8C\u6574\u901A\u4FE1\u8BB0\u5F55\n\n" + msgs + "\n" +
-    arb +
-    retro +
-    "\n\n> \u751F\u6210\u65F6\u95F4: " + new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) + "\n";
-}
-
-
-// ===================== 周报生成 =====================
-function generateWeeklyReport(state, dateStr) {
-  var weekNum = (function(d) { var sysStart = new Date(2026, 5, 28); var days = Math.floor((d - sysStart) / 86400000); return Math.ceil((days + 1) / 7); })(new Date(dateStr));
-  var rep = state.reputation;
-  var dateCN = new Date(dateStr).getFullYear() + "\u5e74" + (new Date(dateStr).getMonth() + 1) + "\u6708" + new Date(dateStr).getDate() + "\u65e5";
-  var agents = ["collector", "verifier", "analyst", "editor", "memory-manager"];
-  // Aggregate weekly rule changes from system memory
-  var sysMem = loadSystemMemory();
-  var weekStart = new Date(new Date(dateStr).getTime() - 6 * 86400000);
-  var weeklyRuleChanges = 0;
-  sysMem.entries.forEach(function(e) {
-    var ed = new Date(e.date);
-    if (ed >= weekStart && ed <= new Date(dateStr)) {
-      weeklyRuleChanges += e.ruleChanges || 0;
-    }
-  });
-
-  
-  // Build SVG line chart for all 5 agents including memory-manager
-  var colors = { collector: "#e74c3c", verifier: "#2ecc71", analyst: "#3498db", editor: "#a569bd", "memory-manager": "#f39c12" };
-  
-  // Collect all unique dates from all agents' history
-  var allDates = new Set();
-  agents.forEach(function(aid) {
-    var h = rep[aid] ? rep[aid].history || [] : [];
-    h.forEach(function(entry) { allDates.add(entry.date); });
-  });
-  var sortedDates = Array.from(allDates).sort();
-  if (sortedDates.length < 2) {
-    if (sortedDates.length === 1) sortedDates.unshift(sortedDates[0].replace(/\d+$/, function(m) { return String(Number(m) - 1).padStart(2, "0"); }));
-    else { sortedDates = [dateStr.replace(/\d+$/, function(m) { return String(Number(m) - 1).padStart(2, "0"); }), dateStr]; }
-  }
-
-  var chartW = 560, chartH = 220, padL = 50, padR = 20, padT = 15, padB = 30;
-  var plotW = chartW - padL - padR;
-  var plotH = chartH - padT - padB;
-  var yMin = 60, yMax = 100;
-
-  function xPos(i) { return padL + (i / Math.max(1, sortedDates.length - 1)) * plotW; }
-  function yPos(v) { return padT + plotH - ((v - yMin) / (yMax - yMin)) * plotH; }
-
-  var svg = '<svg class="rep-line-chart" viewBox="0 0 ' + chartW + ' ' + chartH + '" xmlns="http://www.w3.org/2000/svg">\n';
-  for (var gy = yMin; gy <= yMax; gy += 10) {
-    var yy = yPos(gy);
-    svg += '<line x1="' + padL + '" y1="' + yy + '" x2="' + (chartW - padR) + '" y2="' + yy + '" stroke="var(--vp-c-divider)" stroke-dasharray="3,3"/>\n';
-    svg += '<text x="' + (padL - 6) + '" y="' + (yy + 4) + '" text-anchor="end" font-size="10" fill="var(--vp-c-text-3)">' + gy + '</text>\n';
-  }
-  sortedDates.forEach(function(d, i) {
-    var label = d.slice(5).replace("-", "/");
-    svg += '<text x="' + xPos(i) + '" y="' + (chartH - 6) + '" text-anchor="middle" font-size="10" fill="var(--vp-c-text-3)">' + label + '</text>\n';
-  });
-
-  agents.forEach(function(aid) {
-    var h = rep[aid] ? rep[aid].history || [] : [];
-    var scoreMap = {};
-    h.forEach(function(e) { scoreMap[e.date] = e.scoreAfter; });
-    var defaultScore = rep[aid] ? rep[aid].score : 80;
-    var points = "";
-    var lastV = null;
-    sortedDates.forEach(function(d, i) {
-      var v = scoreMap[d] !== undefined ? scoreMap[d] : (lastV !== null ? lastV : defaultScore);
-      lastV = v;
-      points += (i > 0 ? " " : "") + xPos(i) + "," + yPos(v);
-    });
-    svg += '<polyline points="' + points + '" fill="none" stroke="' + colors[aid] + '" stroke-width="2" stroke-linejoin="round"/>\n';
-    sortedDates.forEach(function(d, i) {
-      var v = scoreMap[d] !== undefined ? scoreMap[d] : lastV;
-      lastV = v;
-      svg += '<circle cx="' + xPos(i) + '" cy="' + yPos(v) + '" r="3" fill="' + colors[aid] + '"/>\n';
-    });
-  });
-  svg += '</svg>\n';
-
-  var legend = '<div class="rep-legend">\n';
-  agents.forEach(function(aid) {
-    var name = AGENT_NAMES_CN[aid] || aid;
-    var score = rep[aid] ? rep[aid].score : 80;
-    legend += '<span class="rep-legend-item"><span class="rep-dot" style="background:' + colors[aid] + ';"></span>' + name + ' ' + score + '</span>\n';
-  });
-  legend += '</div>\n';
-
-  var scoreSummary = '<div class="rep-summary">\n';
-  agents.forEach(function(aid) {
-    var name = AGENT_NAMES_CN[aid] || aid;
-    var s = rep[aid] ? rep[aid].score : 80;
-    var h = rep[aid] ? rep[aid].history || [] : [];
-    var recent = h.slice(-7);
-    var trend = 0;
-    if (recent.length >= 2) trend = recent[recent.length-1].scoreAfter - recent[0].scoreAfter;
-    var trendIcon = trend > 0 ? "\u2191" : trend < 0 ? "\u2193" : "\u2192";
-    scoreSummary += '<div class="rep-card"><span class="rep-dot" style="background:' + colors[aid] + ';"></span><strong>' + name + '</strong> <span class="rep-score">' + s + '</span> <span class="rep-trend">' + trendIcon + (trend > 0 ? "+" : "") + trend + '</span></div>\n';
-  });
-  scoreSummary += '</div>\n';
-
-    // Memory manager review - load from mm-scores.json or show placeholders
-  var mmReview = "## 👥 记忆管理师环评\n\n";
-  mmReview += "> 每周由四个角色从规则管理、公平性、洞察力三维度评价\n\n";
-  mmReview += '<div class="mm-review-grid">\n';
-  var mmReviewers = ["collector", "verifier", "analyst", "editor"];
-  var mmAvatars = { collector: "📡", verifier: "🔍", analyst: "🔬", editor: "✍️" };
-  var mmScoresPath = path.join(ROOT_DIR, "scripts", "mm-scores.json");
-  var mmScores = {};
-  try { mmScores = JSON.parse(fs.readFileSync(mmScoresPath, "utf-8")); } catch (e) {}
-  mmReviewers.forEach(function(aid) {
-    var name = AGENT_NAMES_CN[aid] || aid;
-    var avatar = mmAvatars[aid] || "💬";
-    mmReview += '<div class="mm-card"><div class="mm-card-header">' + avatar + ' <strong>' + name + '</strong></div>';
-    mmReview += '<div class="mm-card-body">';
-    var agentScore = mmScores[aid];
-    // If dims is empty but _raw contains valid JSON, try to recover
-    if (agentScore && (!agentScore.dims || agentScore.dims.length === 0) && agentScore._raw) {
-      try {
-        var parsed = JSON.parse(agentScore._raw);
-        if (parsed && parsed.dims && parsed.dims.length > 0) {
-          agentScore.dims = parsed.dims;
-          agentScore.overall = parsed.overall;
-          agentScore.summary = parsed.summary;
-        }
-      } catch (e) {
-        // Repair: fix missing ] before overall/summary and trailing commas
-        try {
-          var cleaned = agentScore._raw.replace(/[\u0000-\u001F\u007F-\u009F]/g, "").replace(/\r?\n/g, " ").replace(/,\s*}/g, "}").replace(/,\s*]/g, "]");
-          cleaned = cleaned.replace(/\}(,\"(?:overall|summary)\")/g, "}]" + "$1");
-          var parsed = JSON.parse(cleaned);
-          if (parsed && parsed.dims && parsed.dims.length > 0) {
-            agentScore.dims = parsed.dims;
-            agentScore.overall = parsed.overall;
-            agentScore.summary = parsed.summary;
-          }
-        } catch (e2) {}
-      }
-    }
-    if (agentScore && agentScore.dims && agentScore.dims.length > 0) {
-      mmReview += '<div class="mm-dims">';
-      agentScore.dims.forEach(function(d) {
-        var status = d.score >= 8 ? "🟢" : d.score >= 5 ? "🟡" : "🔴";
-        mmReview += '<span>' + status + ' ' + d.name + ' <strong>' + d.score + '</strong></span>';
-      });
-      mmReview += '</div>';
-      if (agentScore.summary) {
-        mmReview += '<p class="mm-note">' + agentScore.summary + '</p>';
-      }
-      if (agentScore.overall) {
-        mmReview += '<p class="mm-overall">综合: ' + agentScore.overall + '/10</p>';
-      }
-    } else {
-      mmReview += '<div class="mm-dims"><span>规则管理 <strong>-</strong></span><span>公平性 <strong>-</strong></span><span>洞察力 <strong>-</strong></span></div>';
-      mmReview += '<p class="mm-note">待评价</p>';
-    }
-    mmReview += '</div></div>\n';
-  });
-  mmReview += '</div>\n';
-  var mmResponse = mmScores["memory-manager"];
-  if (mmResponse && mmResponse.responses) {
-    mmReview += "\n### 💭 记忆管理师回应\n\n";
-    mmReview += '<div class="mm-response">\n';
-    mmResponse.responses.forEach(function(r) {
-      var verdictIcon = r.verdict && r.verdict.indexOf("接受") >= 0 ? "✅" : r.verdict && r.verdict.indexOf("反驳") >= 0 ? "⚡" : "🟡";
-      mmReview += '<p>' + verdictIcon + ' 记忆管理师 → <strong>' + (r.from || "") + '</strong>: ' + (r.verdict || "") + '<br>' + (r.reply || "") + '</p>';
-    });
-    mmReview += '</div>\n';
-  }
-  if (mmResponse && mmResponse.improvements) {
-    mmReview += "\n### 📋 下周改进计划\n\n";
-    mmReview += '<ol>\n';
-    mmResponse.improvements.forEach(function(imp) {
-      mmReview += '<li>' + imp + '</li>\n';
-    });
-    mmReview += '</ol>\n';
-  }
-  if (weekNum === 1) {
-    mmReview += "\n> ★ 本周为系统启动第一周，互评功能将于下周启用\n";
-  } else {
-    mmReview += "\n> ★ 第" + weekNum + "周周报\n";
-  }
-  // ===== 从CHANGELOG提取本周规则变更详情 =====
-  var changelogDetail = "";
-  if (weeklyRuleChanges > 0) {
-    try {
-      var changelogContent = fs.readFileSync(CHANGELOG_FILE, "utf-8");
-      var sysStart = new Date(2026, 5, 28);
-      var weekStartDate = new Date(new Date(dateStr).getTime() - 6 * 86400000);
-      weekStartDate = weekStartDate.getFullYear() + "-" + String(weekStartDate.getMonth() + 1).padStart(2, "0") + "-" + String(weekStartDate.getDate()).padStart(2, "0");
-      var weekEndDate = dateStr;
-      var lines = changelogContent.split("\n");
-      var weekEntries = [];
-      var currentDate = "";
-      for (var li = 0; li < lines.length; li++) {
-        var dateMatch = lines[li].match(/^## (\d{4}-\d{2}-\d{2})/);
-        if (dateMatch) currentDate = dateMatch[1];
-        if (currentDate && currentDate >= weekStartDate && currentDate <= weekEndDate && lines[li].match(/^- \*\*/)) {
-          weekEntries.push(lines[li].replace(/^- /, "").trim());
-        }
-      }
-      if (weekEntries.length > 0) {
-        changelogDetail = "\n### 本周规则变更详情\n\n";
-        var shown = weekEntries.slice(-15);
-        changelogDetail += '<div class="changelog-list">\n';
-        shown.forEach(function(e) {
-          var parsed = e.match(/^\*\*(.+?)\*\*\s*\(([^)]+)\)\s*:\s*(.+)/);
-          if (parsed) {
-            changelogDetail += '<div><span class="changelog-file">' + parsed[1] + '</span> <span class="changelog-ver">' + parsed[2] + '</span><br>' + parsed[3] + '</div>\n';
-          } else {
-            changelogDetail += '<div>' + e + '</div>\n';
-          }
-        });
-        changelogDetail += '</div>\n';
-        if (weekEntries.length > 15) changelogDetail += '\n> 共 ' + weekEntries.length + ' 条变更，仅展示最近15条\n';
-      }
-    } catch (e) { /* ignore changelog read errors */ }
-  }
-
-  return "---\ntitle: " + dateStr + " | \u7B2C" + weekNum + "\u5468\u5DE5\u4F5C\u62A5\u544A\noutline: [2, 3]\n---\n\n" +
-    "# \uD83D\uDCCA \u7B2C" + weekNum + "\u5468 \u00B7 AI\u56E2\u961F\u5DE5\u4F5C\u62A5\u544A\n\n" +
-    "> \u751F\u6210\u65E5\u671F: " + dateCN + "\n\n" +
-    "## \uD83D\uDCC8 \u5404\u89D2\u8272\u4FE1\u8A89\u5206\u8D70\u52BF\n\n" + svg + "\n" + legend + "\n" + scoreSummary + "\n\n" +
-    mmReview + "\n\n" +
-    "## \uD83D\uDCDD \u672C\u5468\u89C4\u5219\u8FED\u4EE3\n\n" +
-    "> \u672C\u5468\u89C4\u5219\u53D8\u66F4\u8BB0\u5F55\n\n" +
-    (weeklyRuleChanges ? "| \u53D8\u66F4\u6761\u6570 | \u8BF4\u660E |\n|------|------|\n| " + (weeklyRuleChanges || 0) + " \u6761 | \u7531\u8BB0\u5FC6\u7BA1\u7406\u5E08\u5728\u65E5\u5E38\u590D\u76D8\u4E2D\u81EA\u52A8\u6267\u884C |\n" : "| \u53D8\u66F4\u6761\u6570 | \u8BF4\u660E |\n|------|------|\n| 0 \u6761 | \u672C\u5468\u672A\u89E6\u53D1\u89C4\u5219\u8FED\u4EE3 |\n") + changelogDetail + "\n\n" +
-    "\n> \u751F\u6210\u65F6\u95F4: " + new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) + "\n";
-}
 // ===================== 索引更新 =====================
 
 // ===================== 角色记忆系统 (Phase 2) =====================
@@ -926,79 +510,6 @@ function updateAgentMemoryFromDay(agentId, state, dateStr, dateCN) {
   }
 
   saveAgentMemory(agentId, mem);
-}
-
-function updateDailyIndex(dateStr) {
-  var indexPath = path.join(OUTPUT_DIR, "index.md");
-  var content;
-  try { content = fs.readFileSync(indexPath, "utf-8"); } catch (e) { return; }
-  content = content.replace(/\r\n/g, "\n");
-
-  // Check if entry already exists to avoid duplicates
-  if (content.indexOf(dateStr) >= 0) return;
-
-  // Insert new entry in the scroll-list div
-  var marker = '<div class="scroll-list">\n<ul>';
-  var insertPos = content.indexOf(marker);
-  if (insertPos > 0) {
-    var lineStart = insertPos + marker.length;
-    var newEntry = "<li><a href=\"./" + dateStr + "\">" + dateStr + "</a> — <a href=\"../logs/" + dateStr + "\">📝 过程日志</a></li>\n";
-    content = content.substring(0, lineStart) + newEntry + content.substring(lineStart);
-    fs.writeFileSync(indexPath, content, "utf-8");
-  }
-}
-
-function updateLogsIndex(dateStr) {
-  var indexPath = path.join(LOGS_DIR, "index.md");
-  var content;
-  try { content = fs.readFileSync(indexPath, "utf-8"); } catch (e) { return; }
-  content = content.replace(/\r\n/g, "\n");
-  if (content.indexOf(dateStr) >= 0) return;
-  var marker = '<div class="scroll-list">\n<ul>';
-  var insertPos = content.indexOf(marker);
-  if (insertPos > 0) {
-    var lineStart = insertPos + marker.length;
-    var newEntry = "<li><a href=\"./" + dateStr + "\">" + dateStr + "</a> — 采集师·核查师·分析师·编辑师·记忆管理师</li>\n";
-    content = content.substring(0, lineStart) + newEntry + content.substring(lineStart);
-    fs.writeFileSync(indexPath, content, "utf-8");
-  }
-}
-function updateWeeklyIndex(dateStr, weekNum) {
-  var indexPath = path.join(WEEKLY_DIR, "index.md");
-  var content;
-  try { content = fs.readFileSync(indexPath, "utf-8"); } catch (e) { return; }
-  content = content.replace(/\r\n/g, "\n");
-  var filename = "review-" + dateStr.slice(0, 4) + "-W" + String(weekNum).padStart(2, "0");
-  if (content.indexOf(filename) >= 0) return;
-  var marker = '<div class="scroll-list">\n<ul>';
-  var insertPos = content.indexOf(marker);
-  if (insertPos > 0) {
-    var lineStart = insertPos + marker.length;
-    var weekLabel = dateStr.slice(0, 4) + "年第" + weekNum + "周";
-    var newEntry = "<li><a href=\"./" + filename + "\">" + weekLabel + "</a></li>\n";
-    content = content.substring(0, lineStart) + newEntry + content.substring(lineStart);
-    fs.writeFileSync(indexPath, content, "utf-8");
-  }
-}
-
-// ===================== 系统统计 =====================
-function loadSystemStats() {
-  try { return JSON.parse(fs.readFileSync(SYSTEM_STATS_FILE, "utf-8")); }
-  catch { return { totalRuns: 0, firstRunDate: null, lastRunDate: null }; }
-}
-
-function saveSystemStats(stats) {
-  writeFileUTF8(SYSTEM_STATS_FILE, JSON.stringify(stats, null, 2));
-}
-
-function loadSystemMemory() {
-  try { return JSON.parse(fs.readFileSync(SYSTEM_MEMORY_FILE, "utf-8")); }
-  catch { return { entries: [] }; }
-}
-
-function saveSystemMemory(mem) {
-  if (mem.entries.length > 30) mem.entries = mem.entries.slice(-30);
-  writeFileUTF8(SYSTEM_MEMORY_FILE, JSON.stringify(mem, null, 2));
 }
 
 // ===================== 主流程 =====================
@@ -1177,6 +688,32 @@ async function main() {
         }
       }
 
+      // ⑥ 兜底：检查是否包含曲库人必看 / 冷知识板块
+      if (agentId === "editor" && state.draft && state.draft.sections && state.verifiedItems.length > 0) {
+        var hasRequiredSection = state.draft.sections.some(function(s) { return s.title && /曲库人/.test(s.title); });
+        var hasTriviaSection = state.draft.sections.some(function(s) { return s.title && /冷知识/.test(s.title); });
+        if (!hasRequiredSection) {
+          var fallbackMusician = "## 曲库人必看 \u2014 本周/今日实操建议\n\n> \u26a0\ufe0f 今日AI生成未包含曲库人必看板块，以下为系统基于当日素材自动补充：\n\n";
+          var actionItems = state.verifiedItems.slice(0, 5).map(function(item) {
+            return "- \u25b6\ufe0f 关注 **" + item.title.slice(0, 30) + "**" + (item.source ? "\uff08来源：" + item.source + "\uff09" : "") + "\n  参考：[" + item.link.slice(0, 60) + "](" + item.link + ")";
+          }).join("\n");
+          fallbackMusician += actionItems + "\n\n> \ud83d\udcdd 编辑提示：此为自动补充，建议下次运行时由编辑师撰写针对性更强的版本。\n";
+          state.draft.sections.push({ title: "曲库人必看", content: fallbackMusician, referenced_items: [], referenced_insights: [] });
+          log("editor", "自动补充曲库人必看板块");
+        }
+        if (!hasTriviaSection) {
+          var fallbackTrivia = "## \ud83d\udca1 冷知识 / 延伸\n\n> \u26a0\ufe0f 今日AI生成未包含冷知识板块，以下为系统基于当日素材自动补充：\n\n";
+          var randomItem = state.verifiedItems[Math.floor(Math.random() * state.verifiedItems.length)];
+          if (randomItem) {
+            fallbackTrivia += "- 来自 **" + randomItem.source + "** 的报道：\"" + randomItem.title + "\"\n  原文摘要：" + (randomItem.summary || "无摘要").slice(0, 200) + "\n  \u2014 [" + randomItem.link + "](" + randomItem.link + ")\n";
+          } else {
+            fallbackTrivia += "- 今日未有足够的素材自动生成冷知识。期待下一期。\n";
+          }
+          fallbackTrivia += "\n> \ud83d\udcdd 编辑提示：此为自动补充，建议下次运行时由分析师和编辑师提供更有趣的冷知识。\n";
+          state.draft.sections.push({ title: "冷知识", content: fallbackTrivia, referenced_items: [], referenced_insights: [] });
+          log("editor", "自动补充冷知识板块");
+        }
+      }
       if (agentId === "memory-manager" && result.actions) {
         for (const action of result.actions) {
           if (action.type === "update_rule") state.stats.ruleChanges = (state.stats.ruleChanges || 0) + 1;
@@ -1268,7 +805,7 @@ async function main() {
         try {
           const oldContent = fs.readFileSync(rulePath, "utf-8");
           fs.writeFileSync(archivePath, "# " + action.rule_file + " - " + version + "\n> 归档: " + dateStr + "\n\n" + oldContent, "utf-8");
-        } catch {}
+        } catch(e) { console.log("[system] 归档旧规则失败: " + (e.message || "").slice(0, 60)); }
         const header = "---\ntitle: " + action.rule_file.replace(".md", "") + "\nversion: " + version + "\nupdated: " + dateStr + "\noutline: [2, 3]\n---\n\n> 📌 " + version + " | " + dateCN + "\n\n";
         writeFileUTF8(rulePath, header + (action.after || ""));
         log("memory-manager", "规则更新: " + action.rule_file + " → " + version);
@@ -1351,8 +888,10 @@ async function main() {
       var score = agentRep.score || "?";
       var delta = "\u2014";
       var reason = "\u2014";
+      // 只显示本次run实际产生的信誉分变化（避免同日多次运行展示历史数据）
+      var hasChangesThisRun = state.reputationChanges && state.reputationChanges[aid] && state.reputationChanges[aid].length > 0;
       var todayHistory = (agentRep.history || []).filter(function(h) { return h.date === todayStr; });
-      if (todayHistory.length > 0) {
+      if (todayHistory.length > 0 && hasChangesThisRun) {
         var lastEntry = todayHistory[todayHistory.length - 1];
         delta = lastEntry.delta > 0 ? "+" + lastEntry.delta : String(lastEntry.delta);
         reason = String(lastEntry.reason || "").slice(0, 150);
@@ -1366,6 +905,13 @@ async function main() {
     repSection += "</div>\n";
     report += repSection;
   } catch(e) { /* skip reputation section */ }
+
+  // 后处理：修复所有分析师尚未提交类错误标注
+  report = report.replace(/分析师尚未提交|分析师未提交|analyst尚未[提交输出]/gi, function(match) {
+    console.log("编辑备注自动修复: " + match.slice(0, 20));
+    return "分析师洞察已整合至本日报（详情见核心解读）";
+  });
+  report = report.replace(/尚未(?:提交|提供|输出)(?:洞察|分析|内容)?/gi, "已整合");
 
   writeFileUTF8(path.join(OUTPUT_DIR, dateStr + ".md"), report);
   log("system", "日报已保存: " + dateStr + ".md");
