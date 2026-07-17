@@ -714,11 +714,18 @@ function generateWeeklyReport(state, dateStr) {
       }
       if (weekEntries.length > 0) {
         changelogDetail = "\n### 本周规则变更详情\n\n";
-        var shown = weekEntries.slice(-10);
-        changelogDetail += "<ul>\n";
-        shown.forEach(function(e) { changelogDetail += "<li>" + e + "</li>\n"; });
-        changelogDetail += "</ul>\n";
-        if (weekEntries.length > 10) changelogDetail += "\n> 共 " + weekEntries.length + " 条变更，仅展示最近10条\n";
+        var shown = weekEntries.slice(-15);
+        changelogDetail += "<div class="changelog-list">\n";
+        shown.forEach(function(e) {
+          var parsed = e.match(/^\*\*(.+?)\*\*\s*\(([^)]+)\)\s*:\s*(.+)/);
+          if (parsed) {
+            changelogDetail += "<div><span class="changelog-file">" + parsed[1] + "</span> <span class="changelog-ver">" + parsed[2] + "</span><br>" + parsed[3] + "</div>\n";
+          } else {
+            changelogDetail += "<div>" + e + "</div>\n";
+          }
+        });
+        changelogDetail += "</div>\n";
+        if (weekEntries.length > 15) changelogDetail += "\n> 共 " + weekEntries.length + " 条变更，仅展示最近15条\n";
       }
     } catch (e) { /* ignore changelog read errors */ }
   }
@@ -762,7 +769,8 @@ function saveAgentMemory(agentId, memory) {
 function buildMemoryContext(agentId) {
   var mem = loadAgentMemory(agentId);
   var ctx = "\n## 🧠 你的个人记忆\n";
-  ctx += "角色: " + (AGENT_NAMES_CN_MEM[agentId] || agentId) + "\n";
+  ctx += "角色: " + (AGENT_NAMES_CN_MEM[agentId] || agentId) + " | 记忆总数: " + (mem.experiences || []).length + "条\n";
+  ctx += "> 你记得过去发生的每件事——以下是你所有的经历\n\n";
   
   // Relationships
   ctx += "\n### 你与其他角色的关系\n";
@@ -780,14 +788,15 @@ function buildMemoryContext(agentId) {
     });
   }
 
-  // Recent experiences
+  // Recent experiences - show all, with auto-summary when many
   var exps = mem.experiences || [];
   if (exps.length > 0) {
-    ctx += "\n### 近期关键经历\n";
-    var recentExps = exps.slice(-5);
-    recentExps.forEach(function(e) {
-      ctx += "- " + e.date + " [" + (e.type || "事件") + "]: " + String(e.summary || "").slice(0, 60) + "\n";
-      if (e.lesson) ctx += "  教训: " + String(e.lesson).slice(0, 60) + "\n";
+    ctx += "\n### 近期关键经历 (共" + exps.length + "条记忆)\n";
+    var displayExps = exps.length > 20 ? exps.slice(-20) : exps;
+    if (exps.length > 20) ctx += "(显示最近20条, 共" + exps.length + "条)\n";
+    displayExps.forEach(function(e) {
+      ctx += "- " + e.date + " [" + (e.type || "事件") + "]: " + String(e.summary || "").slice(0, 80) + "\n";
+      if (e.lesson) ctx += "  教训: " + String(e.lesson).slice(0, 80) + "\n";
     });
   }
 
@@ -850,7 +859,7 @@ function updateAgentMemoryFromDay(agentId, state, dateStr, dateCN) {
     if (!mem.relationships[otherId].history) mem.relationships[otherId].history = [];
     mem.relationships[otherId].history.push({ date: dateStr, event: (conflicts > praises ? "冲突" : "合作") + " " + interactionCounts[otherId] + "次", trustDelta: delta });
     // Update trend
-    var recentH = mem.relationships[otherId].history.slice(-5);
+    var recentH = mem.relationships[otherId].history;
     var avgDelta = recentH.reduce(function(s, h) { return s + (h.trustDelta || 0); }, 0) / Math.max(recentH.length, 1);
     mem.relationships[otherId].trend = avgDelta > 1 ? "improving" : avgDelta < -1 ? "declining" : "stable";
     // Summary
