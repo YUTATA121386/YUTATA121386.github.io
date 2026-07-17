@@ -145,7 +145,7 @@ function buildAgentContext(agentId, state) {
   if (ownRecentMsgs.length > 0) {
     ctx += "## 你本轮已发送的消息\n";
     ownRecentMsgs.forEach(function(m) {
-      ctx += "- [" + m.type + "] " + (m.coreInfo || "").slice(0, 80) + "\n";
+      ctx += "- [" + (m.type || "info") + "] " + (m.coreInfo || "").slice(0, 80) + "\n";
     });
     ctx += "\n";
   }
@@ -171,7 +171,7 @@ function buildAgentContext(agentId, state) {
   ctx += "## 待处理消息\n";
   if (msgs.length === 0) ctx += "(无新消息)\n";
   for (const m of msgs) {
-    ctx += "[" + m.id + "] " + m.from + " → " + m.to + " | " + m.type + " | " + m.priority + "\n";
+    ctx += "[" + m.id + "] " + m.from + " → " + m.to + " | " + (m.type || "info") + " | " + m.priority + "\n";
     ctx += "  " + m.coreInfo + "\n";
     if (m.expectedAction) ctx += "  期望: " + m.expectedAction + "\n";
     if (m.reason) ctx += "  理由: " + m.reason + "\n\n";
@@ -234,7 +234,7 @@ function buildAgentContext(agentId, state) {
     }
   }
   ctx += "\n## 最近消息\n";
-  for (const m of state.messages.slice(-30)) ctx += "[" + m.id + "] " + m.from + "→" + m.to + " " + m.type + ": " + m.coreInfo + "\n";
+  for (const m of state.messages.slice(-30)) ctx += "[" + m.id + "] " + m.from + "→" + m.to + " " + (m.type || "info") + ": " + m.coreInfo + "\n";
   return ctx;
 }
 
@@ -399,7 +399,7 @@ function generateProcessLog(state, dateStr) {
       state.rejectedItems.forEach(function(item) { allItems[item.id] = item.title; });
       state.rawItems.forEach(function(item) { var parts = item.id.split('-'); var short = 'RAW-' + parts[parts.length-1]; allItems[short] = item.title; });
       
-      var cleanText = m.coreInfo
+      var cleanText = (m.coreInfo || "")
         .replace(/RAW-(\d{4}-\d{2}-\d{2}-\d{4})/g, function(match, idSuffix) {
           var fullId = "RAW-" + idSuffix;
           var title = allItems[fullId];
@@ -1086,14 +1086,20 @@ async function main() {
 
       if (agentId === "verifier" && result.actions) {
         for (const action of result.actions) {
-          if (action.type === "verify" && action.item_id) {
-            const item = state.rawItems.find(i => i.id === action.item_id);
-            if (!item) continue;
-            item.status = action.decision;
-            item.verify_reason = action.reason;
-            item.category = action.category || item.category;
-            if (action.decision === "pass") { state.verifiedItems.push(item); state.stats.verifierPassed++; }
-            else { state.rejectedItems.push(item); state.stats.verifierRejected++; }
+          if (action.type === "verify" && (action.item_id || (action.items && action.items.length > 0))) {
+            // Handle both flat format (item_id) and nested format (items array from prompt)
+            var itemsToProcess = action.items || [{id: action.item_id, decision: action.decision, reason: action.reason, category: action.category}];
+            for (var vi = 0; vi < itemsToProcess.length; vi++) {
+              var vitem = itemsToProcess[vi];
+              const item = state.rawItems.find(i => i.id === vitem.id);
+              if (!item) continue;
+              var decision = vitem.decision || action.decision || "";
+              item.status = decision;
+              item.verify_reason = vitem.reason || action.reason || "";
+              item.category = vitem.category || action.category || item.category;
+              if (decision === "pass" || decision === "approve") { state.verifiedItems.push(item); state.stats.verifierPassed++; }
+              else if (decision === "fail" || decision === "reject") { state.rejectedItems.push(item); state.stats.verifierRejected++; }
+            }
           }
         }
       }
@@ -1291,7 +1297,7 @@ async function main() {
     var msgSummary = agentMsgs.length > 0 ? "\n\n## 🤖 代理通信摘要\n\n" + agentMsgs.map(function(m) {
       var name = AGENT_NAMES_CN[m.from] || m.from;
       var toName = AGENT_NAMES_CN[m.to] || m.to || "all";
-      return "- **" + name + "** → " + toName + " [" + (m.type || "") + "]: " + String(m.coreInfo || "").slice(0, 120);
+      return "- **" + name + "** → " + toName + " [" + (m.type || "info") + "]: " + String(m.coreInfo || "").slice(0, 120);
     }).join("\n") + "\n" : "";
     report = "---\ntitle: " + dateStr + " | 行业雷达日报\noutline: [2, 3]\n---\n\n# 📡 行业雷达 · " + dateCN + "\n\n> ⚠️ 今日多Agent系统未产出完整日报\n> [查看过程日志](../logs/" + dateStr + ".md)\n\n## 采集概况\n- 采集 " + state.rawItems.length + " 篇 | 通过 " + state.verifiedItems.length + " 篇\n" + msgSummary;
   }
