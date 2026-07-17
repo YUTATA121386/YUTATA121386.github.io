@@ -1,35 +1,221 @@
 {
   "sources": [
-    { "name": "Music Business Worldwide", "url": "https://www.musicbusinessworldwide.com/feed/", "lang": "en", "weight": 10 },
-    { "name": "Billboard", "url": "https://www.billboard.com/feed/", "lang": "en", "weight": 8 },
-    { "name": "Digital Music News", "url": "https://www.digitalmusicnews.com/feed/", "lang": "en", "weight": 8 },
-    { "name": "Music Ally", "url": "https://musically.com/feed/", "lang": "en", "weight": 9 },
-    { "name": "MusicTech", "url": "https://musictech.com/feed/", "lang": "en", "weight": 7 },
-    { "name": "Hypebot", "url": "https://hypebot.com/feed/", "lang": "en", "weight": 6 },
-    { "name": "Synchblog", "url": "https://www.synchtank.com/blog/feed/", "lang": "en", "weight": 6 },
-    { "name": "Complete Music Update", "url": "https://completemusicupdate.com/feed/", "lang": "en", "weight": 6 },
-    { "name": "36氪", "url": "https://36kr.com/feed", "lang": "zh", "weight": 5 },
-    { "name": "虎嗅", "url": "https://www.huxiu.com/rss/0.xml", "lang": "zh", "weight": 5 },
-    { "name": "音乐财经", "url": "https://feed.musicbusiness.cn/rss", "lang": "zh", "weight": 9 },
-    { "name": "Google News Music Industry", "url": "https://news.google.com/rss/search?q=music+copyright+streaming+royalties+AI+music+DDEX+ISRC&hl=en-US&gl=US&ceid=US:en", "lang": "en", "weight": 7 },
-    { "name": "Google News 音乐产业", "url": "https://news.google.com/rss/search?q=%E9%9F%B3%E4%B9%90%E7%89%88%E6%9D%83+%E9%9F%B3%E4%B9%90%E5%B9%B3%E5%8F%B0+AI%E9%9F%B3%E4%B9%90+%E6%9B%B2%E5%BA%93+%E6%B5%81%E5%AA%92%E4%BD%93+%E9%9F%B3%E4%B9%90%E5%8F%91%E8%A1%8C&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", "lang": "zh", "weight": 8 },
-    { "name": "Google News AI音乐中文", "url": "https://news.google.com/rss/search?q=AI%E9%9F%B3%E4%B9%90+Suno+Udio+%E9%9F%B3%E4%B9%90%E7%94%9F%E6%88%90+%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E9%9F%B3%E4%B9%90&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", "lang": "zh", "weight": 8 },
-    { "name": "Google News 音乐版权+TME", "url": "https://news.google.com/rss/search?q=%E9%9F%B3%E4%B9%90%E7%89%88%E6%9D%83+DDEX+ISRC+%E6%9B%B2%E5%BA%93+%E7%89%88%E7%A8%8E+%E8%85%BE%E8%AE%AF%E9%9F%B3%E4%B9%90+%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", "lang": "zh", "weight": 9 },
-    { "name": "Google News 中国音乐行业", "url": "https://news.google.com/rss/search?q=%E4%B8%AD%E5%9B%BD%E9%9F%B3%E4%B9%90+%E6%B5%81%E9%87%8F+%E6%AD%8C%E6%89%8B+%E6%BC%94%E5%94%B1%E4%BC%9A+%E7%BA%AA%E7%BA%AA%E5%85%AC%E5%8F%B8+%E9%9F%B3%E4%B9%90%E8%8A%82%E7%9B%AE&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", "lang": "zh", "weight": 7 },
-    { "name": "Google News 腾讯音乐/网易云", "url": "https://news.google.com/rss/search?q=%E8%85%BE%E8%AE%AF%E9%9F%B3%E4%B9%90+TME+%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90+QQ%E9%9F%B3%E4%B9%90+%E6%B1%BD%E6%B0%B4%E9%9F%B3%E4%B9%90&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", "lang": "zh", "weight": 8 }
+    {
+      "name": "Music Business Worldwide",
+      "url": "https://www.musicbusinessworldwide.com/feed/",
+      "lang": "en",
+      "weight": 10
+    },
+    {
+      "name": "Billboard",
+      "url": "https://www.billboard.com/feed/",
+      "lang": "en",
+      "weight": 8
+    },
+    {
+      "name": "Digital Music News",
+      "url": "https://www.digitalmusicnews.com/feed/",
+      "lang": "en",
+      "weight": 8
+    },
+    {
+      "name": "Music Ally",
+      "url": "https://musically.com/feed/",
+      "lang": "en",
+      "weight": 9
+    },
+    {
+      "name": "MusicTech",
+      "url": "https://musictech.com/feed/",
+      "lang": "en",
+      "weight": 7
+    },
+    {
+      "name": "Hypebot",
+      "url": "https://hypebot.com/feed/",
+      "lang": "en",
+      "weight": 6
+    },
+    {
+      "name": "Synchblog",
+      "url": "https://www.synchtank.com/blog/feed/",
+      "lang": "en",
+      "weight": 6
+    },
+    {
+      "name": "Complete Music Update",
+      "url": "https://completemusicupdate.com/feed/",
+      "lang": "en",
+      "weight": 6
+    },
+    {
+      "name": "36氪",
+      "url": "https://36kr.com/feed",
+      "lang": "zh",
+      "weight": 5
+    },
+    {
+      "name": "虎嗅",
+      "url": "https://www.huxiu.com/rss/0.xml",
+      "lang": "zh",
+      "weight": 5
+    },
+    {
+      "name": "音乐财经",
+      "url": "https://chinamusicbusiness.cn/feed",
+      "lang": "zh",
+      "weight": 9
+    },
+    {
+      "name": "Google News Music Industry",
+      "url": "https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB",
+      "lang": "en",
+      "weight": 7
+    },
+    {
+      "name": "Google News 音乐产业",
+      "url": "https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx6TVdZU0FtVnVHZ0pWVXlnQVAB?hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "lang": "zh",
+      "weight": 8
+    },
+    {
+      "name": "Music Business Radar",
+      "url": "https://www.musicbusinessradar.com/feed/",
+      "lang": "en",
+      "weight": 5
+    },
+    {
+      "name": "Rolling Stone Music",
+      "url": "https://www.rollingstone.com/music/music-news/feed/",
+      "lang": "en",
+      "weight": 6
+    }
   ],
   "keywords": {
-    "音乐版权": ["music copyright", "music licensing", "music rights", "music publishing deal", "music IP", "music royalty", "版权音乐", "音乐授权", "音乐侵权", "音乐著作权"],
-    "版税结算": ["music royalty accounting", "mechanical royalty", "SoundExchange", "ASCAP music", "BMI music", "PRS for Music", "音乐版税", "版税结算", "集体管理组织", "music CMO"],
-    "元数据标准": ["music metadata", "DDEX", "Digital Data Exchange", "ISRC", "ISWC", "IPI music", "music identifier", "音乐元数据"],
-    "音乐发行": ["music distribution", "DistroKid", "TuneCore", "CD Baby music", "Believe music", "音乐发行", "music distributor"],
-    "音乐平台": ["Spotify music", "Apple Music royalty", "Tidal music", "Deezer music", "TME财报", "网易云音乐", "QQ音乐", "汽水音乐", "streaming music", "music streaming royalty"],
-    "AI音乐": ["AI music generator", "Suno AI", "Udio AI", "Aimi music", "Boomy AI", "Mubert AI", "generative music AI", "AI作曲", "AI生成音乐", "天工AI音乐", "music generation AI"],
-    "曲库治理": ["music catalog management", "music library", "music ingestion", "music curation", "曲库治理", "音乐资产管理", "music asset management"],
-    "中国音乐市场": ["腾讯音乐", "TME财报", "网易云音乐财报", "华语音乐市场", "中国流媒体音乐", "在线音乐中国", "抖音音乐人", "快手音乐人", "Chinese music market"],
-    "演出现场": ["演唱会经济", "音乐节", "live house演出", "音乐巡演", "music concert tour", "music festival", "music tour", "音乐现场"],
-    "音乐产业政策": ["music regulation", "music legislation", "copyright law music", "音乐监管", "音乐政策", "音乐法规", "music policy reform"],
-    "音乐科技": ["music tech startup", "music AI startup", "music innovation", "音乐科技", "音乐技术创业", "music technology innovation"],
-    "音乐投融资": ["music investment", "music acquisition", "music funding", "music IPO", "音乐投资", "音乐收购", "音乐融资", "music venture capital"]
+    "音乐版权": [
+      "music copyright",
+      "music licensing",
+      "music rights",
+      "music publishing deal",
+      "music IP",
+      "music royalty",
+      "版权音乐",
+      "音乐授权",
+      "音乐侵权",
+      "音乐著作权"
+    ],
+    "版税结算": [
+      "music royalty accounting",
+      "mechanical royalty",
+      "SoundExchange",
+      "ASCAP music",
+      "BMI music",
+      "PRS for Music",
+      "音乐版税",
+      "版税结算",
+      "集体管理组织",
+      "music CMO"
+    ],
+    "元数据标准": [
+      "music metadata",
+      "DDEX",
+      "Digital Data Exchange",
+      "ISRC",
+      "ISWC",
+      "IPI music",
+      "music identifier",
+      "音乐元数据"
+    ],
+    "音乐发行": [
+      "music distribution",
+      "DistroKid",
+      "TuneCore",
+      "CD Baby music",
+      "Believe music",
+      "音乐发行",
+      "music distributor"
+    ],
+    "音乐平台": [
+      "Spotify music",
+      "Apple Music royalty",
+      "Tidal music",
+      "Deezer music",
+      "TME财报",
+      "网易云音乐",
+      "QQ音乐",
+      "汽水音乐",
+      "streaming music",
+      "music streaming royalty"
+    ],
+    "AI音乐": [
+      "AI music generator",
+      "Suno AI",
+      "Udio AI",
+      "Aimi music",
+      "Boomy AI",
+      "Mubert AI",
+      "generative music AI",
+      "AI作曲",
+      "AI生成音乐",
+      "天工AI音乐",
+      "music generation AI"
+    ],
+    "曲库治理": [
+      "music catalog management",
+      "music library",
+      "music ingestion",
+      "music curation",
+      "曲库治理",
+      "音乐资产管理",
+      "music asset management"
+    ],
+    "中国音乐市场": [
+      "腾讯音乐",
+      "TME财报",
+      "网易云音乐财报",
+      "华语音乐市场",
+      "中国流媒体音乐",
+      "在线音乐中国",
+      "抖音音乐人",
+      "快手音乐人",
+      "Chinese music market"
+    ],
+    "演出现场": [
+      "演唱会经济",
+      "音乐节",
+      "live house演出",
+      "音乐巡演",
+      "music concert tour",
+      "music festival",
+      "music tour",
+      "音乐现场"
+    ],
+    "音乐产业政策": [
+      "music regulation",
+      "music legislation",
+      "copyright law music",
+      "音乐监管",
+      "音乐政策",
+      "音乐法规",
+      "music policy reform"
+    ],
+    "音乐科技": [
+      "music tech startup",
+      "music AI startup",
+      "music innovation",
+      "音乐科技",
+      "音乐技术创业",
+      "music technology innovation"
+    ],
+    "音乐投融资": [
+      "music investment",
+      "music acquisition",
+      "music funding",
+      "music IPO",
+      "音乐投资",
+      "音乐收购",
+      "音乐融资",
+      "music venture capital"
+    ]
   }
 }
