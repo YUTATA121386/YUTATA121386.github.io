@@ -10,3 +10,5 @@ dist/
 !scripts/system-stats.json
 !scripts/system-memory.json
 !scripts/mm-scores.json
+
+!scripts/memories/*.json
