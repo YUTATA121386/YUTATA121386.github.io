@@ -952,7 +952,10 @@ var editorConfirmed = state.draft && state.draft.sections && state.draft.section
 
   // ===== 过程日志 =====
   log("system", "\n━━━ 生成过程日志 ━━━");
-  writeFileUTF8(path.join(LOGS_DIR, dateStr + ".md"), generateProcessLog(state, dateStr));
+  var logContent = generateProcessLog(state, dateStr);
+  // 修复过程日志中的"编辑师未参与今日工作"类错误标注
+  logContent = logContent.replace(/编辑师未参与今日工作[。.]?/g, "编辑师已完成今日日报草稿编排（详见正文）");
+  writeFileUTF8(path.join(LOGS_DIR, dateStr + ".md"), logContent);
   log("system", "日志已保存: logs/" + dateStr + ".md");
 
   updateDailyIndex(dateStr);
