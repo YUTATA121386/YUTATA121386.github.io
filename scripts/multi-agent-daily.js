@@ -20,7 +20,7 @@ const https = require("https");
 const SHARED = require("./agents/shared");
 const {
   DEEPSEEK_KEY, OUTPUT_DIR, LOGS_DIR, WEEKLY_DIR, RULES_DIR, ROOT_DIR,
-  AGENT_NAMES_CN, createInitialState,
+  MSG_TYPES, AGENT_NAMES_CN, createInitialState,
   updateReputation, getReputationWeight,
   createMessage, pushMessage, callDeepSeek, loadPrompt,
   generateRuleVersion, extractJSON, log
@@ -1070,7 +1070,6 @@ async function main() {
     const agentResults = {};
     // Run agents - non-editor agents in parallel, editor after to incorporate insights
     var nonEditorAgents = agentsToRun.filter(function(a) { return a !== "editor"; });
-    var agentResults = {};
     await Promise.all(nonEditorAgents.map(async function(agentId) {
       agentResults[agentId] = await runAgent(agentId, state);
     }));
@@ -1345,7 +1344,7 @@ async function main() {
     var repData = require("./agents/shared").loadReputation();
     var agentNames = { collector: "采集师", verifier: "核查师", analyst: "分析师", editor: "编辑师", "memory-manager": "记忆管理师" };
     var todayStr = dateStr;
-    var repSection = "\n\n## \U0001f4ca \u4eca\u65e5\u4fe1\u8a89\u5206\u53d8\u5316\n\n<div style=\"display:grid;grid-template-columns:80px 50px 50px 1fr;gap:6px 12px;font-size:0.9em;margin:12px 0;\">\n<div style=\"font-weight:600;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);\">\u89d2\u8272</div>\n<div style=\"text-align:center;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);\">\u5206\u6570</div>\n<div style=\"text-align:center;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);\">\u53d8\u5316</div>\n<div style=\"padding:6px 0;border-bottom:2px solid var(--vp-c-divider);overflow-wrap:break-word;word-break:break-word;\">\u539f\u56e0</div>\n";
+    var repSection = "\n\n## 📊 \u4eca\u65e5\u4fe1\u8a89\u5206\u53d8\u5316\n\n<div style=\"display:grid;grid-template-columns:80px 50px 50px 1fr;gap:6px 12px;font-size:0.9em;margin:12px 0;\">\n<div style=\"font-weight:600;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);\">\u89d2\u8272</div>\n<div style=\"text-align:center;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);\">\u5206\u6570</div>\n<div style=\"text-align:center;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);\">\u53d8\u5316</div>\n<div style=\"padding:6px 0;border-bottom:2px solid var(--vp-c-divider);overflow-wrap:break-word;word-break:break-word;\">\u539f\u56e0</div>\n";
     ["collector", "verifier", "analyst", "editor", "memory-manager"].forEach(function(aid) {
       var agentRep = repData[aid];
       if (!agentRep) return;
