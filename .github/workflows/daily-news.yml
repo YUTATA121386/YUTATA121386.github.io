@@ -1,14 +1,14 @@
-﻿name: Multi-Agent Daily News
+name: Multi-Agent Daily News
 
 on:
   workflow_dispatch:
     inputs:
       override_date:
-        description: "Override date (YYYY-MM-DD), defaults to today"
+        description: "Override date (YYYY-MM-DD)"
         required: false
         type: string
   schedule:
-    - cron: "0 4 * * *"  # 鍖椾含鏃堕棿 12:00
+    - cron: "0 4 * * *"
 
 permissions:
   contents: write
@@ -39,17 +39,16 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: |
           if [ -z "$DEEPSEEK_API_KEY" ]; then
-            echo "::error::DEEPSEEK_API_KEY is not configured in repository secrets"
+            echo "::error::DEEPSEEK_API_KEY is not configured"
             exit 1
           fi
-            echo "API key configured, proceeding with daily news generation"
+          echo "API key configured"
 
       - name: Run Multi-Agent Daily News
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           OVERRIDE_DATE: ${{ github.event.inputs.override_date || '' }}
         run: node scripts/multi-agent-daily.js
-          OVERRIDE_DATE: ${{ github.event.inputs.override_date || '' }}
 
       - name: Commit and push all outputs
         run: |
@@ -57,8 +56,8 @@ jobs:
           git config user.email "multi-agent-bot@yutata.dev"
           git add docs/daily/ docs/logs/ docs/weekly/ docs/rules/ scripts/reputation.json scripts/system-stats.json scripts/system-memory.json scripts/mm-scores.json scripts/memories/
           git diff --cached --quiet || (
-            git commit -m "馃 澶欰gent鏃ユ姤 $(date +%Y-%m-%d)"
-            git push origin HEAD:main || echo "Push failed (may be behind remote, continuing)"
+            git commit -m "auto: multi-agent daily report $(date +%Y-%m-%d)"
+            git push origin HEAD:main || echo "Push failed"
           )
 
       - name: Build site
