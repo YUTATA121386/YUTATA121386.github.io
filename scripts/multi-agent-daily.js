@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env node
+#!/usr/bin/env node
 /**
  * YUTATA 多Agent日报系统 v4
  * 五个角色并行博弈: 采集师·核查师·分析师·编辑师·记忆管理师
@@ -499,8 +499,7 @@ function generateProcessLog(state, dateStr) {
     retro += '<div class="chat-content">\n';
     retro += '<div class="chat-meta"><span class="chat-sender">' + name + '</span><span class="chat-badge">\uD83D\uDCDD \u590D\u76D8</span></div>\n';
     retro += '<div class="chat-body"><blockquote>';
-    if (m) { retro += stripMD(m.coreInfo.slice(0, 200)).replace(/
-/g, "<br>"); }
+    if (m) { retro += stripMD(m.coreInfo.slice(0, 500)).replace(/\n/g, "<br>"); }
     else { retro += name + '\u672A\u53C2\u4E0E\u4ECA\u65E5\u5DE5\u4F5C\u3002'; }
     retro += '</blockquote></div>\n';
     retro += '</div></div>\n\n';
@@ -1224,7 +1223,7 @@ async function main() {
     log("system", "\n=== 审稿环节 ===");
     state.phase = "review";
     var reviewAgents = ["collector", "verifier", "analyst", "editor", "memory-manager"];
-    var reviewInst = "## 审稿\n你是{role}，请对当前日报草稿做出评价。\n- 如果通过，发送APPROVE消息\n- **在coreInfo中附上今日工作总结作为复盘**\n- 输出: { \"messages\": [{ \"to\": \"editor\", \"type\": \"APPROVE/REQUEST\", \"coreInfo\": \"评价日报质量+今日工作总结\", \"expectedAction\": \"修改要求\", \"reason\": \"理由\", \"priority\": \"normal\" }], \"internal_thought\": \"...\" }";
+    var reviewInst = "## 审稿\n你是{role}，请对当前日报草稿做出评价。\n- 如果通过，发送APPROVE消息\n- **在coreInfo中附上今日工作总结作为复盘**（要求：总结今日工作内容、质量评估、自我反思，不少于50字） - **禁止使用\"未参与今日工作\"或类似表述**——如果没有足够信息，请说明“材料有限，基于现有信息总结...”\n- 输出: { \"messages\": [{ \"to\": \"editor\", \"type\": \"APPROVE/REQUEST\", \"coreInfo\": \"评价日报质量+今日工作总结\", \"expectedAction\": \"修改要求\", \"reason\": \"理由\", \"priority\": \"normal\" }], \"internal_thought\": \"...\" }";
     for (var ri = 0; ri < reviewAgents.length; ri++) {
       var aid = reviewAgents[ri];
       var inst = reviewInst.replace("{role}", AGENT_NAMES_CN[aid]);
