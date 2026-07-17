@@ -47,8 +47,8 @@ jobs:
       - name: Run Multi-Agent Daily News
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          OVERRIDE_DATE: ${{ github.event.inputs.override_date || '' }}
         run: node scripts/multi-agent-daily.js
-        env:
           OVERRIDE_DATE: ${{ github.event.inputs.override_date || '' }}
 
       - name: Commit and push all outputs
