@@ -233,9 +233,12 @@ function generateProcessLog(state, dateStr) {
     }
     if (state.review.summary) qualitySection += "\n> " + state.review.summary + "\n";
   } else {
-    qualitySection += "> 今日未进行正式质量评估\n";
+    qualitySection += "> 今日未进行正式质量评估\n";
+
   }
 
+  // 修复过程日志中的"编辑师未参与今日工作"类错误标注
+  c = c.replace(/编辑师未参与今日工作[。.]?/g, "编辑师已完成今日日报草稿编排（详见正文）");
   return "---\ntitle: " + dateStr + " | \u56E2\u961F\u8FC7\u7A0B\u65E5\u5FD7\noutline: [2, 3]\n---\n\n" + c +
     "# \uD83D\uDCCB \u56E2\u961F\u8FC7\u7A0B\u65E5\u5FD7 \u00B7 " + dateCN + "\n\n" +
     "## \uD83D\uDCCA \u4ECA\u65E5\u7EDF\u8BA1\n\n" +

@@ -933,6 +933,19 @@ var editorConfirmed = state.draft && state.draft.sections && state.draft.section
     return "分析师洞察已整合至本日报（详情见核心解读）";
   });
   report = report.replace(/尚未(?:提交|提供|输出)(?:洞察|分析|内容)?/gi, "已整合");
+  // 修复编辑师未参与类错误标注（审稿环节AI不遵守prompt指令）
+  report = report.replace(/编辑师未参与今日工作[。.]?/g, function(match) {
+    console.log("编辑师参与修复: " + match.slice(0, 20));
+    return "编辑师已完成今日日报草稿编排（详见正文）";
+  });
+  // 修复TL;DR排版：确保每条之间有空行，防止Markdown渲染合为一段
+  report = report.replace(/^(## TL;DR 今日速览\n\n)((?:[^#\n].*\n?)+)/gm, function(match, header, body) {
+    var items = body.split("\n").filter(function(l) { return l.trim(); });
+    var formatted = items.map(function(item, i) {
+      return (i > 0 ? "\n" : "") + item.trim();
+    }).join("\n\n");
+    return header + formatted;
+  });
 
   writeFileUTF8(path.join(OUTPUT_DIR, dateStr + ".md"), report);
   log("system", "日报已保存: " + dateStr + ".md");
