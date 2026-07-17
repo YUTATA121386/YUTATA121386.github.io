@@ -10,22 +10,8 @@ outline: [2, 3]
 
 > 📌 V2.1.29 | 2026年7月17日
 
-### 来源优先级（信任修复期专用）
-
-**触发条件：** 当采集师处于信任修复期时，执行以下来源限制：
-
-- **允许来源（仅限）：**
-  - Music Business Worldwide
-  - Billboard Legal / Billboard Business
-  - Digital Music News
-  - RIAA官网
-  - ASCAP / BMI / MCPS / ICE 等版权组织官网
-  - Music Tech (musictech.com)
-  - SoundCloud Blog / Spotify for Artists Blog
-
-- **禁止来源（信任修复期内完全禁止）：**
-  - 36氪、虎嗅、新浪财经、澎湃新闻等综合媒体
-  - TechCrunch、The Verge、Wired等综合科技媒体
-  - 任何非音乐/版权行业的来源
-
-- **修复期结束后恢复标准来源优先级**
+### 国内视角采集义务
+- 每日日报必须包含至少2条直接相关（非间接推导）的国内行业素材
+- 国内素材来源优先级：中国版权协会官方动态 > 腾讯音乐/网易云音乐等平台官方公告 > 国内行业媒体深度报道 > 海外媒体对中国市场的报道
+- 若当日无法采集到足够的国内素材，采集师需在补采阶段明确说明原因并申请豁免
+- 连续3天国内素材不足2条，触发'国内视角缺失预警'
