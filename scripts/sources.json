@@ -56,15 +56,15 @@
     },
     {
       "name": "虎嗅",
-      "url": "https://www.huxiu.com/rss/0.xml",
+      "url": "https://www.huxiu.com/rss/",
       "lang": "zh",
       "weight": 5
     },
     {
       "name": "音乐财经",
-      "url": "https://chinamusicbusiness.cn/feed",
+      "url": "https://www.chinamusicbusiness.cn/feed/",
       "lang": "zh",
-      "weight": 9
+      "weight": 0
     },
     {
       "name": "Google News Music Industry",
@@ -89,6 +89,30 @@
       "url": "https://www.rollingstone.com/music/music-news/feed/",
       "lang": "en",
       "weight": 6
+    },
+    {
+      "name": "少数派",
+      "url": "https://sspai.com/feed",
+      "lang": "zh",
+      "weight": 4
+    },
+    {
+      "name": "澎湃新闻文化",
+      "url": "https://feed.thepaper.cn/rss",
+      "lang": "zh",
+      "weight": 5
+    },
+    {
+      "name": "音乐先声",
+      "url": "https://nbnmusic.com/feed",
+      "lang": "zh",
+      "weight": 8
+    },
+    {
+      "name": "道略音乐产业",
+      "url": "https://www.idaolue.com/feed",
+      "lang": "zh",
+      "weight": 7
     }
   ],
   "keywords": {
