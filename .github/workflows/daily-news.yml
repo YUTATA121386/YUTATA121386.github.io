@@ -2,6 +2,11 @@ name: Multi-Agent Daily News
 
 on:
   workflow_dispatch:
+    inputs:
+      override_date:
+        description: "Override date (YYYY-MM-DD), defaults to today"
+        required: false
+        type: string
   schedule:
     - cron: "0 4 * * *"  # 北京时间 12:00
 
@@ -43,6 +48,8 @@ jobs:
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         run: node scripts/multi-agent-daily.js
+        env:
+          OVERRIDE_DATE: ${{ github.event.inputs.override_date || '' }}
 
       - name: Commit and push all outputs
         run: |
