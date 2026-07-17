@@ -1,6 +1,13 @@
-import { defineConfig } from "vitepress"
+﻿import { defineConfig } from "vitepress"
 
 export default defineConfig({
+  vite: {
+    css: {
+      postcss: {
+        plugins: []
+      }
+    }
+  },
   lang: "zh-CN",
   title: "YUTATA",
   description: "通识 · 产品 · 思考 · 记录",
