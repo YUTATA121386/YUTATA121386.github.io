@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env node
+#!/usr/bin/env node
 /**
  * YUTATA 多Agent日报系统 v4
  * 五个角色并行博弈: 采集师·核查师·分析师·编辑师·记忆管理师
@@ -715,17 +715,17 @@ function generateWeeklyReport(state, dateStr) {
       if (weekEntries.length > 0) {
         changelogDetail = "\n### 本周规则变更详情\n\n";
         var shown = weekEntries.slice(-15);
-        changelogDetail += "<div class="changelog-list">\n";
+        changelogDetail += '<div class="changelog-list">\n';
         shown.forEach(function(e) {
           var parsed = e.match(/^\*\*(.+?)\*\*\s*\(([^)]+)\)\s*:\s*(.+)/);
           if (parsed) {
-            changelogDetail += "<div><span class="changelog-file">" + parsed[1] + "</span> <span class="changelog-ver">" + parsed[2] + "</span><br>" + parsed[3] + "</div>\n";
+            changelogDetail += '<div><span class="changelog-file">' + parsed[1] + '</span> <span class="changelog-ver">' + parsed[2] + '</span><br>' + parsed[3] + '</div>\n';
           } else {
-            changelogDetail += "<div>" + e + "</div>\n";
+            changelogDetail += '<div>' + e + '</div>\n';
           }
         });
-        changelogDetail += "</div>\n";
-        if (weekEntries.length > 15) changelogDetail += "\n> 共 " + weekEntries.length + " 条变更，仅展示最近15条\n";
+        changelogDetail += '</div>\n';
+        if (weekEntries.length > 15) changelogDetail += '\n> 共 ' + weekEntries.length + ' 条变更，仅展示最近15条\n';
       }
     } catch (e) { /* ignore changelog read errors */ }
   }
@@ -990,7 +990,7 @@ function saveSystemMemory(mem) {
 
 // ===================== 主流程 =====================
 async function main() {
-  const now = new Date();
+  const now = new Date(2026, 6, 17, 0, 0, 0);
   const dateStr = now.getFullYear() + "-" + String(now.getMonth() + 1).padStart(2, "0") + "-" + String(now.getDate()).padStart(2, "0");
   const dateCN = now.getFullYear() + "年" + (now.getMonth() + 1) + "月" + now.getDate() + "日";
   const systemStats = loadSystemStats();
@@ -1306,9 +1306,9 @@ async function main() {
           var lastChange = changes[changes.length - 1];
           var delta = lastChange ? (lastChange.delta > 0 ? "+" + lastChange.delta : String(lastChange.delta)) : "—";
           var reason = lastChange ? (String(lastChange.reason || "").slice(0, 120)) : "—";
-          repSection += "<div style=\"font-weight:600;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + (agentNames[aid] || aid) + "</div><div style=\"text-align:center;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + score + "</div><div style=\"text-align:center;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + delta + "</div><div style=\"padding:6px 0;border-bottom:1px solid var(--vp-c-divider);overflow-wrap:break-word;word-break:break-word;line-height:1.4;\">" + reason + "</div>\n";
+          repSection += "<div style=\"font-weight:600;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + (agentNames[aid] || aid) + "</div><div style=\"text-align:center;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + score + "</div><div style=\"text-align:center;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + delta + "</div><div style=\"padding:6px 0;border-bottom:1px solid var(--vp-c-divider);overflow-wrap:break-word;word-break:break-word;line-height:1.4;\">" + reason + "</div>\\n";
         });
-        repSection += "</div>\n";
+        repSection += "</div>\\n";
 
   report += repSection;
       }
@@ -1355,6 +1355,8 @@ main().catch((err) => {
   console.error("致命错误:", err);
   process.exit(1);
 });
+
+
 
 
 
