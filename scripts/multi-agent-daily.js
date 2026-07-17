@@ -863,8 +863,22 @@ async function main() {
   let report;
   if (state.draft && state.draft.sections) {
     const filteredSections = state.draft.sections.filter(function(s) { return !s.title || !/[\u53C2\u8003\u94FE\u63A5]/.test(s.title.replace(/[^\u4e00-\u9fff]/g, "")); });
-    const sections = filteredSections.map(s => "## " + s.title.replace(/^#+\s*/g,"").trim() + "\n\n" + s.content + "\n").join("\n---\n\n");
-    report = "---\ntitle: " + dateStr + " | 行业雷达日报\noutline: [2, 3]\n---\n\n# 📡 行业雷达 · " + dateCN + "\n\n> 📮 采集 " + state.rawItems.length + " 篇 | 命中 " + state.verifiedItems.length + " 篇 | 多Agent博弈生成\n> 🤖 采集师·核查师·分析师·编辑师·记忆管理师\n\n" + sections + "\n---\n\n## 📮 参考链接\n\n<div class=\"ref-scroll\">\n" + state.verifiedItems.map((item, idx) => "<p id=\"ref-" + (idx + 1) + "\"><a href=\"" + item.link + "\">[" + (idx + 1) + "]</a> **" + item.title + "** · " + item.source + "</p>").join("\n") + "\n</div>\n\n---\n\n## 📊 数据统计\n\n| 来源 | 语言 | 采集数 |\n|------|------|--------|\n" + [...new Set(state.rawItems.map(i => i.source))].map(src => "| " + src + " | " + (state.rawItems.find(i => i.source === src)?.lang === "zh" ? "中文" : "EN") + " | " + state.rawItems.filter(i => i.source === src).length + " |").join("\n") + "\n\n> 生成时间: " + now.toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) + "\n> [查看过程日志](../logs/" + dateStr + ".md)\n";
+    // Build raw sections content (before stripping) for reference extraction
+    var rawContent = filteredSections.map(function(s) { return "## " + s.title + "\n\n" + s.content + "\n"; }).join("\n---\n\n");
+    const sections = filteredSections.map(s => "## " + s.title.replace(/^#+\s*/g,"").trim().replace(/\s*\[RAW-\d+(?:-\d+)*\]/g,"") + "\n\n" + s.content.replace(/\s*\[RAW-\d+(?:-\d+)*\]/g,"") + "\n").join("\n---\n\n");
+    var refIds = {};
+    rawContent.replace(/\[(RAW-\d+(?:-\d+)*)\]/g, function(m, id) { refIds[id] = true; });
+    rawContent.replace(/\[RAW-(\d{4})\]/g, function(m, sid) { refIds['short:' + sid] = true; });
+    var refItems = state.verifiedItems.filter(function(item) {
+      if (refIds[item.id]) return true;
+      var parts = item.id.split('-');
+      var last = parts[parts.length - 1];
+      if (refIds['short:' + last]) return true;
+      return false;
+    });
+    if (refItems.length === 0) { refItems = state.verifiedItems.slice(0, 8); }
+    report = "---\ntitle: " + dateStr + " | 行业雷达日报\noutline: [2, 3]\n---\n\n# \uD83D\uDCE1 行业雷达 \u00B7 " + dateCN + "\n\n> \uD83D\uDCCE 采集 " + state.rawItems.length + " 篇 | 命中 " + state.verifiedItems.length + " 篇 | 多Agent博弈生成\n> \uD83E\uDDBB 采集师\u00B7核查师\u00B7分析师\u00B7编辑师\u00B7记忆管理师\n\n" + sections + "\n---\n\n## \uD83D\uDCEE 参考链接\n\n<div class=\"ref-scroll\">\n" + refItems.map(function(item, idx) { return "<p id=\"ref-" + (idx + 1) + "\"><a href=\"" + item.link + "\">[" + (idx + 1) + "]</a> **" + item.title + "** \u00B7 " + item.source + "</p>"; }).join("\n") + "\n</div>\n\n---\n\n## \uD83D\uDCCA 数据统计\n\n<div class=\"ref-scroll\">\n| 来源 | 语言 | 采集数 |\n|------|------|--------|\n" + [...new Set(state.rawItems.map(i => i.source))].map(src => "| " + src + " | " + (state.rawItems.find(i => i.source === src)?.lang === "zh" ? "中文" : "EN") + " | " + state.rawItems.filter(i => i.source === src).length + " |").join("\n") + "\n</div>\n\n> 生成时间: " + now.toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) + "\n> [查看过程日志](../logs/" + dateStr + ".md)\n";
+
   } else {
     var agentMsgs = (state.messages || []).filter(function(m) { return m.from && m.coreInfo; }).slice(-10);
     var msgSummary = agentMsgs.length > 0 ? "\n\n## 🤖 代理通信摘要\n\n" + agentMsgs.map(function(m) {
@@ -885,13 +899,11 @@ async function main() {
     ["collector", "verifier", "analyst", "editor", "memory-manager"].forEach(function(aid) {
       var agentRep = repData[aid];
       if (!agentRep) return;
+      var todayHistory = (agentRep.history || []).filter(function(h) { return h.date === todayStr; });
       var score = agentRep.score || "?";
       var delta = "\u2014";
       var reason = "\u2014";
-      // 只显示本次run实际产生的信誉分变化（避免同日多次运行展示历史数据）
-      var hasChangesThisRun = state.reputationChanges && state.reputationChanges[aid] && state.reputationChanges[aid].length > 0;
-      var todayHistory = (agentRep.history || []).filter(function(h) { return h.date === todayStr; });
-      if (todayHistory.length > 0 && hasChangesThisRun) {
+      if (todayHistory.length > 0) {
         var lastEntry = todayHistory[todayHistory.length - 1];
         delta = lastEntry.delta > 0 ? "+" + lastEntry.delta : String(lastEntry.delta);
         reason = String(lastEntry.reason || "").slice(0, 150);
@@ -953,14 +965,5 @@ main().catch((err) => {
   console.error("致命错误:", err);
   process.exit(1);
 });
-
-
-
-
-
-
-
-
-
 
 

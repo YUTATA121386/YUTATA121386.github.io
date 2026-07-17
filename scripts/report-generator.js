@@ -17,20 +17,20 @@ function getDateCN(dateStr) {
 
 // ===================== 过程日志生成 =====================
 function generateProcessLog(state, dateStr) {
-  var dateCN = getDateCN(dateStr);
+  var dateCN = new Date(dateStr).getFullYear() + "\u5e74" + (new Date(dateStr).getMonth() + 1) + "\u6708" + new Date(dateStr).getDate() + "\u65e5";
   var pr = state.stats.collectorSubmitted > 0 ? ((state.stats.verifierPassed / state.stats.collectorSubmitted) * 100).toFixed(1) : "0";
 
   var c = "";
 
-  var tL = { INFO: "ℹ️ 信息", COMMAND: "📋 指令", REJECT: "🚫 打回", REQUEST: "📩 请求", DISPUTE: "⚔️ 质疑", NOTIFY: "📢 通知", ESCALATE: "⚠️ 升级", CONFIRM: "✅ 确认", DIRECTIVE: "👑 指令", APPROVE: "👍 批准", GUIDANCE: "💡 指导", PRIORITY_OVERRIDE: "⚡ 紧急", INQUIRE: "🔎 询问" };
-  var avatars = { collector: "📡", verifier: "🔍", analyst: "🔬", editor: "✍️", "memory-manager": "🧠" };
+  var tL = { INFO: "\u2139\ufe0f \u4fe1\u606f", COMMAND: "\ud83d\udccb \u6307\u4ee4", REJECT: "\uD83D\uDEAB \u6253\u56DE", REQUEST: "\uD83D\uDCE9 \u8BF7\u6C42", DISPUTE: "\u2694\uFE0F \u8D28\u7591", NOTIFY: "\uD83D\uDCE2 \u901A\u77E5", ESCALATE: "\u26A0\uFE0F \u5347\u7EA7", CONFIRM: "\u2705 \u786E\u8BA4", DIRECTIVE: "\uD83D\uDC51 \u6307\u4EE4", APPROVE: "\uD83D\uDC4D \u6279\u51C6", GUIDANCE: "\uD83D\uDCA1 \u6307\u5BFC", PRIORITY_OVERRIDE: "\u26A1 \u7D27\u6025", INQUIRE: "\uD83D\uDD0E \u8BE2\u95EE" };
+  var avatars = { collector: "\uD83D\uDCE1", verifier: "\uD83D\uDD0D", analyst: "\uD83D\uDD2C", editor: "\u270D\uFE0F", "memory-manager": "\uD83E\uDDE0" };
 
   function stripMD(text) {
     return text
       .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
-      .replace(/^- /gm, "• ")
-      .replace(/\n- /g, "\n• ")
-      .replace(/%/g, "％").replace(/TL;DR/gi, "📋 要点总结");
+      .replace(/^- /gm, "\u2022 ")
+      .replace(/\n- /g, "\n\u2022 ")
+      .replace(/%/g, "\uFF05").replace(/TL;DR/gi, "\uD83D\uDCCB \u8981\u70B9\u603B\u7ED3");
   }
 
   var msgs = '<div class="chat-log">\n';
@@ -47,58 +47,209 @@ function generateProcessLog(state, dateStr) {
   var rKeys = Object.keys(roundMsgs).sort(function(a,b) { return a-b; });
   var seenMsgs = {};
   rKeys.forEach(function(rk) {
-    var roundLabel = "第" + (parseInt(rk)+1) + "轮";
-    msgs += '<div class="chat-round-divider">● ' + roundLabel + '</div>\n';
-    roundMsgs[rk].forEach(function(item) {
-      var m = item.msg;
-      var fromName = AGENT_NAMES_CN[m.from] || m.from;
-      var toName = AGENT_NAMES_CN[m.to] || m.to || "all";
-      var msgKey = m.from + m.type + m.coreInfo;
-      if (seenMsgs[msgKey]) return;
-      seenMsgs[msgKey] = true;
-      var typeLabel = tL[m.type] || m.type;
-      msgs += '<div class="chat-msg">\n';
-      msgs += '  <div class="chat-header"><span class="chat-from">' + (avatars[m.from] || "") + " " + fromName + '</span> → <span class="chat-to">' + toName + '</span> <span class="chat-type">' + typeLabel + '</span></div>\n';
-      if (m.coreInfo) msgs += '  <div class="chat-body">' + stripMD(String(m.coreInfo)) + '</div>\n';
-      if (m.reason) msgs += '  <div class="chat-reason">' + stripMD(String(m.reason)) + '</div>\n';
+    var roundLabel = "\u7B2C" + (parseInt(rk)+1) + "\u8F6E";
+    msgs += '<div class="chat-round-divider">\u25CF ' + roundLabel + '</div>\n';
+
+
+    roundMsgs[rk].forEach(function(entry) {
+      var m = entry.msg;
+      var mi = entry.idx;
+      // 重复消息跳过：同一轮、同一角色、相同内容（跨轮次也跳过）
+      var dedupKey = m.from + "|" + ((m.coreInfo || "").replace(/\s+/g, " ").trim());
+      if (seenMsgs[dedupKey]) return;
+      seenMsgs[dedupKey] = true;
+      var fn = AGENT_NAMES_CN[m.from] || m.from;
+      var tn = AGENT_NAMES_CN[m.to] || m.to;
+      var av = avatars[m.from] || "\uD83D\uDCAC";
+      var tl = tL[m.type] || m.type;
+      var time = m.timestamp ? (function(ts) { if (!ts) return ""; var d = new Date(ts); var h = String((d.getUTCHours() + 8) % 24).padStart(2, "0"); var m = String(d.getUTCMinutes()).padStart(2, "0"); return h + ":" + m; })(m.timestamp) : "";
+
+      msgs += '<div class="chat-msg chat-from-' + m.from + '" id="msg-' + mi + '">\n';
+      msgs += '<div class="chat-avatar">' + av + '</div>\n';
+      msgs += '<div class="chat-content">\n';
+      msgs += '<div class="chat-meta">\n';
+      msgs += '<span class="chat-sender">' + fn + '</span>\n';
+      msgs += '<span class="chat-badge">' + tl + '</span>\n';
+      msgs += '<span style="opacity:0.6">\u2192 ' + tn + '</span>\n';
+
+      if (hasArb && !arbLinked && (m.type === "ESCALATE" || m.type === "DISPUTE")) {
+        msgs += '[#arbitration" class="arb-anchor">\u2696\uFE0F \u4EF2\u88C1</a>\n';
+        arbLinked = true;
+      }
+
+      msgs += '<span class="chat-time">' + time + '</span>\n';
       msgs += '</div>\n';
+      msgs += '<div class="chat-body">\n';
+
+      var allItems = {};
+      state.rawItems.forEach(function(item) { allItems[item.id] = item.title; });
+      state.verifiedItems.forEach(function(item) { allItems[item.id] = item.title; });
+      state.rejectedItems.forEach(function(item) { allItems[item.id] = item.title; });
+      state.rawItems.forEach(function(item) { var parts = item.id.split('-'); var short = 'RAW-' + parts[parts.length-1]; allItems[short] = item.title; });
+      
+      var cleanText = (m.coreInfo || "")
+        .replace(/RAW-(\d{4}-\d{2}-\d{2}-\d{4})/g, function(match, idSuffix) {
+          var fullId = "RAW-" + idSuffix;
+          var title = allItems[fullId];
+          if (!title) { var shortId = "RAW-" + idSuffix.slice(-4); title = allItems[shortId]; }
+          if (!title) { for (var k in allItems) { if (k.endsWith(idSuffix)) { title = allItems[k]; break; } } }
+          return title ? "\u3010\u7D20\u6750\uFF1A" + title.slice(0, 30) + "\u3011" : "\u3010\u7D20\u6750\u3011";
+        })
+        .replace(/RAW-(\d{4})\b(?!-)/g, function(match, shortId) {
+          var found = null;
+          for (var k in allItems) { if (k.endsWith("-" + shortId)) { found = allItems[k]; break; } }
+          return found ? "\u3010\u7D20\u6750\uFF1A" + found.slice(0, 30) + "\u3011" : match;
+        })
+        .replace(/MSG-[A-Z]{3}-\d{4}-\d{2}-\d{2}-\d{3}/g, "\u3010\u6D88\u606F\u3011")
+        .replace(/REQ-[A-Z]{3}-\d{4}-\d{2}-\d{2}-\d{3}/g, "\u3010\u8BF7\u6C42\u3011")
+        .replace(/INS-\d{4}-\d{2}-\d{2}-\d{3}/g, "\u3010\u6D1E\u5BDF\u3011");
+      
+      cleanText = stripMD(cleanText);
+      cleanText = cleanText.replace(/\[【/g, "【").replace(/】\]/g, "】");
+
+      msgs += '<blockquote>' + cleanText.replace(/\n/g, '<br>') + '</blockquote>\n';
+      msgs += '</div>\n';
+
+      if (m.expectedAction || m.reason) {
+        msgs += '<div class="chat-footer">\n';
+        if (m.expectedAction) msgs += '<span>\uD83C\uDFAF ' + stripMD(m.expectedAction) + '</span>\n';
+        if (m.reason) msgs += '<span>\uD83D\uDCDD ' + stripMD(m.reason) + '</span>\n';
+        msgs += '</div>\n';
+      }
+
+      msgs += '</div></div>\n\n';
     });
   });
   msgs += '</div>\n';
 
-  var scoresContent = "";
-  ["collector","verifier","analyst","editor","memory-manager"].forEach(function(aid) {
-    var rep = state.reputation[aid];
-    if (!rep) return;
-    var todayChanges = (rep.history || []).filter(function(h) { return h.date === dateStr; });
-    var deltaStr = "—";
-    var reasonStr = "—";
-    if (todayChanges.length > 0) {
-      var lastEntry = todayChanges[todayChanges.length - 1];
-      deltaStr = lastEntry.delta > 0 ? "+" + lastEntry.delta : String(lastEntry.delta);
-      reasonStr = String(lastEntry.reason || "").slice(0, 150);
+  var arb = "";
+  if (state.arbitration && state.arbitration.verdict) {
+    arb = '\n\n## \u2696\uFE0F \u4EF2\u88C1\u8BB0\u5F55 <a id="arbitration"></a>\n\n';
+    var vd = state.arbitration.verdict;
+    if (state.arbitration.rounds[0] && state.arbitration.rounds[0].result && state.arbitration.rounds[0].result.fact_list) {
+      arb += '### \u521D\u5BA1 \u00B7 \u4E8B\u5B9E\u6E05\u5355\n\n';
+      state.arbitration.rounds[0].result.fact_list.forEach(function(f) { arb += '- ' + f + '\n'; });
+      arb += '\n';
     }
-    var name = AGENT_NAMES_CN[aid] || aid;
-    scoresContent += '<div class="score-row"><span class="score-name">' + name + '</span><span class="score-val">' + rep.score + '</span><span class="score-delta">(' + deltaStr + ')</span><span class="score-reason">' + reasonStr + '</span></div>\n';
-  });
-
-  var reviewContent = "";
-  if (state.review && state.review.quality_scores) {
-    reviewContent += '\n\n## 质量评估\n\n| 维度 | 评分 |\n|------|------|\n';
-    Object.entries(state.review.quality_scores).forEach(function(e) {
-      reviewContent += '| ' + e[0] + ' | ' + e[1] + ' |\n';
-    });
-    if (state.review.strengths && state.review.strengths.length > 0)
-      reviewContent += '\n**优势**: ' + state.review.strengths.join("、");
-    if (state.review.weaknesses && state.review.weaknesses.length > 0)
-      reviewContent += '\n\n**劣势**: ' + state.review.weaknesses.join("、");
-  } else {
-    reviewContent = "\n\n> 今日未生成回顾评估（系统运行异常或素材不足）";
+    if (state.arbitration.rounds[1] && state.arbitration.rounds[1].result && state.arbitration.rounds[1].result.positions) {
+      arb += '### \u590D\u5BA1 \u00B7 \u5404\u65B9\u89C2\u70B9\n\n';
+      for (var pk in state.arbitration.rounds[1].result.positions) {
+        arb += '**' + (AGENT_NAMES_CN[pk] || pk) + '**\uFF1A' + state.arbitration.rounds[1].result.positions[pk] + '\n\n';
+      }
+    }
+    arb += '### \u7EC8\u5BA1 \u00B7 \u88C1\u51B3\n\n';
+    if (vd.summary) arb += '> **\u4E89\u8BAE\u6458\u8981**\uFF1A' + vd.summary + '\n>\n';
+    if (vd.decision) arb += '> **\u88C1\u51B3\u7ED3\u679C**\uFF1A' + vd.decision + '\n>\n';
+    if (vd.action_items && vd.action_items.length) {
+      arb += '> **\u6267\u884C\u6B65\u9AA4**\uFF1A\n';
+      vd.action_items.forEach(function(a) { arb += '> - ' + a + '\n'; });
+      arb += '>\n';
+    }
+    if (vd.rule_changes && vd.rule_changes.length) {
+      arb += '> **\u89C4\u5219\u53D8\u66F4**\uFF1A\n';
+      vd.rule_changes.forEach(function(r) { 
+        arb += '> - ' + (typeof r === "string" ? r : (r.reason || r.file || JSON.stringify(r))) + '\n';
+      });
+    }
+    arb += '\n';
   }
 
-  c = "---\ntitle: " + dateStr + " 过程日志\noutline: [2, 3]\n---\n\n# 📋 过程日志 · " + dateCN + "\n\n## 📊 数据概要\n\n| 指标 | 数值 |\n|------|------|\n| 采集 | " + state.stats.collectorSubmitted + " 条 |\n| 通过 | " + state.stats.verifierPassed + " 条 |\n| 拒绝 | " + state.stats.verifierRejected + " 条 |\n| 通过率 | " + pr + "% |\n| 轮次 | " + state.round + "/" + state.maxRounds + " |\n| 僵局 | " + (state.deadlockDetected ? "是" : "否") + " |\n\n## 💬 通信记录\n\n" + msgs + "\n\n---\n\n## 📈 今日信誉分变化\n\n<div class=\"score-grid\">\n" + scoresContent + "</div>\n\n" + reviewContent + "\n";
-  return c;
+  var emerg = "";
+  if (state.emergencyChannel) {
+    emerg = '\n\n## \u26A1 \u7D27\u6025\u901A\u9053\n\n- \u89E6\u53D1\uFF1A' + (state.emergencyChannel.triggered_by || "\u672A\u77E5") + ' | ' + (state.emergencyChannel.topic || "\u672A\u77E5") + '\n';
+  }
+
+
+
+  var retro = "\n<h2>\uD83D\uDCDD \u4ECA\u65E5\u590D\u76D8</h2>\n\n<blockquote>\u6BCF\u4E2A\u89D2\u8272\u5BF9\u4ECA\u65E5\u5DE5\u4F5C\u7684\u603B\u7ED3\u4E0E\u53CD\u601D</blockquote>\n\n";
+  var agentLastMsg = {};
+  state.messages.forEach(function(m) { agentLastMsg[m.from] = m; });
+  var reviewPhaseMsgs = {};
+  state.messages.forEach(function(m) { if (m.to === "editor" && (m.type === "APPROVE" || m.type === "CONFIRM" || m.type === "NOTIFY")) reviewPhaseMsgs[m.from] = m; });
+  // Prefer review-phase message for 复盘; fall back to last message
+  Object.keys(reviewPhaseMsgs).forEach(function(k) { agentLastMsg[k] = reviewPhaseMsgs[k]; });
+  var agentOrder = ["collector", "verifier", "analyst", "editor", "memory-manager"];
+  agentOrder.forEach(function(aid) {
+    var m = agentLastMsg[aid];
+    var name = AGENT_NAMES_CN[aid] || aid;
+    var av = avatars[aid] || "\uD83D\uDCAC";
+    retro += '<div class="chat-msg chat-from-' + aid + '">\n';
+    retro += '<div class="chat-avatar">' + av + '</div>\n';
+    retro += '<div class="chat-content">\n';
+    retro += '<div class="chat-meta"><span class="chat-sender">' + name + '</span><span class="chat-badge">\uD83D\uDCDD \u590D\u76D8</span></div>\n';
+    retro += '<div class="chat-body"><blockquote>';
+    if (m) { retro += stripMD((m.coreInfo || "").slice(0, 500)).replace(/\n/g, "<br>"); }
+    else { retro += name + '\u672A\u53C2\u4E0E\u4ECA\u65E5\u5DE5\u4F5C\u3002'; }
+    retro += '</blockquote></div>\n';
+    retro += '</div></div>\n\n';
+  });
+  retro += '<div class="chat-round-divider">\u25CF \u5BA1\u7A3F\u53CD\u9988</div>\n';
+  var reviewMsgs = state.messages.filter(function(m) { return m.type === "APPROVE" || m.type === "CONFIRM" || m.type === "REQUEST" && m.to === "editor"; }).slice(-6);
+  if (reviewMsgs.length === 0) {
+    retro += '<p style="color:#999;text-align:center;padding:12px;">\u26A0\uFE0F \u672C\u6B21\u672A\u8FDB\u884C\u6B63\u5F0F\u5BA1\u7A3F\u6D41\u7A0B</p>\n';
+  } else {
+    retro += '<p style="color:#888;text-align:center;padding:8px;">\u2705 \u5DF2\u6536\u5230 ' + reviewMsgs.length + ' \u6761\u5BA1\u7A3F\u53CD\u9988\uFF0C\u8BE6\u89C1\u4E0A\u65B9\u5B8C\u6574\u901A\u4FE1\u8BB0\u5F55</p>\n';
+  }
+
+  // ===== 信誉分变化 =====
+  var repLog = "\n\n## 📊 今日信誉分变化\n\n";
+  var repAgents = ["collector", "verifier", "analyst", "editor", "memory-manager"];
+  var repNames = { collector: "采集师", verifier: "核查师", analyst: "分析师", editor: "编辑师", "memory-manager": "记忆管理师" };
+  repLog += '<div style="display:grid;grid-template-columns:80px 50px 50px 1fr;gap:6px 12px;font-size:0.9em;margin:12px 0;">\n';
+  repLog += '<div style="font-weight:600;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);">角色</div>\n';
+  repLog += '<div style="text-align:center;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);">分数</div>\n';
+  repLog += '<div style="text-align:center;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);">变化</div>\n';
+  repLog += '<div style="padding:6px 0;border-bottom:2px solid var(--vp-c-divider);overflow-wrap:break-word;word-break:break-word;">原因</div>\n';
+  repAgents.forEach(function(aid) {
+    var agentRep = state.reputation && state.reputation[aid];
+    if (!agentRep) return;
+    var score = agentRep.score || "?";
+    var delta = "—";
+    var reason = "—";
+    if (agentRep.history && agentRep.history.length > 0) {
+      var lastEntry = agentRep.history[agentRep.history.length - 1];
+      delta = lastEntry.delta > 0 ? "+" + lastEntry.delta : String(lastEntry.delta);
+      reason = String(lastEntry.reason || "").slice(0, 150);
+    }
+    repLog += '<div style="font-weight:600;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);">' + (repNames[aid] || aid) + '</div>\n';
+    repLog += '<div style="text-align:center;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);">' + score + '</div>\n';
+    repLog += '<div style="text-align:center;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);">' + delta + '</div>\n';
+    repLog += '<div style="padding:6px 0;border-bottom:1px solid var(--vp-c-divider);overflow-wrap:break-word;word-break:break-word;line-height:1.4;">' + reason + '</div>\n';
+  });
+  repLog += "</div>\n";
+
+  // ===== 质量评估 =====
+  var qualitySection = "\n\n## 🏆 质量评估\n\n";
+  if (state.draft && state.draft.quality) {
+    qualitySection += '| 维度 | 分数 |\n|------|------|\n';
+    if (state.draft.quality.integrity) qualitySection += "| 完整性 | " + state.draft.quality.integrity + " |\n";
+    if (state.draft.quality.accuracy) qualitySection += "| 准确性 | " + state.draft.quality.accuracy + " |\n";
+    if (state.draft.quality.depth) qualitySection += "| 深度 | " + state.draft.quality.depth + " |\n";
+    if (state.draft.quality.readability) qualitySection += "| 可读性 | " + state.draft.quality.readability + " |\n";
+    if (state.draft.quality.score) qualitySection += "| **总分** | **" + state.draft.quality.score + "** |\n";
+  } else {
+    qualitySection += "> 今日未进行正式质量评估\n";
+  }
+
+  return "---\ntitle: " + dateStr + " | \u56E2\u961F\u8FC7\u7A0B\u65E5\u5FD7\noutline: [2, 3]\n---\n\n" + c +
+    "# \uD83D\uDCCB \u56E2\u961F\u8FC7\u7A0B\u65E5\u5FD7 \u00B7 " + dateCN + "\n\n" +
+    "## \uD83D\uDCCA \u4ECA\u65E5\u7EDF\u8BA1\n\n" +
+    "| \u6307\u6807 | \u6570\u636E |\n|------|------|\n" +
+    "| \u603B\u8F6E\u6B21 | " + state.round + " (" + (state.deadlockDetected ? "\u5DF2\u89E6\u53D1\u4EF2\u88C1" : "\u6B63\u5E38\u6D41\u7A0B") + ") |\n" +
+    "| \u91C7\u96C6\u63D0\u4EA4 | " + state.stats.collectorSubmitted + " \u6761 |\n" +
+    "| \u6838\u67E5\u901A\u8FC7 | " + state.stats.verifierPassed + " \u6761\uFF08\u901A\u8FC7\u7387 " + pr + "%\uFF09 |\n" +
+    "| \u6838\u67E5\u62D2\u7EDD | " + state.stats.verifierRejected + " \u6761 |\n" +
+    "| \u8865\u91C7\u8BF7\u6C42 | " + state.stats.analystRequests + " \u6B21 |\n" +
+    "| \u7D27\u6025\u901A\u9053 | " + (state.emergencyChannel ? "\u5DF2\u89E6\u53D1" : "\u672A\u89E6\u53D1") + " |\n" +
+    "| \u89C4\u5219\u53D8\u66F4 | " + (state.stats.ruleChanges || 0) + " \u6761 |\n\n" +
+    emerg +
+    "## \uD83D\uDCAC \u5B8C\u6574\u901A\u4FE1\u8BB0\u5F55\n\n" + msgs + "\n" +
+    arb +
+    retro +
+    repLog + qualitySection +
+    "\n\n> \u751F\u6210\u65F6\u95F4: " + new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) + "\n";
 }
+
 
 // ===================== 周报生成 =====================
 function generateWeeklyReport(state, dateStr) {
