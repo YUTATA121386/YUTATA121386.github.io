@@ -31,10 +31,10 @@ jobs:
         with:
           path: docs/.vitepress/dist
       - name: Deploy to Pages with retry
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
         id: deployment
         continue-on-error: true
       - name: Retry deployment if failed
         if: steps.deployment.outcome == 'failure'
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
         timeout-minutes: 10
