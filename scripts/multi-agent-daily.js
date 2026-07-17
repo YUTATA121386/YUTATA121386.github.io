@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 /**
  * YUTATA 多Agent日报系统 v4
  * 五个角色并行博弈: 采集师·核查师·分析师·编辑师·记忆管理师
@@ -202,8 +202,17 @@ function buildAgentContext(agentId, state) {
     for (const item of state.verifiedItems.slice(-15)) ctx += "  [" + item.id + "] " + item.title.slice(0, 80) + " | " + item.category + "\n";
   }
   if (agentId === "editor") {
-    ctx += "已验证: " + state.verifiedItems.length + " | insights: " + state.insights.length + "\n";
-    if (state.draft) ctx += "草稿已有 " + (state.draft.sections?.length || 0) + " 个章节\n";
+    ctx += "已验证: " + state.verifiedItems.length + " 条 | insights: " + state.insights.length + " 条\n";
+    ctx += "\n### 已验证素材列表\n";
+    for (const item of state.verifiedItems.slice(-25)) {
+      ctx += "  - [" + item.id + "] " + item.title.slice(0, 100) + " | " + item.source + " | " + item.category + "\n";
+    }
+    ctx += "\n### 分析师洞察\n";
+    if (state.insights.length === 0) ctx += "(暂无洞察)\n";
+    for (const ins of state.insights) {
+      ctx += "  - [" + ins.id + "] " + String(ins.title || "").slice(0, 100) + "\n";
+    }
+    if (state.draft) ctx += "\n草稿已有 " + (state.draft.sections?.length || 0) + " 个章节\n";
     ctx += "\n## 排版规范\n" + (state.rules["style-guide"] || "(无)") + "\n";
   }
   if (agentId === "memory-manager") {
@@ -476,6 +485,10 @@ function generateProcessLog(state, dateStr) {
   var retro = "\n<h2>\uD83D\uDCDD \u4ECA\u65E5\u590D\u76D8</h2>\n\n<blockquote>\u6BCF\u4E2A\u89D2\u8272\u5BF9\u4ECA\u65E5\u5DE5\u4F5C\u7684\u603B\u7ED3\u4E0E\u53CD\u601D</blockquote>\n\n";
   var agentLastMsg = {};
   state.messages.forEach(function(m) { agentLastMsg[m.from] = m; });
+  var reviewPhaseMsgs = {};
+  state.messages.forEach(function(m) { if (m.to === "editor" && (m.type === "APPROVE" || m.type === "CONFIRM" || m.type === "NOTIFY")) reviewPhaseMsgs[m.from] = m; });
+  // Prefer review-phase message for 复盘; fall back to last message
+  Object.keys(reviewPhaseMsgs).forEach(function(k) { agentLastMsg[k] = reviewPhaseMsgs[k]; });
   var agentOrder = ["collector", "verifier", "analyst", "editor", "memory-manager"];
   agentOrder.forEach(function(aid) {
     var m = agentLastMsg[aid];
@@ -990,7 +1003,7 @@ function saveSystemMemory(mem) {
 
 // ===================== 主流程 =====================
 async function main() {
-  const now = new Date();
+  const now = new Date(2026, 6, 17, 0, 0, 0);
   const dateStr = now.getFullYear() + "-" + String(now.getMonth() + 1).padStart(2, "0") + "-" + String(now.getDate()).padStart(2, "0");
   const dateCN = now.getFullYear() + "年" + (now.getMonth() + 1) + "月" + now.getDate() + "日";
   const systemStats = loadSystemStats();
@@ -1089,6 +1102,7 @@ async function main() {
           if (action.type === "verify" && (action.item_id || (action.items && action.items.length > 0))) {
             // Handle both flat format (item_id) and nested format (items array from prompt)
             var itemsToProcess = action.items || [{id: action.item_id, decision: action.decision, reason: action.reason, category: action.category}];
+            var passCount = 0, rejectCount = 0, passReasons = [], rejectReasons = [];
             for (var vi = 0; vi < itemsToProcess.length; vi++) {
               var vitem = itemsToProcess[vi];
               const item = state.rawItems.find(i => i.id === vitem.id);
@@ -1097,8 +1111,16 @@ async function main() {
               item.status = decision;
               item.verify_reason = vitem.reason || action.reason || "";
               item.category = vitem.category || action.category || item.category;
-              if (decision === "pass" || decision === "approve") { state.verifiedItems.push(item); state.stats.verifierPassed++; }
-              else if (decision === "fail" || decision === "reject") { state.rejectedItems.push(item); state.stats.verifierRejected++; }
+              if (decision === "pass" || decision === "approve") { state.verifiedItems.push(item); state.stats.verifierPassed++; passCount++; if (item.verify_reason) passReasons.push(String(item.verify_reason).slice(0, 60)); }
+              else if (decision === "fail" || decision === "reject") { state.rejectedItems.push(item); state.stats.verifierRejected++; rejectCount++; if (item.verify_reason) rejectReasons.push(String(item.verify_reason).slice(0, 60)); }
+            }
+            // Record reputation reason for verifier: tracking approval/rejection patterns
+            if (passCount + rejectCount > 0) {
+              var repReason = "审核了" + (passCount + rejectCount) + "条素材，通过" + passCount + "条";
+              if (rejectReasons.length > 0) repReason += "。拒绝原因: " + rejectReasons.slice(0, 2).join("; ");
+              if (!state.repReasons) state.repReasons = {};
+              if (!state.repReasons["verifier"]) state.repReasons["verifier"] = [];
+              state.repReasons["verifier"].push(repReason);
             }
           }
         }
@@ -1201,7 +1223,7 @@ async function main() {
     log("system", "\n=== 审稿环节 ===");
     state.phase = "review";
     var reviewAgents = ["collector", "verifier", "analyst", "editor", "memory-manager"];
-    var reviewInst = "## 审稿\n你是{role}，请对当前日报草稿做出评价。\n- 如果通过，发送APPROVE消息\n- 输出: { \"messages\": [{ \"to\": \"editor\", \"type\": \"APPROVE/REQUEST\", \"coreInfo\": \"评价内容\", \"expectedAction\": \"修改要求\", \"reason\": \"理由\", \"priority\": \"normal\" }], \"internal_thought\": \"...\" }";
+    var reviewInst = "## 审稿\n你是{role}，请对当前日报草稿做出评价。\n- 如果通过，发送APPROVE消息\n- **在coreInfo中附上今日工作总结作为复盘**\n- 输出: { \"messages\": [{ \"to\": \"editor\", \"type\": \"APPROVE/REQUEST\", \"coreInfo\": \"评价日报质量+今日工作总结\", \"expectedAction\": \"修改要求\", \"reason\": \"理由\", \"priority\": \"normal\" }], \"internal_thought\": \"...\" }";
     for (var ri = 0; ri < reviewAgents.length; ri++) {
       var aid = reviewAgents[ri];
       var inst = reviewInst.replace("{role}", AGENT_NAMES_CN[aid]);
@@ -1302,29 +1324,33 @@ async function main() {
     report = "---\ntitle: " + dateStr + " | 行业雷达日报\noutline: [2, 3]\n---\n\n# 📡 行业雷达 · " + dateCN + "\n\n> ⚠️ 今日多Agent系统未产出完整日报\n> [查看过程日志](../logs/" + dateStr + ".md)\n\n## 采集概况\n- 采集 " + state.rawItems.length + " 篇 | 通过 " + state.verifiedItems.length + " 篇\n" + msgSummary;
   }
 
-  // ===== 信誉分变化 =====
+      // ===== 信誉分变化 =====
+  // 直接从 reputation.json 读取，确保显示最新信誉分变化  
   try {
-    var sysMem2 = loadSystemMemory();
-    if (sysMem2.entries && sysMem2.entries.length > 0) {
-      var lastDay = sysMem2.entries[sysMem2.entries.length - 1];
-      if (lastDay.perRole) {
-        var repSection = "\n\n## 📊 今日信誉分变化\n\n<div style=\"display:grid;grid-template-columns:80px 50px 50px 1fr;gap:6px 12px;font-size:0.9em;margin:12px 0;\">\n<div style=\"font-weight:600;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);\">角色</div>\n<div style=\"text-align:center;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);\">分数</div>\n<div style=\"text-align:center;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);\">变化</div>\n<div style=\"padding:6px 0;border-bottom:2px solid var(--vp-c-divider);overflow-wrap:break-word;word-break:break-word;\">原因</div>\n";
-        var agentNames = { collector: "采集师", verifier: "核查师", analyst: "分析师", editor: "编辑师", "memory-manager": "记忆管理师" };
-        ["collector", "verifier", "analyst", "editor", "memory-manager"].forEach(function(aid) {
-          var role = lastDay.perRole[aid];
-          if (!role) return;
-          var score = role.score || "?";
-          var changes = role.changes || [];
-          var lastChange = changes[changes.length - 1];
-          var delta = lastChange ? (lastChange.delta > 0 ? "+" + lastChange.delta : String(lastChange.delta)) : "—";
-          var reason = lastChange ? (String(lastChange.reason || "").slice(0, 120)) : "—";
-          repSection += "<div style=\"font-weight:600;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + (agentNames[aid] || aid) + "</div><div style=\"text-align:center;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + score + "</div><div style=\"text-align:center;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + delta + "</div><div style=\"padding:6px 0;border-bottom:1px solid var(--vp-c-divider);overflow-wrap:break-word;word-break:break-word;line-height:1.4;\">" + reason + "</div>\n";
-        });
-        repSection += "</div>\n";
-
-  report += repSection;
+    var repData = require("./agents/shared").loadReputation();
+    var agentNames = { collector: "采集师", verifier: "核查师", analyst: "分析师", editor: "编辑师", "memory-manager": "记忆管理师" };
+    var todayStr = dateStr;
+    var repSection = "\n\n## \U0001f4ca \u4eca\u65e5\u4fe1\u8a89\u5206\u53d8\u5316\n\n<div style=\"display:grid;grid-template-columns:80px 50px 50px 1fr;gap:6px 12px;font-size:0.9em;margin:12px 0;\">\n<div style=\"font-weight:600;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);\">\u89d2\u8272</div>\n<div style=\"text-align:center;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);\">\u5206\u6570</div>\n<div style=\"text-align:center;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);\">\u53d8\u5316</div>\n<div style=\"padding:6px 0;border-bottom:2px solid var(--vp-c-divider);overflow-wrap:break-word;word-break:break-word;\">\u539f\u56e0</div>\n";
+    ["collector", "verifier", "analyst", "editor", "memory-manager"].forEach(function(aid) {
+      var agentRep = repData[aid];
+      if (!agentRep) return;
+      var score = agentRep.score || "?";
+      var delta = "\u2014";
+      var reason = "\u2014";
+      var todayHistory = (agentRep.history || []).filter(function(h) { return h.date === todayStr; });
+      if (todayHistory.length > 0) {
+        var lastEntry = todayHistory[todayHistory.length - 1];
+        delta = lastEntry.delta > 0 ? "+" + lastEntry.delta : String(lastEntry.delta);
+        reason = String(lastEntry.reason || "").slice(0, 150);
+      } else {
+        if (state.repReasons && state.repReasons[aid]) {
+          reason = state.repReasons[aid].slice(-1)[0];
+        }
       }
-    }
+      repSection += "<div style=\"font-weight:600;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + (agentNames[aid] || aid) + "</div><div style=\"text-align:center;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + score + "</div><div style=\"text-align:center;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + delta + "</div><div style=\"padding:6px 0;border-bottom:1px solid var(--vp-c-divider);overflow-wrap:break-word;word-break:break-word;line-height:1.4;\">" + reason + "</div>\n";
+    });
+    repSection += "</div>\n";
+    report += repSection;
   } catch(e) { /* skip reputation section */ }
 
   writeFileUTF8(path.join(OUTPUT_DIR, dateStr + ".md"), report);
@@ -1367,6 +1393,7 @@ main().catch((err) => {
   console.error("致命错误:", err);
   process.exit(1);
 });
+
 
 
 
