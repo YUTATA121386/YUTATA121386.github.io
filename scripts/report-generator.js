@@ -222,11 +222,15 @@ function generateProcessLog(state, dateStr) {
   if (state.review && state.review.quality_scores) {
     var qs = state.review.quality_scores;
     qualitySection += '| 维度 | 分数 |\n|------|------|\n';
-    if (qs.integrity) qualitySection += "| 完整性 | " + qs.integrity + " |\n";
-    if (qs.accuracy) qualitySection += "| 准确性 | " + qs.accuracy + " |\n";
-    if (qs.depth) qualitySection += "| 深度 | " + qs.depth + " |\n";
-    if (qs.readability) qualitySection += "| 可读性 | " + qs.readability + " |\n";
-    if (qs.score) qualitySection += "| **总分** | **" + qs.score + "** |\n";
+    if (qs.completeness !== undefined) qualitySection += "| 完整性 | " + qs.completeness + " |\n";
+    if (qs.accuracy !== undefined) qualitySection += "| 准确性 | " + qs.accuracy + " |\n";
+    if (qs.depth !== undefined) qualitySection += "| 深度 | " + qs.depth + " |\n";
+    if (qs.readability !== undefined) qualitySection += "| 可读性 | " + qs.readability + " |\n";
+    if (qs.score !== undefined) qualitySection += "| **总分** | **" + qs.score + "** |\n";
+        if (qs.score === undefined && (qs.completeness !== undefined || qs.accuracy !== undefined)) {
+      var avg = [qs.completeness, qs.accuracy, qs.depth, qs.readability].filter(function(v) { return v !== undefined; }).reduce(function(a,b) { return a+b; }, 0) / [qs.completeness, qs.accuracy, qs.depth, qs.readability].filter(function(v) { return v !== undefined; }).length;
+      qualitySection += "| **总分(平均)** | **" + avg.toFixed(1) + "** |\n";
+    }
     if (state.review.summary) qualitySection += "\n> " + state.review.summary + "\n";
   } else {
     qualitySection += "> 今日未进行正式质量评估\n";

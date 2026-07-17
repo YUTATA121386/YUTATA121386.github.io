@@ -668,7 +668,7 @@ async function main() {
       if (result.messages && Array.isArray(result.messages)) {
         for (const rm of result.messages) {
           if (rm.to && AGENT_NAMES_CN[rm.to] && rm.type && MSG_TYPES.includes(rm.type)) {
-            pushMessage(state, createMessage(agentId, rm.to, rm.type, rm.coreInfo || "", rm.expectedAction || "", rm.reason || "", rm.priority || "normal"));
+            pushMessage(state, createMessage(agentId, rm.to, rm.type, (rm.coreInfo || (agentId === "editor" ? "\u7F16\u8F91\u5E08\u5904\u7406\u65E5\u62A5\u8349\u7A3F\u4E2D\u9047\u5230\u6280\u672F\u95EE\u9898\uFF0C\u6D88\u606F\u5185\u5BB9\u6682\u7F3A\u3002" : "")), rm.expectedAction || "", rm.reason || "", rm.priority || "normal"));
           }
         }
       }
@@ -740,7 +740,20 @@ async function main() {
 
         // 检测收敛（第3轮起）：编辑师终稿就绪 + 无待补采 + 无活跃争议 + 核查完毕
     if (round >= 3) {
-      var editorConfirmed = state.draft && state.draft.sections && state.draft.sections.length > 0;
+            // Final fallback: auto-generate draft when editor produces no output
+      if (!state.draft || !state.draft.sections || state.draft.sections.length === 0) {
+        var fbTopics = state.insights.slice(0, 3).map(function(i) { return i.title || i.topic || ""; });
+        var fbSections = [];
+        fbSections.push({ title: "📡 核心解读", content: "编辑师处理日报草稿时遇到技术问题，以下为基于已验证素材的核心摘要。\n" + state.verifiedItems.slice(0, 5).map(function(v) { return "- [" + v.id + "] " + v.title; }).join("\n"), referenced_items: [], referenced_insights: [] });
+        if (fbTopics.length > 0) {
+          fbSections.push({ title: "🔍 行业趋势观察", content: fbTopics.map(function(t) { return "- " + t; }).join("\n"), referenced_items: [], referenced_insights: [] });
+        }
+        fbSections.push({ title: "📊 数据概览", content: "采集 " + state.rawItems.length + " 篇 | 通过 " + state.verifiedItems.length + " 篇 | " + (state.stats.verifierPassed || 0) + " 条通过核查", referenced_items: [], referenced_insights: [] });
+        fbSections.push({ title: "✏️ 编辑备注", content: "今日编辑师处理日报草稿时遇到技术问题，日报由系统自动生成。数据基于已通过核查的素材。" + (state.insights.length > 0 ? "分析师洞察已整合。" : ""), referenced_items: [], referenced_insights: [] });
+        state.draft = { sections: fbSections };
+        log("editor", "自动生成兜底日报: " + fbSections.length + " 个章节");
+      }
+var editorConfirmed = state.draft && state.draft.sections && state.draft.sections.length > 0;
       var noPendingSupplements = !state.supplementRequests.some(function(r) { return r.status === "pending"; });
       var noActiveDisputes = !state.messages.slice(-15).some(function(m) { return m.type === "DISPUTE" || m.type === "ESCALATE"; });
       var verifierDone = !state.rawItems.some(function(i) { return i.status === "pending"; });
@@ -881,12 +894,12 @@ async function main() {
 
   } else {
     var agentMsgs = (state.messages || []).filter(function(m) { return m.from && m.coreInfo; }).slice(-10);
-    var msgSummary = agentMsgs.length > 0 ? "\n\n## 🤖 代理通信摘要\n\n" + agentMsgs.map(function(m) {
+    var msgSummary = agentMsgs.length > 0 ? "\n\n## 📋 代理通信摘要\n\n" + agentMsgs.map(function(m) {
       var name = AGENT_NAMES_CN[m.from] || m.from;
       var toName = AGENT_NAMES_CN[m.to] || m.to || "all";
       return "- **" + name + "** → " + toName + " [" + (m.type || "info") + "]: " + String(m.coreInfo || "").slice(0, 120);
     }).join("\n") + "\n" : "";
-    report = "---\ntitle: " + dateStr + " | 行业雷达日报\noutline: [2, 3]\n---\n\n# 📡 行业雷达 · " + dateCN + "\n\n> ⚠️ 今日多Agent系统未产出完整日报\n> [查看过程日志](../logs/" + dateStr + ".md)\n\n## 采集概况\n- 采集 " + state.rawItems.length + " 篇 | 通过 " + state.verifiedItems.length + " 篇\n" + msgSummary;
+    report = "---\ntitle: " + dateStr + " | 行业雷达日报\noutline: [2, 3]\n---\n\n# 📡 行业雷达 · " + dateCN + "\n\n> ⚠️ 今日编辑师环节异常，日报由系统自动生成\n> 📮 采集概况见下方\n> [查看过程日志](../logs/" + dateStr + ".md)\n\n## 采集概况\n- 采集 " + state.rawItems.length + " 篇 | 通过 " + state.verifiedItems.length + " 篇\n" + msgSummary;
   }
 
       // ===== 信誉分变化 =====
