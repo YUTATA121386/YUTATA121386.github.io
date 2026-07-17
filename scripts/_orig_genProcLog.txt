@@ -1,0 +1,192 @@
+﻿function generateProcessLog(state, dateStr) {
+  var dateCN = new Date(dateStr).getFullYear() + "\u5e74" + (new Date(dateStr).getMonth() + 1) + "\u6708" + new Date(dateStr).getDate() + "\u65e5";
+  var pr = state.stats.collectorSubmitted > 0 ? ((state.stats.verifierPassed / state.stats.collectorSubmitted) * 100).toFixed(1) : "0";
+
+  var c = "";
+
+  var tL = { INFO: "\u2139\ufe0f \u4fe1\u606f", COMMAND: "\ud83d\udccb \u6307\u4ee4", REJECT: "\uD83D\uDEAB \u6253\u56DE", REQUEST: "\uD83D\uDCE9 \u8BF7\u6C42", DISPUTE: "\u2694\uFE0F \u8D28\u7591", NOTIFY: "\uD83D\uDCE2 \u901A\u77E5", ESCALATE: "\u26A0\uFE0F \u5347\u7EA7", CONFIRM: "\u2705 \u786E\u8BA4", DIRECTIVE: "\uD83D\uDC51 \u6307\u4EE4", APPROVE: "\uD83D\uDC4D \u6279\u51C6", GUIDANCE: "\uD83D\uDCA1 \u6307\u5BFC", PRIORITY_OVERRIDE: "\u26A1 \u7D27\u6025", INQUIRE: "\uD83D\uDD0E \u8BE2\u95EE" };
+  var avatars = { collector: "\uD83D\uDCE1", verifier: "\uD83D\uDD0D", analyst: "\uD83D\uDD2C", editor: "\u270D\uFE0F", "memory-manager": "\uD83E\uDDE0" };
+
+  function stripMD(text) {
+    return text
+      .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+      .replace(/^- /gm, "\u2022 ")
+      .replace(/\n- /g, "\n\u2022 ")
+      .replace(/%/g, "\uFF05").replace(/TL;DR/gi, "\uD83D\uDCCB \u8981\u70B9\u603B\u7ED3");
+  }
+
+  var msgs = '<div class="chat-log">\n';
+  var hasArb = !!state.arbitration;
+  var arbLinked = false;
+  var roundMsgs = {};
+
+  state.messages.forEach(function(m, mi) {
+    var rKey = Math.floor(mi / Math.max(1, Math.ceil(state.messages.length / state.round)));
+    if (!roundMsgs[rKey]) roundMsgs[rKey] = [];
+    roundMsgs[rKey].push({ msg: m, idx: mi });
+  });
+
+  var rKeys = Object.keys(roundMsgs).sort(function(a,b) { return a-b; });
+  var seenMsgs = {};
+  rKeys.forEach(function(rk) {
+    var roundLabel = "\u7B2C" + (parseInt(rk)+1) + "\u8F6E";
+    msgs += '<div class="chat-round-divider">\u25CF ' + roundLabel + '</div>\n';
+
+
+    roundMsgs[rk].forEach(function(entry) {
+      var m = entry.msg;
+      var mi = entry.idx;
+      // 重复消息跳过：同一轮、同一角色、相同内容（跨轮次也跳过）
+      var dedupKey = m.from + "|" + ((m.coreInfo || "").replace(/\s+/g, " ").trim());
+      if (seenMsgs[dedupKey]) return;
+      seenMsgs[dedupKey] = true;
+      var fn = AGENT_NAMES_CN[m.from] || m.from;
+      var tn = AGENT_NAMES_CN[m.to] || m.to;
+      var av = avatars[m.from] || "\uD83D\uDCAC";
+      var tl = tL[m.type] || m.type;
+      var time = m.timestamp ? (function(ts) { if (!ts) return ""; var d = new Date(ts); var h = String((d.getUTCHours() + 8) % 24).padStart(2, "0"); var m = String(d.getUTCMinutes()).padStart(2, "0"); return h + ":" + m; })(m.timestamp) : "";
+
+      msgs += '<div class="chat-msg chat-from-' + m.from + '" id="msg-' + mi + '">\n';
+      msgs += '<div class="chat-avatar">' + av + '</div>\n';
+      msgs += '<div class="chat-content">\n';
+      msgs += '<div class="chat-meta">\n';
+      msgs += '<span class="chat-sender">' + fn + '</span>\n';
+      msgs += '<span class="chat-badge">' + tl + '</span>\n';
+      msgs += '<span style="opacity:0.6">\u2192 ' + tn + '</span>\n';
+
+      if (hasArb && !arbLinked && (m.type === "ESCALATE" || m.type === "DISPUTE")) {
+        msgs += '[#arbitration" class="arb-anchor">\u2696\uFE0F \u4EF2\u88C1</a>\n';
+        arbLinked = true;
+      }
+
+      msgs += '<span class="chat-time">' + time + '</span>\n';
+      msgs += '</div>\n';
+      msgs += '<div class="chat-body">\n';
+
+      var allItems = {};
+      state.rawItems.forEach(function(item) { allItems[item.id] = item.title; });
+      state.verifiedItems.forEach(function(item) { allItems[item.id] = item.title; });
+      state.rejectedItems.forEach(function(item) { allItems[item.id] = item.title; });
+      state.rawItems.forEach(function(item) { var parts = item.id.split('-'); var short = 'RAW-' + parts[parts.length-1]; allItems[short] = item.title; });
+      
+      var cleanText = (m.coreInfo || "")
+        .replace(/RAW-(\d{4}-\d{2}-\d{2}-\d{4})/g, function(match, idSuffix) {
+          var fullId = "RAW-" + idSuffix;
+          var title = allItems[fullId];
+          if (!title) { var shortId = "RAW-" + idSuffix.slice(-4); title = allItems[shortId]; }
+          if (!title) { for (var k in allItems) { if (k.endsWith(idSuffix)) { title = allItems[k]; break; } } }
+          return title ? "\u3010\u7D20\u6750\uFF1A" + title.slice(0, 30) + "\u3011" : "\u3010\u7D20\u6750\u3011";
+        })
+        .replace(/RAW-(\d{4})\b(?!-)/g, function(match, shortId) {
+          var found = null;
+          for (var k in allItems) { if (k.endsWith("-" + shortId)) { found = allItems[k]; break; } }
+          return found ? "\u3010\u7D20\u6750\uFF1A" + found.slice(0, 30) + "\u3011" : match;
+        })
+        .replace(/MSG-[A-Z]{3}-\d{4}-\d{2}-\d{2}-\d{3}/g, "\u3010\u6D88\u606F\u3011")
+        .replace(/REQ-[A-Z]{3}-\d{4}-\d{2}-\d{2}-\d{3}/g, "\u3010\u8BF7\u6C42\u3011")
+        .replace(/INS-\d{4}-\d{2}-\d{2}-\d{3}/g, "\u3010\u6D1E\u5BDF\u3011");
+      
+      cleanText = stripMD(cleanText);
+      cleanText = cleanText.replace(/\[【/g, "【").replace(/】\]/g, "】");
+
+      msgs += '<blockquote>' + cleanText.replace(/\n/g, '<br>') + '</blockquote>\n';
+      msgs += '</div>\n';
+
+      if (m.expectedAction || m.reason) {
+        msgs += '<div class="chat-footer">\n';
+        if (m.expectedAction) msgs += '<span>\uD83C\uDFAF ' + stripMD(m.expectedAction) + '</span>\n';
+        if (m.reason) msgs += '<span>\uD83D\uDCDD ' + stripMD(m.reason) + '</span>\n';
+        msgs += '</div>\n';
+      }
+
+      msgs += '</div></div>\n\n';
+    });
+  });
+  msgs += '</div>\n';
+
+  var arb = "";
+  if (state.arbitration && state.arbitration.verdict) {
+    arb = '\n\n## \u2696\uFE0F \u4EF2\u88C1\u8BB0\u5F55 <a id="arbitration"></a>\n\n';
+    var vd = state.arbitration.verdict;
+    if (state.arbitration.rounds[0] && state.arbitration.rounds[0].result && state.arbitration.rounds[0].result.fact_list) {
+      arb += '### \u521D\u5BA1 \u00B7 \u4E8B\u5B9E\u6E05\u5355\n\n';
+      state.arbitration.rounds[0].result.fact_list.forEach(function(f) { arb += '- ' + f + '\n'; });
+      arb += '\n';
+    }
+    if (state.arbitration.rounds[1] && state.arbitration.rounds[1].result && state.arbitration.rounds[1].result.positions) {
+      arb += '### \u590D\u5BA1 \u00B7 \u5404\u65B9\u89C2\u70B9\n\n';
+      for (var pk in state.arbitration.rounds[1].result.positions) {
+        arb += '**' + (AGENT_NAMES_CN[pk] || pk) + '**\uFF1A' + state.arbitration.rounds[1].result.positions[pk] + '\n\n';
+      }
+    }
+    arb += '### \u7EC8\u5BA1 \u00B7 \u88C1\u51B3\n\n';
+    if (vd.summary) arb += '> **\u4E89\u8BAE\u6458\u8981**\uFF1A' + vd.summary + '\n>\n';
+    if (vd.decision) arb += '> **\u88C1\u51B3\u7ED3\u679C**\uFF1A' + vd.decision + '\n>\n';
+    if (vd.action_items && vd.action_items.length) {
+      arb += '> **\u6267\u884C\u6B65\u9AA4**\uFF1A\n';
+      vd.action_items.forEach(function(a) { arb += '> - ' + a + '\n'; });
+      arb += '>\n';
+    }
+    if (vd.rule_changes && vd.rule_changes.length) {
+      arb += '> **\u89C4\u5219\u53D8\u66F4**\uFF1A\n';
+      vd.rule_changes.forEach(function(r) { 
+        arb += '> - ' + (typeof r === "string" ? r : (r.reason || r.file || JSON.stringify(r))) + '\n';
+      });
+    }
+    arb += '\n';
+  }
+
+  var emerg = "";
+  if (state.emergencyChannel) {
+    emerg = '\n\n## \u26A1 \u7D27\u6025\u901A\u9053\n\n- \u89E6\u53D1\uFF1A' + (state.emergencyChannel.triggered_by || "\u672A\u77E5") + ' | ' + (state.emergencyChannel.topic || "\u672A\u77E5") + '\n';
+  }
+
+
+
+  var retro = "\n<h2>\uD83D\uDCDD \u4ECA\u65E5\u590D\u76D8</h2>\n\n<blockquote>\u6BCF\u4E2A\u89D2\u8272\u5BF9\u4ECA\u65E5\u5DE5\u4F5C\u7684\u603B\u7ED3\u4E0E\u53CD\u601D</blockquote>\n\n";
+  var agentLastMsg = {};
+  state.messages.forEach(function(m) { agentLastMsg[m.from] = m; });
+  var reviewPhaseMsgs = {};
+  state.messages.forEach(function(m) { if (m.to === "editor" && (m.type === "APPROVE" || m.type === "CONFIRM" || m.type === "NOTIFY")) reviewPhaseMsgs[m.from] = m; });
+  // Prefer review-phase message for 复盘; fall back to last message
+  Object.keys(reviewPhaseMsgs).forEach(function(k) { agentLastMsg[k] = reviewPhaseMsgs[k]; });
+  var agentOrder = ["collector", "verifier", "analyst", "editor", "memory-manager"];
+  agentOrder.forEach(function(aid) {
+    var m = agentLastMsg[aid];
+    var name = AGENT_NAMES_CN[aid] || aid;
+    var av = avatars[aid] || "\uD83D\uDCAC";
+    retro += '<div class="chat-msg chat-from-' + aid + '">\n';
+    retro += '<div class="chat-avatar">' + av + '</div>\n';
+    retro += '<div class="chat-content">\n';
+    retro += '<div class="chat-meta"><span class="chat-sender">' + name + '</span><span class="chat-badge">\uD83D\uDCDD \u590D\u76D8</span></div>\n';
+    retro += '<div class="chat-body"><blockquote>';
+    if (m) { retro += stripMD(m.coreInfo.slice(0, 500)).replace(/\n/g, "<br>"); }
+    else { retro += name + '\u672A\u53C2\u4E0E\u4ECA\u65E5\u5DE5\u4F5C\u3002'; }
+    retro += '</blockquote></div>\n';
+    retro += '</div></div>\n\n';
+  });
+  retro += '<div class="chat-round-divider">\u25CF \u5BA1\u7A3F\u53CD\u9988</div>\n';
+  var reviewMsgs = state.messages.filter(function(m) { return m.type === "APPROVE" || m.type === "CONFIRM" || m.type === "REQUEST" && m.to === "editor"; }).slice(-6);
+  if (reviewMsgs.length === 0) {
+    retro += '<p style="color:#999;text-align:center;padding:12px;">\u26A0\uFE0F \u672C\u6B21\u672A\u8FDB\u884C\u6B63\u5F0F\u5BA1\u7A3F\u6D41\u7A0B</p>\n';
+  } else {
+    retro += '<p style="color:#888;text-align:center;padding:8px;">\u2705 \u5DF2\u6536\u5230 ' + reviewMsgs.length + ' \u6761\u5BA1\u7A3F\u53CD\u9988\uFF0C\u8BE6\u89C1\u4E0A\u65B9\u5B8C\u6574\u901A\u4FE1\u8BB0\u5F55</p>\n';
+  }
+
+  return "---\ntitle: " + dateStr + " | \u56E2\u961F\u8FC7\u7A0B\u65E5\u5FD7\noutline: [2, 3]\n---\n\n" + c +
+    "# \uD83D\uDCCB \u56E2\u961F\u8FC7\u7A0B\u65E5\u5FD7 \u00B7 " + dateCN + "\n\n" +
+    "## \uD83D\uDCCA \u4ECA\u65E5\u7EDF\u8BA1\n\n" +
+    "| \u6307\u6807 | \u6570\u636E |\n|------|------|\n" +
+    "| \u603B\u8F6E\u6B21 | " + state.round + " (" + (state.deadlockDetected ? "\u5DF2\u89E6\u53D1\u4EF2\u88C1" : "\u6B63\u5E38\u6D41\u7A0B") + ") |\n" +
+    "| \u91C7\u96C6\u63D0\u4EA4 | " + state.stats.collectorSubmitted + " \u6761 |\n" +
+    "| \u6838\u67E5\u901A\u8FC7 | " + state.stats.verifierPassed + " \u6761\uFF08\u901A\u8FC7\u7387 " + pr + "%\uFF09 |\n" +
+    "| \u6838\u67E5\u62D2\u7EDD | " + state.stats.verifierRejected + " \u6761 |\n" +
+    "| \u8865\u91C7\u8BF7\u6C42 | " + state.stats.analystRequests + " \u6B21 |\n" +
+    "| \u7D27\u6025\u901A\u9053 | " + (state.emergencyChannel ? "\u5DF2\u89E6\u53D1" : "\u672A\u89E6\u53D1") + " |\n" +
+    "| \u89C4\u5219\u53D8\u66F4 | " + (state.stats.ruleChanges || 0) + " \u6761 |\n\n" +
+    emerg +
+    "## \uD83D\uDCAC \u5B8C\u6574\u901A\u4FE1\u8BB0\u5F55\n\n" + msgs + "\n" +
+    arb +
+    retro +
+    "\n\n> \u751F\u6210\u65F6\u95F4: " + new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) + "\n";
+}

@@ -800,8 +800,8 @@ async function main() {
     for (const action of finalReview.actions) {
       if (action.type === "update_rule" && action.rule_file) {
         const version = generateRuleVersion(dateStr);
-        const rulePath = path.join(RULES_DIR, action.rule_file);
-        const archivePath = path.join(RULES_DIR, "archive", action.rule_file.replace(".md", "-" + version + ".md"));
+        const rulePath = path.join(RULES_DIR, path.basename(action.rule_file));
+        const archivePath = path.join(RULES_DIR, "archive", path.basename(action.rule_file).replace(".md", "-" + version + ".md"));
         try {
           const oldContent = fs.readFileSync(rulePath, "utf-8");
           fs.writeFileSync(archivePath, "# " + action.rule_file + " - " + version + "\n> 归档: " + dateStr + "\n\n" + oldContent, "utf-8");
@@ -877,7 +877,7 @@ async function main() {
       return false;
     });
     if (refItems.length === 0) { refItems = state.verifiedItems.slice(0, 8); }
-    report = "---\ntitle: " + dateStr + " | 行业雷达日报\noutline: [2, 3]\n---\n\n# \uD83D\uDCE1 行业雷达 \u00B7 " + dateCN + "\n\n> \uD83D\uDCCE 采集 " + state.rawItems.length + " 篇 | 命中 " + state.verifiedItems.length + " 篇 | 多Agent博弈生成\n> \uD83E\uDDBB 采集师\u00B7核查师\u00B7分析师\u00B7编辑师\u00B7记忆管理师\n\n" + sections + "\n---\n\n## \uD83D\uDCEE 参考链接\n\n<div class=\"ref-scroll\">\n" + refItems.map(function(item, idx) { return "<p id=\"ref-" + (idx + 1) + "\"><a href=\"" + item.link + "\">[" + (idx + 1) + "]</a> **" + item.title + "** \u00B7 " + item.source + "</p>"; }).join("\n") + "\n</div>\n\n---\n\n## \uD83D\uDCCA 数据统计\n\n<div class=\"ref-scroll\">\n| 来源 | 语言 | 采集数 |\n|------|------|--------|\n" + [...new Set(state.rawItems.map(i => i.source))].map(src => "| " + src + " | " + (state.rawItems.find(i => i.source === src)?.lang === "zh" ? "中文" : "EN") + " | " + state.rawItems.filter(i => i.source === src).length + " |").join("\n") + "\n</div>\n\n> 生成时间: " + now.toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) + "\n> [查看过程日志](../logs/" + dateStr + ".md)\n";
+    report = "---\ntitle: " + dateStr + " | 行业雷达日报\noutline: [2, 3]\n---\n\n# \uD83D\uDCE1 行业雷达 \u00B7 " + dateCN + "\n\n> \uD83D\uDCCE 采集 " + state.rawItems.length + " 篇 | 命中 " + state.verifiedItems.length + " 篇 | 多Agent博弈生成\n> \uD83E\uDDBB 采集师\u00B7核查师\u00B7分析师\u00B7编辑师\u00B7记忆管理师\n\n" + sections + "\n---\n\n## \uD83D\uDCEE 参考链接\n\n<div class=\"ref-scroll\">\n" + refItems.map(function(item, idx) { return "<p id=\"ref-" + (idx + 1) + "\"><a href=\"" + item.link + "\">[" + (idx + 1) + "]</a> **" + item.title + "** \u00B7 " + item.source + "</p>"; }).join("\n") + "\n</div>\n\n---\n\n## \uD83D\uDCCA 数据统计\n\n<div class=\"ref-scroll\">\n<table>\n<thead>\n<tr><th>来源</th><th>语言</th><th>采集数</th></tr>\n</thead>\n<tbody>\n" + [...new Set(state.rawItems.map(i => i.source))].map(src => "<tr><td>" + src + "</td><td>" + (state.rawItems.find(i => i.source === src)?.lang === "zh" ? "中文" : "EN") + "</td><td>" + state.rawItems.filter(i => i.source === src).length + "</td></tr>").join("\n") + "\n</tbody>\n</table>\n</div>\n\n> 生成时间\n> 生成时间: " + now.toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) + "\n> [查看过程日志](../logs/" + dateStr + ".md)\n";
 
   } else {
     var agentMsgs = (state.messages || []).filter(function(m) { return m.from && m.coreInfo; }).slice(-10);

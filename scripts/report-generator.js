@@ -178,8 +178,7 @@ function generateProcessLog(state, dateStr) {
     retro += '<div class="chat-content">\n';
     retro += '<div class="chat-meta"><span class="chat-sender">' + name + '</span><span class="chat-badge">\uD83D\uDCDD \u590D\u76D8</span></div>\n';
     retro += '<div class="chat-body"><blockquote>';
-    if (m) { retro += stripMD((m.coreInfo || "").slice(0, 500)).replace(/\n/g, "<br>"); }
-    else { retro += name + '\u672A\u53C2\u4E0E\u4ECA\u65E5\u5DE5\u4F5C\u3002'; }
+    if (m && m.coreInfo) { retro += stripMD(m.coreInfo.slice(0, 500)).replace(/\n/g, "<br>"); } else if (m && !m.coreInfo) { retro += name + "\u53C2\u4E0E\u4F46\u672A\u63D0\u4EA4\u6709\u6548\u590D\u76D8\u5185\u5BB9\u3002"; } else { var anyAgentMsg = state.messages.filter(function(mm) { return mm.from === aid; }).slice(-1)[0]; if (anyAgentMsg && anyAgentMsg.coreInfo) { retro += stripMD(anyAgentMsg.coreInfo.slice(0, 500)).replace(/\n/g, "<br>"); } else { retro += name + "\u672A\u53C2\u4E0E\u4ECA\u65E5\u5DE5\u4F5C\u3002"; } }
     retro += '</blockquote></div>\n';
     retro += '</div></div>\n\n';
   });
@@ -229,6 +228,11 @@ function generateProcessLog(state, dateStr) {
     if (state.draft.quality.score) qualitySection += "| **总分** | **" + state.draft.quality.score + "** |\n";
   } else {
     qualitySection += "> 今日未进行正式质量评估\n";
+    // Try to extract quality data from memory manager review
+    var qaFallback = state.messages.filter(function(m) { return m.from === "memory-manager" && m.coreInfo && m.coreInfo.length > 100; }).slice(-1)[0];
+    if (qaFallback) {
+      qualitySection += "\n<details><summary>\u67E5\u770B\u8BB0\u5FC6\u7BA1\u7406\u5E08\u590D\u76D8</summary>\n\n<blockquote>" + qaFallback.coreInfo.slice(0, 400).replace(/\n/g, "<br>") + "</blockquote>\n</details>\n";
+    }
   }
 
   return "---\ntitle: " + dateStr + " | \u56E2\u961F\u8FC7\u7A0B\u65E5\u5FD7\noutline: [2, 3]\n---\n\n" + c +
