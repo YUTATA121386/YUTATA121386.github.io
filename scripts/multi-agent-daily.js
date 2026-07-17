@@ -1068,9 +1068,16 @@ async function main() {
     log("system", "参与: " + agentsToRun.map(a => AGENT_NAMES_CN[a]).join("、"));
 
     const agentResults = {};
-    await Promise.all(agentsToRun.map(async (agentId) => {
+    // Run agents - non-editor agents in parallel, editor after to incorporate insights
+    var nonEditorAgents = agentsToRun.filter(function(a) { return a !== "editor"; });
+    var agentResults = {};
+    await Promise.all(nonEditorAgents.map(async function(agentId) {
       agentResults[agentId] = await runAgent(agentId, state);
     }));
+    // Run editor serially after other agents to incorporate analyst insights
+    if (agentsToRun.includes("editor")) {
+      agentResults["editor"] = await runAgent("editor", state);
+    }
 
     // 处理输出
     for (const [agentId, result] of Object.entries(agentResults)) {
@@ -1145,6 +1152,14 @@ async function main() {
       if (agentId === "editor" && result.actions) {
         for (const action of result.actions) {
           if (action.type === "draft_update" && action.draft) state.draft = action.draft;
+        }
+      }
+      // Push any messages from editor result (with validation)
+      if (result.messages && Array.isArray(result.messages)) {
+        for (const rm of result.messages) {
+          if (rm.to && AGENT_NAMES_CN[rm.to] && rm.type && MSG_TYPES.includes(rm.type)) {
+            pushMessage(state, createMessage(agentId, rm.to, rm.type, rm.coreInfo || "", rm.expectedAction || "", rm.reason || "", rm.priority || "normal"));
+          }
         }
       }
       // Editor fallback: if _parse_failed, try to extract draft from raw output
