@@ -1287,7 +1287,7 @@ async function main() {
     if (sysMem2.entries && sysMem2.entries.length > 0) {
       var lastDay = sysMem2.entries[sysMem2.entries.length - 1];
       if (lastDay.perRole) {
-        var repSection = "\n\n## 📊 今日信誉分变化\n\n<table style=\"width:100%;table-layout:fixed;border-collapse:collapse;font-size:0.9em;\">\n<thead><tr>\n<th style=\"width:80px;text-align:left;padding:6px 8px;border-bottom:2px solid var(--vp-c-divider);\">角色</th>\n<th style=\"width:50px;text-align:center;padding:6px 8px;border-bottom:2px solid var(--vp-c-divider);\">分数</th>\n<th style=\"width:50px;text-align:center;padding:6px 8px;border-bottom:2px solid var(--vp-c-divider);\">变化</th>\n<th style=\"padding:6px 8px;border-bottom:2px solid var(--vp-c-divider);word-break:break-word;\">原因</th>\n</tr></thead>\n<tbody>\n";
+        var repSection = "\n\n## 📊 今日信誉分变化\n\n<div style=\"display:grid;grid-template-columns:80px 50px 50px 1fr;gap:6px 12px;font-size:0.9em;margin:12px 0;\">\n<div style=\"font-weight:600;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);\">角色</div>\n<div style=\"text-align:center;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);\">分数</div>\n<div style=\"text-align:center;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);\">变化</div>\n<div style=\"padding:6px 0;border-bottom:2px solid var(--vp-c-divider);overflow-wrap:break-word;word-break:break-word;\">原因</div>\n";
         var agentNames = { collector: "采集师", verifier: "核查师", analyst: "分析师", editor: "编辑师", "memory-manager": "记忆管理师" };
         ["collector", "verifier", "analyst", "editor", "memory-manager"].forEach(function(aid) {
           var role = lastDay.perRole[aid];
@@ -1297,9 +1297,9 @@ async function main() {
           var lastChange = changes[changes.length - 1];
           var delta = lastChange ? (lastChange.delta > 0 ? "+" + lastChange.delta : String(lastChange.delta)) : "—";
           var reason = lastChange ? (String(lastChange.reason || "").slice(0, 120)) : "—";
-          repSection += "<tr><td style=\"padding:6px 8px;border-bottom:1px solid var(--vp-c-divider);font-weight:600;\">" + (agentNames[aid] || aid) + "</td><td style=\"padding:6px 8px;border-bottom:1px solid var(--vp-c-divider);text-align:center;\">" + score + "</td><td style=\"padding:6px 8px;border-bottom:1px solid var(--vp-c-divider);text-align:center;\">" + delta + "</td><td style=\"padding:6px 8px;border-bottom:1px solid var(--vp-c-divider);word-break:break-word;line-height:1.4;\">" + reason + "</td></tr>\n";
+          repSection += "<div style=\"font-weight:600;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + (agentNames[aid] || aid) + "</div><div style=\"text-align:center;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + score + "</div><div style=\"text-align:center;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + delta + "</div><div style=\"padding:6px 0;border-bottom:1px solid var(--vp-c-divider);overflow-wrap:break-word;word-break:break-word;line-height:1.4;\">" + reason + "</div>\n";
         });
-        repSection += "</tbody></table>\n";
+        repSection += "</div>\n";
 
   report += repSection;
       }
