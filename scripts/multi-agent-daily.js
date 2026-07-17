@@ -385,7 +385,7 @@ function generateProcessLog(state, dateStr) {
       msgs += '<span style="opacity:0.6">\u2192 ' + tn + '</span>\n';
 
       if (hasArb && !arbLinked && (m.type === "ESCALATE" || m.type === "DISPUTE")) {
-        msgs += '<a href="#arbitration" class="arb-anchor">\u2696\uFE0F \u4EF2\u88C1</a>\n';
+        msgs += '[#arbitration" class="arb-anchor">\u2696\uFE0F \u4EF2\u88C1</a>\n';
         arbLinked = true;
       }
 
@@ -981,7 +981,7 @@ function saveSystemMemory(mem) {
 
 // ===================== 主流程 =====================
 async function main() {
-  const now = new Date();
+  const now = new Date(2026, 6, 17, 0, 0, 0); // temp
   const dateStr = now.getFullYear() + "-" + String(now.getMonth() + 1).padStart(2, "0") + "-" + String(now.getDate()).padStart(2, "0");
   const dateCN = now.getFullYear() + "年" + (now.getMonth() + 1) + "月" + now.getDate() + "日";
   const systemStats = loadSystemStats();
@@ -1275,8 +1275,8 @@ async function main() {
   let report;
   if (state.draft && state.draft.sections) {
     const filteredSections = state.draft.sections.filter(function(s) { return !s.title || !/[\u53C2\u8003\u94FE\u63A5]/.test(s.title.replace(/[^\u4e00-\u9fff]/g, "")); });
-    const sections = filteredSections.map(s => "## " + s.title + "\n\n" + s.content + "\n").join("\n---\n\n");
-    report = "---\ntitle: " + dateStr + " | 行业雷达日报\noutline: [2, 3]\n---\n\n# 📡 行业雷达 · " + dateCN + "\n\n> 📮 采集 " + state.rawItems.length + " 篇 | 命中 " + state.verifiedItems.length + " 篇 | 多Agent博弈生成\n> 🤖 采集师·核查师·分析师·编辑师·记忆管理师\n\n" + sections + "\n---\n\n## 📮 参考链接\n\n<div class=\"ref-scroll\">\n" + state.verifiedItems.map((item, idx) => "<p id=\"ref-" + (idx + 1) + "\">[" + (idx + 1) + "] **" + item.title + "** · " + item.source + " · <a href=\"" + item.link + "\">链接</a></p>").join("\n") + "\n</div>\n\n---\n\n## 📊 数据统计\n\n| 来源 | 语言 | 采集数 |\n|------|------|--------|\n" + [...new Set(state.rawItems.map(i => i.source))].map(src => "| " + src + " | " + (state.rawItems.find(i => i.source === src)?.lang === "zh" ? "中文" : "EN") + " | " + state.rawItems.filter(i => i.source === src).length + " |").join("\n") + "\n\n> 生成时间: " + now.toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) + "\n> [查看过程日志](../logs/" + dateStr + ".md)\n";
+    const sections = filteredSections.map(s => "## " + s.title.replace(/^#+\s*/g,"").trim() + "\n\n" + s.content + "\n").join("\n---\n\n");
+    report = "---\ntitle: " + dateStr + " | 行业雷达日报\noutline: [2, 3]\n---\n\n# 📡 行业雷达 · " + dateCN + "\n\n> 📮 采集 " + state.rawItems.length + " 篇 | 命中 " + state.verifiedItems.length + " 篇 | 多Agent博弈生成\n> 🤖 采集师·核查师·分析师·编辑师·记忆管理师\n\n" + sections + "\n---\n\n## 📮 参考链接\n\n<div class=\"ref-scroll\">\n" + state.verifiedItems.map((item, idx) => "<p id=\"ref-" + (idx + 1) + "\">[" + (idx + 1) + "] **" + item.title + "** · " + item.source + " · <a href=\"" + item.link + "\](...)</p>").join("\n") + "\n</div>\n\n---\n\n## 📊 数据统计\n\n| 来源 | 语言 | 采集数 |\n|------|------|--------|\n" + [...new Set(state.rawItems.map(i => i.source))].map(src => "| " + src + " | " + (state.rawItems.find(i => i.source === src)?.lang === "zh" ? "中文" : "EN") + " | " + state.rawItems.filter(i => i.source === src).length + " |").join("\n") + "\n\n> 生成时间: " + now.toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) + "\n> [查看过程日志](../logs/" + dateStr + ".md)\n";
   } else {
     report = "---\ntitle: " + dateStr + " | 行业雷达日报\noutline: [2, 3]\n---\n\n# 📡 行业雷达 · " + dateCN + "\n\n> ⚠️ 今日多Agent系统未产出完整日报\n> [查看过程日志](../logs/" + dateStr + ".md)\n\n## 采集概况\n- 采集 " + state.rawItems.length + " 篇 | 通过 " + state.verifiedItems.length + " 篇\n";
   }
@@ -1299,7 +1299,9 @@ async function main() {
           var reason = lastChange ? (String(lastChange.reason || "").slice(0, 120)) : "—";
           repSection += "| " + (agentNames[aid] || aid) + " | " + score + " | " + delta + " | " + reason + " |\n";
         });
-        report += repSection;
+        repSection += "</div>\\n\\n<style>\\n.rep-change-table { display: flex; flex-direction: column; gap: 8px; }\\n.rep-row { display: grid; grid-template-columns: 80px 60px 60px 1fr; gap: 8px; align-items: start; padding: 8px 12px; background: var(--vp-c-bg-soft); border-radius: 6px; font-size: 0.9em; }\\n.rep-role { font-weight: 600; color: var(--vp-c-brand); }\\n.rep-score { text-align: center; font-weight: 600; }\\n.rep-delta { text-align: center; }\\n.rep-reason { max-height: 3.6em; overflow-y: auto; line-height: 1.4; color: var(--vp-c-text-2); padding-right: 4px; }\\n.rep-reason::-webkit-scrollbar { width: 4px; }\\n.rep-reason::-webkit-scrollbar-thumb { background: var(--vp-c-divider); border-radius: 2px; }\\n@media (max-width: 640px) { .rep-row { grid-template-columns: 1fr 1fr; } .rep-reason { grid-column: 1 / -1; max-height: 3.6em; } }\\n</style>\\n";
+
+  report += repSection;
       }
     }
   } catch(e) { /* skip reputation section */ }
