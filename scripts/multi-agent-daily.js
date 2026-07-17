@@ -775,7 +775,7 @@ function buildMemoryContext(agentId) {
       var r = rels[k];
       var trendIcon = r.trend === "improving" ? "↑" : r.trend === "declining" ? "↓" : "→";
       ctx += "- " + (AGENT_NAMES_CN_MEM[k] || k) + ": 信任度 " + r.trust + trendIcon;
-      if (r.summary) ctx += " — " + String(r.summary).slice(0, 40);
+      if (r.summary) ctx += " — " + String(r.summary).slice(0, 120);
       ctx += "\n";
     });
   }
@@ -1296,7 +1296,7 @@ async function main() {
           var changes = role.changes || [];
           var lastChange = changes[changes.length - 1];
           var delta = lastChange ? (lastChange.delta > 0 ? "+" + lastChange.delta : String(lastChange.delta)) : "—";
-          var reason = lastChange ? (String(lastChange.reason || "").slice(0, 40)) : "—";
+          var reason = lastChange ? (String(lastChange.reason || "").slice(0, 120)) : "—";
           repSection += "| " + (agentNames[aid] || aid) + " | " + score + " | " + delta + " | " + reason + " |\n";
         });
         report += repSection;
