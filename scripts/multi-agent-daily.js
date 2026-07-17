@@ -1287,7 +1287,13 @@ async function main() {
     const sections = filteredSections.map(s => "## " + s.title.replace(/^#+\s*/g,"").trim() + "\n\n" + s.content + "\n").join("\n---\n\n");
     report = "---\ntitle: " + dateStr + " | 行业雷达日报\noutline: [2, 3]\n---\n\n# 📡 行业雷达 · " + dateCN + "\n\n> 📮 采集 " + state.rawItems.length + " 篇 | 命中 " + state.verifiedItems.length + " 篇 | 多Agent博弈生成\n> 🤖 采集师·核查师·分析师·编辑师·记忆管理师\n\n" + sections + "\n---\n\n## 📮 参考链接\n\n<div class=\"ref-scroll\">\n" + state.verifiedItems.map((item, idx) => "<p id=\"ref-" + (idx + 1) + "\"><a href=\"" + item.link + "\">[" + (idx + 1) + "]</a> **" + item.title + "** · " + item.source + "</p>").join("\n") + "\n</div>\n\n---\n\n## 📊 数据统计\n\n| 来源 | 语言 | 采集数 |\n|------|------|--------|\n" + [...new Set(state.rawItems.map(i => i.source))].map(src => "| " + src + " | " + (state.rawItems.find(i => i.source === src)?.lang === "zh" ? "中文" : "EN") + " | " + state.rawItems.filter(i => i.source === src).length + " |").join("\n") + "\n\n> 生成时间: " + now.toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) + "\n> [查看过程日志](../logs/" + dateStr + ".md)\n";
   } else {
-    report = "---\ntitle: " + dateStr + " | 行业雷达日报\noutline: [2, 3]\n---\n\n# 📡 行业雷达 · " + dateCN + "\n\n> ⚠️ 今日多Agent系统未产出完整日报\n> [查看过程日志](../logs/" + dateStr + ".md)\n\n## 采集概况\n- 采集 " + state.rawItems.length + " 篇 | 通过 " + state.verifiedItems.length + " 篇\n";
+    var agentMsgs = (state.messages || []).filter(function(m) { return m.from && m.coreInfo; }).slice(-10);
+    var msgSummary = agentMsgs.length > 0 ? "\n\n## 🤖 代理通信摘要\n\n" + agentMsgs.map(function(m) {
+      var name = AGENT_NAMES_CN[m.from] || m.from;
+      var toName = AGENT_NAMES_CN[m.to] || m.to || "all";
+      return "- **" + name + "** → " + toName + " [" + (m.type || "") + "]: " + String(m.coreInfo || "").slice(0, 120);
+    }).join("\n") + "\n" : "";
+    report = "---\ntitle: " + dateStr + " | 行业雷达日报\noutline: [2, 3]\n---\n\n# 📡 行业雷达 · " + dateCN + "\n\n> ⚠️ 今日多Agent系统未产出完整日报\n> [查看过程日志](../logs/" + dateStr + ".md)\n\n## 采集概况\n- 采集 " + state.rawItems.length + " 篇 | 通过 " + state.verifiedItems.length + " 篇\n" + msgSummary;
   }
 
   // ===== 信誉分变化 =====
@@ -1306,9 +1312,9 @@ async function main() {
           var lastChange = changes[changes.length - 1];
           var delta = lastChange ? (lastChange.delta > 0 ? "+" + lastChange.delta : String(lastChange.delta)) : "—";
           var reason = lastChange ? (String(lastChange.reason || "").slice(0, 120)) : "—";
-          repSection += "<div style=\"font-weight:600;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + (agentNames[aid] || aid) + "</div><div style=\"text-align:center;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + score + "</div><div style=\"text-align:center;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + delta + "</div><div style=\"padding:6px 0;border-bottom:1px solid var(--vp-c-divider);overflow-wrap:break-word;word-break:break-word;line-height:1.4;\">" + reason + "</div>\\n";
+          repSection += "<div style=\"font-weight:600;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + (agentNames[aid] || aid) + "</div><div style=\"text-align:center;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + score + "</div><div style=\"text-align:center;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + delta + "</div><div style=\"padding:6px 0;border-bottom:1px solid var(--vp-c-divider);overflow-wrap:break-word;word-break:break-word;line-height:1.4;\">" + reason + "</div>\n";
         });
-        repSection += "</div>\\n";
+        repSection += "</div>\n";
 
   report += repSection;
       }
