@@ -499,7 +499,8 @@ function generateProcessLog(state, dateStr) {
     retro += '<div class="chat-content">\n';
     retro += '<div class="chat-meta"><span class="chat-sender">' + name + '</span><span class="chat-badge">\uD83D\uDCDD \u590D\u76D8</span></div>\n';
     retro += '<div class="chat-body"><blockquote>';
-    if (m) { retro += stripMD(m.coreInfo.slice(0, 200)); }
+    if (m) { retro += stripMD(m.coreInfo.slice(0, 200)).replace(/
+/g, "<br>"); }
     else { retro += name + '\u672A\u53C2\u4E0E\u4ECA\u65E5\u5DE5\u4F5C\u3002'; }
     retro += '</blockquote></div>\n';
     retro += '</div></div>\n\n';
