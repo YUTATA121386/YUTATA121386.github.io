@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env node
+#!/usr/bin/env node
 /**
  * YUTATA 多Agent日报系统 v4
  * 五个角色并行博弈: 采集师·核查师·分析师·编辑师·记忆管理师
