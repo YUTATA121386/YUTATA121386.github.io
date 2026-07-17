@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 /**
  * YUTATA 多Agent日报系统 v4
  * 五个角色并行博弈: 采集师·核查师·分析师·编辑师·记忆管理师
@@ -814,6 +814,7 @@ async function main() {
   systemStats.lastRunDate = dateStr;
   saveSystemStats(systemStats);
 
+  console.log("⏱️ 启动时间: " + new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }));
   console.log("\n🤖 YUTATA 多Agent日报系统 v4");
   console.log("📅 " + dateCN + " | " + dateStr);
   console.log("👥 五个角色: 采集师 · 核查师 · 分析师 · 编辑师 · 记忆管理师\n");
