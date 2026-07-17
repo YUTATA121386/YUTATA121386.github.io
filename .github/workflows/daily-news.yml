@@ -48,7 +48,7 @@ jobs:
         run: |
           git config user.name "YUTATA Multi-Agent Bot"
           git config user.email "multi-agent-bot@yutata.dev"
-          git add docs/daily/ docs/logs/ docs/weekly/ docs/rules/ scripts/reputation.json scripts/system-stats.json scripts/system-memory.json scripts/mm-scores.json
+          git add docs/daily/ docs/logs/ docs/weekly/ docs/rules/ scripts/reputation.json scripts/system-stats.json scripts/system-memory.json scripts/mm-scores.json scripts/memories/
           git diff --cached --quiet || (
             git commit -m "🤖 多Agent日报 $(date +%Y-%m-%d)"
             git push origin HEAD:main || echo "Push failed (may be behind remote, continuing)"

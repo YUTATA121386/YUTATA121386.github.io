@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env node
+#!/usr/bin/env node
 /**
  * YUTATA 多Agent日报系统 v4
  * 五个角色并行博弈: 采集师·核查师·分析师·编辑师·记忆管理师
@@ -178,6 +178,10 @@ function buildAgentContext(agentId, state) {
   }
 
   ctx += "\n## 工作区\n";
+
+  // ===== Phase 2: 注入角色记忆 =====
+  ctx += buildMemoryContext(agentId);
+
   if (agentId === "collector") {
     ctx += "rawItems: " + state.rawItems.length + " | 待补采请求: " + state.supplementRequests.filter(r => r.status === "pending").length + "\n";
     const rej = state.messages.filter(m => m.type === "REJECT" && m.to === "collector").slice(-5);
@@ -672,7 +676,7 @@ function generateWeeklyReport(state, dateStr) {
     mmReview += '<div class="mm-response">\n';
     mmResponse.responses.forEach(function(r) {
       var verdictIcon = r.verdict && r.verdict.indexOf("接受") >= 0 ? "✅" : r.verdict && r.verdict.indexOf("反驳") >= 0 ? "⚡" : "🟡";
-      mmReview += '<p>' + verdictIcon + ' <strong>' + (r.from || "") + '</strong>: ' + (r.verdict || "") + '<br>' + (r.reply || "") + '</p>';
+      mmReview += '<p>' + verdictIcon + ' 记忆管理师 → <strong>' + (r.from || "") + '</strong>: ' + (r.verdict || "") + '<br>' + (r.reply || "") + '</p>';
     });
     mmReview += '</div>\n';
   }
@@ -730,6 +734,178 @@ function generateWeeklyReport(state, dateStr) {
     "\n> \u751F\u6210\u65F6\u95F4: " + new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }) + "\n";
 }
 // ===================== 索引更新 =====================
+
+// ===================== 角色记忆系统 (Phase 2) =====================
+var MEMORY_DIR = path.join(ROOT_DIR, "scripts", "memories");
+
+function ensureMemoryDir() {
+  if (!fs.existsSync(MEMORY_DIR)) fs.mkdirSync(MEMORY_DIR, { recursive: true });
+}
+
+var AGENT_NAMES_CN_MEM = {
+  collector: "采集师", verifier: "核查师", analyst: "分析师",
+  editor: "编辑师", "memory-manager": "记忆管理师"
+};
+
+function loadAgentMemory(agentId) {
+  ensureMemoryDir();
+  var memPath = path.join(MEMORY_DIR, agentId + ".json");
+  try { return JSON.parse(fs.readFileSync(memPath, "utf-8")); }
+  catch { return { agentId: agentId, identity: {}, relationships: {}, experiences: [], selfReview: { strengths: [], weaknesses: [], ongoingIssues: [], improvementPlan: "" } }; }
+}
+
+function saveAgentMemory(agentId, memory) {
+  ensureMemoryDir();
+  writeFileUTF8(path.join(MEMORY_DIR, agentId + ".json"), JSON.stringify(memory, null, 2));
+}
+
+function buildMemoryContext(agentId) {
+  var mem = loadAgentMemory(agentId);
+  var ctx = "\n## 🧠 你的个人记忆\n";
+  ctx += "角色: " + (AGENT_NAMES_CN_MEM[agentId] || agentId) + "\n";
+  
+  // Relationships
+  ctx += "\n### 你与其他角色的关系\n";
+  var rels = mem.relationships || {};
+  var relKeys = Object.keys(rels);
+  if (relKeys.length === 0) {
+    ctx += "(尚无关系记录)\n";
+  } else {
+    relKeys.forEach(function(k) {
+      var r = rels[k];
+      var trendIcon = r.trend === "improving" ? "↑" : r.trend === "declining" ? "↓" : "→";
+      ctx += "- " + (AGENT_NAMES_CN_MEM[k] || k) + ": 信任度 " + r.trust + trendIcon;
+      if (r.summary) ctx += " — " + String(r.summary).slice(0, 40);
+      ctx += "\n";
+    });
+  }
+
+  // Recent experiences
+  var exps = mem.experiences || [];
+  if (exps.length > 0) {
+    ctx += "\n### 近期关键经历\n";
+    var recentExps = exps.slice(-5);
+    recentExps.forEach(function(e) {
+      ctx += "- " + e.date + " [" + (e.type || "事件") + "]: " + String(e.summary || "").slice(0, 60) + "\n";
+      if (e.lesson) ctx += "  教训: " + String(e.lesson).slice(0, 60) + "\n";
+    });
+  }
+
+  // Self review
+  var sr = mem.selfReview || {};
+  if (sr.weaknesses && sr.weaknesses.length > 0) {
+    ctx += "\n### 待改进项\n";
+    sr.weaknesses.slice(0, 3).forEach(function(w) { ctx += "- " + w + "\n"; });
+  }
+  if (sr.improvementPlan) {
+    ctx += "改进计划: " + String(sr.improvementPlan).slice(0, 80) + "\n";
+  }
+
+  return ctx;
+}
+
+function updateAgentMemoryFromDay(agentId, state, dateStr, dateCN) {
+  var mem = loadAgentMemory(agentId);
+  var memPath = path.join(MEMORY_DIR, agentId + ".json");
+
+  // Initialize relationships
+  ["collector", "verifier", "analyst", "editor", "memory-manager"].forEach(function(other) {
+    if (other === agentId) return;
+    if (!mem.relationships[other]) mem.relationships[other] = { trust: 50, trend: "stable", history: [], summary: "" };
+  });
+
+  // Analyze today's messages for this agent
+  var myMsgs = state.messages.filter(function(m) { return m.from === agentId || m.to === agentId; });
+  
+  // Track interactions with each other agent
+  var interactionCounts = {};
+  var conflictCounts = {};
+  var praiseCounts = {};
+  
+  myMsgs.forEach(function(m) {
+    var otherId = (m.from === agentId) ? m.to : m.from;
+    if (otherId === "system" || otherId === "all") return;
+    if (!interactionCounts[otherId]) interactionCounts[otherId] = 0;
+    interactionCounts[otherId]++;
+    if (m.type === "REJECT" || m.type === "DISPUTE" || m.type === "ESCALATE") {
+      if (!conflictCounts[otherId]) conflictCounts[otherId] = 0;
+      conflictCounts[otherId]++;
+    }
+    if (m.type === "APPROVE" || m.type === "CONFIRM") {
+      if (!praiseCounts[otherId]) praiseCounts[otherId] = 0;
+      praiseCounts[otherId]++;
+    }
+  });
+
+  // Update relationship trust based on today's interactions
+  Object.keys(interactionCounts).forEach(function(otherId) {
+    if (!mem.relationships[otherId]) return;
+    var oldTrust = mem.relationships[otherId].trust;
+    var delta = 0;
+    var conflicts = conflictCounts[otherId] || 0;
+    var praises = praiseCounts[otherId] || 0;
+    if (conflicts > praises) { delta = -Math.min(conflicts * 2, 10); }
+    else if (praises > 0) { delta = Math.min(praises * 2, 10); }
+    mem.relationships[otherId].trust = Math.max(10, Math.min(100, oldTrust + delta));
+    if (!mem.relationships[otherId].history) mem.relationships[otherId].history = [];
+    mem.relationships[otherId].history.push({ date: dateStr, event: (conflicts > praises ? "冲突" : "合作") + " " + interactionCounts[otherId] + "次", trustDelta: delta });
+    // Update trend
+    var recentH = mem.relationships[otherId].history.slice(-5);
+    var avgDelta = recentH.reduce(function(s, h) { return s + (h.trustDelta || 0); }, 0) / Math.max(recentH.length, 1);
+    mem.relationships[otherId].trend = avgDelta > 1 ? "improving" : avgDelta < -1 ? "declining" : "stable";
+    // Summary
+    var trust = mem.relationships[otherId].trust;
+    mem.relationships[otherId].summary = trust >= 70 ? "关系良好" : trust >= 40 ? "关系一般" : "关系紧张";
+  });
+
+  // Add key experiences from today's events
+  var significantChanges = state.messages.filter(function(m) { 
+    return (m.from === agentId || m.to === agentId) && 
+      (m.type === "REJECT" || m.type === "ESCALATE" || m.type === "APPROVE" || m.type === "DIRECTIVE");
+  });
+  
+  if (significantChanges.length > 0) {
+    var worst = significantChanges.filter(function(m) { return m.type === "REJECT" || m.type === "ESCALATE"; });
+    var best = significantChanges.filter(function(m) { return m.type === "APPROVE" || m.type === "DIRECTIVE"; });
+    
+    if (worst.length > 0) {
+      var wMsg = worst[0];
+      if (!mem.experiences) mem.experiences = [];
+      mem.experiences.push({
+        date: dateStr,
+        type: "重大挫折",
+        summary: "被" + (AGENT_NAMES_CN_MEM[wMsg.from === agentId ? wMsg.to : wMsg.from] || wMsg.from) + " " + wMsg.type + "：" + String(wMsg.coreInfo || "").slice(0, 80),
+        lesson: "",
+        impact: ""
+      });
+    }
+    if (best.length > 0) {
+      var bMsg = best[0];
+      mem.experiences.push({
+        date: dateStr,
+        type: "正向反馈",
+        summary: "收到" + (AGENT_NAMES_CN_MEM[bMsg.from] || bMsg.from) + "的" + bMsg.type + "：" + String(bMsg.coreInfo || "").slice(0, 80),
+        lesson: "",
+        impact: ""
+      });
+    }
+  }
+
+  // Update selfReview
+  var myRejects = state.messages.filter(function(m) { return m.type === "REJECT" && m.to === agentId; });
+  if (myRejects.length >= 5 && (!mem.selfReview.weaknesses || mem.selfReview.weaknesses.indexOf("质量不稳定") < 0)) {
+    if (!mem.selfReview.weaknesses) mem.selfReview.weaknesses = [];
+    mem.selfReview.weaknesses.push("质量不稳定");
+  }
+  var myApproves = state.messages.filter(function(m) { return m.type === "APPROVE" && m.to === agentId; });
+  if (myApproves.length >= 3 && (!mem.selfReview.strengths || mem.selfReview.strengths.indexOf("得到认可") < 0)) {
+    if (!mem.selfReview.strengths) mem.selfReview.strengths = [];
+    mem.selfReview.strengths.push("得到认可");
+  }
+
+  saveAgentMemory(agentId, mem);
+}
+
 function updateDailyIndex(dateStr) {
   var indexPath = path.join(OUTPUT_DIR, "index.md");
   var content;
@@ -1104,6 +1280,30 @@ async function main() {
   } else {
     report = "---\ntitle: " + dateStr + " | 行业雷达日报\noutline: [2, 3]\n---\n\n# 📡 行业雷达 · " + dateCN + "\n\n> ⚠️ 今日多Agent系统未产出完整日报\n> [查看过程日志](../logs/" + dateStr + ".md)\n\n## 采集概况\n- 采集 " + state.rawItems.length + " 篇 | 通过 " + state.verifiedItems.length + " 篇\n";
   }
+
+  // ===== 信誉分变化 =====
+  try {
+    var sysMem2 = loadSystemMemory();
+    if (sysMem2.entries && sysMem2.entries.length > 0) {
+      var lastDay = sysMem2.entries[sysMem2.entries.length - 1];
+      if (lastDay.perRole) {
+        var repSection = "\n\n## 📊 今日信誉分变化\n\n| 角色 | 分数 | 变化 | 原因 |\n|------|:----:|:----:|------|\n";
+        var agentNames = { collector: "采集师", verifier: "核查师", analyst: "分析师", editor: "编辑师", "memory-manager": "记忆管理师" };
+        ["collector", "verifier", "analyst", "editor", "memory-manager"].forEach(function(aid) {
+          var role = lastDay.perRole[aid];
+          if (!role) return;
+          var score = role.score || "?";
+          var changes = role.changes || [];
+          var lastChange = changes[changes.length - 1];
+          var delta = lastChange ? (lastChange.delta > 0 ? "+" + lastChange.delta : String(lastChange.delta)) : "—";
+          var reason = lastChange ? (String(lastChange.reason || "").slice(0, 40)) : "—";
+          repSection += "| " + (agentNames[aid] || aid) + " | " + score + " | " + delta + " | " + reason + " |\n";
+        });
+        report += repSection;
+      }
+    }
+  } catch(e) { /* skip reputation section */ }
+
   writeFileUTF8(path.join(OUTPUT_DIR, dateStr + ".md"), report);
   log("system", "日报已保存: " + dateStr + ".md");
 
