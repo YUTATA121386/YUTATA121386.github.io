@@ -107,6 +107,41 @@ function generateProcessLog(state, dateStr) {
       cleanText = stripMD(cleanText);
       cleanText = cleanText.replace(/\[【/g, "【").replace(/】\]/g, "】");
 
+      // Trim multi-role summaries: each role only shows their own summary
+      var roleNames = ['采集师', '核查师', '分析师', '编辑师', '记忆管理师'];
+      var foundRole = null;
+      for (var ri = 0; ri < roleNames.length; ri++) {
+        if (cleanText.indexOf('<strong>' + roleNames[ri] + '</strong>') !== -1) {
+          foundRole = roleNames[ri];
+          break;
+        }
+      }
+      if (foundRole) {
+        var senderName = AGENT_NAMES_CN[m.from] || '';
+        if (senderName) {
+          var roleCount = 0;
+          for (var ri = 0; ri < roleNames.length; ri++) {
+            if (cleanText.indexOf('<strong>' + roleNames[ri] + '</strong>') !== -1) roleCount++;
+          }
+          if (roleCount > 1) {
+            var targetMarker = '<strong>' + senderName + '</strong>';
+            var markerStart = cleanText.indexOf(targetMarker);
+            if (markerStart !== -1) {
+              var markerEnd = cleanText.length;
+              for (var ri = 0; ri < roleNames.length; ri++) {
+                var other = '<strong>' + roleNames[ri] + '</strong>';
+                if (other === targetMarker) continue;
+                var ni = cleanText.indexOf(other, markerStart + targetMarker.length);
+                if (ni !== -1 && ni < markerEnd) markerEnd = ni;
+              }
+              cleanText = cleanText.slice(markerStart, markerEnd);
+            } else {
+              cleanText = '参与但未提交有效复盘内容。';
+            }
+          }
+        }
+      }
+
       msgs += '<blockquote>' + cleanText.replace(/\n/g, '<br>') + '</blockquote>\n';
       msgs += '</div>\n';
 
@@ -178,7 +213,31 @@ function generateProcessLog(state, dateStr) {
     retro += '<div class="chat-content">\n';
     retro += '<div class="chat-meta"><span class="chat-sender">' + name + '</span><span class="chat-badge">\uD83D\uDCDD \u590D\u76D8</span></div>\n';
     retro += '<div class="chat-body"><blockquote>';
-    if (m && m.coreInfo) { retro += stripMD(m.coreInfo.slice(0, 500)).replace(/\n/g, "<br>"); } else if (m && !m.coreInfo) { retro += name + "\u53C2\u4E0E\u4F46\u672A\u63D0\u4EA4\u6709\u6548\u590D\u76D8\u5185\u5BB9\u3002"; } else { var anyAgentMsg = state.messages.filter(function(mm) { return mm.from === aid; }).slice(-1)[0]; if (anyAgentMsg && anyAgentMsg.coreInfo) { retro += stripMD(anyAgentMsg.coreInfo.slice(0, 500)).replace(/\n/g, "<br>"); } else { retro += name + "\u672A\u53C2\u4E0E\u4ECA\u65E5\u5DE5\u4F5C\u3002"; } }
+    if (m && m.coreInfo) {
+        var retroCore = m.coreInfo;
+        var retroRoleNames = ['采集师', '核查师', '分析师', '编辑师', '记忆管理师'];
+        var retroRoleCount = 0;
+        for (var ri = 0; ri < retroRoleNames.length; ri++) {
+          if (retroCore.indexOf('<strong>' + retroRoleNames[ri] + '</strong>') !== -1) retroRoleCount++;
+        }
+        if (retroRoleCount > 1 && name) {
+          var retroTarget = '<strong>' + name + '</strong>';
+          var retroStart = retroCore.indexOf(retroTarget);
+          if (retroStart !== -1) {
+            var retroEnd = retroCore.length;
+            for (var ri = 0; ri < retroRoleNames.length; ri++) {
+              var retroOther = '<strong>' + retroRoleNames[ri] + '</strong>';
+              if (retroOther === retroTarget) continue;
+              var retroNi = retroCore.indexOf(retroOther, retroStart + retroTarget.length);
+              if (retroNi !== -1 && retroNi < retroEnd) retroEnd = retroNi;
+            }
+            retroCore = retroCore.slice(retroStart, retroEnd);
+          } else {
+            retroCore = '参与但未提交有效复盘内容。';
+          }
+        }
+        retro += stripMD(retroCore.slice(0, 500)).replace(/\n/g, "<br>");
+      } else if (m && !m.coreInfo) { retro += name + "\u53C2\u4E0E\u4F46\u672A\u63D0\u4EA4\u6709\u6548\u590D\u76D8\u5185\u5BB9\u3002"; } else { var anyAgentMsg = state.messages.filter(function(mm) { return mm.from === aid; }).slice(-1)[0]; if (anyAgentMsg && anyAgentMsg.coreInfo) { retro += stripMD(anyAgentMsg.coreInfo.slice(0, 500)).replace(/\n/g, "<br>"); } else { retro += name + "\u672A\u53C2\u4E0E\u4ECA\u65E5\u5DE5\u4F5C\u3002"; } }
     retro += '</blockquote></div>\n';
     retro += '</div></div>\n\n';
   });
