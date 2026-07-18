@@ -26,19 +26,13 @@
     },
     {
       "name": "Google News 音乐产业",
-      "url": "https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx6TVdZU0FtVnVHZ0pWVXlnQVAB?hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
-      "lang": "zh",
-      "weight": 8
-    },
-    {
-      "name": "音乐先声",
-      "url": "https://nbnmusic.com/feed",
+      "url": "https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx6TVdZU0FtVnVHZ0pWVXlnQVAB?hl=zh-CN",
       "lang": "zh",
       "weight": 8
     },
     {
       "name": "Google News 中国音乐产业（搜索）",
-      "url": "https://news.google.com/rss/search?q=%E4%B8%AD%E5%9B%BD%E9%9F%B3%E4%B9%90%E4%BA%A7%E4%B8%9A&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "url": "https://news.google.com/rss/search?q=%E4%B8%AD%E5%9B%BD%E9%9F%B3%E4%B9%90%E4%BA%A7%E4%B8%9A&hl=zh-CN",
       "lang": "zh",
       "weight": 8
     },
@@ -52,12 +46,6 @@
       "name": "Google News Music Industry",
       "url": "https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB",
       "lang": "en",
-      "weight": 7
-    },
-    {
-      "name": "道略音乐产业",
-      "url": "https://www.idaolue.com/feed",
-      "lang": "zh",
       "weight": 7
     },
     {
@@ -80,7 +68,7 @@
     },
     {
       "name": "Google News 腾讯音乐/网易云",
-      "url": "https://news.google.com/rss/search?q=%E8%85%BE%E8%AE%AF%E9%9F%B3%E4%B9%90+OR+TME+OR+%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "url": "https://news.google.com/rss/search?q=%E8%85%BE%E8%AE%AF%E9%9F%B3%E4%B9%90+OR+TME+OR+%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90&hl=zh-CN",
       "lang": "zh",
       "weight": 7
     },
@@ -145,27 +133,9 @@
       "weight": 6
     },
     {
-      "name": "36氪",
-      "url": "https://36kr.com/feed",
-      "lang": "zh",
-      "weight": 5
-    },
-    {
-      "name": "虎嗅",
-      "url": "https://www.huxiu.com/rss/",
-      "lang": "zh",
-      "weight": 5
-    },
-    {
       "name": "Music Business Radar",
       "url": "https://www.musicbusinessradar.com/feed/",
       "lang": "en",
-      "weight": 5
-    },
-    {
-      "name": "澎湃新闻文化",
-      "url": "https://feed.thepaper.cn/rss",
-      "lang": "zh",
       "weight": 5
     },
     {
@@ -191,18 +161,6 @@
       "url": "https://news.google.com/rss/search?q=southeast+asia+music+industry&hl=en-US&gl=US&ceid=US:en",
       "lang": "en",
       "weight": 5
-    },
-    {
-      "name": "少数派",
-      "url": "https://sspai.com/feed",
-      "lang": "zh",
-      "weight": 4
-    },
-    {
-      "name": "音乐财经",
-      "url": "https://www.chinamusicbusiness.cn/feed/",
-      "lang": "zh",
-      "weight": 0
     }
   ],
   "keywords": {
