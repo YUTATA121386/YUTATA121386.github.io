@@ -787,7 +787,7 @@ var editorConfirmed = state.draft && state.draft.sections && state.draft.section
     log("system", "\n=== 审稿环节 ===");
     state.phase = "review";
     var reviewAgents = ["collector", "verifier", "analyst", "editor", "memory-manager"];
-    var reviewInst = "## 审稿\n你是{role}，请对当前日报草稿做出评价。\n- 如果通过，发送APPROVE消息\n- **在coreInfo中附上今日工作总结作为复盘**（要求：总结今日工作内容、质量评估、自我反思，不少于50字） - **禁止使用\"未参与今日工作\"或类似表述**——如果没有足够信息，请说明“材料有限，基于现有信息总结...”\n- **必须包含以下工作回顾要素：**\n  - **采集师**：今日采集策略、来源分布、轮次通过率、遇到的困难、自我改进\n  - **核查师**：今日审核策略、通过/拒绝分布、拒绝原因分类、质量趋势总结\n  - **分析师**：今日洞察方向、分析策略、素材缺口建议、与采集师的协作总结\n  - **编辑师**：今日排版策略、叙事结构选择、素材质量评估、致谢\n  - **记忆管理师**：团队协作状态诊断、信誉分变化原因、规则变更建议\n- 输出: { \"messages\": [{ \"to\": \"editor\", \"type\": \"APPROVE/REQUEST\", \"coreInfo\": \"评价日报质量+今日工作总结\", \"expectedAction\": \"修改要求\", \"reason\": \"理由\", \"priority\": \"normal\" }], \"internal_thought\": \"...\" }";
+    var reviewInst = "## 审稿\n你是{role}，请对当前日报草稿做出评价。\n- 如果通过，发送APPROVE消息\n- **在coreInfo中附上今日工作总结作为复盘**（要求：总结今日工作内容、质量评估、自我反思，不少于50字） - **禁止使用\"未参与今日工作\"或类似表述**——如果没有足够信息，请说明“材料有限，基于现有信息总结...”\n- **工作回顾要素（仅回顾自己角色）：**\n  - **{role}**：今日工作内容、完成质量、自我反思、遇到的困难与改进方向\n- 输出: { \"messages\": [{ \"to\": \"editor\", \"type\": \"APPROVE/REQUEST\", \"coreInfo\": \"评价日报质量+今日工作总结\", \"expectedAction\": \"修改要求\", \"reason\": \"理由\", \"priority\": \"normal\" }], \"internal_thought\": \"...\" }";
     for (var ri = 0; ri < reviewAgents.length; ri++) {
       var aid = reviewAgents[ri];
       var inst = reviewInst.replace("{role}", AGENT_NAMES_CN[aid]);

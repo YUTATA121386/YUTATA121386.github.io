@@ -397,7 +397,7 @@ function updateDailyIndex(dateStr) {
   try { content = fs.readFileSync(indexPath, "utf-8"); } catch (e) { return; }
   var dateLink = '<li><a href="./' + dateStr + '">' + dateStr + '</a> — <a href="../logs/' + dateStr + '">📝 过程日志</a></li>\n';
   if (content.includes(dateLink.trim())) return;
-  var insertPos = content.lastIndexOf("<li>");
+  var insertPos = content.indexOf("<li>");
   if (insertPos === -1) insertPos = content.lastIndexOf("</ul>");
   if (insertPos === -1) return;
   var firstPart = content.slice(0, insertPos);
@@ -410,9 +410,9 @@ function updateLogsIndex(dateStr) {
   var indexPath = path.join(LOGS_DIR, "index.md");
   var content;
   try { content = fs.readFileSync(indexPath, "utf-8"); } catch (e) { return; }
-  var dateLink = '<li><a href="./' + dateStr + '">' + dateStr + '</a></li>\n';
+  var dateLink = '<li><a href="./' + dateStr + '">' + dateStr + '</a> — 采集师·核查师·分析师·编辑师·记忆管理师</li>\n';
   if (content.includes(dateLink.trim())) return;
-  var insertPos = content.lastIndexOf("<li>");
+  var insertPos = content.indexOf("<li>");
   if (insertPos === -1) insertPos = content.lastIndexOf("</ul>");
   if (insertPos === -1) return;
   var firstPart = content.slice(0, insertPos);
@@ -427,7 +427,7 @@ function updateWeeklyIndex(dateStr, weekNum) {
   try { content = fs.readFileSync(indexPath, "utf-8"); } catch (e) { return; }
   var linkText = '<a href="./review-' + dateStr.slice(0, 4) + '-W' + String(weekNum).padStart(2, "0") + '">' + dateStr.slice(0, 4) + "年第" + String(weekNum).padStart(2, "0") + "周</a>";
   if (content.includes(linkText)) return;
-  var insertPos = content.lastIndexOf("<li>");
+  var insertPos = content.indexOf("<li>");
   if (insertPos === -1) insertPos = content.lastIndexOf("</ul>");
   if (insertPos === -1) return;
   var firstPart = content.slice(0, insertPos);
