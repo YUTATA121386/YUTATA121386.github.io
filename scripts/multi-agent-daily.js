@@ -181,11 +181,33 @@ function buildAgentContext(agentId, state) {
 
   // ===== Phase 2: 注入角色记忆 =====
   ctx += buildMemoryContext(agentId);
+  // Inject current rule versions
+  try {
+    var ruleFiles = ["collection-rules.md", "verification-rules.md", "style-guide.md", "communication-rules.md", "quality_standards.md"];
+    var ruleVerInfo = "";
+    ruleFiles.forEach(function(rf) {
+      var rc = fs.readFileSync(path.join(RULES_DIR, rf), "utf-8");
+      var vM = rc.match(/version:\s*(\S+)/); var uM = rc.match(/updated:\s*(\S+)/);
+      if (vM) ruleVerInfo += rf.replace(".md", "") + ": " + vM[1] + (uM ? " (" + uM[1] + ")" : "") + "\n";
+    });
+    ctx += "\n## Current Rule Versions\n" + ruleVerInfo + "\n";
+  } catch(e) { /* skip */ }
 
   if (agentId === "collector") {
     ctx += "rawItems: " + state.rawItems.length + " | 待补采请求: " + state.supplementRequests.filter(r => r.status === "pending").length + "\n";
     const rej = state.messages.filter(m => m.type === "REJECT" && m.to === "collector").slice(-5);
     if (rej.length) { ctx += "最近被打回:\n"; for (const r of rej) ctx += "  - " + r.coreInfo + "\n"; }
+        // Inject knowledge gap report
+    try {
+      var gapPath = path.join(OUTPUT_DIR, "knowledge-gap-report.md");
+      if (fs.existsSync(gapPath)) {
+        var gapContent = fs.readFileSync(gapPath, "utf-8");
+        var gapKeywords = gapContent.match(/\*\*([^\*]+)\*\*/g);
+        if (gapKeywords && gapKeywords.length > 0) {
+          ctx += "\n## Knowledge Gaps\n" + gapKeywords.slice(0, 8).join("\n") + "\n";
+        }
+      }
+    } catch(e) { /* no gap report */ }
     ctx += "\n## 采集规则\n" + (state.rules["collection-rules"] || "(无)") + "\n";
   }
   if (agentId === "verifier") {
@@ -556,6 +578,10 @@ async function main() {
     }
   }
   state.stats.collectorSubmitted = state.rawItems.length;
+  // Sort by source weight: higher-weight sources first
+  var weightMap = {}; SOURCES.forEach(function(s) { weightMap[s.name] = s.weight || 5; });
+  state.rawItems.sort(function(a, b) { return (weightMap[b.source] || 5) - (weightMap[a.source] || 5); });
+  state.rawItems.forEach(function(item, k) { item.id = "RAW-" + dateStr + "-" + String(k + 1).padStart(4, "0"); });
   log("collector", "首次抓取: " + state.rawItems.length + " 条新内容");
 
   pushMessage(state, createMessage("collector", "verifier", "NOTIFY",
