@@ -152,6 +152,7 @@ export default defineConfig({
           { text: "核查规则", link: "/rules/verification-rules" },
           { text: "排版规范", link: "/rules/style-guide" },
           { text: "通信规则", link: "/rules/communication-rules" },
+          { text: "质量标准", link: "/rules/quality_standards" },
           { text: "信誉分规则", link: "/rules/credit_score_system" },
         ]
       }],

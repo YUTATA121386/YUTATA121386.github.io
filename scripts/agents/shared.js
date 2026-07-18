@@ -64,7 +64,7 @@ function createInitialState(dateStr) {
 
 function loadCurrentRules() {
   const rules = {};
-  const ruleFiles = ["collection-rules.md", "verification-rules.md", "style-guide.md", "credit_score_system.md"];
+  const ruleFiles = ["collection-rules.md", "verification-rules.md", "style-guide.md", "communication-rules.md", "quality_standards.md", "credit_score_system.md"];
   for (const f of ruleFiles) {
     const filepath = path.join(RULES_DIR, f);
     try {
