@@ -6,12 +6,17 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 56,
+      "trust": 62,
       "trend": "improving",
       "history": [
         {
           "date": "2026-07-19",
           "event": "合作 10次",
+          "trustDelta": 6
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 12次",
           "trustDelta": 6
         }
       ],
@@ -25,14 +30,24 @@
           "date": "2026-07-19",
           "event": "合作 2次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
     },
     "editor": {
-      "trust": 52,
+      "trust": 54,
       "trend": "improving",
       "history": [
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
         {
           "date": "2026-07-19",
           "event": "合作 1次",
@@ -145,6 +160,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 69% (55/80)",
       "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "Trump wants to impose tariffs on Canada in retaliation for wildfire smoke - The Washington Post",
+      "source": "Google News Music Industry",
+      "reason": "内容为特朗普关税与野火，与音乐产业完全无关。",
+      "summary": "被拒: Trump wants to impose tariffs on Canada in retaliation for wildfire smoke - The ",
+      "lesson": "避免采集此类素材: 内容为特朗普关税与野火，与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "Massive sinkhole swallows Sunset Boulevard, floods LA streets - USA Today",
+      "source": "Google News Music Industry",
+      "reason": "内容为洛杉矶天坑与城市新闻，与音乐产业完全无关。",
+      "summary": "被拒: Massive sinkhole swallows Sunset Boulevard, floods LA streets - USA Today",
+      "lesson": "避免采集此类素材: 内容为洛杉矶天坑与城市新闻，与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "Doctors question evidence behind Pentagon plan for testosterone screening - The Guardian",
+      "source": "Google News Music Industry",
+      "reason": "内容为五角大楼的睾酮筛查与医疗政策，与音乐产业完全无关。",
+      "summary": "被拒: Doctors question evidence behind Pentagon plan for testosterone screening - The ",
+      "lesson": "避免采集此类素材: 内容为五角大楼的睾酮筛查与医疗政策，与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "Zelenskyy considers sacking commander-in-chief as protests swell - Financial Times",
+      "source": "Google News Music Industry",
+      "reason": "内容为乌克兰政治与军事领导层变动，与音乐产业完全无关。",
+      "summary": "被拒: Zelenskyy considers sacking commander-in-chief as protests swell - Financial Tim",
+      "lesson": "避免采集此类素材: 内容为乌克兰政治与军事领导层变动，与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "Without Platner, Maine Democrats Scramble to Keep Grassroots Energy Alive - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "内容为缅因州地方选举与政治活动，与音乐产业完全无关。",
+      "summary": "被拒: Without Platner, Maine Democrats Scramble to Keep Grassroots Energy Alive - The ",
+      "lesson": "避免采集此类素材: 内容为缅因州地方选举与政治活动，与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "NEK!、渋谷フリーライブでメジャーデビューを祝福。メジャー1st EPから「MAGiC VoX」先行配信へ",
+      "source": "BARKS",
+      "summary": "通过: NEK!、渋谷フリーライブでメジャーデビューを祝福。メジャー1st EPから「MAGiC VoX」先行配信へ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "さとう。、10月より全国弾き語りワンマンツアー開催。ファイナルは日本橋三井ホール",
+      "source": "BARKS",
+      "summary": "通过: さとう。、10月より全国弾き語りワンマンツアー開催。ファイナルは日本橋三井ホール",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Baby Canta、アニメ『ダイヤのA actⅡ -Second Season-』本編映像を使用した「Let’s Go Crazy」コラボMV公開",
+      "source": "BARKS",
+      "summary": "通过: Baby Canta、アニメ『ダイヤのA actⅡ -Second Season-』本編映像を使用した「Let’s Go Crazy」コラボMV公開",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "ゆとりくん、ソニー・ミュージック内レーベルEchoesに参加",
+      "source": "BARKS",
+      "summary": "通过: ゆとりくん、ソニー・ミュージック内レーベルEchoesに参加",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Saucy Dog、7/21東京ガーデンシアター公演をYouTube生配信",
+      "source": "BARKS",
+      "summary": "通过: Saucy Dog、7/21東京ガーデンシアター公演をYouTube生配信",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "每日统计",
+      "summary": "今日通过率: 59% (47/80)",
+      "lesson": ""
     }
   ],
   "selfReview": {

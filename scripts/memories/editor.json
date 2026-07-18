@@ -6,9 +6,14 @@
   },
   "relationships": {
     "collector": {
-      "trust": 52,
+      "trust": 54,
       "trend": "improving",
       "history": [
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
         {
           "date": "2026-07-19",
           "event": "合作 1次",
@@ -24,9 +29,14 @@
       "summary": ""
     },
     "analyst": {
-      "trust": 52,
+      "trust": 54,
       "trend": "improving",
       "history": [
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
         {
           "date": "2026-07-19",
           "event": "合作 1次",
@@ -53,6 +63,13 @@
       "date": "2026-07-19",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 日报草稿整体结构完整，覆盖了核心话题。今日工作总结：作为采集师，今日工作质量喜忧参半。**完成质量**：首批20条素材通过率95%（19/20），MusicTe",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-19",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 日报草稿通过。今日工作总结：采集师今日完成4轮采集，共提交80条素材，最终通过55条，通过率69%。工作亮点：第一批素材通过率95%，覆盖了流媒体定价、版权纠纷",
       "lesson": "",
       "impact": ""
     }
