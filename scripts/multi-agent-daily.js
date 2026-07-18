@@ -616,8 +616,10 @@ async function main() {
   const now = new Date();
   const dateStr = (function() {
   if (process.env.OVERRIDE_DATE) return process.env.OVERRIDE_DATE;
-  var d = new Date();
-  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  var now = new Date();
+  // Asia/Shanghai timezone to match Chinese date
+  var shanghai = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Shanghai' }));
+  return shanghai.getFullYear() + '-' + String(shanghai.getMonth() + 1).padStart(2, '0') + '-' + String(shanghai.getDate()).padStart(2, '0');
 })();
   const dateCN = (function() { var parts = dateStr.split("-"); return parts[0] + "年" + parseInt(parts[1]) + "月" + parseInt(parts[2]) + "日"; })();
   const systemStats = loadSystemStats();
