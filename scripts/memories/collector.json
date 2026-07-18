@@ -53,6 +53,11 @@
           "date": "2026-07-19",
           "event": "合作 11次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 4次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
@@ -117,8 +122,8 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 54,
-      "trend": "stable",
+      "trust": 56,
+      "trend": "improving",
       "history": [
         {
           "date": "2026-07-19",
@@ -139,67 +144,17 @@
           "date": "2026-07-19",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Audeze’s flagship gaming headphones now have adaptive noise cancelling for ultimate focus",
-      "source": "MusicTech",
-      "summary": "通过: Audeze’s flagship gaming headphones now have adaptive noise cancelling for ultim",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Hackers reveal Suno scraped music data from YouTube, Deezer, Genius, and more",
-      "source": "MusicTech",
-      "summary": "通过: Hackers reveal Suno scraped music data from YouTube, Deezer, Genius, and more",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Pink Floyd gets a limited-edition We Are Rewind cassette player – complete with an exclusive Dark Si",
-      "source": "MusicTech",
-      "summary": "通过: Pink Floyd gets a limited-edition We Are Rewind cassette player – complete with ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Neutone and Roland want you to design your own AI model — and play it live",
-      "source": "MusicTech",
-      "summary": "通过: Neutone and Roland want you to design your own AI model — and play it live",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Reason 14, as reviewed by a Cubase user: “Bells and whistles aren’t always everything”",
-      "source": "MusicTech",
-      "summary": "通过: Reason 14, as reviewed by a Cubase user: “Bells and whistles aren’t always every",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "每日统计",
-      "summary": "今日通过率: 70% (42/60)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "How data centers became a symbol of Americans’ rage - The Washington Post",
-      "source": "Google News Music Industry",
-      "reason": "与音乐行业完全无关。内容是关于公众对数据中心抗议的科技/社会新闻。",
-      "summary": "被拒: How data centers became a symbol of Americans’ rage - The Washington Post",
-      "lesson": "避免采集此类素材: 与音乐行业完全无关。内容是关于公众对数据中心抗议的科技/社会新闻。"
-    },
     {
       "date": "2026-07-19",
       "type": "被拒案例",
@@ -553,6 +508,61 @@
       "date": "2026-07-19",
       "type": "每日统计",
       "summary": "今日通过率: 72% (43/60)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "Avery Cochran’s ‘Shapeshifting On A Saturday Night’",
+      "source": "Music Ally",
+      "reason": "该素材为单一新兴艺人新歌发布，缺乏行业宏观视角、商业模式创新或广泛影响力，属于艺人推广层面，不符合‘行业动态’标准。",
+      "summary": "被拒: Avery Cochran’s ‘Shapeshifting On A Saturday Night’",
+      "lesson": "避免采集此类素材: 该素材为单一新兴艺人新歌发布，缺乏行业宏观视角、商业模式创新或广泛影响力，属于艺人推广层面，不符合‘行业动态’标准。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "UK’s Ofcom launches investigation into TikTok over child safety",
+      "source": "Music Ally",
+      "summary": "通过: UK’s Ofcom launches investigation into TikTok over child safety",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Content discovery on YouTube is changing",
+      "source": "Music Ally",
+      "summary": "通过: Content discovery on YouTube is changing",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Erling Haaland on the top of Norway’s Spotify charts",
+      "source": "Music Ally",
+      "summary": "通过: Erling Haaland on the top of Norway’s Spotify charts",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Big tech platforms implement AI measures to curb AI",
+      "source": "Music Ally",
+      "summary": "通过: Big tech platforms implement AI measures to curb AI",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Album-selling app Lume launches: ‘We just think the current system is incomplete’",
+      "source": "Music Ally",
+      "summary": "通过: Album-selling app Lume launches: ‘We just think the current system is incomplete",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "每日统计",
+      "summary": "今日通过率: 95% (19/20)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],

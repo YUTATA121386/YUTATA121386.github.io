@@ -6,8 +6,8 @@
   },
   "relationships": {
     "collector": {
-      "trust": 54,
-      "trend": "stable",
+      "trust": 56,
+      "trend": "improving",
       "history": [
         {
           "date": "2026-07-19",
@@ -18,6 +18,11 @@
           "date": "2026-07-19",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 2
         },
         {
           "date": "2026-07-19",
@@ -80,13 +85,18 @@
       "summary": "关系一般"
     },
     "analyst": {
-      "trust": 54,
+      "trust": 56,
       "trend": "improving",
       "history": [
         {
           "date": "2026-07-19",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 2
         },
         {
           "date": "2026-07-19",
@@ -102,7 +112,7 @@
       "summary": "关系一般"
     },
     "editor": {
-      "trust": 54,
+      "trust": 56,
       "trend": "improving",
       "history": [
         {
@@ -114,6 +124,11 @@
           "date": "2026-07-19",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 2
         },
         {
           "date": "2026-07-19",
@@ -150,6 +165,13 @@
       "date": "2026-07-19",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日工作总结：本轮我完成了5轮采集，共提交了189条原始素材。在核查师的严格审核下，我经历了从高通过率（95%）到触发低通过率预警（50%）的剧烈波动。我深刻反",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-19",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日工作总结：本日采集共提交18条素材，经核查师审核通过17条，拒绝1条（RAW-2026-07-19-0016 Avery Cochran新歌），通过率94.",
       "lesson": "",
       "impact": ""
     }
