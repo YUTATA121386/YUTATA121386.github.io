@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 72,
+      "trust": 76,
       "trend": "improving",
       "history": [
         {
@@ -27,6 +27,11 @@
         {
           "date": "2026-07-19",
           "event": "合作 6次",
+          "trustDelta": 4
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 7次",
           "trustDelta": 4
         }
       ],
@@ -67,6 +72,11 @@
         {
           "date": "2026-07-19",
           "event": "合作 2次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
           "trustDelta": 0
         }
       ],
@@ -127,6 +137,20 @@
       "date": "2026-07-19",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 第一批20条素材审核完毕：通过17条，拒绝3条。通过率85%。",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-19",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 拒绝的6条素材（RAW-0022, 0023, 0024, 0029, 0031, 0034）均与音乐行业核心无关。",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-19",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 第一批20条素材审核完毕，通过19条，拒绝1条。通过率95%。",
       "lesson": "",
       "impact": ""
     }

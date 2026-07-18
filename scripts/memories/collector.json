@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 72,
+      "trust": 76,
       "trend": "improving",
       "history": [
         {
@@ -27,6 +27,11 @@
         {
           "date": "2026-07-19",
           "event": "合作 6次",
+          "trustDelta": 4
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 7次",
           "trustDelta": 4
         }
       ],
@@ -95,33 +100,6 @@
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Ukrainian drone attacks on Russia kill at least 8, wound dozens - Al Jazeera",
-      "source": "Google News Music Industry",
-      "reason": "与音乐产业完全无关，属于国际军事冲突新闻（俄乌战争）",
-      "summary": "被拒: Ukrainian drone attacks on Russia kill at least 8, wound dozens - Al Jazeera",
-      "lesson": "避免采集此类素材: 与音乐产业完全无关，属于国际军事冲突新闻（俄乌战争）"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "‘Everything’s destroyed’: Buzzy Sunset Strip cafe closes indefinitely due to water main break - Los ",
-      "source": "Google News Music Industry",
-      "reason": "与音乐产业完全无关，属于本地商业/基础设施新闻（咖啡馆水管爆裂）",
-      "summary": "被拒: ‘Everything’s destroyed’: Buzzy Sunset Strip cafe closes indefinitely due to wat",
-      "lesson": "避免采集此类素材: 与音乐产业完全无关，属于本地商业/基础设施新闻（咖啡馆水管爆裂）"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "US data center protests go national as backlash grows - Yahoo",
-      "source": "Google News Music Industry",
-      "reason": "与音乐产业完全无关，属于科技行业/能源新闻（数据中心抗议）",
-      "summary": "被拒: US data center protests go national as backlash grows - Yahoo",
-      "lesson": "避免采集此类素材: 与音乐产业完全无关，属于科技行业/能源新闻（数据中心抗议）"
-    },
     {
       "date": "2026-07-19",
       "type": "被拒案例",
@@ -439,6 +417,97 @@
       "date": "2026-07-19",
       "type": "每日统计",
       "summary": "今日通过率: 85% (17/20)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "A股全線暴跌 滬指跌穿3800點 創指跌7.15% - 大纪元",
+      "source": "Google News 音乐产业",
+      "reason": "与音乐行业核心无关。A股市场暴跌的财经新闻。",
+      "summary": "被拒: A股全線暴跌 滬指跌穿3800點 創指跌7.15% - 大纪元",
+      "lesson": "避免采集此类素材: 与音乐行业核心无关。A股市场暴跌的财经新闻。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "金價跌破4000美元 大陸追金者浮虧10萬人民幣 - 大纪元",
+      "source": "Google News 音乐产业",
+      "reason": "与音乐行业核心无关。黄金价格波动的财经新闻。",
+      "summary": "被拒: 金價跌破4000美元 大陸追金者浮虧10萬人民幣 - 大纪元",
+      "lesson": "避免采集此类素材: 与音乐行业核心无关。黄金价格波动的财经新闻。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "欧洲奋力追赶中美，争夺数字自主权 - 纽约时报中文网",
+      "source": "Google News 音乐产业",
+      "reason": "与音乐行业核心无关。讨论欧洲在数字主权上追赶中美，属于地缘政治和科技政策范畴。",
+      "summary": "被拒: 欧洲奋力追赶中美，争夺数字自主权 - 纽约时报中文网",
+      "lesson": "避免采集此类素材: 与音乐行业核心无关。讨论欧洲在数字主权上追赶中美，属于地缘政治和科技政策范畴。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "小米 SU7 碰撞测试博主高某被判刑���年八个月，罚款 10 万元 - IT之家",
+      "source": "Google News 音乐产业",
+      "reason": "与音乐行业核心无关。小米汽车碰撞测试博主的法律判决新闻。",
+      "summary": "被拒: 小米 SU7 碰撞测试博主高某被判刑���年八个月，罚款 10 万元 - IT之家",
+      "lesson": "避免采集此类素材: 与音乐行业核心无关。小米汽车碰撞测试博主的法律判决新闻。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "德官员吁欧盟提高中国汽车关税 以促中企与大众合作 - 联合早报",
+      "source": "Google News 音乐产业",
+      "reason": "与音乐行业核心无关。德国官员关于提高中国汽车关税的言论。",
+      "summary": "被拒: 德官员吁欧盟提高中国汽车关税 以促中企与大众合作 - 联合早报",
+      "lesson": "避免采集此类素材: 与音乐行业核心无关。德国官员关于提高中国汽车关税的言论。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Audeze’s flagship gaming headphones now have adaptive noise cancelling for ultimate focus",
+      "source": "MusicTech",
+      "summary": "通过: Audeze’s flagship gaming headphones now have adaptive noise cancelling for ultim",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Hackers reveal Suno scraped music data from YouTube, Deezer, Genius, and more",
+      "source": "MusicTech",
+      "summary": "通过: Hackers reveal Suno scraped music data from YouTube, Deezer, Genius, and more",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Pink Floyd gets a limited-edition We Are Rewind cassette player – complete with an exclusive Dark Si",
+      "source": "MusicTech",
+      "summary": "通过: Pink Floyd gets a limited-edition We Are Rewind cassette player – complete with ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Neutone and Roland want you to design your own AI model — and play it live",
+      "source": "MusicTech",
+      "summary": "通过: Neutone and Roland want you to design your own AI model — and play it live",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Reason 14, as reviewed by a Cubase user: “Bells and whistles aren’t always everything”",
+      "source": "MusicTech",
+      "summary": "通过: Reason 14, as reviewed by a Cubase user: “Bells and whistles aren’t always every",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "每日统计",
+      "summary": "今日通过率: 70% (42/60)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],
