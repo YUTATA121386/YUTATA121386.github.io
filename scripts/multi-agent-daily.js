@@ -915,14 +915,7 @@ var editorConfirmed = state.draft && state.draft.sections && state.draft.section
 
   state.phase = "convergence";
 
-  // 注入当前信誉分供记忆管理师参考
-  var currentScores = [];
-  var repDataForPrompt = state.reputation;
-  ["collector", "verifier", "analyst", "editor", "memory-manager"].forEach(function(aid) {
-    var agentRep = repDataForPrompt[aid];
-    if (agentRep) currentScores.push(AGENT_NAMES_CN[aid] + ": " + (agentRep.score || "?") + "分");
-  });
-  const finalInst = "## 最终复盘\n你是记忆管理师，今日" + dateCN + "。\n\n当前各角色信誉分: " + currentScores.join(", ") + "\n\n请评估日报质量（必须填写quality_scores的每个字段：completeness/accuracy/depth/readability，各0-10分）、优缺点、规则修改建议、信誉分调整。\n\n信誉分调整重要指示：每个角色都必须给出调整（delta为0也要记录）。原因中请用上面的真实分数而非自己猜测。\n\n输出: { \"review\": { \"quality_scores\": {\"completeness\":0,\"accuracy\":0,\"depth\":0,\"readability\":0}, \"strengths\": [...], \"weaknesses\": [...], \"root_cause\": \"...\" }, \"actions\": [{\"type\":\"update_rule\",\"rule_file\":\"...\",\"change_type\":\"add/modify\",\"after\":\"...\",\"reason\":\"...\"}, {\"type\":\"update_reputation\",\"agent\":\"collector\",\"delta\":0,\"reason\":\"基于今日表现，信誉分维持XX分\"}], \"internal_thought\": \"...\" }";
+  const finalInst = "## 最终复盘\n你是记忆管理师，今日" + dateCN + "。\n\n请评估日报质量（必须填写quality_scores每个字段(completeness/accuracy/depth/readability 0-10)）、优缺点、规则修改建议、信誉分调整。\n\n信誉分调整: 每个角色都必须给出(delta为0也要)。reason只写今日表现评价，不要写具体分数值。\n\n输出: { \"review\": { \"quality_scores\": {\"completeness\":0,\"accuracy\":0,\"depth\":0,\"readability\":0}, \"strengths\": [...], \"weaknesses\": [...], \"root_cause\": \"...\" }, \"actions\": [{\"type\":\"update_rule\",\"rule_file\":\"...\",\"change_type\":\"add/modify\",\"after\":\"...\",\"reason\":\"...\"}, {\"type\":\"update_reputation\",\"agent\":\"collector\",\"delta\":0,\"reason\":\"基于今日表现，简要说明表现（不写具体分数）\"}], \"internal_thought\": \"...\" }";
   const finalReview = await runAgent("memory-manager", state, finalInst);
 
   if (finalReview.actions) {
@@ -1025,54 +1018,7 @@ var editorConfirmed = state.draft && state.draft.sections && state.draft.section
     report = "---\ntitle: " + dateStr + " | 行业雷达日报\noutline: [2, 3]\n---\n\n# 📡 行业雷达 · " + dateCN + "\n\n> ⚠️ 今日编辑师环节异常，日报由系统自动生成\n> 📮 采集概况见下方\n> [查看过程日志](../logs/" + dateStr + ".md)\n\n## 采集概况\n- 采集 " + state.rawItems.length + " 篇 | 通过 " + state.verifiedItems.length + " 篇\n" + msgSummary;
   }
 
-      // ===== 信誉分变化 =====
-  // 直接从 reputation.json 读取，确保显示最新信誉分变化  
-  try {
-    var repData = require("./agents/shared").loadReputation();
-    var agentNames = { collector: "采集师", verifier: "核查师", analyst: "分析师", editor: "编辑师", "memory-manager": "记忆管理师" };
-    var todayStr = dateStr;
-    var repSection = "\n\n## 📊 \u4eca\u65e5\u4fe1\u8a89\u5206\u53d8\u5316\n\n<div style=\"display:grid;grid-template-columns:80px 50px 50px 1fr;gap:6px 12px;font-size:0.9em;margin:12px 0;\">\n<div style=\"font-weight:600;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);\">\u89d2\u8272</div>\n<div style=\"text-align:center;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);\">\u5206\u6570</div>\n<div style=\"text-align:center;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);\">\u53d8\u5316</div>\n<div style=\"padding:6px 0;border-bottom:2px solid var(--vp-c-divider);overflow-wrap:break-word;word-break:break-word;\">\u539f\u56e0</div>\n";
-    ["collector", "verifier", "analyst", "editor", "memory-manager"].forEach(function(aid) {
-      var agentRep = repData[aid];
-      if (!agentRep) return;
-      var todayHistory = (agentRep.history || []).filter(function(h) { return h.date === todayStr; });
-      // 从 state.reputationChanges 补充（内存中的实时变化）
-      var stateRepChanges = (state.reputationChanges && state.reputationChanges[aid]) || [];
-      var score = agentRep.score || "?";
-      var delta = "\u2014";
-      var reason = "\u2014";
-      if (todayHistory.length > 0) {
-        var lastEntry = todayHistory[todayHistory.length - 1];
-        delta = lastEntry.delta > 0 ? "+" + lastEntry.delta : String(lastEntry.delta);
-        reason = String(lastEntry.reason || "").slice(0, 150);
-      } else {
-        // Fallback: read from state.reputationChanges (in-memory realtime changes)
-        if (stateRepChanges.length > 0) {
-          var lastChange = stateRepChanges[stateRepChanges.length - 1];
-          delta = lastChange.delta > 0 ? "+" + lastChange.delta : String(lastChange.delta);
-          reason = String(lastChange.reason || "").slice(0, 150);
-        }
-        // Second fallback: read from state.reputation history
-        if (delta === "—") {
-          var stateAgentRep = state.reputation && state.reputation[aid];
-          if (stateAgentRep && stateAgentRep.history && stateAgentRep.history.length > 0) {
-            var stateLastEntry = stateAgentRep.history[stateAgentRep.history.length - 1];
-            if (stateLastEntry.date === todayStr || stateLastEntry.date === dateStr) {
-              delta = stateLastEntry.delta > 0 ? "+" + stateLastEntry.delta : String(stateLastEntry.delta);
-              reason = String(stateLastEntry.reason || "").slice(0, 150);
-            }
-          }
-        }
-        // Third fallback: repReasons
-        if (reason === "—" && state.repReasons && state.repReasons[aid]) {
-          reason = state.repReasons[aid].slice(-1)[0];
-        }
-      }
-      repSection += "<div style=\"font-weight:600;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + (agentNames[aid] || aid) + "</div><div style=\"text-align:center;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + score + "</div><div style=\"text-align:center;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);\">" + delta + "</div><div style=\"padding:6px 0;border-bottom:1px solid var(--vp-c-divider);overflow-wrap:break-word;word-break:break-word;line-height:1.4;\">" + reason + "</div>\n";
-    });
-    repSection += "</div>\n";
-    report += repSection;
-  } catch(e) { /* skip reputation section */ }
+
 
   // 后处理：修复所有分析师尚未提交类错误标注
   report = report.replace(/分析师[^\n，。]{0,15}未(?:提交|提供|输出|参与)/gi, function(match) {
