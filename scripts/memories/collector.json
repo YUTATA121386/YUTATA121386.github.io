@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 98,
+      "trust": 100,
       "trend": "improving",
       "history": [
         {
@@ -48,6 +48,11 @@
           "date": "2026-07-19",
           "event": "合作 9次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 11次",
+          "trustDelta": 8
         }
       ],
       "summary": "关系良好"
@@ -74,6 +79,11 @@
         {
           "date": "2026-07-19",
           "event": "合作 2次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
           "trustDelta": 0
         },
         {
@@ -107,7 +117,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 52,
+      "trust": 54,
       "trend": "stable",
       "history": [
         {
@@ -124,103 +134,17 @@
           "date": "2026-07-19",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Lorde speaks out against Spotify’s ‘About the Song’ feature",
-      "source": "Music Ally",
-      "summary": "通过: Lorde speaks out against Spotify’s ‘About the Song’ feature",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "UK’s Ofcom launches investigation into TikTok over child safety",
-      "source": "Music Ally",
-      "summary": "通过: UK’s Ofcom launches investigation into TikTok over child safety",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Content discovery on YouTube is changing",
-      "source": "Music Ally",
-      "summary": "通过: Content discovery on YouTube is changing",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Big tech platforms implement AI measures to curb AI",
-      "source": "Music Ally",
-      "summary": "通过: Big tech platforms implement AI measures to curb AI",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Album-selling app Lume launches: ‘We just think the current system is incomplete’",
-      "source": "Music Ally",
-      "summary": "通过: Album-selling app Lume launches: ‘We just think the current system is incomplete",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "每日统计",
-      "summary": "今日通过率: 85% (17/20)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "A股全線暴跌 滬指跌穿3800點 創指跌7.15% - 大纪元",
-      "source": "Google News 音乐产业",
-      "reason": "与音乐行业核心无关。A股市场暴跌的财经新闻。",
-      "summary": "被拒: A股全線暴跌 滬指跌穿3800點 創指跌7.15% - 大纪元",
-      "lesson": "避免采集此类素材: 与音乐行业核心无关。A股市场暴跌的财经新闻。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "金價跌破4000美元 大陸追金者浮虧10萬人民幣 - 大纪元",
-      "source": "Google News 音乐产业",
-      "reason": "与音乐行业核心无关。黄金价格波动的财经新闻。",
-      "summary": "被拒: 金價跌破4000美元 大陸追金者浮虧10萬人民幣 - 大纪元",
-      "lesson": "避免采集此类素材: 与音乐行业核心无关。黄金价格波动的财经新闻。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "欧洲奋力追赶中美，争夺数字自主权 - 纽约时报中文网",
-      "source": "Google News 音乐产业",
-      "reason": "与音乐行业核心无关。讨论欧洲在数字主权上追赶中美，属于地缘政治和科技政策范畴。",
-      "summary": "被拒: 欧洲奋力追赶中美，争夺数字自主权 - 纽约时报中文网",
-      "lesson": "避免采集此类素材: 与音乐行业核心无关。讨论欧洲在数字主权上追赶中美，属于地缘政治和科技政策范畴。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "小米 SU7 碰撞测试博主高某被判刑���年八个月，罚款 10 万元 - IT之家",
-      "source": "Google News 音乐产业",
-      "reason": "与音乐行业核心无关。小米汽车碰撞测试博主的法律判决新闻。",
-      "summary": "被拒: 小米 SU7 碰撞测试博主高某被判刑���年八个月，罚款 10 万元 - IT之家",
-      "lesson": "避免采集此类素材: 与音乐行业核心无关。小米汽车碰撞测试博主的法律判决新闻。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "德官员吁欧盟提高中国汽车关税 以促中企与大众合作 - 联合早报",
-      "source": "Google News 音乐产业",
-      "reason": "与音乐行业核心无关。德国官员关于提高中国汽车关税的言论。",
-      "summary": "被拒: 德官员吁欧盟提高中国汽车关税 以促中企与大众合作 - 联合早报",
-      "lesson": "避免采集此类素材: 与音乐行业核心无关。德国官员关于提高中国汽车关税的言论。"
-    },
     {
       "date": "2026-07-19",
       "type": "标杆案例",
@@ -538,6 +462,97 @@
       "date": "2026-07-19",
       "type": "每日统计",
       "summary": "今日通过率: 63% (50/80)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "A股全線暴跌 滬指跌穿3800點 創指跌7.15% - 大纪元",
+      "source": "Google News 音乐产业",
+      "reason": "内容是关于A股暴跌的财经新闻，与音乐产业完全无关。",
+      "summary": "被拒: A股全線暴跌 滬指跌穿3800點 創指跌7.15% - 大纪元",
+      "lesson": "避免采集此类素材: 内容是关于A股暴跌的财经新闻，与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "金價跌破4000美元 大陸追金者浮虧10萬人民幣 - 大纪元",
+      "source": "Google News 音乐产业",
+      "reason": "内容是关于金价波动的财经新闻，与音乐产业完全无关。",
+      "summary": "被拒: 金價跌破4000美元 大陸追金者浮虧10萬人民幣 - 大纪元",
+      "lesson": "避免采集此类素材: 内容是关于金价波动的财经新闻，与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "欧洲奋力追赶中美，争夺数字自主权 - 纽约时报中文网",
+      "source": "Google News 音乐产业",
+      "reason": "内容是关于欧洲数字自主权的泛科技/政治新闻，与音乐产业核心关联微弱。",
+      "summary": "被拒: 欧洲奋力追赶中美，争夺数字自主权 - 纽约时报中文网",
+      "lesson": "避免采集此类素材: 内容是关于欧洲数字自主权的泛科技/政治新闻，与音乐产业核心关联微弱。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "小米 SU7 碰撞测试博主高某被判刑一年八个月，罚款 10 万元 - IT之家",
+      "source": "Google News 音乐产业",
+      "reason": "内容是关于小米汽车碰撞测试博主的法律判决，与音乐产业完全无关。",
+      "summary": "被拒: 小米 SU7 碰撞测试博主高某被判刑一年八个月，罚款 10 万元 - IT之家",
+      "lesson": "避免采集此类素材: 内容是关于小米汽车碰撞测试博主的法律判决，与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "Live updates: US reports its first military deaths since March after a week of renewed fighting with",
+      "source": "Google News Music Industry",
+      "reason": "内容是关于美军在中东的伤亡和地缘政治动态，与音乐产业完全无关。",
+      "summary": "被拒: Live updates: US reports its first military deaths since March after a week of r",
+      "lesson": "避免采集此类素材: 内容是关于美军在中东的伤亡和地缘政治动态，与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Audeze’s flagship gaming headphones now have adaptive noise cancelling for ultimate focus",
+      "source": "MusicTech",
+      "summary": "通过: Audeze’s flagship gaming headphones now have adaptive noise cancelling for ultim",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Hackers reveal Suno scraped music data from YouTube, Deezer, Genius, and more",
+      "source": "MusicTech",
+      "summary": "通过: Hackers reveal Suno scraped music data from YouTube, Deezer, Genius, and more",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Pink Floyd gets a limited-edition We Are Rewind cassette player – complete with an exclusive Dark Si",
+      "source": "MusicTech",
+      "summary": "通过: Pink Floyd gets a limited-edition We Are Rewind cassette player – complete with ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Neutone and Roland want you to design your own AI model — and play it live",
+      "source": "MusicTech",
+      "summary": "通过: Neutone and Roland want you to design your own AI model — and play it live",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Reason 14, as reviewed by a Cubase user: “Bells and whistles aren’t always everything”",
+      "source": "MusicTech",
+      "summary": "通过: Reason 14, as reviewed by a Cubase user: “Bells and whistles aren’t always every",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "每日统计",
+      "summary": "今日通过率: 72% (43/60)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],
