@@ -895,8 +895,8 @@ var editorConfirmed = state.draft && state.draft.sections && state.draft.section
   if (state.draft && state.draft.sections && state.draft.sections.length > 0) {
     log("system", "\n=== 审稿环节 ===");
     state.phase = "review";
-    var reviewAgents = ["verifier", "analyst"];  // 仅核查师和分析师审稿，避免全员重复
-    var reviewInst = "## 审稿\n你是{role}，请对当前日报草稿做出评价。\n- 如果通过，发送APPROVE消息\n- **在coreInfo中附上今日工作总结作为复盘**（要求：总结今日工作内容、质量评估、自我反思，不少于50字） - **禁止使用\"未参与今日工作\"或类似表述**——如果没有足够信息，请说明“材料有限，基于现有信息总结...”\n- **工作回顾要素（仅回顾自己角色）：**\n  - **{role}**：今日工作内容、完成质量、自我反思、遇到的困难与改进方向\n- 输出: { \"messages\": [{ \"to\": \"editor\", \"type\": \"APPROVE/REQUEST\", \"coreInfo\": \"评价日报质量+今日工作总结\", \"expectedAction\": \"修改要求\", \"reason\": \"理由\", \"priority\": \"normal\" }], \"internal_thought\": \"...\" }";
+    var reviewAgents = ["collector", "verifier", "analyst", "editor", "memory-manager"];
+    var reviewInst = "## 复盘\n你是{role}，请完成今日工作复盘。\n- 在coreInfo中写下你的**今日工作总结**（内容、质量、自我反思，不少于50字）\n- **仅回顾你自己的角色**：你做了什么、质量如何、反思与改进方向\n- **不要评价其他角色**，不要用\"未参与\"类表述，只说自己\n- 输出: { \"messages\": [{ \"to\": \"memory-manager\", \"type\": \"APPROVE\", \"coreInfo\": \"今日工作总结内容\" }], \"internal_thought\": \"...\" }";
     for (var ri = 0; ri < reviewAgents.length; ri++) {
       var aid = reviewAgents[ri];
       var inst = reviewInst.replace("{role}", AGENT_NAMES_CN[aid]);
@@ -904,7 +904,7 @@ var editorConfirmed = state.draft && state.draft.sections && state.draft.section
         var revResult = await runAgent(aid, state, inst);
         if (revResult && revResult.messages) {
           for (var rm of revResult.messages) {
-            pushMessage(state, createMessage(aid, rm.to || "editor", rm.type || "APPROVE", rm.coreInfo || "", rm.expectedAction || "", rm.reason || "", rm.priority || "normal"));
+            pushMessage(state, createMessage(aid, rm.to || "memory-manager", rm.type || "APPROVE", rm.coreInfo || "", rm.expectedAction || "", rm.reason || "", rm.priority || "normal"));
           }
         }
         if (revResult && revResult.internal_thought) log(aid, "?? [??] " + revResult.internal_thought.slice(0, 120));
@@ -1027,10 +1027,17 @@ var editorConfirmed = state.draft && state.draft.sections && state.draft.section
   });
   report = report.replace(/尚未(?:提交|提供|输出)(?:洞察|分析|内容)?/gi, "已整合");
   // 修复编辑师未参与类错误标注（审稿环节AI不遵守prompt指令）
-  report = report.replace(/编辑师未参与今日工作[。.]?/g, function(match) {
-    console.log("编辑师参与修复: " + match.slice(0, 20));
-    return "编辑师已完成今日日报草稿编排（详见正文）";
-  });
+  // 修复所有角色“未参与”类错误标注
+  var fixUncansai = {
+    "采集师": "采集师已完成今日素材采集与提交（详见统计数据）",
+    "核查师": "核查师已完成今日素材审核工作（详见通信记录）",
+    "分析师": "分析师已产出今日洞察与分析（详见核心解读）",
+    "编辑师": "编辑师已完成今日日报草稿编排（详见正文）",
+    "记忆管理师": "记忆管理师已完成今日规则维护与信誉评估（详见复盘段）"
+  };
+  for (var role in fixUncansai) {
+    report = report.replace(new RegExp(role + "未参与今日工作[。.]?", "g"), fixUncansai[role]);
+  }
   // 修复TL;DR排版：确保每条之间有空行，防止Markdown渲染合为一段
   report = report.replace(/^(## TL;DR 今日速览\n\n)((?:[^#\n].*\n?)+)/gm, function(match, header, body) {
     var items = body.split("\n").filter(function(l) { return l.trim(); });
@@ -1050,7 +1057,11 @@ var editorConfirmed = state.draft && state.draft.sections && state.draft.section
   log("system", "\n━━━ 生成过程日志 ━━━");
   var logContent = generateProcessLog(state, dateStr);
   // 修复过程日志中的"编辑师未参与今日工作"类错误标注
-  logContent = logContent.replace(/编辑师未参与今日工作[。.]?/g, "编辑师已完成今日日报草稿编排（详见正文）");
+  // 修复所有角色“未参与”
+  var fixUncansaiLog = { "采集师": "采集师已完成今日素材采集（详见统计）", "核查师": "核查师已完成今日审核（详见通信记录）", "分析师": "分析师已产出今日洞察（详见核心解读）", "编辑师": "编辑师已完成草稿编排（详见正文）", "记忆管理师": "记忆管理师已完成规则维护与信誉评估（详见复盘段）" };
+  for (var role in fixUncansaiLog) {
+    logContent = logContent.replace(new RegExp(role + "未参与今日工作[。.]?", "g"), fixUncansaiLog[role]);
+  }
   writeFileUTF8(path.join(LOGS_DIR, dateStr + ".md"), logContent);
   log("system", "日志已保存: logs/" + dateStr + ".md");
 

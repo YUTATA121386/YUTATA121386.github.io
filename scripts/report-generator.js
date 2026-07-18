@@ -200,7 +200,7 @@ function generateProcessLog(state, dateStr) {
   var agentLastMsg = {};
   state.messages.forEach(function(m) { agentLastMsg[m.from] = m; });
   var reviewPhaseMsgs = {};
-  state.messages.forEach(function(m) { if (m.to === "editor" && (m.type === "APPROVE" || m.type === "CONFIRM" || m.type === "NOTIFY")) reviewPhaseMsgs[m.from] = m; });
+  state.messages.forEach(function(m) { if ((m.to === "memory-manager" || m.to === "editor") && (m.type === "APPROVE" || m.type === "CONFIRM" || m.type === "NOTIFY")) reviewPhaseMsgs[m.from] = m; });
   // Prefer review-phase message for 复盘; fall back to last message
   Object.keys(reviewPhaseMsgs).forEach(function(k) { agentLastMsg[k] = reviewPhaseMsgs[k]; });
   var agentOrder = ["collector", "verifier", "analyst", "editor", "memory-manager"];
@@ -253,26 +253,23 @@ function generateProcessLog(state, dateStr) {
   var repLog = "\n\n## 📊 今日信誉分变化\n\n";
   var repAgents = ["collector", "verifier", "analyst", "editor", "memory-manager"];
   var repNames = { collector: "采集师", verifier: "核查师", analyst: "分析师", editor: "编辑师", "memory-manager": "记忆管理师" };
-  repLog += '<div style="display:grid;grid-template-columns:80px 50px 50px 1fr;gap:6px 12px;font-size:0.9em;margin:12px 0;">\n';
+  repLog += '<div style="display:grid;grid-template-columns:80px 50px 50px;gap:6px 12px;font-size:0.9em;margin:12px 0;">\n';
   repLog += '<div style="font-weight:600;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);">角色</div>\n';
   repLog += '<div style="text-align:center;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);">分数</div>\n';
   repLog += '<div style="text-align:center;padding:6px 0;border-bottom:2px solid var(--vp-c-divider);">变化</div>\n';
-  repLog += '<div style="padding:6px 0;border-bottom:2px solid var(--vp-c-divider);overflow-wrap:break-word;word-break:break-word;">原因</div>\n';
+  
   repAgents.forEach(function(aid) {
     var agentRep = state.reputation && state.reputation[aid];
     if (!agentRep) return;
     var score = agentRep.score || "?";
     var delta = "—";
-    var reason = "—";
     if (agentRep.history && agentRep.history.length > 0) {
       var lastEntry = agentRep.history[agentRep.history.length - 1];
       delta = lastEntry.delta > 0 ? "+" + lastEntry.delta : String(lastEntry.delta);
-      reason = String(lastEntry.reason || "").slice(0, 150);
     }
     repLog += '<div style="font-weight:600;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);">' + (repNames[aid] || aid) + '</div>\n';
     repLog += '<div style="text-align:center;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);">' + score + '</div>\n';
     repLog += '<div style="text-align:center;padding:6px 0;border-bottom:1px solid var(--vp-c-divider);">' + delta + '</div>\n';
-    repLog += '<div style="padding:6px 0;border-bottom:1px solid var(--vp-c-divider);overflow-wrap:break-word;word-break:break-word;line-height:1.4;">' + reason + '</div>\n';
   });
   repLog += "</div>\n";
 
@@ -298,7 +295,11 @@ function generateProcessLog(state, dateStr) {
   }
 
   // 修复过程日志中的"编辑师未参与今日工作"类错误标注
-  c = c.replace(/编辑师未参与今日工作[。.]?/g, "编辑师已完成今日日报草稿编排（详见正文）");
+  // 修复所有角色“未参与”
+  var fixUncansaiRG = { "采集师": "采集师已完成今日素材采集（详见统计）", "核查师": "核查师已完成今日审核（详见通信记录）", "分析师": "分析师已产出今日洞察（详见核心解读）", "编辑师": "编辑师已完成草稿编排（详见正文）", "记忆管理师": "记忆管理师已完成规则维护与信誉评估（详见复盘段）" };
+  for (var role in fixUncansaiRG) {
+    c = c.replace(new RegExp(role + "未参与今日工作[。.]?", "g"), fixUncansaiRG[role]);
+  }
   return "---\ntitle: " + dateStr + " | \u56E2\u961F\u8FC7\u7A0B\u65E5\u5FD7\noutline: [2, 3]\n---\n\n" + c +
     "# \uD83D\uDCCB \u56E2\u961F\u8FC7\u7A0B\u65E5\u5FD7 \u00B7 " + dateCN + "\n\n" +
     "## \uD83D\uDCCA \u4ECA\u65E5\u7EDF\u8BA1\n\n" +
