@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 56,
+      "trust": 58,
       "trend": "improving",
       "history": [
         {
@@ -31,6 +31,11 @@
         },
         {
           "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-07-18",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -79,6 +84,11 @@
         {
           "date": "2026-07-19",
           "event": "合作 2次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-07-18",
+          "event": "合作 1次",
           "trustDelta": 0
         }
       ],
@@ -172,6 +182,13 @@
       "date": "2026-07-19",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日工作总结：本日采集共提交18条素材，经核查师审核通过17条，拒绝1条（RAW-2026-07-19-0016 Avery Cochran新歌），通过率94.",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-18",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日工作总结：今日完成5轮采集，共提交159条原始素材。通过与核查师的互动，完成了两批共40条的审核（通过率分别为90%和75%），并处理了5条被拒素材。核心失",
       "lesson": "",
       "impact": ""
     }

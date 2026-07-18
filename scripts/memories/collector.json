@@ -58,6 +58,11 @@
           "date": "2026-07-19",
           "event": "合作 4次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-07-18",
+          "event": "合作 9次",
+          "trustDelta": 8
         }
       ],
       "summary": "关系良好"
@@ -95,6 +100,11 @@
           "date": "2026-07-19",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-07-18",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
@@ -122,7 +132,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 56,
+      "trust": 58,
       "trend": "improving",
       "history": [
         {
@@ -149,103 +159,17 @@
           "date": "2026-07-19",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-07-18",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Hunter Biden says being ‘stripped naked in the public square’ was a gift - NPR",
-      "source": "Google News Music Industry",
-      "reason": "与音乐行业完全无关。内容是关于Hunter Biden的个人言论和Substack写作。",
-      "summary": "被拒: Hunter Biden says being ‘stripped naked in the public square’ was a gift - NPR",
-      "lesson": "避免采集此类素材: 与音乐行业完全无关。内容是关于Hunter Biden的个人言论和Substack写作。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Maine shooting and officer's background raise new questions about ICE's rapid hiring - PBS",
-      "source": "Google News Music Industry",
-      "reason": "与音乐行业完全无关。内容是关于ICE招聘和缅因州枪击案的调查新闻。",
-      "summary": "被拒: Maine shooting and officer's background raise new questions about ICE's rapid hi",
-      "lesson": "避免采集此类素材: 与音乐行业完全无关。内容是关于ICE招聘和缅因州枪击案的调查新闻。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "These 16 Democrats Voted to Stop Israel Aid. AIPAC Took Action. - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "与音乐行业完全无关。内容是关于美国对以色列援助的政治游说新闻。",
-      "summary": "被拒: These 16 Democrats Voted to Stop Israel Aid. AIPAC Took Action. - The New York T",
-      "lesson": "避免采集此类素材: 与音乐行业完全无关。内容是关于美国对以色列援助的政治游说新闻。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Doctors question evidence behind Pentagon plan for testosterone screening - The Guardian",
-      "source": "Google News Music Industry",
-      "reason": "与音乐行业完全无关。内容是关于五角大楼睾酮筛查计划的医学/军事政策新闻。",
-      "summary": "被拒: Doctors question evidence behind Pentagon plan for testosterone screening - The ",
-      "lesson": "避免采集此类素材: 与音乐行业完全无关。内容是关于五角大楼睾酮筛查计划的医学/军事政策新闻。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "NEK!、渋谷フリーライブでメジャーデビューを祝福。メジャー1st EPから「MAGiC VoX」先行配信へ",
-      "source": "BARKS",
-      "summary": "通过: NEK!、渋谷フリーライブでメジャーデビューを祝福。メジャー1st EPから「MAGiC VoX」先行配信へ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "さとう。、10月より全国弾き語りワンマンツアー開催。ファイナルは日本橋三井ホール",
-      "source": "BARKS",
-      "summary": "通过: さとう。、10月より全国弾き語りワンマンツアー開催。ファイナルは日本橋三井ホール",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Baby Canta、アニメ『ダイヤのA actⅡ -Second Season-』本編映像を使用した「Let’s Go Crazy」コラボMV公開",
-      "source": "BARKS",
-      "summary": "通过: Baby Canta、アニメ『ダイヤのA actⅡ -Second Season-』本編映像を使用した「Let’s Go Crazy」コラボMV公開",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "ゆとりくん、ソニー・ミュージック内レーベルEchoesに参加",
-      "source": "BARKS",
-      "summary": "通过: ゆとりくん、ソニー・ミュージック内レーベルEchoesに参加",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Saucy Dog、7/21東京ガーデンシアター公演をYouTube生配信",
-      "source": "BARKS",
-      "summary": "通过: Saucy Dog、7/21東京ガーデンシアター公演をYouTube生配信",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "每日统计",
-      "summary": "今日通过率: 59% (47/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "欧洲奋力追赶中美，争夺数字自主权 - 纽约时报中文网",
-      "source": "Google News 音乐产业",
-      "reason": "与音乐产业完全无关。欧洲数字自主权、AI监管，属于科技政策新闻。来源分类错误。",
-      "summary": "被拒: 欧洲奋力追赶中美，争夺数字自主权 - 纽约时报中文网",
-      "lesson": "避免采集此类素材: 与音乐产业完全无关。欧洲数字自主权、AI监管，属于科技政策新闻。来源分类错误。"
-    },
     {
       "date": "2026-07-19",
       "type": "被拒案例",
@@ -563,6 +487,97 @@
       "date": "2026-07-19",
       "type": "每日统计",
       "summary": "今日通过率: 95% (19/20)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-07-18",
+      "type": "被拒案例",
+      "title": "Here’s How to Watch ‘Descendants: Wicked Wonderland’ Online for Free",
+      "source": "Billboard",
+      "reason": "内容是关于迪士尼电影《Descendants》的观看指南，与音乐行业核心无关。",
+      "summary": "被拒: Here’s How to Watch ‘Descendants: Wicked Wonderland’ Online for Free",
+      "lesson": "避免采集此类素材: 内容是关于迪士尼电影《Descendants》的观看指南，与音乐行业核心无关。"
+    },
+    {
+      "date": "2026-07-18",
+      "type": "被拒案例",
+      "title": "‘Obsession’: Here’s Where to Stream the Horror Romance Movie Online",
+      "source": "Billboard",
+      "reason": "内容是关于恐怖浪漫电影的观看指南，与音乐行业核心无关。",
+      "summary": "被拒: ‘Obsession’: Here’s Where to Stream the Horror Romance Movie Online",
+      "lesson": "避免采集此类素材: 内容是关于恐怖浪漫电影的观看指南，与音乐行业核心无关。"
+    },
+    {
+      "date": "2026-07-18",
+      "type": "被拒案例",
+      "title": "Here’s Where to Watch FIFA World Cup Final 2026: Spain vs. Argentina Live Online for Free",
+      "source": "Billboard",
+      "reason": "内容是关于世界杯决赛的观看指南，与音乐行业核心无关。",
+      "summary": "被拒: Here’s Where to Watch FIFA World Cup Final 2026: Spain vs. Argentina Live Online",
+      "lesson": "避免采集此类素材: 内容是关于世界杯决赛的观看指南，与音乐行业核心无关。"
+    },
+    {
+      "date": "2026-07-18",
+      "type": "被拒案例",
+      "title": "Bonnie Tyler Fans Invited to Line the Streets in Wales for Final Farewell",
+      "source": "Billboard",
+      "reason": "内容是Bonnie Tyler的葬礼安排，虽然涉及音乐人，但属于个人/去世事件，对行业趋势分析价值有限。",
+      "summary": "被拒: Bonnie Tyler Fans Invited to Line the Streets in Wales for Final Farewell",
+      "lesson": "避免采集此类素材: 内容是Bonnie Tyler的葬礼安排，虽然涉及音乐人，但属于个人/去世事件，对行业趋势分析价值有限。"
+    },
+    {
+      "date": "2026-07-18",
+      "type": "被拒案例",
+      "title": "Ricky Martin ‘Inexplicably’ Bails on Georgia Concert Less Than 24 Hours Before Showtime",
+      "source": "Digital Music News",
+      "reason": "Ricky Martin临时取消演唱会，属于单一艺人事件，对行业趋势分析价值有限。",
+      "summary": "被拒: Ricky Martin ‘Inexplicably’ Bails on Georgia Concert Less Than 24 Hours Before S",
+      "lesson": "避免采集此类素材: Ricky Martin临时取消演唱会，属于单一艺人事件，对行业趋势分析价值有限。"
+    },
+    {
+      "date": "2026-07-18",
+      "type": "标杆案例",
+      "title": "Apple Music Raises Streaming Subscription Prices for First Time in Nearly Four Years",
+      "source": "Billboard",
+      "summary": "通过: Apple Music Raises Streaming Subscription Prices for First Time in Nearly Four Y",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-18",
+      "type": "标杆案例",
+      "title": "Latest Music Industry Hires: Believe, Play MPE, DIMA, Alta Music Group, UTA, Warner Chappell, Damai ",
+      "source": "Digital Music News",
+      "summary": "通过: Latest Music Industry Hires: Believe, Play MPE, DIMA, Alta Music Group, UTA, War",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-18",
+      "type": "标杆案例",
+      "title": "After Years of Fighting, Elon Musk’s X and Music Publishers Officially Stop Suing Each Other. But Wh",
+      "source": "Digital Music News",
+      "summary": "通过: After Years of Fighting, Elon Musk’s X and Music Publishers Officially Stop Suin",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-18",
+      "type": "标杆案例",
+      "title": "NetEase Cloud Music and Warner Music Group Announce Strategic Multi-Year Licensing Renewal",
+      "source": "Digital Music News",
+      "summary": "通过: NetEase Cloud Music and Warner Music Group Announce Strategic Multi-Year Licensi",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-18",
+      "type": "标杆案例",
+      "title": "Madison Square Garden Sues Wired for Defamation Over Coverage of Leaked Celebrity Database",
+      "source": "Digital Music News",
+      "summary": "通过: Madison Square Garden Sues Wired for Defamation Over Coverage of Leaked Celebrit",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-18",
+      "type": "每日统计",
+      "summary": "今日通过率: 83% (33/40)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],
