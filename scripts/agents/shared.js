@@ -95,12 +95,12 @@ function saveReputation(reputation) {
   writeFileUTF8(REPUTATION_FILE, JSON.stringify(reputation, null, 2));
 }
 
-function updateReputation(agentId, delta, reason) {
+function updateReputation(agentId, delta, reason, runDate) {
   if (!agentId || !AGENTS.includes(agentId)) { console.log('[warn] updateReputation: invalid agentId=' + agentId); return 80; }
   const rep = loadReputation();
   const entry = rep[agentId];
   if (!entry) { console.log('[warn] updateReputation: no entry for ' + agentId); return 80; }
-  const now = new Date(); const today = now.getFullYear() + "-" + String(now.getMonth() + 1).padStart(2, "0") + "-" + String(now.getDate()).padStart(2, "0");
+  const today = runDate || (function() { const now = new Date(); return now.getFullYear() + "-" + String(now.getMonth() + 1).padStart(2, "0") + "-" + String(now.getDate()).padStart(2, "0"); })();
   
   // Remove any existing entry for today (deduplicate)
   const existingIdx = entry.history.findIndex(h => h.date === today);

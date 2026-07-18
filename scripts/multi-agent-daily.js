@@ -718,7 +718,7 @@ async function main() {
         for (const action of result.actions) {
           if (action.type === "update_rule") state.stats.ruleChanges = (state.stats.ruleChanges || 0) + 1;
           if (action.type === "update_reputation") {
-            updateReputation(action.agent, action.delta, action.reason);
+            updateReputation(action.agent, action.delta, action.reason, dateStr);
             state.reputation = require("./agents/shared").loadReputation();
             if (!state.reputationChanges[action.agent]) state.reputationChanges[action.agent] = [];
             state.reputationChanges[action.agent].push({ delta: action.delta, reason: action.reason, date: state.date });
@@ -832,7 +832,7 @@ var editorConfirmed = state.draft && state.draft.sections && state.draft.section
         } catch (clErr) { log("system", "变更日志写入失败: " + clErr.message.slice(0, 60)); }
       }
       if (action.type === "update_reputation" && action.agent) {
-        updateReputation(action.agent, action.delta, action.reason);
+        updateReputation(action.agent, action.delta, action.reason, dateStr);
         if (!state.reputationChanges[action.agent]) state.reputationChanges[action.agent] = [];
         state.reputationChanges[action.agent].push({ delta: action.delta, reason: action.reason, date: state.date });
       }
@@ -921,7 +921,16 @@ var editorConfirmed = state.draft && state.draft.sections && state.draft.section
         delta = lastEntry.delta > 0 ? "+" + lastEntry.delta : String(lastEntry.delta);
         reason = String(lastEntry.reason || "").slice(0, 150);
       } else {
-        if (state.repReasons && state.repReasons[aid]) {
+        // Fallback: read from in-memory state.reputation
+        var stateAgentRep = state.reputation && state.reputation[aid];
+        if (stateAgentRep && stateAgentRep.history && stateAgentRep.history.length > 0) {
+          var stateLastEntry = stateAgentRep.history[stateAgentRep.history.length - 1];
+          if (stateLastEntry.date === todayStr || stateLastEntry.date === dateStr) {
+            delta = stateLastEntry.delta > 0 ? "+" + stateLastEntry.delta : String(stateLastEntry.delta);
+            reason = String(stateLastEntry.reason || "").slice(0, 150);
+          }
+        }
+        if (reason === "—" && state.repReasons && state.repReasons[aid]) {
           reason = state.repReasons[aid].slice(-1)[0];
         }
       }
@@ -932,7 +941,7 @@ var editorConfirmed = state.draft && state.draft.sections && state.draft.section
   } catch(e) { /* skip reputation section */ }
 
   // 后处理：修复所有分析师尚未提交类错误标注
-  report = report.replace(/分析师尚未提交|分析师未提交|analyst尚未[提交输出]/gi, function(match) {
+  report = report.replace(/分析师[^\n，。]{0,15}未(?:提交|提供|输出|参与)/gi, function(match) {
     console.log("编辑备注自动修复: " + match.slice(0, 20));
     return "分析师洞察已整合至本日报（详情见核心解读）";
   });
@@ -951,6 +960,9 @@ var editorConfirmed = state.draft && state.draft.sections && state.draft.section
     return header + formatted;
   });
 
+  // 修复编辑备注重复出现（AI编辑师偶发输出两个编辑备注标题）
+  report = report.replace(/^(##\s*编辑备注\s*\n +(?:---\n+)?)\n*###\s*编辑备注/gm, function(m, g1) { return g1 + "\n### 编辑备注"; });
+  
   writeFileUTF8(path.join(OUTPUT_DIR, dateStr + ".md"), report);
   log("system", "日报已保存: " + dateStr + ".md");
 
