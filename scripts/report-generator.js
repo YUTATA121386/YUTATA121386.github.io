@@ -11,13 +11,13 @@ const { loadSystemMemory } = require("./system-state");
 const CHANGELOG_FILE = RULES_DIR + "/CHANGELOG.md";
 
 function getDateCN(dateStr) {
-  var d = new Date(dateStr);
-  return d.getFullYear() + "年" + (d.getMonth() + 1) + "月" + d.getDate() + "日";
+  var parts = dateStr.split("-");
+  return parts[0] + "年" + parseInt(parts[1]) + "月" + parseInt(parts[2]) + "日";
 }
 
 // ===================== 过程日志生成 =====================
 function generateProcessLog(state, dateStr) {
-  var dateCN = new Date(dateStr).getFullYear() + "\u5e74" + (new Date(dateStr).getMonth() + 1) + "\u6708" + new Date(dateStr).getDate() + "\u65e5";
+  var parts = dateStr.split("-"); var dateCN = parts[0] + "年" + parseInt(parts[1]) + "月" + parseInt(parts[2]) + "日";
   var pr = state.stats.collectorSubmitted > 0 ? ((state.stats.verifierPassed / state.stats.collectorSubmitted) * 100).toFixed(1) : "0";
 
   var c = "";

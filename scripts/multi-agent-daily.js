@@ -619,7 +619,7 @@ async function main() {
   var d = new Date();
   return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
 })();
-  const dateCN = (function() { var d = new Date(dateStr + "T00:00:00+08:00"); return d.getFullYear() + "年" + (d.getMonth() + 1) + "月" + d.getDate() + "日"; })();
+  const dateCN = (function() { var parts = dateStr.split("-"); return parts[0] + "年" + parseInt(parts[1]) + "月" + parseInt(parts[2]) + "日"; })();
   const systemStats = loadSystemStats();
   systemStats.totalRuns++;
   if (!systemStats.firstRunDate) systemStats.firstRunDate = dateStr;
