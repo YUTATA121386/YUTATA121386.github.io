@@ -57,6 +57,8 @@ function fetchUrl(url) {
   });
 }
 
+var CURRENT_DATE = "";
+
 async function fetchRSS(source) {
   try {
     const xml = await fetchUrl(source.url);
@@ -97,8 +99,24 @@ async function fetchRSS(source) {
       }
     }
     
-    log("collector", source.name + ": " + items.length + " 条");
-    return items;
+    // ===== 日期过滤：只保留目标日期前后48小时内的内容 =====
+    var targetDate = CURRENT_DATE;
+    var targetTs = new Date(targetDate + "T00:00:00Z").getTime();
+    var minTs = targetTs - 48 * 3600 * 1000;  // 48小时前
+    var maxTs = targetTs + 24 * 3600 * 1000;  // 目标日期当天23:59
+    var filteredItems = items.filter(function(item) {
+      if (!item.pubDate) return true;  // 没有日期的保留
+      var pubTs = new Date(item.pubDate).getTime();
+      if (isNaN(pubTs)) return true;   // 无法解析日期的保留
+      return pubTs >= minTs && pubTs <= maxTs;
+    });
+    var filtered = items.length - filteredItems.length;
+    if (filtered > 0) {
+      log("collector", source.name + ": " + items.length + " 条, 日期过滤后 " + filteredItems.length + " 条 (跳过" + filtered + "条旧内容)");
+    } else {
+      log("collector", source.name + ": " + items.length + " 条");
+    }
+    return filteredItems;
   } catch (e) { log("collector", "采集失败 " + source.name + ": " + e.message.slice(0, 80)); return []; }
 }
 
@@ -606,7 +624,8 @@ async function main() {
   systemStats.totalRuns++;
   if (!systemStats.firstRunDate) systemStats.firstRunDate = dateStr;
   systemStats.lastRunDate = dateStr;
-  saveSystemStats(systemStats);
+  
+  CURRENT_DATE = dateStr;saveSystemStats(systemStats);
 
   console.log("⏱️ 启动时间: " + new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }));
   console.log("\n🤖 YUTATA 多Agent日报系统 v4");
@@ -1009,6 +1028,8 @@ var editorConfirmed = state.draft && state.draft.sections && state.draft.section
       var agentRep = repData[aid];
       if (!agentRep) return;
       var todayHistory = (agentRep.history || []).filter(function(h) { return h.date === todayStr; });
+      // 从 state.reputationChanges 补充（内存中的实时变化）
+      var stateRepChanges = (state.reputationChanges && state.reputationChanges[aid]) || [];
       var score = agentRep.score || "?";
       var delta = "\u2014";
       var reason = "\u2014";
@@ -1017,15 +1038,24 @@ var editorConfirmed = state.draft && state.draft.sections && state.draft.section
         delta = lastEntry.delta > 0 ? "+" + lastEntry.delta : String(lastEntry.delta);
         reason = String(lastEntry.reason || "").slice(0, 150);
       } else {
-        // Fallback: read from in-memory state.reputation
-        var stateAgentRep = state.reputation && state.reputation[aid];
-        if (stateAgentRep && stateAgentRep.history && stateAgentRep.history.length > 0) {
-          var stateLastEntry = stateAgentRep.history[stateAgentRep.history.length - 1];
-          if (stateLastEntry.date === todayStr || stateLastEntry.date === dateStr) {
-            delta = stateLastEntry.delta > 0 ? "+" + stateLastEntry.delta : String(stateLastEntry.delta);
-            reason = String(stateLastEntry.reason || "").slice(0, 150);
+        // Fallback: read from state.reputationChanges (in-memory realtime changes)
+        if (stateRepChanges.length > 0) {
+          var lastChange = stateRepChanges[stateRepChanges.length - 1];
+          delta = lastChange.delta > 0 ? "+" + lastChange.delta : String(lastChange.delta);
+          reason = String(lastChange.reason || "").slice(0, 150);
+        }
+        // Second fallback: read from state.reputation history
+        if (delta === "—") {
+          var stateAgentRep = state.reputation && state.reputation[aid];
+          if (stateAgentRep && stateAgentRep.history && stateAgentRep.history.length > 0) {
+            var stateLastEntry = stateAgentRep.history[stateAgentRep.history.length - 1];
+            if (stateLastEntry.date === todayStr || stateLastEntry.date === dateStr) {
+              delta = stateLastEntry.delta > 0 ? "+" + stateLastEntry.delta : String(stateLastEntry.delta);
+              reason = String(stateLastEntry.reason || "").slice(0, 150);
+            }
           }
         }
+        // Third fallback: repReasons
         if (reason === "—" && state.repReasons && state.repReasons[aid]) {
           reason = state.repReasons[aid].slice(-1)[0];
         }
