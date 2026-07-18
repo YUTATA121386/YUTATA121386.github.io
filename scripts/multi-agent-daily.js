@@ -915,7 +915,25 @@ var editorConfirmed = state.draft && state.draft.sections && state.draft.section
 
   state.phase = "convergence";
 
-  const finalInst = "## 最终复盘\n你是记忆管理师，今日" + dateCN + "。\n\n请评估日报质量（必须填写quality_scores每个字段(completeness/accuracy/depth/readability 0-10)）、优缺点、规则修改建议、信誉分调整。\n\n信誉分调整: 每个角色都必须给出(delta为0也要)。reason只写今日表现评价，不要写具体分数值。\n\n输出: { \"review\": { \"quality_scores\": {\"completeness\":0,\"accuracy\":0,\"depth\":0,\"readability\":0}, \"strengths\": [...], \"weaknesses\": [...], \"root_cause\": \"...\" }, \"actions\": [{\"type\":\"update_rule\",\"rule_file\":\"...\",\"change_type\":\"add/modify\",\"after\":\"...\",\"reason\":\"...\"}, {\"type\":\"update_reputation\",\"agent\":\"collector\",\"delta\":0,\"reason\":\"基于今日表现，简要说明表现（不写具体分数）\"}], \"internal_thought\": \"...\" }";
+  // Build richer context for memory manager review
+  var ruleContext = "";
+  try {
+    var ruleFiles = ["collection-rules.md", "verification-rules.md", "style-guide.md", "communication-rules.md", "quality_standards.md", "credit_score_system.md"];
+    ruleFiles.forEach(function(rf) {
+      var rc = fs.readFileSync(path.join(RULES_DIR, rf), "utf-8");
+      // Extract only section headings for context
+      var headings = rc.match(/^## .+/gm);
+      ruleContext += "\n**" + rf + "** 现有章节: " + (headings ? headings.join(", ") : "(空)") + "\n";
+    });
+    // Also include current source list
+    var sources = JSON.parse(fs.readFileSync(CONFIG_FILE, "utf-8")).sources;
+    var activeSources = sources.filter(function(s) { return s.weight > 0; }).map(function(s) { return s.name + "(" + s.lang + ")"; });
+    var disabledSources = sources.filter(function(s) { return s.weight === 0; }).map(function(s) { return s.name; });
+    ruleContext += "\n**当前活跃RSS源(" + activeSources.length + "个)**: " + activeSources.join(", ") + "\n";
+    if (disabledSources.length > 0) ruleContext += "**已禁用源**: " + disabledSources.join(", ") + "\n";
+  } catch(e) { ruleContext = "(规则/源上下文加载失败)"; }
+
+  const finalInst = "## 最终复盘\n你是记忆管理师，今日" + dateCN + "。\n\n## 当前规则体系概览\n" + ruleContext + "\n## 评估任务\n请评估日报质量（必须填写quality_scores每个字段(completeness/accuracy/depth/readability 0-10)）、优缺点、规则修改建议、信誉分调整。\n\n规则修改须知: rule_file必须是上面列出的已有文件名(含.md后缀)，change_type为add时after写新章节内容即可(不要写全文件)。\n\n信誉分调整: 每个角色都必须给出(delta为0也要)。reason只写今日表现评价，不要写具体分数值。\n\n输出: { \"review\": { \"quality_scores\": {\"completeness\":0,\"accuracy\":0,\"depth\":0,\"readability\":0}, \"strengths\": [...], \"weaknesses\": [...], \"root_cause\": \"...\" }, \"actions\": [{\"type\":\"update_rule\",\"rule_file\":\"...\",\"change_type\":\"add/modify\",\"after\":\"...\",\"reason\":\"...\"}, {\"type\":\"update_reputation\",\"agent\":\"collector\",\"delta\":0,\"reason\":\"基于今日表现，简要说明表现（不写具体分数）\"}], \"internal_thought\": \"...\" }";
   const finalReview = await runAgent("memory-manager", state, finalInst);
 
   if (finalReview.actions) {
