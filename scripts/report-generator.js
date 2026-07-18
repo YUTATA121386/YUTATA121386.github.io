@@ -107,7 +107,7 @@ function generateProcessLog(state, dateStr) {
       cleanText = stripMD(cleanText);
       cleanText = cleanText.replace(/\[【/g, "【").replace(/】\]/g, "】");
 
-      msgs += '<blockquote>' + cleanText.replace(/\n/g, '<br>').replace(/</g, '&lt;') + '</blockquote>\n';
+      msgs += '<blockquote>' + cleanText.replace(/</g, '&lt;').replace(/\n/g, '<br>') + '</blockquote>\n';
       msgs += '</div>\n';
 
       if (m.expectedAction || m.reason) {
@@ -178,7 +178,7 @@ function generateProcessLog(state, dateStr) {
     retro += '<div class="chat-content">\n';
     retro += '<div class="chat-meta"><span class="chat-sender">' + name + '</span><span class="chat-badge">\uD83D\uDCDD \u590D\u76D8</span></div>\n';
     retro += '<div class="chat-body"><blockquote>';
-    if (m && m.coreInfo) { retro += stripMD(m.coreInfo.slice(0, 500)).replace(/\n/g, "<br>").replace(/</g, "&lt;"); } else if (m && !m.coreInfo) { retro += name + "\u53C2\u4E0E\u4F46\u672A\u63D0\u4EA4\u6709\u6548\u590D\u76D8\u5185\u5BB9\u3002"; } else { var anyAgentMsg = state.messages.filter(function(mm) { return mm.from === aid; }).slice(-1)[0]; if (anyAgentMsg && anyAgentMsg.coreInfo) { retro += stripMD(anyAgentMsg.coreInfo.slice(0, 500)).replace(/\n/g, "<br>"); } else { retro += name + "\u672A\u53C2\u4E0E\u4ECA\u65E5\u5DE5\u4F5C\u3002"; } }
+    if (m && m.coreInfo) { retro += stripMD(m.coreInfo.slice(0, 500)).replace(/</g, "&lt;").replace(/\n/g, "<br>"); } else if (m && !m.coreInfo) { retro += name + "\u53C2\u4E0E\u4F46\u672A\u63D0\u4EA4\u6709\u6548\u590D\u76D8\u5185\u5BB9\u3002"; } else { var anyAgentMsg = state.messages.filter(function(mm) { return mm.from === aid; }).slice(-1)[0]; if (anyAgentMsg && anyAgentMsg.coreInfo) { retro += stripMD(anyAgentMsg.coreInfo.slice(0, 500)).replace(/\n/g, "<br>"); } else { retro += name + "\u672A\u53C2\u4E0E\u4ECA\u65E5\u5DE5\u4F5C\u3002"; } }
     retro += '</blockquote></div>\n';
     retro += '</div></div>\n\n';
   });

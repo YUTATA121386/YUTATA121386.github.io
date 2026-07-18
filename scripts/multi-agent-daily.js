@@ -511,7 +511,11 @@ function updateAgentMemoryFromDay(agentId, state, dateStr, dateCN) {
 // ===================== 主流程 =====================
 async function main() {
   const now = new Date();
-  const dateStr = "2026-07-17";
+  const dateStr = (function() {
+  if (process.env.OVERRIDE_DATE) return process.env.OVERRIDE_DATE;
+  var d = new Date();
+  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+})();
   const dateCN = now.getFullYear() + "年" + (now.getMonth() + 1) + "月" + now.getDate() + "日";
   const systemStats = loadSystemStats();
   systemStats.totalRuns++;
