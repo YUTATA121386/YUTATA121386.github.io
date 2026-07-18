@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 90,
+      "trust": 98,
       "trend": "improving",
       "history": [
         {
@@ -43,6 +43,11 @@
           "date": "2026-07-19",
           "event": "合作 7次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 9次",
+          "trustDelta": 8
         }
       ],
       "summary": "关系良好"
@@ -93,6 +98,11 @@
         {
           "date": "2026-07-19",
           "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 3次",
           "trustDelta": 0
         },
         {
@@ -205,6 +215,20 @@
       "date": "2026-07-19",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 第一批20条素材审核完毕，通过19条，拒绝1条（RAW-2026-07-19-0016）。通过率95%。",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-19",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 拒绝素材：RAW-2026-07-19-0016 (Avery Cochran新歌)",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-19",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 第一批20条素材审核完毕，通过19条，拒绝1条。通过率95%。",
       "lesson": "",
       "impact": ""
     }

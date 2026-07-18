@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 90,
+      "trust": 98,
       "trend": "improving",
       "history": [
         {
@@ -43,6 +43,11 @@
           "date": "2026-07-19",
           "event": "合作 7次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 9次",
+          "trustDelta": 8
         }
       ],
       "summary": "关系良好"
@@ -102,7 +107,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 50,
+      "trust": 52,
       "trend": "stable",
       "history": [
         {
@@ -114,103 +119,17 @@
           "date": "2026-07-19",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Hailey Bieber’s Sold-Out Gap Jeans Have Affordable $15 Old Navy Dupes",
-      "source": "Billboard",
-      "reason": "名人时尚消费品，与音乐行业无关。",
-      "summary": "被拒: Hailey Bieber’s Sold-Out Gap Jeans Have Affordable $15 Old Navy Dupes",
-      "lesson": "避免采集此类素材: 名人时尚消费品，与音乐行业无关。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Spain vs. Argentina 2026: Here’s How to Watch Spanish-Language Broadcast FIFA World Cup Final Live O",
-      "source": "Billboard",
-      "reason": "体育赛事转播信息，与音乐行业无关。",
-      "summary": "被拒: Spain vs. Argentina 2026: Here’s How to Watch Spanish-Language Broadcast FIFA Wo",
-      "lesson": "避免采集此类素材: 体育赛事转播信息，与音乐行业无关。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Madison Square Garden Sues Wired for Defamation Over Coverage of Leaked Celebrity Database",
-      "source": "Digital Music News",
-      "summary": "通过: Madison Square Garden Sues Wired for Defamation Over Coverage of Leaked Celebrit",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Apple Music Once Again Bumps Its U.S. Prices — Individual Increases to $11.99 Per Month, Family Hits",
-      "source": "Digital Music News",
-      "summary": "通过: Apple Music Once Again Bumps Its U.S. Prices — Individual Increases to $11.99 Pe",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Udio Is Fortifying the Walls of Its Walled Garden: Broad-Reaching Content Protection Partnership Eme",
-      "source": "Digital Music News",
-      "summary": "通过: Udio Is Fortifying the Walls of Its Walled Garden: Broad-Reaching Content Protec",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Lorde Torches Spotify’s AI-Generated ‘About the Song’ Feature: ‘We Don’t Want This’",
-      "source": "Digital Music News",
-      "summary": "通过: Lorde Torches Spotify’s AI-Generated ‘About the Song’ Feature: ‘We Don’t Want Th",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Suno Doubles Down on Attempt to Conceal Its Warner Music Licensing Deal, Claims Turning Over the Con",
-      "source": "Digital Music News",
-      "summary": "通过: Suno Doubles Down on Attempt to Conceal Its Warner Music Licensing Deal, Claims ",
-      "lesson": "此类素材值得采集: 命中关键词 音乐版权"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "每日统计",
-      "summary": "今日通过率: 78% (31/40)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Marcela Moreira appointed Country Director for Brazil at Believe",
-      "source": "Music Business Worldwide",
-      "reason": "人事任命新闻，虽然属于行业动态，但缺乏深度或影响范围描述，对分析师构建洞察的价值较低。",
-      "summary": "被拒: Marcela Moreira appointed Country Director for Brazil at Believe",
-      "lesson": "避免采集此类素材: 人事任命新闻，虽然属于行业动态，但缺乏深度或影响范围描述，对分析师构建洞察的价值较低。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Avery Cochran’s ‘Shapeshifting On A Saturday Night’",
-      "source": "Music Ally",
-      "reason": "单一新艺人推荐，缺乏行业层面的新闻价值或独特模式。属于常规宣传内容，对日报分析价值低。",
-      "summary": "被拒: Avery Cochran’s ‘Shapeshifting On A Saturday Night’",
-      "lesson": "避免采集此类素材: 单一新艺人推荐，缺乏行业层面的新闻价值或独特模式。属于常规宣传内容，对日报分析价值低。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Erling Haaland on the top of Norway’s Spotify charts",
-      "source": "Music Ally",
-      "reason": "娱乐花边新闻：足球运动员的旧rap歌曲登上Spotify榜首，虽然有趣但缺乏行业深度和长期价值。",
-      "summary": "被拒: Erling Haaland on the top of Norway’s Spotify charts",
-      "lesson": "避免采集此类素材: 娱乐花边新闻：足球运动员的旧rap歌曲登上Spotify榜首，虽然有趣但缺乏行业深度和长期价值。"
-    },
     {
       "date": "2026-07-19",
       "type": "标杆案例",
@@ -529,6 +448,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 58% (35/60)",
       "lesson": ""
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "How data centers became a symbol of Americans’ rage - The Washington Post",
+      "source": "Google News Music Industry",
+      "reason": "内容完全不相关。关于数据中心引发民众愤怒的社会科技新闻，与音乐产业无直接关联。",
+      "summary": "被拒: How data centers became a symbol of Americans’ rage - The Washington Post",
+      "lesson": "避免采集此类素材: 内容完全不相关。关于数据中心引发民众愤怒的社会科技新闻，与音乐产业无直接关联。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "Murkowski slams door shut on supporting SAVE America Act - Democracy Docket",
+      "source": "Google News Music Industry",
+      "reason": "内容完全不相关。关于美国参议员对《SAVE America Act》态度的政治新闻。",
+      "summary": "被拒: Murkowski slams door shut on supporting SAVE America Act - Democracy Docket",
+      "lesson": "避免采集此类素材: 内容完全不相关。关于美国参议员对《SAVE America Act》态度的政治新闻。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "Appeals court narrows setback for Trump USPS mail-in ballot policy - The Hill",
+      "source": "Google News Music Industry",
+      "reason": "内容完全不相关。关于美国上诉法院对USPS邮寄投票政策裁决的法律政治新闻。",
+      "summary": "被拒: Appeals court narrows setback for Trump USPS mail-in ballot policy - The Hill",
+      "lesson": "避免采集此类素材: 内容完全不相关。关于美国上诉法院对USPS邮寄投票政策裁决的法律政治新闻。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "Hunter Biden says being ‘stripped naked in the public square’ was a gift - NPR",
+      "source": "Google News Music Industry",
+      "reason": "内容与音乐产业完全无关（Hunter Biden政治新闻），数据源故障的典型产物。",
+      "summary": "被拒: Hunter Biden says being ‘stripped naked in the public square’ was a gift - NPR",
+      "lesson": "避免采集此类素材: 内容与音乐产业完全无关（Hunter Biden政治新闻），数据源故障的典型产物。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "Christopher Nolan says it’ll be “at least” three years until his next film after gruelling shoot for",
+      "source": "NME",
+      "reason": "内容为导演Christopher Nolan的个人计划，与音乐产业完全无关。",
+      "summary": "被拒: Christopher Nolan says it’ll be “at least” three years until his next film after",
+      "lesson": "避免采集此类素材: 内容为导演Christopher Nolan的个人计划，与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Watch The Edge join Martin Garrix at Tomorrowland to debut new U2 collaboration ‘Fireflies’",
+      "source": "NME",
+      "summary": "通过: Watch The Edge join Martin Garrix at Tomorrowland to debut new U2 collaboration ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Teddy Swims covers Van Halen’s ‘Jump’ at Electric Castle 2026",
+      "source": "NME",
+      "summary": "通过: Teddy Swims covers Van Halen’s ‘Jump’ at Electric Castle 2026",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Twenty One Pilots and Teddy Swims bring the crowds to Electric Castle day two",
+      "source": "NME",
+      "summary": "通过: Twenty One Pilots and Teddy Swims bring the crowds to Electric Castle day two",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "The Rolling Stones equal The Beatles with 15th UK Number One album",
+      "source": "NME",
+      "summary": "通过: The Rolling Stones equal The Beatles with 15th UK Number One album",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Check out Travis Scott’s ‘The Odyssey’ end-credits song ‘When I’m Home’, in collaboration with James",
+      "source": "NME",
+      "summary": "通过: Check out Travis Scott’s ‘The Odyssey’ end-credits song ‘When I’m Home’, in coll",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "每日统计",
+      "summary": "今日通过率: 63% (50/80)",
+      "lesson": "通过率良好，保持当前标准"
     }
   ],
   "selfReview": {
