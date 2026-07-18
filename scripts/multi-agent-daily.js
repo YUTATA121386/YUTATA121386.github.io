@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env node
+#!/usr/bin/env node
 /**
  * YUTATA 澶欰gent鏃ユ姤绯荤粺 v4
  * 浜斾釜瑙掕壊骞惰鍗氬紙: 閲囬泦甯埪锋牳鏌ュ笀路鍒嗘瀽甯埪风紪杈戝笀路璁板繂绠＄悊甯?

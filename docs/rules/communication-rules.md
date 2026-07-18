@@ -1,4 +1,4 @@
-﻿---
+---
 title: communication-rules
 version: V2.1.31
 updated: 2026-07-19

@@ -1,4 +1,4 @@
-﻿---
+---
 title: credit_score_system
 version: V2.1.30
 updated: 2026-07-19
