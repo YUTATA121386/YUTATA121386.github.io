@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 62,
+      "trust": 68,
       "trend": "improving",
       "history": [
         {
@@ -17,6 +17,11 @@
         {
           "date": "2026-07-19",
           "event": "合作 12次",
+          "trustDelta": 6
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 10次",
           "trustDelta": 6
         }
       ],
@@ -35,14 +40,24 @@
           "date": "2026-07-19",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 2次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
     },
     "editor": {
-      "trust": 54,
+      "trust": 56,
       "trend": "improving",
       "history": [
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
         {
           "date": "2026-07-19",
           "event": "合作 1次",
@@ -60,6 +75,11 @@
       "trust": 50,
       "trend": "stable",
       "history": [
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 0
+        },
         {
           "date": "2026-07-19",
           "event": "合作 1次",
@@ -251,6 +271,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 59% (47/80)",
       "lesson": ""
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "‘Obsession’: Here’s Where to Stream the Horror Romance Movie Online",
+      "source": "Billboard",
+      "reason": "娱乐内容，与音乐行业分析无关。",
+      "summary": "被拒: ‘Obsession’: Here’s Where to Stream the Horror Romance Movie Online",
+      "lesson": "避免采集此类素材: 娱乐内容，与音乐行业分析无关。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "Here’s Where to Watch FIFA World Cup Final 2026: Spain vs. Argentina Live Online for Free",
+      "source": "Billboard",
+      "reason": "体育赛事直播信息，与音乐行业无关。",
+      "summary": "被拒: Here’s Where to Watch FIFA World Cup Final 2026: Spain vs. Argentina Live Online",
+      "lesson": "避免采集此类素材: 体育赛事直播信息，与音乐行业无关。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "Bonnie Tyler Fans Invited to Line the Streets in Wales for Final Farewell",
+      "source": "Billboard",
+      "reason": "名人逝世和葬礼安排，虽有话题性，但缺乏可分析的行业深度。",
+      "summary": "被拒: Bonnie Tyler Fans Invited to Line the Streets in Wales for Final Farewell",
+      "lesson": "避免采集此类素材: 名人逝世和葬礼安排，虽有话题性，但缺乏可分析的行业深度。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "Hailey Bieber’s Sold-Out Gap Jeans Have Affordable $15 Old Navy Dupes",
+      "source": "Billboard",
+      "reason": "名人时尚消费品，与音乐行业无关。",
+      "summary": "被拒: Hailey Bieber’s Sold-Out Gap Jeans Have Affordable $15 Old Navy Dupes",
+      "lesson": "避免采集此类素材: 名人时尚消费品，与音乐行业无关。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "Spain vs. Argentina 2026: Here’s How to Watch Spanish-Language Broadcast FIFA World Cup Final Live O",
+      "source": "Billboard",
+      "reason": "体育赛事转播信息，与音乐行业无关。",
+      "summary": "被拒: Spain vs. Argentina 2026: Here’s How to Watch Spanish-Language Broadcast FIFA Wo",
+      "lesson": "避免采集此类素材: 体育赛事转播信息，与音乐行业无关。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Madison Square Garden Sues Wired for Defamation Over Coverage of Leaked Celebrity Database",
+      "source": "Digital Music News",
+      "summary": "通过: Madison Square Garden Sues Wired for Defamation Over Coverage of Leaked Celebrit",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Apple Music Once Again Bumps Its U.S. Prices — Individual Increases to $11.99 Per Month, Family Hits",
+      "source": "Digital Music News",
+      "summary": "通过: Apple Music Once Again Bumps Its U.S. Prices — Individual Increases to $11.99 Pe",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Udio Is Fortifying the Walls of Its Walled Garden: Broad-Reaching Content Protection Partnership Eme",
+      "source": "Digital Music News",
+      "summary": "通过: Udio Is Fortifying the Walls of Its Walled Garden: Broad-Reaching Content Protec",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Lorde Torches Spotify’s AI-Generated ‘About the Song’ Feature: ‘We Don’t Want This’",
+      "source": "Digital Music News",
+      "summary": "通过: Lorde Torches Spotify’s AI-Generated ‘About the Song’ Feature: ‘We Don’t Want Th",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Suno Doubles Down on Attempt to Conceal Its Warner Music Licensing Deal, Claims Turning Over the Con",
+      "source": "Digital Music News",
+      "summary": "通过: Suno Doubles Down on Attempt to Conceal Its Warner Music Licensing Deal, Claims ",
+      "lesson": "此类素材值得采集: 命中关键词 音乐版权"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "每日统计",
+      "summary": "今日通过率: 78% (31/40)",
+      "lesson": "通过率良好，保持当前标准"
     }
   ],
   "selfReview": {

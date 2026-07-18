@@ -6,9 +6,14 @@
   },
   "relationships": {
     "collector": {
-      "trust": 54,
+      "trust": 56,
       "trend": "improving",
       "history": [
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
         {
           "date": "2026-07-19",
           "event": "合作 1次",
@@ -25,8 +30,14 @@
     "verifier": {
       "trust": 50,
       "trend": "stable",
-      "history": [],
-      "summary": ""
+      "history": [
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 0
+        }
+      ],
+      "summary": "关系一般"
     },
     "analyst": {
       "trust": 54,
@@ -41,18 +52,28 @@
           "date": "2026-07-19",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
     },
     "memory-manager": {
       "trust": 52,
-      "trend": "improving",
+      "trend": "stable",
       "history": [
         {
           "date": "2026-07-19",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
@@ -70,6 +91,13 @@
       "date": "2026-07-19",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 日报草稿通过。今日工作总结：采集师今日完成4轮采集，共提交80条素材，最终通过55条，通过率69%。工作亮点：第一批素材通过率95%，覆盖了流媒体定价、版权纠纷",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-19",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 日报整体质量良好，覆盖了曲库行业多个核心领域。\n\n【采集师今日工作总结】\n今日共采集并提交80条素材，最终通过55条，通过率69%。\n\n工作内容：\n- 首轮采集",
       "lesson": "",
       "impact": ""
     }
