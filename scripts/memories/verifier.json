@@ -4,8 +4,60 @@
     "roleDesc": "信息质量教练",
     "personality": "严谨型，宁缺毋滥"
   },
-  "relationships": {},
-  "experiences": [],
+  "relationships": {
+    "collector": {
+      "trust": 56,
+      "trend": "improving",
+      "history": [
+        {
+          "date": "2026-07-19",
+          "event": "合作 10次",
+          "trustDelta": 6
+        }
+      ],
+      "summary": "关系一般"
+    },
+    "analyst": {
+      "trust": 50,
+      "trend": "stable",
+      "history": [],
+      "summary": ""
+    },
+    "editor": {
+      "trust": 50,
+      "trend": "stable",
+      "history": [],
+      "summary": ""
+    },
+    "memory-manager": {
+      "trust": 50,
+      "trend": "stable",
+      "history": [
+        {
+          "date": "2026-07-19",
+          "event": "合作 3次",
+          "trustDelta": 0
+        }
+      ],
+      "summary": "关系一般"
+    }
+  },
+  "experiences": [
+    {
+      "date": "2026-07-19",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 第二批20条素材审核完毕：通过11条，拒绝9条。通过率55%。",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-19",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 第一批20条素材审核完毕，通过19条，拒绝1条（RAW-2026-07-19-0004）",
+      "lesson": "",
+      "impact": ""
+    }
+  ],
   "selfReview": {
     "strengths": [],
     "weaknesses": [],

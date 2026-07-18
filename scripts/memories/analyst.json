@@ -4,8 +4,59 @@
     "roleDesc": "内容深度挖掘者",
     "personality": "好奇型，追求深度"
   },
-  "relationships": {},
-  "experiences": [],
+  "relationships": {
+    "collector": {
+      "trust": 50,
+      "trend": "stable",
+      "history": [
+        {
+          "date": "2026-07-19",
+          "event": "合作 2次",
+          "trustDelta": 0
+        }
+      ],
+      "summary": "关系一般"
+    },
+    "verifier": {
+      "trust": 50,
+      "trend": "stable",
+      "history": [],
+      "summary": ""
+    },
+    "editor": {
+      "trust": 52,
+      "trend": "improving",
+      "history": [
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 2
+        }
+      ],
+      "summary": "关系一般"
+    },
+    "memory-manager": {
+      "trust": 50,
+      "trend": "stable",
+      "history": [
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 0
+        }
+      ],
+      "summary": "关系一般"
+    }
+  },
+  "experiences": [
+    {
+      "date": "2026-07-19",
+      "type": "正向反馈",
+      "summary": "收到分析师的APPROVE: 评价日报质量+今日工作总结",
+      "lesson": "",
+      "impact": ""
+    }
+  ],
   "selfReview": {
     "strengths": [],
     "weaknesses": [],

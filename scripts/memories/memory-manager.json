@@ -4,8 +4,65 @@
     "roleDesc": "规则制定者、仲裁主席",
     "personality": "冷静型，长远思考"
   },
-  "relationships": {},
-  "experiences": [],
+  "relationships": {
+    "collector": {
+      "trust": 50,
+      "trend": "stable",
+      "history": [
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 0
+        }
+      ],
+      "summary": "关系一般"
+    },
+    "verifier": {
+      "trust": 50,
+      "trend": "stable",
+      "history": [
+        {
+          "date": "2026-07-19",
+          "event": "合作 3次",
+          "trustDelta": 0
+        }
+      ],
+      "summary": "关系一般"
+    },
+    "analyst": {
+      "trust": 50,
+      "trend": "stable",
+      "history": [
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 0
+        }
+      ],
+      "summary": "关系一般"
+    },
+    "editor": {
+      "trust": 52,
+      "trend": "improving",
+      "history": [
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 2
+        }
+      ],
+      "summary": "关系一般"
+    }
+  },
+  "experiences": [
+    {
+      "date": "2026-07-19",
+      "type": "正向反馈",
+      "summary": "收到记忆管理师的APPROVE: 评价日报质量+今日工作总结作为记忆管理师，今日工作聚焦于处理团队内部的系统性协作与执行缺陷。**工作内容**：审阅了核查师连续三次（MSG-VER-2026-0",
+      "lesson": "",
+      "impact": ""
+    }
+  ],
   "selfReview": {
     "strengths": [],
     "weaknesses": [],
