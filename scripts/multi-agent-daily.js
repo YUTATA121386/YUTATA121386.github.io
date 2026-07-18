@@ -922,21 +922,22 @@ var editorConfirmed = state.draft && state.draft.sections && state.draft.section
     for (const action of finalReview.actions) {
       if (action.type === "update_rule" && action.rule_file) {
         const version = generateRuleVersion(dateStr);
-        const rulePath = path.join(RULES_DIR, path.basename(action.rule_file));
-        const archivePath = path.join(RULES_DIR, "archive", path.basename(action.rule_file).replace(".md", "-" + version + ".md"));
+        const ruleFile = path.basename(action.rule_file).replace(/\.md$/, '') + '.md';
+        const rulePath = path.join(RULES_DIR, ruleFile);
+        const archivePath = path.join(RULES_DIR, "archive", ruleFile.replace(".md", "-" + version + ".md"));
         try {
           const oldContent = fs.readFileSync(rulePath, "utf-8");
           fs.writeFileSync(archivePath, "# " + action.rule_file + " - " + version + "\n> 归档: " + dateStr + "\n\n" + oldContent, "utf-8");
         } catch(e) { console.log("[system] 归档旧规则失败: " + (e.message || "").slice(0, 60)); }
-        const header = "---\ntitle: " + action.rule_file.replace(".md", "") + "\nversion: " + version + "\nupdated: " + dateStr + "\noutline: [2, 3]\n---\n\n> 📌 " + version + " | " + dateCN + "\n\n";
+        const header = "---\ntitle: " + ruleFile.replace(".md", "") + "\nversion: " + version + "\nupdated: " + dateStr + "\noutline: [2, 3]\n---\n\n> 📌 " + version + " | " + dateCN + "\n\n";
         writeFileUTF8(rulePath, header + (action.after || ""));
-        log("memory-manager", "规则更新: " + action.rule_file + " → " + version);
+        log("memory-manager", "规则更新: " + ruleFile + " → " + version);
         // 追加到变更日志
         try {
           var changelog = "";
           try { changelog = fs.readFileSync(CHANGELOG_FILE, "utf-8"); } catch { changelog = "# 规则变更日志\n\n"; }
           changelog += "## " + dateStr + "\n";
-          changelog += "- **" + action.rule_file + "** (" + version + "): " + (action.reason || "更新") + "\n";
+          changelog += "- **" + ruleFile + "** (" + version + "): " + (action.reason || "更新") + "\n";
           writeFileUTF8(CHANGELOG_FILE, changelog);
         } catch (clErr) { log("system", "变更日志写入失败: " + clErr.message.slice(0, 60)); }
       }
