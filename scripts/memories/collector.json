@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 84,
+      "trust": 90,
       "trend": "improving",
       "history": [
         {
@@ -38,6 +38,11 @@
           "date": "2026-07-19",
           "event": "合作 11次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 7次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -64,6 +69,11 @@
         {
           "date": "2026-07-19",
           "event": "合作 2次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
           "trustDelta": 0
         }
       ],
@@ -110,97 +120,6 @@
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Zelenskyy considers sacking commander-in-chief as protests swell - Financial Times",
-      "source": "Google News Music Industry",
-      "reason": "内容为乌克兰政治与军事领导层变动，与音乐产业完全无关。",
-      "summary": "被拒: Zelenskyy considers sacking commander-in-chief as protests swell - Financial Tim",
-      "lesson": "避免采集此类素材: 内容为乌克兰政治与军事领导层变动，与音乐产业完全无关。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Without Platner, Maine Democrats Scramble to Keep Grassroots Energy Alive - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "内容为缅因州地方选举与政治活动，与音乐产业完全无关。",
-      "summary": "被拒: Without Platner, Maine Democrats Scramble to Keep Grassroots Energy Alive - The ",
-      "lesson": "避免采集此类素材: 内容为缅因州地方选举与政治活动，与音乐产业完全无关。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "NEK!、渋谷フリーライブでメジャーデビューを祝福。メジャー1st EPから「MAGiC VoX」先行配信へ",
-      "source": "BARKS",
-      "summary": "通过: NEK!、渋谷フリーライブでメジャーデビューを祝福。メジャー1st EPから「MAGiC VoX」先行配信へ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "さとう。、10月より全国弾き語りワンマンツアー開催。ファイナルは日本橋三井ホール",
-      "source": "BARKS",
-      "summary": "通过: さとう。、10月より全国弾き語りワンマンツアー開催。ファイナルは日本橋三井ホール",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Baby Canta、アニメ『ダイヤのA actⅡ -Second Season-』本編映像を使用した「Let’s Go Crazy」コラボMV公開",
-      "source": "BARKS",
-      "summary": "通过: Baby Canta、アニメ『ダイヤのA actⅡ -Second Season-』本編映像を使用した「Let’s Go Crazy」コラボMV公開",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "ゆとりくん、ソニー・ミュージック内レーベルEchoesに参加",
-      "source": "BARKS",
-      "summary": "通过: ゆとりくん、ソニー・ミュージック内レーベルEchoesに参加",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Saucy Dog、7/21東京ガーデンシアター公演をYouTube生配信",
-      "source": "BARKS",
-      "summary": "通过: Saucy Dog、7/21東京ガーデンシアター公演をYouTube生配信",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "每日统计",
-      "summary": "今日通过率: 59% (47/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "‘Obsession’: Here’s Where to Stream the Horror Romance Movie Online",
-      "source": "Billboard",
-      "reason": "娱乐内容，与音乐行业分析无关。",
-      "summary": "被拒: ‘Obsession’: Here’s Where to Stream the Horror Romance Movie Online",
-      "lesson": "避免采集此类素材: 娱乐内容，与音乐行业分析无关。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Here’s Where to Watch FIFA World Cup Final 2026: Spain vs. Argentina Live Online for Free",
-      "source": "Billboard",
-      "reason": "体育赛事直播信息，与音乐行业无关。",
-      "summary": "被拒: Here’s Where to Watch FIFA World Cup Final 2026: Spain vs. Argentina Live Online",
-      "lesson": "避免采集此类素材: 体育赛事直播信息，与音乐行业无关。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Bonnie Tyler Fans Invited to Line the Streets in Wales for Final Farewell",
-      "source": "Billboard",
-      "reason": "名人逝世和葬礼安排，虽有话题性，但缺乏可分析的行业深度。",
-      "summary": "被拒: Bonnie Tyler Fans Invited to Line the Streets in Wales for Final Farewell",
-      "lesson": "避免采集此类素材: 名人逝世和葬礼安排，虽有话题性，但缺乏可分析的行业深度。"
-    },
     {
       "date": "2026-07-19",
       "type": "被拒案例",
@@ -518,6 +437,97 @@
       "date": "2026-07-19",
       "type": "每日统计",
       "summary": "今日通过率: 59% (47/80)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "欧洲奋力追赶中美，争夺数字自主权 - 纽约时报中文网",
+      "source": "Google News 音乐产业",
+      "reason": "与音乐产业完全无关。欧洲数字自主权、AI监管，属于科技政策新闻。来源分类错误。",
+      "summary": "被拒: 欧洲奋力追赶中美，争夺数字自主权 - 纽约时报中文网",
+      "lesson": "避免采集此类素材: 与音乐产业完全无关。欧洲数字自主权、AI监管，属于科技政策新闻。来源分类错误。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "小米 SU7 碰撞测试博主高某被判刑一年八��月，罚款 10 万元 - IT之家",
+      "source": "Google News 音乐产业",
+      "reason": "与音乐产业完全无关。小米SU7碰撞测试博主被判刑，属于汽车/社会新闻。来源分类错误。",
+      "summary": "被拒: 小米 SU7 碰撞测试博主高某被判刑一年八��月，罚款 10 万元 - IT之家",
+      "lesson": "避免采集此类素材: 与音乐产业完全无关。小米SU7碰撞测试博主被判刑，属于汽车/社会新闻。来源分类错误。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "德官员吁欧盟提高中国汽车关税 以促中企与大众合作 - 联合早报",
+      "source": "Google News 音乐产业",
+      "reason": "与音乐产业完全无关。欧盟对中国汽车关税，属于国际贸易/汽车行业新闻。来源分类错误。",
+      "summary": "被拒: 德官员吁欧盟提高中国汽车关税 以促中企与大众合作 - 联合早报",
+      "lesson": "避免采集此类素材: 与音乐产业完全无关。欧盟对中国汽车关税，属于国际贸易/汽车行业新闻。来源分类错误。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "Audeze’s flagship gaming headphones now have adaptive noise cancelling for ultimate focus",
+      "source": "MusicTech",
+      "reason": "与音乐产业核心关联度低。Audeze游戏耳机带降噪功能，属于消费电子/游戏外设产品发布，非音乐制作或行业动态。",
+      "summary": "被拒: Audeze’s flagship gaming headphones now have adaptive noise cancelling for ultim",
+      "lesson": "避免采集此类素材: 与音乐产业核心关联度低。Audeze游戏耳机带降噪功能，属于消费电子/游戏外设产品发布，非音乐制作或行业动态。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "Reason 14, as reviewed by a Cubase user: “Bells and whistles aren’t always everything”",
+      "source": "MusicTech",
+      "reason": "Reason 14评测，来自Cubase用户的视角。虽然属于DAW评测，但内容过于个人化、技术细节导向，更像一篇普通软件评测而非行业趋势报道。",
+      "summary": "被拒: Reason 14, as reviewed by a Cubase user: “Bells and whistles aren’t always every",
+      "lesson": "避免采集此类素材: Reason 14评测，来自Cubase用户的视角。虽然属于DAW评测，但内容过于个人化、技术细节导向，更像一篇普通软件评测而非行业趋势报道。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Massachusetts Becomes the Latest State to Propose Strict Ticket Resale Price Caps Under Noah Kahan-I",
+      "source": "Digital Music News",
+      "summary": "通过: Massachusetts Becomes the Latest State to Propose Strict Ticket Resale Price Cap",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "“For a long time, the machine itself acted as a gatekeeper”: Teenage Engineering’s new APC-2 wants t",
+      "source": "MusicTech",
+      "summary": "通过: “For a long time, the machine itself acted as a gatekeeper”: Teenage Engineering",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Hackers reveal Suno scraped music data from YouTube, Deezer, Genius, and more",
+      "source": "MusicTech",
+      "summary": "通过: Hackers reveal Suno scraped music data from YouTube, Deezer, Genius, and more",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Pink Floyd gets a limited-edition We Are Rewind cassette player – complete with an exclusive Dark Si",
+      "source": "MusicTech",
+      "summary": "通过: Pink Floyd gets a limited-edition We Are Rewind cassette player – complete with ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Neutone and Roland want you to design your own AI model — and play it live",
+      "source": "MusicTech",
+      "summary": "通过: Neutone and Roland want you to design your own AI model — and play it live",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "每日统计",
+      "summary": "今日通过率: 58% (35/60)",
       "lesson": ""
     }
   ],

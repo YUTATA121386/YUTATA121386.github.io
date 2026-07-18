@@ -28,6 +28,11 @@
           "date": "2026-07-19",
           "event": "合作 2次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
@@ -35,8 +40,14 @@
     "verifier": {
       "trust": 50,
       "trend": "stable",
-      "history": [],
-      "summary": ""
+      "history": [
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 0
+        }
+      ],
+      "summary": "关系一般"
     },
     "editor": {
       "trust": 58,

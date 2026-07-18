@@ -10,4 +10,4 @@ outline: [2, 3]
 
 > 📌 V2.1.30 | 2026年7月19日
 
-新增‘英文源白名单’章节。采集英文素材时，必须优先从以下已验证的专业音乐行业媒体采集：Billboard (Business section), Music Business Worldwide, Variety (Music Business), Rolling Stone (Business/Music), Pitchfork (News/Business), Hypebot, Digital Music News。禁止将Google News‘音乐产业’分类作为唯一数据源。
+新增‘源健康度监控与应急流程’章节。采集师在每日第一轮提交后，必须自行检查各数据源的通过率。若任一单一来源（如‘Billboard.com’）的通过率低于50%，必须立即暂停使用该源，并在下一轮提交前向核查师和记忆管理师发送紧急通知，说明情况并请求新的源建议。
