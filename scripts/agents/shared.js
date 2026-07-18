@@ -1,13 +1,13 @@
 /**
- * 澶?Agent 鏃ユ姤绯荤粺 - 鍏变韩妯″潡
- * 鐘舵€佺鐞嗐€佹秷鎭€荤嚎銆佷俊瑾夌郴缁熴€丏eepSeek API 璋冪敤
+ * 多 Agent 日报系统 - 共享模块
+ * 状态管理、消息总线、信誉系统、DeepSeek API 调用
  */
 
 const fs = require("fs");
 const path = require("path");
 const https = require("https");
 
-// ===================== 閰嶇疆 =====================
+// ===================== 配置 =====================
 const DEEPSEEK_KEY = process.env.DEEPSEEK_API_KEY;
 const DEEPSEEK_API = "https://api.deepseek.com/chat/completions";
 const ROOT_DIR = path.join(__dirname, "..", "..");
@@ -18,18 +18,18 @@ const RULES_DIR = path.join(ROOT_DIR, "docs", "rules");
 const PROMPTS_DIR = path.join(__dirname, "..", "prompts");
 const REPUTATION_FILE = path.join(ROOT_DIR, "scripts", "reputation.json");
 
-// ===================== 娑堟伅鍗忚 =====================
+// ===================== 消息协议 =====================
 const MSG_TYPES = ["REJECT", "REQUEST", "DISPUTE", "NOTIFY", "ESCALATE", "CONFIRM", "PRIORITY_OVERRIDE", "COMMAND", "DIRECTIVE", "APPROVE", "GUIDANCE", "INQUIRE", "INFO"];
 const AGENTS = ["collector", "verifier", "analyst", "editor", "memory-manager"];
 const AGENT_NAMES_CN = {
-  collector: "閲囬泦甯?,
-  verifier: "鏍告煡甯?,
-  analyst: "鍒嗘瀽甯?,
-  editor: "缂栬緫甯?,
-  "memory-manager": "璁板繂绠＄悊甯?
+  collector: "采集师",
+  verifier: "核查师",
+  analyst: "分析师",
+  editor: "编辑师",
+  "memory-manager": "记忆管理师"
 };
 
-// ===================== 鐘舵€佺鐞?=====================
+// ===================== 状态管理 =====================
 function createInitialState(dateStr) {
   return {
     date: dateStr,
@@ -76,7 +76,7 @@ function loadCurrentRules() {
   return rules;
 }
 
-// ===================== 淇¤獕绯荤粺 =====================
+// ===================== 信誉系统 =====================
 function loadReputation() {
   try {
     return JSON.parse(fs.readFileSync(REPUTATION_FILE, "utf-8"));
@@ -127,7 +127,7 @@ function getReputationWeight(agentId, baseWeight) {
   return baseWeight * coefficient;
 }
 
-// ===================== 娑堟伅鎬荤嚎 =====================
+// ===================== 消息总线 =====================
 let messageCounter = 0;
 
 function createMessage(from, to, type, coreInfo, expectedAction, reason, priority, relatedMsg) {
@@ -148,7 +148,7 @@ function createMessage(from, to, type, coreInfo, expectedAction, reason, priorit
 }
 
 function pushMessage(state, msg) {
-  // 鍘婚噸锛氭鏌ユ渶杩?0鏉℃秷鎭腑鏄惁鏈夊畬鍏ㄧ浉鍚?from+type+coreInfo 鐨勬秷鎭?
+  // 去重：检查最近10条消息中是否有完全相同 from+type+coreInfo 的消息
   var isDup = state.messages.slice(-10).some(function(m) {
     return m.from === msg.from && m.type === msg.type && m.coreInfo === msg.coreInfo;
   });
@@ -159,7 +159,7 @@ function pushMessage(state, msg) {
   return true;
 }
 
-// ===================== DeepSeek API 璋冪敤锛堝惈鑷姩閲嶈瘯锛?=====================
+// ===================== DeepSeek API 调用（含自动重试） =====================
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 function callDeepSeek(systemPrompt, userPrompt, temperature, maxTokens) {
@@ -172,7 +172,7 @@ async function callDeepSeekWithRetry(systemPrompt, userPrompt, temperature, maxT
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
       return await new Promise((resolve, reject) => {
-        if (!DEEPSEEK_KEY) { reject(new Error("DEEPSEEK_API_KEY 鏈缃?)); return; }
+        if (!DEEPSEEK_KEY) { reject(new Error("DEEPSEEK_API_KEY 未设置")); return; }
         const body = JSON.stringify({ model: "deepseek-chat", messages: [
           { role: "system", content: systemPrompt },
           { role: "user", content: userPrompt }
@@ -196,17 +196,17 @@ async function callDeepSeekWithRetry(systemPrompt, userPrompt, temperature, maxT
               if (result.choices && result.choices[0]) {
                 resolve(result.choices[0].message.content);
               } else if (result.error) {
-                reject(new Error(result.error.message || "API 閿欒"));
+                reject(new Error(result.error.message || "API 错误"));
               } else {
-                reject(new Error("鏈煡 API 鍝嶅簲鏍煎紡"));
+                reject(new Error("未知 API 响应格式"));
               }
             } catch (e) {
-              reject(new Error("瑙ｆ瀽鍝嶅簲澶辫触: " + e.message));
+              reject(new Error("解析响应失败: " + e.message));
             }
           });
         });
-        req.on("error", function(e) { reject(new Error("缃戠粶閿欒: " + e.message)); });
-        req.on("timeout", function() { req.destroy(); reject(new Error("璇锋眰瓒呮椂")); });
+        req.on("error", function(e) { reject(new Error("网络错误: " + e.message)); });
+        req.on("timeout", function() { req.destroy(); reject(new Error("请求超时")); });
         req.write(body);
         req.end();
       });
@@ -220,13 +220,13 @@ async function callDeepSeekWithRetry(systemPrompt, userPrompt, temperature, maxT
   }
   throw lastError;
 }
-// ===================== 鍔犺浇 Prompt =====================
+// ===================== 加载 Prompt =====================
 function loadPrompt(agentId) {
   const filepath = path.join(PROMPTS_DIR, `${agentId}.md`);
   return fs.readFileSync(filepath, "utf-8");
 }
 
-// ===================== 瑙勫垯鐗堟湰鍙风敓鎴?=====================
+// ===================== 规则版本号生成 =====================
 function generateRuleVersion(dateStr) {
   const d = new Date(dateStr);
   const startYear = 2026;
@@ -239,7 +239,7 @@ function generateRuleVersion(dateStr) {
   return `V${halfYear}.${monthInHalf}.${weekNum}`;
 }
 
-// ===================== 鎻愬彇 JSON =====================
+// ===================== 提取 JSON =====================
 function extractJSON(text) {
   if (!text || typeof text !== "string") {
     return { _parse_failed: true, raw_output: "", actions: [], messages: [], internal_thought: "" };
