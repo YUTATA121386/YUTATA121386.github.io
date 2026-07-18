@@ -930,7 +930,14 @@ var editorConfirmed = state.draft && state.draft.sections && state.draft.section
           fs.writeFileSync(archivePath, "# " + action.rule_file + " - " + version + "\n> 归档: " + dateStr + "\n\n" + oldContent, "utf-8");
         } catch(e) { console.log("[system] 归档旧规则失败: " + (e.message || "").slice(0, 60)); }
         const header = "---\ntitle: " + ruleFile.replace(".md", "") + "\nversion: " + version + "\nupdated: " + dateStr + "\noutline: [2, 3]\n---\n\n> 📌 " + version + " | " + dateCN + "\n\n";
-        writeFileUTF8(rulePath, header + (action.after || ""));
+        // Append new section to existing file instead of overwriting
+        var oldContent = "";
+        try { oldContent = fs.readFileSync(rulePath, "utf-8"); } catch(e) {}
+        var frontMatter = header.split("\n---\n")[0] + "\n---";
+        var oldBody = oldContent ? oldContent.replace(/---[\s\S]*?---/, "").trim() : "";
+        var newBody = (action.after || "").trim();
+        var merged = frontMatter + "\n\n" + (oldBody ? oldBody + "\n\n" : "") + newBody + "\n";
+        writeFileUTF8(rulePath, merged);
         log("memory-manager", "规则更新: " + ruleFile + " → " + version);
         // 追加到变更日志
         try {
