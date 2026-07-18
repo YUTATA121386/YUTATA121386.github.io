@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 68,
+      "trust": 72,
       "trend": "improving",
       "history": [
         {
@@ -23,9 +23,14 @@
           "date": "2026-07-19",
           "event": "合作 10次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 6次",
+          "trustDelta": 4
         }
       ],
-      "summary": "关系一般"
+      "summary": "关系良好"
     },
     "analyst": {
       "trust": 50,
@@ -108,6 +113,20 @@
       "date": "2026-07-19",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 第一批20条素材审核完毕，通过18条，拒绝2条。通过率90%。",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-19",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 拒绝3条素材：RAW-2026-07-19-0008, RAW-2026-07-19-0016, RAW-2026-07-19-0018。",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-19",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 第一批20条素材审核完毕：通过17条，拒绝3条。通过率85%。",
       "lesson": "",
       "impact": ""
     }
