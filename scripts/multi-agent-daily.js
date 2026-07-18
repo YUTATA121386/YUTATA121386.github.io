@@ -914,7 +914,7 @@ var editorConfirmed = state.draft && state.draft.sections && state.draft.section
 
   state.phase = "convergence";
 
-  const finalInst = "## 最终复盘\n你是记忆管理师，今日" + dateCN + "。评估日报质量（完整性/准确性/深度/可读性0-10分）、优缺点、规则修改建议、信誉分调整。\n输出: { \"review\": { \"quality_scores\": {...}, \"strengths\": [...], \"weaknesses\": [...], \"root_cause\": \"...\" }, \"actions\": [{\"type\":\"update_rule\",\"rule_file\":\"...\",\"change_type\":\"add/modify\",\"after\":\"...\",\"reason\":\"...\"}], \"internal_thought\": \"...\" }";
+  const finalInst = "## 最终复盘\n你是记忆管理师，今日" + dateCN + "。评估日报质量（完整性/准确性/深度/可读性0-10分）、优缺点、规则修改建议、信誉分调整。\n信誉分调整标准：每个角色都必须给出调整（delta为0也要记录），基于今日表现。\n输出: { \"review\": { \"quality_scores\": {...}, \"strengths\": [...], \"weaknesses\": [...], \"root_cause\": \"...\" }, \"actions\": [{\"type\":\"update_rule\",\"rule_file\":\"...\",\"change_type\":\"add/modify\",\"after\":\"...\",\"reason\":\"...\"}, {\"type\":\"update_reputation\",\"agent\":\"collector\",\"delta\":0,\"reason\":\"今日表现总结\"}], \"internal_thought\": \"...\" }";
   const finalReview = await runAgent("memory-manager", state, finalInst);
 
   if (finalReview.actions) {
