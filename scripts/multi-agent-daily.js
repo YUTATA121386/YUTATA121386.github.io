@@ -619,13 +619,14 @@ async function main() {
   var d = new Date();
   return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
 })();
-  const dateCN = now.getFullYear() + "年" + (now.getMonth() + 1) + "月" + now.getDate() + "日";
+  const dateCN = (function() { var d = new Date(dateStr + "T00:00:00+08:00"); return d.getFullYear() + "年" + (d.getMonth() + 1) + "月" + d.getDate() + "日"; })();
   const systemStats = loadSystemStats();
   systemStats.totalRuns++;
   if (!systemStats.firstRunDate) systemStats.firstRunDate = dateStr;
   systemStats.lastRunDate = dateStr;
   
-  CURRENT_DATE = dateStr;saveSystemStats(systemStats);
+  CURRENT_DATE = dateStr;
+  saveSystemStats(systemStats);
 
   console.log("⏱️ 启动时间: " + new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" }));
   console.log("\n🤖 YUTATA 多Agent日报系统 v4");
