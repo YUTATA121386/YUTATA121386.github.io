@@ -482,49 +482,112 @@ function updateAgentMemoryFromDay(agentId, state, dateStr, dateCN) {
     mem.relationships[otherId].summary = trust >= 70 ? "关系良好" : trust >= 40 ? "关系一般" : "关系紧张";
   });
 
-  // Add key experiences from today's events
-  var significantChanges = state.messages.filter(function(m) { 
-    return (m.from === agentId || m.to === agentId) && 
-      (m.type === "REJECT" || m.type === "ESCALATE" || m.type === "APPROVE" || m.type === "DIRECTIVE");
-  });
-  
-  if (significantChanges.length > 0) {
-    var worst = significantChanges.filter(function(m) { return m.type === "REJECT" || m.type === "ESCALATE"; });
-    var best = significantChanges.filter(function(m) { return m.type === "APPROVE" || m.type === "DIRECTIVE"; });
-    
-    if (worst.length > 0) {
-      var wMsg = worst[0];
-      if (!mem.experiences) mem.experiences = [];
+  if (!mem.experiences) mem.experiences = [];
+
+  // ===== 采集师专属：从实际素材中提取正反案例 =====
+  if (agentId === "collector") {
+    var rejectedToday = (state.rejectedItems || []).filter(function(item) {
+      return item.verify_reason && item.title;
+    });
+    var verifiedToday = (state.verifiedItems || []).filter(function(item) {
+      return item.verify_reason && item.title;
+    });
+
+    // 提取被拒案例（最多5条）
+    var recentRejects = rejectedToday.slice(-5);
+    for (var ri = 0; ri < recentRejects.length; ri++) {
+      var rItem = recentRejects[ri];
       mem.experiences.push({
         date: dateStr,
-        type: "重大挫折",
-        summary: "被" + (AGENT_NAMES_CN_MEM[wMsg.from === agentId ? wMsg.to : wMsg.from] || wMsg.from) + " " + wMsg.type + "：" + String(wMsg.coreInfo || "").slice(0, 80),
-        lesson: "",
-        impact: ""
+        type: "被拒案例",
+        title: String(rItem.title || "").slice(0, 100),
+        source: String(rItem.source || "未知来源"),
+        reason: String(rItem.verify_reason || "").slice(0, 100),
+        summary: "被拒: " + String(rItem.title || "").slice(0, 80),
+        lesson: "避免采集此类素材: " + String(rItem.verify_reason || "").slice(0, 80)
       });
     }
-    if (best.length > 0) {
-      var bMsg = best[0];
+
+    // 提取标杆案例（最多5条）
+    var recentPasses = verifiedToday.slice(-5);
+    for (var pi = 0; pi < recentPasses.length; pi++) {
+      var pItem = recentPasses[pi];
       mem.experiences.push({
         date: dateStr,
-        type: "正向反馈",
-        summary: "收到" + (AGENT_NAMES_CN_MEM[bMsg.from] || bMsg.from) + "的" + bMsg.type + "：" + String(bMsg.coreInfo || "").slice(0, 80),
-        lesson: "",
-        impact: ""
+        type: "标杆案例",
+        title: String(pItem.title || "").slice(0, 100),
+        source: String(pItem.source || "未知来源"),
+        summary: "通过: " + String(pItem.title || "").slice(0, 80),
+        lesson: "此类素材值得采集: 命中关键词 " + (pItem.keywords_matched || []).slice(0, 3).join(", ")
       });
+    }
+
+    // 记录当日统计
+    var totalChecked = rejectedToday.length + verifiedToday.length;
+    if (totalChecked > 0) {
+      var passRate = Math.round(verifiedToday.length / totalChecked * 100);
+      mem.experiences.push({
+        date: dateStr,
+        type: "每日统计",
+        summary: "今日通过率: " + passRate + "% (" + verifiedToday.length + "/" + totalChecked + ")",
+        lesson: passRate < 30 ? "通过率偏低，需收紧采集标准" : passRate >= 60 ? "通过率良好，保持当前标准" : ""
+      });
+    }
+  } else {
+    // ===== 其他角色：从通信消息提取经验 =====
+    var significantChanges = state.messages.filter(function(m) {
+      return (m.from === agentId || m.to === agentId) &&
+        (m.type === "REJECT" || m.type === "ESCALATE" || m.type === "APPROVE" || m.type === "DIRECTIVE");
+    });
+
+    if (significantChanges.length > 0) {
+      var worst = significantChanges.filter(function(m) { return m.type === "REJECT" || m.type === "ESCALATE"; });
+      var best = significantChanges.filter(function(m) { return m.type === "APPROVE" || m.type === "DIRECTIVE"; });
+
+      if (worst.length > 0) {
+        var wMsg = worst[0];
+        mem.experiences.push({
+          date: dateStr,
+          type: "重大挛折",
+          summary: "被" + (AGENT_NAMES_CN_MEM[wMsg.from === agentId ? wMsg.to : wMsg.from] || wMsg.from) + " " + wMsg.type + ": " + String(wMsg.coreInfo || "").slice(0, 80),
+          lesson: "",
+          impact: ""
+        });
+      }
+      if (best.length > 0) {
+        var bMsg = best[0];
+        mem.experiences.push({
+          date: dateStr,
+          type: "正向反馈",
+          summary: "收到" + (AGENT_NAMES_CN_MEM[bMsg.from] || bMsg.from) + "的" + bMsg.type + ": " + String(bMsg.coreInfo || "").slice(0, 80),
+          lesson: "",
+          impact: ""
+        });
+      }
     }
   }
 
+  // 裁剪旧经验，只保留最近50条
+  if (mem.experiences.length > 50) {
+    mem.experiences = mem.experiences.slice(-50);
+  }
+
+
   // Update selfReview
   var myRejects = state.messages.filter(function(m) { return m.type === "REJECT" && m.to === agentId; });
-  if (myRejects.length >= 5 && (!mem.selfReview.weaknesses || mem.selfReview.weaknesses.indexOf("质量不稳定") < 0)) {
-    if (!mem.selfReview.weaknesses) mem.selfReview.weaknesses = [];
+  var myApproves = state.messages.filter(function(m) { return m.type === "APPROVE" && m.to === agentId; });
+
+  if (!mem.selfReview.weaknesses) mem.selfReview.weaknesses = [];
+  if (!mem.selfReview.strengths) mem.selfReview.strengths = [];
+
+  if (myRejects.length >= 5 && mem.selfReview.weaknesses.indexOf("质量不稳定") < 0) {
     mem.selfReview.weaknesses.push("质量不稳定");
   }
-  var myApproves = state.messages.filter(function(m) { return m.type === "APPROVE" && m.to === agentId; });
-  if (myApproves.length >= 3 && (!mem.selfReview.strengths || mem.selfReview.strengths.indexOf("得到认可") < 0)) {
-    if (!mem.selfReview.strengths) mem.selfReview.strengths = [];
+  if (myApproves.length >= 3 && mem.selfReview.strengths.indexOf("得到认可") < 0) {
     mem.selfReview.strengths.push("得到认可");
+  }
+  if (myRejects.length < 3 && mem.selfReview.weaknesses.indexOf("质量不稳定") >= 0) {
+    mem.selfReview.weaknesses = mem.selfReview.weaknesses.filter(function(w) { return w !== "质量不稳定"; });
   }
 
   saveAgentMemory(agentId, mem);
@@ -896,6 +959,13 @@ var editorConfirmed = state.draft && state.draft.sections && state.draft.section
   memEntry.learnings = learnings.join(" | ");
   sysMem.entries.push(memEntry);
   saveSystemMemory(sysMem);
+
+  // ===== 保存角色个体记忆 =====
+  var allAgents = ["collector", "verifier", "analyst", "editor", "memory-manager"];
+  for (var ai = 0; ai < allAgents.length; ai++) {
+    updateAgentMemoryFromDay(allAgents[ai], state, dateStr, dateCN);
+  }
+  log("system", "角色个体记忆已更新");
 
   // ===== 生成日报 =====
   log("system", "\n━━━ 生成日报 ━━━");

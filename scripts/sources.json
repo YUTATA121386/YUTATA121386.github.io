@@ -7,6 +7,12 @@
       "weight": 10
     },
     {
+      "name": "Music Ally",
+      "url": "https://musically.com/feed/",
+      "lang": "en",
+      "weight": 9
+    },
+    {
       "name": "Billboard",
       "url": "https://www.billboard.com/feed/",
       "lang": "en",
@@ -19,15 +25,63 @@
       "weight": 8
     },
     {
-      "name": "Music Ally",
-      "url": "https://musically.com/feed/",
-      "lang": "en",
-      "weight": 9
+      "name": "Google News 音乐产业",
+      "url": "https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx6TVdZU0FtVnVHZ0pWVXlnQVAB?hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "lang": "zh",
+      "weight": 8
+    },
+    {
+      "name": "音乐先声",
+      "url": "https://nbnmusic.com/feed",
+      "lang": "zh",
+      "weight": 8
+    },
+    {
+      "name": "Google News 中国音乐产业（搜索）",
+      "url": "https://news.google.com/rss/search?q=%E4%B8%AD%E5%9B%BD%E9%9F%B3%E4%B9%90%E4%BA%A7%E4%B8%9A&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "lang": "zh",
+      "weight": 8
     },
     {
       "name": "MusicTech",
       "url": "https://musictech.com/feed/",
       "lang": "en",
+      "weight": 7
+    },
+    {
+      "name": "Google News Music Industry",
+      "url": "https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB",
+      "lang": "en",
+      "weight": 7
+    },
+    {
+      "name": "道略音乐产业",
+      "url": "https://www.idaolue.com/feed",
+      "lang": "zh",
+      "weight": 7
+    },
+    {
+      "name": "BARKS",
+      "url": "https://www.barks.jp/feed",
+      "lang": "ja",
+      "weight": 7
+    },
+    {
+      "name": "NME",
+      "url": "https://www.nme.com/feed",
+      "lang": "en",
+      "weight": 7
+    },
+    {
+      "name": "Variety Music",
+      "url": "https://variety.com/v/music/feed/",
+      "lang": "en",
+      "weight": 7
+    },
+    {
+      "name": "Google News 腾讯音乐/网易云",
+      "url": "https://news.google.com/rss/search?q=%E8%85%BE%E8%AE%AF%E9%9F%B3%E4%B9%90+OR+TME+OR+%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "lang": "zh",
       "weight": 7
     },
     {
@@ -49,6 +103,48 @@
       "weight": 6
     },
     {
+      "name": "Rolling Stone Music",
+      "url": "https://www.rollingstone.com/music/music-news/feed/",
+      "lang": "en",
+      "weight": 6
+    },
+    {
+      "name": "The Fader",
+      "url": "https://www.thefader.com/feed",
+      "lang": "en",
+      "weight": 6
+    },
+    {
+      "name": "Soompi",
+      "url": "https://www.soompi.com/feed",
+      "lang": "en",
+      "weight": 6
+    },
+    {
+      "name": "Music Press Asia",
+      "url": "https://www.musicpressasia.com/feed",
+      "lang": "en",
+      "weight": 6
+    },
+    {
+      "name": "NME Asia",
+      "url": "https://www.nme.com/en_asia/feed",
+      "lang": "en",
+      "weight": 6
+    },
+    {
+      "name": "Google News Japan Music Business",
+      "url": "https://news.google.com/rss/search?q=japan+music+business+streaming+OR+oricon&hl=en-US&gl=US&ceid=US:en",
+      "lang": "en",
+      "weight": 6
+    },
+    {
+      "name": "Google News Korea Music Business",
+      "url": "https://news.google.com/rss/search?q=korea+music+business+streaming+OR+k-pop+industry&hl=en-US&gl=US&ceid=US:en",
+      "lang": "en",
+      "weight": 6
+    },
+    {
       "name": "36氪",
       "url": "https://36kr.com/feed",
       "lang": "zh",
@@ -61,40 +157,10 @@
       "weight": 5
     },
     {
-      "name": "音乐财经",
-      "url": "https://www.chinamusicbusiness.cn/feed/",
-      "lang": "zh",
-      "weight": 0
-    },
-    {
-      "name": "Google News Music Industry",
-      "url": "https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFZxYUdjU0FtVnVHZ0pWVXlnQVAB",
-      "lang": "en",
-      "weight": 7
-    },
-    {
-      "name": "Google News 音乐产业",
-      "url": "https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx6TVdZU0FtVnVHZ0pWVXlnQVAB?hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
-      "lang": "zh",
-      "weight": 8
-    },
-    {
       "name": "Music Business Radar",
       "url": "https://www.musicbusinessradar.com/feed/",
       "lang": "en",
       "weight": 5
-    },
-    {
-      "name": "Rolling Stone Music",
-      "url": "https://www.rollingstone.com/music/music-news/feed/",
-      "lang": "en",
-      "weight": 6
-    },
-    {
-      "name": "少数派",
-      "url": "https://sspai.com/feed",
-      "lang": "zh",
-      "weight": 4
     },
     {
       "name": "澎湃新闻文化",
@@ -103,16 +169,40 @@
       "weight": 5
     },
     {
-      "name": "音乐先声",
-      "url": "https://nbnmusic.com/feed",
-      "lang": "zh",
-      "weight": 8
+      "name": "Rolling Stone India",
+      "url": "https://rollingstoneindia.com/feed/",
+      "lang": "en",
+      "weight": 5
     },
     {
-      "name": "道略音乐产业",
-      "url": "https://www.idaolue.com/feed",
+      "name": "The Brag",
+      "url": "https://thebrag.com/feed/",
+      "lang": "en",
+      "weight": 5
+    },
+    {
+      "name": "Google News India Music Industry",
+      "url": "https://news.google.com/rss/search?q=india+music+industry+streaming&hl=en-US&gl=US&ceid=US:en",
+      "lang": "en",
+      "weight": 5
+    },
+    {
+      "name": "Google News SEA Music Industry",
+      "url": "https://news.google.com/rss/search?q=southeast+asia+music+industry&hl=en-US&gl=US&ceid=US:en",
+      "lang": "en",
+      "weight": 5
+    },
+    {
+      "name": "少数派",
+      "url": "https://sspai.com/feed",
       "lang": "zh",
-      "weight": 7
+      "weight": 4
+    },
+    {
+      "name": "音乐财经",
+      "url": "https://www.chinamusicbusiness.cn/feed/",
+      "lang": "zh",
+      "weight": 0
     }
   ],
   "keywords": {
