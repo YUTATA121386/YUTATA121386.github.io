@@ -915,7 +915,14 @@ var editorConfirmed = state.draft && state.draft.sections && state.draft.section
 
   state.phase = "convergence";
 
-  const finalInst = "## 最终复盘\n你是记忆管理师，今日" + dateCN + "。评估日报质量（完整性/准确性/深度/可读性0-10分）、优缺点、规则修改建议、信誉分调整。\n信誉分调整标准：每个角色都必须给出调整（delta为0也要记录），基于今日表现。\n输出: { \"review\": { \"quality_scores\": {...}, \"strengths\": [...], \"weaknesses\": [...], \"root_cause\": \"...\" }, \"actions\": [{\"type\":\"update_rule\",\"rule_file\":\"...\",\"change_type\":\"add/modify\",\"after\":\"...\",\"reason\":\"...\"}, {\"type\":\"update_reputation\",\"agent\":\"collector\",\"delta\":0,\"reason\":\"今日表现总结\"}], \"internal_thought\": \"...\" }";
+  // 注入当前信誉分供记忆管理师参考
+  var currentScores = [];
+  var repDataForPrompt = state.reputation;
+  ["collector", "verifier", "analyst", "editor", "memory-manager"].forEach(function(aid) {
+    var agentRep = repDataForPrompt[aid];
+    if (agentRep) currentScores.push(AGENT_NAMES_CN[aid] + ": " + (agentRep.score || "?") + "分");
+  });
+  const finalInst = "## 最终复盘\n你是记忆管理师，今日" + dateCN + "。\n\n当前各角色信誉分: " + currentScores.join(", ") + "\n\n请评估日报质量（必须填写quality_scores的每个字段：completeness/accuracy/depth/readability，各0-10分）、优缺点、规则修改建议、信誉分调整。\n\n信誉分调整重要指示：每个角色都必须给出调整（delta为0也要记录）。原因中请用上面的真实分数而非自己猜测。\n\n输出: { \"review\": { \"quality_scores\": {\"completeness\":0,\"accuracy\":0,\"depth\":0,\"readability\":0}, \"strengths\": [...], \"weaknesses\": [...], \"root_cause\": \"...\" }, \"actions\": [{\"type\":\"update_rule\",\"rule_file\":\"...\",\"change_type\":\"add/modify\",\"after\":\"...\",\"reason\":\"...\"}, {\"type\":\"update_reputation\",\"agent\":\"collector\",\"delta\":0,\"reason\":\"基于今日表现，信誉分维持XX分\"}], \"internal_thought\": \"...\" }";
   const finalReview = await runAgent("memory-manager", state, finalInst);
 
   if (finalReview.actions) {

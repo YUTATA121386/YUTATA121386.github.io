@@ -278,8 +278,9 @@ function generateProcessLog(state, dateStr) {
 
   // ===== 质量评估 =====
   var qualitySection = "\n\n## 🏆 质量评估\n\n";
-  if (state.review && state.review.quality_scores) {
-    var qs = state.review.quality_scores;
+  var qs = (state.review && state.review.quality_scores) || {};
+  var hasScores = qs.completeness !== undefined || qs.accuracy !== undefined || qs.depth !== undefined || qs.readability !== undefined || qs.score !== undefined;
+  if (hasScores) {
     qualitySection += '| 维度 | 分数 |\n|------|------|\n';
     if (qs.completeness !== undefined) qualitySection += "| 完整性 | " + qs.completeness + " |\n";
     if (qs.accuracy !== undefined) qualitySection += "| 准确性 | " + qs.accuracy + " |\n";
@@ -290,7 +291,7 @@ function generateProcessLog(state, dateStr) {
       var avg = [qs.completeness, qs.accuracy, qs.depth, qs.readability].filter(function(v) { return v !== undefined; }).reduce(function(a,b) { return a+b; }, 0) / [qs.completeness, qs.accuracy, qs.depth, qs.readability].filter(function(v) { return v !== undefined; }).length;
       qualitySection += "| **总分(平均)** | **" + avg.toFixed(1) + "** |\n";
     }
-    if (state.review.summary) qualitySection += "\n> " + state.review.summary + "\n";
+    if (state.review && state.review.summary) qualitySection += "\n> " + state.review.summary + "\n";
   } else {
     qualitySection += "> 今日未进行正式质量评估\n";
 
