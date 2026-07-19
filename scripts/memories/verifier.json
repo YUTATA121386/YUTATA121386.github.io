@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 100,
+      "trust": 96,
       "trend": "improving",
       "history": [
         {
@@ -63,6 +63,11 @@
           "date": "2026-07-18",
           "event": "合作 9次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-07-19",
+          "event": "冲突 9次",
+          "trustDelta": -4
         }
       ],
       "summary": "关系良好"
@@ -97,7 +102,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 50,
+      "trust": 52,
       "trend": "stable",
       "history": [
         {
@@ -144,6 +149,11 @@
           "date": "2026-07-18",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 3次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
@@ -301,6 +311,20 @@
       "date": "2026-07-18",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 首批20条素材审核完毕，通过18条，拒绝2条。通过率90%。表现非常出色！",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-19",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 首批20条素材审核完成：通过7条，拒绝13条。通过率35%。发现严重问题：大量非音乐行业素材被提交。",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-19",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 首批20条素材审核完成：通过19条，拒绝1条。通过率95%。",
       "lesson": "",
       "impact": ""
     }

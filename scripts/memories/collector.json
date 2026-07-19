@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 100,
+      "trust": 96,
       "trend": "improving",
       "history": [
         {
@@ -63,6 +63,11 @@
           "date": "2026-07-18",
           "event": "合作 9次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-07-19",
+          "event": "冲突 9次",
+          "trustDelta": -4
         }
       ],
       "summary": "关系良好"
@@ -105,6 +110,11 @@
           "date": "2026-07-18",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
@@ -132,7 +142,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 58,
+      "trust": 60,
       "trend": "improving",
       "history": [
         {
@@ -164,103 +174,17 @@
           "date": "2026-07-18",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "小米 SU7 碰撞测试博主高某被判刑一年八��月，罚款 10 万元 - IT之家",
-      "source": "Google News 音乐产业",
-      "reason": "与音乐产业完全无关。小米SU7碰撞测试博主被判刑，属于汽车/社会新闻。来源分类错误。",
-      "summary": "被拒: 小米 SU7 碰撞测试博主高某被判刑一年八��月，罚款 10 万元 - IT之家",
-      "lesson": "避免采集此类素材: 与音乐产业完全无关。小米SU7碰撞测试博主被判刑，属于汽车/社会新闻。来源分类错误。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "德官员吁欧盟提高中国汽车关税 以促中企与大众合作 - 联合早报",
-      "source": "Google News 音乐产业",
-      "reason": "与音乐产业完全无关。欧盟对中国汽车关税，属于国际贸易/汽车行业新闻。来源分类错误。",
-      "summary": "被拒: 德官员吁欧盟提高中国汽车关税 以促中企与大众合作 - 联合早报",
-      "lesson": "避免采集此类素材: 与音乐产业完全无关。欧盟对中国汽车关税，属于国际贸易/汽车行业新闻。来源分类错误。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Audeze’s flagship gaming headphones now have adaptive noise cancelling for ultimate focus",
-      "source": "MusicTech",
-      "reason": "与音乐产业核心关联度低。Audeze游戏耳机带降噪功能，属于消费电子/游戏外设产品发布，非音乐制作或行业动态。",
-      "summary": "被拒: Audeze’s flagship gaming headphones now have adaptive noise cancelling for ultim",
-      "lesson": "避免采集此类素材: 与音乐产业核心关联度低。Audeze游戏耳机带降噪功能，属于消费电子/游戏外设产品发布，非音乐制作或行业动态。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Reason 14, as reviewed by a Cubase user: “Bells and whistles aren’t always everything”",
-      "source": "MusicTech",
-      "reason": "Reason 14评测，来自Cubase用户的视角。虽然属于DAW评测，但内容过于个人化、技术细节导向，更像一篇普通软件评测而非行业趋势报道。",
-      "summary": "被拒: Reason 14, as reviewed by a Cubase user: “Bells and whistles aren’t always every",
-      "lesson": "避免采集此类素材: Reason 14评测，来自Cubase用户的视角。虽然属于DAW评测，但内容过于个人化、技术细节导向，更像一篇普通软件评测而非行业趋势报道。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Massachusetts Becomes the Latest State to Propose Strict Ticket Resale Price Caps Under Noah Kahan-I",
-      "source": "Digital Music News",
-      "summary": "通过: Massachusetts Becomes the Latest State to Propose Strict Ticket Resale Price Cap",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "“For a long time, the machine itself acted as a gatekeeper”: Teenage Engineering’s new APC-2 wants t",
-      "source": "MusicTech",
-      "summary": "通过: “For a long time, the machine itself acted as a gatekeeper”: Teenage Engineering",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Hackers reveal Suno scraped music data from YouTube, Deezer, Genius, and more",
-      "source": "MusicTech",
-      "summary": "通过: Hackers reveal Suno scraped music data from YouTube, Deezer, Genius, and more",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Pink Floyd gets a limited-edition We Are Rewind cassette player – complete with an exclusive Dark Si",
-      "source": "MusicTech",
-      "summary": "通过: Pink Floyd gets a limited-edition We Are Rewind cassette player – complete with ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Neutone and Roland want you to design your own AI model — and play it live",
-      "source": "MusicTech",
-      "summary": "通过: Neutone and Roland want you to design your own AI model — and play it live",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "每日统计",
-      "summary": "今日通过率: 58% (35/60)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "How data centers became a symbol of Americans’ rage - The Washington Post",
-      "source": "Google News Music Industry",
-      "reason": "内容完全不相关。关于数据中心引发民众愤怒的社会科技新闻，与音乐产业无直接关联。",
-      "summary": "被拒: How data centers became a symbol of Americans’ rage - The Washington Post",
-      "lesson": "避免采集此类素材: 内容完全不相关。关于数据中心引发民众愤怒的社会科技新闻，与音乐产业无直接关联。"
-    },
     {
       "date": "2026-07-19",
       "type": "被拒案例",
@@ -579,6 +503,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 83% (33/40)",
       "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "U.S. Strikes Leave Iranians Isolated and Scared - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "与音乐行业核心无关。这是关于美伊冲突的国际政治/军事新闻。",
+      "summary": "被拒: U.S. Strikes Leave Iranians Isolated and Scared - The New York Times",
+      "lesson": "避免采集此类素材: 与音乐行业核心无关。这是关于美伊冲突的国际政治/军事新闻。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "ICE officer’s troubled past renews questions about vetting - The Washington Post",
+      "source": "Google News Music Industry",
+      "reason": "与音乐行业核心无关。这是关于ICE官员背景调查的美国国内政治/社会新闻。",
+      "summary": "被拒: ICE officer’s troubled past renews questions about vetting - The Washington Post",
+      "lesson": "避免采集此类素材: 与音乐行业核心无关。这是关于ICE官员背景调查的美国国内政治/社会新闻。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "Ukraine Escalates Air War With Deadly Strikes on Russia’s ‘Amazon’ - WSJ",
+      "source": "Google News Music Industry",
+      "reason": "与音乐行业核心无关。这是关于俄乌战争的国际政治/军事新闻。",
+      "summary": "被拒: Ukraine Escalates Air War With Deadly Strikes on Russia’s ‘Amazon’ - WSJ",
+      "lesson": "避免采集此类素材: 与音乐行业核心无关。这是关于俄乌战争的国际政治/军事新闻。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "NYC weather: Storms start to exit but downpour risks remain; air quality to improve | Live updates -",
+      "source": "Google News Music Industry",
+      "reason": "与音乐行业核心无关。这是关于纽约天气的本地新闻。",
+      "summary": "被拒: NYC weather: Storms start to exit but downpour risks remain; air quality to impr",
+      "lesson": "避免采集此类素材: 与音乐行业核心无关。这是关于纽约天气的本地新闻。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "被拒案例",
+      "title": "Troy Jackson jumps out to big lead in race to replace Graham Platner in Maine - Politico",
+      "source": "Google News Music Industry",
+      "reason": "与音乐行业核心无关。这是关于美国缅因州地方选举的政治新闻。",
+      "summary": "被拒: Troy Jackson jumps out to big lead in race to replace Graham Platner in Maine - ",
+      "lesson": "避免采集此类素材: 与音乐行业核心无关。这是关于美国缅因州地方选举的政治新闻。"
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "“For a long time, the machine itself acted as a gatekeeper”: Teenage Engineering’s new APC-2 wants t",
+      "source": "MusicTech",
+      "summary": "通过: “For a long time, the machine itself acted as a gatekeeper”: Teenage Engineering",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Hackers reveal Suno scraped music data from YouTube, Deezer, Genius, and more",
+      "source": "MusicTech",
+      "summary": "通过: Hackers reveal Suno scraped music data from YouTube, Deezer, Genius, and more",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Pink Floyd gets a limited-edition We Are Rewind cassette player – complete with an exclusive Dark Si",
+      "source": "MusicTech",
+      "summary": "通过: Pink Floyd gets a limited-edition We Are Rewind cassette player – complete with ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Neutone and Roland want you to design your own AI model — and play it live",
+      "source": "MusicTech",
+      "summary": "通过: Neutone and Roland want you to design your own AI model — and play it live",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "标杆案例",
+      "title": "Reason 14, as reviewed by a Cubase user: “Bells and whistles aren’t always everything”",
+      "source": "MusicTech",
+      "summary": "通过: Reason 14, as reviewed by a Cubase user: “Bells and whistles aren’t always every",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-19",
+      "type": "每日统计",
+      "summary": "今日通过率: 50% (30/60)",
+      "lesson": ""
     }
   ],
   "selfReview": {

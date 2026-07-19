@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 58,
+      "trust": 60,
       "trend": "improving",
       "history": [
         {
@@ -38,12 +38,17 @@
           "date": "2026-07-18",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
     },
     "verifier": {
-      "trust": 50,
+      "trust": 52,
       "trend": "stable",
       "history": [
         {
@@ -90,6 +95,11 @@
           "date": "2026-07-18",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 3次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
@@ -122,7 +132,7 @@
       "summary": "关系一般"
     },
     "editor": {
-      "trust": 56,
+      "trust": 58,
       "trend": "improving",
       "history": [
         {
@@ -134,6 +144,11 @@
           "date": "2026-07-19",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 2
         },
         {
           "date": "2026-07-19",
@@ -189,6 +204,13 @@
       "date": "2026-07-18",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日工作总结：今日完成5轮采集，共提交159条原始素材。通过与核查师的互动，完成了两批共40条的审核（通过率分别为90%和75%），并处理了5条被拒素材。核心失",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-19",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日工作总结：今日采集经历了从高光到至暗的时刻。首轮20条素材获得95%通过率（19/20），但后续提交的两批共40条素材，因未能严格区分“行业新闻”与“泛新闻",
       "lesson": "",
       "impact": ""
     }
