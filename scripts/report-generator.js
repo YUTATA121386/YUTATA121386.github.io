@@ -331,6 +331,19 @@ function generateWeeklyReport(state, dateStr) {
   var agents = ["collector", "verifier", "analyst", "editor", "memory-manager"];
   var sysMem = loadSystemMemory();
   var weekStart = new Date(new Date(dateStr).getTime() - 6 * 86400000);
+  // Collect week entries for rule change count
+  var weekEntries = [];
+  try {
+    var cl = fs.readFileSync(CHANGELOG_FILE, "utf-8");
+    var clDate = "";
+    cl.split("\n").forEach(function(l) {
+      if (/^## \d{4}-\d{2}-\d{2}/.test(l)) { clDate = l.replace("## ", "").trim(); }
+      else if (/^- /.test(l) && clDate) {
+        var ed2 = new Date(clDate);
+        if (ed2 >= weekStart && ed2 <= new Date(dateStr)) { weekEntries.push(l.replace(/^- /, "").trim()); }
+      }
+    });
+  } catch(e) {}
   var weeklyRuleChanges = 0;
   sysMem.entries.forEach(function(e) {
     var ed = new Date(e.date);
@@ -413,13 +426,13 @@ function generateWeeklyReport(state, dateStr) {
   summaryCards += "</div>\n";
 
   var avgScore = agents.reduce(function(s, aid) { return s + ((rep[aid] && rep[aid].score) || 0); }, 0) / agents.length;
-  var scoresContent = "# " + dateStr.slice(0, 4) + " 年第" + String(weekNum).padStart(2, "0") + "周（" + dateCN + "）\n\n> 🤖 多Agent信誉分趋势\n\n" + summaryCards + "\n" + chartSvg + "\n" + legendHtml + "\n\n### 平均信誉分: " + avgScore.toFixed(1) + "\n\n### 本周规则变更\n\n| 变更条数 | 说明 |\n|------|------|\n| " + (weeklyRuleChanges || 0) + " 条 | 由记忆管理师在日常复盘中自动执行 |\n\n";
+  var scoresContent = "# " + dateStr.slice(0, 4) + " 年第" + String(weekNum).padStart(2, "0") + "周（" + dateCN + "）\n\n> 🤖 多Agent信誉分趋势\n\n" + summaryCards + "\n" + chartSvg + "\n" + legendHtml + "\n\n### 平均信誉分: " + avgScore.toFixed(1) + "\n\n### 本周规则变更\n\n| 变更条数 | 说明 |\n|------|------|\n| " + (weekEntries.length + " 条 | 由记忆管理师在日常复盘中自动执行 |\n\n";
 
   var changelogDetail = "";
   try {
     var changelogContent = fs.readFileSync(CHANGELOG_FILE, "utf-8");
     var lines = changelogContent.split("\n");
-    var weekEntries = [];
+    var displayEntries = [];
     var currentDate = "";
     for (var li = 0; li < lines.length; li++) {
       var line = lines[li];
@@ -428,14 +441,14 @@ function generateWeeklyReport(state, dateStr) {
       } else if (/^- /.test(line) && currentDate) {
         var ed = new Date(currentDate);
         if (ed >= weekStart && ed <= new Date(dateStr)) {
-          weekEntries.push(line.replace(/^- /, "").trim());
+          displayEntries.push(line.replace(/^- /, "").trim());
         }
       }
     }
-    if (weekEntries.length > 0) {
+    if (displayEntries.length > 0) {
       changelogDetail = "\n### 本周规则变更详情\n\n";
       changelogDetail += '<div class="changelog-list">\n';
-      weekEntries.slice(0, 15).forEach(function(e) {
+      displayEntries.slice(0, 15).forEach(function(e) {
         var parsed = e.match(/^\*\*(.+?)\*\*\s*\((.+?)\):\s*(.+)/);
         if (parsed) {
           changelogDetail += '<div><span class="changelog-file">' + parsed[1] + '</span> <span class="changelog-ver">' + parsed[2] + '</span><br>' + parsed[3] + '</div>\n';
@@ -444,7 +457,7 @@ function generateWeeklyReport(state, dateStr) {
         }
       });
       changelogDetail += '</div>\n';
-      if (weekEntries.length > 15) changelogDetail += '\n> 共' + weekEntries.length + ' 条变更，仅展示最近15条\n';
+      if (displayEntries.length > 15) changelogDetail += '\n> 共' + displayEntries.length + ' 条变更，仅展示最近15条\n';
     }
   } catch (e) {
     // skip changelog read errors
