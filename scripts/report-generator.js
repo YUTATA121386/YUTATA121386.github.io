@@ -426,7 +426,7 @@ function generateWeeklyReport(state, dateStr) {
   summaryCards += "</div>\n";
 
   var avgScore = agents.reduce(function(s, aid) { return s + ((rep[aid] && rep[aid].score) || 0); }, 0) / agents.length;
-  var scoresContent = "# " + dateStr.slice(0, 4) + " 年第" + String(weekNum).padStart(2, "0") + "周（" + dateCN + "）\n\n> 🤖 多Agent信誉分趋势\n\n" + summaryCards + "\n" + chartSvg + "\n" + legendHtml + "\n\n### 平均信誉分: " + avgScore.toFixed(1) + "\n\n### 本周规则变更\n\n| 变更条数 | 说明 |\n|------|------|\n| " + (weekEntries.length + " 条 | 由记忆管理师在日常复盘中自动执行 |\n\n";
+  var scoresContent = "# " + dateStr.slice(0, 4) + " 年第" + String(weekNum).padStart(2, "0") + "周（" + dateCN + "）\n\n> 🤖 多Agent信誉分趋势\n\n" + summaryCards + "\n" + chartSvg + "\n" + legendHtml + "\n\n### 平均信誉分: " + avgScore.toFixed(1) + "\n\n### 本周规则变更\n\n| 变更条数 | 说明 |\n|------|------|\n| " + weekEntries.length + " 条 | 由记忆管理师在日常复盘中自动执行 |\n\n";
 
   var changelogDetail = "";
   try {
