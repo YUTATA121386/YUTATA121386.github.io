@@ -1067,7 +1067,7 @@ var editorConfirmed = state.draft && state.draft.sections && state.draft.section
     report = report.replace(new RegExp(role + "未参与今日工作[。.]?", "g"), fixUncansai[role]);
   }
   // 修复TL;DR排版：确保每条之间有空行，防止Markdown渲染合为一段
-  report = report.replace(/^(## TL;DR 今日速览\n\n)((?:[^#\n].*\n?)+)/gm, function(match, header, body) {
+  report = report.replace(/^(## (?:TL;DR )?(?:今日)?(?:要闻)?速览\n\n)((?:[^#\n].*\n?)+)/gm, function(match, header, body) {
     var items = body.split("\n").filter(function(l) { return l.trim(); });
     var formatted = items.map(function(item, i) {
       return (i > 0 ? "\n" : "") + item.trim();

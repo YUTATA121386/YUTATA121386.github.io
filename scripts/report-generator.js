@@ -180,7 +180,7 @@ function generateProcessLog(state, dateStr) {
     if (vd.decision) arb += '> **\u88C1\u51B3\u7ED3\u679C**\uFF1A' + vd.decision + '\n>\n';
     if (vd.action_items && vd.action_items.length) {
       arb += '> **\u6267\u884C\u6B65\u9AA4**\uFF1A\n';
-      vd.action_items.forEach(function(a) { arb += '> - ' + a + '\n'; });
+      vd.action_items.forEach(function(a) { arb += '> - ' + (typeof a === 'string' ? a : (a.text || a.description || a.action || JSON.stringify(a))) + '\n'; });
       arb += '>\n';
     }
     if (vd.rule_changes && vd.rule_changes.length) {
