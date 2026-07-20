@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 96,
+      "trust": 86,
       "trend": "improving",
       "history": [
         {
@@ -68,6 +68,11 @@
           "date": "2026-07-19",
           "event": "冲突 9次",
           "trustDelta": -4
+        },
+        {
+          "date": "2026-07-20",
+          "event": "冲突 13次",
+          "trustDelta": -10
         }
       ],
       "summary": "关系良好"
@@ -185,97 +190,6 @@
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Murkowski slams door shut on supporting SAVE America Act - Democracy Docket",
-      "source": "Google News Music Industry",
-      "reason": "内容完全不相关。关于美国参议员对《SAVE America Act》态度的政治新闻。",
-      "summary": "被拒: Murkowski slams door shut on supporting SAVE America Act - Democracy Docket",
-      "lesson": "避免采集此类素材: 内容完全不相关。关于美国参议员对《SAVE America Act》态度的政治新闻。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Appeals court narrows setback for Trump USPS mail-in ballot policy - The Hill",
-      "source": "Google News Music Industry",
-      "reason": "内容完全不相关。关于美国上诉法院对USPS邮寄投票政策裁决的法律政治新闻。",
-      "summary": "被拒: Appeals court narrows setback for Trump USPS mail-in ballot policy - The Hill",
-      "lesson": "避免采集此类素材: 内容完全不相关。关于美国上诉法院对USPS邮寄投票政策裁决的法律政治新闻。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Hunter Biden says being ‘stripped naked in the public square’ was a gift - NPR",
-      "source": "Google News Music Industry",
-      "reason": "内容与音乐产业完全无关（Hunter Biden政治新闻），数据源故障的典型产物。",
-      "summary": "被拒: Hunter Biden says being ‘stripped naked in the public square’ was a gift - NPR",
-      "lesson": "避免采集此类素材: 内容与音乐产业完全无关（Hunter Biden政治新闻），数据源故障的典型产物。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Christopher Nolan says it’ll be “at least” three years until his next film after gruelling shoot for",
-      "source": "NME",
-      "reason": "内容为导演Christopher Nolan的个人计划，与音乐产业完全无关。",
-      "summary": "被拒: Christopher Nolan says it’ll be “at least” three years until his next film after",
-      "lesson": "避免采集此类素材: 内容为导演Christopher Nolan的个人计划，与音乐产业完全无关。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Watch The Edge join Martin Garrix at Tomorrowland to debut new U2 collaboration ‘Fireflies’",
-      "source": "NME",
-      "summary": "通过: Watch The Edge join Martin Garrix at Tomorrowland to debut new U2 collaboration ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Teddy Swims covers Van Halen’s ‘Jump’ at Electric Castle 2026",
-      "source": "NME",
-      "summary": "通过: Teddy Swims covers Van Halen’s ‘Jump’ at Electric Castle 2026",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Twenty One Pilots and Teddy Swims bring the crowds to Electric Castle day two",
-      "source": "NME",
-      "summary": "通过: Twenty One Pilots and Teddy Swims bring the crowds to Electric Castle day two",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "The Rolling Stones equal The Beatles with 15th UK Number One album",
-      "source": "NME",
-      "summary": "通过: The Rolling Stones equal The Beatles with 15th UK Number One album",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Check out Travis Scott’s ‘The Odyssey’ end-credits song ‘When I’m Home’, in collaboration with James",
-      "source": "NME",
-      "summary": "通过: Check out Travis Scott’s ‘The Odyssey’ end-credits song ‘When I’m Home’, in coll",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "每日统计",
-      "summary": "今日通过率: 63% (50/80)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "A股全線暴跌 滬指跌穿3800點 創指跌7.15% - 大纪元",
-      "source": "Google News 音乐产业",
-      "reason": "内容是关于A股暴跌的财经新闻，与音乐产业完全无关。",
-      "summary": "被拒: A股全線暴跌 滬指跌穿3800點 創指跌7.15% - 大纪元",
-      "lesson": "避免采集此类素材: 内容是关于A股暴跌的财经新闻，与音乐产业完全无关。"
-    },
     {
       "date": "2026-07-19",
       "type": "被拒案例",
@@ -594,13 +508,106 @@
       "type": "每日统计",
       "summary": "今日通过率: 50% (30/60)",
       "lesson": ""
+    },
+    {
+      "date": "2026-07-20",
+      "type": "被拒案例",
+      "title": "‘Mexodus’ Review: The Underground Railroad Runs South to Mexico in a Pasadena Playhouse Musical That",
+      "source": "Variety Music",
+      "reason": "相关性弱。这是一部舞台剧的评论，虽然涉及音乐元素（如Aaliyah的引用），但核心是戏剧评论，与音乐行业核心（唱片、艺人、流媒体、现场演出）关联度不高。",
+      "summary": "被拒: ‘Mexodus’ Review: The Underground Railroad Runs South to Mexico in a Pasadena Pl",
+      "lesson": "避免采集此类素材: 相关性弱。这是一部舞台剧的评论，虽然涉及音乐元素（如Aaliyah的引用），但核心是戏剧评论，与音乐行业核心（唱片、艺人、流媒体、现场演出）关联度不高。"
+    },
+    {
+      "date": "2026-07-20",
+      "type": "被拒案例",
+      "title": "Teyana Taylor Celebrates World Cup in NYC, Nicole Kidman Takes in Wimbledon and More Celeb Red Carpe",
+      "source": "Variety Music",
+      "reason": "相关性弱。这是名人社交活动汇总（Teyana Taylor看世界杯，Nicole Kidman看温网），核心是娱乐花边而非音乐行业事件。",
+      "summary": "被拒: Teyana Taylor Celebrates World Cup in NYC, Nicole Kidman Takes in Wimbledon and ",
+      "lesson": "避免采集此类素材: 相关性弱。这是名人社交活动汇总（Teyana Taylor看世界杯，Nicole Kidman看温网），核心是娱乐花边而非音乐行业事件。"
+    },
+    {
+      "date": "2026-07-20",
+      "type": "被拒案例",
+      "title": "‘Saiyaara’ Stars Ahaan Panday and Aneet Padda Mark Film’s First Year With Collector’s Edition Vinyl ",
+      "source": "Variety Music",
+      "reason": "相关性弱。宝莱坞电影周年庆祝活动，虽有明星参与，但核心是电影宣发而非音乐行业事件。",
+      "summary": "被拒: ‘Saiyaara’ Stars Ahaan Panday and Aneet Padda Mark Film’s First Year With Collec",
+      "lesson": "避免采集此类素材: 相关性弱。宝莱坞电影周年庆祝活动，虽有明星参与，但核心是电影宣发而非音乐行业事件。"
+    },
+    {
+      "date": "2026-07-20",
+      "type": "被拒案例",
+      "title": "#周深[超话]# [给你小心心]#腾讯音乐由你榜#🎵#周深新歌全世界的雨# 让全世界下雨我陪着你滂沱闪电划过见证我们如何越过湖泊也越过沼泽周深《全世界的雨》 酷狗:http://t.cn/AXKBE",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "质量低。这是粉丝发布的微博推广内容，属于营销/饭圈动态，非专业新闻或行业分析。",
+      "summary": "被拒: #周深[超话]# [给你小心心]#腾讯音乐由你榜#🎵#周深新歌全世界的雨# 让全世界下雨我陪着你滂沱闪电划过见证我们如何越过湖泊也越过沼泽周深《全世界的雨》 ",
+      "lesson": "避免采集此类素材: 质量低。这是粉丝发布的微博推广内容，属于营销/饭圈动态，非专业新闻或行业分析。"
+    },
+    {
+      "date": "2026-07-20",
+      "type": "被拒案例",
+      "title": "新浪网· - 新浪网",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "无效素材。标题不完整，无法判断内容，极可能是抓取错误或垃圾信息。",
+      "summary": "被拒: 新浪网· - 新浪网",
+      "lesson": "避免采集此类素材: 无效素材。标题不完整，无法判断内容，极可能是抓取错误或垃圾信息。"
+    },
+    {
+      "date": "2026-07-20",
+      "type": "标杆案例",
+      "title": "Freddy Cannon, Rocker Whose Late ’50s and Early ’60s Hits Included ‘Palisades Park’ and ‘Tallahassee",
+      "source": "Variety Music",
+      "summary": "通过: Freddy Cannon, Rocker Whose Late ’50s and Early ’60s Hits Included ‘Palisades Pa",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-20",
+      "type": "标杆案例",
+      "title": "网易云音乐午前上涨4% 近日宣布全面接入DeepSeek-V4 - 新浪财经",
+      "source": "Google News 腾讯音乐/网易云",
+      "summary": "通过: 网易云音乐午前上涨4% 近日宣布全面接入DeepSeek-V4 - 新浪财经",
+      "lesson": "此类素材值得采集: 命中关键词 音乐平台"
+    },
+    {
+      "date": "2026-07-20",
+      "type": "标杆案例",
+      "title": "东方证券：腾讯音乐维持“买入”评级 目标价52.39港元 - 新浪财经",
+      "source": "Google News 腾讯音乐/网易云",
+      "summary": "通过: 东方证券：腾讯音乐维持“买入”评级 目标价52.39港元 - 新浪财经",
+      "lesson": "此类素材值得采集: 命中关键词 中国音乐市场"
+    },
+    {
+      "date": "2026-07-20",
+      "type": "标杆案例",
+      "title": "国海证券：维持网易云音乐“买入”评级 在线订阅收入稳健增长 大力发展AI功能 - 新浪财经",
+      "source": "Google News 腾讯音乐/网易云",
+      "summary": "通过: 国海证券：维持网易云音乐“买入”评级 在线订阅收入稳健增长 大力发展AI功能 - 新浪财经",
+      "lesson": "此类素材值得采集: 命中关键词 音乐平台"
+    },
+    {
+      "date": "2026-07-20",
+      "type": "标杆案例",
+      "title": "Gracie Abrams Shares Two Bonus ‘Daughter From Hell’ Tracks",
+      "source": "Rolling Stone Music",
+      "summary": "通过: Gracie Abrams Shares Two Bonus ‘Daughter From Hell’ Tracks",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-20",
+      "type": "每日统计",
+      "summary": "今日通过率: 43% (34/80)",
+      "lesson": ""
     }
   ],
   "selfReview": {
     "strengths": [
       "得到认可"
     ],
-    "weaknesses": [],
+    "weaknesses": [
+      "质量不稳定"
+    ],
     "ongoingIssues": [],
     "improvementPlan": ""
   }
