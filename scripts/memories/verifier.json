@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 86,
+      "trust": 94,
       "trend": "improving",
       "history": [
         {
@@ -73,6 +73,11 @@
           "date": "2026-07-20",
           "event": "冲突 13次",
           "trustDelta": -10
+        },
+        {
+          "date": "2026-07-20",
+          "event": "合作 11次",
+          "trustDelta": 8
         }
       ],
       "summary": "关系良好"
@@ -163,6 +168,11 @@
         {
           "date": "2026-07-20",
           "event": "合作 5次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-07-20",
+          "event": "合作 4次",
           "trustDelta": 0
         }
       ],
@@ -349,6 +359,20 @@
       "date": "2026-07-20",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: BARKS源的素材质量很高，全部通过。",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-20",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: RAW-2026-07-20-0003, RAW-2026-07-20-0006, RAW-2026-07-20-0008, RAW-2026-07-20-00",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-20",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 第一批20条素材审核完成：通过16条，拒绝4条。通过率80%。",
       "lesson": "",
       "impact": ""
     }

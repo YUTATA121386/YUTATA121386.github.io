@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 86,
+      "trust": 94,
       "trend": "improving",
       "history": [
         {
@@ -73,6 +73,11 @@
           "date": "2026-07-20",
           "event": "冲突 13次",
           "trustDelta": -10
+        },
+        {
+          "date": "2026-07-20",
+          "event": "合作 11次",
+          "trustDelta": 8
         }
       ],
       "summary": "关系良好"
@@ -147,7 +152,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 60,
+      "trust": 62,
       "trend": "improving",
       "history": [
         {
@@ -184,103 +189,17 @@
           "date": "2026-07-19",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-07-20",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "金價跌破4000美元 大陸追金者浮虧10萬人民幣 - 大纪元",
-      "source": "Google News 音乐产业",
-      "reason": "内容是关于金价波动的财经新闻，与音乐产业完全无关。",
-      "summary": "被拒: 金價跌破4000美元 大陸追金者浮虧10萬人民幣 - 大纪元",
-      "lesson": "避免采集此类素材: 内容是关于金价波动的财经新闻，与音乐产业完全无关。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "欧洲奋力追赶中美，争夺数字自主权 - 纽约时报中文网",
-      "source": "Google News 音乐产业",
-      "reason": "内容是关于欧洲数字自主权的泛科技/政治新闻，与音乐产业核心关联微弱。",
-      "summary": "被拒: 欧洲奋力追赶中美，争夺数字自主权 - 纽约时报中文网",
-      "lesson": "避免采集此类素材: 内容是关于欧洲数字自主权的泛科技/政治新闻，与音乐产业核心关联微弱。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "小米 SU7 碰撞测试博主高某被判刑一年八个月，罚款 10 万元 - IT之家",
-      "source": "Google News 音乐产业",
-      "reason": "内容是关于小米汽车碰撞测试博主的法律判决，与音乐产业完全无关。",
-      "summary": "被拒: 小米 SU7 碰撞测试博主高某被判刑一年八个月，罚款 10 万元 - IT之家",
-      "lesson": "避免采集此类素材: 内容是关于小米汽车碰撞测试博主的法律判决，与音乐产业完全无关。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Live updates: US reports its first military deaths since March after a week of renewed fighting with",
-      "source": "Google News Music Industry",
-      "reason": "内容是关于美军在中东的伤亡和地缘政治动态，与音乐产业完全无关。",
-      "summary": "被拒: Live updates: US reports its first military deaths since March after a week of r",
-      "lesson": "避免采集此类素材: 内容是关于美军在中东的伤亡和地缘政治动态，与音乐产业完全无关。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Audeze’s flagship gaming headphones now have adaptive noise cancelling for ultimate focus",
-      "source": "MusicTech",
-      "summary": "通过: Audeze’s flagship gaming headphones now have adaptive noise cancelling for ultim",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Hackers reveal Suno scraped music data from YouTube, Deezer, Genius, and more",
-      "source": "MusicTech",
-      "summary": "通过: Hackers reveal Suno scraped music data from YouTube, Deezer, Genius, and more",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Pink Floyd gets a limited-edition We Are Rewind cassette player – complete with an exclusive Dark Si",
-      "source": "MusicTech",
-      "summary": "通过: Pink Floyd gets a limited-edition We Are Rewind cassette player – complete with ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Neutone and Roland want you to design your own AI model — and play it live",
-      "source": "MusicTech",
-      "summary": "通过: Neutone and Roland want you to design your own AI model — and play it live",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Reason 14, as reviewed by a Cubase user: “Bells and whistles aren’t always everything”",
-      "source": "MusicTech",
-      "summary": "通过: Reason 14, as reviewed by a Cubase user: “Bells and whistles aren’t always every",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "每日统计",
-      "summary": "今日通过率: 72% (43/60)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Avery Cochran’s ‘Shapeshifting On A Saturday Night’",
-      "source": "Music Ally",
-      "reason": "该素材为单一新兴艺人新歌发布，缺乏行业宏观视角、商业模式创新或广泛影响力，属于艺人推广层面，不符合‘行业动态’标准。",
-      "summary": "被拒: Avery Cochran’s ‘Shapeshifting On A Saturday Night’",
-      "lesson": "避免采集此类素材: 该素材为单一新兴艺人新歌发布，缺乏行业宏观视角、商业模式创新或广泛影响力，属于艺人推广层面，不符合‘行业动态’标准。"
-    },
     {
       "date": "2026-07-19",
       "type": "标杆案例",
@@ -599,6 +518,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 43% (34/80)",
       "lesson": ""
+    },
+    {
+      "date": "2026-07-20",
+      "type": "被拒案例",
+      "title": "Lee Hong Nae In Talks To Join Byeon Woo Seok In “Solo Leveling” Live-Action Adaptation",
+      "source": "Soompi",
+      "reason": "Soompi源。内容为韩国演员加盟《Solo Leveling》真人剧，属于韩娱泛娱乐，与音乐行业核心无关。此源已被多次警告。",
+      "summary": "被拒: Lee Hong Nae In Talks To Join Byeon Woo Seok In “Solo Leveling” Live-Action Adap",
+      "lesson": "避免采集此类素材: Soompi源。内容为韩国演员加盟《Solo Leveling》真人剧，属于韩娱泛娱乐，与音乐行业核心无关。此源已被多次警告。"
+    },
+    {
+      "date": "2026-07-20",
+      "type": "被拒案例",
+      "title": "Seo In Guk and Park Ji Hyun Share An Emotional Hug In “See You At Work Tomorrow!”",
+      "source": "Soompi",
+      "reason": "Soompi源。内容为韩剧预告，与音乐行业核心无关。此源已被多次警告。",
+      "summary": "被拒: Seo In Guk and Park Ji Hyun Share An Emotional Hug In “See You At Work Tomorrow!",
+      "lesson": "避免采集此类素材: Soompi源。内容为韩剧预告，与音乐行业核心无关。此源已被多次警告。"
+    },
+    {
+      "date": "2026-07-20",
+      "type": "被拒案例",
+      "title": "2026 SBS Gayo Daejeon Summer Announces Special Collab Stage Featuring Hearts2Hearts, izna, And MEOVV",
+      "source": "Soompi",
+      "reason": "Soompi源。内容为SBS歌谣大战的特别舞台，虽涉及音乐表演，但属于韩娱泛娱乐，与曲库行业核心无关。此源已被多次警告。",
+      "summary": "被拒: 2026 SBS Gayo Daejeon Summer Announces Special Collab Stage Featuring Hearts2Hea",
+      "lesson": "避免采集此类素材: Soompi源。内容为SBS歌谣大战的特别舞台，虽涉及音乐表演，但属于韩娱泛娱乐，与曲库行业核心无关。此源已被多次警告。"
+    },
+    {
+      "date": "2026-07-20",
+      "type": "被拒案例",
+      "title": "Watch: Yoo Hae Jin, Lee Min Ho, And Park Hae Il Embark On A Search For The Truth In New Film “Assass",
+      "source": "Soompi",
+      "reason": "Soompi源。内容为韩国电影预告，与音乐行业核心无关。此源已被多次警告。",
+      "summary": "被拒: Watch: Yoo Hae Jin, Lee Min Ho, And Park Hae Il Embark On A Search For The Truth",
+      "lesson": "避免采集此类素材: Soompi源。内容为韩国电影预告，与音乐行业核心无关。此源已被多次警告。"
+    },
+    {
+      "date": "2026-07-20",
+      "type": "被拒案例",
+      "title": "Watch: Lee Jung Eun, Kong Hyo Jin, Park So Dam, And Lee Yeon Embark On A Suspicious Family Trip In “",
+      "source": "Soompi",
+      "reason": "Soompi源。内容为韩国电影预告，与音乐行业核心无关。此源已被多次警告。",
+      "summary": "被拒: Watch: Lee Jung Eun, Kong Hyo Jin, Park So Dam, And Lee Yeon Embark On A Suspici",
+      "lesson": "避免采集此类素材: Soompi源。内容为韩国电影预告，与音乐行业核心无关。此源已被多次警告。"
+    },
+    {
+      "date": "2026-07-20",
+      "type": "标杆案例",
+      "title": "Jennifer Finch, L7 Bassist, Dead at 59",
+      "source": "Rolling Stone Music",
+      "summary": "通过: Jennifer Finch, L7 Bassist, Dead at 59",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-20",
+      "type": "标杆案例",
+      "title": "Jelly Roll Goes to San Quentin for New Video ‘Hands Up’",
+      "source": "Rolling Stone Music",
+      "summary": "通过: Jelly Roll Goes to San Quentin for New Video ‘Hands Up’",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-20",
+      "type": "标杆案例",
+      "title": "See Martin Garrix Debut New U2 Collaboration ‘Fireflies’ With the Edge at Tomorrowland",
+      "source": "Rolling Stone Music",
+      "summary": "通过: See Martin Garrix Debut New U2 Collaboration ‘Fireflies’ With the Edge at Tomorr",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-20",
+      "type": "标杆案例",
+      "title": "How Metallica’s Lars Ulrich Was Inspired by U2’s Sphere Residency: ‘F-cking Awestruck’",
+      "source": "Rolling Stone Music",
+      "summary": "通过: How Metallica’s Lars Ulrich Was Inspired by U2’s Sphere Residency: ‘F-cking Awes",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-20",
+      "type": "标杆案例",
+      "title": "Ariana Grande Surprises Fans as Ty Dolla $ign Joins Eternal Sunshine Tour to Duet ‘Safety Net’",
+      "source": "Rolling Stone Music",
+      "summary": "通过: Ariana Grande Surprises Fans as Ty Dolla $ign Joins Eternal Sunshine Tour to Due",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-20",
+      "type": "每日统计",
+      "summary": "今日通过率: 60% (36/60)",
+      "lesson": "通过率良好，保持当前标准"
     }
   ],
   "selfReview": {
