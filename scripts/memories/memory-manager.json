@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 62,
+      "trust": 64,
       "trend": "improving",
       "history": [
         {
@@ -46,6 +46,11 @@
         },
         {
           "date": "2026-07-20",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-07-21",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -115,12 +120,17 @@
           "date": "2026-07-20",
           "event": "合作 4次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-07-21",
+          "event": "合作 3次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
     },
     "analyst": {
-      "trust": 56,
+      "trust": 58,
       "trend": "improving",
       "history": [
         {
@@ -140,6 +150,11 @@
         },
         {
           "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-07-21",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -147,7 +162,7 @@
       "summary": "关系一般"
     },
     "editor": {
-      "trust": 62,
+      "trust": 64,
       "trend": "improving",
       "history": [
         {
@@ -182,6 +197,11 @@
         },
         {
           "date": "2026-07-20",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-07-21",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -250,6 +270,13 @@
       "date": "2026-07-20",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日工作总结：今日是充满挑战但收获巨大的一天。我经历了从盲目采集到主动精炼的转变。初始提交的71条素材中混入了大量来自Soompi（泛娱乐）和NME（游戏/谜题",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-21",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日工作总结：今日总提交素材29条（2批精选），通过率100%（29/29）。首批20条素材100%通过，覆盖AI版权、流媒体定价、现场音乐等核心领域，获得核查",
       "lesson": "",
       "impact": ""
     }

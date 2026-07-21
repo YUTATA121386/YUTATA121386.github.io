@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 94,
+      "trust": 100,
       "trend": "improving",
       "history": [
         {
@@ -78,6 +78,11 @@
           "date": "2026-07-20",
           "event": "合作 11次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-07-21",
+          "event": "合作 11次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -152,7 +157,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 62,
+      "trust": 64,
       "trend": "improving",
       "history": [
         {
@@ -194,103 +199,17 @@
           "date": "2026-07-20",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-07-21",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "UK’s Ofcom launches investigation into TikTok over child safety",
-      "source": "Music Ally",
-      "summary": "通过: UK’s Ofcom launches investigation into TikTok over child safety",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Content discovery on YouTube is changing",
-      "source": "Music Ally",
-      "summary": "通过: Content discovery on YouTube is changing",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Erling Haaland on the top of Norway’s Spotify charts",
-      "source": "Music Ally",
-      "summary": "通过: Erling Haaland on the top of Norway’s Spotify charts",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Big tech platforms implement AI measures to curb AI",
-      "source": "Music Ally",
-      "summary": "通过: Big tech platforms implement AI measures to curb AI",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Album-selling app Lume launches: ‘We just think the current system is incomplete’",
-      "source": "Music Ally",
-      "summary": "通过: Album-selling app Lume launches: ‘We just think the current system is incomplete",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "每日统计",
-      "summary": "今日通过率: 95% (19/20)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-07-18",
-      "type": "被拒案例",
-      "title": "Here’s How to Watch ‘Descendants: Wicked Wonderland’ Online for Free",
-      "source": "Billboard",
-      "reason": "内容是关于迪士尼电影《Descendants》的观看指南，与音乐行业核心无关。",
-      "summary": "被拒: Here’s How to Watch ‘Descendants: Wicked Wonderland’ Online for Free",
-      "lesson": "避免采集此类素材: 内容是关于迪士尼电影《Descendants》的观看指南，与音乐行业核心无关。"
-    },
-    {
-      "date": "2026-07-18",
-      "type": "被拒案例",
-      "title": "‘Obsession’: Here’s Where to Stream the Horror Romance Movie Online",
-      "source": "Billboard",
-      "reason": "内容是关于恐怖浪漫电影的观看指南，与音乐行业核心无关。",
-      "summary": "被拒: ‘Obsession’: Here’s Where to Stream the Horror Romance Movie Online",
-      "lesson": "避免采集此类素材: 内容是关于恐怖浪漫电影的观看指南，与音乐行业核心无关。"
-    },
-    {
-      "date": "2026-07-18",
-      "type": "被拒案例",
-      "title": "Here’s Where to Watch FIFA World Cup Final 2026: Spain vs. Argentina Live Online for Free",
-      "source": "Billboard",
-      "reason": "内容是关于世界杯决赛的观看指南，与音乐行业核心无关。",
-      "summary": "被拒: Here’s Where to Watch FIFA World Cup Final 2026: Spain vs. Argentina Live Online",
-      "lesson": "避免采集此类素材: 内容是关于世界杯决赛的观看指南，与音乐行业核心无关。"
-    },
-    {
-      "date": "2026-07-18",
-      "type": "被拒案例",
-      "title": "Bonnie Tyler Fans Invited to Line the Streets in Wales for Final Farewell",
-      "source": "Billboard",
-      "reason": "内容是Bonnie Tyler的葬礼安排，虽然涉及音乐人，但属于个人/去世事件，对行业趋势分析价值有限。",
-      "summary": "被拒: Bonnie Tyler Fans Invited to Line the Streets in Wales for Final Farewell",
-      "lesson": "避免采集此类素材: 内容是Bonnie Tyler的葬礼安排，虽然涉及音乐人，但属于个人/去世事件，对行业趋势分析价值有限。"
-    },
-    {
-      "date": "2026-07-18",
-      "type": "被拒案例",
-      "title": "Ricky Martin ‘Inexplicably’ Bails on Georgia Concert Less Than 24 Hours Before Showtime",
-      "source": "Digital Music News",
-      "reason": "Ricky Martin临时取消演唱会，属于单一艺人事件，对行业趋势分析价值有限。",
-      "summary": "被拒: Ricky Martin ‘Inexplicably’ Bails on Georgia Concert Less Than 24 Hours Before S",
-      "lesson": "避免采集此类素材: Ricky Martin临时取消演唱会，属于单一艺人事件，对行业趋势分析价值有限。"
-    },
     {
       "date": "2026-07-18",
       "type": "标杆案例",
@@ -609,15 +528,104 @@
       "type": "每日统计",
       "summary": "今日通过率: 60% (36/60)",
       "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-07-21",
+      "type": "被拒案例",
+      "title": "月之暗面回应马斯克“隔空喊话”：可能Kimi确实给到他一点震撼 - 东方财富",
+      "source": "Google News 音乐产业",
+      "reason": "泛AI行业新闻，与音乐产业无直接关联",
+      "summary": "被拒: 月之暗面回应马斯克“隔空喊话”：可能Kimi确实给到他一点震撼 - 东方财富",
+      "lesson": "避免采集此类素材: 泛AI行业新闻，与音乐产业无直接关联"
+    },
+    {
+      "date": "2026-07-21",
+      "type": "被拒案例",
+      "title": "WAIC观察｜从展台到产线，具身��能还差几步 - 新京报",
+      "source": "Google News 音乐产业",
+      "reason": "机器人/具身智能新闻，与音乐行业无关",
+      "summary": "被拒: WAIC观察｜从展台到产线，具身��能还差几步 - 新京报",
+      "lesson": "避免采集此类素材: 机器人/具身智能新闻，与音乐行业无关"
+    },
+    {
+      "date": "2026-07-21",
+      "type": "被拒案例",
+      "title": "两市融资余额减少596.85亿元 - 东方财富",
+      "source": "Google News 音乐产业",
+      "reason": "金融市场数据，与音乐行业无关",
+      "summary": "被拒: 两市融资余额减少596.85亿元 - 东方财富",
+      "lesson": "避免采集此类素材: 金融市场数据，与音乐行业无关"
+    },
+    {
+      "date": "2026-07-21",
+      "type": "被拒案例",
+      "title": "“超节点”集中亮相 国产算力系统性升级提速 - 新华网客户端",
+      "source": "Google News 音乐产业",
+      "reason": "AI算力基础设施新闻，与音乐行业无直接关联",
+      "summary": "被拒: “超节点”集中亮相 国产算力系统性升级提速 - 新华网客户端",
+      "lesson": "避免采集此类素材: AI算力基础设施新闻，与音乐行业无直接关联"
+    },
+    {
+      "date": "2026-07-21",
+      "type": "被拒案例",
+      "title": "中信建投策略分析师夏凡捷：中长期资金坚定流入，提供新定价“锚” - 第一财经",
+      "source": "Google News 音乐产业",
+      "reason": "证券策略分析，与音乐行业完全无关",
+      "summary": "被拒: 中信建投策略分析师夏凡捷：中长期资金坚定流入，提供新定价“锚” - 第一财经",
+      "lesson": "避免采集此类素材: 证券策略分析，与音乐行业完全无关"
+    },
+    {
+      "date": "2026-07-21",
+      "type": "标杆案例",
+      "title": "X and music publishers end their legal battle over infringement",
+      "source": "Music Ally",
+      "summary": "通过: X and music publishers end their legal battle over infringement",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-21",
+      "type": "标杆案例",
+      "title": "Lila launches UK initiative for South Asian musicians and industry pros",
+      "source": "Music Ally",
+      "summary": "通过: Lila launches UK initiative for South Asian musicians and industry pros",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-21",
+      "type": "标杆案例",
+      "title": "Tiny Vinyl gets into hardware with a player, crate and frame",
+      "source": "Music Ally",
+      "summary": "通过: Tiny Vinyl gets into hardware with a player, crate and frame",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-21",
+      "type": "标杆案例",
+      "title": "World Cup sent ‘Wonderwall’ to top of Spotify’s global chart",
+      "source": "Music Ally",
+      "summary": "通过: World Cup sent ‘Wonderwall’ to top of Spotify’s global chart",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-21",
+      "type": "标杆案例",
+      "title": "Why Sony Just Filed a New AI Music Copyright Lawsuit Against Udio",
+      "source": "Billboard",
+      "summary": "通过: Why Sony Just Filed a New AI Music Copyright Lawsuit Against Udio",
+      "lesson": "此类素材值得采集: 命中关键词 音乐版权"
+    },
+    {
+      "date": "2026-07-21",
+      "type": "每日统计",
+      "summary": "今日通过率: 65% (35/54)",
+      "lesson": "通过率良好，保持当前标准"
     }
   ],
   "selfReview": {
     "strengths": [
       "得到认可"
     ],
-    "weaknesses": [
-      "质量不稳定"
-    ],
+    "weaknesses": [],
     "ongoingIssues": [],
     "improvementPlan": ""
   }

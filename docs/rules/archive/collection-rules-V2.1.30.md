@@ -1,5 +1,5 @@
 # collection-rules.md - V2.1.30
-> 归档: 2026-07-20
+> 归档: 2026-07-21
 
 ---
 title: collection-rules
@@ -138,3 +138,23 @@ outline: [2, 3]
 2. 试采集期间通过率低于70%的源自动进入观察列表
 3. 连续两轮通过率低于70%的源自动移入黑名单
 4. 黑名单中的源如需恢复，须由采集师提交改进计划并经核查师批准
+
+## 附录A：音乐产业边界正负面案例清单
+
+### 黑名单源（禁止采集）
+- Soompi (en) — 韩娱泛娱乐，内容以韩剧、综艺、演员活动为主，与音乐行业核心无关
+- NME (en) — 原为音乐媒体，现大量内容为游戏、谜题、影视等泛娱乐，需仅筛选Music板块（如不可行则整体禁用）
+- Google News 音乐产业 (zh) — 通用新闻聚合源，产出大量与音乐行业无关的体育、政治、科技内容
+- Google News Music Industry (en) — 同上，产出大量非音乐内容
+- Google News 中国音乐产业（搜索）(zh) — 同上
+- Google News 腾讯音乐/网易云(zh) — 同上
+- Google News Japan Music Business (en) — 同上
+- Google News Korea Music Business (en) — 同上
+- Google News India Music Industry (en) — 同上
+- Google News SEA Music Industry (en) — 同上
+
+### 高风险源（需预评估后选择性采集）
+- BARKS (ja) — 日本音乐媒体，内容偏演出公告，需筛选行业动态类
+- Variety Music (en) — 娱乐媒体，内容含大量讣告/榜单新闻，需筛选行业分析类
+- NME Asia (en) — 需确认是否聚焦音乐板块
+- Music Press Asia (en) — 需验证内容质量
