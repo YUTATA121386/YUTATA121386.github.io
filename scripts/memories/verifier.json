@@ -83,6 +83,11 @@
           "date": "2026-07-21",
           "event": "合作 11次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-07-22",
+          "event": "合作 10次",
+          "trustDelta": 10
         }
       ],
       "summary": "关系良好"
@@ -183,6 +188,11 @@
         {
           "date": "2026-07-21",
           "event": "合作 3次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-07-22",
+          "event": "合作 1次",
           "trustDelta": 0
         }
       ],
@@ -397,6 +407,20 @@
       "date": "2026-07-21",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 首批20条素材全部通过！通过率100%。",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-22",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 被拒素材：RAW-2026-07-22-0028（AGT表演）和RAW-2026-07-22-0030（Macy's促销）",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-22",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 首批20条素材通过率100%！",
       "lesson": "",
       "impact": ""
     }

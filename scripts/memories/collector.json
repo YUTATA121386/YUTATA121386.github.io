@@ -83,6 +83,11 @@
           "date": "2026-07-21",
           "event": "合作 11次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-07-22",
+          "event": "合作 10次",
+          "trustDelta": 10
         }
       ],
       "summary": "关系良好"
@@ -130,6 +135,11 @@
           "date": "2026-07-19",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-07-22",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
@@ -157,7 +167,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 64,
+      "trust": 66,
       "trend": "improving",
       "history": [
         {
@@ -204,76 +214,17 @@
           "date": "2026-07-21",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-07-22",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-18",
-      "type": "标杆案例",
-      "title": "Apple Music Raises Streaming Subscription Prices for First Time in Nearly Four Years",
-      "source": "Billboard",
-      "summary": "通过: Apple Music Raises Streaming Subscription Prices for First Time in Nearly Four Y",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-18",
-      "type": "标杆案例",
-      "title": "Latest Music Industry Hires: Believe, Play MPE, DIMA, Alta Music Group, UTA, Warner Chappell, Damai ",
-      "source": "Digital Music News",
-      "summary": "通过: Latest Music Industry Hires: Believe, Play MPE, DIMA, Alta Music Group, UTA, War",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-18",
-      "type": "标杆案例",
-      "title": "After Years of Fighting, Elon Musk’s X and Music Publishers Officially Stop Suing Each Other. But Wh",
-      "source": "Digital Music News",
-      "summary": "通过: After Years of Fighting, Elon Musk’s X and Music Publishers Officially Stop Suin",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-18",
-      "type": "标杆案例",
-      "title": "NetEase Cloud Music and Warner Music Group Announce Strategic Multi-Year Licensing Renewal",
-      "source": "Digital Music News",
-      "summary": "通过: NetEase Cloud Music and Warner Music Group Announce Strategic Multi-Year Licensi",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-18",
-      "type": "标杆案例",
-      "title": "Madison Square Garden Sues Wired for Defamation Over Coverage of Leaked Celebrity Database",
-      "source": "Digital Music News",
-      "summary": "通过: Madison Square Garden Sues Wired for Defamation Over Coverage of Leaked Celebrit",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-18",
-      "type": "每日统计",
-      "summary": "今日通过率: 83% (33/40)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "U.S. Strikes Leave Iranians Isolated and Scared - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "与音乐行业核心无关。这是关于美伊冲突的国际政治/军事新闻。",
-      "summary": "被拒: U.S. Strikes Leave Iranians Isolated and Scared - The New York Times",
-      "lesson": "避免采集此类素材: 与音乐行业核心无关。这是关于美伊冲突的国际政治/军事新闻。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "ICE officer’s troubled past renews questions about vetting - The Washington Post",
-      "source": "Google News Music Industry",
-      "reason": "与音乐行业核心无关。这是关于ICE官员背景调查的美国国内政治/社会新闻。",
-      "summary": "被拒: ICE officer’s troubled past renews questions about vetting - The Washington Post",
-      "lesson": "避免采集此类素材: 与音乐行业核心无关。这是关于ICE官员背景调查的美国国内政治/社会新闻。"
-    },
     {
       "date": "2026-07-19",
       "type": "被拒案例",
@@ -618,6 +569,70 @@
       "date": "2026-07-21",
       "type": "每日统计",
       "summary": "今日通过率: 65% (35/54)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-07-22",
+      "type": "被拒案例",
+      "title": "Sarah Hardwig Showcases Her ‘Natural Gift’ With Inspiring Audition on ‘AGT’: Watch",
+      "source": "Billboard",
+      "reason": "AGT选秀 audition，与音乐行业核心运营、版权、商业关联弱",
+      "summary": "被拒: Sarah Hardwig Showcases Her ‘Natural Gift’ With Inspiring Audition on ‘AGT’: Wat",
+      "lesson": "避免采集此类素材: AGT选秀 audition，与音乐行业核心运营、版权、商业关联弱"
+    },
+    {
+      "date": "2026-07-22",
+      "type": "被拒案例",
+      "title": "Black Friday in July? Macy’s Drops Dozens of Summertime Deals, From Under-$100 Tech to Trendy Band T",
+      "source": "Billboard",
+      "reason": "Macy's促销活动，与音乐行业无关",
+      "summary": "被拒: Black Friday in July? Macy’s Drops Dozens of Summertime Deals, From Under-$100 T",
+      "lesson": "避免采集此类素材: Macy's促销活动，与音乐行业无关"
+    },
+    {
+      "date": "2026-07-22",
+      "type": "标杆案例",
+      "title": "World Cup sent ‘Wonderwall’ to top of Spotify’s global chart",
+      "source": "Music Ally",
+      "summary": "通过: World Cup sent ‘Wonderwall’ to top of Spotify’s global chart",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-22",
+      "type": "标杆案例",
+      "title": "TikTok tests AI-likeness detection as Patreon blocks AI crawlers",
+      "source": "Music Ally",
+      "summary": "通过: TikTok tests AI-likeness detection as Patreon blocks AI crawlers",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-22",
+      "type": "标杆案例",
+      "title": "Kylie Minogue Teams Up With Snow Patrol For ‘These Alarms’ Concert Video: Watch",
+      "source": "Billboard",
+      "summary": "通过: Kylie Minogue Teams Up With Snow Patrol For ‘These Alarms’ Concert Video: Watch",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-22",
+      "type": "标杆案例",
+      "title": "Intocable Makes History With Six RIAA Latin Diamond Awards",
+      "source": "Billboard",
+      "summary": "通过: Intocable Makes History With Six RIAA Latin Diamond Awards",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-22",
+      "type": "标杆案例",
+      "title": "Maluma’s ‘Loco X Volver’ Spins Off a Second Tropical Airplay No. 1",
+      "source": "Billboard",
+      "summary": "通过: Maluma’s ‘Loco X Volver’ Spins Off a Second Tropical Airplay No. 1",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-22",
+      "type": "每日统计",
+      "summary": "今日通过率: 93% (28/30)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],
