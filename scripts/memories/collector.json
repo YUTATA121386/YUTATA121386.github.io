@@ -88,6 +88,11 @@
           "date": "2026-07-22",
           "event": "合作 10次",
           "trustDelta": 10
+        },
+        {
+          "date": "2026-07-23",
+          "event": "合作 11次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -167,7 +172,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 66,
+      "trust": 68,
       "trend": "improving",
       "history": [
         {
@@ -219,103 +224,17 @@
           "date": "2026-07-22",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-07-23",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Ukraine Escalates Air War With Deadly Strikes on Russia’s ‘Amazon’ - WSJ",
-      "source": "Google News Music Industry",
-      "reason": "与音乐行业核心无关。这是关于俄乌战争的国际政治/军事新闻。",
-      "summary": "被拒: Ukraine Escalates Air War With Deadly Strikes on Russia’s ‘Amazon’ - WSJ",
-      "lesson": "避免采集此类素材: 与音乐行业核心无关。这是关于俄乌战争的国际政治/军事新闻。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "NYC weather: Storms start to exit but downpour risks remain; air quality to improve | Live updates -",
-      "source": "Google News Music Industry",
-      "reason": "与音乐行业核心无关。这是关于纽约天气的本地新闻。",
-      "summary": "被拒: NYC weather: Storms start to exit but downpour risks remain; air quality to impr",
-      "lesson": "避免采集此类素材: 与音乐行业核心无关。这是关于纽约天气的本地新闻。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "被拒案例",
-      "title": "Troy Jackson jumps out to big lead in race to replace Graham Platner in Maine - Politico",
-      "source": "Google News Music Industry",
-      "reason": "与音乐行业核心无关。这是关于美国缅因州地方选举的政治新闻。",
-      "summary": "被拒: Troy Jackson jumps out to big lead in race to replace Graham Platner in Maine - ",
-      "lesson": "避免采集此类素材: 与音乐行业核心无关。这是关于美国缅因州地方选举的政治新闻。"
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "“For a long time, the machine itself acted as a gatekeeper”: Teenage Engineering’s new APC-2 wants t",
-      "source": "MusicTech",
-      "summary": "通过: “For a long time, the machine itself acted as a gatekeeper”: Teenage Engineering",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Hackers reveal Suno scraped music data from YouTube, Deezer, Genius, and more",
-      "source": "MusicTech",
-      "summary": "通过: Hackers reveal Suno scraped music data from YouTube, Deezer, Genius, and more",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Pink Floyd gets a limited-edition We Are Rewind cassette player – complete with an exclusive Dark Si",
-      "source": "MusicTech",
-      "summary": "通过: Pink Floyd gets a limited-edition We Are Rewind cassette player – complete with ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Neutone and Roland want you to design your own AI model — and play it live",
-      "source": "MusicTech",
-      "summary": "通过: Neutone and Roland want you to design your own AI model — and play it live",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "标杆案例",
-      "title": "Reason 14, as reviewed by a Cubase user: “Bells and whistles aren’t always everything”",
-      "source": "MusicTech",
-      "summary": "通过: Reason 14, as reviewed by a Cubase user: “Bells and whistles aren’t always every",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-19",
-      "type": "每日统计",
-      "summary": "今日通过率: 50% (30/60)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-07-20",
-      "type": "被拒案例",
-      "title": "‘Mexodus’ Review: The Underground Railroad Runs South to Mexico in a Pasadena Playhouse Musical That",
-      "source": "Variety Music",
-      "reason": "相关性弱。这是一部舞台剧的评论，虽然涉及音乐元素（如Aaliyah的引用），但核心是戏剧评论，与音乐行业核心（唱片、艺人、流媒体、现场演出）关联度不高。",
-      "summary": "被拒: ‘Mexodus’ Review: The Underground Railroad Runs South to Mexico in a Pasadena Pl",
-      "lesson": "避免采集此类素材: 相关性弱。这是一部舞台剧的评论，虽然涉及音乐元素（如Aaliyah的引用），但核心是戏剧评论，与音乐行业核心（唱片、艺人、流媒体、现场演出）关联度不高。"
-    },
-    {
-      "date": "2026-07-20",
-      "type": "被拒案例",
-      "title": "Teyana Taylor Celebrates World Cup in NYC, Nicole Kidman Takes in Wimbledon and More Celeb Red Carpe",
-      "source": "Variety Music",
-      "reason": "相关性弱。这是名人社交活动汇总（Teyana Taylor看世界杯，Nicole Kidman看温网），核心是娱乐花边而非音乐行业事件。",
-      "summary": "被拒: Teyana Taylor Celebrates World Cup in NYC, Nicole Kidman Takes in Wimbledon and ",
-      "lesson": "避免采集此类素材: 相关性弱。这是名人社交活动汇总（Teyana Taylor看世界杯，Nicole Kidman看温网），核心是娱乐花边而非音乐行业事件。"
-    },
     {
       "date": "2026-07-20",
       "type": "被拒案例",
@@ -633,6 +552,97 @@
       "date": "2026-07-22",
       "type": "每日统计",
       "summary": "今日通过率: 93% (28/30)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-07-23",
+      "type": "被拒案例",
+      "title": "直线拉升！韩国综指涨超3%重回7000点，三星电子涨超4%、SK海力士涨超4.5%！日本股市涨超400点丨日韩股市 - 每日经济新闻",
+      "source": "Google News 音乐产业",
+      "reason": "日韩股市、半导体股等新闻，与音乐行业完全无关。",
+      "summary": "被拒: 直线拉升！韩国综指涨超3%重回7000点，三星电子涨超4%、SK海力士涨超4.5%！日本股市涨超400点丨日韩股市 - 每日经济新闻",
+      "lesson": "避免采集此类素材: 日韩股市、半导体股等新闻，与音乐行业完全无关。"
+    },
+    {
+      "date": "2026-07-23",
+      "type": "被拒案例",
+      "title": "WTI原油日内涨幅扩大至2.43% 触及89美元/桶 - 观点网",
+      "source": "Google News 音乐产业",
+      "reason": "原油价格、油价等能源新闻，与音乐行业完全无关。",
+      "summary": "被拒: WTI原油日内涨幅扩大至2.43% 触及89美元/桶 - 观点网",
+      "lesson": "避免采集此类素材: 原油价格、油价等能源新闻，与音乐行业完全无关。"
+    },
+    {
+      "date": "2026-07-23",
+      "type": "被拒案例",
+      "title": "从23万创业到万亿市值，光模块一哥即将登陆港股，发行价出炉 - 21财经",
+      "source": "Google News 音乐产业",
+      "reason": "光模块公司上市新闻，属于科技硬件领域，与音乐行业完全无关。",
+      "summary": "被拒: 从23万创业到万亿市值，光模块一哥即将登陆港股，发行价出炉 - 21财经",
+      "lesson": "避免采集此类素材: 光模块公司上市新闻，属于科技硬件领域，与音乐行业完全无关。"
+    },
+    {
+      "date": "2026-07-23",
+      "type": "被拒案例",
+      "title": "国家发展改革委、国家能源局有关负责人就《可再生能源发展“十五五”规划》答记者问 - 新华网",
+      "source": "Google News 音乐产业",
+      "reason": "可再生能源发展规划，属于能源政策领域，与音乐行业完全无关。",
+      "summary": "被拒: 国家发展改革委、国家能源局有关负责人就《可再生能源发展“十五五”规划》答记者问 - 新华网",
+      "lesson": "避免采集此类素材: 可再生能源发展规划，属于能源政策领域，与音乐行业完全无关。"
+    },
+    {
+      "date": "2026-07-23",
+      "type": "被拒案例",
+      "title": "成都汇阳投资产业观察：高温用能负荷刷新纪录，能源供给产业链迎来多重产业利好共振窗口 - 中华网",
+      "source": "Google News 音乐产业",
+      "reason": "电力、能源、A股冲高回落等综合财经新闻，与音乐行业完全无关。",
+      "summary": "被拒: 成都汇阳投资产业观察：高温用能负荷刷新纪录，能源供给产业链迎来多重产业利好共振窗口 - 中华网",
+      "lesson": "避免采集此类素材: 电力、能源、A股冲高回落等综合财经新闻，与音乐行业完全无关。"
+    },
+    {
+      "date": "2026-07-23",
+      "type": "标杆案例",
+      "title": "High-Stakes Direct Infringement Claims Take Center Stage in Dialed-Back Concord v. Anthropic Copyrig",
+      "source": "Digital Music News",
+      "summary": "通过: High-Stakes Direct Infringement Claims Take Center Stage in Dialed-Back Concord ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-23",
+      "type": "标杆案例",
+      "title": "Ninja Tune’s Fcukers Top AIM’s Independent Music Awards, with Spotify, Meta, and Amazon Music Handin",
+      "source": "Digital Music News",
+      "summary": "通过: Ninja Tune’s Fcukers Top AIM’s Independent Music Awards, with Spotify, Meta, and",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-23",
+      "type": "标杆案例",
+      "title": "Universal Pictures Tees Up Its Next Artist Biopic with ‘Snoop,’ Out Next Summer",
+      "source": "Digital Music News",
+      "summary": "通过: Universal Pictures Tees Up Its Next Artist Biopic with ‘Snoop,’ Out Next Summer",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-23",
+      "type": "标杆案例",
+      "title": "Deezer Reveals Over Half of All Uploads Are Now ‘Fully AI-Generated,’ Confirms Plans to Demonetize a",
+      "source": "Digital Music News",
+      "summary": "通过: Deezer Reveals Over Half of All Uploads Are Now ‘Fully AI-Generated,’ Confirms P",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-23",
+      "type": "标杆案例",
+      "title": "The American Federation of Musicians Fires Back Against UMG and WMG Dismissal Arguments as AI Compen",
+      "source": "Digital Music News",
+      "summary": "通过: The American Federation of Musicians Fires Back Against UMG and WMG Dismissal Ar",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-23",
+      "type": "每日统计",
+      "summary": "今日通过率: 75% (45/60)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],

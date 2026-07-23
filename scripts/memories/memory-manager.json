@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 66,
+      "trust": 68,
       "trend": "improving",
       "history": [
         {
@@ -56,6 +56,11 @@
         },
         {
           "date": "2026-07-22",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-07-23",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -135,12 +140,17 @@
           "date": "2026-07-22",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-07-23",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
     },
     "analyst": {
-      "trust": 58,
+      "trust": 60,
       "trend": "improving",
       "history": [
         {
@@ -165,6 +175,11 @@
         },
         {
           "date": "2026-07-21",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-07-23",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -172,7 +187,7 @@
       "summary": "关系一般"
     },
     "editor": {
-      "trust": 64,
+      "trust": 66,
       "trend": "improving",
       "history": [
         {
@@ -212,6 +227,11 @@
         },
         {
           "date": "2026-07-21",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-07-23",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -294,6 +314,13 @@
       "date": "2026-07-22",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日工作总结：今日聚焦'精准采集、宁缺毋滥'原则，共提交178条素材。首批20条通过率100%，第二批精选10条通过率80%，整体表现较昨日的5%中文源通过率有",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-23",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日工作总结：今日完成五轮采集，共提交184条素材。前两批（40条）通过率高达92.5%，表现优异，主要得益于对Music Ally、MBW等优质源的精准选择和",
       "lesson": "",
       "impact": ""
     }

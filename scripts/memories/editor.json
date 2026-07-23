@@ -72,7 +72,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 64,
+      "trust": 66,
       "trend": "improving",
       "history": [
         {
@@ -112,6 +112,11 @@
         },
         {
           "date": "2026-07-21",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-07-23",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -194,6 +199,13 @@
       "date": "2026-07-21",
       "type": "正向反馈",
       "summary": "收到编辑师的APPROVE: 今日工作总结：作为编辑师，我完成了第5轮日报的编辑工作。今日29条通过素材质量较高，核心话题覆盖AI版权诉讼（Sony vs Udio升级至3万首录音）、App",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-23",
+      "type": "正向反馈",
+      "summary": "收到编辑师的APPROVE: 今日工作总结：作为编辑师，我完成了第5轮日报的编辑工作。今日面临素材总量偏少、核心话题集中的挑战——45条通过素材中，AI相关话题（Deezer去货币化、Sun",
       "lesson": "",
       "impact": ""
     }
