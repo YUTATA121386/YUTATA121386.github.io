@@ -93,6 +93,11 @@
           "date": "2026-07-23",
           "event": "合作 11次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-07-24",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系良好"
