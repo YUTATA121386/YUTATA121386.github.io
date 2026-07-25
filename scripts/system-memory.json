@@ -1574,6 +1574,38 @@
         }
       },
       "learnings": ""
+    },
+    {
+      "date": "2026-07-25",
+      "totalRuns": 86,
+      "scores": {},
+      "strengths": [],
+      "weaknesses": [],
+      "rootCause": "",
+      "ruleChanges": 0,
+      "perRole": {
+        "collector": {
+          "score": 58,
+          "changes": []
+        },
+        "verifier": {
+          "score": 99,
+          "changes": []
+        },
+        "analyst": {
+          "score": 94,
+          "changes": []
+        },
+        "editor": {
+          "score": 94,
+          "changes": []
+        },
+        "memory-manager": {
+          "score": 59,
+          "changes": []
+        }
+      },
+      "learnings": ""
     }
   ]
 }
