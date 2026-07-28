@@ -113,6 +113,11 @@
           "date": "2026-07-27",
           "event": "合作 8次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-07-28",
+          "event": "合作 12次",
+          "trustDelta": 10
         }
       ],
       "summary": "关系良好"
@@ -197,7 +202,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 70,
+      "trust": 72,
       "trend": "improving",
       "history": [
         {
@@ -259,103 +264,17 @@
           "date": "2026-07-27",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-07-28",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-20",
-      "type": "被拒案例",
-      "title": "2026 SBS Gayo Daejeon Summer Announces Special Collab Stage Featuring Hearts2Hearts, izna, And MEOVV",
-      "source": "Soompi",
-      "reason": "Soompi源。内容为SBS歌谣大战的特别舞台，虽涉及音乐表演，但属于韩娱泛娱乐，与曲库行业核心无关。此源已被多次警告。",
-      "summary": "被拒: 2026 SBS Gayo Daejeon Summer Announces Special Collab Stage Featuring Hearts2Hea",
-      "lesson": "避免采集此类素材: Soompi源。内容为SBS歌谣大战的特别舞台，虽涉及音乐表演，但属于韩娱泛娱乐，与曲库行业核心无关。此源已被多次警告。"
-    },
-    {
-      "date": "2026-07-20",
-      "type": "被拒案例",
-      "title": "Watch: Yoo Hae Jin, Lee Min Ho, And Park Hae Il Embark On A Search For The Truth In New Film “Assass",
-      "source": "Soompi",
-      "reason": "Soompi源。内容为韩国电影预告，与音乐行业核心无关。此源已被多次警告。",
-      "summary": "被拒: Watch: Yoo Hae Jin, Lee Min Ho, And Park Hae Il Embark On A Search For The Truth",
-      "lesson": "避免采集此类素材: Soompi源。内容为韩国电影预告，与音乐行业核心无关。此源已被多次警告。"
-    },
-    {
-      "date": "2026-07-20",
-      "type": "被拒案例",
-      "title": "Watch: Lee Jung Eun, Kong Hyo Jin, Park So Dam, And Lee Yeon Embark On A Suspicious Family Trip In “",
-      "source": "Soompi",
-      "reason": "Soompi源。内容为韩国电影预告，与音乐行业核心无关。此源已被多次警告。",
-      "summary": "被拒: Watch: Lee Jung Eun, Kong Hyo Jin, Park So Dam, And Lee Yeon Embark On A Suspici",
-      "lesson": "避免采集此类素材: Soompi源。内容为韩国电影预告，与音乐行业核心无关。此源已被多次警告。"
-    },
-    {
-      "date": "2026-07-20",
-      "type": "标杆案例",
-      "title": "Jennifer Finch, L7 Bassist, Dead at 59",
-      "source": "Rolling Stone Music",
-      "summary": "通过: Jennifer Finch, L7 Bassist, Dead at 59",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-20",
-      "type": "标杆案例",
-      "title": "Jelly Roll Goes to San Quentin for New Video ‘Hands Up’",
-      "source": "Rolling Stone Music",
-      "summary": "通过: Jelly Roll Goes to San Quentin for New Video ‘Hands Up’",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-20",
-      "type": "标杆案例",
-      "title": "See Martin Garrix Debut New U2 Collaboration ‘Fireflies’ With the Edge at Tomorrowland",
-      "source": "Rolling Stone Music",
-      "summary": "通过: See Martin Garrix Debut New U2 Collaboration ‘Fireflies’ With the Edge at Tomorr",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-20",
-      "type": "标杆案例",
-      "title": "How Metallica’s Lars Ulrich Was Inspired by U2’s Sphere Residency: ‘F-cking Awestruck’",
-      "source": "Rolling Stone Music",
-      "summary": "通过: How Metallica’s Lars Ulrich Was Inspired by U2’s Sphere Residency: ‘F-cking Awes",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-20",
-      "type": "标杆案例",
-      "title": "Ariana Grande Surprises Fans as Ty Dolla $ign Joins Eternal Sunshine Tour to Duet ‘Safety Net’",
-      "source": "Rolling Stone Music",
-      "summary": "通过: Ariana Grande Surprises Fans as Ty Dolla $ign Joins Eternal Sunshine Tour to Due",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-20",
-      "type": "每日统计",
-      "summary": "今日通过率: 60% (36/60)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-07-21",
-      "type": "被拒案例",
-      "title": "月之暗面回应马斯克“隔空喊话”：可能Kimi确实给到他一点震撼 - 东方财富",
-      "source": "Google News 音乐产业",
-      "reason": "泛AI行业新闻，与音乐产业无直接关联",
-      "summary": "被拒: 月之暗面回应马斯克“隔空喊话”：可能Kimi确实给到他一点震撼 - 东方财富",
-      "lesson": "避免采集此类素材: 泛AI行业新闻，与音乐产业无直接关联"
-    },
-    {
-      "date": "2026-07-21",
-      "type": "被拒案例",
-      "title": "WAIC观察｜从展台到产线，具身��能还差几步 - 新京报",
-      "source": "Google News 音乐产业",
-      "reason": "机器人/具身智能新闻，与音乐行业无关",
-      "summary": "被拒: WAIC观察｜从展台到产线，具身��能还差几步 - 新京报",
-      "lesson": "避免采集此类素材: 机器人/具身智能新闻，与音乐行业无关"
-    },
     {
       "date": "2026-07-21",
       "type": "被拒案例",
@@ -673,6 +592,97 @@
       "date": "2026-07-27",
       "type": "每日统计",
       "summary": "今日通过率: 30% (12/40)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-07-28",
+      "type": "被拒案例",
+      "title": "Intense tornado tears through Appleton, Wisconsin - The Washington Post",
+      "source": "Google News Music Industry",
+      "reason": "与音乐行业完全无关的自然灾害新闻（龙卷风）。来源为Google News Music Industry，属于污染源。",
+      "summary": "被拒: Intense tornado tears through Appleton, Wisconsin - The Washington Post",
+      "lesson": "避免采集此类素材: 与音乐行业完全无关的自然灾害新闻（龙卷风）。来源为Google News Music Industry，属于污染源。"
+    },
+    {
+      "date": "2026-07-28",
+      "type": "被拒案例",
+      "title": "Trump’s SAVE America demands threaten to hand Senate a cruel summer - Politico",
+      "source": "Google News Music Industry",
+      "reason": "与音乐行业完全无关的美国政治新闻（Trump与参议院）。来源为Google News Music Industry，属于污染源。",
+      "summary": "被拒: Trump’s SAVE America demands threaten to hand Senate a cruel summer - Politico",
+      "lesson": "避免采集此类素材: 与音乐行业完全无关的美国政治新闻（Trump与参议院）。来源为Google News Music Industry，属于污染源。"
+    },
+    {
+      "date": "2026-07-28",
+      "type": "被拒案例",
+      "title": "Trump Blames Affordability Problems on Biden in Michigan Speech - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "与音乐行业完全无关的美国政治新闻（Trump密歇根演讲）。来源为Google News Music Industry，属于污染源。",
+      "summary": "被拒: Trump Blames Affordability Problems on Biden in Michigan Speech - The New York T",
+      "lesson": "避免采集此类素材: 与音乐行业完全无关的美国政治新闻（Trump密歇根演讲）。来源为Google News Music Industry，属于污染源。"
+    },
+    {
+      "date": "2026-07-28",
+      "type": "被拒案例",
+      "title": "Bryan Kohberger challenges conviction in Idaho murders - CBS News",
+      "source": "Google News Music Industry",
+      "reason": "与音乐行业完全无关的犯罪/法律新闻（Kohberger定罪上诉）。来源为Google News Music Industry，属于污染源。",
+      "summary": "被拒: Bryan Kohberger challenges conviction in Idaho murders - CBS News",
+      "lesson": "避免采集此类素材: 与音乐行业完全无关的犯罪/法律新闻（Kohberger定罪上诉）。来源为Google News Music Industry，属于污染源。"
+    },
+    {
+      "date": "2026-07-28",
+      "type": "被拒案例",
+      "title": "Trump, Congress and world leaders to honor the late Sen. Lindsey Graham in Washington - NBC News",
+      "source": "Google News Music Industry",
+      "reason": "与音乐行业完全无关的美国政治新闻（Lindsey Graham悼念）。来源为Google News Music Industry，属于污染源。",
+      "summary": "被拒: Trump, Congress and world leaders to honor the late Sen. Lindsey Graham in Washi",
+      "lesson": "避免采集此类素材: 与音乐行业完全无关的美国政治新闻（Lindsey Graham悼念）。来源为Google News Music Industry，属于污染源。"
+    },
+    {
+      "date": "2026-07-28",
+      "type": "标杆案例",
+      "title": "ExWHYZ、ラストアルバムからmaho最後の作詞曲「FADED」を8月先行配信",
+      "source": "BARKS",
+      "summary": "通过: ExWHYZ、ラストアルバムからmaho最後の作詞曲「FADED」を8月先行配信",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-28",
+      "type": "标杆案例",
+      "title": "KAWAII LAB.、初のアジア5ヶ国同時オーディション募集開始",
+      "source": "BARKS",
+      "summary": "通过: KAWAII LAB.、初のアジア5ヶ国同時オーディション募集開始",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-28",
+      "type": "标杆案例",
+      "title": "【ライブレポート】22/7、初の海外単独・台北公演＜Live in Taipei 2026＞で届けた幅広い魅力",
+      "source": "BARKS",
+      "summary": "通过: 【ライブレポート】22/7、初の海外単独・台北公演＜Live in Taipei 2026＞で届けた幅広い魅力",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-28",
+      "type": "标杆案例",
+      "title": "【今夜はLuckyFes Night】キュウソネコカミ、「LuckyFesで何が起こるかわからない」規格外ライブを予告",
+      "source": "BARKS",
+      "summary": "通过: 【今夜はLuckyFes Night】キュウソネコカミ、「LuckyFesで何が起こるかわからない」規格外ライブを予告",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-28",
+      "type": "标杆案例",
+      "title": "【俺の楽器・私の愛機】2059「40年前のFERNANDESを蘇らせた、“最強の寄せ集めストラト”」",
+      "source": "BARKS",
+      "summary": "通过: 【俺の楽器・私の愛機】2059「40年前のFERNANDESを蘇らせた、“最強の寄せ集めストラト”」",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-28",
+      "type": "每日统计",
+      "summary": "今日通过率: 53% (42/80)",
       "lesson": ""
     }
   ],

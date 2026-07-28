@@ -113,6 +113,11 @@
           "date": "2026-07-27",
           "event": "合作 8次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-07-28",
+          "event": "合作 12次",
+          "trustDelta": 10
         }
       ],
       "summary": "关系良好"
@@ -233,6 +238,11 @@
         {
           "date": "2026-07-27",
           "event": "合作 2次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-07-28",
+          "event": "合作 4次",
           "trustDelta": 0
         }
       ],
@@ -489,6 +499,20 @@
       "date": "2026-07-27",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 前10条英文Billboard源素材质量极高，全部通过！",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-28",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 本批次通过率75%，主要问题集中在Digital Music News源，出现了多条与音乐行业核心关联度低的犯罪/社会新闻。",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-28",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 首批20条素材审核完成：通过17条，拒绝3条，通过率85%。",
       "lesson": "",
       "impact": ""
     }
