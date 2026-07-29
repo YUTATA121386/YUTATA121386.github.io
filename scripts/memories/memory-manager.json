@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 72,
+      "trust": 74,
       "trend": "improving",
       "history": [
         {
@@ -73,12 +73,17 @@
           "date": "2026-07-28",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-07-29",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "verifier": {
-      "trust": 52,
+      "trust": 54,
       "trend": "stable",
       "history": [
         {
@@ -165,6 +170,11 @@
           "date": "2026-07-28",
           "event": "合作 4次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-07-29",
+          "event": "合作 4次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
@@ -360,6 +370,13 @@
       "date": "2026-07-28",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日工作总结：本日共采集172条原始素材，经历多轮审核与拒收。核心问题在于对'Google News 音乐产业'源污染的顽固性认识不足，在收到首次警告后未能彻底",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-29",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日工作总结：今日共采集186条素材，分5批提交。前50条（3批）全部通过，通过率100%，创下个人最佳开局。这得益于彻底移除所有Google News黑名单源",
       "lesson": "",
       "impact": ""
     }

@@ -118,6 +118,11 @@
           "date": "2026-07-28",
           "event": "合作 12次",
           "trustDelta": 10
+        },
+        {
+          "date": "2026-07-29",
+          "event": "合作 7次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -175,6 +180,11 @@
           "date": "2026-07-27",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-07-29",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
@@ -202,7 +212,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 72,
+      "trust": 74,
       "trend": "improving",
       "history": [
         {
@@ -269,103 +279,17 @@
           "date": "2026-07-28",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-07-29",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-21",
-      "type": "被拒案例",
-      "title": "两市融资余额减少596.85亿元 - 东方财富",
-      "source": "Google News 音乐产业",
-      "reason": "金融市场数据，与音乐行业无关",
-      "summary": "被拒: 两市融资余额减少596.85亿元 - 东方财富",
-      "lesson": "避免采集此类素材: 金融市场数据，与音乐行业无关"
-    },
-    {
-      "date": "2026-07-21",
-      "type": "被拒案例",
-      "title": "“超节点”集中亮相 国产算力系统性升级提速 - 新华网客户端",
-      "source": "Google News 音乐产业",
-      "reason": "AI算力基础设施新闻，与音乐行业无直接关联",
-      "summary": "被拒: “超节点”集中亮相 国产算力系统性升级提速 - 新华网客户端",
-      "lesson": "避免采集此类素材: AI算力基础设施新闻，与音乐行业无直接关联"
-    },
-    {
-      "date": "2026-07-21",
-      "type": "被拒案例",
-      "title": "中信建投策略分析师夏凡捷：中长期资金坚定流入，提供新定价“锚” - 第一财经",
-      "source": "Google News 音乐产业",
-      "reason": "证券策略分析，与音乐行业完全无关",
-      "summary": "被拒: 中信建投策略分析师夏凡捷：中长期资金坚定流入，提供新定价“锚” - 第一财经",
-      "lesson": "避免采集此类素材: 证券策略分析，与音乐行业完全无关"
-    },
-    {
-      "date": "2026-07-21",
-      "type": "标杆案例",
-      "title": "X and music publishers end their legal battle over infringement",
-      "source": "Music Ally",
-      "summary": "通过: X and music publishers end their legal battle over infringement",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-21",
-      "type": "标杆案例",
-      "title": "Lila launches UK initiative for South Asian musicians and industry pros",
-      "source": "Music Ally",
-      "summary": "通过: Lila launches UK initiative for South Asian musicians and industry pros",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-21",
-      "type": "标杆案例",
-      "title": "Tiny Vinyl gets into hardware with a player, crate and frame",
-      "source": "Music Ally",
-      "summary": "通过: Tiny Vinyl gets into hardware with a player, crate and frame",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-21",
-      "type": "标杆案例",
-      "title": "World Cup sent ‘Wonderwall’ to top of Spotify’s global chart",
-      "source": "Music Ally",
-      "summary": "通过: World Cup sent ‘Wonderwall’ to top of Spotify’s global chart",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-21",
-      "type": "标杆案例",
-      "title": "Why Sony Just Filed a New AI Music Copyright Lawsuit Against Udio",
-      "source": "Billboard",
-      "summary": "通过: Why Sony Just Filed a New AI Music Copyright Lawsuit Against Udio",
-      "lesson": "此类素材值得采集: 命中关键词 音乐版权"
-    },
-    {
-      "date": "2026-07-21",
-      "type": "每日统计",
-      "summary": "今日通过率: 65% (35/54)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-07-22",
-      "type": "被拒案例",
-      "title": "Sarah Hardwig Showcases Her ‘Natural Gift’ With Inspiring Audition on ‘AGT’: Watch",
-      "source": "Billboard",
-      "reason": "AGT选秀 audition，与音乐行业核心运营、版权、商业关联弱",
-      "summary": "被拒: Sarah Hardwig Showcases Her ‘Natural Gift’ With Inspiring Audition on ‘AGT’: Wat",
-      "lesson": "避免采集此类素材: AGT选秀 audition，与音乐行业核心运营、版权、商业关联弱"
-    },
-    {
-      "date": "2026-07-22",
-      "type": "被拒案例",
-      "title": "Black Friday in July? Macy’s Drops Dozens of Summertime Deals, From Under-$100 Tech to Trendy Band T",
-      "source": "Billboard",
-      "reason": "Macy's促销活动，与音乐行业无关",
-      "summary": "被拒: Black Friday in July? Macy’s Drops Dozens of Summertime Deals, From Under-$100 T",
-      "lesson": "避免采集此类素材: Macy's促销活动，与音乐行业无关"
-    },
     {
       "date": "2026-07-22",
       "type": "标杆案例",
@@ -684,6 +608,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 53% (42/80)",
       "lesson": ""
+    },
+    {
+      "date": "2026-07-29",
+      "type": "被拒案例",
+      "title": "国内商品期市午盘涨跌参半 - 第一财经",
+      "source": "Google News 音乐产业",
+      "reason": "来源为黑名单'Google News 音乐产业'，且内容为期货市场新闻，与音乐行业完全无关。",
+      "summary": "被拒: 国内商品期市午盘涨跌参半 - 第一财经",
+      "lesson": "避免采集此类素材: 来源为黑名单'Google News 音乐产业'，且内容为期货市场新闻，与音乐行业完全无关。"
+    },
+    {
+      "date": "2026-07-29",
+      "type": "被拒案例",
+      "title": "央行：7月29日开展2065亿元7天期逆回购和6000亿元隔夜逆回购操作 - 东方财富",
+      "source": "Google News 音乐产业",
+      "reason": "来源为黑名单'Google News 音乐产业'，且内容为央行操作新闻，与音乐行业完全无关。",
+      "summary": "被拒: 央行：7月29日开展2065亿元7天期逆回购和6000亿元隔夜逆回购操作 - 东方财富",
+      "lesson": "避免采集此类素材: 来源为黑名单'Google News 音乐产业'，且内容为央行操作新闻，与音乐行业完全无关。"
+    },
+    {
+      "date": "2026-07-29",
+      "type": "被拒案例",
+      "title": "全球市场：美股三大指数收盘涨跌不一光通信、存储板块大跌国际油价跌超4%_国际市场_市场_中金在线 - 中金在线",
+      "source": "Google News 音乐产业",
+      "reason": "来源为黑名单'Google News 音乐产业'，且内容为美股市场新闻，与音乐行业完全无关。",
+      "summary": "被拒: 全球市场：美股三大指数收盘涨跌不一光通信、存储板块大跌国际油价跌超4%_国际市场_市场_中金在线 - 中金在线",
+      "lesson": "避免采集此类素材: 来源为黑名单'Google News 音乐产业'，且内容为美股市场新闻，与音乐行业完全无关。"
+    },
+    {
+      "date": "2026-07-29",
+      "type": "被拒案例",
+      "title": "两市融资余额减少297.59亿元 - 东方财富",
+      "source": "Google News 音乐产业",
+      "reason": "来源为黑名单'Google News 音乐产业'，且内容为融资余额新闻，与音乐行业完全无关。",
+      "summary": "被拒: 两市融资余额减少297.59亿元 - 东方财富",
+      "lesson": "避免采集此类素材: 来源为黑名单'Google News 音乐产业'，且内容为融资余额新闻，与音乐行业完全无关。"
+    },
+    {
+      "date": "2026-07-29",
+      "type": "被拒案例",
+      "title": "刚刚，现货黄金，反弹上涨！ - 21财经",
+      "source": "Google News 音乐产业",
+      "reason": "来源为黑名单'Google News 音乐产业'，且内容为黄金价格新闻，与音乐行业完全无关。",
+      "summary": "被拒: 刚刚，现货黄金，反弹上涨！ - 21财经",
+      "lesson": "避免采集此类素材: 来源为黑名单'Google News 音乐产业'，且内容为黄金价格新闻，与音乐行业完全无关。"
+    },
+    {
+      "date": "2026-07-29",
+      "type": "标杆案例",
+      "title": "AI Music: Coming of Age. Why the Next Music Revolution May Be Bigger Than Napster",
+      "source": "Digital Music News",
+      "summary": "通过: AI Music: Coming of Age. Why the Next Music Revolution May Be Bigger Than Napste",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-29",
+      "type": "标杆案例",
+      "title": "$5 Billion ‘OCVibe’ Complex in Anaheim is Rapidly Coming to Life—Here’s an Exclusive First Look at t",
+      "source": "Digital Music News",
+      "summary": "通过: $5 Billion ‘OCVibe’ Complex in Anaheim is Rapidly Coming to Life—Here’s an Exclu",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-29",
+      "type": "标杆案例",
+      "title": "Charli XCX Releases a Bunch of Album B-Sides—On iTunes",
+      "source": "Digital Music News",
+      "summary": "通过: Charli XCX Releases a Bunch of Album B-Sides—On iTunes",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-29",
+      "type": "标杆案例",
+      "title": "Ariana Grande Files Lawsuit Against Shadowy Hacker Group Targeting the Singer",
+      "source": "Digital Music News",
+      "summary": "通过: Ariana Grande Files Lawsuit Against Shadowy Hacker Group Targeting the Singer",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-29",
+      "type": "标杆案例",
+      "title": "American Federation of Musicians Fires Off Amended AI Licensing Lawsuit Against Universal Music and ",
+      "source": "Digital Music News",
+      "summary": "通过: American Federation of Musicians Fires Off Amended AI Licensing Lawsuit Against ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-29",
+      "type": "每日统计",
+      "summary": "今日通过率: 83% (50/60)",
+      "lesson": "通过率良好，保持当前标准"
     }
   ],
   "selfReview": {
