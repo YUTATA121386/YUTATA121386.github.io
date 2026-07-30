@@ -123,6 +123,11 @@
           "date": "2026-07-29",
           "event": "合作 7次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-07-30",
+          "event": "合作 7次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -162,7 +167,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 54,
+      "trust": 56,
       "trend": "stable",
       "history": [
         {
@@ -253,6 +258,11 @@
         {
           "date": "2026-07-29",
           "event": "合作 4次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-07-30",
+          "event": "合作 3次",
           "trustDelta": 2
         }
       ],
@@ -537,6 +547,20 @@
       "date": "2026-07-29",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 首批20条素材审核完成，全部通过！通过率100%！",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-30",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: ⚠️ Google News源污染问题在昨日预警后再次大规模复发，本批次10条素材全部拒绝。",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-30",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 首批20条素材全部通过，通过率100%！",
       "lesson": "",
       "impact": ""
     }

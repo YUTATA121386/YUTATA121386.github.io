@@ -123,6 +123,11 @@
           "date": "2026-07-29",
           "event": "合作 7次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-07-30",
+          "event": "合作 7次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -212,7 +217,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 74,
+      "trust": 76,
       "trend": "improving",
       "history": [
         {
@@ -284,67 +289,17 @@
           "date": "2026-07-29",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-07-30",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-22",
-      "type": "标杆案例",
-      "title": "World Cup sent ‘Wonderwall’ to top of Spotify’s global chart",
-      "source": "Music Ally",
-      "summary": "通过: World Cup sent ‘Wonderwall’ to top of Spotify’s global chart",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-22",
-      "type": "标杆案例",
-      "title": "TikTok tests AI-likeness detection as Patreon blocks AI crawlers",
-      "source": "Music Ally",
-      "summary": "通过: TikTok tests AI-likeness detection as Patreon blocks AI crawlers",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-22",
-      "type": "标杆案例",
-      "title": "Kylie Minogue Teams Up With Snow Patrol For ‘These Alarms’ Concert Video: Watch",
-      "source": "Billboard",
-      "summary": "通过: Kylie Minogue Teams Up With Snow Patrol For ‘These Alarms’ Concert Video: Watch",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-22",
-      "type": "标杆案例",
-      "title": "Intocable Makes History With Six RIAA Latin Diamond Awards",
-      "source": "Billboard",
-      "summary": "通过: Intocable Makes History With Six RIAA Latin Diamond Awards",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-22",
-      "type": "标杆案例",
-      "title": "Maluma’s ‘Loco X Volver’ Spins Off a Second Tropical Airplay No. 1",
-      "source": "Billboard",
-      "summary": "通过: Maluma’s ‘Loco X Volver’ Spins Off a Second Tropical Airplay No. 1",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-22",
-      "type": "每日统计",
-      "summary": "今日通过率: 93% (28/30)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-07-23",
-      "type": "被拒案例",
-      "title": "直线拉升！韩国综指涨超3%重回7000点，三星电子涨超4%、SK海力士涨超4.5%！日本股市涨超400点丨日韩股市 - 每日经济新闻",
-      "source": "Google News 音乐产业",
-      "reason": "日韩股市、半导体股等新闻，与音乐行业完全无关。",
-      "summary": "被拒: 直线拉升！韩国综指涨超3%重回7000点，三星电子涨超4%、SK海力士涨超4.5%！日本股市涨超400点丨日韩股市 - 每日经济新闻",
-      "lesson": "避免采集此类素材: 日韩股市、半导体股等新闻，与音乐行业完全无关。"
-    },
     {
       "date": "2026-07-23",
       "type": "被拒案例",
@@ -698,6 +653,61 @@
       "date": "2026-07-29",
       "type": "每日统计",
       "summary": "今日通过率: 83% (50/60)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-07-30",
+      "type": "被拒案例",
+      "title": "Epstein, Others Linked to Massive Sexual Exploitation Ring at Interlochen Arts School",
+      "source": "Digital Music News",
+      "reason": "非音乐行业核心内容，性侵犯罪调查新闻，与音乐业务关联度极低",
+      "summary": "被拒: Epstein, Others Linked to Massive Sexual Exploitation Ring at Interlochen Arts S",
+      "lesson": "避免采集此类素材: 非音乐行业核心内容，性侵犯罪调查新闻，与音乐业务关联度极低"
+    },
+    {
+      "date": "2026-07-30",
+      "type": "标杆案例",
+      "title": "The Dance World Reacts to Kavinsky’s Death: ‘The Funniest Person I’ve Ever Met’",
+      "source": "Billboard",
+      "summary": "通过: The Dance World Reacts to Kavinsky’s Death: ‘The Funniest Person I’ve Ever Met’",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-30",
+      "type": "标杆案例",
+      "title": "Claude Trained on 10 Editions of Donald Passman’s Music Industry Bible Without His Permission. His P",
+      "source": "Digital Music News",
+      "summary": "通过: Claude Trained on 10 Editions of Donald Passman’s Music Industry Bible Without H",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-30",
+      "type": "标杆案例",
+      "title": "BTS Announces 2027 Grammys Boycott Following ‘Best Asian Pop Music Performance’ Award Category Creat",
+      "source": "Digital Music News",
+      "summary": "通过: BTS Announces 2027 Grammys Boycott Following ‘Best Asian Pop Music Performance’ ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-30",
+      "type": "标杆案例",
+      "title": "How AI Agents Are Quietly Automating Music Companies: From A&R to Release Ops",
+      "source": "Digital Music News",
+      "summary": "通过: How AI Agents Are Quietly Automating Music Companies: From A&R to Release Ops",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-30",
+      "type": "标杆案例",
+      "title": "Influence Media Partners and BlackRock Announce Anthem Entertainment Catalog Acquisition — Price Tag",
+      "source": "Digital Music News",
+      "summary": "通过: Influence Media Partners and BlackRock Announce Anthem Entertainment Catalog Acq",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-07-30",
+      "type": "每日统计",
+      "summary": "今日通过率: 98% (39/40)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],
