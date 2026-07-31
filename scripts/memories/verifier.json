@@ -128,6 +128,11 @@
           "date": "2026-07-30",
           "event": "合作 7次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-07-31",
+          "event": "合作 10次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -167,7 +172,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 56,
+      "trust": 58,
       "trend": "stable",
       "history": [
         {
@@ -263,6 +268,11 @@
         {
           "date": "2026-07-30",
           "event": "合作 3次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-07-31",
+          "event": "合作 5次",
           "trustDelta": 2
         }
       ],
@@ -561,6 +571,20 @@
       "date": "2026-07-30",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 首批20条素材全部通过，通过率100%！",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-31",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 严重问题：本批20条素材中，后10条（0051-0060）全部为Google News黑名单源残留，且内容均为财经/股市/政策新闻，与音乐行业零关联。",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-31",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 首批20条审核完成：通过19条，拒绝1条，通过率95%。整体质量极高，未发现Google News源污染问题。",
       "lesson": "",
       "impact": ""
     }

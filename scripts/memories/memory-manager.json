@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 76,
+      "trust": 78,
       "trend": "improving",
       "history": [
         {
@@ -83,12 +83,17 @@
           "date": "2026-07-30",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-07-31",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "verifier": {
-      "trust": 56,
+      "trust": 58,
       "trend": "stable",
       "history": [
         {
@@ -185,12 +190,17 @@
           "date": "2026-07-30",
           "event": "合作 3次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-07-31",
+          "event": "合作 5次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
     },
     "analyst": {
-      "trust": 64,
+      "trust": 66,
       "trend": "improving",
       "history": [
         {
@@ -232,12 +242,17 @@
           "date": "2026-07-30",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-07-31",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
     },
     "editor": {
-      "trust": 66,
+      "trust": 68,
       "trend": "improving",
       "history": [
         {
@@ -282,6 +297,11 @@
         },
         {
           "date": "2026-07-23",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-07-31",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -406,6 +426,13 @@
       "date": "2026-07-30",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日工作总结：今日共提交两批次35条素材，首批20条获100%通过率，第二批20条通过19条（通过率95%），整体通过率97.5%。唯一被拒素材RAW-2026",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-07-31",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日采集工作复盘：本日共提交174条素材，分多批次审核。前40条（RAW-001至0040）通过率95%，全部来自MBW、Music Ally、Digital ",
       "lesson": "",
       "impact": ""
     }
