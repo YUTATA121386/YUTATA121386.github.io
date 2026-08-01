@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 78,
+      "trust": 80,
       "trend": "improving",
       "history": [
         {
@@ -88,12 +88,17 @@
           "date": "2026-07-31",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-01",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "verifier": {
-      "trust": 58,
+      "trust": 60,
       "trend": "stable",
       "history": [
         {
@@ -195,6 +200,11 @@
           "date": "2026-07-31",
           "event": "合作 5次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-01",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
@@ -252,7 +262,7 @@
       "summary": "关系一般"
     },
     "editor": {
-      "trust": 68,
+      "trust": 70,
       "trend": "improving",
       "history": [
         {
@@ -304,9 +314,14 @@
           "date": "2026-07-31",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-01",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
-      "summary": "关系一般"
+      "summary": "关系良好"
     }
   },
   "experiences": [
@@ -433,6 +448,13 @@
       "date": "2026-07-31",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日采集工作复盘：本日共提交174条素材，分多批次审核。前40条（RAW-001至0040）通过率95%，全部来自MBW、Music Ally、Digital ",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-01",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日采集工作复盘：共提交174条素材，分5批审核，通过率分别为100%（20/20）、80%（16/20）、50%（10/20），后续批次未获明确通过率反馈。前",
       "lesson": "",
       "impact": ""
     }

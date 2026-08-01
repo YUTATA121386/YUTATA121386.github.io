@@ -133,6 +133,11 @@
           "date": "2026-07-31",
           "event": "合作 10次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-08-01",
+          "event": "合作 5次",
+          "trustDelta": 4
         }
       ],
       "summary": "关系良好"
@@ -200,7 +205,7 @@
       "summary": "关系一般"
     },
     "editor": {
-      "trust": 58,
+      "trust": 60,
       "trend": "improving",
       "history": [
         {
@@ -222,12 +227,17 @@
           "date": "2026-07-31",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-01",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 78,
+      "trust": 80,
       "trend": "improving",
       "history": [
         {
@@ -309,103 +319,17 @@
           "date": "2026-07-31",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-01",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-27",
-      "type": "被拒案例",
-      "title": "‘Fighting for an affordable America’: Hakeem Jeffries unveils closing midterm pitch - Politico",
-      "source": "Google News Music Industry",
-      "reason": "与音乐行业完全无关：内容是Hakeem Jeffries中期选举政治演讲",
-      "summary": "被拒: ‘Fighting for an affordable America’: Hakeem Jeffries unveils closing midterm pi",
-      "lesson": "避免采集此类素材: 与音乐行业完全无关：内容是Hakeem Jeffries中期选举政治演讲"
-    },
-    {
-      "date": "2026-07-27",
-      "type": "被拒案例",
-      "title": "Minnesota state Sen. John Hoffman says Angie Craig sought his endorsement while he was in ICU - NBC ",
-      "source": "Google News Music Industry",
-      "reason": "与音乐行业完全无关：内容是明尼苏达州议员政治新闻",
-      "summary": "被拒: Minnesota state Sen. John Hoffman says Angie Craig sought his endorsement while ",
-      "lesson": "避免采集此类素材: 与音乐行业完全无关：内容是明尼苏达州议员政治新闻"
-    },
-    {
-      "date": "2026-07-27",
-      "type": "被拒案例",
-      "title": "Federal appeals court upholds ruling blocking Trump's order to create federal voter list - CBS News",
-      "source": "Google News Music Industry",
-      "reason": "与音乐行业完全无关：内容是联邦法院关于选民名单的裁决",
-      "summary": "被拒: Federal appeals court upholds ruling blocking Trump's order to create federal vo",
-      "lesson": "避免采集此类素材: 与音乐行业完全无关：内容是联邦法院关于选民名单的裁决"
-    },
-    {
-      "date": "2026-07-27",
-      "type": "被拒案例",
-      "title": "Democrats Reset the Maine Senate Race. Now Comes the Tricky Part. - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "与音乐行业完全无关：内容是缅因州参议员竞选分析",
-      "summary": "被拒: Democrats Reset the Maine Senate Race. Now Comes the Tricky Part. - The New York",
-      "lesson": "避免采集此类素材: 与音乐行业完全无关：内容是缅因州参议员竞选分析"
-    },
-    {
-      "date": "2026-07-27",
-      "type": "标杆案例",
-      "title": "‘¡Que Viva la Bachata!’ Romeo Santos & Prince Royce Celebrate the Genre in Front of 54,000 Fans in M",
-      "source": "Billboard",
-      "summary": "通过: ‘¡Que Viva la Bachata!’ Romeo Santos & Prince Royce Celebrate the Genre in Front",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-27",
-      "type": "标杆案例",
-      "title": "Sammy Hagar Offers David Lee Roth a Spot at His Las Vegas Residency Following Tour Cancellation",
-      "source": "Billboard",
-      "summary": "通过: Sammy Hagar Offers David Lee Roth a Spot at His Las Vegas Residency Following To",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-27",
-      "type": "标杆案例",
-      "title": "Here’s How to Watch ‘K-Pop Shark Heroes’ Online for Free",
-      "source": "Billboard",
-      "summary": "通过: Here’s How to Watch ‘K-Pop Shark Heroes’ Online for Free",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-27",
-      "type": "标杆案例",
-      "title": "【俺の楽器・私の愛機】2058「同い年」",
-      "source": "BARKS",
-      "summary": "通过: 【俺の楽器・私の愛機】2058「同い年」",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-27",
-      "type": "标杆案例",
-      "title": "三代目 J SOUL BROTHERS、キュレーションアルバム『24/7 〜JSB FOREVER〜』リリース決定",
-      "source": "BARKS",
-      "summary": "通过: 三代目 J SOUL BROTHERS、キュレーションアルバム『24/7 〜JSB FOREVER〜』リリース決定",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-27",
-      "type": "每日统计",
-      "summary": "今日通过率: 30% (12/40)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-07-28",
-      "type": "被拒案例",
-      "title": "Intense tornado tears through Appleton, Wisconsin - The Washington Post",
-      "source": "Google News Music Industry",
-      "reason": "与音乐行业完全无关的自然灾害新闻（龙卷风）。来源为Google News Music Industry，属于污染源。",
-      "summary": "被拒: Intense tornado tears through Appleton, Wisconsin - The Washington Post",
-      "lesson": "避免采集此类素材: 与音乐行业完全无关的自然灾害新闻（龙卷风）。来源为Google News Music Industry，属于污染源。"
-    },
     {
       "date": "2026-07-28",
       "type": "被拒案例",
@@ -723,6 +647,97 @@
       "date": "2026-07-31",
       "type": "每日统计",
       "summary": "今日通过率: 73% (58/80)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-08-01",
+      "type": "被拒案例",
+      "title": "第12批国家组织药品集采开标 521个产品拟中选 - 新京报",
+      "source": "Google News 音乐产业",
+      "reason": "药品集采新闻，与音乐产业完全无关。Google News黑名单源残留。",
+      "summary": "被拒: 第12批国家组织药品集采开标 521个产品拟中选 - 新京报",
+      "lesson": "避免采集此类素材: 药品集采新闻，与音乐产业完全无关。Google News黑名单源残留。"
+    },
+    {
+      "date": "2026-08-01",
+      "type": "被拒案例",
+      "title": "2026年世界奶业大会在内蒙古呼和浩特开幕 - 新华网",
+      "source": "Google News 音乐产业",
+      "reason": "奶业大会新闻，与音乐产业完全无关。Google News黑名单源残留。",
+      "summary": "被拒: 2026年世界奶业大会在内蒙古呼和浩特开幕 - 新华网",
+      "lesson": "避免采集此类素材: 奶业大会新闻，与音乐产业完全无关。Google News黑名单源残留。"
+    },
+    {
+      "date": "2026-08-01",
+      "type": "被拒案例",
+      "title": "工业绿色低碳“十五五”规划出炉 绿色能源应用、电气化改造将全面提速 - cb.com.cn",
+      "source": "Google News 音乐产业",
+      "reason": "工业绿色低碳规划新闻，与音乐产业完全无关。Google News黑名单源残留。",
+      "summary": "被拒: 工业绿色低碳“十五五”规划出炉 绿色能源应用、电气化改造将全面提速 - cb.com.cn",
+      "lesson": "避免采集此类素材: 工业绿色低碳规划新闻，与音乐产业完全无关。Google News黑名单源残留。"
+    },
+    {
+      "date": "2026-08-01",
+      "type": "被拒案例",
+      "title": "国际油价31日上涨 国内成品油价格将上调 - 中华网",
+      "source": "Google News 音乐产业",
+      "reason": "国际油价新闻，与音乐产业完全无关。Google News黑名单源残留。",
+      "summary": "被拒: 国际油价31日上涨 国内成品油价格将上调 - 中华网",
+      "lesson": "避免采集此类素材: 国际油价新闻，与音乐产业完全无关。Google News黑名单源残留。"
+    },
+    {
+      "date": "2026-08-01",
+      "type": "被拒案例",
+      "title": "2026中国经济半年报丨四大优势 读懂中国产业凭什么“能” - 中国日报网",
+      "source": "Google News 音乐产业",
+      "reason": "中国经济半年报新闻，与音乐产业完全无关。Google News黑名单源残留。",
+      "summary": "被拒: 2026中国经济半年报丨四大优势 读懂中国产业凭什么“能” - 中国日报网",
+      "lesson": "避免采集此类素材: 中国经济半年报新闻，与音乐产业完全无关。Google News黑名单源残留。"
+    },
+    {
+      "date": "2026-08-01",
+      "type": "标杆案例",
+      "title": "SoundBoost Bets Big on Natural Language Music Mastering & Mixing",
+      "source": "Digital Music News",
+      "summary": "通过: SoundBoost Bets Big on Natural Language Music Mastering & Mixing",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-01",
+      "type": "标杆案例",
+      "title": "Spotify Adds ‘Campaign Lift’ Metric to ‘Discovery Mode’ to Prove It’s Working",
+      "source": "Digital Music News",
+      "summary": "通过: Spotify Adds ‘Campaign Lift’ Metric to ‘Discovery Mode’ to Prove It’s Working",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-01",
+      "type": "标杆案例",
+      "title": "SiriusXM Posts Mixed Q2 2026 Financials — Including Flat Revenue, Record-Low Churn, and a 17% Net In",
+      "source": "Digital Music News",
+      "summary": "通过: SiriusXM Posts Mixed Q2 2026 Financials — Including Flat Revenue, Record-Low Chu",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-01",
+      "type": "标杆案例",
+      "title": "Grammys CEO Responds After BTS Jumps Ship—Will the ‘Asian Pop’ Category Get Nixed?",
+      "source": "Digital Music News",
+      "summary": "通过: Grammys CEO Responds After BTS Jumps Ship—Will the ‘Asian Pop’ Category Get Nixe",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-01",
+      "type": "标杆案例",
+      "title": "The Ad-Supported Free Lunch Is Over In India: UMG India Is Now Putting All New Streaming Releases Be",
+      "source": "Digital Music News",
+      "summary": "通过: The Ad-Supported Free Lunch Is Over In India: UMG India Is Now Putting All New S",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-01",
+      "type": "每日统计",
+      "summary": "今日通过率: 75% (45/60)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],
