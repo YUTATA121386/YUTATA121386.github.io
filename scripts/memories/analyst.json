@@ -117,6 +117,11 @@
           "date": "2026-07-19",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-02",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"

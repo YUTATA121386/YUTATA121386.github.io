@@ -138,6 +138,11 @@
           "date": "2026-08-01",
           "event": "合作 5次",
           "trustDelta": 4
+        },
+        {
+          "date": "2026-08-02",
+          "event": "合作 9次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -205,7 +210,7 @@
       "summary": "关系一般"
     },
     "editor": {
-      "trust": 60,
+      "trust": 62,
       "trend": "improving",
       "history": [
         {
@@ -232,12 +237,17 @@
           "date": "2026-08-01",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-02",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 80,
+      "trust": 82,
       "trend": "improving",
       "history": [
         {
@@ -324,103 +334,17 @@
           "date": "2026-08-01",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-02",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-28",
-      "type": "被拒案例",
-      "title": "Trump’s SAVE America demands threaten to hand Senate a cruel summer - Politico",
-      "source": "Google News Music Industry",
-      "reason": "与音乐行业完全无关的美国政治新闻（Trump与参议院）。来源为Google News Music Industry，属于污染源。",
-      "summary": "被拒: Trump’s SAVE America demands threaten to hand Senate a cruel summer - Politico",
-      "lesson": "避免采集此类素材: 与音乐行业完全无关的美国政治新闻（Trump与参议院）。来源为Google News Music Industry，属于污染源。"
-    },
-    {
-      "date": "2026-07-28",
-      "type": "被拒案例",
-      "title": "Trump Blames Affordability Problems on Biden in Michigan Speech - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "与音乐行业完全无关的美国政治新闻（Trump密歇根演讲）。来源为Google News Music Industry，属于污染源。",
-      "summary": "被拒: Trump Blames Affordability Problems on Biden in Michigan Speech - The New York T",
-      "lesson": "避免采集此类素材: 与音乐行业完全无关的美国政治新闻（Trump密歇根演讲）。来源为Google News Music Industry，属于污染源。"
-    },
-    {
-      "date": "2026-07-28",
-      "type": "被拒案例",
-      "title": "Bryan Kohberger challenges conviction in Idaho murders - CBS News",
-      "source": "Google News Music Industry",
-      "reason": "与音乐行业完全无关的犯罪/法律新闻（Kohberger定罪上诉）。来源为Google News Music Industry，属于污染源。",
-      "summary": "被拒: Bryan Kohberger challenges conviction in Idaho murders - CBS News",
-      "lesson": "避免采集此类素材: 与音乐行业完全无关的犯罪/法律新闻（Kohberger定罪上诉）。来源为Google News Music Industry，属于污染源。"
-    },
-    {
-      "date": "2026-07-28",
-      "type": "被拒案例",
-      "title": "Trump, Congress and world leaders to honor the late Sen. Lindsey Graham in Washington - NBC News",
-      "source": "Google News Music Industry",
-      "reason": "与音乐行业完全无关的美国政治新闻（Lindsey Graham悼念）。来源为Google News Music Industry，属于污染源。",
-      "summary": "被拒: Trump, Congress and world leaders to honor the late Sen. Lindsey Graham in Washi",
-      "lesson": "避免采集此类素材: 与音乐行业完全无关的美国政治新闻（Lindsey Graham悼念）。来源为Google News Music Industry，属于污染源。"
-    },
-    {
-      "date": "2026-07-28",
-      "type": "标杆案例",
-      "title": "ExWHYZ、ラストアルバムからmaho最後の作詞曲「FADED」を8月先行配信",
-      "source": "BARKS",
-      "summary": "通过: ExWHYZ、ラストアルバムからmaho最後の作詞曲「FADED」を8月先行配信",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-28",
-      "type": "标杆案例",
-      "title": "KAWAII LAB.、初のアジア5ヶ国同時オーディション募集開始",
-      "source": "BARKS",
-      "summary": "通过: KAWAII LAB.、初のアジア5ヶ国同時オーディション募集開始",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-28",
-      "type": "标杆案例",
-      "title": "【ライブレポート】22/7、初の海外単独・台北公演＜Live in Taipei 2026＞で届けた幅広い魅力",
-      "source": "BARKS",
-      "summary": "通过: 【ライブレポート】22/7、初の海外単独・台北公演＜Live in Taipei 2026＞で届けた幅広い魅力",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-28",
-      "type": "标杆案例",
-      "title": "【今夜はLuckyFes Night】キュウソネコカミ、「LuckyFesで何が起こるかわからない」規格外ライブを予告",
-      "source": "BARKS",
-      "summary": "通过: 【今夜はLuckyFes Night】キュウソネコカミ、「LuckyFesで何が起こるかわからない」規格外ライブを予告",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-28",
-      "type": "标杆案例",
-      "title": "【俺の楽器・私の愛機】2059「40年前のFERNANDESを蘇らせた、“最強の寄せ集めストラト”」",
-      "source": "BARKS",
-      "summary": "通过: 【俺の楽器・私の愛機】2059「40年前のFERNANDESを蘇らせた、“最強の寄せ集めストラト”」",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-28",
-      "type": "每日统计",
-      "summary": "今日通过率: 53% (42/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-07-29",
-      "type": "被拒案例",
-      "title": "国内商品期市午盘涨跌参半 - 第一财经",
-      "source": "Google News 音乐产业",
-      "reason": "来源为黑名单'Google News 音乐产业'，且内容为期货市场新闻，与音乐行业完全无关。",
-      "summary": "被拒: 国内商品期市午盘涨跌参半 - 第一财经",
-      "lesson": "避免采集此类素材: 来源为黑名单'Google News 音乐产业'，且内容为期货市场新闻，与音乐行业完全无关。"
-    },
     {
       "date": "2026-07-29",
       "type": "被拒案例",
@@ -739,6 +663,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 75% (45/60)",
       "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-08-02",
+      "type": "被拒案例",
+      "title": "Gunman opens fire at Idaho fast-food restaurant, killing two - Al Jazeera",
+      "source": "Google News Music Industry",
+      "reason": "枪击事件新闻报道，与音乐产业无关，来源为Google News黑名单源",
+      "summary": "被拒: Gunman opens fire at Idaho fast-food restaurant, killing two - Al Jazeera",
+      "lesson": "避免采集此类素材: 枪击事件新闻报道，与音乐产业无关，来源为Google News黑名单源"
+    },
+    {
+      "date": "2026-08-02",
+      "type": "被拒案例",
+      "title": "Avalanche in Pakistan kills famed mountaineer Nirmal Purja and his fellow climbers - NPR",
+      "source": "Google News Music Industry",
+      "reason": "登山者遇难新闻，与音乐产业无关，来源为Google News黑名单源",
+      "summary": "被拒: Avalanche in Pakistan kills famed mountaineer Nirmal Purja and his fellow climbe",
+      "lesson": "避免采集此类素材: 登山者遇难新闻，与音乐产业无关，来源为Google News黑名单源"
+    },
+    {
+      "date": "2026-08-02",
+      "type": "被拒案例",
+      "title": "More Than a Dozen Wildfires Burn in Washington State, Forcing Evacuations - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "华盛顿州山火新闻，与音乐产业无关，来源为Google News黑名单源",
+      "summary": "被拒: More Than a Dozen Wildfires Burn in Washington State, Forcing Evacuations - The ",
+      "lesson": "避免采集此类素材: 华盛顿州山火新闻，与音乐产业无关，来源为Google News黑名单源"
+    },
+    {
+      "date": "2026-08-02",
+      "type": "被拒案例",
+      "title": "A brief timeline of Iranian cyberattacks on U.S. companies, political figures, water systems and mor",
+      "source": "Google News Music Industry",
+      "reason": "伊朗网络攻击时间线新闻，与音乐产业无关，来源为Google News黑名单源",
+      "summary": "被拒: A brief timeline of Iranian cyberattacks on U.S. companies, political figures, w",
+      "lesson": "避免采集此类素材: 伊朗网络攻击时间线新闻，与音乐产业无关，来源为Google News黑名单源"
+    },
+    {
+      "date": "2026-08-02",
+      "type": "被拒案例",
+      "title": "Trump says he’ll revive ‘anti-weaponization’ fund if Blanche’s nomination for AG is blocked - NBC Ne",
+      "source": "Google News Music Industry",
+      "reason": "特朗普政治新闻，与音乐产业无关，来源为Google News黑名单源",
+      "summary": "被拒: Trump says he’ll revive ‘anti-weaponization’ fund if Blanche’s nomination for AG",
+      "lesson": "避免采集此类素材: 特朗普政治新闻，与音乐产业无关，来源为Google News黑名单源"
+    },
+    {
+      "date": "2026-08-02",
+      "type": "标杆案例",
+      "title": "Lil Uzi Vert Drops Surprise Birthday EP After Lollapalooza Cancellation",
+      "source": "Billboard",
+      "summary": "通过: Lil Uzi Vert Drops Surprise Birthday EP After Lollapalooza Cancellation",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-02",
+      "type": "标杆案例",
+      "title": "iZotope RX vs Steinberg SpectraLayers: Which Spectral Editor software is really the best?",
+      "source": "MusicTech",
+      "summary": "通过: iZotope RX vs Steinberg SpectraLayers: Which Spectral Editor software is really ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-02",
+      "type": "标杆案例",
+      "title": "Here’s how to document your music memories with Spotify’s new User Notes feature",
+      "source": "MusicTech",
+      "summary": "通过: Here’s how to document your music memories with Spotify’s new User Notes feature",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-02",
+      "type": "标杆案例",
+      "title": "Vangelis’s first Yamaha CS-80 was listed on Reverb for £400k – and someone actually bought it",
+      "source": "MusicTech",
+      "summary": "通过: Vangelis’s first Yamaha CS-80 was listed on Reverb for £400k – and someone actua",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-02",
+      "type": "标杆案例",
+      "title": "Sennheiser Momentum 5 Wireless review: Heritage goes on holiday",
+      "source": "MusicTech",
+      "summary": "通过: Sennheiser Momentum 5 Wireless review: Heritage goes on holiday",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-02",
+      "type": "每日统计",
+      "summary": "今日通过率: 57% (34/60)",
+      "lesson": ""
     }
   ],
   "selfReview": {

@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 80,
+      "trust": 82,
       "trend": "improving",
       "history": [
         {
@@ -93,12 +93,17 @@
           "date": "2026-08-01",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-02",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "verifier": {
-      "trust": 60,
+      "trust": 62,
       "trend": "stable",
       "history": [
         {
@@ -205,6 +210,11 @@
           "date": "2026-08-01",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-02",
+          "event": "合作 4次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
@@ -262,7 +272,7 @@
       "summary": "关系一般"
     },
     "editor": {
-      "trust": 70,
+      "trust": 72,
       "trend": "improving",
       "history": [
         {
@@ -317,6 +327,11 @@
         },
         {
           "date": "2026-08-01",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-02",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -455,6 +470,13 @@
       "date": "2026-08-01",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日采集工作复盘：共提交174条素材，分5批审核，通过率分别为100%（20/20）、80%（16/20）、50%（10/20），后续批次未获明确通过率反馈。前",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-02",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日工作总结：今日共提交3批素材（首批135条中审核20条全通过；第2批11条全来自白名单源MBW/Music Ally，覆盖版权、版税、AI音乐、中国市场等核",
       "lesson": "",
       "impact": ""
     }
