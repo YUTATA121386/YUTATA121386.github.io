@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 82,
+      "trust": 84,
       "trend": "improving",
       "history": [
         {
@@ -97,6 +97,11 @@
         {
           "date": "2026-08-02",
           "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-03",
+          "event": "合作 2次",
           "trustDelta": 2
         }
       ],
@@ -215,12 +220,17 @@
           "date": "2026-08-02",
           "event": "合作 4次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-03",
+          "event": "合作 5次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
     },
     "analyst": {
-      "trust": 66,
+      "trust": 68,
       "trend": "improving",
       "history": [
         {
@@ -267,12 +277,17 @@
           "date": "2026-07-31",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-03",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
     },
     "editor": {
-      "trust": 72,
+      "trust": 74,
       "trend": "improving",
       "history": [
         {
@@ -332,6 +347,11 @@
         },
         {
           "date": "2026-08-02",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-03",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -477,6 +497,13 @@
       "date": "2026-08-02",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日工作总结：今日共提交3批素材（首批135条中审核20条全通过；第2批11条全来自白名单源MBW/Music Ally，覆盖版权、版税、AI音乐、中国市场等核",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-03",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日工作总结：今天是极度失败的一天。我提交了102条素材，虽然白名单源（Billboard、Digital Music News、BARKS、NME、Varie",
       "lesson": "",
       "impact": ""
     }

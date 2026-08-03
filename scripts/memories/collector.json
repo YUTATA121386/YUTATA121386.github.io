@@ -143,6 +143,11 @@
           "date": "2026-08-02",
           "event": "合作 9次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-08-03",
+          "event": "合作 19次",
+          "trustDelta": 10
         }
       ],
       "summary": "关系良好"
@@ -242,12 +247,17 @@
           "date": "2026-08-02",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-03",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 82,
+      "trust": 84,
       "trend": "improving",
       "history": [
         {
@@ -339,103 +349,17 @@
           "date": "2026-08-02",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-03",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-29",
-      "type": "被拒案例",
-      "title": "央行：7月29日开展2065亿元7天期逆回购和6000亿元隔夜逆回购操作 - 东方财富",
-      "source": "Google News 音乐产业",
-      "reason": "来源为黑名单'Google News 音乐产业'，且内容为央行操作新闻，与音乐行业完全无关。",
-      "summary": "被拒: 央行：7月29日开展2065亿元7天期逆回购和6000亿元隔夜逆回购操作 - 东方财富",
-      "lesson": "避免采集此类素材: 来源为黑名单'Google News 音乐产业'，且内容为央行操作新闻，与音乐行业完全无关。"
-    },
-    {
-      "date": "2026-07-29",
-      "type": "被拒案例",
-      "title": "全球市场：美股三大指数收盘涨跌不一光通信、存储板块大跌国际油价跌超4%_国际市场_市场_中金在线 - 中金在线",
-      "source": "Google News 音乐产业",
-      "reason": "来源为黑名单'Google News 音乐产业'，且内容为美股市场新闻，与音乐行业完全无关。",
-      "summary": "被拒: 全球市场：美股三大指数收盘涨跌不一光通信、存储板块大跌国际油价跌超4%_国际市场_市场_中金在线 - 中金在线",
-      "lesson": "避免采集此类素材: 来源为黑名单'Google News 音乐产业'，且内容为美股市场新闻，与音乐行业完全无关。"
-    },
-    {
-      "date": "2026-07-29",
-      "type": "被拒案例",
-      "title": "两市融资余额减少297.59亿元 - 东方财富",
-      "source": "Google News 音乐产业",
-      "reason": "来源为黑名单'Google News 音乐产业'，且内容为融资余额新闻，与音乐行业完全无关。",
-      "summary": "被拒: 两市融资余额减少297.59亿元 - 东方财富",
-      "lesson": "避免采集此类素材: 来源为黑名单'Google News 音乐产业'，且内容为融资余额新闻，与音乐行业完全无关。"
-    },
-    {
-      "date": "2026-07-29",
-      "type": "被拒案例",
-      "title": "刚刚，现货黄金，反弹上涨！ - 21财经",
-      "source": "Google News 音乐产业",
-      "reason": "来源为黑名单'Google News 音乐产业'，且内容为黄金价格新闻，与音乐行业完全无关。",
-      "summary": "被拒: 刚刚，现货黄金，反弹上涨！ - 21财经",
-      "lesson": "避免采集此类素材: 来源为黑名单'Google News 音乐产业'，且内容为黄金价格新闻，与音乐行业完全无关。"
-    },
-    {
-      "date": "2026-07-29",
-      "type": "标杆案例",
-      "title": "AI Music: Coming of Age. Why the Next Music Revolution May Be Bigger Than Napster",
-      "source": "Digital Music News",
-      "summary": "通过: AI Music: Coming of Age. Why the Next Music Revolution May Be Bigger Than Napste",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-29",
-      "type": "标杆案例",
-      "title": "$5 Billion ‘OCVibe’ Complex in Anaheim is Rapidly Coming to Life—Here’s an Exclusive First Look at t",
-      "source": "Digital Music News",
-      "summary": "通过: $5 Billion ‘OCVibe’ Complex in Anaheim is Rapidly Coming to Life—Here’s an Exclu",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-29",
-      "type": "标杆案例",
-      "title": "Charli XCX Releases a Bunch of Album B-Sides—On iTunes",
-      "source": "Digital Music News",
-      "summary": "通过: Charli XCX Releases a Bunch of Album B-Sides—On iTunes",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-29",
-      "type": "标杆案例",
-      "title": "Ariana Grande Files Lawsuit Against Shadowy Hacker Group Targeting the Singer",
-      "source": "Digital Music News",
-      "summary": "通过: Ariana Grande Files Lawsuit Against Shadowy Hacker Group Targeting the Singer",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-29",
-      "type": "标杆案例",
-      "title": "American Federation of Musicians Fires Off Amended AI Licensing Lawsuit Against Universal Music and ",
-      "source": "Digital Music News",
-      "summary": "通过: American Federation of Musicians Fires Off Amended AI Licensing Lawsuit Against ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-29",
-      "type": "每日统计",
-      "summary": "今日通过率: 83% (50/60)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-07-30",
-      "type": "被拒案例",
-      "title": "Epstein, Others Linked to Massive Sexual Exploitation Ring at Interlochen Arts School",
-      "source": "Digital Music News",
-      "reason": "非音乐行业核心内容，性侵犯罪调查新闻，与音乐业务关联度极低",
-      "summary": "被拒: Epstein, Others Linked to Massive Sexual Exploitation Ring at Interlochen Arts S",
-      "lesson": "避免采集此类素材: 非音乐行业核心内容，性侵犯罪调查新闻，与音乐业务关联度极低"
-    },
     {
       "date": "2026-07-30",
       "type": "标杆案例",
@@ -754,13 +678,106 @@
       "type": "每日统计",
       "summary": "今日通过率: 57% (34/60)",
       "lesson": ""
+    },
+    {
+      "date": "2026-08-03",
+      "type": "被拒案例",
+      "title": "‘Connections’ answers and hints for today, August 03",
+      "source": "NME",
+      "reason": "NME源但内容为Connections游戏答案，非音乐行业内容，属于白名单源类别级污染",
+      "summary": "被拒: ‘Connections’ answers and hints for today, August 03",
+      "lesson": "避免采集此类素材: NME源但内容为Connections游戏答案，非音乐行业内容，属于白名单源类别级污染"
+    },
+    {
+      "date": "2026-08-03",
+      "type": "被拒案例",
+      "title": "Globle answer today – here’s the answer and hints for August 03",
+      "source": "NME",
+      "reason": "NME源但内容为Globle游戏答案，非音乐行业内容，属于白名单源类别级污染",
+      "summary": "被拒: Globle answer today – here’s the answer and hints for August 03",
+      "lesson": "避免采集此类素材: NME源但内容为Globle游戏答案，非音乐行业内容，属于白名单源类别级污染"
+    },
+    {
+      "date": "2026-08-03",
+      "type": "被拒案例",
+      "title": "Framed answer today – here’s the solution for August 03",
+      "source": "NME",
+      "reason": "NME源'Framed answer'为Wordle类字谜游戏内容，非音乐行业素材",
+      "summary": "被拒: Framed answer today – here’s the solution for August 03",
+      "lesson": "避免采集此类素材: NME源'Framed answer'为Wordle类字谜游戏内容，非音乐行业素材"
+    },
+    {
+      "date": "2026-08-03",
+      "type": "被拒案例",
+      "title": "网易云音乐歌手歌单排行榜 - 手机新浪网",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "Google News黑名单源残留！来源为'Google News 腾讯音乐/网易云'，属于已承诺物理删除的黑名单源",
+      "summary": "被拒: 网易云音乐歌手歌单排行榜 - 手机新浪网",
+      "lesson": "避免采集此类素材: Google News黑名单源残留！来源为'Google News 腾讯音乐/网易云'，属于已承诺物理删除的黑名单源"
+    },
+    {
+      "date": "2026-08-03",
+      "type": "被拒案例",
+      "title": "中金：维持网易云音乐跑赢行业评级 目标价224港元 - 新浪财经",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "Google News黑名单源残留！来源为'Google News 腾讯音乐/网易云'，内容为中金公司评级报告，非音乐行业核心内容",
+      "summary": "被拒: 中金：维持网易云音乐跑赢行业评级 目标价224港元 - 新浪财经",
+      "lesson": "避免采集此类素材: Google News黑名单源残留！来源为'Google News 腾讯音乐/网易云'，内容为中金公司评级报告，非音乐行业核心内容"
+    },
+    {
+      "date": "2026-08-03",
+      "type": "标杆案例",
+      "title": "Massive Attack Respond to Being Banned From Singapore Over Displaying Palestinian Flag",
+      "source": "Rolling Stone Music",
+      "summary": "通过: Massive Attack Respond to Being Banned From Singapore Over Displaying Palestinia",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-03",
+      "type": "标杆案例",
+      "title": "Ariana Grande Taking a ‘Step Back’ From Public Life After Tour",
+      "source": "Rolling Stone Music",
+      "summary": "通过: Ariana Grande Taking a ‘Step Back’ From Public Life After Tour",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-03",
+      "type": "标杆案例",
+      "title": "See Madonna Bring Out Kylie Minogue to Preview ‘Love Sensation’ Remix in Amsterdam",
+      "source": "Rolling Stone Music",
+      "summary": "通过: See Madonna Bring Out Kylie Minogue to Preview ‘Love Sensation’ Remix in Amsterd",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-03",
+      "type": "标杆案例",
+      "title": "Phil Collins Reveals He Nearly Died in 2024 Amid Battle With Alcohol Addiction",
+      "source": "Rolling Stone Music",
+      "summary": "通过: Phil Collins Reveals He Nearly Died in 2024 Amid Battle With Alcohol Addiction",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-03",
+      "type": "标杆案例",
+      "title": "Lollapalooza 2026 Day Three: Olivia Dean, Sienna Spiro, and Rain Delays",
+      "source": "Rolling Stone Music",
+      "summary": "通过: Lollapalooza 2026 Day Three: Olivia Dean, Sienna Spiro, and Rain Delays",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-03",
+      "type": "每日统计",
+      "summary": "今日通过率: 55% (44/80)",
+      "lesson": ""
     }
   ],
   "selfReview": {
     "strengths": [
       "得到认可"
     ],
-    "weaknesses": [],
+    "weaknesses": [
+      "质量不稳定"
+    ],
     "ongoingIssues": [],
     "improvementPlan": ""
   }
