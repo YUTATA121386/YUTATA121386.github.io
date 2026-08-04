@@ -148,6 +148,11 @@
           "date": "2026-08-03",
           "event": "合作 19次",
           "trustDelta": 10
+        },
+        {
+          "date": "2026-08-04",
+          "event": "合作 13次",
+          "trustDelta": 8
         }
       ],
       "summary": "关系良好"
@@ -210,6 +215,11 @@
           "date": "2026-07-29",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-08-04",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
@@ -257,7 +267,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 84,
+      "trust": 86,
       "trend": "improving",
       "history": [
         {
@@ -354,103 +364,17 @@
           "date": "2026-08-03",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-04",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-30",
-      "type": "标杆案例",
-      "title": "The Dance World Reacts to Kavinsky’s Death: ‘The Funniest Person I’ve Ever Met’",
-      "source": "Billboard",
-      "summary": "通过: The Dance World Reacts to Kavinsky’s Death: ‘The Funniest Person I’ve Ever Met’",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-30",
-      "type": "标杆案例",
-      "title": "Claude Trained on 10 Editions of Donald Passman’s Music Industry Bible Without His Permission. His P",
-      "source": "Digital Music News",
-      "summary": "通过: Claude Trained on 10 Editions of Donald Passman’s Music Industry Bible Without H",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-30",
-      "type": "标杆案例",
-      "title": "BTS Announces 2027 Grammys Boycott Following ‘Best Asian Pop Music Performance’ Award Category Creat",
-      "source": "Digital Music News",
-      "summary": "通过: BTS Announces 2027 Grammys Boycott Following ‘Best Asian Pop Music Performance’ ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-30",
-      "type": "标杆案例",
-      "title": "How AI Agents Are Quietly Automating Music Companies: From A&R to Release Ops",
-      "source": "Digital Music News",
-      "summary": "通过: How AI Agents Are Quietly Automating Music Companies: From A&R to Release Ops",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-30",
-      "type": "标杆案例",
-      "title": "Influence Media Partners and BlackRock Announce Anthem Entertainment Catalog Acquisition — Price Tag",
-      "source": "Digital Music News",
-      "summary": "通过: Influence Media Partners and BlackRock Announce Anthem Entertainment Catalog Acq",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-30",
-      "type": "每日统计",
-      "summary": "今日通过率: 98% (39/40)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-07-31",
-      "type": "被拒案例",
-      "title": "Hamas reaches Gaza disarmament agreement with Board of Peace - Al Jazeera",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源残留，内容为加沙地区政治新闻，与音乐行业零关联",
-      "summary": "被拒: Hamas reaches Gaza disarmament agreement with Board of Peace - Al Jazeera",
-      "lesson": "避免采集此类素材: Google News黑名单源残留，内容为加沙地区政治新闻，与音乐行业零关联"
-    },
-    {
-      "date": "2026-07-31",
-      "type": "被拒案例",
-      "title": "Trump considers pulling Todd Blanche's attorney general nomination as senators hold out - BBC",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源残留，内容为美国政治新闻，与音乐行业零关联",
-      "summary": "被拒: Trump considers pulling Todd Blanche's attorney general nomination as senators h",
-      "lesson": "避免采集此类素材: Google News黑名单源残留，内容为美国政治新闻，与音乐行业零关联"
-    },
-    {
-      "date": "2026-07-31",
-      "type": "被拒案例",
-      "title": "After Fauci Senate hearing, experts worry about 'chilling effect' on public health - NPR",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源残留，内容为美国政治健康政策新闻，与音乐行业零关联",
-      "summary": "被拒: After Fauci Senate hearing, experts worry about 'chilling effect' on public heal",
-      "lesson": "避免采集此类素材: Google News黑名单源残留，内容为美国政治健康政策新闻，与音乐行业零关联"
-    },
-    {
-      "date": "2026-07-31",
-      "type": "被拒案例",
-      "title": "U.S. investigating whether Iran was behind cyberattack on Minnesota water systems - CBS News",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源残留，内容为网络安全国际新闻，与音乐行业零关联",
-      "summary": "被拒: U.S. investigating whether Iran was behind cyberattack on Minnesota water system",
-      "lesson": "避免采集此类素材: Google News黑名单源残留，内容为网络安全国际新闻，与音乐行业零关联"
-    },
-    {
-      "date": "2026-07-31",
-      "type": "被拒案例",
-      "title": "Mamdani's 'this is only the beginning' announcement cracking down on food delivery tips sparks outra",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源残留，内容为外卖配送政策新闻，与音乐行业零关联",
-      "summary": "被拒: Mamdani's 'this is only the beginning' announcement cracking down on food delive",
-      "lesson": "避免采集此类素材: Google News黑名单源残留，内容为外卖配送政策新闻，与音乐行业零关联"
-    },
     {
       "date": "2026-07-31",
       "type": "标杆案例",
@@ -769,6 +693,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 55% (44/80)",
       "lesson": ""
+    },
+    {
+      "date": "2026-08-04",
+      "type": "被拒案例",
+      "title": "Immigrant Held at Delaney Detention Center Has Died, Officials Say - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源，内容为移民拘留中心死亡事件的社会新闻，与音乐产业无关",
+      "summary": "被拒: Immigrant Held at Delaney Detention Center Has Died, Officials Say - The New Yor",
+      "lesson": "避免采集此类素材: Google News黑名单源，内容为移民拘留中心死亡事件的社会新闻，与音乐产业无关"
+    },
+    {
+      "date": "2026-08-04",
+      "type": "被拒案例",
+      "title": "Senate easily advances stopgap funding deal past first hurdle - Politico",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源，内容为参议院拨款法案的政治新闻，与音乐产业无关",
+      "summary": "被拒: Senate easily advances stopgap funding deal past first hurdle - Politico",
+      "lesson": "避免采集此类素材: Google News黑名单源，内容为参议院拨款法案的政治新闻，与音乐产业无关"
+    },
+    {
+      "date": "2026-08-04",
+      "type": "被拒案例",
+      "title": "Fact-checking Abdul El-Sayed and Haley Stevens' claims ahead of the Michigan Democratic Senate prima",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源，内容为密歇根民主党初选的事实核查，与音乐产业无关",
+      "summary": "被拒: Fact-checking Abdul El-Sayed and Haley Stevens' claims ahead of the Michigan Dem",
+      "lesson": "避免采集此类素材: Google News黑名单源，内容为密歇根民主党初选的事实核查，与音乐产业无关"
+    },
+    {
+      "date": "2026-08-04",
+      "type": "被拒案例",
+      "title": "US states sue to block Trump tariffs impacting dozens of countries - BBC",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源，内容为美国各州起诉特朗普关税的财经政治新闻，与音乐产业无关",
+      "summary": "被拒: US states sue to block Trump tariffs impacting dozens of countries - BBC",
+      "lesson": "避免采集此类素材: Google News黑名单源，内容为美国各州起诉特朗普关税的财经政治新闻，与音乐产业无关"
+    },
+    {
+      "date": "2026-08-04",
+      "type": "被拒案例",
+      "title": "Did Iran hack water systems in seven US states? - BBC",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源，内容为伊朗黑客攻击水系统的国际新闻，与音乐产业无关",
+      "summary": "被拒: Did Iran hack water systems in seven US states? - BBC",
+      "lesson": "避免采集此类素材: Google News黑名单源，内容为伊朗黑客攻击水系统的国际新闻，与音乐产业无关"
+    },
+    {
+      "date": "2026-08-04",
+      "type": "标杆案例",
+      "title": "FAKE TYPE.、メジャー3rdアルバム『FAKE RHYME』特典続々発表",
+      "source": "BARKS",
+      "summary": "通过: FAKE TYPE.、メジャー3rdアルバム『FAKE RHYME』特典続々発表",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-04",
+      "type": "标杆案例",
+      "title": "【ライブレポ－ト】Lavt、ツアー＜RE:BORN＞を結実させてメジャーデビューという新章へ「皆さんのそばに置いておけるような歌を作れたら」",
+      "source": "BARKS",
+      "summary": "通过: 【ライブレポ－ト】Lavt、ツアー＜RE:BORN＞を結実させてメジャーデビューという新章へ「皆さんのそばに置いておけるような歌を作れたら」",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-04",
+      "type": "标杆案例",
+      "title": "ALAN SHIRAHAMA、新曲「Not Enough (feat. Olivia Marsh)」のリリックビデオ公開。誕生日である本日にTikTok個人アカウント開設も",
+      "source": "BARKS",
+      "summary": "通过: ALAN SHIRAHAMA、新曲「Not Enough (feat. Olivia Marsh)」のリリックビデオ公開。誕生日である本日にTikTok個人アカ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-04",
+      "type": "标杆案例",
+      "title": "SUPER★DRAGON・池田彪馬、“Hyoma Ikeda”名義でソロプロジェクト始動。アー写公開＆1stミニアルバム『Effect』発売決定も",
+      "source": "BARKS",
+      "summary": "通过: SUPER★DRAGON・池田彪馬、“Hyoma Ikeda”名義でソロプロジェクト始動。アー写公開＆1stミニアルバム『Effect』発売決定も",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-04",
+      "type": "标杆案例",
+      "title": "Brandon Flowers reveals he’s considered quitting music: “I’m really going through it right now”",
+      "source": "NME",
+      "summary": "通过: Brandon Flowers reveals he’s considered quitting music: “I’m really going throug",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-04",
+      "type": "每日统计",
+      "summary": "今日通过率: 63% (50/80)",
+      "lesson": "通过率良好，保持当前标准"
     }
   ],
   "selfReview": {
