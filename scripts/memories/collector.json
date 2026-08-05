@@ -153,6 +153,11 @@
           "date": "2026-08-04",
           "event": "合作 13次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-08-05",
+          "event": "合作 8次",
+          "trustDelta": 4
         }
       ],
       "summary": "关系良好"
@@ -267,7 +272,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 86,
+      "trust": 88,
       "trend": "improving",
       "history": [
         {
@@ -369,103 +374,17 @@
           "date": "2026-08-04",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-05",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-31",
-      "type": "标杆案例",
-      "title": "UVI Rumble complements your most trusted synths, but should it do more?",
-      "source": "MusicTech",
-      "summary": "通过: UVI Rumble complements your most trusted synths, but should it do more?",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-31",
-      "type": "标杆案例",
-      "title": "I tested five of the best kick drum plugins in 2026 — here’s which one you should buy",
-      "source": "MusicTech",
-      "summary": "通过: I tested five of the best kick drum plugins in 2026 — here’s which one you shoul",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-31",
-      "type": "标杆案例",
-      "title": "Nightcall producer Kavinsky dead at 50",
-      "source": "MusicTech",
-      "summary": "通过: Nightcall producer Kavinsky dead at 50",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-31",
-      "type": "标杆案例",
-      "title": "You can run Doom on a modular synth – who knew?",
-      "source": "MusicTech",
-      "summary": "通过: You can run Doom on a modular synth – who knew?",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-31",
-      "type": "标杆案例",
-      "title": "Steinberg SpectraLayers Pro 13 is an excellent value spectral editor",
-      "source": "MusicTech",
-      "summary": "通过: Steinberg SpectraLayers Pro 13 is an excellent value spectral editor",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-07-31",
-      "type": "每日统计",
-      "summary": "今日通过率: 73% (58/80)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-08-01",
-      "type": "被拒案例",
-      "title": "第12批国家组织药品集采开标 521个产品拟中选 - 新京报",
-      "source": "Google News 音乐产业",
-      "reason": "药品集采新闻，与音乐产业完全无关。Google News黑名单源残留。",
-      "summary": "被拒: 第12批国家组织药品集采开标 521个产品拟中选 - 新京报",
-      "lesson": "避免采集此类素材: 药品集采新闻，与音乐产业完全无关。Google News黑名单源残留。"
-    },
-    {
-      "date": "2026-08-01",
-      "type": "被拒案例",
-      "title": "2026年世界奶业大会在内蒙古呼和浩特开幕 - 新华网",
-      "source": "Google News 音乐产业",
-      "reason": "奶业大会新闻，与音乐产业完全无关。Google News黑名单源残留。",
-      "summary": "被拒: 2026年世界奶业大会在内蒙古呼和浩特开幕 - 新华网",
-      "lesson": "避免采集此类素材: 奶业大会新闻，与音乐产业完全无关。Google News黑名单源残留。"
-    },
-    {
-      "date": "2026-08-01",
-      "type": "被拒案例",
-      "title": "工业绿色低碳“十五五”规划出炉 绿色能源应用、电气化改造将全面提速 - cb.com.cn",
-      "source": "Google News 音乐产业",
-      "reason": "工业绿色低碳规划新闻，与音乐产业完全无关。Google News黑名单源残留。",
-      "summary": "被拒: 工业绿色低碳“十五五”规划出炉 绿色能源应用、电气化改造将全面提速 - cb.com.cn",
-      "lesson": "避免采集此类素材: 工业绿色低碳规划新闻，与音乐产业完全无关。Google News黑名单源残留。"
-    },
-    {
-      "date": "2026-08-01",
-      "type": "被拒案例",
-      "title": "国际油价31日上涨 国内成品油价格将上调 - 中华网",
-      "source": "Google News 音乐产业",
-      "reason": "国际油价新闻，与音乐产业完全无关。Google News黑名单源残留。",
-      "summary": "被拒: 国际油价31日上涨 国内成品油价格将上调 - 中华网",
-      "lesson": "避免采集此类素材: 国际油价新闻，与音乐产业完全无关。Google News黑名单源残留。"
-    },
-    {
-      "date": "2026-08-01",
-      "type": "被拒案例",
-      "title": "2026中国经济半年报丨四大优势 读懂中国产业凭什么“能” - 中国日报网",
-      "source": "Google News 音乐产业",
-      "reason": "中国经济半年报新闻，与音乐产业完全无关。Google News黑名单源残留。",
-      "summary": "被拒: 2026中国经济半年报丨四大优势 读懂中国产业凭什么“能” - 中国日报网",
-      "lesson": "避免采集此类素材: 中国经济半年报新闻，与音乐产业完全无关。Google News黑名单源残留。"
-    },
     {
       "date": "2026-08-01",
       "type": "标杆案例",
@@ -784,15 +703,104 @@
       "type": "每日统计",
       "summary": "今日通过率: 63% (50/80)",
       "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-08-05",
+      "type": "被拒案例",
+      "title": "U.S. nears Hormuz deal, aiming for Wednesday announcement - Axios",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源+地缘政治新闻（霍尔木兹海峡），与音乐行业无关",
+      "summary": "被拒: U.S. nears Hormuz deal, aiming for Wednesday announcement - Axios",
+      "lesson": "避免采集此类素材: Google News黑名单源+地缘政治新闻（霍尔木兹海峡），与音乐行业无关"
+    },
+    {
+      "date": "2026-08-05",
+      "type": "被拒案例",
+      "title": "Progressive activist wins Democratic primary in one of the country’s biggest House races - NBC News",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源+政治新闻（民主党初选），与音乐行业无关",
+      "summary": "被拒: Progressive activist wins Democratic primary in one of the country’s biggest Hou",
+      "lesson": "避免采集此类素材: Google News黑名单源+政治新闻（民主党初选），与音乐行业无关"
+    },
+    {
+      "date": "2026-08-05",
+      "type": "被拒案例",
+      "title": "Armed man arrested at Trump’s LA golf course ahead of president’s visit - Al Jazeera",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源+政治/犯罪新闻（特朗普高尔夫球场事件），与音乐行业无关",
+      "summary": "被拒: Armed man arrested at Trump’s LA golf course ahead of president’s visit - Al Jaz",
+      "lesson": "避免采集此类素材: Google News黑名单源+政治/犯罪新闻（特朗普高尔夫球场事件），与音乐行业无关"
+    },
+    {
+      "date": "2026-08-05",
+      "type": "被拒案例",
+      "title": "U.S. has used nearly all its stockpile of long-range missiles in Iran war, sources say - CBS News",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源+军事新闻（导弹库存/伊朗战争），与音乐行业无关",
+      "summary": "被拒: U.S. has used nearly all its stockpile of long-range missiles in Iran war, sourc",
+      "lesson": "避免采集此类素材: Google News黑名单源+军事新闻（导弹库存/伊朗战争），与音乐行业无关"
+    },
+    {
+      "date": "2026-08-05",
+      "type": "被拒案例",
+      "title": "Arrested at Reflecting Pool, woman details ‘heartbreaking’ toll case has taken - The Washington Post",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源+社会新闻（被捕事件），与音乐行业无关",
+      "summary": "被拒: Arrested at Reflecting Pool, woman details ‘heartbreaking’ toll case has taken -",
+      "lesson": "避免采集此类素材: Google News黑名单源+社会新闻（被捕事件），与音乐行业无关"
+    },
+    {
+      "date": "2026-08-05",
+      "type": "标杆案例",
+      "title": "Fender’s first-ever performance pad controllers have arrived –  here’s everything you need to know a",
+      "source": "MusicTech",
+      "summary": "通过: Fender’s first-ever performance pad controllers have arrived –  here’s everythin",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-05",
+      "type": "标杆案例",
+      "title": "Moby praises the UK for inventing rave culture",
+      "source": "MusicTech",
+      "summary": "通过: Moby praises the UK for inventing rave culture",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-05",
+      "type": "标杆案例",
+      "title": "“We just don’t see a point of ever being on a label again”: M. Shadows on Avenged Sevenfold’s new ch",
+      "source": "MusicTech",
+      "summary": "通过: “We just don’t see a point of ever being on a label again”: M. Shadows on Avenge",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-05",
+      "type": "标杆案例",
+      "title": "German court says Suno’s AI training infringed copyright in landmark ruling",
+      "source": "MusicTech",
+      "summary": "通过: German court says Suno’s AI training infringed copyright in landmark ruling",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-05",
+      "type": "标杆案例",
+      "title": "Anukari is a unique modelling synth that dares to be different, but how does it fit into my workflow",
+      "source": "MusicTech",
+      "summary": "通过: Anukari is a unique modelling synth that dares to be different, but how does it ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-05",
+      "type": "每日统计",
+      "summary": "今日通过率: 60% (36/60)",
+      "lesson": "通过率良好，保持当前标准"
     }
   ],
   "selfReview": {
     "strengths": [
       "得到认可"
     ],
-    "weaknesses": [
-      "质量不稳定"
-    ],
+    "weaknesses": [],
     "ongoingIssues": [],
     "improvementPlan": ""
   }

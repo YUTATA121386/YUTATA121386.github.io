@@ -153,6 +153,11 @@
           "date": "2026-08-04",
           "event": "合作 13次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-08-05",
+          "event": "合作 8次",
+          "trustDelta": 4
         }
       ],
       "summary": "关系良好"
@@ -192,7 +197,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 64,
+      "trust": 66,
       "trend": "stable",
       "history": [
         {
@@ -314,26 +319,17 @@
           "date": "2026-08-04",
           "event": "合作 4次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-05",
+          "event": "合作 4次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-19",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: 第二批20条素材审核完毕：通过13条，拒绝7条。通过率65%。",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-07-19",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 第一批20条素材审核完毕，通过19条，拒绝1条。通过率95%。",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-07-19",
       "type": "重大挛折",
@@ -667,6 +663,20 @@
       "date": "2026-08-04",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 首批20条素材全部通过，通过率100%！",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-05",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 承诺失效（首次）：你声称'全部来自白名单源'并提交了扫描日志，但待审核队列中RAW-2026-08-05-0031至0040共10条素材全部来自Google N",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-05",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 首批20条素材审核完成：通过18条，拒绝2条，通过率90%",
       "lesson": "",
       "impact": ""
     }

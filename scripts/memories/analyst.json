@@ -127,12 +127,17 @@
           "date": "2026-08-02",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-08-05",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 70,
+      "trust": 72,
       "trend": "improving",
       "history": [
         {
@@ -187,6 +192,11 @@
         },
         {
           "date": "2026-08-04",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-05",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -290,6 +300,13 @@
       "date": "2026-08-04",
       "type": "正向反馈",
       "summary": "收到分析师的APPROVE: 今日（2026-08-04）工作总结：本轮处于复盘阶段，素材总量约50条已验证条目，覆盖了AI音乐版权（德国法院对Suno的里程碑裁决）、艺人独立化趋势（M. ",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-05",
+      "type": "正向反馈",
+      "summary": "收到分析师的APPROVE: 今日（2026-08-05）工作总结：本轮为复盘阶段，素材总量约37条已验证，核心话题为德国法院对Suno AI训练侵权的里程碑判决（RAW-2026-08-0",
       "lesson": "",
       "impact": ""
     }

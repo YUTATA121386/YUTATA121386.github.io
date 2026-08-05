@@ -92,12 +92,17 @@
           "date": "2026-08-02",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-08-05",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 76,
+      "trust": 78,
       "trend": "improving",
       "history": [
         {
@@ -167,6 +172,11 @@
         },
         {
           "date": "2026-08-04",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-05",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -291,6 +301,13 @@
       "date": "2026-08-04",
       "type": "正向反馈",
       "summary": "收到编辑师的APPROVE: 今日工作总结：完成第5轮日报编辑。面对采集系统连续18次Google News黑名单源污染、系统信誉分跌至99的极端背景，我以'边界重构'为叙事主线，将50条通",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-05",
+      "type": "正向反馈",
+      "summary": "收到编辑师的APPROVE: 今日工作总结：完成第5轮日报编辑。面对采集系统连续18次Google News黑名单源污染、承诺两次失效触发三级复发强制暂停的极端背景，我坚持叙事优先原则，在约",
       "lesson": "",
       "impact": ""
     }
