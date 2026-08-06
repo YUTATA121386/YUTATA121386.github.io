@@ -158,6 +158,11 @@
           "date": "2026-08-05",
           "event": "合作 8次",
           "trustDelta": 4
+        },
+        {
+          "date": "2026-08-06",
+          "event": "合作 9次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -225,6 +230,11 @@
           "date": "2026-08-04",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-08-06",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
@@ -272,7 +282,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 88,
+      "trust": 90,
       "trend": "improving",
       "history": [
         {
@@ -379,103 +389,17 @@
           "date": "2026-08-05",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-06",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-01",
-      "type": "标杆案例",
-      "title": "SoundBoost Bets Big on Natural Language Music Mastering & Mixing",
-      "source": "Digital Music News",
-      "summary": "通过: SoundBoost Bets Big on Natural Language Music Mastering & Mixing",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-01",
-      "type": "标杆案例",
-      "title": "Spotify Adds ‘Campaign Lift’ Metric to ‘Discovery Mode’ to Prove It’s Working",
-      "source": "Digital Music News",
-      "summary": "通过: Spotify Adds ‘Campaign Lift’ Metric to ‘Discovery Mode’ to Prove It’s Working",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-01",
-      "type": "标杆案例",
-      "title": "SiriusXM Posts Mixed Q2 2026 Financials — Including Flat Revenue, Record-Low Churn, and a 17% Net In",
-      "source": "Digital Music News",
-      "summary": "通过: SiriusXM Posts Mixed Q2 2026 Financials — Including Flat Revenue, Record-Low Chu",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-01",
-      "type": "标杆案例",
-      "title": "Grammys CEO Responds After BTS Jumps Ship—Will the ‘Asian Pop’ Category Get Nixed?",
-      "source": "Digital Music News",
-      "summary": "通过: Grammys CEO Responds After BTS Jumps Ship—Will the ‘Asian Pop’ Category Get Nixe",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-01",
-      "type": "标杆案例",
-      "title": "The Ad-Supported Free Lunch Is Over In India: UMG India Is Now Putting All New Streaming Releases Be",
-      "source": "Digital Music News",
-      "summary": "通过: The Ad-Supported Free Lunch Is Over In India: UMG India Is Now Putting All New S",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-01",
-      "type": "每日统计",
-      "summary": "今日通过率: 75% (45/60)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-08-02",
-      "type": "被拒案例",
-      "title": "Gunman opens fire at Idaho fast-food restaurant, killing two - Al Jazeera",
-      "source": "Google News Music Industry",
-      "reason": "枪击事件新闻报道，与音乐产业无关，来源为Google News黑名单源",
-      "summary": "被拒: Gunman opens fire at Idaho fast-food restaurant, killing two - Al Jazeera",
-      "lesson": "避免采集此类素材: 枪击事件新闻报道，与音乐产业无关，来源为Google News黑名单源"
-    },
-    {
-      "date": "2026-08-02",
-      "type": "被拒案例",
-      "title": "Avalanche in Pakistan kills famed mountaineer Nirmal Purja and his fellow climbers - NPR",
-      "source": "Google News Music Industry",
-      "reason": "登山者遇难新闻，与音乐产业无关，来源为Google News黑名单源",
-      "summary": "被拒: Avalanche in Pakistan kills famed mountaineer Nirmal Purja and his fellow climbe",
-      "lesson": "避免采集此类素材: 登山者遇难新闻，与音乐产业无关，来源为Google News黑名单源"
-    },
-    {
-      "date": "2026-08-02",
-      "type": "被拒案例",
-      "title": "More Than a Dozen Wildfires Burn in Washington State, Forcing Evacuations - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "华盛顿州山火新闻，与音乐产业无关，来源为Google News黑名单源",
-      "summary": "被拒: More Than a Dozen Wildfires Burn in Washington State, Forcing Evacuations - The ",
-      "lesson": "避免采集此类素材: 华盛顿州山火新闻，与音乐产业无关，来源为Google News黑名单源"
-    },
-    {
-      "date": "2026-08-02",
-      "type": "被拒案例",
-      "title": "A brief timeline of Iranian cyberattacks on U.S. companies, political figures, water systems and mor",
-      "source": "Google News Music Industry",
-      "reason": "伊朗网络攻击时间线新闻，与音乐产业无关，来源为Google News黑名单源",
-      "summary": "被拒: A brief timeline of Iranian cyberattacks on U.S. companies, political figures, w",
-      "lesson": "避免采集此类素材: 伊朗网络攻击时间线新闻，与音乐产业无关，来源为Google News黑名单源"
-    },
-    {
-      "date": "2026-08-02",
-      "type": "被拒案例",
-      "title": "Trump says he’ll revive ‘anti-weaponization’ fund if Blanche’s nomination for AG is blocked - NBC Ne",
-      "source": "Google News Music Industry",
-      "reason": "特朗普政治新闻，与音乐产业无关，来源为Google News黑名单源",
-      "summary": "被拒: Trump says he’ll revive ‘anti-weaponization’ fund if Blanche’s nomination for AG",
-      "lesson": "避免采集此类素材: 特朗普政治新闻，与音乐产业无关，来源为Google News黑名单源"
-    },
     {
       "date": "2026-08-02",
       "type": "标杆案例",
@@ -793,6 +717,97 @@
       "date": "2026-08-05",
       "type": "每日统计",
       "summary": "今日通过率: 60% (36/60)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-08-06",
+      "type": "被拒案例",
+      "title": "After Michigan Loss, AIPAC Weighs a Second Effort to Defeat El-Sayed - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为美国政治选举新闻，与音乐产业完全无关",
+      "summary": "被拒: After Michigan Loss, AIPAC Weighs a Second Effort to Defeat El-Sayed - The New Y",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为美国政治选举新闻，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-06",
+      "type": "被拒案例",
+      "title": "Trump, Hegseth clashed at Camp David over Iran missile depletion concerns - The Washington Post",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为美国政治军事新闻，与音乐产业完全无关",
+      "summary": "被拒: Trump, Hegseth clashed at Camp David over Iran missile depletion concerns - The ",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为美国政治军事新闻，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-06",
+      "type": "被拒案例",
+      "title": "Max Miller’s Democratic opponent doesn’t want to talk about Max Miller - politico.com",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为美国政治选举新闻，与音乐产业完全无关",
+      "summary": "被拒: Max Miller’s Democratic opponent doesn’t want to talk about Max Miller - politic",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为美国政治选举新闻，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-06",
+      "type": "被拒案例",
+      "title": "Fauci's HHS iPhone turned over to Senate investigators as contempt vote looms - Fox News",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为美国政治调查新闻，与音乐产业完全无关",
+      "summary": "被拒: Fauci's HHS iPhone turned over to Senate investigators as contempt vote looms - ",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为美国政治调查新闻，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-06",
+      "type": "被拒案例",
+      "title": "They lost their work permits and their legal status. Returning to Haiti is still ‘unimaginable’ - PB",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为海地移民新闻，与音乐产业完全无关",
+      "summary": "被拒: They lost their work permits and their legal status. Returning to Haiti is still",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为海地移民新闻，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-06",
+      "type": "标杆案例",
+      "title": "Job openings in music tech this month: In-house production, higher education, AAA games, and more",
+      "source": "MusicTech",
+      "summary": "通过: Job openings in music tech this month: In-house production, higher education, AA",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-06",
+      "type": "标杆案例",
+      "title": "Steinberg is celebrating 30 years of VST and 25 years of HALion with a raft of massive discounts and",
+      "source": "MusicTech",
+      "summary": "通过: Steinberg is celebrating 30 years of VST and 25 years of HALion with a raft of m",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-06",
+      "type": "标杆案例",
+      "title": "A quick guide to mastering your own music",
+      "source": "MusicTech",
+      "summary": "通过: A quick guide to mastering your own music",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-06",
+      "type": "标杆案例",
+      "title": "Fender’s first-ever performance pad controllers have arrived –  here’s everything you need to know a",
+      "source": "MusicTech",
+      "summary": "通过: Fender’s first-ever performance pad controllers have arrived –  here’s everythin",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-06",
+      "type": "标杆案例",
+      "title": "Moby praises the UK for inventing rave culture",
+      "source": "MusicTech",
+      "summary": "通过: Moby praises the UK for inventing rave culture",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-06",
+      "type": "每日统计",
+      "summary": "今日通过率: 62% (37/60)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],
