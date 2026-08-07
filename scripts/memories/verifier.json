@@ -163,6 +163,11 @@
           "date": "2026-08-06",
           "event": "合作 9次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-08-07",
+          "event": "合作 11次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -207,7 +212,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 68,
+      "trust": 70,
       "trend": "stable",
       "history": [
         {
@@ -339,26 +344,17 @@
           "date": "2026-08-06",
           "event": "合作 5次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-07",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
-      "summary": "关系一般"
+      "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-19",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: 拒绝3条素材：RAW-2026-07-19-0008, RAW-2026-07-19-0016, RAW-2026-07-19-0018。",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-07-19",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 第一批20条素材审核完毕：通过17条，拒绝3条。通过率85%。",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-07-19",
       "type": "重大挛折",
@@ -692,6 +688,20 @@
       "date": "2026-08-06",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 首批20条审核完成：通过19条，拒绝1条，通过率95%。未发现Google News黑名单源污染，质量优秀！",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-07",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 承诺严重失实+三级复发触发强制暂停：你声称'零残留'并提交扫描日志，但待审核队列中有14条Google News黑名单源污染素材（RAW-0047至0060）",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-07",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 首批20条素材全部通过，通过率100%！未发现Google News黑名单源污染，质量优秀！",
       "lesson": "",
       "impact": ""
     }

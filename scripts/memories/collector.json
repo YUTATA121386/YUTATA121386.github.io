@@ -163,6 +163,11 @@
           "date": "2026-08-06",
           "event": "合作 9次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-08-07",
+          "event": "合作 11次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -282,7 +287,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 90,
+      "trust": 92,
       "trend": "improving",
       "history": [
         {
@@ -394,103 +399,17 @@
           "date": "2026-08-06",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-07",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-02",
-      "type": "标杆案例",
-      "title": "Lil Uzi Vert Drops Surprise Birthday EP After Lollapalooza Cancellation",
-      "source": "Billboard",
-      "summary": "通过: Lil Uzi Vert Drops Surprise Birthday EP After Lollapalooza Cancellation",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-02",
-      "type": "标杆案例",
-      "title": "iZotope RX vs Steinberg SpectraLayers: Which Spectral Editor software is really the best?",
-      "source": "MusicTech",
-      "summary": "通过: iZotope RX vs Steinberg SpectraLayers: Which Spectral Editor software is really ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-02",
-      "type": "标杆案例",
-      "title": "Here’s how to document your music memories with Spotify’s new User Notes feature",
-      "source": "MusicTech",
-      "summary": "通过: Here’s how to document your music memories with Spotify’s new User Notes feature",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-02",
-      "type": "标杆案例",
-      "title": "Vangelis’s first Yamaha CS-80 was listed on Reverb for £400k – and someone actually bought it",
-      "source": "MusicTech",
-      "summary": "通过: Vangelis’s first Yamaha CS-80 was listed on Reverb for £400k – and someone actua",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-02",
-      "type": "标杆案例",
-      "title": "Sennheiser Momentum 5 Wireless review: Heritage goes on holiday",
-      "source": "MusicTech",
-      "summary": "通过: Sennheiser Momentum 5 Wireless review: Heritage goes on holiday",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-02",
-      "type": "每日统计",
-      "summary": "今日通过率: 57% (34/60)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-08-03",
-      "type": "被拒案例",
-      "title": "‘Connections’ answers and hints for today, August 03",
-      "source": "NME",
-      "reason": "NME源但内容为Connections游戏答案，非音乐行业内容，属于白名单源类别级污染",
-      "summary": "被拒: ‘Connections’ answers and hints for today, August 03",
-      "lesson": "避免采集此类素材: NME源但内容为Connections游戏答案，非音乐行业内容，属于白名单源类别级污染"
-    },
-    {
-      "date": "2026-08-03",
-      "type": "被拒案例",
-      "title": "Globle answer today – here’s the answer and hints for August 03",
-      "source": "NME",
-      "reason": "NME源但内容为Globle游戏答案，非音乐行业内容，属于白名单源类别级污染",
-      "summary": "被拒: Globle answer today – here’s the answer and hints for August 03",
-      "lesson": "避免采集此类素材: NME源但内容为Globle游戏答案，非音乐行业内容，属于白名单源类别级污染"
-    },
-    {
-      "date": "2026-08-03",
-      "type": "被拒案例",
-      "title": "Framed answer today – here’s the solution for August 03",
-      "source": "NME",
-      "reason": "NME源'Framed answer'为Wordle类字谜游戏内容，非音乐行业素材",
-      "summary": "被拒: Framed answer today – here’s the solution for August 03",
-      "lesson": "避免采集此类素材: NME源'Framed answer'为Wordle类字谜游戏内容，非音乐行业素材"
-    },
-    {
-      "date": "2026-08-03",
-      "type": "被拒案例",
-      "title": "网易云音乐歌手歌单排行榜 - 手机新浪网",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News黑名单源残留！来源为'Google News 腾讯音乐/网易云'，属于已承诺物理删除的黑名单源",
-      "summary": "被拒: 网易云音乐歌手歌单排行榜 - 手机新浪网",
-      "lesson": "避免采集此类素材: Google News黑名单源残留！来源为'Google News 腾讯音乐/网易云'，属于已承诺物理删除的黑名单源"
-    },
-    {
-      "date": "2026-08-03",
-      "type": "被拒案例",
-      "title": "中金：维持网易云音乐跑赢行业评级 目标价224港元 - 新浪财经",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News黑名单源残留！来源为'Google News 腾讯音乐/网易云'，内容为中金公司评级报告，非音乐行业核心内容",
-      "summary": "被拒: 中金：维持网易云音乐跑赢行业评级 目标价224港元 - 新浪财经",
-      "lesson": "避免采集此类素材: Google News黑名单源残留！来源为'Google News 腾讯音乐/网易云'，内容为中金公司评级报告，非音乐行业核心内容"
-    },
     {
       "date": "2026-08-03",
       "type": "标杆案例",
@@ -808,6 +727,97 @@
       "date": "2026-08-06",
       "type": "每日统计",
       "summary": "今日通过率: 62% (37/60)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-08-07",
+      "type": "被拒案例",
+      "title": "DeepSeek V4 Flash低价斩杀线背后：当梁文锋也卷不动算力账单（含实测） - 钛媒体",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染，内容为DeepSeek算力成本，与音乐产业完全无关",
+      "summary": "被拒: DeepSeek V4 Flash低价斩杀线背后：当梁文锋也卷不动算力账单（含实测） - 钛媒体",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为DeepSeek算力成本，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-07",
+      "type": "被拒案例",
+      "title": "涨停雷达：民爆一体化+资产注入预期+央企 保利联合触及涨停 - 同花顺财经",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染，内容为民爆概念股，与音乐产业完全无关",
+      "summary": "被拒: 涨停雷达：民爆一体化+资产注入预期+央企 保利联合触及涨停 - 同花顺财经",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为民爆概念股，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-07",
+      "type": "被拒案例",
+      "title": "半导体设备板块异动拉升 耐科装备涨停 - finance.eastmoney.com",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染，内容为半导体板块，与音乐产业完全无关",
+      "summary": "被拒: 半导体设备板块异动拉升 耐科装备涨停 - finance.eastmoney.com",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为半导体板块，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-07",
+      "type": "被拒案例",
+      "title": "8月7日股市避雷针 - 财联社",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染，内容为股市风险提示，与音乐产业完全无关",
+      "summary": "被拒: 8月7日股市避雷针 - 财联社",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为股市风险提示，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-07",
+      "type": "被拒案例",
+      "title": "我国首座抗17级台风风电平台投运 海上风电技术新突破 - military.china.com",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染，内容为风电平台投运，与音乐产业完全无关",
+      "summary": "被拒: 我国首座抗17级台风风电平台投运 海上风电技术新突破 - military.china.com",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为风电平台投运，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-07",
+      "type": "标杆案例",
+      "title": "Additional Licensing Deals Incoming? Suno Unveils ‘New Downloads Policy,’ Watermarking Support, ‘Cle",
+      "source": "Digital Music News",
+      "summary": "通过: Additional Licensing Deals Incoming? Suno Unveils ‘New Downloads Policy,’ Waterm",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-07",
+      "type": "标杆案例",
+      "title": "BTS Ticket Prices Plunge Below $20 Ahead of Boston Stadium Shows; $8 Nosebleeds Available Just Hours",
+      "source": "Digital Music News",
+      "summary": "通过: BTS Ticket Prices Plunge Below $20 Ahead of Boston Stadium Shows; $8 Nosebleeds ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-07",
+      "type": "标杆案例",
+      "title": "Anthropic Pushes for Partial Dismissal in ‘Concord II,’ Says No Direct Infringement Evidence Exists ",
+      "source": "Digital Music News",
+      "summary": "通过: Anthropic Pushes for Partial Dismissal in ‘Concord II,’ Says No Direct Infringem",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-07",
+      "type": "标杆案例",
+      "title": "What Is the ‘Gen Alpha Melody’? Trust Us, You’ve Heard It.",
+      "source": "Digital Music News",
+      "summary": "通过: What Is the ‘Gen Alpha Melody’? Trust Us, You’ve Heard It.",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-07",
+      "type": "标杆案例",
+      "title": "Federal Judge Rejects ‘Woulard v. Udio’ Dismissal Request, Transfers the Class Action Suit to New Yo",
+      "source": "Digital Music News",
+      "summary": "通过: Federal Judge Rejects ‘Woulard v. Udio’ Dismissal Request, Transfers the Class A",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-07",
+      "type": "每日统计",
+      "summary": "今日通过率: 75% (45/60)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],

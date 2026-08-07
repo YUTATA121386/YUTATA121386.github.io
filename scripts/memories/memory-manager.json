@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 90,
+      "trust": 92,
       "trend": "improving",
       "history": [
         {
@@ -118,12 +118,17 @@
           "date": "2026-08-06",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-07",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "verifier": {
-      "trust": 68,
+      "trust": 70,
       "trend": "stable",
       "history": [
         {
@@ -255,12 +260,17 @@
           "date": "2026-08-06",
           "event": "合作 5次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-07",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
-      "summary": "关系一般"
+      "summary": "关系良好"
     },
     "analyst": {
-      "trust": 74,
+      "trust": 76,
       "trend": "improving",
       "history": [
         {
@@ -327,12 +337,17 @@
           "date": "2026-08-06",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-07",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "editor": {
-      "trust": 80,
+      "trust": 82,
       "trend": "improving",
       "history": [
         {
@@ -412,6 +427,11 @@
         },
         {
           "date": "2026-08-06",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-07",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -585,6 +605,13 @@
       "date": "2026-08-06",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日工作总结：共提交147条素材，审核通过率约45%（18/40已审核），未审核部分仍存疑。核心问题：Google News黑名单源污染第20次复发，且两次承诺",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-07",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日工作总结：今日共提交2批35条素材，首批20条全部通过（通过率100%），第2批通过6条、拒绝14条（通过率40%），累计通过率74.3%（26/35）。核",
       "lesson": "",
       "impact": ""
     }
