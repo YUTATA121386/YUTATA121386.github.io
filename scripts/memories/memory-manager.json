@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 92,
+      "trust": 94,
       "trend": "improving",
       "history": [
         {
@@ -123,12 +123,17 @@
           "date": "2026-08-07",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-08",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "verifier": {
-      "trust": 70,
+      "trust": 72,
       "trend": "stable",
       "history": [
         {
@@ -265,12 +270,17 @@
           "date": "2026-08-07",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-08",
+          "event": "合作 4次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "analyst": {
-      "trust": 76,
+      "trust": 78,
       "trend": "improving",
       "history": [
         {
@@ -342,12 +352,17 @@
           "date": "2026-08-07",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-08",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "editor": {
-      "trust": 82,
+      "trust": 84,
       "trend": "improving",
       "history": [
         {
@@ -432,6 +447,11 @@
         },
         {
           "date": "2026-08-07",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-08",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -612,6 +632,13 @@
       "date": "2026-08-07",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日工作总结：今日共提交2批35条素材，首批20条全部通过（通过率100%），第2批通过6条、拒绝14条（通过率40%），累计通过率74.3%（26/35）。核",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-08",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日工作总结：共采集169条素材，分三批提交。首批20条全部通过（通过率100%），第三批10条BARKS源素材全部通过，但第二批20条中混入7条Google ",
       "lesson": "",
       "impact": ""
     }

@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 100,
+      "trust": 94,
       "trend": "improving",
       "history": [
         {
@@ -168,6 +168,11 @@
           "date": "2026-08-07",
           "event": "合作 11次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-08-08",
+          "event": "冲突 9次",
+          "trustDelta": -6
         }
       ],
       "summary": "关系良好"
@@ -245,7 +250,7 @@
       "summary": "关系一般"
     },
     "editor": {
-      "trust": 62,
+      "trust": 64,
       "trend": "improving",
       "history": [
         {
@@ -282,12 +287,17 @@
           "date": "2026-08-03",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-08-08",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 92,
+      "trust": 94,
       "trend": "improving",
       "history": [
         {
@@ -404,103 +414,17 @@
           "date": "2026-08-07",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-08",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-03",
-      "type": "标杆案例",
-      "title": "Massive Attack Respond to Being Banned From Singapore Over Displaying Palestinian Flag",
-      "source": "Rolling Stone Music",
-      "summary": "通过: Massive Attack Respond to Being Banned From Singapore Over Displaying Palestinia",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-03",
-      "type": "标杆案例",
-      "title": "Ariana Grande Taking a ‘Step Back’ From Public Life After Tour",
-      "source": "Rolling Stone Music",
-      "summary": "通过: Ariana Grande Taking a ‘Step Back’ From Public Life After Tour",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-03",
-      "type": "标杆案例",
-      "title": "See Madonna Bring Out Kylie Minogue to Preview ‘Love Sensation’ Remix in Amsterdam",
-      "source": "Rolling Stone Music",
-      "summary": "通过: See Madonna Bring Out Kylie Minogue to Preview ‘Love Sensation’ Remix in Amsterd",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-03",
-      "type": "标杆案例",
-      "title": "Phil Collins Reveals He Nearly Died in 2024 Amid Battle With Alcohol Addiction",
-      "source": "Rolling Stone Music",
-      "summary": "通过: Phil Collins Reveals He Nearly Died in 2024 Amid Battle With Alcohol Addiction",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-03",
-      "type": "标杆案例",
-      "title": "Lollapalooza 2026 Day Three: Olivia Dean, Sienna Spiro, and Rain Delays",
-      "source": "Rolling Stone Music",
-      "summary": "通过: Lollapalooza 2026 Day Three: Olivia Dean, Sienna Spiro, and Rain Delays",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-03",
-      "type": "每日统计",
-      "summary": "今日通过率: 55% (44/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-08-04",
-      "type": "被拒案例",
-      "title": "Immigrant Held at Delaney Detention Center Has Died, Officials Say - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源，内容为移民拘留中心死亡事件的社会新闻，与音乐产业无关",
-      "summary": "被拒: Immigrant Held at Delaney Detention Center Has Died, Officials Say - The New Yor",
-      "lesson": "避免采集此类素材: Google News黑名单源，内容为移民拘留中心死亡事件的社会新闻，与音乐产业无关"
-    },
-    {
-      "date": "2026-08-04",
-      "type": "被拒案例",
-      "title": "Senate easily advances stopgap funding deal past first hurdle - Politico",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源，内容为参议院拨款法案的政治新闻，与音乐产业无关",
-      "summary": "被拒: Senate easily advances stopgap funding deal past first hurdle - Politico",
-      "lesson": "避免采集此类素材: Google News黑名单源，内容为参议院拨款法案的政治新闻，与音乐产业无关"
-    },
-    {
-      "date": "2026-08-04",
-      "type": "被拒案例",
-      "title": "Fact-checking Abdul El-Sayed and Haley Stevens' claims ahead of the Michigan Democratic Senate prima",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源，内容为密歇根民主党初选的事实核查，与音乐产业无关",
-      "summary": "被拒: Fact-checking Abdul El-Sayed and Haley Stevens' claims ahead of the Michigan Dem",
-      "lesson": "避免采集此类素材: Google News黑名单源，内容为密歇根民主党初选的事实核查，与音乐产业无关"
-    },
-    {
-      "date": "2026-08-04",
-      "type": "被拒案例",
-      "title": "US states sue to block Trump tariffs impacting dozens of countries - BBC",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源，内容为美国各州起诉特朗普关税的财经政治新闻，与音乐产业无关",
-      "summary": "被拒: US states sue to block Trump tariffs impacting dozens of countries - BBC",
-      "lesson": "避免采集此类素材: Google News黑名单源，内容为美国各州起诉特朗普关税的财经政治新闻，与音乐产业无关"
-    },
-    {
-      "date": "2026-08-04",
-      "type": "被拒案例",
-      "title": "Did Iran hack water systems in seven US states? - BBC",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源，内容为伊朗黑客攻击水系统的国际新闻，与音乐产业无关",
-      "summary": "被拒: Did Iran hack water systems in seven US states? - BBC",
-      "lesson": "避免采集此类素材: Google News黑名单源，内容为伊朗黑客攻击水系统的国际新闻，与音乐产业无关"
-    },
     {
       "date": "2026-08-04",
       "type": "标杆案例",
@@ -819,6 +743,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 75% (45/60)",
       "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-08-08",
+      "type": "被拒案例",
+      "title": "Why a prosecution of Anthony Fauci could face challenges in court - The Washington Post",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为Fauci法律诉讼新闻，与音乐行业完全无关",
+      "summary": "被拒: Why a prosecution of Anthony Fauci could face challenges in court - The Washingt",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为Fauci法律诉讼新闻，与音乐行业完全无关"
+    },
+    {
+      "date": "2026-08-08",
+      "type": "被拒案例",
+      "title": "Remains of 56 people found decomposing at Chicago funeral home - The Guardian",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为芝加哥殡仪馆社会新闻，与音乐行业完全无关",
+      "summary": "被拒: Remains of 56 people found decomposing at Chicago funeral home - The Guardian",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为芝加哥殡仪馆社会新闻，与音乐行业完全无关"
+    },
+    {
+      "date": "2026-08-08",
+      "type": "被拒案例",
+      "title": "U.S. Squeezes Cuba Even as It Searches for a New Regime Leader - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为美国与古巴关系国际新闻，与音乐行业完全无关",
+      "summary": "被拒: U.S. Squeezes Cuba Even as It Searches for a New Regime Leader - The New York Ti",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为美国与古巴关系国际新闻，与音乐行业完全无关"
+    },
+    {
+      "date": "2026-08-08",
+      "type": "被拒案例",
+      "title": "Today’s Wordle answer and hints for #1876 on August 08",
+      "source": "NME",
+      "reason": "NME源但内容为Wordle游戏答案，属于游戏娱乐内容，与音乐行业无直接关联，且'Wordle'已被列入黑名单关键词特征库",
+      "summary": "被拒: Today’s Wordle answer and hints for #1876 on August 08",
+      "lesson": "避免采集此类素材: NME源但内容为Wordle游戏答案，属于游戏娱乐内容，与音乐行业无直接关联，且'Wordle'已被列入黑名单关键词特征库"
+    },
+    {
+      "date": "2026-08-08",
+      "type": "被拒案例",
+      "title": "‘Connections’ answers and hints for today, August 08",
+      "source": "NME",
+      "reason": "NME源但内容为Connections游戏答案，属于游戏娱乐内容，与音乐行业无直接关联",
+      "summary": "被拒: ‘Connections’ answers and hints for today, August 08",
+      "lesson": "避免采集此类素材: NME源但内容为Connections游戏答案，属于游戏娱乐内容，与音乐行业无直接关联"
+    },
+    {
+      "date": "2026-08-08",
+      "type": "标杆案例",
+      "title": "スカパラ、バンド史上初アリーナツアー＜ARENA TOUR 2027［SKA］SHOWDOWN Episode2＞の全貌解禁",
+      "source": "BARKS",
+      "summary": "通过: スカパラ、バンド史上初アリーナツアー＜ARENA TOUR 2027［SKA］SHOWDOWN Episode2＞の全貌解禁",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-08",
+      "type": "标杆案例",
+      "title": "LIL LEAGUE、新曲「僕を探してた」本日配信＆MV公開。11月にFC限定ライブ開催決定も",
+      "source": "BARKS",
+      "summary": "通过: LIL LEAGUE、新曲「僕を探してた」本日配信＆MV公開。11月にFC限定ライブ開催決定も",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-08",
+      "type": "标杆案例",
+      "title": "モナキ、新曲「すみなすものは心なりけり」MV公開。RECのギターにEvery Little Thing・伊藤一朗参加も",
+      "source": "BARKS",
+      "summary": "通过: モナキ、新曲「すみなすものは心なりけり」MV公開。RECのギターにEvery Little Thing・伊藤一朗参加も",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-08",
+      "type": "标杆案例",
+      "title": "『ユイカ』、デジタルEP『翠色に贈る』リリース決定 「全ての曲に私の性格が存分に発揮している気がします」",
+      "source": "BARKS",
+      "summary": "通过: 『ユイカ』、デジタルEP『翠色に贈る』リリース決定 「全ての曲に私の性格が存分に発揮している気がします」",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-08",
+      "type": "标杆案例",
+      "title": "ヒプマイ、11thライブBlu-rayより「Buster Bros!!! ＆ Bad Ass Temple」公演のダイジェスト映像公開",
+      "source": "BARKS",
+      "summary": "通过: ヒプマイ、11thライブBlu-rayより「Buster Bros!!! ＆ Bad Ass Temple」公演のダイジェスト映像公開",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-08",
+      "type": "每日统计",
+      "summary": "今日通过率: 51% (41/80)",
+      "lesson": ""
     }
   ],
   "selfReview": {

@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 100,
+      "trust": 94,
       "trend": "improving",
       "history": [
         {
@@ -168,6 +168,11 @@
           "date": "2026-08-07",
           "event": "合作 11次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-08-08",
+          "event": "冲突 9次",
+          "trustDelta": -6
         }
       ],
       "summary": "关系良好"
@@ -195,6 +200,11 @@
           "date": "2026-08-06",
           "event": "合作 2次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-08-08",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
@@ -212,7 +222,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 70,
+      "trust": 72,
       "trend": "stable",
       "history": [
         {
@@ -349,26 +359,17 @@
           "date": "2026-08-07",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-08",
+          "event": "合作 4次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-19",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: 拒绝的6条素材（RAW-0022, 0023, 0024, 0029, 0031, 0034）均与音乐行业核心无关。",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-07-19",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 第一批20条素材审核完毕，通过19条，拒绝1条。通过率95%。",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-07-19",
       "type": "重大挛折",
@@ -702,6 +703,20 @@
       "date": "2026-08-07",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 首批20条素材全部通过，通过率100%！未发现Google News黑名单源污染，质量优秀！",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-08",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: ⚠️ 承诺严重失实+三级复发触发强制熔断：第二批20条素材中发现7条Google News黑名单源污染素材（RAW-2026-08-08-0034至0040），",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-08",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 首批20条素材全部通过，通过率100%，质量优秀！",
       "lesson": "",
       "impact": ""
     }

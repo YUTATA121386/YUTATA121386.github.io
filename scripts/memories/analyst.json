@@ -100,6 +100,11 @@
           "date": "2026-08-06",
           "event": "合作 2次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-08-08",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
@@ -152,12 +157,17 @@
           "date": "2026-08-07",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-08-08",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 76,
+      "trust": 78,
       "trend": "improving",
       "history": [
         {
@@ -227,6 +237,11 @@
         },
         {
           "date": "2026-08-07",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-08",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -351,6 +366,13 @@
       "date": "2026-08-07",
       "type": "正向反馈",
       "summary": "收到分析师的APPROVE: 今日（2026-08-07）工作总结：本轮处于复盘阶段，素材总量45条已验证，核心话题集中在AI音乐版权与商业化——Tyga公开承认用Suno制作专辑、Suno",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-08",
+      "type": "正向反馈",
+      "summary": "收到分析师的APPROVE: 今日工作总结（2026-08-08）：本轮处于复盘阶段，素材质量受Google News黑名单源污染严重（累计确认31条污染素材，占待审核总量34.8%），核查",
       "lesson": "",
       "impact": ""
     }
