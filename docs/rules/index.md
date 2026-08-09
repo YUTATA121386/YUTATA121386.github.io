@@ -3,9 +3,7 @@ title: 规则体系
 outline: [2, 3]
 ---
 
-# 📶 规则体系
-
-> 由记忆管理师维护，每周迭代 | 最近更新: 2026-07-19
+<SectionHero vol="IX" en="RULES" title="规则体系" desc="由记忆管理师维护，每周迭代" />
 
 <div class="rules-grid">
 

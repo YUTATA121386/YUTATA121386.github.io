@@ -1,8 +1,4 @@
-# 校招面试话术
-
-> 从实习到校招，每一场面试都是一次自我对话。
-
----
+<SectionHero vol="VI" en="INTERVIEW" title="校招面试话术" desc="简历策略 · 高频问答 · 企业面经" />
 
 ## 实习面试
 
@@ -30,26 +26,3 @@
 
 </div>
 
-<style scoped>
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
-  margin-top: 1.5rem;
-}
-.grid-card {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 22px 20px;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 4px;
-  text-decoration: none !important;
-  color: var(--vp-c-text-1) !important;
-  transition: all 0.2s ease;
-}
-.grid-card:hover { border-color: var(--vermillion); transform: translateY(-2px); }
-.grid-icon { font-size: 1.5rem; }
-.grid-card strong { font-size: 0.95rem; letter-spacing: 1px; }
-.grid-card span:last-child { font-size: 0.78rem; color: var(--vp-c-text-2); }
-</style>

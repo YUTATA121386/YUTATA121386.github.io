@@ -2,6 +2,8 @@
 
 const KB_BASE = process.env.KB_BASE || "/"
 
+const paletteScript = `(function(){try{var p=localStorage.getItem('yutata-palette')||'auto';var h=new Date().getHours();var q=p==='auto'?(h<11?'morning':h<17?'noon':h<21?'dusk':'night'):p;document.documentElement.setAttribute('data-palette',q);document.documentElement.classList.toggle('dark',q==='night')}catch(e){}})()`
+
 export default defineConfig({
   vite: {
     css: {
@@ -14,29 +16,29 @@ export default defineConfig({
   base: KB_BASE,
   title: "YUTATA",
   description: "通识 · 产品 · 思考 · 记录",
+  appearance: false,
   head: [
     ["link", { rel: "icon", href: KB_BASE + "favicon.svg" }],
     ["link", { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" }],
     ["script", { src: KB_BASE + "lightbox.js" }],
+    ["script", { innerHTML: paletteScript }],
   ],
 
   themeConfig: {
-    logo: "/logo.svg",
-
     nav: [
-      { text: "🏠 首页", link: "/" },
-      { text: "📈 上升清单", link: "/growth/" },
-      { text: "🛰️ 行业雷达", link: "/daily/" },
-      { text: "🎵 云音乐产品学习", link: "/music-product/" },
-      { text: "📚 通识积累", link: "/general/" },
-      { text: "🚅 圣地巡礼", link: "/pilgrimage/" },
-      { text: "💼 面试话术", link: "/interview/" },
+      { text: "首页", link: "/" },
+      { text: "上升清单", link: "/growth/" },
+      { text: "行业雷达", link: "/daily/" },
+      { text: "云音乐产品", link: "/music-product/" },
+      { text: "通识积累", link: "/general/" },
+      { text: "圣地巡礼", link: "/pilgrimage/" },
+      { text: "面试话术", link: "/interview/" },
     ],
 
     sidebar: {
       "/general/": [
         {
-          text: "📚 通识积累",
+          text: "通识积累",
           items: [
             { text: "概述", link: "/general/" },
             { text: "日本影视剧 · 评级", link: "/general/japanese-dramas" },
@@ -48,7 +50,7 @@ export default defineConfig({
       ],
       "/music-product/": [
         {
-          text: "🎯 三大活动",
+          text: "三大活动",
           items: [
             { text: "年度报告", link: "/music-product/annual-report" },
             { text: "歌词翻译编辑部", link: "/music-product/lyrics-translation" },
@@ -56,21 +58,21 @@ export default defineConfig({
           ],
         },
         {
-          text: "🧪 实验与专项",
+          text: "实验与专项",
           items: [
             { text: "歌词 AB 实验", link: "/music-product/lyrics-ab-test" },
             { text: "曲库 AI 专项", link: "/music-product/library-ai-project" },
           ],
         },
         {
-          text: "🎪 线下活动",
+          text: "线下活动",
           items: [
             { text: "云小编茶话会", link: "/music-product/tea-party" },
             { text: "云村用户节", link: "/music-product/cloud-village-festival" },
           ],
         },
         {
-          text: "💬 线上交流",
+          text: "线上交流",
           items: [
             { text: "反馈与回复", link: "/user-period/feedback-reply" },
             { text: "曲库优化方案", link: "/user-period/library-optimization" },
@@ -79,7 +81,7 @@ export default defineConfig({
       ],
       "/user-period/": [
         {
-          text: "💬 线上交流",
+          text: "线上交流",
           items: [
             { text: "概述", link: "/user-period/" },
             { text: "反馈与回复", link: "/user-period/feedback-reply" },
@@ -89,14 +91,14 @@ export default defineConfig({
       ],
       "/interview/": [
         {
-          text: "💼 面试话术",
+          text: "面试话术",
           items: [
             { text: "概述", link: "/interview/" },
             { text: "实习准备 · 要点攻略", link: "/interview/internship" },
           ],
         },
         {
-          text: "🎓 校招面试",
+          text: "校招面试",
           items: [
             { text: "通用高频问题", link: "/interview/campus/" },
           ],
@@ -116,41 +118,41 @@ export default defineConfig({
         },
       ],
       "/daily/": [{
-        text: "🛠️ 行业雷达",
+        text: "行业雷达",
         items: [
-          { text: "📰 日报概览", link: "/daily/" },
-          { text: "📋 过程日志", link: "/logs/" },
-          { text: "📊 周报", link: "/weekly/" },
-          { text: "📐 规则体系", link: "/rules/" },
-          { text: "🔑 关键词覆盖", link: "/daily/keywords" },
-          { text: "📋 知识缺口报告", link: "/daily/knowledge-gap-report" },
+          { text: "日报概览", link: "/daily/" },
+          { text: "过程日志", link: "/logs/" },
+          { text: "周报", link: "/weekly/" },
+          { text: "规则体系", link: "/rules/" },
+          { text: "关键词覆盖", link: "/daily/keywords" },
+          { text: "知识缺口报告", link: "/daily/knowledge-gap-report" },
         ],
       }],
       "/logs/": [{
-        text: "🛠️ 行业雷达",
+        text: "行业雷达",
         items: [
-          { text: "📰 日报概览", link: "/daily/" },
-          { text: "📋 过程日志概览", link: "/logs/" },
-          { text: "📊 周报", link: "/weekly/" },
-          { text: "📐 规则体系", link: "/rules/" },
+          { text: "日报概览", link: "/daily/" },
+          { text: "过程日志概览", link: "/logs/" },
+          { text: "周报", link: "/weekly/" },
+          { text: "规则体系", link: "/rules/" },
         ],
       }],
       "/weekly/": [{
-        text: "🛠️ 行业雷达",
+        text: "行业雷达",
         items: [
-          { text: "📰 日报概览", link: "/daily/" },
-          { text: "📋 过程日志", link: "/logs/" },
-          { text: "📊 周报概览", link: "/weekly/" },
-          { text: "📐 规则体系", link: "/rules/" },
+          { text: "日报概览", link: "/daily/" },
+          { text: "过程日志", link: "/logs/" },
+          { text: "周报概览", link: "/weekly/" },
+          { text: "规则体系", link: "/rules/" },
         ],
       }],
       "/rules/": [{
-        text: "🛠️ 行业雷达",
+        text: "行业雷达",
         items: [
-          { text: "📰 日报概览", link: "/daily/" },
-          { text: "📋 过程日志", link: "/logs/" },
-          { text: "📊 周报", link: "/weekly/" },
-          { text: "📐 规则概览", link: "/rules/" },
+          { text: "日报概览", link: "/daily/" },
+          { text: "过程日志", link: "/logs/" },
+          { text: "周报", link: "/weekly/" },
+          { text: "规则概览", link: "/rules/" },
           { text: "采集规则", link: "/rules/collection-rules" },
           { text: "核查规则", link: "/rules/verification-rules" },
           { text: "排版规范", link: "/rules/style-guide" },
@@ -159,13 +161,13 @@ export default defineConfig({
           { text: "信誉分规则", link: "/rules/credit_score_system" },
         ]
       }],
-      "/growth/": [{ text: "📈 上升清单", items: [{ text: "概述", link: "/growth/" }] }],
-      "/pilgrimage/": [{ text: "🚅 圣地巡礼", items: [{ text: "概述", link: "/pilgrimage/" }] }],
+      "/growth/": [{ text: "上升清单", items: [{ text: "概述", link: "/growth/" }] }],
+      "/pilgrimage/": [{ text: "圣地巡礼", items: [{ text: "概述", link: "/pilgrimage/" }] }],
     },
 
     outline: { level: [2, 3], label: "目录" },
     docFooter: { prev: "←上一篇", next: "下一篇→" },
-    darkModeSwitchLabel: "深浅切换",
+    darkModeSwitchLabel: false,
     sidebarMenuLabel: "菜单",
     returnToTopLabel: "回到顶部"
     },

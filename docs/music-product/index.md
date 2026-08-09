@@ -1,8 +1,4 @@
-# 云音乐产品学习
-
-> 曲库运营 · 活动策划 · 产品优化 · 用户运营 —— 在网易云音乐的实战记录
-
----
+<SectionHero vol="III" en="MUSIC PRODUCT" title="云音乐产品学习" desc="产品分析 · 活动运营 · 用户反馈" />
 
 ## 三大活动
 
@@ -68,27 +64,3 @@
 
 </div>
 
-<style scoped>
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-.grid-card {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 22px 20px;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 4px;
-  text-decoration: none !important;
-  color: var(--vp-c-text-1) !important;
-  transition: all 0.2s ease;
-}
-.grid-card:hover { border-color: var(--vermillion); transform: translateY(-2px); }
-.grid-icon { font-size: 1.5rem; }
-.grid-card strong { font-size: 0.95rem; letter-spacing: 1px; }
-.grid-card span:last-child { font-size: 0.78rem; color: var(--vp-c-text-2); }
-</style>

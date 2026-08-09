@@ -11,4 +11,5 @@ dist/
 !scripts/system-memory.json
 !scripts/mm-scores.json
 
-!scripts/memories/*.json
+!scripts/memories/*.jsondocs/.vitepress/cache/
+docs/.vitepress/cache/

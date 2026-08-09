@@ -1,14 +1,11 @@
-﻿---
+---
 title: 行业雷达
 outline: [2, 3]
 ---
 
-# 📡 行业雷达
+<SectionHero vol="II" en="RADAR" title="行业雷达" desc="每日自动采集 · AI 深度分析 · 曲库行业动态" badge="LIVE" :live="true" />
 
-> 🤖 多Agent博弈生成 · 每日自动更新
-> 采集师·核查师·分析师·编辑师·记忆管理师 协作
-
----
+<RadarDashboard />
 
 ## 📋 数据源
 | 来源 | 语言 | 类型 |
@@ -85,9 +82,3 @@ outline: [2, 3]
 
 > 📃 五个AI角色博弈协作生成 | 系统版本 v4
 
-<style>
-.scroll-list { max-height: 500px; overflow-y: auto; border: 1px solid var(--vp-c-divider); border-radius: 8px; padding: 12px 16px; background: var(--vp-c-bg-soft); }
-.scroll-list ul, .scroll-list ol { margin: 0; padding-left: 0; list-style: none; }
-.scroll-list li { padding: 6px 0; border-bottom: 1px solid var(--vp-c-divider-light); font-size: 0.93em; }
-.scroll-list li:last-child { border-bottom: none; }
-</style>
