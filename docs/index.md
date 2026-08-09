@@ -13,7 +13,7 @@ layout: page
 
 <nav class="home-grid">
 
-<a href="/growth/" class="home-card highlight">
+<a href="growth/" class="home-card highlight">
 <div class="card-emoji">📈</div>
 <div class="card-num">01</div>
 <h3 class="card-title">上升清单</h3>
@@ -21,7 +21,7 @@ layout: page
 <span class="card-badge live">LIVE</span>
 </a>
 
-<a href="/daily/" class="home-card highlight">
+<a href="daily/" class="home-card highlight">
 <div class="card-emoji">🛰️</div>
 <div class="card-num">02</div>
 <h3 class="card-title">行业雷达</h3>
@@ -29,21 +29,21 @@ layout: page
 <span class="card-badge live">LIVE</span>
 </a>
 
-<a href="/music-product/" class="home-card">
+<a href="music-product/" class="home-card">
 <div class="card-emoji">🎵</div>
 <div class="card-num">03</div>
 <h3 class="card-title">云音乐产品学习</h3>
 <p class="card-desc">产品分析 · 活动运营 · 用户反馈</p>
 </a>
 
-<a href="/general/" class="home-card">
+<a href="general/" class="home-card">
 <div class="card-emoji">📚</div>
 <div class="card-num">04</div>
 <h3 class="card-title">通识积累</h3>
 <p class="card-desc">影视评鉴 · 法餐考据 · 唱片评鉴 · 多方视角</p>
 </a>
 
-<a href="/pilgrimage/" class="home-card dimmed">
+<a href="pilgrimage/" class="home-card dimmed">
 <div class="card-emoji">🚅</div>
 <div class="card-num">05</div>
 <h3 class="card-title">圣地巡礼</h3>
@@ -51,7 +51,7 @@ layout: page
 <span class="card-badge">施工中</span>
 </a>
 
-<a href="/interview/" class="home-card">
+<a href="interview/" class="home-card">
 <div class="card-emoji">💼</div>
 <div class="card-num">06</div>
 <h3 class="card-title">校招面试话术</h3>

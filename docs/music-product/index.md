@@ -8,19 +8,19 @@
 
 <div class="grid">
 
-  <a href="/music-product/annual-report" class="grid-card">
+  <a href="annual-report.html" class="grid-card">
     <span class="grid-icon">📊</span>
     <strong>年度报告</strong>
     <span>项目立项 · 视觉设计 · 活动策划</span>
   </a>
 
-  <a href="/music-product/lyrics-translation" class="grid-card">
+  <a href="lyrics-translation.html" class="grid-card">
     <span class="grid-icon">🌐</span>
     <strong>歌词翻译编辑部</strong>
     <span>活动运营 · 数据分析 · 成本管控</span>
   </a>
 
-  <a href="/music-product/ai-project" class="grid-card">
+  <a href="ai-project.html" class="grid-card">
     <span class="grid-icon">🤖</span>
     <strong>AI 歌曲资料补充</strong>
     <span>众包协作 · 数据建设</span>
@@ -34,13 +34,13 @@
 
 <div class="grid">
 
-  <a href="/music-product/tea-party" class="grid-card">
+  <a href="tea-party.html" class="grid-card">
     <span class="grid-icon">☕</span>
     <strong>云小编茶话会</strong>
     <span>线下交流</span>
   </a>
 
-  <a href="/music-product/cloud-village-festival" class="grid-card">
+  <a href="cloud-village-festival.html" class="grid-card">
     <span class="grid-icon">🎉</span>
     <strong>云村用户节</strong>
     <span>年度庆典</span>
@@ -54,13 +54,13 @@
 
 <div class="grid">
 
-  <a href="/user-period/feedback-reply" class="grid-card">
+  <a href="../user-period/feedback-reply.html" class="grid-card">
     <span class="grid-icon">📝</span>
     <strong>反馈与回复</strong>
     <span>功能反馈 · 流程优化</span>
   </a>
 
-  <a href="/user-period/library-optimization" class="grid-card">
+  <a href="../user-period/library-optimization.html" class="grid-card">
     <span class="grid-icon">🔧</span>
     <strong>曲库优化方案</strong>
     <span>脚本防控 · 流程优化 · AI提效</span>

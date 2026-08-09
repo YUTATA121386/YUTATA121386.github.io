@@ -6,25 +6,25 @@
 
 <div class="grid">
 
-  <a href="/general/japanese-dramas" class="grid-card">
+  <a href="japanese-dramas.html" class="grid-card">
     <span class="grid-icon">🎬</span>
     <strong>日本影视剧 · 评级</strong>
     <span>影视评鉴</span>
   </a>
 
-  <a href="/general/grand-maison-tokyo" class="grid-card">
+  <a href="grand-maison-tokyo.html" class="grid-card">
     <span class="grid-icon">🍳</span>
     <strong>东京大饭店 · 烹饪技法拆解</strong>
     <span>法餐考据</span>
   </a>
 
-  <a href="/general/music-appreciation" class="grid-card">
+  <a href="music-appreciation.html" class="grid-card">
     <span class="grid-icon">🎵</span>
     <strong>音乐鉴赏 · 唱片评价</strong>
     <span>唱片评鉴</span>
   </a>
 
-  <a href="/general/music-library-ops" class="grid-card">
+  <a href="music-library-ops.html" class="grid-card">
     <span class="grid-icon">📋</span>
     <strong>曲库运营 · 多方视角</strong>
     <span>版权方 · 平台方 · 发行方</span>

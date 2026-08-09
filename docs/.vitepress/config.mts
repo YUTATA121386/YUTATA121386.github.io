@@ -1,5 +1,7 @@
 ﻿import { defineConfig } from "vitepress"
 
+const KB_BASE = process.env.KB_BASE || "/"
+
 export default defineConfig({
   vite: {
     css: {
@@ -9,12 +11,13 @@ export default defineConfig({
     }
   },
   lang: "zh-CN",
+  base: KB_BASE,
   title: "YUTATA",
   description: "通识 · 产品 · 思考 · 记录",
   head: [
-    ["link", { rel: "icon", href: "/favicon.svg" }],
+    ["link", { rel: "icon", href: KB_BASE + "favicon.svg" }],
     ["link", { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" }],
-    ["script", { src: "/lightbox.js" }],
+    ["script", { src: KB_BASE + "lightbox.js" }],
   ],
 
   themeConfig: {
