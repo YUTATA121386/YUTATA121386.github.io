@@ -122,7 +122,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 84,
+      "trust": 86,
       "trend": "improving",
       "history": [
         {
@@ -212,6 +212,11 @@
         },
         {
           "date": "2026-08-08",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-09",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -364,6 +369,13 @@
       "date": "2026-08-08",
       "type": "正向反馈",
       "summary": "收到编辑师的APPROVE: 编辑师处理日报草稿中遇到技术问题，消息内容暂缺。",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-09",
+      "type": "正向反馈",
+      "summary": "收到编辑师的APPROVE: 今日工作总结：完成第4轮日报编辑。尽管采集端污染导致整体通过率仅34.7%，但已验证的47条素材中白名单源（BARKS、Billboard、MBW）质量优秀，支",
       "lesson": "",
       "impact": ""
     }

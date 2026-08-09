@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 94,
+      "trust": 86,
       "trend": "improving",
       "history": [
         {
@@ -173,6 +173,11 @@
           "date": "2026-08-08",
           "event": "冲突 9次",
           "trustDelta": -6
+        },
+        {
+          "date": "2026-08-09",
+          "event": "冲突 13次",
+          "trustDelta": -8
         }
       ],
       "summary": "关系良好"
@@ -297,7 +302,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 94,
+      "trust": 96,
       "trend": "improving",
       "history": [
         {
@@ -419,103 +424,17 @@
           "date": "2026-08-08",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-09",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-04",
-      "type": "标杆案例",
-      "title": "FAKE TYPE.、メジャー3rdアルバム『FAKE RHYME』特典続々発表",
-      "source": "BARKS",
-      "summary": "通过: FAKE TYPE.、メジャー3rdアルバム『FAKE RHYME』特典続々発表",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-04",
-      "type": "标杆案例",
-      "title": "【ライブレポ－ト】Lavt、ツアー＜RE:BORN＞を結実させてメジャーデビューという新章へ「皆さんのそばに置いておけるような歌を作れたら」",
-      "source": "BARKS",
-      "summary": "通过: 【ライブレポ－ト】Lavt、ツアー＜RE:BORN＞を結実させてメジャーデビューという新章へ「皆さんのそばに置いておけるような歌を作れたら」",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-04",
-      "type": "标杆案例",
-      "title": "ALAN SHIRAHAMA、新曲「Not Enough (feat. Olivia Marsh)」のリリックビデオ公開。誕生日である本日にTikTok個人アカウント開設も",
-      "source": "BARKS",
-      "summary": "通过: ALAN SHIRAHAMA、新曲「Not Enough (feat. Olivia Marsh)」のリリックビデオ公開。誕生日である本日にTikTok個人アカ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-04",
-      "type": "标杆案例",
-      "title": "SUPER★DRAGON・池田彪馬、“Hyoma Ikeda”名義でソロプロジェクト始動。アー写公開＆1stミニアルバム『Effect』発売決定も",
-      "source": "BARKS",
-      "summary": "通过: SUPER★DRAGON・池田彪馬、“Hyoma Ikeda”名義でソロプロジェクト始動。アー写公開＆1stミニアルバム『Effect』発売決定も",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-04",
-      "type": "标杆案例",
-      "title": "Brandon Flowers reveals he’s considered quitting music: “I’m really going through it right now”",
-      "source": "NME",
-      "summary": "通过: Brandon Flowers reveals he’s considered quitting music: “I’m really going throug",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-04",
-      "type": "每日统计",
-      "summary": "今日通过率: 63% (50/80)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-08-05",
-      "type": "被拒案例",
-      "title": "U.S. nears Hormuz deal, aiming for Wednesday announcement - Axios",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源+地缘政治新闻（霍尔木兹海峡），与音乐行业无关",
-      "summary": "被拒: U.S. nears Hormuz deal, aiming for Wednesday announcement - Axios",
-      "lesson": "避免采集此类素材: Google News黑名单源+地缘政治新闻（霍尔木兹海峡），与音乐行业无关"
-    },
-    {
-      "date": "2026-08-05",
-      "type": "被拒案例",
-      "title": "Progressive activist wins Democratic primary in one of the country’s biggest House races - NBC News",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源+政治新闻（民主党初选），与音乐行业无关",
-      "summary": "被拒: Progressive activist wins Democratic primary in one of the country’s biggest Hou",
-      "lesson": "避免采集此类素材: Google News黑名单源+政治新闻（民主党初选），与音乐行业无关"
-    },
-    {
-      "date": "2026-08-05",
-      "type": "被拒案例",
-      "title": "Armed man arrested at Trump’s LA golf course ahead of president’s visit - Al Jazeera",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源+政治/犯罪新闻（特朗普高尔夫球场事件），与音乐行业无关",
-      "summary": "被拒: Armed man arrested at Trump’s LA golf course ahead of president’s visit - Al Jaz",
-      "lesson": "避免采集此类素材: Google News黑名单源+政治/犯罪新闻（特朗普高尔夫球场事件），与音乐行业无关"
-    },
-    {
-      "date": "2026-08-05",
-      "type": "被拒案例",
-      "title": "U.S. has used nearly all its stockpile of long-range missiles in Iran war, sources say - CBS News",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源+军事新闻（导弹库存/伊朗战争），与音乐行业无关",
-      "summary": "被拒: U.S. has used nearly all its stockpile of long-range missiles in Iran war, sourc",
-      "lesson": "避免采集此类素材: Google News黑名单源+军事新闻（导弹库存/伊朗战争），与音乐行业无关"
-    },
-    {
-      "date": "2026-08-05",
-      "type": "被拒案例",
-      "title": "Arrested at Reflecting Pool, woman details ‘heartbreaking’ toll case has taken - The Washington Post",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源+社会新闻（被捕事件），与音乐行业无关",
-      "summary": "被拒: Arrested at Reflecting Pool, woman details ‘heartbreaking’ toll case has taken -",
-      "lesson": "避免采集此类素材: Google News黑名单源+社会新闻（被捕事件），与音乐行业无关"
-    },
     {
       "date": "2026-08-05",
       "type": "标杆案例",
@@ -833,6 +752,97 @@
       "date": "2026-08-08",
       "type": "每日统计",
       "summary": "今日通过率: 51% (41/80)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-08-09",
+      "type": "被拒案例",
+      "title": "Iran makes new strait demands, the UAE says a ship was targeted and other Middle East news - AP News",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为中东地缘政治新闻，与音乐行业无关",
+      "summary": "被拒: Iran makes new strait demands, the UAE says a ship was targeted and other Middle",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为中东地缘政治新闻，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-09",
+      "type": "被拒案例",
+      "title": "Trump is about to get 'unchecked authority' to impose tariffs of up to 100% on top trading partners ",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为关税政策新闻，与音乐行业无关",
+      "summary": "被拒: Trump is about to get 'unchecked authority' to impose tariffs of up to 100% on t",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为关税政策新闻，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-09",
+      "type": "被拒案例",
+      "title": "US offers $1bn to Colombia on new right-wing president's first day of office - BBC",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为哥伦比亚政治新闻，与音乐行业无关",
+      "summary": "被拒: US offers $1bn to Colombia on new right-wing president's first day of office - B",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为哥伦比亚政治新闻，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-09",
+      "type": "被拒案例",
+      "title": "British Columbia wildfire forces more than 20,000 to flee, destroys homes - Al Jazeera",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为加拿大山火新闻，与音乐行业无关",
+      "summary": "被拒: British Columbia wildfire forces more than 20,000 to flee, destroys homes - Al J",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为加拿大山火新闻，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-09",
+      "type": "被拒案例",
+      "title": "Today’s Wordle answer and hints for #1877 on August 09",
+      "source": "NME",
+      "reason": "NME源Wordle答案内容，与音乐行业无关",
+      "summary": "被拒: Today’s Wordle answer and hints for #1877 on August 09",
+      "lesson": "避免采集此类素材: NME源Wordle答案内容，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-09",
+      "type": "标杆案例",
+      "title": "【速レポ】＜LuckyFes’26＞超能力戦士ドリアン、初日HILLS STAGEトリ「自慢できるバンドになるから！」",
+      "source": "BARKS",
+      "summary": "通过: 【速レポ】＜LuckyFes’26＞超能力戦士ドリアン、初日HILLS STAGEトリ「自慢できるバンドになるから！」",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-09",
+      "type": "标杆案例",
+      "title": "【速レポ】＜LuckyFes’26＞初日のWING STAGEトリはNEWS。「また来年ここで会いましょう！」",
+      "source": "BARKS",
+      "summary": "通过: 【速レポ】＜LuckyFes’26＞初日のWING STAGEトリはNEWS。「また来年ここで会いましょう！」",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-09",
+      "type": "标杆案例",
+      "title": "【速レポ】＜LuckyFes’26＞FRUITS ZIPPER、賑やかでカラフルな7人が魅せた“レインボー”なステージ",
+      "source": "BARKS",
+      "summary": "通过: 【速レポ】＜LuckyFes’26＞FRUITS ZIPPER、賑やかでカラフルな7人が魅せた“レインボー”なステージ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-09",
+      "type": "标杆案例",
+      "title": "DEZERT、メンバー全員が作曲した初の作品『Alternate4』をホールツアー会場限定で発売決定",
+      "source": "BARKS",
+      "summary": "通过: DEZERT、メンバー全員が作曲した初の作品『Alternate4』をホールツアー会場限定で発売決定",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-09",
+      "type": "标杆案例",
+      "title": "SUPER EIGHT、来春アリーナツアー開催＆ニューアルバム発売決定げるEP『ダンダーラ』本日リリース",
+      "source": "BARKS",
+      "summary": "通过: SUPER EIGHT、来春アリーナツアー開催＆ニューアルバム発売決定げるEP『ダンダーラ』本日リリース",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-09",
+      "type": "每日统计",
+      "summary": "今日通过率: 59% (47/80)",
       "lesson": ""
     }
   ],
