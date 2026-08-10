@@ -188,17 +188,24 @@ async function runEvals() {
             const cleaned2 = cleaned.replace(/\}(["'\x60]\s*[,:]\s*["'\x60])/g, '}]$1');
             obj = JSON.parse(cleaned2);
           } catch (e2) {
-            // Try fixing unbalanced brackets: count opens vs closes
+            // Try fixing unbalanced brackets / truncated JSON
             try {
-              let fixed = match[0];
-              let opens = (fixed.match(/\{/g) || []).length;
-              let closes = (fixed.match(/\}/g) || []).length;
-              let arrayOpens = (fixed.match(/\[/g) || []).length;
-              let arrayCloses = (fixed.match(/\]/g) || []).length;
-              while (opens > closes) { fixed += '}'; closes++; }
-              while (arrayOpens > arrayCloses) { fixed += ']'; arrayCloses++; }
-              fixed = fixed.replace(/[\u0000-\u001F\u007F-\u009F]/g, '').replace(/\r?\n/g, ' ').replace(/,\s*}/g, '}').replace(/,\s*\]/g, ']');
-              obj = JSON.parse(fixed);
+              let base = match[0].replace(/[\u0000-\u001F\u007F-\u009F]/g, '').replace(/\r?\n/g, ' ').replace(/,\s*}/g, '}').replace(/,\s*\]/g, ']');
+              const candidates = [base + ']', base + ']}', base.replace(/\}\s*$/, ']}')];
+              let parsed = null;
+              for (const cand of candidates) {
+                try { parsed = JSON.parse(cand); if (parsed) break; } catch (eCand) {}
+              }
+              if (parsed && parsed.dims && parsed.dims.some(d => d && d.name)) {
+                const realDims = parsed.dims.filter(d => d && d.name);
+                const extras = parsed.dims.filter(d => d && !d.name);
+                if (extras.length && extras[0].overall) {
+                  parsed.overall = extras[0].overall;
+                  if (!parsed.summary) parsed.summary = extras[0].summary;
+                }
+                parsed.dims = realDims;
+                obj = parsed;
+              }
             } catch (e3) {
               console.log("  解析失败，保存原始响应");
               allScores[agent.id] = { _raw: resp.slice(0, 2000), dims: [], overall: 0, summary: "" };

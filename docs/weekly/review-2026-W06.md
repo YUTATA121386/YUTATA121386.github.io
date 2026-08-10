@@ -22,6 +22,35 @@
 
 ### 平均信誉分: 79.2
 
+
+## 👥 记忆管理师环评
+
+> 每周由四个角色从规则管理、公平性、洞察力三维度评价
+
+<div class="mm-review-grid">
+<div class="mm-card"><div class="mm-card-header">📡 <strong>采集师</strong></div><div class="mm-card-body"><div class="mm-dims"><span>🟡 采集自由度 <strong>4</strong></span><span>🔴 规则合理性 <strong>3</strong></span><span>🟡 沟通效率 <strong>5</strong></span></div><p class="mm-note">规则体系系统性失灵，既卡死我的手脚又漏进垃圾，沟通看似频繁实则空转，必须重构验收标准和源类别管理。</p><p class="mm-overall">综合: 4/10</p></div></div>
+<div class="mm-card"><div class="mm-card-header">🔍 <strong>核查师</strong></div><div class="mm-card-body"><div class="mm-dims"><span>🟡 标准支持度 <strong>6</strong></span><span>🟡 反馈结构化 <strong>5</strong></span><span>🟢 信任度 <strong>7</strong></span></div><p class="mm-note">根因分析有价值，但验收标准与反馈格式需更具体，方能有效支撑核查闭环</p><p class="mm-overall">综合: 6/10</p></div></div>
+<div class="mm-card"><div class="mm-card-header">🔬 <strong>分析师</strong></div><div class="mm-card-body"><div class="mm-dims"><span>🟢 分析时间充足度 <strong>7</strong></span><span>🟡 补采支持度 <strong>5</strong></span><span>🟡 深度优先度 <strong>6</strong></span></div><p class="mm-note">你看到了问题但未触及本质，需要更彻底的分析而非表面修补。</p><p class="mm-overall">综合: 6/10</p></div></div>
+<div class="mm-card"><div class="mm-card-header">✍️ <strong>编辑师</strong></div><div class="mm-card-body"><div class="mm-dims"><span>🟡 编辑自主权 <strong>4</strong></span><span>🔴 流程顺畅度 <strong>3</strong></span><span>🔴 干预合理性 <strong>2</strong></span></div><p class="mm-note">规则体系形同虚设，重复性失败暴露了从定义到验收的全面失效，编辑工作沦为事后补救。</p><p class="mm-overall">综合: 3/10</p></div></div>
+</div>
+
+### 💭 记忆管理师回应
+
+<div class="mm-response">
+<p>🟡 <strong>采集师</strong>: 部分接受<br>接受自由度受限，但反驳一刀切说法——白名单是必要保护，问题在于颗粒度而非原则。</p>
+<p>✅ <strong>核查师</strong>: 接受<br>接受量化不足，需明确扫描范围与缓存覆盖，但信任度质疑可改进验证记录。</p>
+<p>🟡 <strong>分析师</strong>: 部分接受<br>接受分析深度不足，但反驳催促定稿——时间充足不等于迭代有效，需结构化复盘。</p>
+<p>🟡 <strong>编辑师</strong>: 部分接受<br>接受流程卡顿与干预滞后，但反驳编辑无纠错空间——根因在规则执行而非权限。</p>
+</div>
+
+### 📋 下周改进计划
+
+<ol>
+<li>重构源类别白名单，增加娱乐内容子类动态过滤，量化扫描范围与缓存覆盖标准。</li>
+<li>建立黑名单污染专项补采机制，每次复发后强制针对缓存区域执行全量验证并留痕。</li>
+<li>制定可操作的三方核查清单，明确验收格式与干预触发条件，减少空转沟通。</li>
+</ol>
+
 ### 本周规则变更
 
 | 变更条数 | 说明 |

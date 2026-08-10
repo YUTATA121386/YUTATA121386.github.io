@@ -12,6 +12,13 @@ const dateStr = ref("")
 const period = ref("晨")
 const NAMES: Record<string, string> = { morning: "晨", noon: "午", dusk: "暮", night: "夜" }
 const MOOD: Record<string, string> = { morning: moodMorning, noon: moodNoon, dusk: moodDusk, night: moodNight }
+const RECOMMENDED = [
+  { title: "第 07 周复盘 · 记忆管理师环评", url: "weekly/review-2026-W07.html", meta: "2026-08-09" },
+  { title: "通信规则 · V2.2.33", url: "rules/communication-rules.html", meta: "规则体系" },
+  { title: "东京大饭店 · 法餐与日式材料的可能性", url: "general/grand-maison-tokyo.html", meta: "通识积累" },
+  { title: "实习准备 · 要点攻略与事后复盘", url: "interview/internship.html", meta: "面试专栏" },
+]
+
 const moodSrc = ref<string>(MOOD.morning)
 let moodObserver: MutationObserver | undefined
 
@@ -58,10 +65,10 @@ onBeforeUnmount(() => {
           <span class="now-period">此刻 · {{ period }}</span>
         </div>
         <div class="now-updates">
-          <p class="update-label">最近更新</p>
-          <a v-for="u in data.latestUpdates.slice(0, 3)" :key="u.url" class="update-item" :href="withBase(u.url)">
+          <p class="update-label">推荐阅读</p>
+          <a v-for="u in RECOMMENDED" :key="u.url" class="update-item" :href="withBase(u.url)">
             <span class="update-bullet"></span>
-            <span class="update-text">{{ u.title }}<span class="update-meta">{{ u.date }}</span></span>
+            <span class="update-text">{{ u.title }}<span class="update-meta">{{ u.meta }}</span></span>
             <span class="update-arrow">→</span>
           </a>
         </div>

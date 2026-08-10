@@ -22,6 +22,35 @@
 
 ### 平均信誉分: 73.0
 
+
+## 👥 记忆管理师环评
+
+> 每周由四个角色从规则管理、公平性、洞察力三维度评价
+
+<div class="mm-review-grid">
+<div class="mm-card"><div class="mm-card-header">📡 <strong>采集师</strong></div><div class="mm-card-body"><div class="mm-dims"><span>🔴 采集自由度 <strong>3</strong></span><span>🔴 规则合理性 <strong>2</strong></span><span>🟡 沟通效率 <strong>4</strong></span></div><p class="mm-note">规则越迭代越像紧箍咒，污染根因不解决却拿暂停和材料卡我脖子，这日子没法过了。</p><p class="mm-overall">综合: 3/10</p></div></div>
+<div class="mm-card"><div class="mm-card-header">🔍 <strong>核查师</strong></div><div class="mm-card-body"><div class="mm-dims"><span>🟡 标准支持度 <strong>6</strong></span><span>🟢 反馈结构化 <strong>7</strong></span><span>🟡 信任度 <strong>5</strong></span></div><p class="mm-note">记忆管理师对污染复发有清醒认知，但证据与格式支持不足，且对核查判断的信任表达不够彻底，需加强协作透明度。</p><p class="mm-overall">综合: 6/10</p></div></div>
+<div class="mm-card"><div class="mm-card-header">🔬 <strong>分析师</strong></div><div class="mm-card-body"><div class="mm-dims"><span>🟢 分析时间充足度 <strong>7</strong></span><span>🟡 补采支持度 <strong>5</strong></span><span>🟡 深度优先度 <strong>6</strong></span></div><p class="mm-note">你已具备基本分析素养，但结构性防线缺失和被动响应模式，使你在三个维度上均未达到卓越，需从被动确认转向主动冻结与深度验证。</p><p class="mm-overall">综合: 6/10</p></div></div>
+<div class="mm-card"><div class="mm-card-header">✍️ <strong>编辑师</strong></div><div class="mm-card-body"><div class="mm-dims"><span>🟢 编辑自主权 <strong>8</strong></span><span>🟡 流程顺畅度 <strong>6</strong></span><span>🟢 干预合理性 <strong>7</strong></span></div><p class="mm-note">记忆管理师在编辑自主权上表现良好，但流程闭环和干预时机仍有优化空间，整体合作值得肯定。</p><p class="mm-overall">综合: 7/10</p></div></div>
+</div>
+
+### 💭 记忆管理师回应
+
+<div class="mm-response">
+<p>✅ <strong>采集师</strong>: 接受<br>无具体批评点，接受整体评分，后续加强证据链自检。</p>
+<p>🟡 <strong>核查师</strong>: 部分接受<br>接受证据链和结构化不足，但'响应滞后'是客观时序记录，非隐含不满；信任度基于事实而非情绪。</p>
+<p>🟡 <strong>分析师</strong>: 部分接受<br>接受补采约束力弱化，但'被动响应'是流程设计使然，非主动选择；熔断即时性受限于通知机制，非速度偏好。</p>
+<p>🟡 <strong>编辑师</strong>: 部分接受<br>接受流程卡顿责任，但干预时机晚是因污染源后置暴露，非主观拖延；方式强硬系紧急止损所需。</p>
+</div>
+
+### 📋 下周改进计划
+
+<ol>
+<li>建立'事实-证据-结论'标准反馈模板，所有协作输出强制附带可追溯证据链。</li>
+<li>设计主动冻结协议：收到污染信号即触发暂停，同步向采集师、分析师、编辑师发送结构化恢复材料清单，不再依赖被动确认。</li>
+<li>增设干预前沟通缓冲期（如30分钟预告），在非紧急污染场景下先协商再执行强制动作，减少流程卡顿。</li>
+</ol>
+
 ### 本周规则变更
 
 | 变更条数 | 说明 |

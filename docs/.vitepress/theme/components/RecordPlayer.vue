@@ -54,6 +54,7 @@ function liftArm() {
   if (armTween) armTween.kill()
   const el = armEl()
   if (!el) return
+  if (REDUCED) { gsap.set(el, { rotation: ARM_RAISED, svgOrigin: ARM_ORIGIN }); return }
   armTween = gsap.to(el, { rotation: ARM_RAISED, duration: 0.5, ease: "power2.out", svgOrigin: ARM_ORIGIN })
 }
 
@@ -61,6 +62,7 @@ function dropArm(onDone?: () => void) {
   if (armTween) armTween.kill()
   const el = armEl()
   if (!el) return
+  if (REDUCED) { gsap.set(el, { rotation: 0, svgOrigin: ARM_ORIGIN }); onDone?.(); return }
   armTween = gsap.to(el, { rotation: 0, duration: 1.15, ease: "power2.inOut", svgOrigin: ARM_ORIGIN, onComplete: onDone })
 }
 
@@ -68,11 +70,12 @@ function startSpin() {
   const el = discEl()
   if (!el) return
   if (discTween) discTween.kill()
-  discTween = gsap.to(el, { rotation: -360, duration: slow.value ? 12 : 4.5, ease: "none", repeat: -1, svgOrigin: DISC_ORIGIN })
+  const dur = slow.value ? 12 : REDUCED ? 16 : 4.5
+  discTween = gsap.to(el, { rotation: -360, duration: dur, ease: "none", repeat: -1, svgOrigin: DISC_ORIGIN })
   const g = glyphEl()
   if (g) {
     if (glyphTween) glyphTween.kill()
-    glyphTween = gsap.to(g, { rotation: 360, duration: slow.value ? 12 : 4.5, ease: "none", repeat: -1, svgOrigin: DISC_ORIGIN })
+    glyphTween = gsap.to(g, { rotation: 360, duration: dur, ease: "none", repeat: -1, svgOrigin: DISC_ORIGIN })
   }
 }
 
@@ -102,12 +105,13 @@ function stopSlow() {
 }
 
 onMounted(() => {
+  const a = armEl()
+  if (a) gsap.set(a, { rotation: REDUCED ? 0 : ARM_RAISED, svgOrigin: ARM_ORIGIN })
   if (REDUCED) {
     dropped.value = true
+    startSpin()
     return
   }
-  const a = armEl()
-  if (a) gsap.set(a, { rotation: ARM_RAISED, svgOrigin: ARM_ORIGIN })
   if (turntableEl.value && "IntersectionObserver" in window) {
     observer = new IntersectionObserver((entries) => {
       if (entries.some((e) => e.isIntersecting)) {

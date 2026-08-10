@@ -9,6 +9,7 @@ const { OUTPUT_DIR, LOGS_DIR, WEEKLY_DIR, RULES_DIR, ROOT_DIR, AGENT_NAMES_CN, A
 const { loadSystemMemory } = require("./system-state");
 
 const CHANGELOG_FILE = RULES_DIR + "/CHANGELOG.md";
+const MM_SCORES_FILE = path.join(__dirname, "mm-scores.json");
 
 function getDateCN(dateStr) {
   var parts = dateStr.split("-");
@@ -324,6 +325,70 @@ function generateProcessLog(state, dateStr) {
 
 
 // ===================== 周报生成 =====================
+
+// ===================== 记忆管理师环评渲染 =====================
+function renderMMReview() {
+  var mm;
+  try { mm = JSON.parse(fs.readFileSync(MM_SCORES_FILE, "utf-8")); } catch (e) { return ""; }
+  var agents = [
+    { id: "collector", name: "采集师", icon: "📡" },
+    { id: "verifier", name: "核查师", icon: "🔍" },
+    { id: "analyst", name: "分析师", icon: "🔬" },
+    { id: "editor", name: "编辑师", icon: "✍️" }
+  ];
+  function normalizeReview(s) {
+    if (!s || !s.dims || !s.dims.length) return s;
+    var realDims = s.dims.filter(function (d) { return d && d.name; });
+    var extras = s.dims.filter(function (d) { return d && !d.name; });
+    if (extras.length && extras[0].overall) {
+      s.overall = extras[0].overall;
+      if (!s.summary) s.summary = extras[0].summary;
+    }
+    if (realDims.length) s.dims = realDims;
+    return s;
+  }
+  var cards = "";
+  agents.forEach(function (a) {
+    var s = mm[a.id];
+    if (!s) return;
+    s = normalizeReview(s);
+    if ((!s.dims || !s.dims.length) && s._raw) {
+      try {
+        var p = JSON.parse(s._raw);
+        if (p && p.dims && p.dims.length) s = p;
+      } catch (e) {
+        // repair: model omitted closing brackets (e.g. dims array / root object)
+        var candidates = [s._raw + "]", s._raw + "]}", s._raw.replace(/\}\s*$/, "]}")];
+        for (var ci = 0; ci < candidates.length; ci++) {
+          try {
+            var p2 = JSON.parse(candidates[ci]);
+            if (p2 && p2.dims && p2.dims.length) { s = normalizeReview(p2); break; }
+          } catch (e2) {}
+        }
+      }
+    }
+    if (!s.dims || !s.dims.length) return;
+    var dimsHtml = s.dims.map(function (d) {
+      var icon = d.score >= 7 ? "🟢" : (d.score >= 4 ? "🟡" : "🔴");
+      return "<span>" + icon + " " + d.name + " <strong>" + d.score + "</strong></span>";
+    }).join("");
+    cards += '<div class="mm-card"><div class="mm-card-header">' + a.icon + " <strong>" + a.name + '</strong></div><div class="mm-card-body"><div class="mm-dims">' + dimsHtml + '</div><p class="mm-note">' + (s.summary || "") + '</p><p class="mm-overall">综合: ' + (s.overall || "?") + "/10</p></div></div>\n";
+  });
+  if (!cards) return "";
+  var mmSelf = mm["memory-manager"] || {};
+  var responses = mmSelf.responses || [];
+  var responseHtml = responses.map(function (r) {
+    var icon = r.verdict === "接受" ? "✅" : (r.verdict === "反驳" ? "❌" : "🟡");
+    return "<p>" + icon + " <strong>" + r.from + "</strong>: " + r.verdict + "<br>" + (r.reply || "") + "</p>";
+  }).join("\n");
+  var improvements = mmSelf.improvements || [];
+  var impHtml = improvements.map(function (x) { return "<li>" + String(x).replace(/^\s*\d+[\.、]\s*/, "") + "</li>"; }).join("\n");
+  var out = "\n## 👥 记忆管理师环评\n\n> 每周由四个角色从规则管理、公平性、洞察力三维度评价\n\n<div class=\"mm-review-grid\">\n" + cards + "</div>\n\n";
+  if (responseHtml) out += "### 💭 记忆管理师回应\n\n<div class=\"mm-response\">\n" + responseHtml + "\n</div>\n\n";
+  if (impHtml) out += "### 📋 下周改进计划\n\n<ol>\n" + impHtml + "\n</ol>\n\n";
+  return out;
+}
+
 function generateWeeklyReport(state, dateStr) {
   var weekNum = (function(d) { var sysStart = new Date(2026, 5, 28); var days = Math.floor((d - sysStart) / 86400000); return Math.ceil((days + 1) / 7); })(new Date(dateStr));
   var rep = state.reputation;
@@ -426,7 +491,7 @@ function generateWeeklyReport(state, dateStr) {
   summaryCards += "</div>\n";
 
   var avgScore = agents.reduce(function(s, aid) { return s + ((rep[aid] && rep[aid].score) || 0); }, 0) / agents.length;
-  var scoresContent = "# " + dateStr.slice(0, 4) + " 年第" + String(weekNum).padStart(2, "0") + "周（" + dateCN + "）\n\n> 🤖 多Agent信誉分趋势\n\n" + summaryCards + "\n" + chartSvg + "\n" + legendHtml + "\n\n### 平均信誉分: " + avgScore.toFixed(1) + "\n\n### 本周规则变更\n\n| 变更条数 | 说明 |\n|------|------|\n| " + weekEntries.length + " 条 | 由记忆管理师在日常复盘中自动执行 |\n\n";
+  var scoresContent = "# " + dateStr.slice(0, 4) + " 年第" + String(weekNum).padStart(2, "0") + "周（" + dateCN + "）\n\n> 🤖 多Agent信誉分趋势\n\n" + summaryCards + "\n" + chartSvg + "\n" + legendHtml + "\n\n### 平均信誉分: " + avgScore.toFixed(1) + renderMMReview() + "\n### 本周规则变更\n\n| 变更条数 | 说明 |\n|------|------|\n| " + weekEntries.length + " 条 | 由记忆管理师在日常复盘中自动执行 |\n\n";
 
   var changelogDetail = "";
   try {
@@ -513,4 +578,4 @@ function updateWeeklyIndex(dateStr, weekNum) {
   fs.writeFileSync(indexPath, content, "utf-8");
 }
 
-module.exports = { generateProcessLog, generateWeeklyReport, updateDailyIndex, updateLogsIndex, updateWeeklyIndex };
+module.exports = { generateProcessLog, generateWeeklyReport, updateDailyIndex, updateLogsIndex, updateWeeklyIndex, renderMMReview };
