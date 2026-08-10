@@ -1,409 +1,259 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>拾光声学档案 · 登录门户</title>
-<style>@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Noto+Serif+SC:wght@300;400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
-:root[data-palette="morning"] {
-  --bg:#f4efe3; --blob1:rgba(242,206,132,.55); --blob2:rgba(196,214,168,.50); --blob3:rgba(247,222,196,.50);
-  --ink:#251f16; --ink2:#57503f; --ink3:#8d8268; --accent:#a8761f; --live:#c0392f;
-  --glass-hi:rgba(255,253,246,.28); --glass-lo:rgba(255,253,246,.12); --glass-brd:rgba(255,255,255,.55); --glass-spec:rgba(255,255,255,.85);
-  --shadow:rgba(84,66,28,.16); --line:rgba(42,38,32,.16); --line2:rgba(42,38,32,.38);
-  --paper:#faf7ef; --paper2:#f4efe0; --dark:#1E1B16;
-  --serif:'Noto Serif SC','Songti SC','SimSun',serif; --sans:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif; --mono:'JetBrains Mono',monospace;
+<script setup lang="ts">
+import { computed, onBeforeUnmount, onMounted, ref } from "vue"
+import { withBase } from "vitepress"
+import gsap from "gsap"
+
+interface VolModule {
+  num: string
+  en: string
+  title: string
+  color: string
+  desc: string
+  badge?: string
+  live?: boolean
+  items: string[]
+  stat: string
+  link: string
 }
-:root[data-palette="noon"] {
-  --bg:#e8eef0; --blob1:rgba(168,206,228,.55); --blob2:rgba(210,226,200,.45); --blob3:rgba(240,228,200,.42);
-  --ink:#1c2329; --ink2:#46525c; --ink3:#75848e; --accent:#2b6f8f; --live:#c0392f;
-  --glass-hi:rgba(255,255,255,.25); --glass-lo:rgba(255,255,255,.10); --glass-brd:rgba(255,255,255,.60); --glass-spec:rgba(255,255,255,.90);
-  --shadow:rgba(40,70,90,.15); --line:rgba(28,46,58,.16); --line2:rgba(28,46,58,.38);
-  --paper:#f2f6f5; --paper2:#e9efee; --dark:#1c2126;
-  --serif:'Noto Serif SC','Songti SC','SimSun',serif; --sans:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif; --mono:'JetBrains Mono',monospace;
+
+const MODULES: VolModule[] = [
+  { num: "I", en: "GROWTH", title: "上升清单", color: "#c9993d", desc: "自我剖析 · 关键决策 · 成长轨迹", badge: "扩充中", items: ["卷首 · 概述", "自我剖析 · 即将上架", "关键决策复盘 · 即将上架"], stat: "长期主义 · 五年为尺", link: "growth/" },
+  { num: "II", en: "RADAR", title: "行业雷达", color: "#3d7ea6", desc: "每日自动采集 · AI 深度分析 · 曲库行业动态", badge: "LIVE", live: true, items: ["日报概览", "过程日志", "周报", "规则体系", "关键词覆盖"], stat: "每日 12:00 自动更新", link: "daily/" },
+  { num: "III", en: "MUSIC PRODUCT", title: "云音乐产品学习", color: "#c03434", desc: "产品分析 · 活动运营 · 用户反馈", items: ["年度报告", "歌词翻译编辑部", "AI 歌曲资料补充", "歌词 AB 实验", "云村用户节"], stat: "8 篇深度拆解", link: "music-product/" },
+  { num: "IV", en: "LIBERAL ARTS", title: "通识积累", color: "#5f7a5a", desc: "影视评鉴 · 法餐考据 · 唱片评鉴", items: ["日本影视剧 · 评级", "东京大饭店 · 烹饪技法", "音乐鉴赏 · 唱片评价", "曲库运营 · 多方视角"], stat: "5 个长期专题", link: "general/" },
+  { num: "V", en: "PILGRIMAGE", title: "圣地巡礼", color: "#c76b3f", desc: "旅行记录 · 取景地打卡 · 文化考察", badge: "施工中", items: ["卷首 · 概述", "东京篇 · 筹备中"], stat: "下一站 · 东京", link: "pilgrimage/" },
+  { num: "VI", en: "INTERVIEW", title: "校招面试话术", color: "#46537e", desc: "简历策略 · 高频问答 · 企业面经", items: ["通用高频问题", "网易云音乐 · 面经", "昆仑天工 · 面经", "荔枝 · 面经", "+ 3 家记录"], stat: "6 家企业实战", link: "interview/" },
+]
+
+const current = ref(0)
+const dropped = ref(false)
+const switching = ref(false)
+const slow = ref(false)
+const turntableEl = ref<HTMLElement | null>(null)
+
+let switchTimer: number | undefined
+let liftTimer: number | undefined
+let slowTimer: number | undefined
+let observer: IntersectionObserver | undefined
+let armTween: gsap.core.Tween | undefined
+let discTween: gsap.core.Tween | undefined
+let glyphTween: gsap.core.Tween | undefined
+
+const ARM_ORIGIN = "352 70"
+const DISC_ORIGIN = "190 168"
+const ARM_RAISED = 24
+const REDUCED = typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches
+
+const mod = computed(() => MODULES[current.value])
+
+function armEl() { return turntableEl.value ? turntableEl.value.querySelector(".tt-arm") : null }
+function discEl() { return turntableEl.value ? turntableEl.value.querySelector(".tt-disc") : null }
+function glyphEl() { return turntableEl.value ? turntableEl.value.querySelector(".tt-disc-glyph") : null }
+
+function liftArm() {
+  if (armTween) armTween.kill()
+  const el = armEl()
+  if (!el) return
+  armTween = gsap.to(el, { rotation: ARM_RAISED, duration: 0.5, ease: "power2.out", svgOrigin: ARM_ORIGIN })
 }
-:root[data-palette="dusk"] {
-  --bg:#f1e2d6; --blob1:rgba(238,166,116,.50); --blob2:rgba(214,138,148,.45); --blob3:rgba(176,150,206,.40);
-  --ink:#2a1e19; --ink2:#5d453c; --ink3:#937a68; --accent:#b04a30; --live:#b03325;
-  --glass-hi:rgba(255,248,242,.25); --glass-lo:rgba(255,248,242,.10); --glass-brd:rgba(255,255,255,.48); --glass-spec:rgba(255,255,255,.80);
-  --shadow:rgba(90,40,20,.17); --line:rgba(60,40,30,.16); --line2:rgba(60,40,30,.38);
-  --paper:#f8f1e8; --paper2:#f1e6d8; --dark:#201712;
-  --serif:'Noto Serif SC','Songti SC','SimSun',serif; --sans:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif; --mono:'JetBrains Mono',monospace;
+
+function dropArm(onDone?: () => void) {
+  if (armTween) armTween.kill()
+  const el = armEl()
+  if (!el) return
+  armTween = gsap.to(el, { rotation: 0, duration: 1.15, ease: "power2.inOut", svgOrigin: ARM_ORIGIN, onComplete: onDone })
 }
-:root[data-palette="night"] {
-  --bg:#181512; --blob1:rgba(120,90,40,.35); --blob2:rgba(60,80,120,.30); --blob3:rgba(100,50,40,.30);
-  --ink:#ece5d8; --ink2:#b5aa97; --ink3:#837764; --accent:#caa14f; --live:#e05a4a;
-  --glass-hi:rgba(255,255,255,.10); --glass-lo:rgba(255,255,255,.04); --glass-brd:rgba(255,255,255,.18); --glass-spec:rgba(255,255,255,.30);
-  --shadow:rgba(0,0,0,.5); --line:rgba(236,229,216,.14); --line2:rgba(236,229,216,.32);
-  --paper:#1f1b17; --paper2:#241f1a; --dark:#0e0c0a;
-  --serif:'Noto Serif SC','Songti SC','SimSun',serif; --sans:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif; --mono:'JetBrains Mono',monospace;
+
+function startSpin() {
+  const el = discEl()
+  if (!el) return
+  if (discTween) discTween.kill()
+  discTween = gsap.to(el, { rotation: -360, duration: slow.value ? 12 : 4.5, ease: "none", repeat: -1, svgOrigin: DISC_ORIGIN })
+  const g = glyphEl()
+  if (g) {
+    if (glyphTween) glyphTween.kill()
+    glyphTween = gsap.to(g, { rotation: 360, duration: slow.value ? 12 : 4.5, ease: "none", repeat: -1, svgOrigin: DISC_ORIGIN })
+  }
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-html,body{overflow-x:clip}
-body{min-height:100vh;display:flex;flex-direction:column;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.6;transition:background .5s,color .5s}
-body::before{content:"";position:fixed;inset:0;z-index:-1;background:
-  radial-gradient(60% 50% at 18% 12%,var(--blob1),transparent 70%),
-  radial-gradient(50% 45% at 85% 80%,var(--blob2),transparent 70%),
-  radial-gradient(45% 40% at 65% 20%,var(--blob3),transparent 70%);pointer-events:none}
-body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;
-  background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.015) 0 1px,transparent 1px 3px)}
-.bg-paper{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.13;background:url(/art/paper.jpg) repeat;background-size:420px;mix-blend-mode:multiply}
-.bg-glass{position:fixed;inset:0;z-index:0;pointer-events:none;background:url(/art/glass.jpg) center/cover no-repeat;opacity:.4;mix-blend-mode:soft-light}
-:root[data-palette="night"] .bg-glass{opacity:.22;mix-blend-mode:screen}
-::selection{background:var(--accent);color:var(--bg)}
-:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
-a{color:inherit}
-.wrap{max-width:1060px;margin:0 auto;padding-left:22px;padding-right:22px}
-main{flex:1}
 
-.brandbar{border-bottom:1px solid var(--line)}
-.brandbar-in{display:flex;justify-content:space-between;align-items:center;padding-top:14px;padding-bottom:14px;gap:12px}
-.brand{font-family:var(--serif);font-size:12px;letter-spacing:.22em}
-.brand b{font-weight:700}
-.brand span{color:var(--ink3)}
-.brand-note{font-size:10px;letter-spacing:.3em;color:var(--ink3)}
-.brand-right{display:flex;align-items:center;gap:12px}
-.palette-btn{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--ink2);background:transparent;border:1px solid var(--line2);border-radius:999px;padding:5px 14px;cursor:pointer;transition:all .25s}
-.palette-btn:hover{color:var(--accent);border-color:var(--accent)}
-
-#view-login{padding:56px 0 76px}
-.auth-card{position:relative;width:min(400px,100%);margin:0 auto;background:linear-gradient(135deg,var(--glass-hi),var(--glass-lo));border:1px solid var(--glass-brd);box-shadow:0 20px 44px -18px var(--shadow),inset 0 1px 0 var(--glass-spec);padding:34px 34px 26px;border-radius:18px}
-.auth-card::before{content:"";position:absolute;top:6px;left:6px;right:6px;bottom:6px;border:1px solid var(--glass-brd);border-radius:13px;pointer-events:none;opacity:.6}
-.auth-head{position:relative;text-align:center}
-.mdisc{width:54px;height:54px}
-.auth-title{font-family:var(--serif);font-weight:700;font-size:24px;letter-spacing:.3em;padding-left:.3em;margin:14px 0 4px}
-.auth-sub{font-size:11px;letter-spacing:.24em;padding-left:.24em;color:var(--ink2)}
-.rule{position:relative;height:1px;background:var(--line);margin:24px 0 0}
-.rule::after{content:"";position:absolute;left:50%;top:50%;width:6px;height:6px;background:var(--accent);transform:translate(-50%,-50%) rotate(45deg)}
-
-.auth-card>input{position:absolute;opacity:0;pointer-events:none}
-.tabs{display:flex;border-bottom:1px solid var(--line)}
-.tabs label{flex:1;text-align:center;padding:12px 0 12px .3em;font-size:13px;letter-spacing:.3em;color:var(--ink3);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .2s}
-.tabs label i{font-style:normal;font-family:var(--serif);font-size:10px;letter-spacing:.1em;margin-right:6px;color:var(--ink3)}
-#tab-login:checked~.tabs [for=tab-login],#tab-reg:checked~.tabs [for=tab-reg]{color:var(--ink);border-bottom-color:var(--accent)}
-#tab-login:checked~.tabs [for=tab-login] i,#tab-reg:checked~.tabs [for=tab-reg] i{color:var(--accent)}
-#login-form,#reg-form{display:none}
-#tab-login:checked~#login-form,#tab-reg:checked~#reg-form{display:block}
-
-.field{margin-top:20px}
-.field label{display:block;font-size:11px;letter-spacing:.22em;color:var(--ink3);margin-bottom:4px}
-.field input{width:100%;background:transparent;border:0;border-radius:0;border-bottom:1px solid var(--line2);padding:7px 2px;font-size:14px;color:var(--ink);font-family:var(--sans)}
-.field input::placeholder{color:var(--ink3);opacity:.7}
-.field input:focus{outline:none;border-bottom-color:var(--accent);background:var(--glass-lo)}
-.err{min-height:16px;margin-top:10px;font-size:12px;letter-spacing:.04em;color:var(--live)}
-.btn{width:100%;margin-top:8px;padding:13px 0 13px .4em;background:var(--ink);color:var(--bg);border:0;border-radius:10px;font-family:var(--sans);font-size:13px;letter-spacing:.4em;cursor:pointer;transition:background .2s}
-.btn:hover{background:var(--accent)}
-.form-note{margin-top:16px;text-align:center;font-size:10px;letter-spacing:.2em;color:var(--ink2)}
-
-#view-portal{display:none}
-.portal-me{display:flex;align-items:center;gap:14px}
-#portal-user{width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-family:var(--serif);font-size:12px}
-#logout-btn{background:transparent;border:1px solid var(--line2);color:var(--ink);padding:5px 16px 5px calc(16px + .24em);font-family:var(--sans);font-size:11px;letter-spacing:.24em;cursor:pointer;transition:border-color .2s,color .2s;border-radius:999px}
-#logout-btn:hover{border-color:var(--accent);color:var(--accent)}
-
-.portal-main{padding-top:46px;padding-bottom:70px}
-.kick{font-size:11px;letter-spacing:.32em;color:var(--ink3)}
-.kick::before{content:"";display:inline-block;width:7px;height:7px;background:var(--accent);margin-right:10px;vertical-align:1px;transform:rotate(45deg)}
-.portal-title{font-family:var(--serif);font-weight:700;font-size:clamp(24px,4vw,34px);letter-spacing:.06em;margin:12px 0 36px}
-.cards{display:grid;grid-template-columns:1fr 1fr;gap:26px}
-
-.card{position:relative;display:block;text-decoration:none;overflow:hidden;min-height:280px;padding:36px 34px 32px;border-radius:18px;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
-.card:hover{transform:translateY(-3px);box-shadow:0 24px 48px -20px var(--shadow)}
-.card-body{position:relative;z-index:1;display:block;max-width:66%}
-.kicker{display:block;font-size:10px;letter-spacing:.3em;margin-bottom:16px}
-.card-title{display:block;font-family:var(--serif);font-size:27px;letter-spacing:.12em;line-height:1.25}
-.card-sub{display:block;margin-top:14px;font-size:12.5px;line-height:2}
-.go{display:inline-block;margin-top:24px;font-size:12px;letter-spacing:.24em}
-.arr{font-style:normal;display:inline-block;margin-left:8px;transition:transform .25s ease}
-.card:hover .arr{transform:translateX(6px)}
-
-.card-dark{background:var(--dark);border:1px solid rgba(255,255,255,.1);color:var(--bg)}
-.card-dark::before{content:"";position:absolute;top:9px;left:9px;right:9px;bottom:9px;border:1px solid rgba(255,255,255,.15);border-radius:12px;pointer-events:none}
-.card-dark::after{content:"NO. 001 / KB";position:absolute;right:20px;bottom:16px;font-size:9px;letter-spacing:.3em;color:rgba(255,255,255,.35);font-family:var(--mono)}
-.card-dark .kicker{color:rgba(255,255,255,.55)}
-.card-dark .card-sub{color:rgba(255,255,255,.62)}
-.card-dark .go{color:var(--accent)}
-.card-dark:hover{border-color:var(--accent)}
-
-.disc{position:absolute;top:50%;right:-58px;width:216px;height:216px;border-radius:50%;transform:translateY(-50%);border:10px solid var(--dark);background:#241f18;box-shadow:inset 0 0 0 1px rgba(255,255,255,.10),inset 0 0 46px rgba(0,0,0,.55),0 26px 46px -22px rgba(0,0,0,.6);animation:discSpin 26s linear infinite;will-change:transform;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.disc svg{width:100%;height:100%;display:block}
-.disc::before{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;background:radial-gradient(circle at 30% 22%,rgba(255,255,255,.26),transparent 42%),radial-gradient(circle at 70% 84%,rgba(0,0,0,.28),transparent 50%)}
-@keyframes discSpin{from{transform:translateY(-50%) rotate(0)}to{transform:translateY(-50%) rotate(360deg)}}
-@media (prefers-reduced-motion: reduce){.disc{animation:none}}
-
-.card-paper{background:linear-gradient(135deg,var(--glass-hi),var(--glass-lo));border:1px solid var(--glass-brd);color:var(--ink);padding-left:58px;box-shadow:inset 0 1px 0 var(--glass-spec)}
-.card-paper::before{content:"";position:absolute;top:0;bottom:0;left:32px;border-left:1px dashed var(--line2)}
-.card-paper::after{content:"NO. 002 / TOOL";position:absolute;right:20px;bottom:16px;font-size:9px;letter-spacing:.3em;color:var(--ink3);font-family:var(--mono)}
-.card-paper .kicker{color:var(--ink3)}
-.card-paper .card-sub{color:var(--ink2)}
-.card-paper .go{color:var(--accent)}
-.card-paper:hover{border-color:var(--accent)}
-.card-paper .card-body{padding-right:72px}
-.hole{position:absolute;left:27px;width:10px;height:10px;border-radius:50%;background:var(--paper2);border:1px solid var(--line2)}
-.hole.a{top:26px}
-.hole.b{bottom:26px}
-.card-poster{position:absolute;top:50%;right:28px;width:100px;height:100px;transform:translateY(-50%) rotate(3deg);opacity:.96}
-.card-poster svg{width:100%;height:100%;display:block;filter:drop-shadow(0 12px 18px rgba(60,40,20,.18))}
-.card-poster .pp-sheet{fill:var(--paper2);stroke:var(--line2)}
-.card-poster .pp-frame{fill:var(--glass-lo);stroke:var(--ink25)}
-.card-poster .pp-title{stroke:var(--ink);stroke-linecap:round}
-.card-poster .pp-line{stroke:var(--ink25);stroke-linecap:round}
-.card-poster .pp-accent{fill:var(--accent);stroke:var(--accent)}
-.card-poster .pp-sun{fill:none;stroke:var(--accent);stroke-width:1.5}
-
-footer{border-top:1px solid var(--line)}
-footer .wrap{padding-top:18px;padding-bottom:24px;text-align:center;font-size:11px;letter-spacing:.14em;color:var(--ink3)}
-footer a{text-decoration:none;border-bottom:1px dotted var(--ink3);padding-bottom:1px}
-footer a:hover{color:var(--accent);border-bottom-color:var(--accent)}
-
-@media (max-width:860px){
-  .cards{grid-template-columns:1fr}
-  .card{min-height:240px}
+function selectModule(i: number) {
+  if (i === current.value) return
+  current.value = i
+  switching.value = true
+  if (switchTimer) clearTimeout(switchTimer)
+  switchTimer = window.setTimeout(() => { switching.value = false }, 260)
+  liftArm()
+  if (liftTimer) clearTimeout(liftTimer)
+  liftTimer = window.setTimeout(() => { dropArm() }, 650)
 }
-@media (max-width:560px){
-  .brand-note{display:none}
+
+function startSlow() {
+  if (slowTimer) clearTimeout(slowTimer)
+  slowTimer = window.setTimeout(() => {
+    slow.value = true
+    if (discTween && dropped.value) { discTween.timeScale(4.5 / 12); glyphTween?.timeScale(4.5 / 12) }
+  }, 1500)
 }
-@media (max-width:520px){
-  #view-login{padding:36px 0 56px}
-  .auth-card{padding:28px 22px 22px}
-  .portal-main{padding-top:34px;padding-bottom:56px}
-  .card{padding:28px 22px 24px}
-  .card-paper{padding-left:48px}
-  .card-body{max-width:100%}
-  .card-paper .card-body{padding-right:56px}
-  .disc{right:-64px;width:170px;height:170px;opacity:.5;animation-duration:40s}
-  .card-poster{width:76px;height:76px;right:18px}
-  .hole{left:23px}
-  .card-paper::before{left:28px}
+
+function stopSlow() {
+  if (slowTimer) clearTimeout(slowTimer)
+  slow.value = false
+  if (discTween && dropped.value) { discTween.timeScale(1); glyphTween?.timeScale(1) }
 }
-@media (prefers-reduced-motion:reduce){
-  *{transition:none !important}
-}
-</style>
-<script>
-(function () {
-  var PALS = ["auto", "morning", "noon", "dusk", "night"];
-  var saved = localStorage.getItem("pg_palette") || "auto";
-  function apply(p) {
-    document.documentElement.setAttribute("data-palette", p === "auto" ? autoPal() : p);
-    var btn = document.getElementById("palette-btn");
-    if (btn) btn.textContent = p === "auto" ? "自动" : ({ morning: "晨", noon: "午", dusk: "暮", night: "夜" })[p];
+
+onMounted(() => {
+  if (REDUCED) {
+    dropped.value = true
+    return
   }
-  function autoPal() {
-    var h = new Date().getHours();
-    if (h >= 5 && h < 11) return "morning";
-    if (h >= 11 && h < 17) return "noon";
-    if (h >= 17 && h < 21) return "dusk";
-    return "night";
+  const a = armEl()
+  if (a) gsap.set(a, { rotation: ARM_RAISED, svgOrigin: ARM_ORIGIN })
+  if (turntableEl.value && "IntersectionObserver" in window) {
+    observer = new IntersectionObserver((entries) => {
+      if (entries.some((e) => e.isIntersecting)) {
+        observer?.disconnect()
+        dropArm(() => { dropped.value = true; startSpin() })
+      }
+    }, { threshold: 0.25 })
+    observer.observe(turntableEl.value)
+  } else {
+    dropArm(() => { dropped.value = true; startSpin() })
   }
-  function cycle() {
-    var i = PALS.indexOf(saved);
-    saved = PALS[(i + 1) % PALS.length];
-    localStorage.setItem("pg_palette", saved);
-    apply(saved);
-  }
-  apply(saved);
-  var btn = document.getElementById("palette-btn");
-  if (btn) btn.addEventListener("click", cycle);
-})();
-</script></head>
-<body>
-<div class="bg-paper" aria-hidden="true"></div>
-<div class="bg-glass" aria-hidden="true"></div>
+})
 
-<header class="brandbar">
-  <div class="wrap brandbar-in">
-    <p class="brand"><b>YUTATA</b> 档案室 <span>·</span> 拾光声学档案</p>
-    <p class="brand-note">PRIVATE ARCHIVE · EST. MMXXIV</p>
-    <div class="brand-right">
-      <div class="portal-me" id="portal-me" style="display:none">
-        <span id="portal-user">Y</span>
-        <button id="logout-btn" type="button">退出</button>
-      </div>
-      <button id="palette-btn" class="palette-btn" type="button" aria-label="时段配色">自动</button>
-    </div>
-  </div>
-</header>
-
-<main>
-
-<section id="view-login">
-  <div class="wrap">
-    <div class="auth-card">
-      <div class="auth-head">
-        <svg class="mdisc" viewBox="0 0 48 48" aria-hidden="true">
-          <circle cx="24" cy="24" r="22" fill="#1E1B16"/>
-          <circle cx="24" cy="24" r="17" fill="none" stroke="#3A342A" stroke-width="1"/>
-          <circle cx="24" cy="24" r="12.5" fill="none" stroke="#3A342A" stroke-width="1"/>
-          <circle cx="24" cy="24" r="7" fill="var(--accent)"/>
-          <circle cx="24" cy="24" r="1.6" fill="var(--bg)"/>
-        </svg>
-        <h1 class="auth-title">拾光声学档案</h1>
-        <p class="auth-sub">个人知识站 · 登录门户</p>
-      </div>
-      <div class="rule" aria-hidden="true"></div>
-
-      <input type="radio" name="auth-tab" id="tab-login" checked>
-      <input type="radio" name="auth-tab" id="tab-reg">
-
-      <div class="tabs">
-        <label for="tab-login"><i>01</i>登录</label>
-        <label for="tab-reg"><i>02</i>注册</label>
-      </div>
-
-      <form id="login-form">
-        <div class="field">
-          <label for="login-username">用户名</label>
-          <input id="login-username" name="username" type="text" placeholder="请输入用户名" autocomplete="username">
-        </div>
-        <div class="field">
-          <label for="login-password">密码</label>
-          <input id="login-password" name="password" type="password" placeholder="请输入密码" autocomplete="current-password">
-        </div>
-        <p class="err" id="login-error"></p>
-        <button class="btn" id="login-btn" type="submit">登录</button>
-        <p class="form-note">仅限本人与受邀访客 · PRIVATE ONLY</p>
-      </form>
-
-      <form id="reg-form">
-        <div class="field">
-          <label for="reg-username">设置用户名</label>
-          <input id="reg-username" name="username" type="text" placeholder="请输入用户名" autocomplete="username">
-        </div>
-        <div class="field">
-          <label for="reg-password">设置密码</label>
-          <input id="reg-password" name="password" type="password" placeholder="建议 6 位以上" autocomplete="new-password">
-        </div>
-        <p class="err" id="reg-error"></p>
-        <button class="btn" id="reg-btn" type="submit">注册</button>
-        <p class="form-note">注册即获得专属档案编号</p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<section id="view-portal">
-  <div class="wrap portal-main">
-    <p class="kick">INDEX · 馆藏目录</p>
-    <h2 class="portal-title">两处常去的地方</h2>
-<div class="cards">
-
-      <a class="card card-dark" id="card-knowledge" href="/kb/">
-        <p class="kicker">KNOWLEDGE / 知识文档区</p>
-        <h2 class="card-title">拾光声学档案</h2>
-        <p class="card-sub">每日行业雷达 · 通识积累 · 音乐产品学习 · 上升清单 · 圣地巡礼 · 面试话术</p>
-        <span class="go">进入馆藏 <span class="arr">&rarr;</span></span>
-        <span class="disc" aria-hidden="true">
-          <svg viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="48" fill="#241f18"/>
-            <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,.16)" stroke-width="1"/>
-            <circle cx="50" cy="50" r="33" fill="none" stroke="rgba(255,255,255,.09)" stroke-width="1"/>
-            <circle cx="50" cy="50" r="23" fill="none" stroke="rgba(255,255,255,.09)" stroke-width="1"/>
-            <circle cx="50" cy="50" r="13" fill="#c9993d"/>
-            <circle cx="50" cy="50" r="2.4" fill="#241f18"/>
-            <path d="M34 30 A 30 30 0 0 1 58 20" fill="none" stroke="rgba(255,255,255,.36)" stroke-width="2.4" stroke-linecap="round"/>
-            <circle cx="50" cy="84" r="2" fill="#e8c86a"/>
-          </svg>
-        </span>
-      </a>
-
-      <a class="card card-paper" id="card-tool" href="/tool/">
-        <p class="kicker">TOOLS / 提效工具区</p>
-        <h2 class="card-title">Zine 海报生成器</h2>
-        <p class="card-sub">上传照片 · 自动分析配色与构图 · 生成档案风海报</p>
-        <span class="go">打开工具 <span class="arr">&rarr;</span></span>
-        <span class="hole a" aria-hidden="true"></span>
-        <span class="hole b" aria-hidden="true"></span>
-        <span class="card-poster" aria-hidden="true">
-          <svg viewBox="0 0 100 100">
-            <rect class="pp-sheet" x="6" y="8" width="88" height="84" rx="4"/>
-            <rect class="pp-frame" x="15" y="16" width="70" height="38" rx="3"/>
-            <circle class="pp-sun" cx="38" cy="33" r="7"/>
-            <path d="M20 52 L34 36 L44 46 L54 34 L72 52" fill="none" stroke="var(--ink25)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            <line class="pp-title" x1="15" y1="62" x2="48" y2="62" stroke-width="3"/>
-            <line class="pp-line" x1="15" y1="69.5" x2="62" y2="69.5" stroke-width="1.8"/>
-            <line class="pp-line" x1="15" y1="76" x2="55" y2="76" stroke-width="1.8"/>
-            <rect class="pp-accent" x="15" y="82" width="34" height="5" rx="2.5"/>
-            <circle class="pp-accent" cx="84" cy="16" r="3"/>
-          </svg>
-        </span>
-      </a>
-
-    </div>
-  </main>
-
-  <footer>
-    公开留档版 · <a href="https://yutata121386.github.io">yutata121386.github.io</a>
-  </footer>
-
-
-<script>
-(function () {
-  var $ = function (id) { return document.getElementById(id); };
-  function api(path, opts) {
-    opts = opts || {};
-    var headers = { "Content-Type": "application/json" };
-    var token = localStorage.getItem("pg_token");
-    if (token) headers["Authorization"] = "Bearer " + token;
-    return fetch(path, {
-      method: opts.method || "GET",
-      headers: headers,
-      body: opts.body ? JSON.stringify(opts.body) : undefined
-    }).then(function (r) {
-      return r.json().then(function (d) {
-        if (!r.ok) throw new Error(d.error || "请求失败");
-        return d;
-      });
-    });
-  }
-  function showPortal() {
-    $("view-login").style.display = "none";
-    $("view-portal").style.display = "block";
-    $("portal-me").style.display = "flex";
-  }
-  function showLogin() {
-    $("view-login").style.display = "block";
-    $("view-portal").style.display = "none";
-    $("portal-me").style.display = "none";
-  }
-  function enterPortal(me) {
-    var u = me.username || "";
-    $("portal-user").textContent = (u ? u[0] : "?").toUpperCase();
-    showPortal();
-  }
-  function boot() {
-    api("/api/me").then(enterPortal).catch(showLogin);
-  }
-  $("login-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    api("/api/login", {
-      method: "POST",
-      body: { username: $("login-username").value.trim(), password: $("login-password").value }
-    }).then(function (d) {
-      localStorage.setItem("pg_token", d.token);
-      enterPortal(d);
-    }).catch(function (err) { $("login-error").textContent = err.message; });
-  });
-  $("reg-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    api("/api/register", {
-      method: "POST",
-      body: { username: $("reg-username").value.trim(), password: $("reg-password").value }
-    }).then(function (d) {
-      localStorage.setItem("pg_token", d.token);
-      enterPortal(d);
-    }).catch(function (err) { $("reg-error").textContent = err.message; });
-  });
-  $("logout-btn").addEventListener("click", function () {
-    api("/api/logout", { method: "POST" }).catch(function () {});
-    localStorage.removeItem("pg_token");
-    $("login-error").textContent = "";
-    $("reg-error").textContent = "";
-    showLogin();
-  });
-  boot();
-})();
+onBeforeUnmount(() => {
+  if (switchTimer) clearTimeout(switchTimer)
+  if (liftTimer) clearTimeout(liftTimer)
+  if (slowTimer) clearTimeout(slowTimer)
+  observer?.disconnect()
+  armTween?.kill()
+  discTween?.kill()
+  glyphTween?.kill()
+})
 </script>
-
-</body>
-</html>
+<template>
+  <section class="player-section">
+    <div class="section-head"><span class="sh-cn">六卷档案</span><span class="sh-en">SIX VOLUMES — 选择一卷，落下唱针</span></div>
+    <div class="player-layout">
+      <div class="module-selector">
+        <button
+          v-for="(m, i) in MODULES"
+          :key="m.num"
+          type="button"
+          :class="['mod-btn', { 'is-active': current === i }]"
+          @click="selectModule(i)"
+        >
+          <span class="mod-num">{{ m.num }}</span>
+          <span class="mod-title">{{ m.title }}</span>
+          <span v-if="m.badge" :class="['mod-badge', { live: m.live }]">{{ m.badge }}</span>
+        </button>
+      </div>
+      <div class="turntable-area" @mouseenter="startSlow" @mouseleave="stopSlow">
+        <div ref="turntableEl" class="turntable">
+          <svg class="tt-svg" viewBox="0 0 380 340" aria-hidden="true" focusable="false">
+            <defs>
+              <radialGradient id="tt-vinyl" cx="36%" cy="30%" r="80%">
+                <stop offset="0%" stop-color="#3d3328" />
+                <stop offset="42%" stop-color="#28211a" />
+                <stop offset="76%" stop-color="#181310" />
+                <stop offset="100%" stop-color="#0d0a08" />
+              </radialGradient>
+            </defs>
+            <!-- 底座 -->
+            <rect class="tt-base" x="30" y="282" width="320" height="42" rx="9" />
+            <path class="tt-base-edge" d="M39 282 L341 282" />
+            <circle class="tt-base-dot" cx="60" cy="303" r="3" />
+            <circle class="tt-base-dot" cx="320" cy="303" r="3" />
+            <!-- 唱盘 -->
+            <circle class="tt-platter-shadow" cx="190" cy="168" r="123" />
+            <circle class="tt-platter" cx="190" cy="168" r="121" />
+            <circle class="tt-platter-edge" cx="190" cy="168" r="121" />
+            <circle class="tt-platter-ring" cx="190" cy="168" r="106" />
+            <!-- 唱片（GSAP 旋转） -->
+            <g class="tt-disc">
+              <circle class="tt-disc-fill" cx="190" cy="168" r="98" />
+              <circle class="tt-disc-rim" cx="190" cy="168" r="95" />
+              <circle class="tt-disc-rimdark" cx="190" cy="168" r="92.5" />
+              <circle class="tt-disc-groove" cx="190" cy="168" r="80" />
+              <circle class="tt-disc-groove" cx="190" cy="168" r="62" />
+              <circle class="tt-disc-groove" cx="190" cy="168" r="46" />
+              <path class="tt-disc-shade" d="M243 132 A 80 80 0 0 1 206 242" />
+              <path class="tt-disc-shine" d="M124 140 A 80 80 0 0 1 170 94" />
+              <path class="tt-disc-shine2" d="M116 168 A 78 78 0 0 1 138 104" />
+              <path class="tt-disc-scuff" d="M150 244 A 76 76 0 0 1 128 212" />
+              <circle class="tt-disc-label" cx="190" cy="168" r="33" :fill="mod.color" />
+              <circle class="tt-disc-lblring" cx="190" cy="168" r="33.6" />
+              <circle class="tt-disc-hole" cx="190" cy="168" r="37" />
+              <circle class="label-dot" cx="177" cy="146" r="1.6" />
+              <circle class="label-dot" cx="206" cy="191" r="1.6" />
+              <circle class="label-dot" cx="216" cy="160" r="1.6" />
+              <g class="tt-disc-glyph">
+                <g v-if="mod.num === 'I'" class="glyph">
+                  <line x1="190" y1="181" x2="190" y2="158" />
+                  <path d="M190 153.2 L185.8 160.2 L194.2 160.2 Z" />
+                </g>
+                <g v-else-if="mod.num === 'II'" class="glyph">
+                  <circle cx="190" cy="168" r="11" />
+                  <circle cx="190" cy="168" r="5.5" />
+                  <line x1="190" y1="168" x2="199.5" y2="162" />
+                  <circle class="glyph-dot" cx="199.5" cy="162" r="1.7" />
+                  <circle class="glyph-dot" cx="190" cy="168" r="2.2" />
+                </g>
+                <g v-else-if="mod.num === 'III'" class="glyph">
+                  <ellipse cx="184" cy="177" rx="3.4" ry="2.6" />
+                  <line x1="187.2" y1="175.6" x2="187.2" y2="160" />
+                  <path d="M187.2 160 C 191 161 192.5 164 192 167.5" />
+                </g>
+                <g v-else-if="mod.num === 'IV'" class="glyph">
+                  <rect x="179" y="159.5" width="22" height="21" rx="2.5" />
+                  <line x1="185.5" y1="163.5" x2="185.5" y2="176.5" />
+                  <line x1="194.5" y1="163.5" x2="194.5" y2="176.5" />
+                  <rect class="glyph-dot" x="188.2" y="156" width="3.6" height="8" rx="1.2" />
+                </g>
+                <g v-else-if="mod.num === 'V'" class="glyph">
+                  <circle cx="196" cy="159.5" r="4.5" />
+                  <path d="M178.5 180 L185.5 169.5 L189.5 174.5 L193.5 167 L201.5 180 Z" />
+                </g>
+                <g v-else class="glyph">
+                  <path d="M182 158.5 L198 158.5 A 3.5 3.5 0 0 1 201.5 162 L201.5 172 A 3.5 3.5 0 0 1 198 175.5 L192 175.5 L188.5 179 L189 175.5 L182 175.5 A 3.5 3.5 0 0 1 178.5 172 L178.5 162 A 3.5 3.5 0 0 1 182 158.5 Z" />
+                  <circle class="glyph-dot" cx="184" cy="167" r="1.3" />
+                  <circle class="glyph-dot" cx="190" cy="167" r="1.3" />
+                  <circle class="glyph-dot" cx="196" cy="167" r="1.3" />
+                </g>
+              </g>
+              <circle class="tt-disc-labelhole" cx="190" cy="168" r="5" />
+              <circle class="tt-disc-tick" cx="190" cy="252" r="3.5" />
+              <circle class="tt-disc-tick2" cx="114" cy="154" r="2.4" />
+              <circle class="tt-disc-tick3" cx="258" cy="188" r="2.8" />
+            </g>
+            <!-- 唱臂：抬起时离碟，落下时触碟（GSAP svgOrigin 352 70） -->
+            <g class="tt-arm">
+              <circle class="tt-pivot" cx="352" cy="70" r="10" />
+              <circle class="tt-pivot-core" cx="352" cy="70" r="3.5" />
+              <circle class="tt-counterweight" cx="341" cy="71" r="5.5" />
+              <g class="tt-arm-line">
+                <line x1="352" y1="70" x2="258" y2="76" />
+                <path class="tt-headshell" d="M256 70 L270 74 L270 92 L256 96 Z" />
+                <line class="tt-stylus" x1="263" y1="94" x2="262" y2="114" />
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="player-info glass" :class="{ 'is-switching': switching }">
+          <div class="p-head">
+            <span class="p-num">{{ mod.num }}</span>
+            <span class="p-en">{{ mod.en }}</span>
+            <span v-if="mod.badge" :class="['p-badge', { live: mod.live }]">{{ mod.badge }}</span>
+          </div>
+          <h3 class="p-title">{{ mod.title }}</h3>
+          <p class="p-desc">{{ mod.desc }}</p>
+          <ul class="p-items"><li v-for="it in mod.items" :key="it">{{ it }}</li></ul>
+          <div class="p-foot">
+            <span class="p-stat">{{ mod.stat }}</span>
+            <a class="p-cta" :href="withBase(mod.link)">进入卷宗 →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
