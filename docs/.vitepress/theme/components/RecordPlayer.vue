@@ -83,10 +83,7 @@ onBeforeUnmount(() => {
         <div class="turntable">
           <div class="tt-plinth"><div class="tt-plinth-top"></div></div>
           <div class="tt-platter" :class="{ spinning }" :style="spinStyle"><div class="tt-platter-rim"></div><div class="tt-platter-mat"></div></div>
-          <div class="tt-record" :class="{ spinning }" :style="[spinStyle, { '--mod-color': mod.color }]">
-            <div class="tt-record-grooves"></div>
-            <div class="tt-label" :style="{ background: mod.color }">{{ mod.num }}</div>
-          </div>
+          <div class="tt-record" :class="{ spinning }" :style="spinStyle"></div>
           <div class="tt-tonearm-base"></div>
           <div class="tt-tonearm" :class="{ 'is-dropped': dropped }">
             <div class="tt-arm-tube"></div>

@@ -21,6 +21,11 @@ function syncBodyClass() {
   root.classList.toggle("is-section", route.path !== "/" && route.path.endsWith("/"))
 }
 
+function goPortal() {
+  // VitePress client router would hijack <a href="/">; do a full page load instead
+  window.location.assign("/")
+}
+
 watch(() => route.path, () => syncBodyClass())
 onMounted(() => syncBodyClass())
 </script>
@@ -29,7 +34,7 @@ onMounted(() => syncBodyClass())
   <DefaultTheme.Layout>
     <template #nav-bar-content-before><Owl /></template>
     <template #nav-bar-content-after>
-      <a v-if="isPortalDeploy" class="portal-back" href="/" aria-label="返回登录门户">← 返回门户</a>
+      <a v-if="isPortalDeploy" class="portal-back" href="/" aria-label="返回登录门户" @click.prevent="goPortal">← 返回门户</a>
       <PaletteSwitch />
     </template>
     <template #layout-bottom>
