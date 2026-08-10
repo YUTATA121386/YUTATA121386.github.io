@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 86,
+      "trust": 78,
       "trend": "improving",
       "history": [
         {
@@ -178,6 +178,11 @@
           "date": "2026-08-09",
           "event": "冲突 13次",
           "trustDelta": -8
+        },
+        {
+          "date": "2026-08-10",
+          "event": "冲突 9次",
+          "trustDelta": -8
         }
       ],
       "summary": "关系良好"
@@ -255,7 +260,7 @@
       "summary": "关系一般"
     },
     "editor": {
-      "trust": 64,
+      "trust": 66,
       "trend": "improving",
       "history": [
         {
@@ -297,12 +302,17 @@
           "date": "2026-08-08",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-10",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 96,
+      "trust": 98,
       "trend": "improving",
       "history": [
         {
@@ -429,103 +439,17 @@
           "date": "2026-08-09",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-10",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-05",
-      "type": "标杆案例",
-      "title": "Fender’s first-ever performance pad controllers have arrived –  here’s everything you need to know a",
-      "source": "MusicTech",
-      "summary": "通过: Fender’s first-ever performance pad controllers have arrived –  here’s everythin",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-05",
-      "type": "标杆案例",
-      "title": "Moby praises the UK for inventing rave culture",
-      "source": "MusicTech",
-      "summary": "通过: Moby praises the UK for inventing rave culture",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-05",
-      "type": "标杆案例",
-      "title": "“We just don’t see a point of ever being on a label again”: M. Shadows on Avenged Sevenfold’s new ch",
-      "source": "MusicTech",
-      "summary": "通过: “We just don’t see a point of ever being on a label again”: M. Shadows on Avenge",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-05",
-      "type": "标杆案例",
-      "title": "German court says Suno’s AI training infringed copyright in landmark ruling",
-      "source": "MusicTech",
-      "summary": "通过: German court says Suno’s AI training infringed copyright in landmark ruling",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-05",
-      "type": "标杆案例",
-      "title": "Anukari is a unique modelling synth that dares to be different, but how does it fit into my workflow",
-      "source": "MusicTech",
-      "summary": "通过: Anukari is a unique modelling synth that dares to be different, but how does it ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-05",
-      "type": "每日统计",
-      "summary": "今日通过率: 60% (36/60)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-08-06",
-      "type": "被拒案例",
-      "title": "After Michigan Loss, AIPAC Weighs a Second Effort to Defeat El-Sayed - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为美国政治选举新闻，与音乐产业完全无关",
-      "summary": "被拒: After Michigan Loss, AIPAC Weighs a Second Effort to Defeat El-Sayed - The New Y",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为美国政治选举新闻，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-06",
-      "type": "被拒案例",
-      "title": "Trump, Hegseth clashed at Camp David over Iran missile depletion concerns - The Washington Post",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为美国政治军事新闻，与音乐产业完全无关",
-      "summary": "被拒: Trump, Hegseth clashed at Camp David over Iran missile depletion concerns - The ",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为美国政治军事新闻，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-06",
-      "type": "被拒案例",
-      "title": "Max Miller’s Democratic opponent doesn’t want to talk about Max Miller - politico.com",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为美国政治选举新闻，与音乐产业完全无关",
-      "summary": "被拒: Max Miller’s Democratic opponent doesn’t want to talk about Max Miller - politic",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为美国政治选举新闻，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-06",
-      "type": "被拒案例",
-      "title": "Fauci's HHS iPhone turned over to Senate investigators as contempt vote looms - Fox News",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为美国政治调查新闻，与音乐产业完全无关",
-      "summary": "被拒: Fauci's HHS iPhone turned over to Senate investigators as contempt vote looms - ",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为美国政治调查新闻，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-06",
-      "type": "被拒案例",
-      "title": "They lost their work permits and their legal status. Returning to Haiti is still ‘unimaginable’ - PB",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为海地移民新闻，与音乐产业完全无关",
-      "summary": "被拒: They lost their work permits and their legal status. Returning to Haiti is still",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为海地移民新闻，与音乐产业完全无关"
-    },
     {
       "date": "2026-08-06",
       "type": "标杆案例",
@@ -843,6 +767,97 @@
       "date": "2026-08-09",
       "type": "每日统计",
       "summary": "今日通过率: 59% (47/80)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-08-10",
+      "type": "被拒案例",
+      "title": "#刘宇宁一诺上线#| #腾讯音乐由你榜#｜#摩登兄弟[超话]#“那就做一阵晚风吧浪漫又自由听世间万物讲动人的情话” 《见山河》http://t.cn/AXCPsfWr《来我的岛》http://t.cn",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "Google News黑名单源污染，且为粉丝微博转发内容，非新闻素材",
+      "summary": "被拒: #刘宇宁一诺上线#| #腾讯音乐由你榜#｜#摩登兄弟[超话]#“那就做一阵晚风吧浪漫又自由听世间万物讲动人的情话” 《见山河》http://t.cn/AXCPs",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，且为粉丝微博转发内容，非新闻素材"
+    },
+    {
+      "date": "2026-08-10",
+      "type": "被拒案例",
+      "title": "新浪网· - sina.cn",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "Google News黑名单源污染，内容为空/无效",
+      "summary": "被拒: 新浪网· - sina.cn",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为空/无效"
+    },
+    {
+      "date": "2026-08-10",
+      "type": "被拒案例",
+      "title": "MD-一直走下去 - sina.cn",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "Google News黑名单源污染，内容为空/无效",
+      "summary": "被拒: MD-一直走下去 - sina.cn",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为空/无效"
+    },
+    {
+      "date": "2026-08-10",
+      "type": "被拒案例",
+      "title": "新浪网· - sina.cn",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "Google News黑名单源污染，内容为空/无效",
+      "summary": "被拒: 新浪网· - sina.cn",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为空/无效"
+    },
+    {
+      "date": "2026-08-10",
+      "type": "被拒案例",
+      "title": "#王俊凯首张同名专辑WJK#🩵#腾讯音乐由你榜# 落叶写满秋意，风一吹，便寄往远方，无人签收。@TFBOYS-王俊凯http://t.cn/AXSJEUFZ【三字王俊凯新歌王俊凯专辑wjk 王俊凯公",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "Google News黑名单源污染，且为粉丝微博转发内容，非新闻素材",
+      "summary": "被拒: #王俊凯首张同名专辑WJK#🩵#腾讯音乐由你榜# 落叶写满秋意，风一吹，便寄往远方，无人签收。@TFBOYS-王俊凯http://t.cn/AXSJEUFZ【",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，且为粉丝微博转发内容，非新闻素材"
+    },
+    {
+      "date": "2026-08-10",
+      "type": "标杆案例",
+      "title": "Taylor Swift Song ‘August’ Removed From Trump TikTok Video",
+      "source": "Variety Music",
+      "summary": "通过: Taylor Swift Song ‘August’ Removed From Trump TikTok Video",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-10",
+      "type": "标杆案例",
+      "title": "Rufus Wainwright, Kathleen Hanna, Yo La Tengo Celebrate the Radical Music of Yoko Ono",
+      "source": "Rolling Stone Music",
+      "summary": "通过: Rufus Wainwright, Kathleen Hanna, Yo La Tengo Celebrate the Radical Music of Yok",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-10",
+      "type": "标杆案例",
+      "title": "Inaugural L.A. Jazz Festival Canceled at Last Minute",
+      "source": "Rolling Stone Music",
+      "summary": "通过: Inaugural L.A. Jazz Festival Canceled at Last Minute",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-10",
+      "type": "标杆案例",
+      "title": "See Charli XCX Join the Strokes for ‘Take It or Leave It’ at Outside Lands",
+      "source": "Rolling Stone Music",
+      "summary": "通过: See Charli XCX Join the Strokes for ‘Take It or Leave It’ at Outside Lands",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-10",
+      "type": "标杆案例",
+      "title": "Drake Turns Kick Stream Into a 20-v-1 Dating Show, Warns Rap Rivals His ‘Pen Isn’t Dry’",
+      "source": "Rolling Stone Music",
+      "summary": "通过: Drake Turns Kick Stream Into a 20-v-1 Dating Show, Warns Rap Rivals His ‘Pen Isn",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-10",
+      "type": "每日统计",
+      "summary": "今日通过率: 44% (35/80)",
       "lesson": ""
     }
   ],

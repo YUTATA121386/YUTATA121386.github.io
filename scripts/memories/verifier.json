@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 86,
+      "trust": 78,
       "trend": "improving",
       "history": [
         {
@@ -178,6 +178,11 @@
           "date": "2026-08-09",
           "event": "冲突 13次",
           "trustDelta": -8
+        },
+        {
+          "date": "2026-08-10",
+          "event": "冲突 9次",
+          "trustDelta": -8
         }
       ],
       "summary": "关系良好"
@@ -227,7 +232,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 74,
+      "trust": 76,
       "trend": "stable",
       "history": [
         {
@@ -374,26 +379,17 @@
           "date": "2026-08-09",
           "event": "合作 5次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-10",
+          "event": "合作 5次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-19",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: 第二轮15条英文素材审核完成：通过8条，拒绝7条。通过率53%。",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-07-19",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 第一批20条素材审核完毕，通过19条，拒绝1条（RAW-2026-07-19-0016）。通过率95%。",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-07-19",
       "type": "重大挛折",
@@ -727,6 +723,20 @@
       "date": "2026-08-09",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 首批20条审核完成：通过19条，拒绝1条，通过率95%。未发现Google News黑名单源污染，质量优秀！",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-10",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 本批99条素材审核发现：前10条Billboard源素材质量合格，但从0011起出现Google News黑名单源污染。已触发三级复发强制暂停。",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-10",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 本批BARKS源10条素材质量优秀，全部通过。LuckyFes音乐节系列报道内容详实、时效性强，是高质量素材的范例。",
       "lesson": "",
       "impact": ""
     }

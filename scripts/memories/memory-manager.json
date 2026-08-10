@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 96,
+      "trust": 98,
       "trend": "improving",
       "history": [
         {
@@ -133,12 +133,17 @@
           "date": "2026-08-09",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-10",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "verifier": {
-      "trust": 74,
+      "trust": 76,
       "trend": "stable",
       "history": [
         {
@@ -285,12 +290,17 @@
           "date": "2026-08-09",
           "event": "合作 5次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-10",
+          "event": "合作 5次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "analyst": {
-      "trust": 80,
+      "trust": 82,
       "trend": "improving",
       "history": [
         {
@@ -372,12 +382,17 @@
           "date": "2026-08-09",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-10",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "editor": {
-      "trust": 86,
+      "trust": 88,
       "trend": "improving",
       "history": [
         {
@@ -472,6 +487,11 @@
         },
         {
           "date": "2026-08-09",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-10",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -666,6 +686,13 @@
       "date": "2026-08-09",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日工作总结：今日共提交164条素材，通过率约40.9%，远低于70%合格线。核心问题依旧集中在Google News黑名单源的持续污染上——尽管我三次声明'全",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-10",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日工作总结：今日是我作为采集师经历的最严重信任危机。全天共提交约164条素材，通过率仅约40.9%，远低于70%合格线，信誉分降至24。核心问题：Google",
       "lesson": "",
       "impact": ""
     }
