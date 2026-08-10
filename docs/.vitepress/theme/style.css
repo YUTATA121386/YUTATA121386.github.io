@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    YUTATA v2 - ShiGuang Acoustics Archive
    VitePress theme port of the approved visual mock (2026-07-21)
    Palette system: morning / noon / dusk / night
@@ -150,8 +150,10 @@ a:hover { color: var(--accent); }
 .bg { position: fixed; inset: 0; z-index: -1; overflow: hidden; background: var(--bg); transition: background .6s; }
 .bg > div { position: absolute; inset: 0; }
 .bg-wash { background: radial-gradient(55rem 38rem at 12% 8%, var(--blob1), transparent 62%), radial-gradient(48rem 34rem at 88% 15%, var(--blob2), transparent 60%), radial-gradient(70rem 50rem at 50% 105%, var(--blob3), transparent 62%); filter: blur(20px); transition: opacity .6s; }
-.bg-flute { background: repeating-linear-gradient(90deg, transparent 0 24px, var(--flute1) 24px 26px, transparent 26px 64px, var(--flute2) 64px 72px, transparent 72px 140px), repeating-linear-gradient(90deg, transparent 0 180px, var(--flute3) 180px 260px, transparent 260px 460px); filter: blur(1.5px); animation: fluteDrift 90s linear infinite alternate; }
-@keyframes fluteDrift { from { background-position: 0 0, 0 0; } to { background-position: 130px 0, -90px 0; } }
+.bg-glass { background-image: url("./art/glass.jpg"); background-size: cover; background-position: center; opacity: .5; mix-blend-mode: soft-light; filter: saturate(1.06); }
+:root[data-palette="noon"] .bg-glass { opacity: .4; }
+:root[data-palette="dusk"] .bg-glass { opacity: .5; }
+:root[data-palette="night"] .bg-glass { opacity: .3; mix-blend-mode: screen; }
 .bg-light { background: radial-gradient(36rem 26rem at var(--mx, 50%) var(--my, 28%), var(--glow), transparent 65%); }
 .bg-grain { opacity: .16; background-image: url("./art/paper.jpg"); background-size: 420px; mix-blend-mode: multiply; }
 :root[data-palette="night"] .bg-grain { opacity: .22; mix-blend-mode: screen; }
@@ -187,6 +189,11 @@ a:hover { color: var(--accent); }
 .VPSidebar { background: transparent; border-right: 1px solid var(--line-soft); width: var(--vp-sidebar-width) !important; padding-top: 1.5rem; }
 @media (min-width: 1440px) {
   .VPSidebar { padding-left: 32px !important; }
+  .VPContent.has-sidebar { padding-left: calc(var(--vp-sidebar-width) + 48px) !important; padding-right: 48px !important; }
+}
+@media (min-width: 960px) {
+  .VPDoc.has-sidebar .container { justify-content: flex-start !important; }
+  .VPDoc.has-sidebar .content-container { margin-left: 0 !important; }
 }
 .VPSidebar .group { padding: 0 1rem; margin-bottom: 1.4rem; }
 .VPSidebar .group .text { font-family: 'Noto Sans SC',sans-serif; font-size: .72rem; font-weight: 600; letter-spacing: .16em; color: var(--ink2); margin-bottom: .7rem; padding-left: .4rem; }
@@ -280,20 +287,30 @@ a:hover { color: var(--accent); }
 .tt-disc-groove { fill: none; stroke: rgba(255, 255, 255, .08); stroke-width: 1; }
 .tt-disc-label { transition: fill .35s; }
 .tt-disc-labelhole { fill: #2b2620; }
+.tt-disc-glyph {
+  transform-origin: 190px 168px;
+  transform-box: view-box;
+  animation: ttGlyphSpin var(--spin-dur, 4.5s) linear infinite reverse;
+}
+@keyframes ttGlyphSpin { to { transform: rotate(360deg); } }
+.tt-disc-glyph .glyph { fill: none; stroke: rgba(255, 255, 255, .92); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.tt-disc-glyph .glyph-dot { fill: rgba(255, 255, 255, .92); stroke: none; }
 .tt-disc-shine { fill: none; stroke: rgba(255, 255, 255, .34); stroke-width: 2.4; stroke-linecap: round; }
 .tt-disc-tick { fill: var(--gold-light); }
 .tt-arm {
-  transform: rotate(16deg);
+  transform: rotate(-30deg);
   transform-origin: 352px 70px;
   transform-box: view-box;
-  transition: transform .5s cubic-bezier(.45, 0, .3, 1);
+  transition: transform .55s cubic-bezier(.45, 0, .3, 1);
 }
-.tt-arm.is-dropped { animation: armDrop 1.5s cubic-bezier(.22, 1, .36, 1) forwards; }
+.tt-arm.is-dropped { animation: armDrop 2.3s cubic-bezier(.16, 1, .3, 1) forwards; }
 @keyframes armDrop {
-  0% { transform: rotate(16deg); }
-  68% { transform: rotate(-27.5deg); }
-  84% { transform: rotate(-24.5deg); }
-  100% { transform: rotate(-26deg); }
+  0% { transform: rotate(-30deg); animation-timing-function: cubic-bezier(.22, .9, .3, 1); }
+  30% { transform: rotate(-10deg); animation-timing-function: cubic-bezier(.45, 0, .55, 1); }
+  55% { transform: rotate(-2.6deg); animation-timing-function: cubic-bezier(.34, 1.35, .5, 1); }
+  74% { transform: rotate(.9deg); animation-timing-function: ease-out; }
+  85% { transform: rotate(-1.5deg); animation-timing-function: ease-in-out; }
+  100% { transform: rotate(0deg); }
 }
 .tt-pivot { fill: var(--gold-soft); stroke: var(--gold); stroke-width: 1.4; }
 .tt-pivot-core { fill: var(--gold); }
@@ -461,9 +478,9 @@ a:hover { color: var(--accent); }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .bg-flute { animation: none; }
-  .tt-disc, .live-dot { animation: none; }
-  .tt-arm.is-dropped { animation: none; transform: rotate(-26deg); }
+  .bg-glass { animation: none; }
+  .tt-disc, .tt-disc-glyph, .live-dot { animation: none; }
+  .tt-arm.is-dropped { animation: none; transform: rotate(0deg); }
   .cell, .mod-btn, .landing-card { transition: none; }
 }
 

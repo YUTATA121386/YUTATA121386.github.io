@@ -1,4 +1,4 @@
-﻿<script setup lang="ts">
+<script setup lang="ts">
 import { computed, onMounted, watch } from "vue"
 import { useRoute } from "vitepress"
 import DefaultTheme from "vitepress/theme"
@@ -32,7 +32,7 @@ onMounted(() => syncBodyClass())
 
 <template>
   <DefaultTheme.Layout>
-    <template #nav-bar-content-before><Owl /></template>
+    <template #nav-bar-title-after><Owl /></template>
     <template #nav-bar-content-after>
       <a v-if="isPortalDeploy" class="portal-back" href="/" aria-label="返回登录门户" @click.prevent="goPortal">← 返回门户</a>
       <PaletteSwitch />
@@ -40,7 +40,7 @@ onMounted(() => syncBodyClass())
     <template #layout-bottom>
       <div class="bg" aria-hidden="true">
         <div class="bg-wash"></div>
-        <div class="bg-flute"></div>
+        <div class="bg-glass"></div>
         <div class="bg-light"></div>
         <div class="bg-grain"></div>
       </div>

@@ -46,7 +46,7 @@ function selectModule(i: number) {
   // 抬起唱臂 → 换碟 → 缓缓落下
   dropped.value = false
   if (liftTimer) clearTimeout(liftTimer)
-  liftTimer = window.setTimeout(() => { dropped.value = true }, 620)
+  liftTimer = window.setTimeout(() => { dropped.value = true }, 650)
 }
 
 function startSlow() {
@@ -117,6 +117,40 @@ onBeforeUnmount(() => {
               <circle class="tt-disc-groove" cx="190" cy="168" r="46" />
               <circle class="tt-disc-label" cx="190" cy="168" :fill="mod.color" />
               <circle class="tt-disc-labelhole" cx="190" cy="168" r="5" />
+              <g class="tt-disc-glyph">
+                <g v-if="mod.num === 'I'" class="glyph">
+                  <line x1="190" y1="181" x2="190" y2="158" />
+                  <path d="M190 153.2 L185.8 160.2 L194.2 160.2 Z" />
+                </g>
+                <g v-else-if="mod.num === 'II'" class="glyph">
+                  <circle cx="190" cy="168" r="11" />
+                  <circle cx="190" cy="168" r="5.5" />
+                  <line x1="190" y1="168" x2="199.5" y2="162" />
+                  <circle class="glyph-dot" cx="199.5" cy="162" r="1.7" />
+                  <circle class="glyph-dot" cx="190" cy="168" r="2.2" />
+                </g>
+                <g v-else-if="mod.num === 'III'" class="glyph">
+                  <ellipse cx="184" cy="177" rx="3.4" ry="2.6" />
+                  <line x1="187.2" y1="175.6" x2="187.2" y2="160" />
+                  <path d="M187.2 160 C 191 161 192.5 164 192 167.5" />
+                </g>
+                <g v-else-if="mod.num === 'IV'" class="glyph">
+                  <rect x="179" y="159.5" width="22" height="21" rx="2.5" />
+                  <line x1="185.5" y1="163.5" x2="185.5" y2="176.5" />
+                  <line x1="194.5" y1="163.5" x2="194.5" y2="176.5" />
+                  <rect class="glyph-dot" x="188.2" y="156" width="3.6" height="8" rx="1.2" />
+                </g>
+                <g v-else-if="mod.num === 'V'" class="glyph">
+                  <circle cx="196" cy="159.5" r="4.5" />
+                  <path d="M178.5 180 L185.5 169.5 L189.5 174.5 L193.5 167 L201.5 180 Z" />
+                </g>
+                <g v-else class="glyph">
+                  <path d="M182 158.5 L198 158.5 A 3.5 3.5 0 0 1 201.5 162 L201.5 172 A 3.5 3.5 0 0 1 198 175.5 L192 175.5 L188.5 179 L189 175.5 L182 175.5 A 3.5 3.5 0 0 1 178.5 172 L178.5 162 A 3.5 3.5 0 0 1 182 158.5 Z" />
+                  <circle class="glyph-dot" cx="184" cy="167" r="1.3" />
+                  <circle class="glyph-dot" cx="190" cy="167" r="1.3" />
+                  <circle class="glyph-dot" cx="196" cy="167" r="1.3" />
+                </g>
+              </g>
               <path class="tt-disc-shine" d="M124 132 A 72 72 0 0 1 176 98" />
               <circle class="tt-disc-tick" cx="190" cy="252" r="3.5" />
             </g>
