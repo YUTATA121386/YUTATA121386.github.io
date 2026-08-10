@@ -49,34 +49,34 @@ onBeforeUnmount(() => {
 <template>
   <a ref="owlEl" class="owl" :href="withBase('/')" aria-label="拾光声学档案 · 返回首页">
     <svg class="owl-svg" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-      <!-- 海德薇雪鸮：金线 zine 风，耳羽 + 心形面盘 + 大黄眼黑瞳 + 黑喙 -->
-      <path class="owl-tuft" d="M13 7.5 L10.8 2.2 L16.5 5.8 Z" />
-      <path class="owl-tuft" d="M35 7.5 L37.2 2.2 L31.5 5.8 Z" />
-      <path class="owl-body" d="M24 5.5 C15.5 5.5 10 12.5 10 21 C10 31.5 15.5 41.5 24 41.5 C32.5 41.5 38 31.5 38 21 C38 12.5 32.5 5.5 24 5.5 Z" />
-      <path class="owl-face" d="M24 9.5 C19 9.5 14.5 13.5 14.5 18.5 C14.5 24 18.5 28.2 24 29.8 C29.5 28.2 33.5 24 33.5 18.5 C33.5 13.5 29 9.5 24 9.5 Z" />
-      <path class="owl-brow" d="M13.8 13.8 C15.2 12.5 17.2 12.2 18.6 12.8" />
-      <path class="owl-brow" d="M34.2 13.8 C32.8 12.5 30.8 12.2 29.4 12.8" />
-      <g class="eye" transform="translate(17.4 18.2)">
-        <circle class="eye-ring" r="5.6" />
+      <!-- 海德薇雪鸮：圆身白羽 + 收翅 + 面盘 + 黄眼黑瞳 + 黑喙 -->
+      <path class="owl-tuft" d="M13 6.5 L10.8 1.6 L16.4 4.9 Z" />
+      <path class="owl-tuft" d="M35 6.5 L37.2 1.6 L31.6 4.9 Z" />
+      <path class="owl-body" d="M24 5 C12.8 5 6.5 13.5 6.5 22 C6.5 32.5 13.2 42 24 42 C34.8 42 41.5 32.5 41.5 22 C41.5 13.5 35.2 5 24 5 Z" />
+      <path class="owl-face" d="M24 9 C18.6 9 13.8 13.7 13.8 19.1 C13.8 24.9 18.2 29.7 24 31.3 C29.8 29.7 34.2 24.9 34.2 19.1 C34.2 13.7 29.4 9 24 9 Z" />
+      <path class="owl-brow" d="M14 13.2 C15.4 11.9 17.3 11.6 18.7 12.2" />
+      <path class="owl-brow" d="M34 13.2 C32.6 11.9 30.7 11.6 29.3 12.2" />
+      <g class="eye" transform="translate(17.2 17.8)">
+        <circle class="eye-ring" r="4.2" />
         <g class="pupil">
-          <circle class="pupil-core" r="2.6" />
-          <circle class="pupil-glint" cx="1" cy="-1" r=".9" />
+          <circle class="pupil-core" r="2.2" />
+          <circle class="pupil-glint" cx=".9" cy="-.9" r=".75" />
         </g>
       </g>
-      <g class="eye" transform="translate(30.6 18.2)">
-        <circle class="eye-ring" r="5.6" />
+      <g class="eye" transform="translate(30.8 17.8)">
+        <circle class="eye-ring" r="4.2" />
         <g class="pupil">
-          <circle class="pupil-core" r="2.6" />
-          <circle class="pupil-glint" cx="1" cy="-1" r=".9" />
+          <circle class="pupil-core" r="2.2" />
+          <circle class="pupil-glint" cx=".9" cy="-.9" r=".75" />
         </g>
       </g>
-      <path class="owl-beak" d="M24 23.4 L26.2 25.8 C25.3 27.8 22.7 27.8 21.8 25.8 Z" />
-      <path class="owl-wing" d="M11.8 21.5 C9.2 26 9.6 31.5 13 35.8" />
-      <path class="owl-wing" d="M36.2 21.5 C38.8 26 38.4 31.5 35 35.8" />
-      <path class="owl-wing-in" d="M13.4 24.5 C11.8 27.8 12.4 31.6 14.9 34.4" />
-      <path class="owl-wing-in" d="M34.6 24.5 C36.2 27.8 35.6 31.6 33.1 34.4" />
-      <path class="owl-feather" d="M19 34.6 C20.8 36 23 36.8 25.2 36.4" />
-      <path class="owl-tail" d="M19.5 40.6 L18.5 44.2 M24 40.9 L24 44.6 M28.5 40.6 L29.5 44.2" />
+      <path class="owl-beak" d="M24 23.2 L25.6 25.2 C24.9 26.7 23.1 26.7 22.4 25.2 Z" />
+      <path class="owl-wing" d="M9.8 19.5 C6.4 24.6 6.8 32 10.4 36.2 C13.7 34.1 14.1 27.9 9.8 19.5 Z" />
+      <path class="owl-wing" d="M38.2 19.5 C41.6 24.6 41.2 32 37.6 36.2 C34.3 34.1 33.9 27.9 38.2 19.5 Z" />
+      <path class="owl-wing-in" d="M13.2 25 C11.7 28.3 12.3 32 14.7 34.8" />
+      <path class="owl-wing-in" d="M34.8 25 C36.3 28.3 35.7 32 33.3 34.8" />
+      <path class="owl-feather" d="M19.5 35.2 C21.2 36.6 23.4 37.3 25.5 36.9" />
+      <path class="owl-tail" d="M19.8 41.4 L18.8 44.6 M24 41.7 L24 45 M28.2 41.4 L29.2 44.6" />
     </svg>
   </a>
 </template>
@@ -171,13 +171,13 @@ onBeforeUnmount(() => {
 }
 [data-palette="dusk"] .owl .eye { animation: owl-blink 3.4s ease-in-out infinite alternate; }
 @keyframes owl-blink {
-  from { transform: translate(17.4px, 18.2px) scaleY(1); }
-  to { transform: translate(17.4px, 18.2px) scaleY(.92); }
+  from { transform: translate(17.2px, 17.8px) scaleY(1); }
+  to { transform: translate(17.2px, 17.8px) scaleY(.92); }
 }
 [data-palette="dusk"] .owl .eye:last-of-type { animation-name: owl-blink-r; }
 @keyframes owl-blink-r {
-  from { transform: translate(30.6px, 18.2px) scaleY(1); }
-  to { transform: translate(30.6px, 18.2px) scaleY(.92); }
+  from { transform: translate(30.8px, 17.8px) scaleY(1); }
+  to { transform: translate(30.8px, 17.8px) scaleY(.92); }
 }
 [data-palette="night"] .owl {
   --line: #d9b45c;
@@ -186,8 +186,8 @@ onBeforeUnmount(() => {
   --face: #faf6ea;
   --beak: #3b2f1f;
 }
-[data-palette="night"] .owl .eye { transform: translate(17.4px, 20.2px) scaleY(.45); }
-[data-palette="night"] .owl .eye:last-of-type { transform: translate(30.6px, 20.2px) scaleY(.45); }
+[data-palette="night"] .owl .eye { transform: translate(17.2px, 19.8px) scaleY(.45); }
+[data-palette="night"] .owl .eye:last-of-type { transform: translate(30.8px, 19.8px) scaleY(.45); }
 [data-palette="night"] .owl .eye-ring {
   animation: owl-glow 3.2s ease-in-out infinite;
 }
