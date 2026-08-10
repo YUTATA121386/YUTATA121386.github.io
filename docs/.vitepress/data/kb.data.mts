@@ -59,6 +59,48 @@ function headingsOf(file: string, max: number): string[] {
   return out
 }
 
+const TITLE_OVERRIDES: Record<string, string> = {
+  "rules/verification-rules": "核查规则",
+  "rules/collection-rules": "采集规则",
+  "rules/style-guide": "排版规范",
+  "rules/communication-rules": "通信规则",
+  "rules/quality_standards": "质量标准",
+  "rules/credit_score_system": "信誉分规则",
+  "rules/CHANGELOG": "规则变更日志",
+  "daily/keywords": "关键词覆盖",
+  "daily/knowledge-gap-report": "知识缺口报告",
+}
+
+function titleOf(dir: string, name: string, file: string): string {
+  const override = TITLE_OVERRIDES[dir + "/" + name]
+  if (override) return override
+  const text = fs.readFileSync(file, "utf-8")
+  const fm = text.match(/^---\r?\n([\s\S]*?)\r?\n---/)
+  let title = ""
+  if (fm) {
+    const m = fm[1].match(/^title:\s*(.+)$/m)
+    if (m) title = m[1].trim().replace(/^['"]|['"]$/g, "")
+  }
+  const hasCJK = /[\u4e00-\u9fa5]/.test(title)
+  const isSlug = /^[a-z0-9_\-]+$/i.test(title)
+  if (!title || (!hasCJK && isSlug)) {
+    const h1 = text.match(/^#\s+(.+)$/m)
+    const h2 = text.match(/^##\s+(.+)$/m)
+    const h = (h1 || h2)?.[1]
+    if (h) title = h
+  }
+  title = title.replace(/[#*`]/g, "").replace(/^[\s\-—|:：·>]+/, "").trim()
+  return title.slice(0, 28) || name
+}
+
+function dateOf(dir: string, name: string, file: string): string {
+  if (dir === "daily" && /^\d{4}-\d{2}-\d{2}$/.test(name)) return name
+  const head = fs.readFileSync(file, "utf-8").slice(0, 400)
+  const m = head.match(/^(?:updated|date):\s*(\d{4}-\d{2}-\d{2})/m)
+  if (m) return m[1]
+  return fs.statSync(file).mtime.toISOString().slice(0, 10)
+}
+
 export default defineLoader({
   watch: [
     "../../daily/*.md",
@@ -71,7 +113,7 @@ export default defineLoader({
   ],
   load(): VolumeStats {
     const dailyDates = mdIn("daily").map((f) => f.replace(/\.md$/, ""))
-    const latestDaily = dailyDates.length ? dailyDates[dailyDates.length - 1] : ""
+    const latestDaily = dailyDates.filter((d) => /^\d{4}-\d{2}-\d{2}$/.test(d)).pop() || ""
 
     const dailyPreview: Record<string, string[]> = {}
     for (const d of dailyDates) {
@@ -99,11 +141,9 @@ export default defineLoader({
         const p = path.join(full, f)
         const st = fs.statSync(p)
         const name = f.replace(/\.md$/, "")
-        let title = name
-        const head = fs.readFileSync(p, "utf-8").slice(0, 400)
-        const m = head.match(/^title:\s*(.+)$/m) || head.match(/^#\s+(.+)$/m)
-        if (m) title = m[1].trim().replace(/^[^\u4e00-\u9fa5a-zA-Z0-9]+/, "").replace(/[#*`]/g, "").slice(0, 24)
-        latestUpdates.push({ title, url: urlBase + name, date: st.mtime.toISOString().slice(0, 10) })
+        const title = titleOf(dir, name, p)
+        const date = dateOf(dir, name, p)
+        latestUpdates.push({ title, url: urlBase + name + ".html", date })
       }
     }
     latestUpdates.sort((a, b) => (a.date < b.date ? 1 : -1))

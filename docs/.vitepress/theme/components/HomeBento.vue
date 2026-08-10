@@ -2,11 +2,23 @@
 import { onBeforeUnmount, onMounted, ref } from "vue"
 import { withBase } from "vitepress"
 import { data } from "../../data/kb.data"
+import moodMorning from "../art/mood-morning.jpg"
+import moodNoon from "../art/mood-noon.jpg"
+import moodDusk from "../art/mood-dusk.jpg"
+import moodNight from "../art/mood-night.jpg"
 
 const time = ref("--:--:--")
 const dateStr = ref("")
 const period = ref("晨")
 const NAMES: Record<string, string> = { morning: "晨", noon: "午", dusk: "暮", night: "夜" }
+const MOOD: Record<string, string> = { morning: moodMorning, noon: moodNoon, dusk: moodDusk, night: moodNight }
+const moodSrc = ref<string>(MOOD.morning)
+let moodObserver: MutationObserver | undefined
+
+function syncMood() {
+  const p = document.documentElement.getAttribute("data-palette") || "morning"
+  moodSrc.value = MOOD[p] || MOOD.morning
+}
 let timer: number | undefined
 
 function tick() {
@@ -24,9 +36,13 @@ function tick() {
 onMounted(() => {
   tick()
   timer = window.setInterval(tick, 1000)
+  syncMood()
+  moodObserver = new MutationObserver(syncMood)
+  moodObserver.observe(document.documentElement, { attributes: true, attributeFilter: ["data-palette"] })
 })
 onBeforeUnmount(() => {
   if (timer) clearInterval(timer)
+  moodObserver?.disconnect()
 })
 </script>
 
@@ -35,6 +51,7 @@ onBeforeUnmount(() => {
     <div class="section-head"><span class="sh-cn">此刻</span><span class="sh-en">NOW PLAYING</span></div>
     <div class="bento-grid">
       <article class="cell cell-now glass">
+        <div class="mood-art" :style="{ backgroundImage: 'url(' + moodSrc + ')' }" aria-hidden="true"></div>
         <div class="now-clock">
           <span class="now-time">{{ time }}</span>
           <span class="now-date">{{ dateStr }}</span>

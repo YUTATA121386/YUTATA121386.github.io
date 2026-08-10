@@ -25,6 +25,7 @@ const MODULES: VolModule[] = [
 ]
 
 const current = ref(0)
+const spinning = true
 const dropped = ref(false)
 const switching = ref(false)
 const slow = ref(false)

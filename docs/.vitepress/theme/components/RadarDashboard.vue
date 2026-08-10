@@ -81,12 +81,12 @@ const activeItems = computed(() => (active.value ? data.dailyPreview[active.valu
         <ul v-if="activeItems.length" class="prev-items">
           <li v-for="it in activeItems" :key="it">{{ it }}</li>
         </ul>
-        <a v-if="active" class="prev-cta" :href="withBase('daily/' + active)">阅读完整日报 →</a>
+        <a v-if="active" class="prev-cta" :href="withBase('daily/' + active + '.html')">阅读完整日报 →</a>
       </div>
     </div>
 
     <div class="dash-quick">
-      <a class="landing-card glass" :href="withBase('daily/' + (data.latestDaily || ''))">
+      <a class="landing-card glass" :href="withBase('daily/' + (data.latestDaily || '') + '.html')">
         <h4>最新日报</h4><p>{{ data.latestDaily || '暂无' }} · 查看今日行业洞察</p>
       </a>
       <a class="landing-card glass" :href="withBase('logs/')"><h4>过程日志</h4><p>Agent 协作全记录 · 决策链路追踪</p></a>

@@ -8,6 +8,7 @@ import DotNav from "./components/DotNav.vue"
 import Feathers from "./components/Feathers.vue"
 
 const route = useRoute()
+const isPortalDeploy = import.meta.env.BASE_URL !== "/"
 
 const isArticle = computed(() => {
   const p = route.path
@@ -27,7 +28,10 @@ onMounted(() => syncBodyClass())
 <template>
   <DefaultTheme.Layout>
     <template #nav-bar-content-before><Owl /></template>
-    <template #nav-bar-content-after><PaletteSwitch /></template>
+    <template #nav-bar-content-after>
+      <a v-if="isPortalDeploy" class="portal-back" href="/" aria-label="返回登录门户">← 返回门户</a>
+      <PaletteSwitch />
+    </template>
     <template #layout-bottom>
       <div class="bg" aria-hidden="true">
         <div class="bg-wash"></div>
