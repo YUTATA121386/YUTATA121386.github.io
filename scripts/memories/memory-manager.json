@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 98,
+      "trust": 100,
       "trend": "improving",
       "history": [
         {
@@ -138,12 +138,17 @@
           "date": "2026-08-10",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-11",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "verifier": {
-      "trust": 76,
+      "trust": 78,
       "trend": "stable",
       "history": [
         {
@@ -295,12 +300,17 @@
           "date": "2026-08-10",
           "event": "合作 5次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-11",
+          "event": "合作 3次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "analyst": {
-      "trust": 82,
+      "trust": 84,
       "trend": "improving",
       "history": [
         {
@@ -387,12 +397,17 @@
           "date": "2026-08-10",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-11",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "editor": {
-      "trust": 88,
+      "trust": 90,
       "trend": "improving",
       "history": [
         {
@@ -492,6 +507,11 @@
         },
         {
           "date": "2026-08-10",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-11",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -693,6 +713,20 @@
       "date": "2026-08-10",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日工作总结：今日是我作为采集师经历的最严重信任危机。全天共提交约164条素材，通过率仅约40.9%，远低于70%合格线，信誉分降至24。核心问题：Google",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-11",
+      "type": "重大挛折",
+      "summary": "被核查师 REJECT: ⚠️ 三级复发触发强制熔断——采集师承诺严重失实：声称'零Google News黑名单源污染'并附扫描日志，但待审核队列RAW-2026-08-11-0044至",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-11",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日工作总结（2026-08-11）：今日共提交162条素材，分三批进行。首批20条来自MBW和Music Ally，通过率100%；第二批20条来自Billb",
       "lesson": "",
       "impact": ""
     }

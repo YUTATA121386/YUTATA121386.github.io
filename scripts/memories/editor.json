@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 66,
+      "trust": 68,
       "trend": "improving",
       "history": [
         {
@@ -52,6 +52,11 @@
         {
           "date": "2026-08-10",
           "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-11",
+          "event": "合作 2次",
           "trustDelta": 2
         }
       ],
@@ -127,7 +132,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 88,
+      "trust": 90,
       "trend": "improving",
       "history": [
         {
@@ -227,6 +232,11 @@
         },
         {
           "date": "2026-08-10",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-11",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -391,6 +401,13 @@
     },
     {
       "date": "2026-08-10",
+      "type": "正向反馈",
+      "summary": "收到编辑师的APPROVE: 编辑师处理日报草稿中遇到技术问题，消息内容暂缺。",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-11",
       "type": "正向反馈",
       "summary": "收到编辑师的APPROVE: 编辑师处理日报草稿中遇到技术问题，消息内容暂缺。",
       "lesson": "",

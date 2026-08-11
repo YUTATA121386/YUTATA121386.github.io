@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 78,
+      "trust": 84,
       "trend": "improving",
       "history": [
         {
@@ -183,6 +183,11 @@
           "date": "2026-08-10",
           "event": "冲突 9次",
           "trustDelta": -8
+        },
+        {
+          "date": "2026-08-11",
+          "event": "合作 9次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -260,7 +265,7 @@
       "summary": "关系一般"
     },
     "editor": {
-      "trust": 66,
+      "trust": 68,
       "trend": "improving",
       "history": [
         {
@@ -307,12 +312,17 @@
           "date": "2026-08-10",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-11",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 98,
+      "trust": 100,
       "trend": "improving",
       "history": [
         {
@@ -444,103 +454,17 @@
           "date": "2026-08-10",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-11",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-06",
-      "type": "标杆案例",
-      "title": "Job openings in music tech this month: In-house production, higher education, AAA games, and more",
-      "source": "MusicTech",
-      "summary": "通过: Job openings in music tech this month: In-house production, higher education, AA",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-06",
-      "type": "标杆案例",
-      "title": "Steinberg is celebrating 30 years of VST and 25 years of HALion with a raft of massive discounts and",
-      "source": "MusicTech",
-      "summary": "通过: Steinberg is celebrating 30 years of VST and 25 years of HALion with a raft of m",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-06",
-      "type": "标杆案例",
-      "title": "A quick guide to mastering your own music",
-      "source": "MusicTech",
-      "summary": "通过: A quick guide to mastering your own music",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-06",
-      "type": "标杆案例",
-      "title": "Fender’s first-ever performance pad controllers have arrived –  here’s everything you need to know a",
-      "source": "MusicTech",
-      "summary": "通过: Fender’s first-ever performance pad controllers have arrived –  here’s everythin",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-06",
-      "type": "标杆案例",
-      "title": "Moby praises the UK for inventing rave culture",
-      "source": "MusicTech",
-      "summary": "通过: Moby praises the UK for inventing rave culture",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-06",
-      "type": "每日统计",
-      "summary": "今日通过率: 62% (37/60)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-08-07",
-      "type": "被拒案例",
-      "title": "DeepSeek V4 Flash低价斩杀线背后：当梁文锋也卷不动算力账单（含实测） - 钛媒体",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染，内容为DeepSeek算力成本，与音乐产业完全无关",
-      "summary": "被拒: DeepSeek V4 Flash低价斩杀线背后：当梁文锋也卷不动算力账单（含实测） - 钛媒体",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为DeepSeek算力成本，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-07",
-      "type": "被拒案例",
-      "title": "涨停雷达：民爆一体化+资产注入预期+央企 保利联合触及涨停 - 同花顺财经",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染，内容为民爆概念股，与音乐产业完全无关",
-      "summary": "被拒: 涨停雷达：民爆一体化+资产注入预期+央企 保利联合触及涨停 - 同花顺财经",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为民爆概念股，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-07",
-      "type": "被拒案例",
-      "title": "半导体设备板块异动拉升 耐科装备涨停 - finance.eastmoney.com",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染，内容为半导体板块，与音乐产业完全无关",
-      "summary": "被拒: 半导体设备板块异动拉升 耐科装备涨停 - finance.eastmoney.com",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为半导体板块，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-07",
-      "type": "被拒案例",
-      "title": "8月7日股市避雷针 - 财联社",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染，内容为股市风险提示，与音乐产业完全无关",
-      "summary": "被拒: 8月7日股市避雷针 - 财联社",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为股市风险提示，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-07",
-      "type": "被拒案例",
-      "title": "我国首座抗17级台风风电平台投运 海上风电技术新突破 - military.china.com",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染，内容为风电平台投运，与音乐产业完全无关",
-      "summary": "被拒: 我国首座抗17级台风风电平台投运 海上风电技术新突破 - military.china.com",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为风电平台投运，与音乐产业完全无关"
-    },
     {
       "date": "2026-08-07",
       "type": "标杆案例",
@@ -859,6 +783,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 44% (35/80)",
       "lesson": ""
+    },
+    {
+      "date": "2026-08-11",
+      "type": "被拒案例",
+      "title": "A股四大股指集体低开，油气、贵金属、煤炭板块走高 - 第一财经",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染——A股股指内容与音乐产业完全无关",
+      "summary": "被拒: A股四大股指集体低开，油气、贵金属、煤炭板块走高 - 第一财经",
+      "lesson": "避免采集此类素材: Google News黑名单源污染——A股股指内容与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-11",
+      "type": "被拒案例",
+      "title": "暑期档热门影片来袭 概念股集体走强 - 搜狐网",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染——暑期档影视股内容与音乐产业完全无关",
+      "summary": "被拒: 暑期档热门影片来袭 概念股集体走强 - 搜狐网",
+      "lesson": "避免采集此类素材: Google News黑名单源污染——暑期档影视股内容与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-11",
+      "type": "被拒案例",
+      "title": "美股收盘：三大指数集体收跌；光通信概念重挫，Coherent跌超14%；存储、半导体多数下跌，海力士、美光科技齐跌，英特尔跌超4%；油金齐涨 - 21财经",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染——美股收盘内容与音乐产业完全无关",
+      "summary": "被拒: 美股收盘：三大指数集体收跌；光通信概念重挫，Coherent跌超14%；存储、半导体多数下跌，海力士、美光科技齐跌，英特尔跌超4%；油金齐涨 - 21财经",
+      "lesson": "避免采集此类素材: Google News黑名单源污染——美股收盘内容与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-11",
+      "type": "被拒案例",
+      "title": "MLCC概念，集体走强！3只新股大幅高开 - 东方财富",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染——MLCC概念股内容与音乐产业完全无关",
+      "summary": "被拒: MLCC概念，集体走强！3只新股大幅高开 - 东方财富",
+      "lesson": "避免采集此类素材: Google News黑名单源污染——MLCC概念股内容与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-11",
+      "type": "被拒案例",
+      "title": "创新药“中国首发”密集落地 新靶点、新机制、新疗法加速向中国集聚 - 东方财富",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染——创新药概念内容与音乐产业完全无关",
+      "summary": "被拒: 创新药“中国首发”密集落地 新靶点、新机制、新疗法加速向中国集聚 - 东方财富",
+      "lesson": "避免采集此类素材: Google News黑名单源污染——创新药概念内容与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-11",
+      "type": "标杆案例",
+      "title": "Time for an Intervention? Morrissey Abruptly Cancels Entire Vegas Residency Just One Week Before Kic",
+      "source": "Digital Music News",
+      "summary": "通过: Time for an Intervention? Morrissey Abruptly Cancels Entire Vegas Residency Just",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-11",
+      "type": "标杆案例",
+      "title": "Los Angeles Jazz Fest Abruptly Canceled — Organizers Cite ‘Significant, Unanticipated Last-Minute’ P",
+      "source": "Digital Music News",
+      "summary": "通过: Los Angeles Jazz Fest Abruptly Canceled — Organizers Cite ‘Significant, Unantici",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-11",
+      "type": "标杆案例",
+      "title": "Boy George Slams Bandcamp After Platform Removes ‘We Will Dance Again’ — But Why Did He Use AI?",
+      "source": "Digital Music News",
+      "summary": "通过: Boy George Slams Bandcamp After Platform Removes ‘We Will Dance Again’ — But Why",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-11",
+      "type": "标杆案例",
+      "title": "Daft Punk’s Thomas Bangalter explains why he’s “not interested in the creative use of AI”",
+      "source": "MusicTech",
+      "summary": "通过: Daft Punk’s Thomas Bangalter explains why he’s “not interested in the creative u",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-11",
+      "type": "标杆案例",
+      "title": "InMusic has allegedly shut down Native Instruments UK",
+      "source": "MusicTech",
+      "summary": "通过: InMusic has allegedly shut down Native Instruments UK",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-11",
+      "type": "每日统计",
+      "summary": "今日通过率: 68% (41/60)",
+      "lesson": "通过率良好，保持当前标准"
     }
   ],
   "selfReview": {
