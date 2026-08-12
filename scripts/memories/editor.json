@@ -58,6 +58,11 @@
           "date": "2026-08-11",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-12",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
@@ -132,7 +137,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 90,
+      "trust": 92,
       "trend": "improving",
       "history": [
         {
@@ -237,6 +242,11 @@
         },
         {
           "date": "2026-08-11",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-12",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -410,6 +420,13 @@
       "date": "2026-08-11",
       "type": "正向反馈",
       "summary": "收到编辑师的APPROVE: 编辑师处理日报草稿中遇到技术问题，消息内容暂缺。",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-12",
+      "type": "正向反馈",
+      "summary": "收到编辑师的APPROVE: 今日工作总结（2026-08-12）：完成第5轮日报编辑。今日50条已验证素材话题均衡性较昨日明显改善——商业合作（AEG×Creativeman）、现场演出（",
       "lesson": "",
       "impact": ""
     }

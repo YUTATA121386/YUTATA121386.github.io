@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 84,
+      "trust": 90,
       "trend": "improving",
       "history": [
         {
@@ -188,6 +188,11 @@
           "date": "2026-08-11",
           "event": "合作 9次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-08-12",
+          "event": "合作 9次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -237,7 +242,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 78,
+      "trust": 80,
       "trend": "stable",
       "history": [
         {
@@ -394,26 +399,17 @@
           "date": "2026-08-11",
           "event": "合作 3次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-12",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-19",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: 拒绝5条素材：RAW-0024, 0025, 0026, 0029, 0031, 0036。主要原因是与音乐行业核心无关。",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-07-19",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 首批20条素材审核完成，通过19条，拒绝1条（RAW-2026-07-19-0016）。通过率95%。",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-07-19",
       "type": "重大挛折",
@@ -745,6 +741,20 @@
     },
     {
       "date": "2026-08-11",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 首批20条素材全部通过，通过率100%！来源全部为白名单源（Music Business Worldwide + Music Ally），未发现Google N",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-12",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: ⚠️ 重大违规：待审核队列中发现10条Google News黑名单源污染素材（RAW-2026-08-12-0051至0060），且全部为财经/股票新闻，与音乐",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-12",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 首批20条素材全部通过，通过率100%！来源全部为白名单源（Music Business Worldwide + Music Ally），未发现Google N",
       "lesson": "",

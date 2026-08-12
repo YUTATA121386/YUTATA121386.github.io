@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 84,
+      "trust": 90,
       "trend": "improving",
       "history": [
         {
@@ -188,6 +188,11 @@
           "date": "2026-08-11",
           "event": "合作 9次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-08-12",
+          "event": "合作 9次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -260,6 +265,11 @@
           "date": "2026-08-06",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-08-12",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
@@ -317,6 +327,11 @@
           "date": "2026-08-11",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-12",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
@@ -459,103 +474,17 @@
           "date": "2026-08-11",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-12",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-07",
-      "type": "标杆案例",
-      "title": "Additional Licensing Deals Incoming? Suno Unveils ‘New Downloads Policy,’ Watermarking Support, ‘Cle",
-      "source": "Digital Music News",
-      "summary": "通过: Additional Licensing Deals Incoming? Suno Unveils ‘New Downloads Policy,’ Waterm",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-07",
-      "type": "标杆案例",
-      "title": "BTS Ticket Prices Plunge Below $20 Ahead of Boston Stadium Shows; $8 Nosebleeds Available Just Hours",
-      "source": "Digital Music News",
-      "summary": "通过: BTS Ticket Prices Plunge Below $20 Ahead of Boston Stadium Shows; $8 Nosebleeds ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-07",
-      "type": "标杆案例",
-      "title": "Anthropic Pushes for Partial Dismissal in ‘Concord II,’ Says No Direct Infringement Evidence Exists ",
-      "source": "Digital Music News",
-      "summary": "通过: Anthropic Pushes for Partial Dismissal in ‘Concord II,’ Says No Direct Infringem",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-07",
-      "type": "标杆案例",
-      "title": "What Is the ‘Gen Alpha Melody’? Trust Us, You’ve Heard It.",
-      "source": "Digital Music News",
-      "summary": "通过: What Is the ‘Gen Alpha Melody’? Trust Us, You’ve Heard It.",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-07",
-      "type": "标杆案例",
-      "title": "Federal Judge Rejects ‘Woulard v. Udio’ Dismissal Request, Transfers the Class Action Suit to New Yo",
-      "source": "Digital Music News",
-      "summary": "通过: Federal Judge Rejects ‘Woulard v. Udio’ Dismissal Request, Transfers the Class A",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-07",
-      "type": "每日统计",
-      "summary": "今日通过率: 75% (45/60)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-08-08",
-      "type": "被拒案例",
-      "title": "Why a prosecution of Anthony Fauci could face challenges in court - The Washington Post",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为Fauci法律诉讼新闻，与音乐行业完全无关",
-      "summary": "被拒: Why a prosecution of Anthony Fauci could face challenges in court - The Washingt",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为Fauci法律诉讼新闻，与音乐行业完全无关"
-    },
-    {
-      "date": "2026-08-08",
-      "type": "被拒案例",
-      "title": "Remains of 56 people found decomposing at Chicago funeral home - The Guardian",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为芝加哥殡仪馆社会新闻，与音乐行业完全无关",
-      "summary": "被拒: Remains of 56 people found decomposing at Chicago funeral home - The Guardian",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为芝加哥殡仪馆社会新闻，与音乐行业完全无关"
-    },
-    {
-      "date": "2026-08-08",
-      "type": "被拒案例",
-      "title": "U.S. Squeezes Cuba Even as It Searches for a New Regime Leader - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为美国与古巴关系国际新闻，与音乐行业完全无关",
-      "summary": "被拒: U.S. Squeezes Cuba Even as It Searches for a New Regime Leader - The New York Ti",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为美国与古巴关系国际新闻，与音乐行业完全无关"
-    },
-    {
-      "date": "2026-08-08",
-      "type": "被拒案例",
-      "title": "Today’s Wordle answer and hints for #1876 on August 08",
-      "source": "NME",
-      "reason": "NME源但内容为Wordle游戏答案，属于游戏娱乐内容，与音乐行业无直接关联，且'Wordle'已被列入黑名单关键词特征库",
-      "summary": "被拒: Today’s Wordle answer and hints for #1876 on August 08",
-      "lesson": "避免采集此类素材: NME源但内容为Wordle游戏答案，属于游戏娱乐内容，与音乐行业无直接关联，且'Wordle'已被列入黑名单关键词特征库"
-    },
-    {
-      "date": "2026-08-08",
-      "type": "被拒案例",
-      "title": "‘Connections’ answers and hints for today, August 08",
-      "source": "NME",
-      "reason": "NME源但内容为Connections游戏答案，属于游戏娱乐内容，与音乐行业无直接关联",
-      "summary": "被拒: ‘Connections’ answers and hints for today, August 08",
-      "lesson": "避免采集此类素材: NME源但内容为Connections游戏答案，属于游戏娱乐内容，与音乐行业无直接关联"
-    },
     {
       "date": "2026-08-08",
       "type": "标杆案例",
@@ -873,6 +802,97 @@
       "date": "2026-08-11",
       "type": "每日统计",
       "summary": "今日通过率: 68% (41/60)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-08-12",
+      "type": "被拒案例",
+      "title": "8月12日人民币兑美元中间价上调18个基点 - Sohu",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染，内容为人民币汇率，与音乐产业完全无关",
+      "summary": "被拒: 8月12日人民币兑美元中间价上调18个基点 - Sohu",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为人民币汇率，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-12",
+      "type": "被拒案例",
+      "title": "创新药板块短线拉升，百花医药触及涨停 - 新浪网",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染，内容为创新药板块，与音乐产业完全无关",
+      "summary": "被拒: 创新药板块短线拉升，百花医药触及涨停 - 新浪网",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为创新药板块，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-12",
+      "type": "被拒案例",
+      "title": "8月11日沪深两市融资余额较前一交易日增加12.99亿元 - 央广财经",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染，内容为两融余额数据，与音乐产业完全无关",
+      "summary": "被拒: 8月11日沪深两市融资余额较前一交易日增加12.99亿元 - 央广财经",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为两融余额数据，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-12",
+      "type": "被拒案例",
+      "title": "美股高开低走，存储芯片强势光通信企稳，SK海力士涨近5%，布油冲击90美元 - 东方财富",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染，内容为美股/存储芯片行情，与音乐产业完全无关",
+      "summary": "被拒: 美股高开低走，存储芯片强势光通信企稳，SK海力士涨近5%，布油冲击90美元 - 东方财富",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为美股/存储芯片行情，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-12",
+      "type": "被拒案例",
+      "title": "【开盘】A股三大股指集体小幅低开，算力租赁题材活跃 - 21财经",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染，内容为A股开盘行情，与音乐产业完全无关",
+      "summary": "被拒: 【开盘】A股三大股指集体小幅低开，算力租赁题材活跃 - 21财经",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为A股开盘行情，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-12",
+      "type": "标杆案例",
+      "title": "Indie-Focused Exceleration Music Inks Partnership with Christian Hip-Hop Label Reach Records",
+      "source": "Digital Music News",
+      "summary": "通过: Indie-Focused Exceleration Music Inks Partnership with Christian Hip-Hop Label R",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-12",
+      "type": "标杆案例",
+      "title": "Ibiza Considers a Ban on New Clubs and Venues to ‘Contain Existing Nightlife’",
+      "source": "Digital Music News",
+      "summary": "通过: Ibiza Considers a Ban on New Clubs and Venues to ‘Contain Existing Nightlife’",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-12",
+      "type": "标杆案例",
+      "title": "Irving Azoff’s GMR Resolves $14 Million Licensing Beef With Music Choice",
+      "source": "Digital Music News",
+      "summary": "通过: Irving Azoff’s GMR Resolves $14 Million Licensing Beef With Music Choice",
+      "lesson": "此类素材值得采集: 命中关键词 音乐版权"
+    },
+    {
+      "date": "2026-08-12",
+      "type": "标杆案例",
+      "title": "Last Week, Suno Promised To Clamp-Down on Slop by Limiting Downloads—Now, We Have Details",
+      "source": "Digital Music News",
+      "summary": "通过: Last Week, Suno Promised To Clamp-Down on Slop by Limiting Downloads—Now, We Hav",
+      "lesson": "此类素材值得采集: 命中关键词 AI音乐"
+    },
+    {
+      "date": "2026-08-12",
+      "type": "标杆案例",
+      "title": "Apple Fires Back Against Boomcloud 360’s Spatial Audio Patent Infringement Allegations in Declarator",
+      "source": "Digital Music News",
+      "summary": "通过: Apple Fires Back Against Boomcloud 360’s Spatial Audio Patent Infringement Alleg",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-12",
+      "type": "每日统计",
+      "summary": "今日通过率: 83% (50/60)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],

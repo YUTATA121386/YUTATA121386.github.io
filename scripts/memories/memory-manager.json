@@ -143,12 +143,17 @@
           "date": "2026-08-11",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-12",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "verifier": {
-      "trust": 78,
+      "trust": 80,
       "trend": "stable",
       "history": [
         {
@@ -305,12 +310,17 @@
           "date": "2026-08-11",
           "event": "合作 3次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-12",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "analyst": {
-      "trust": 84,
+      "trust": 86,
       "trend": "improving",
       "history": [
         {
@@ -402,12 +412,17 @@
           "date": "2026-08-11",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-12",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "editor": {
-      "trust": 90,
+      "trust": 92,
       "trend": "improving",
       "history": [
         {
@@ -512,6 +527,11 @@
         },
         {
           "date": "2026-08-11",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-12",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -727,6 +747,13 @@
       "date": "2026-08-11",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日工作总结（2026-08-11）：今日共提交162条素材，分三批进行。首批20条来自MBW和Music Ally，通过率100%；第二批20条来自Billb",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-12",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日工作总结：今日共采集184条素材，前两批共40条全部通过核查师审核，通过率100%，且覆盖音乐版权、AI音乐治理、现场演出、商业合作、财报数据、人事变动等多",
       "lesson": "",
       "impact": ""
     }
