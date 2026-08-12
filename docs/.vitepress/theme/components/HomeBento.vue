@@ -1,4 +1,4 @@
-﻿<script setup lang="ts">
+<script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from "vue"
 import { withBase } from "vitepress"
 import { data } from "../../data/kb.data"
@@ -13,6 +13,7 @@ const period = ref("晨")
 const NAMES: Record<string, string> = { morning: "晨", noon: "午", dusk: "暮", night: "夜" }
 const MOOD: Record<string, string> = { morning: moodMorning, noon: moodNoon, dusk: moodDusk, night: moodNight }
 const RECOMMENDED = [
+  { title: "22岁 | 2026年度OKR", url: "growth/okr-2026.html", meta: "上升清单" },
   { title: "第 07 周复盘 · 记忆管理师环评", url: "weekly/review-2026-W07.html", meta: "2026-08-09" },
   { title: "通信规则 · V2.2.33", url: "rules/communication-rules.html", meta: "规则体系" },
   { title: "东京大饭店 · 法餐与日式材料的可能性", url: "general/grand-maison-tokyo.html", meta: "通识积累" },
