@@ -110,6 +110,9 @@ export default defineLoader({
     "../../general/*.md",
     "../../music-product/*.md",
     "../../interview/*.md",
+    "../../growth/*.md",
+    "../../pilgrimage/*.md",
+    "../../user-period/*.md",
   ],
   load(): VolumeStats {
     const dailyDates = mdIn("daily").map((f) => f.replace(/\.md$/, ""))

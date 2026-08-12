@@ -1,4 +1,4 @@
-﻿import { defineConfig } from "vitepress"
+import { defineConfig } from "vitepress"
 
 const KB_BASE = process.env.KB_BASE || "/"
 
@@ -161,7 +161,7 @@ export default defineConfig({
           { text: "信誉分规则", link: "/rules/credit_score_system" },
         ]
       }],
-      "/growth/": [{ text: "上升清单", items: [{ text: "概述", link: "/growth/" }] }],
+      "/growth/": [{ text: "上升清单", items: [{ text: "概述", link: "/growth/" }, { text: "22岁 | 2026年度OKR", link: "/growth/okr-2026" }] }],
       "/pilgrimage/": [{ text: "圣地巡礼", items: [{ text: "概述", link: "/pilgrimage/" }] }],
     },
 
