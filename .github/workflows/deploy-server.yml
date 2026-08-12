@@ -31,6 +31,8 @@ jobs:
         env:
           KB_BASE: /kb/
         run: npx vitepress build docs --outDir /tmp/kb-dist
+      - name: Pack dist
+        run: tar -czf /tmp/kb-dist.tar.gz -C /tmp/kb-dist .
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -39,4 +41,4 @@ jobs:
       - name: Deploy to server
         env:
           ALI_PWD: ${{ secrets.ALI_PWD }}
-        run: python .github/scripts/deploy-kb.py /tmp/kb-dist
+        run: python .github/scripts/deploy-kb.py /tmp/kb-dist.tar.gz
