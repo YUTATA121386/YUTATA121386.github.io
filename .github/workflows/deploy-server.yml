@@ -9,6 +9,7 @@ on:
       - "package.json"
       - "package-lock.json"
       - ".github/workflows/deploy-server.yml"
+      - ".github/scripts/**"
   workflow_dispatch:
 
 permissions:
