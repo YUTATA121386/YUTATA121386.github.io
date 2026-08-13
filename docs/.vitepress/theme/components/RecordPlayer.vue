@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref } from "vue"
 import { withBase } from "vitepress"
-import gsap from "gsap"
 
 interface VolModule {
   num: string
@@ -27,101 +26,56 @@ const MODULES: VolModule[] = [
 
 const current = ref(0)
 const dropped = ref(false)
-const switching = ref(false)
 const slow = ref(false)
-const turntableEl = ref<HTMLElement | null>(null)
+const switching = ref(false)
+const deckEl = ref<HTMLElement | null>(null)
 
 let switchTimer: number | undefined
 let liftTimer: number | undefined
 let slowTimer: number | undefined
 let observer: IntersectionObserver | undefined
-let armTween: gsap.core.Tween | undefined
-let discTween: gsap.core.Tween | undefined
-let glyphTween: gsap.core.Tween | undefined
-
-const ARM_ORIGIN = "352 70"
-const DISC_ORIGIN = "190 168"
-const ARM_RAISED = 24
 const REDUCED = typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches
 
 const mod = computed(() => MODULES[current.value])
 
-function armEl() { return turntableEl.value ? turntableEl.value.querySelector(".tt-arm") : null }
-function discEl() { return turntableEl.value ? turntableEl.value.querySelector(".tt-disc") : null }
-function glyphEl() { return turntableEl.value ? turntableEl.value.querySelector(".tt-disc-glyph") : null }
-
-function liftArm() {
-  if (armTween) armTween.kill()
-  const el = armEl()
-  if (!el) return
-  if (REDUCED) { gsap.set(el, { rotation: ARM_RAISED, svgOrigin: ARM_ORIGIN }); return }
-  armTween = gsap.to(el, { rotation: ARM_RAISED, duration: 0.5, ease: "power2.out", svgOrigin: ARM_ORIGIN })
-}
-
-function dropArm(onDone?: () => void) {
-  if (armTween) armTween.kill()
-  const el = armEl()
-  if (!el) return
-  if (REDUCED) { gsap.set(el, { rotation: 0, svgOrigin: ARM_ORIGIN }); onDone?.(); return }
-  armTween = gsap.to(el, { rotation: 0, duration: 1.15, ease: "power2.inOut", svgOrigin: ARM_ORIGIN, onComplete: onDone })
-}
-
-function startSpin() {
-  const el = discEl()
-  if (!el) return
-  if (discTween) discTween.kill()
-  const dur = slow.value ? 12 : REDUCED ? 16 : 4.5
-  discTween = gsap.to(el, { rotation: -360, duration: dur, ease: "none", repeat: -1, svgOrigin: DISC_ORIGIN })
-  const g = glyphEl()
-  if (g) {
-    if (glyphTween) glyphTween.kill()
-    glyphTween = gsap.to(g, { rotation: 360, duration: dur, ease: "none", repeat: -1, svgOrigin: DISC_ORIGIN })
-  }
-}
+function raiseArm() { dropped.value = false }
+function dropArm() { dropped.value = true }
 
 function selectModule(i: number) {
   if (i === current.value) return
   current.value = i
   switching.value = true
   if (switchTimer) clearTimeout(switchTimer)
-  switchTimer = window.setTimeout(() => { switching.value = false }, 260)
-  liftArm()
+  switchTimer = window.setTimeout(() => { switching.value = false }, 300)
+  raiseArm()
   if (liftTimer) clearTimeout(liftTimer)
-  liftTimer = window.setTimeout(() => { dropArm() }, 650)
+  liftTimer = window.setTimeout(() => { dropArm() }, 700)
 }
 
 function startSlow() {
   if (slowTimer) clearTimeout(slowTimer)
-  slowTimer = window.setTimeout(() => {
-    slow.value = true
-    if (discTween && dropped.value) { discTween.timeScale(4.5 / 12); glyphTween?.timeScale(4.5 / 12) }
-  }, 1500)
+  slowTimer = window.setTimeout(() => { slow.value = true }, 1400)
 }
-
 function stopSlow() {
   if (slowTimer) clearTimeout(slowTimer)
   slow.value = false
-  if (discTween && dropped.value) { discTween.timeScale(1); glyphTween?.timeScale(1) }
 }
 
 onMounted(() => {
-  const a = armEl()
-  if (a) gsap.set(a, { rotation: REDUCED ? 0 : ARM_RAISED, svgOrigin: ARM_ORIGIN })
   if (REDUCED) {
     dropped.value = true
-    startSpin()
     return
   }
-  if (turntableEl.value && "IntersectionObserver" in window) {
+  if (deckEl.value && "IntersectionObserver" in window) {
     observer = new IntersectionObserver((entries) => {
       if (entries.some((e) => e.isIntersecting)) {
         observer?.disconnect()
-        dropArm(() => { dropped.value = true; startSpin() })
+        dropArm()
       }
     }, { threshold: 0.25 })
-    observer.observe(turntableEl.value)
+    observer.observe(deckEl.value)
   } else {
-    dropArm(() => { dropped.value = true; startSpin() })
+    dropArm()
   }
 })
 
@@ -130,11 +84,9 @@ onBeforeUnmount(() => {
   if (liftTimer) clearTimeout(liftTimer)
   if (slowTimer) clearTimeout(slowTimer)
   observer?.disconnect()
-  armTween?.kill()
-  discTween?.kill()
-  glyphTween?.kill()
 })
 </script>
+
 <template>
   <section class="player-section">
     <div class="section-head"><span class="sh-cn">六卷档案</span><span class="sh-en">SIX VOLUMES — 选择一卷，落下唱针</span></div>
@@ -153,95 +105,108 @@ onBeforeUnmount(() => {
         </button>
       </div>
       <div class="turntable-area" @mouseenter="startSlow" @mouseleave="stopSlow">
-        <div ref="turntableEl" class="turntable">
-          <svg class="tt-svg" viewBox="0 0 380 340" aria-hidden="true" focusable="false">
-            <defs>
-              <radialGradient id="tt-vinyl" cx="36%" cy="30%" r="80%">
-                <stop offset="0%" stop-color="#3d3328" />
-                <stop offset="42%" stop-color="#28211a" />
-                <stop offset="76%" stop-color="#181310" />
-                <stop offset="100%" stop-color="#0d0a08" />
-              </radialGradient>
-            </defs>
-            <!-- 底座 -->
-            <rect class="tt-base" x="30" y="282" width="320" height="42" rx="9" />
-            <path class="tt-base-edge" d="M39 282 L341 282" />
-            <circle class="tt-base-dot" cx="60" cy="303" r="3" />
-            <circle class="tt-base-dot" cx="320" cy="303" r="3" />
-            <!-- 唱盘 -->
-            <circle class="tt-platter-shadow" cx="190" cy="168" r="123" />
-            <circle class="tt-platter" cx="190" cy="168" r="121" />
-            <circle class="tt-platter-edge" cx="190" cy="168" r="121" />
-            <circle class="tt-platter-ring" cx="190" cy="168" r="106" />
-            <!-- 唱片（GSAP 旋转） -->
-            <g class="tt-disc">
-              <circle class="tt-disc-fill" cx="190" cy="168" r="98" />
-              <circle class="tt-disc-rim" cx="190" cy="168" r="95" />
-              <circle class="tt-disc-rimdark" cx="190" cy="168" r="92.5" />
-              <circle class="tt-disc-groove" cx="190" cy="168" r="80" />
-              <circle class="tt-disc-groove" cx="190" cy="168" r="62" />
-              <circle class="tt-disc-groove" cx="190" cy="168" r="46" />
-              <path class="tt-disc-shade" d="M243 132 A 80 80 0 0 1 206 242" />
-              <path class="tt-disc-shine" d="M124 140 A 80 80 0 0 1 170 94" />
-              <path class="tt-disc-shine2" d="M116 168 A 78 78 0 0 1 138 104" />
-              <path class="tt-disc-scuff" d="M150 244 A 76 76 0 0 1 128 212" />
-              <circle class="tt-disc-label" cx="190" cy="168" r="33" :fill="mod.color" />
-              <circle class="tt-disc-lblring" cx="190" cy="168" r="33.6" />
-              <circle class="tt-disc-hole" cx="190" cy="168" r="37" />
-              <circle class="label-dot" cx="177" cy="146" r="1.6" />
-              <circle class="label-dot" cx="206" cy="191" r="1.6" />
-              <circle class="label-dot" cx="216" cy="160" r="1.6" />
-              <g class="tt-disc-glyph">
-                <g v-if="mod.num === 'I'" class="glyph">
-                  <line x1="190" y1="181" x2="190" y2="158" />
-                  <path d="M190 153.2 L185.8 160.2 L194.2 160.2 Z" />
-                </g>
-                <g v-else-if="mod.num === 'II'" class="glyph">
-                  <circle cx="190" cy="168" r="11" />
-                  <circle cx="190" cy="168" r="5.5" />
-                  <line x1="190" y1="168" x2="199.5" y2="162" />
-                  <circle class="glyph-dot" cx="199.5" cy="162" r="1.7" />
-                  <circle class="glyph-dot" cx="190" cy="168" r="2.2" />
-                </g>
-                <g v-else-if="mod.num === 'III'" class="glyph">
-                  <ellipse cx="184" cy="177" rx="3.4" ry="2.6" />
-                  <line x1="187.2" y1="175.6" x2="187.2" y2="160" />
-                  <path d="M187.2 160 C 191 161 192.5 164 192 167.5" />
-                </g>
-                <g v-else-if="mod.num === 'IV'" class="glyph">
-                  <rect x="179" y="159.5" width="22" height="21" rx="2.5" />
-                  <line x1="185.5" y1="163.5" x2="185.5" y2="176.5" />
-                  <line x1="194.5" y1="163.5" x2="194.5" y2="176.5" />
-                  <rect class="glyph-dot" x="188.2" y="156" width="3.6" height="8" rx="1.2" />
-                </g>
-                <g v-else-if="mod.num === 'V'" class="glyph">
-                  <circle cx="196" cy="159.5" r="4.5" />
-                  <path d="M178.5 180 L185.5 169.5 L189.5 174.5 L193.5 167 L201.5 180 Z" />
-                </g>
-                <g v-else class="glyph">
-                  <path d="M182 158.5 L198 158.5 A 3.5 3.5 0 0 1 201.5 162 L201.5 172 A 3.5 3.5 0 0 1 198 175.5 L192 175.5 L188.5 179 L189 175.5 L182 175.5 A 3.5 3.5 0 0 1 178.5 172 L178.5 162 A 3.5 3.5 0 0 1 182 158.5 Z" />
-                  <circle class="glyph-dot" cx="184" cy="167" r="1.3" />
-                  <circle class="glyph-dot" cx="190" cy="167" r="1.3" />
-                  <circle class="glyph-dot" cx="196" cy="167" r="1.3" />
-                </g>
-              </g>
-              <circle class="tt-disc-labelhole" cx="190" cy="168" r="5" />
-              <circle class="tt-disc-tick" cx="190" cy="252" r="3.5" />
-              <circle class="tt-disc-tick2" cx="114" cy="154" r="2.4" />
-              <circle class="tt-disc-tick3" cx="258" cy="188" r="2.8" />
-            </g>
-            <!-- 唱臂：抬起时离碟，落下时触碟（GSAP svgOrigin 352 70） -->
-            <g class="tt-arm">
-              <circle class="tt-pivot" cx="352" cy="70" r="10" />
-              <circle class="tt-pivot-core" cx="352" cy="70" r="3.5" />
-              <circle class="tt-counterweight" cx="341" cy="71" r="5.5" />
-              <g class="tt-arm-line">
-                <line x1="352" y1="70" x2="258" y2="76" />
-                <path class="tt-headshell" d="M256 70 L270 74 L270 92 L256 96 Z" />
-                <line class="tt-stylus" x1="263" y1="94" x2="262" y2="114" />
-              </g>
-            </g>
-          </svg>
+        <div
+          ref="deckEl"
+          class="deck"
+          :class="{ 'is-dropped': dropped, 'is-slow': slow }"
+          role="img"
+          aria-label="六卷档案黑胶唱片机"
+        >
+          <div class="deck__scene">
+            <!-- 地面投影 -->
+            <div class="deck__shadow"></div>
+
+            <!-- 底座：顶面 + 6 层挤出厚度 -->
+            <div class="plinth">
+              <div v-for="n in 6" :key="n" class="plinth__layer" :style="{ '--i': n }"></div>
+              <div class="plinth__top"></div>
+            </div>
+
+            <!-- 转盘 -->
+            <div class="platter">
+              <div class="platter__mat"></div>
+              <i class="platter__ring"></i>
+            </div>
+
+            <!-- 唱片落影 -->
+            <div class="vinyl-cast"></div>
+
+            <!-- 黑胶唱片（自转层） -->
+            <div class="vinyl">
+              <div class="vinyl__spin">
+
+                <div class="vinyl__label">
+                  <div
+                    v-for="(m, i) in MODULES"
+                    :key="m.num"
+                    class="vol-art"
+                    :class="{ 'is-active': i === current }"
+                  >
+                    <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                      <g v-if="m.num === 'I'" class="glyph">
+                        <path d="M24 29 V19" />
+                        <path d="M24 15.2 L19.8 22.2 L28.2 22.2 Z" />
+                      </g>
+                      <g v-else-if="m.num === 'II'" class="glyph">
+                        <circle cx="24" cy="24" r="11" />
+                        <circle cx="24" cy="24" r="5.5" />
+                        <path d="M24 24 L33.5 18" />
+                        <circle class="glyph-dot" cx="33.5" cy="18" r="1.7" />
+                        <circle class="glyph-dot" cx="24" cy="24" r="2.2" />
+                      </g>
+                      <g v-else-if="m.num === 'III'" class="glyph">
+                        <ellipse cx="18" cy="33" rx="3.4" ry="2.6" />
+                        <path d="M21.2 31.6 L21.2 16" />
+                        <path d="M21.2 16 C25 17 26.5 20 26 23.5" />
+                      </g>
+                      <g v-else-if="m.num === 'IV'" class="glyph">
+                        <rect x="13" y="15.5" width="22" height="21" rx="2.5" />
+                        <path d="M19.5 19.5 V32.5" />
+                        <path d="M28.5 19.5 V32.5" />
+                        <rect class="glyph-dot" x="22.2" y="12" width="3.6" height="8" rx="1.2" />
+                      </g>
+                      <g v-else-if="m.num === 'V'" class="glyph">
+                        <circle cx="30" cy="15.5" r="4.5" />
+                        <path d="M12.5 36 L19.5 25.5 L23.5 30.5 L27.5 23 L35.5 36 Z" />
+                      </g>
+                      <g v-else class="glyph">
+                        <path d="M16 14.5 L32 14.5 A3.5 3.5 0 0 1 35.5 18 L35.5 28 A3.5 3.5 0 0 1 32 31.5 L26 31.5 L22.5 35 L23 31.5 L16 31.5 A3.5 3.5 0 0 1 12.5 28 L12.5 18 A3.5 3.5 0 0 1 16 14.5 Z" />
+                        <circle class="glyph-dot" cx="18" cy="23" r="1.3" />
+                        <circle class="glyph-dot" cx="24" cy="23" r="1.3" />
+                        <circle class="glyph-dot" cx="30" cy="23" r="1.3" />
+                      </g>
+                    </svg>
+                  </div>
+                  <span class="label-dot d1"></span>
+                  <span class="label-dot d2"></span>
+                  <span class="label-dot d3"></span>
+                </div>
+                <div class="vinyl__hole"><i></i></div>
+              </div>
+            </div>
+
+            <!-- 光楔：与唱片分离，不随自转 -->
+            <div class="vinyl__sheen"></div>
+
+            <!-- 唱臂：外层定位，内层落针 -->
+            <div class="tonearm">
+              <div class="tonearm__swing">
+                <div class="tonearm__wand"></div>
+                <div class="tonearm__headshell"></div>
+                <div class="tonearm__stylus"></div>
+                <div class="tonearm__counterweight"></div>
+              </div>
+              <div class="tonearm__pivot"></div>
+            </div>
+            <!-- 针尖接触投影：落在唱片表面，仅落针后可见 -->
+            <div class="tonearm__cast"></div>
+
+            <!-- 面板点缀 -->
+            <div class="deck__knob knob-1"></div>
+            <div class="deck__knob knob-2"></div>
+            <div class="deck__led led-1"></div>
+            <div class="deck__led led-2"></div>
+          </div>
         </div>
         <div class="player-info glass" :class="{ 'is-switching': switching }">
           <div class="p-head">

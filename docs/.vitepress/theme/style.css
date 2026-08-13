@@ -295,50 +295,292 @@ a:hover { color: var(--accent); }
 .mod-badge { margin-left: auto; font-size: .58rem; letter-spacing: .1em; padding: .25em .7em; border-radius: 999px; border: 1px solid var(--glass-brd); color: var(--ink3); }
 .mod-badge.live { color: var(--live); border-color: rgba(192, 57, 47, .3); }
 .turntable-area { display: flex; flex-direction: column; align-items: center; gap: 1.8rem; }
-.turntable { position: relative; width: min(100%, 380px); aspect-ratio: 380 / 340; container-type: inline-size; will-change: transform; }
-.tt-svg { width: 100%; height: 100%; display: block; }
+/* ---------- 黑胶唱片机：HTML 分层伪 3D 场景 ---------- */
+.deck {
+  position: relative;
+  width: 420px;
+  height: 360px;
+  perspective: 1400px;
+  perspective-origin: 50% 28%;
+  /* 默认材质 = 晨（米纸水彩） */
+  --dk-top: #f4eee1; --dk-top-hi: #fbf6ea; --dk-top-lo: #e9dfc8; --dk-top-wash: rgba(214,196,160,.30);
+  --dk-fascia: #e3d7be; --dk-waist: #d9c9a6;
+  --dk-platter: #d8cdb4; --dk-platter-hi: #e6dcc5; --dk-platter-lo: #b9ac8e; --dk-band: rgba(255,255,255,.35);
+  --dk-mat: #c9bc9e;
+  --dk-vinyl-hi: #3a342c; --dk-vinyl: #2a2724; --dk-vinyl-lo: #1d1915;
+  --dk-groove: rgba(255,255,255,.045); --dk-groove2: rgba(0,0,0,.30);
+  --dk-sheen: rgba(255,255,255,.09);
+  --dk-label: #efe6d2; --dk-art: #c07a3e;
+  --dk-m1: #6e5a2e; --dk-m2: #d9b96a; --dk-m3: #f6e7b4; --dk-m4: #c9a44f; --dk-m5: #5c4a24;
+  --dk-knob1: #8a7340; --dk-knob2: #e8cf8e; --dk-knob3: #6b5836; --dk-knob4: #d9b96a;
+  --dk-led: #c07a3e; --dk-shadow: rgba(90,70,40,.25);
+}
+.deck__scene {
+  position: absolute; inset: 0;
+  transform-style: preserve-3d;
+  transform: translateY(56px) rotateX(58deg) rotate(-5deg);
+}
+/* 材质切换过渡：只走颜色/投影/滤镜，绝不碰 transform */
+.plinth__top, .plinth__layer, .platter, .platter__mat, .platter__ring,
+.vinyl, .vinyl__label, .vinyl-cast, .deck__shadow,
+.tonearm__wand, .tonearm__headshell, .tonearm__pivot, .deck__knob, .deck__led {
+  transition: background-color .6s, box-shadow .6s, filter .6s;
+}
 
-/* zine 线稿风唱片机：细金线 + 做旧纸色 */
-.tt-base { fill: var(--paper); stroke: var(--line); stroke-width: 1.2; }
-.tt-base-edge { fill: none; stroke: var(--gold-light); stroke-width: 1.4; stroke-linecap: round; }
-.tt-base-dot { fill: var(--ink-faint); }
-.tt-platter { fill: none; stroke: var(--line); stroke-width: 1.4; }
-.tt-platter-shadow { fill: rgba(24, 18, 12, .22); }
-.tt-platter-edge { fill: none; stroke: rgba(0, 0, 0, .18); stroke-width: 1.5; }
-.tt-platter-ring { fill: none; stroke: var(--tea-light); stroke-width: 1; opacity: .8; }
-.tt-disc {
-  will-change: transform;
+/* 地面投影 */
+.deck__shadow {
+  position: absolute; left: 26px; top: 310px; width: 368px; height: 56px;
+  border-radius: 50%;
+  transform: translateZ(-14px);
+  background: var(--dk-shadow);
+  filter: blur(16px);
 }
-.tt-disc-fill { fill: url(#tt-vinyl); }
-.tt-disc-rim { fill: none; stroke: rgba(255, 255, 255, .16); stroke-width: 1; }
-.tt-disc-rimdark { fill: none; stroke: rgba(0, 0, 0, .38); stroke-width: 1.6; }
-.tt-disc-groove { fill: none; stroke: rgba(255, 255, 255, .08); stroke-width: 1; }
-.tt-disc-label { transition: fill .35s; }
-.tt-disc-labelhole { fill: #211d16; }
-.tt-disc-lblring { fill: none; stroke: rgba(255,255,255,.26); stroke-width: 1; }
-.tt-disc-hole { fill: none; stroke: rgba(255,255,255,.18); stroke-width: 1; }
-.tt-disc-glyph {
-  will-change: transform;
+
+/* 底座：顶面 + 6 层挤出 */
+.plinth { position: absolute; inset: 0; }
+.plinth__layer {
+  position: absolute; inset: 0;
+  border-radius: 16px;
+  background: var(--dk-fascia);
+  transform: translateZ(calc(var(--i, 1) * -2.4px));
 }
-.tt-disc-glyph .glyph { fill: none; stroke: rgba(255, 255, 255, .92); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.tt-disc-glyph .glyph-dot { fill: rgba(255, 255, 255, .92); stroke: none; }
-.tt-disc .label-dot { fill: rgba(0, 0, 0, .3); }
-.tt-disc-shine { fill: none; stroke: rgba(255, 255, 255, .4); stroke-width: 2.6; stroke-linecap: round; }
-.tt-disc-shine2 { fill: none; stroke: rgba(255, 255, 255, .13); stroke-width: 2; stroke-linecap: round; }
-.tt-disc-shade { fill: none; stroke: rgba(0, 0, 0, .34); stroke-width: 2.2; stroke-linecap: round; }
-.tt-disc-scuff { fill: none; stroke: rgba(255, 255, 255, .12); stroke-width: 1.6; stroke-linecap: round; }
-.tt-disc-tick { fill: var(--gold-light); }
-.tt-disc-tick2 { fill: rgba(255, 255, 255, .5); }
-.tt-disc-tick3 { fill: var(--gold-light); opacity: .8; }
-.tt-arm {
-  will-change: transform;
+.plinth__layer:nth-child(2) { inset: 2px; background: var(--dk-waist); }
+.plinth__top {
+  position: absolute; inset: 0;
+  border-radius: 16px;
+  background:
+    radial-gradient(120% 90% at 30% 18%, var(--dk-top-wash), transparent 62%),
+    linear-gradient(158deg, var(--dk-top-hi), var(--dk-top) 52%, var(--dk-top-lo));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10);
 }
-.tt-pivot { fill: var(--gold-soft); stroke: var(--gold); stroke-width: 1.4; }
-.tt-pivot-core { fill: var(--gold); }
-.tt-counterweight { fill: var(--ink-soft); }
-.tt-arm-line { stroke: var(--ink-soft); stroke-width: 4.5; stroke-linecap: round; }
-.tt-headshell { fill: var(--ink-soft); }
-.tt-stylus { stroke: var(--gold); stroke-width: 1.8; stroke-linecap: round; }
+
+/* 转盘 + 垫 */
+.platter {
+  position: absolute; left: 76px; top: 42px; width: 268px; height: 268px;
+  border-radius: 50%;
+  transform: translateZ(14px);
+  background: radial-gradient(circle at 50% 38%, var(--dk-platter-hi) 0%, var(--dk-platter) 62%, var(--dk-platter-lo) 100%);
+  box-shadow: inset 0 3px 10px rgba(0,0,0,.45), inset 0 -2px 6px rgba(0,0,0,.35), 0 1px 0 rgba(255,255,255,.05);
+}
+.platter__mat {
+  position: absolute; inset: 5px; border-radius: 50%;
+  background: var(--dk-mat);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.06), inset 0 2px 6px rgba(0,0,0,.5);
+}
+.platter__ring { position: absolute; inset: 0; border-radius: 50%; box-shadow: inset 0 0 0 2px var(--dk-band); }
+
+/* 唱片落影 */
+.vinyl-cast {
+  position: absolute; left: 87px; top: 53px; width: 258px; height: 258px;
+  border-radius: 50%;
+  transform: translateZ(15.5px);
+  background: rgba(0,0,0,.30);
+  filter: blur(7px);
+}
+
+/* 黑胶唱片 */
+.vinyl {
+  position: absolute; left: 84px; top: 50px; width: 252px; height: 252px;
+  border-radius: 50%;
+  transform: translateZ(22px);
+  background: radial-gradient(circle at 50% 42%, var(--dk-vinyl-hi) 0%, var(--dk-vinyl) 55%, var(--dk-vinyl-lo) 100%);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.07), inset 0 2px 3px rgba(255,255,255,.10), inset 0 -4px 8px rgba(0,0,0,.55);
+}
+.vinyl__spin {
+  position: absolute; inset: 0; border-radius: 50%; overflow: hidden;
+  animation: deck-spin 1.8s linear infinite;
+  background:
+    radial-gradient(circle at 50% 50%,
+      transparent 0 61%, rgba(255,255,255,.05) 61.2% 61.6%, transparent 61.8%,
+      transparent 0 74%, rgba(255,255,255,.05) 74.2% 74.6%, transparent 74.8%),
+    repeating-radial-gradient(circle at 50% 50%, var(--dk-groove) 0 1px, transparent 1px 3px),
+    repeating-radial-gradient(circle at 50% 50%, var(--dk-groove2) 0 1px, transparent 1px 4px);
+}
+@keyframes deck-spin { to { transform: rotate(360deg); } }
+.deck:not(.is-dropped) .vinyl__spin { animation-play-state: paused; }
+.deck.is-slow .vinyl__spin { animation-duration: 14s; }
+
+/* 唱片标签（双缓冲切换，随盘自转） */
+.vinyl__label {
+  position: absolute; left: 82px; top: 82px; width: 88px; height: 88px;
+  border-radius: 50%; overflow: hidden;
+  background: var(--dk-label);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.14), inset 0 2px 6px rgba(0,0,0,.18);
+}
+.vol-art {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--dk-art);
+  clip-path: circle(0% at 50% 50%);
+  opacity: 0;
+  transition: clip-path .48s cubic-bezier(.25,.8,.3,1), opacity .24s;
+}
+.vol-art.is-active { clip-path: circle(75% at 50% 50%); opacity: 1; }
+.vol-art svg { width: 60%; height: 60%; display: block; }
+.vol-art .glyph { fill: none; stroke: currentColor; stroke-width: 2.3; stroke-linecap: round; stroke-linejoin: round; }
+.vol-art .glyph-dot { fill: currentColor; stroke: none; }
+.label-dot { position: absolute; width: 3px; height: 3px; border-radius: 50%; background: rgba(0,0,0,.25); }
+.label-dot.d1 { left: 16px; top: 13px; }
+.label-dot.d2 { left: 65px; top: 61px; }
+.label-dot.d3 { left: 71px; top: 22px; }
+
+/* 中心孔：独立置顶，不参与切换 */
+.vinyl__hole {
+  position: absolute; left: 120px; top: 120px; width: 12px; height: 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 38% 34%, #3a3a3a, #0c0c0c 52%, #050505 100%);
+  box-shadow: 0 0 0 1px rgba(255,255,255,.20), inset 0 1px 1px rgba(0,0,0,.85);
+}
+
+/* 光楔：光源固定，不随盘转 */
+.vinyl__sheen {
+  position: absolute; left: 84px; top: 50px; width: 252px; height: 252px;
+  border-radius: 50%;
+  transform: translateZ(23px);
+  pointer-events: none;
+  background: conic-gradient(from 200deg at 50% 50%,
+    transparent 0deg, var(--dk-sheen) 14deg, transparent 38deg,
+    transparent 172deg, var(--dk-sheen) 196deg, transparent 222deg);
+}
+
+/* 唱臂：外层定位，内层落针 */
+.tonearm {
+  position: absolute; left: 352px; top: 72px; width: 0; height: 0;
+  transform: translateZ(26px);
+}
+.tonearm__swing {
+  position: absolute; width: 0; height: 0;
+  transform-origin: 0 0;
+  transform: rotate(0deg);
+}
+.deck__scene .tonearm__swing { transition: transform .55s cubic-bezier(.45, .05, .55, .95); }
+.deck:not(.is-dropped) .tonearm__swing { transform: rotate(12deg); }
+.tonearm__wand {
+  position: absolute; left: 0; top: -4.5px; width: 88px; height: 9px;
+  transform: rotate(143.7deg); transform-origin: 0 50%;
+  border-radius: 5px;
+  background: linear-gradient(180deg, var(--dk-m1) 0%, var(--dk-m2) 32%, var(--dk-m3) 48%, var(--dk-m4) 60%, var(--dk-m5) 100%);
+  box-shadow: 0 2px 3px rgba(0,0,0,.35);
+}
+.tonearm__wand::before {
+  content: ""; position: absolute; left: 4px; right: 4px; top: 1.5px; height: 1px;
+  background: rgba(255,255,255,.55); filter: blur(.4px);
+}
+.tonearm__headshell {
+  position: absolute; left: 60px; top: -10px; width: 34px; height: 20px;
+  transform: rotate(143.7deg); transform-origin: 0 50%;
+  border-radius: 6px;
+  background: linear-gradient(180deg, var(--dk-m2), var(--dk-m4));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.4), 0 2px 4px rgba(0,0,0,.3);
+}
+.tonearm__stylus {
+  position: absolute; left: -79px; top: 55px; width: 3px; height: 26px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--dk-m3), var(--dk-m5));
+  box-shadow: 0 1px 2px rgba(0,0,0,.4);
+}
+.tonearm__counterweight {
+  position: absolute; left: 0; top: -4px; width: 22px; height: 8px;
+  transform: rotate(323.7deg); transform-origin: 0 50%;
+  border-radius: 4px;
+  background: linear-gradient(180deg, var(--dk-m2), var(--dk-m4));
+  box-shadow: 0 1px 2px rgba(0,0,0,.35);
+}
+.tonearm__pivot {
+  position: absolute; left: -11px; top: -11px; width: 22px; height: 22px;
+  border-radius: 50%;
+  background: conic-gradient(from 30deg, var(--dk-knob1), var(--dk-knob2), var(--dk-knob3), var(--dk-knob4), var(--dk-knob1));
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.45), inset 0 -2px 4px rgba(0,0,0,.5), 0 3px 6px rgba(0,0,0,.4);
+}
+/* 针尖接触投影：场景层（比唱片高一层、比唱臂低一层），落针后淡入 */
+.tonearm__cast {
+  position: absolute; left: 263px; top: 146px; width: 24px; height: 10px;
+  border-radius: 50%;
+  transform: translateZ(23px);
+  background: radial-gradient(ellipse at 50% 50%, rgba(0,0,0,.42), rgba(0,0,0,.18) 55%, transparent 72%);
+  filter: blur(1.2px);
+  opacity: 0;
+  transition: opacity .5s;
+}
+.deck.is-dropped .tonearm__cast { opacity: 1; }
+
+/* 面板点缀 */
+.deck__knob {
+  position: absolute; width: 18px; height: 18px; border-radius: 50%;
+  transform: translateZ(1px);
+  background: conic-gradient(from 30deg, var(--dk-knob1), var(--dk-knob2), var(--dk-knob3), var(--dk-knob4), var(--dk-knob1));
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.45), inset 0 -2px 4px rgba(0,0,0,.5), 0 3px 6px rgba(0,0,0,.4);
+}
+.deck__knob.knob-1 { left: 58px; top: 320px; }
+.deck__knob.knob-2 { left: 92px; top: 320px; }
+.deck__led {
+  position: absolute; width: 6px; height: 6px; border-radius: 50%;
+  transform: translateZ(1px);
+  background: var(--dk-led);
+  box-shadow: 0 0 8px var(--dk-led), 0 1px 2px rgba(0,0,0,.45);
+}
+.deck__led.led-1 { left: 344px; top: 326px; }
+.deck__led.led-2 { left: 360px; top: 326px; }
+
+/* ---------- 四时段材质映射 ---------- */
+:root[data-palette="noon"] .deck {
+  --dk-top: #263646; --dk-top-hi: #33475c; --dk-top-lo: #1a2836; --dk-top-wash: rgba(255,255,255,.05);
+  --dk-fascia: #141e29; --dk-waist: #3a4e63;
+  --dk-platter: #10161d; --dk-platter-hi: #1c252e; --dk-platter-lo: #090c10; --dk-band: rgba(140,180,210,.25);
+  --dk-mat: #0b0f14;
+  --dk-vinyl-hi: #1d1e22; --dk-vinyl: #131316; --dk-vinyl-lo: #0b0b0d;
+  --dk-groove: rgba(255,255,255,.05); --dk-groove2: rgba(0,0,0,.30);
+  --dk-sheen: rgba(255,255,255,.10);
+  --dk-label: #1d2a38; --dk-art: #8fb3d9;
+  --dk-m1: #5f646b; --dk-m2: #c9ced6; --dk-m3: #f4f6f8; --dk-m4: #aab0b8; --dk-m5: #5f646b;
+  --dk-knob1: #5f646b; --dk-knob2: #d7dce2; --dk-knob3: #8a929a; --dk-knob4: #c9ced6;
+  --dk-led: #4e8fc7; --dk-shadow: rgba(5,10,18,.45);
+}
+:root[data-palette="noon"] .plinth__top {
+  background-image:
+    radial-gradient(120% 90% at 30% 18%, var(--dk-top-wash), transparent 62%),
+    repeating-linear-gradient(94deg, rgba(255,255,255,.03) 0 1px, transparent 1px 3px),
+    linear-gradient(158deg, var(--dk-top-hi), var(--dk-top) 52%, var(--dk-top-lo));
+}
+:root[data-palette="dusk"] .deck {
+  --dk-top: #7a3b2e; --dk-top-hi: #96503f; --dk-top-lo: #5d2a20; --dk-top-wash: rgba(0,0,0,.35);
+  --dk-fascia: #4e241b; --dk-waist: #9a5442;
+  --dk-platter: #2e1b14; --dk-platter-hi: #3d2419; --dk-platter-lo: #1f110b; --dk-band: rgba(230,170,120,.28);
+  --dk-mat: #241510;
+  --dk-vinyl-hi: #261f1a; --dk-vinyl: #191413; --dk-vinyl-lo: #100c0a;
+  --dk-groove: rgba(255,215,170,.05); --dk-groove2: rgba(0,0,0,.32);
+  --dk-sheen: rgba(255,190,120,.10);
+  --dk-label: #e8d3b0; --dk-art: #a34e2e;
+  --dk-m1: #8a6a35; --dk-m2: #d9b96a; --dk-m3: #e8cf8e; --dk-m4: #c9a44f; --dk-m5: #5c441f;
+  --dk-knob1: #7a5a30; --dk-knob2: #d9b96a; --dk-knob3: #5c441f; --dk-knob4: #c9a44f;
+  --dk-led: #d97e4a; --dk-shadow: rgba(40,15,8,.40);
+}
+:root[data-palette="night"] .deck {
+  --dk-top: #0c0d10; --dk-top-hi: #171a20; --dk-top-lo: #07080a; --dk-top-wash: rgba(90,150,255,.06);
+  --dk-fascia: #060708; --dk-waist: #23262e;
+  --dk-platter: #0a0b0e; --dk-platter-hi: #14161b; --dk-platter-lo: #050507; --dk-band: rgba(87,242,214,.25);
+  --dk-mat: #08090c;
+  --dk-vinyl-hi: #1b1d24; --dk-vinyl: #101014; --dk-vinyl-lo: #09090b;
+  --dk-groove: rgba(87,242,214,.07); --dk-groove2: rgba(0,0,0,.35);
+  --dk-sheen: rgba(87,242,214,.10);
+  --dk-label: #0d0f14; --dk-art: #5cf2dc;
+  --dk-m1: #3a3f47; --dk-m2: #8a93a0; --dk-m3: #c9d0d8; --dk-m4: #8a93a0; --dk-m5: #3a3f47;
+  --dk-knob1: #3a3f47; --dk-knob2: #8a93a0; --dk-knob3: #2a2e35; --dk-knob4: #5a616b;
+  --dk-led: #57f2d6; --dk-shadow: rgba(0,0,0,.60);
+}
+:root[data-palette="night"] .deck .vinyl__label {
+  box-shadow: 0 0 14px rgba(87,242,214,.30), inset 0 0 0 1px rgba(87,242,214,.18);
+}
+:root[data-palette="night"] .deck .vol-art { filter: drop-shadow(0 0 4px rgba(92,242,220,.55)); }
+
+/* 唱机容器降级：不支持 preserve-3d 时回退静态平面 */
+@supports not (transform-style: preserve-3d) {
+  .deck__scene { transform: none; }
+  .deck__scene > * { transform: none !important; }
+}
+@media (max-width: 720px) {
+  .deck { transform: scale(.8); transform-origin: top center; }
+}
 .player-info { width: 100%; max-width: 500px; padding: 1.5rem 1.8rem; min-height: 130px; transition: opacity .25s, transform .25s; backdrop-filter: blur(10px) saturate(1.1); -webkit-backdrop-filter: blur(10px) saturate(1.1); }
 .player-info.is-switching { opacity: 0; transform: translateY(8px); }
 .p-head { display: flex; align-items: baseline; gap: .8rem; margin-bottom: .8rem; }
@@ -354,12 +596,6 @@ a:hover { color: var(--accent); }
 .p-stat { color: var(--ink3); letter-spacing: .06em; font-family: 'JetBrains Mono',monospace; flex-shrink: 0; }
 .p-cta { color: var(--accent); font-weight: 500; letter-spacing: .06em; text-align: right; }
 
-﻿/* ---------- Owl ---------- */
-.owl { width: 44px; height: 28px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; gap: 6px; position: relative; }
-.owl-eye { width: 16px; height: 18px; border-radius: 50%; background: #d4a020; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 12px rgba(212, 160, 32, .35); }
-.owl-pupil { width: 7px; height: 8px; background: #1a1612; border-radius: 50%; will-change: transform; transform: translate(var(--px, 0px), var(--py, 0px)); }
-.owl-beak { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid #c49530; }
-:root[data-palette="night"] .owl-eye { box-shadow: 0 0 16px rgba(212, 160, 32, .5); }
 
 /* ---------- Palette switch ---------- */
 .palette-switch { display: flex; align-items: center; gap: .28rem; min-height: 36px; padding: 2px 4px; border-radius: 999px; background: var(--glass-lo); border: 1px solid var(--glass-brd); }
@@ -531,7 +767,14 @@ a:hover { color: var(--accent); }
   .home-hero, .player-section, .bento, .foot, .epigraph { padding-left: 1rem; padding-right: 1rem; }
 }
 @media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .live-dot { animation: none; }
+  .cell, .mod-btn, .landing-card, .palette-switch, .palette-switch button { transition: none; }
+  .vinyl__spin { animation: none; }
+  .deck__scene .tonearm__swing { transition: none; }
+  .deck:not(.is-dropped) .tonearm__swing { transform: none; }
+}
   .live-dot { animation: none; }
   .cell, .mod-btn, .landing-card, .palette-switch, .palette-switch button { transition: none; }
 }
