@@ -74,15 +74,21 @@ onBeforeUnmount(() => {
           </a>
         </div>
       </article>
-      <article class="cell cell-about glass">
-        <span class="cell-kicker">ABOUT</span>
-        <h3 class="about-line">这里没有观众，<br>只有记录。</h3>
-        <ul class="principles">
-          <li><b>费曼原则</b>写不清楚，就是没想清楚</li>
-          <li><b>长期主义</b>积累五年、十年</li>
-          <li><b>真诚记录</b>不为表演，只为自己</li>
-        </ul>
-        <p class="about-quote">"The beautiful thing about learning<br>is that nobody can take it away."<span>— B.B. King</span></p>
+      <article class="cell cell-quote glass">
+        <span class="cell-kicker">卷首语 · FOREWORD</span>
+        <p class="quote-fr">Ah Je me réveille à peine<br />Je suis encore toute décoiffée<br />Ma fleur est là quelque part</p>
+        <div class="quote-rule" aria-hidden="true"></div>
+        <div class="shelf">
+          <p class="shelf-label">唱片收藏 · 韦瓦第计划</p>
+          <div class="shelf-seasons">
+            <span class="ss-item">春·日光</span>
+            <span class="ss-item">夏·狂热</span>
+            <span class="ss-item">秋·故事</span>
+            <span class="ss-item">冬·未了</span>
+          </div>
+          <p class="shelf-note">「凛冽的冬季降临人间，繁复的音乐编制如巨石，薛西佛斯即将再度出发。」</p>
+          <a class="shelf-link" :href="withBase('general/music-appreciation.html')">全部唱片评价 →</a>
+        </div>
       </article>
       <article class="cell cell-stats glass">
         <span class="cell-kicker">ARCHIVE STATUS</span>
@@ -95,4 +101,8 @@ onBeforeUnmount(() => {
       </article>
     </div>
   </section>
+
+  <footer class="foot">
+    <p class="foot-line">YUTATA · 2026</p>
+  </footer>
 </template>
