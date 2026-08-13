@@ -78,6 +78,11 @@
           "date": "2026-08-12",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-08-13",
+          "event": "合作 2次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
@@ -109,6 +114,11 @@
         {
           "date": "2026-08-08",
           "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-08-13",
+          "event": "合作 2次",
           "trustDelta": 0
         }
       ],
@@ -167,12 +177,17 @@
           "date": "2026-08-08",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-08-13",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 86,
+      "trust": 88,
       "trend": "improving",
       "history": [
         {
@@ -267,6 +282,11 @@
         },
         {
           "date": "2026-08-12",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-13",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -426,6 +446,13 @@
       "date": "2026-08-12",
       "type": "正向反馈",
       "summary": "收到分析师的APPROVE: 今日工作总结（2026-08-12）：本轮为复盘阶段，素材总量50条已验证，覆盖音乐版权（Music Reports Songdex十周年、GMR与Music ",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-13",
+      "type": "正向反馈",
+      "summary": "收到分析师的APPROVE: 今日（2026-08-13）复盘轮次中，我产出了8条洞察，涵盖核心解读（2条）、趋势观察（3条）、冷知识/延伸（3条）。核心解读聚焦于两大验证缺口的闭环确认：S",
       "lesson": "",
       "impact": ""
     }

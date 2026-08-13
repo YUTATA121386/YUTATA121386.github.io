@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 90,
+      "trust": 84,
       "trend": "improving",
       "history": [
         {
@@ -193,6 +193,11 @@
           "date": "2026-08-12",
           "event": "合作 9次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-08-13",
+          "event": "冲突 9次",
+          "trustDelta": -6
         }
       ],
       "summary": "关系良好"
@@ -225,6 +230,11 @@
           "date": "2026-08-08",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-08-13",
+          "event": "合作 2次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
@@ -242,7 +252,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 80,
+      "trust": 82,
       "trend": "stable",
       "history": [
         {
@@ -404,26 +414,17 @@
           "date": "2026-08-12",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-13",
+          "event": "合作 4次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-19",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: 素材 RAW-2026-07-19-0016 (Avery Cochran新歌) 被拒绝。",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-07-19",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 首批20条素材审核完成，通过19条，拒绝1条。通过率95%。",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-07-18",
       "type": "重大挛折",
@@ -757,6 +758,20 @@
       "date": "2026-08-12",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 首批20条素材全部通过，通过率100%！来源全部为白名单源（Music Business Worldwide + Music Ally），未发现Google N",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-13",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: ❌ 本批新增10条素材中发现6条Google News黑名单源污染（RAW-2026-08-13-0035至0040），且你的'已逐条核验来源字段'承诺严重失实",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-13",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 首批20条素材全部通过，通过率100%，来源全部为白名单源（Music Business Worldwide + Music Ally），未发现Google N",
       "lesson": "",
       "impact": ""
     }

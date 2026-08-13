@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 90,
+      "trust": 84,
       "trend": "improving",
       "history": [
         {
@@ -193,6 +193,11 @@
           "date": "2026-08-12",
           "event": "合作 9次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-08-13",
+          "event": "冲突 9次",
+          "trustDelta": -6
         }
       ],
       "summary": "关系良好"
@@ -270,12 +275,17 @@
           "date": "2026-08-12",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-08-13",
+          "event": "合作 2次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
     },
     "editor": {
-      "trust": 68,
+      "trust": 70,
       "trend": "improving",
       "history": [
         {
@@ -332,9 +342,14 @@
           "date": "2026-08-12",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-08-13",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
-      "summary": "关系一般"
+      "summary": "关系良好"
     },
     "memory-manager": {
       "trust": 100,
@@ -479,103 +494,17 @@
           "date": "2026-08-12",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-13",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-08",
-      "type": "标杆案例",
-      "title": "スカパラ、バンド史上初アリーナツアー＜ARENA TOUR 2027［SKA］SHOWDOWN Episode2＞の全貌解禁",
-      "source": "BARKS",
-      "summary": "通过: スカパラ、バンド史上初アリーナツアー＜ARENA TOUR 2027［SKA］SHOWDOWN Episode2＞の全貌解禁",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-08",
-      "type": "标杆案例",
-      "title": "LIL LEAGUE、新曲「僕を探してた」本日配信＆MV公開。11月にFC限定ライブ開催決定も",
-      "source": "BARKS",
-      "summary": "通过: LIL LEAGUE、新曲「僕を探してた」本日配信＆MV公開。11月にFC限定ライブ開催決定も",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-08",
-      "type": "标杆案例",
-      "title": "モナキ、新曲「すみなすものは心なりけり」MV公開。RECのギターにEvery Little Thing・伊藤一朗参加も",
-      "source": "BARKS",
-      "summary": "通过: モナキ、新曲「すみなすものは心なりけり」MV公開。RECのギターにEvery Little Thing・伊藤一朗参加も",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-08",
-      "type": "标杆案例",
-      "title": "『ユイカ』、デジタルEP『翠色に贈る』リリース決定 「全ての曲に私の性格が存分に発揮している気がします」",
-      "source": "BARKS",
-      "summary": "通过: 『ユイカ』、デジタルEP『翠色に贈る』リリース決定 「全ての曲に私の性格が存分に発揮している気がします」",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-08",
-      "type": "标杆案例",
-      "title": "ヒプマイ、11thライブBlu-rayより「Buster Bros!!! ＆ Bad Ass Temple」公演のダイジェスト映像公開",
-      "source": "BARKS",
-      "summary": "通过: ヒプマイ、11thライブBlu-rayより「Buster Bros!!! ＆ Bad Ass Temple」公演のダイジェスト映像公開",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-08",
-      "type": "每日统计",
-      "summary": "今日通过率: 51% (41/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-08-09",
-      "type": "被拒案例",
-      "title": "Iran makes new strait demands, the UAE says a ship was targeted and other Middle East news - AP News",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为中东地缘政治新闻，与音乐行业无关",
-      "summary": "被拒: Iran makes new strait demands, the UAE says a ship was targeted and other Middle",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为中东地缘政治新闻，与音乐行业无关"
-    },
-    {
-      "date": "2026-08-09",
-      "type": "被拒案例",
-      "title": "Trump is about to get 'unchecked authority' to impose tariffs of up to 100% on top trading partners ",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为关税政策新闻，与音乐行业无关",
-      "summary": "被拒: Trump is about to get 'unchecked authority' to impose tariffs of up to 100% on t",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为关税政策新闻，与音乐行业无关"
-    },
-    {
-      "date": "2026-08-09",
-      "type": "被拒案例",
-      "title": "US offers $1bn to Colombia on new right-wing president's first day of office - BBC",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为哥伦比亚政治新闻，与音乐行业无关",
-      "summary": "被拒: US offers $1bn to Colombia on new right-wing president's first day of office - B",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为哥伦比亚政治新闻，与音乐行业无关"
-    },
-    {
-      "date": "2026-08-09",
-      "type": "被拒案例",
-      "title": "British Columbia wildfire forces more than 20,000 to flee, destroys homes - Al Jazeera",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为加拿大山火新闻，与音乐行业无关",
-      "summary": "被拒: British Columbia wildfire forces more than 20,000 to flee, destroys homes - Al J",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为加拿大山火新闻，与音乐行业无关"
-    },
-    {
-      "date": "2026-08-09",
-      "type": "被拒案例",
-      "title": "Today’s Wordle answer and hints for #1877 on August 09",
-      "source": "NME",
-      "reason": "NME源Wordle答案内容，与音乐行业无关",
-      "summary": "被拒: Today’s Wordle answer and hints for #1877 on August 09",
-      "lesson": "避免采集此类素材: NME源Wordle答案内容，与音乐行业无关"
-    },
     {
       "date": "2026-08-09",
       "type": "标杆案例",
@@ -893,6 +822,97 @@
       "date": "2026-08-12",
       "type": "每日统计",
       "summary": "今日通过率: 83% (50/60)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-08-13",
+      "type": "被拒案例",
+      "title": "CIA had ‘low confidence’ in Iranian threat before Trump switched planes in Turkey - The Washington P",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为CIA情报评估，与音乐产业完全无关",
+      "summary": "被拒: CIA had ‘low confidence’ in Iranian threat before Trump switched planes in Turke",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为CIA情报评估，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-13",
+      "type": "被拒案例",
+      "title": "ICE’s plan to give officers electric shock gloves draws outrage and fears of misuse - AP News",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为ICE执法设备争议，与音乐产业完全无关",
+      "summary": "被拒: ICE’s plan to give officers electric shock gloves draws outrage and fears of mis",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为ICE执法设备争议，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-13",
+      "type": "被拒案例",
+      "title": "Wisconsin Gubernatorial Race Moves to Leans Democratic After the Establishment’s Great Escape; Other",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为美国州长初选，与音乐产业完全无关",
+      "summary": "被拒: Wisconsin Gubernatorial Race Moves to Leans Democratic After the Establishment’s",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为美国州长初选，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-13",
+      "type": "被拒案例",
+      "title": "Major Russian grain export terminals hit in Ukraine Black Sea port attack - BBC",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为俄乌冲突中的粮食出口，与音乐产业完全无关",
+      "summary": "被拒: Major Russian grain export terminals hit in Ukraine Black Sea port attack - BBC",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为俄乌冲突中的粮食出口，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-13",
+      "type": "被拒案例",
+      "title": "South Carolina Senate Runoff Kicks Off With Chick-fil-A and Trump Calls - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为美国参议院初选，与音乐产业完全无关",
+      "summary": "被拒: South Carolina Senate Runoff Kicks Off With Chick-fil-A and Trump Calls - The Ne",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为美国参议院初选，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-13",
+      "type": "标杆案例",
+      "title": "The best new music plugins this week, free and paid",
+      "source": "MusicTech",
+      "summary": "通过: The best new music plugins this week, free and paid",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-13",
+      "type": "标杆案例",
+      "title": "How we remixed Duran Duran and Nile Rodgers: Tips and tricks from Harrison, Trixie Mattel, and Aliss",
+      "source": "MusicTech",
+      "summary": "通过: How we remixed Duran Duran and Nile Rodgers: Tips and tricks from Harrison, Trix",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-13",
+      "type": "标杆案例",
+      "title": "Reflecting on the genius of Madonna’s “otherworldly” producer, William Orbit",
+      "source": "MusicTech",
+      "summary": "通过: Reflecting on the genius of Madonna’s “otherworldly” producer, William Orbit",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-13",
+      "type": "标杆案例",
+      "title": "Meet London’s hottest new outdoor dance venue, Magazine Open-Air",
+      "source": "MusicTech",
+      "summary": "通过: Meet London’s hottest new outdoor dance venue, Magazine Open-Air",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-13",
+      "type": "标杆案例",
+      "title": "How Daniel Caesar’s executive producers, Matthew Burnett and Jordan Evans, bring his grand ideas int",
+      "source": "MusicTech",
+      "summary": "通过: How Daniel Caesar’s executive producers, Matthew Burnett and Jordan Evans, bring",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-13",
+      "type": "每日统计",
+      "summary": "今日通过率: 65% (39/60)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],
