@@ -387,14 +387,7 @@ a:hover { color: var(--accent); }
 .cell-quote { display: flex; flex-direction: column; gap: 1rem; }
 .quote-fr { font-family: 'Fraunces',Georgia,serif; font-style: italic; font-size: 1.12rem; line-height: 2.05; letter-spacing: .02em; color: var(--ink); margin: 0; }
 .quote-rule { height: 1px; background: linear-gradient(to right, var(--accent), transparent); opacity: .55; margin: .6rem 0 .2rem; }
-.shelf { border-top: 1px solid var(--glass-brd); padding-top: .9rem; margin-top: auto; display: flex; flex-direction: column; gap: .8rem; }
-.shelf-label { font-family: 'JetBrains Mono',monospace; font-size: .56rem; letter-spacing: .22em; color: var(--ink3); margin: 0; }
-.shelf-seasons { display: grid; grid-template-columns: repeat(4, 1fr); gap: .45rem; }
-.ss-item { text-align: center; padding: .5rem .2rem; border: 1px solid var(--glass-brd); border-radius: 10px; background: var(--glass-lo); font-family: 'Noto Serif SC',serif; font-size: .8rem; letter-spacing: .04em; color: var(--ink2); }
-.shelf-note { font-size: .74rem; line-height: 1.85; color: var(--ink2); font-family: 'Noto Sans SC',sans-serif; letter-spacing: .02em; margin: 0; }
-.shelf-link { font-size: .72rem; color: var(--accent); letter-spacing: .06em; font-family: 'Noto Sans SC',sans-serif; text-decoration: none; }
-.shelf-link:hover { text-decoration: underline; }
-@media (max-width: 480px) { .quote-fr { font-size: 1rem; line-height: 1.95; } .ss-item { font-size: .72rem; padding: .45rem .1rem; } }
+@media (max-width: 480px) { .quote-fr { font-size: 1rem; line-height: 1.95; } }
 
 .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem .5rem; }
 .stat-grid b { display: block; font-family: 'Fraunces',Georgia,serif; font-weight: 500; font-size: 1.75rem; color: var(--ink); }
