@@ -300,8 +300,9 @@ a:hover { color: var(--accent); }
   position: relative;
   width: 420px;
   height: 360px;
-  perspective: 1400px;
-  perspective-origin: 50% 28%;
+  perspective: 1200px;
+  perspective-origin: 50% 30%;
+  margin-bottom: 40px; /* 为 3D 底部溢出预留空间，避免与下方卡片重叠 */
   /* 默认材质 = 晨（米纸水彩） */
   --dk-top: #f4eee1; --dk-top-hi: #fbf6ea; --dk-top-lo: #e9dfc8; --dk-top-wash: rgba(214,196,160,.30);
   --dk-fascia: #e3d7be; --dk-waist: #d9c9a6;
@@ -318,7 +319,7 @@ a:hover { color: var(--accent); }
 .deck__scene {
   position: absolute; inset: 0;
   transform-style: preserve-3d;
-  transform: translateY(56px) rotateX(calc(52deg + var(--tilt-x, 0deg))) rotate(calc(-5deg + var(--tilt-y, 0deg)));
+  transform: translateY(58px) rotateX(calc(47deg + var(--tilt-x, 0) * 1deg)) rotate(calc(-5deg + var(--tilt-y, 0) * 1deg));
 }
 /* 材质切换过渡：只走颜色/投影/滤镜，绝不碰 transform */
 .plinth__top, .plinth__layer, .platter, .platter__mat, .platter__ring,
@@ -331,21 +332,31 @@ a:hover { color: var(--accent); }
 .deck__shadow {
   position: absolute; left: 26px; top: 310px; width: 368px; height: 56px;
   border-radius: 50%;
-  transform: translateZ(-14px);
+  transform: translateZ(-14px) translate(calc(var(--tilt-y, 0) * -0.7px), calc(var(--tilt-x, 0) * -0.4px));
   background: var(--dk-shadow);
   filter: blur(16px);
 }
 
-/* 底座：顶面 + 6 层挤出 */
+/* 底座：顶面 + 前/右侧真实侧壁（3D 盒体） */
 .plinth { position: absolute; inset: 0; transform-style: preserve-3d; }
-.plinth__layer {
-  position: absolute; inset: 0;
-  border-radius: 16px;
-  background: var(--dk-fascia);
-  filter: brightness(calc(1 - var(--i) * 0.05));
-  transform: translateZ(calc(var(--i, 1) * -2.6px));
+.plinth__face {
+  position: absolute;
+  background: linear-gradient(180deg, var(--dk-fascia), var(--dk-waist));
 }
-.plinth__layer:nth-child(2) { inset: 2px; background: var(--dk-waist); }
+.plinth__face.face-front {
+  left: 0; top: 100%; width: 100%; height: 46px;
+  transform-origin: top center;
+  transform: rotateX(-90deg);
+  filter: brightness(.86);
+  border-radius: 0 0 20px 20px;
+}
+.plinth__face.face-right {
+  left: 100%; top: 0; width: 46px; height: 100%;
+  transform-origin: left center;
+  transform: rotateY(90deg);
+  filter: brightness(.72);
+  border-radius: 0 20px 20px 0;
+}
 .plinth__top {
   position: absolute; inset: 0;
   border-radius: 16px;
@@ -389,7 +400,7 @@ a:hover { color: var(--accent); }
 }
 .vinyl__spin {
   position: absolute; inset: 0; border-radius: 50%; overflow: hidden;
-  animation: deck-spin 10s linear infinite;
+  animation: deck-spin 8s linear infinite;
   background:
     radial-gradient(circle at 50% 50%,
       transparent 0 61%, rgba(255,255,255,.05) 61.2% 61.6%, transparent 61.8%,
@@ -398,7 +409,7 @@ a:hover { color: var(--accent); }
     repeating-radial-gradient(circle at 50% 50%, var(--dk-groove2) 0 1px, transparent 1px 4px);
 }
 @keyframes deck-spin { to { transform: rotate(360deg); } }
-.deck.is-dropped .vinyl__spin { animation-duration: 2.2s; }
+.deck.is-dropped .vinyl__spin { animation-duration: 1.8s; }
 .deck.is-slow .vinyl__spin { animation-duration: 14s; }
 
 /* 唱片标签（双缓冲切换，随盘自转） */
@@ -426,7 +437,9 @@ a:hover { color: var(--accent); }
 .label-dot.d3 { left: 71px; top: 22px; }
 .vinyl__shimmer {
   position: absolute; inset: 0; border-radius: 50%;
-  background: conic-gradient(from 12deg, transparent 0deg, rgba(255,255,255,.055) 12deg, transparent 24deg);
+  background:
+    conic-gradient(from 8deg, transparent 0deg, rgba(255,255,255,.09) 14deg, transparent 26deg),
+    conic-gradient(from 190deg, transparent 0deg, rgba(255,255,255,.04) 10deg, transparent 20deg);
 }
 
 /* 中心孔：独立置顶，不参与切换 */
@@ -460,8 +473,8 @@ a:hover { color: var(--accent); }
   transform: rotate(0deg);
   transform-style: preserve-3d;
 }
-.deck__scene .tonearm__swing { transition: transform .55s cubic-bezier(.45, .05, .55, .95); }
-.deck:not(.is-dropped) .tonearm__swing { transform: rotate(12deg); }
+.deck__scene .tonearm__swing { transition: transform .7s cubic-bezier(.3, .1, .2, 1); }
+.deck:not(.is-dropped) .tonearm__swing { transform: rotate(16deg); }
 .tonearm__wand {
   position: absolute; left: 0; top: -4.5px; width: 88px; height: 9px;
   transform: rotate(143.7deg); transform-origin: 0 50%;
@@ -486,13 +499,21 @@ a:hover { color: var(--accent); }
   background: linear-gradient(180deg, var(--dk-m3), var(--dk-m5));
   box-shadow: 0 1px 2px rgba(0,0,0,.4);
 }
+.tonearm__stylus { transition: transform .3s ease; }
+.tonearm__stylus::after {
+  content: ""; position: absolute; left: -1px; bottom: -1px; width: 3.5px; height: 3.5px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,.95), rgba(255,255,255,.12) 72%);
+  opacity: 0;
+  transition: opacity .35s .45s;
+}
+.deck.is-dropped .tonearm__stylus::after { opacity: 1; }
 .deck.is-dropped .tonearm__stylus {
-  animation: stylus-drop .55s cubic-bezier(.22,.9,.3,1.12) .05s both;
+  animation: stylus-drop .55s cubic-bezier(.2,.8,.3,1.05) .4s both;
 }
 @keyframes stylus-drop {
-  0% { transform: translateZ(0) translateY(-6px); }
-  55% { transform: translateZ(-4.5px) translateY(1px); }
-  78% { transform: translateZ(-4.5px) translateY(-0.8px); }
+  0% { transform: translateZ(0) translateY(-9px); }
+  55% { transform: translateZ(-4.5px) translateY(0); }
+  75% { transform: translateZ(-4.5px) translateY(1.4px); }
   100% { transform: translateZ(-4.5px) translateY(0); }
 }
 .tonearm__counterweight {
@@ -513,8 +534,8 @@ a:hover { color: var(--accent); }
   position: absolute; left: 263px; top: 146px; width: 24px; height: 10px;
   border-radius: 50%;
   transform: translateZ(23px);
-  background: radial-gradient(ellipse at 50% 50%, rgba(0,0,0,.42), rgba(0,0,0,.18) 55%, transparent 72%);
-  filter: blur(1.2px);
+  background: radial-gradient(ellipse at 50% 50%, rgba(0,0,0,.55), rgba(0,0,0,.24) 52%, transparent 72%);
+  filter: blur(.9px);
   opacity: 0;
   transition: opacity .5s;
 }
@@ -537,6 +558,27 @@ a:hover { color: var(--accent); }
 }
 .deck__led.led-1 { left: 344px; top: 326px; }
 .deck__led.led-2 { left: 360px; top: 326px; }
+
+/* 环境光扫过：缓慢旋转的光带，营造时间感 */
+.deck__sweep {
+  position: absolute; inset: -24% -6%;
+  border-radius: 50%;
+  transform: translateZ(30px) rotate(0deg);
+  background: conic-gradient(from 24deg at 50% 50%, transparent 0deg, rgba(255,255,255,.06) 42deg, transparent 92deg);
+  animation: deck-sweep 18s linear infinite;
+  pointer-events: none;
+}
+@keyframes deck-sweep { to { transform: translateZ(30px) rotate(360deg); } }
+
+/* 唱片机为装饰性品牌元素：系统开启“减少动态效果”时仍保留必要动效（转盘/落针/扫光），其余 UI 动效照常降级 */
+@media (prefers-reduced-motion: reduce) {
+  .deck .vinyl__spin { animation-duration: 8s !important; animation-iteration-count: infinite !important; animation-delay: 0s !important; }
+  .deck.is-dropped .vinyl__spin { animation-duration: 1.8s !important; }
+  .deck.is-slow .vinyl__spin { animation-duration: 14s !important; }
+  .deck__scene .tonearm__swing { transition-duration: .7s !important; transition-delay: 0s !important; }
+  .deck .tonearm__stylus { animation-duration: .55s !important; animation-delay: .4s !important; animation-iteration-count: 1 !important; }
+  .deck__sweep { animation-duration: 18s !important; animation-iteration-count: infinite !important; animation-delay: 0s !important; }
+}
 
 /* ---------- 四时段材质映射 ---------- */
 :root[data-palette="noon"] .deck {
@@ -787,9 +829,6 @@ a:hover { color: var(--accent); }
   html { scroll-behavior: auto; }
   .live-dot { animation: none; }
   .cell, .mod-btn, .landing-card, .palette-switch, .palette-switch button { transition: none; }
-  .vinyl__spin { animation: none; }
-  .deck__scene .tonearm__swing { transition: none; }
-  .deck:not(.is-dropped) .tonearm__swing { transform: none; }
 }
   .live-dot { animation: none; }
   .cell, .mod-btn, .landing-card, .palette-switch, .palette-switch button { transition: none; }

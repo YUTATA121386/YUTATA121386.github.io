@@ -42,7 +42,6 @@ let tiltTy = 0
 let tiltCx = 0
 let tiltCy = 0
 let observer: IntersectionObserver | undefined
-const REDUCED = typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches
 
 const mod = computed(() => MODULES[current.value])
 
@@ -76,15 +75,14 @@ function applyTilt() {
   tiltCy += (tiltTy - tiltCy) * 0.09
   const deck = deckEl.value
   if (deck) {
-    deck.style.setProperty("--tilt-x", tiltCy.toFixed(3) + "deg")
-    deck.style.setProperty("--tilt-y", tiltCx.toFixed(3) + "deg")
+    deck.style.setProperty("--tilt-x", tiltCy.toFixed(3))
+    deck.style.setProperty("--tilt-y", tiltCx.toFixed(3))
   }
   if (Math.abs(tiltTx - tiltCx) > 0.004 || Math.abs(tiltTy - tiltCy) > 0.004) {
     tiltRaf = requestAnimationFrame(applyTilt)
   }
 }
 function onAreaMove(e: MouseEvent) {
-  if (REDUCED) return
   const r = areaEl.value?.getBoundingClientRect()
   if (!r || r.width === 0) return
   tiltTx = (((e.clientX - r.left) / r.width) * 2 - 1) * 8
@@ -93,7 +91,6 @@ function onAreaMove(e: MouseEvent) {
 }
 function onAreaLeave() {
   stopSlow()
-  if (REDUCED) return
   tiltTx = 0
   tiltTy = 0
   if (!tiltRaf) tiltRaf = requestAnimationFrame(applyTilt)
@@ -109,10 +106,6 @@ function onAreaEnter() {
 }
 
 onMounted(() => {
-  if (REDUCED) {
-    dropped.value = true
-    return
-  }
   // 初次落针：延迟执行，让"唱针放上去"的动作可见
   const tryInView = () => {
     const r = deckEl.value?.getBoundingClientRect()
@@ -178,7 +171,8 @@ onBeforeUnmount(() => {
 
             <!-- 底座：顶面 + 6 层挤出厚度 -->
             <div class="plinth">
-              <div v-for="n in 8" :key="n" class="plinth__layer" :style="{ '--i': n }"></div>
+              <div class="plinth__face face-front"></div>
+              <div class="plinth__face face-right"></div>
               <div class="plinth__top"></div>
             </div>
 
@@ -267,6 +261,8 @@ onBeforeUnmount(() => {
             <div class="deck__knob knob-2"></div>
             <div class="deck__led led-1"></div>
             <div class="deck__led led-2"></div>
+            <!-- 环境光扫过：缓慢旋转的光，营造时间感 -->
+            <div class="deck__sweep"></div>
           </div>
         </div>
         <div class="player-info glass" :class="{ 'is-switching': switching }">
