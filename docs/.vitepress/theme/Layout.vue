@@ -2,7 +2,6 @@
 import { computed, onMounted, watch } from "vue"
 import { useRoute } from "vitepress"
 import DefaultTheme from "vitepress/theme"
-import Owl from "./components/Owl.vue"
 import PaletteSwitch from "./components/PaletteSwitch.vue"
 import DotNav from "./components/DotNav.vue"
 import Feathers from "./components/Feathers.vue"
@@ -32,7 +31,6 @@ onMounted(() => syncBodyClass())
 
 <template>
   <DefaultTheme.Layout>
-    <template #nav-bar-title-after><Owl /></template>
     <template #nav-bar-content-after>
       <a v-if="isPortalDeploy" class="portal-back" href="/" aria-label="返回登录门户" @click.prevent="goPortal">← 返回门户</a>
       <PaletteSwitch />

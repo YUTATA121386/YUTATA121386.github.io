@@ -29,10 +29,18 @@ const dropped = ref(false)
 const slow = ref(false)
 const switching = ref(false)
 const deckEl = ref<HTMLElement | null>(null)
+const areaEl = ref<HTMLElement | null>(null)
 
 let switchTimer: number | undefined
 let liftTimer: number | undefined
 let slowTimer: number | undefined
+let raiseTimer: number | undefined
+let dropTimer: number | undefined
+let tiltRaf = 0
+let tiltTx = 0
+let tiltTy = 0
+let tiltCx = 0
+let tiltCy = 0
 let observer: IntersectionObserver | undefined
 const REDUCED = typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches
 
@@ -61,21 +69,70 @@ function stopSlow() {
   slow.value = false
 }
 
+/* 指针跟随倾斜：让唱片机像实物一样随视角转动 */
+function applyTilt() {
+  tiltRaf = 0
+  tiltCx += (tiltTx - tiltCx) * 0.09
+  tiltCy += (tiltTy - tiltCy) * 0.09
+  const deck = deckEl.value
+  if (deck) {
+    deck.style.setProperty("--tilt-x", tiltCy.toFixed(3) + "deg")
+    deck.style.setProperty("--tilt-y", tiltCx.toFixed(3) + "deg")
+  }
+  if (Math.abs(tiltTx - tiltCx) > 0.004 || Math.abs(tiltTy - tiltCy) > 0.004) {
+    tiltRaf = requestAnimationFrame(applyTilt)
+  }
+}
+function onAreaMove(e: MouseEvent) {
+  if (REDUCED) return
+  const r = areaEl.value?.getBoundingClientRect()
+  if (!r || r.width === 0) return
+  tiltTx = (((e.clientX - r.left) / r.width) * 2 - 1) * 8
+  tiltTy = (((e.clientY - r.top) / r.height) * 2 - 1) * 6
+  if (!tiltRaf) tiltRaf = requestAnimationFrame(applyTilt)
+}
+function onAreaLeave() {
+  stopSlow()
+  if (REDUCED) return
+  tiltTx = 0
+  tiltTy = 0
+  if (!tiltRaf) tiltRaf = requestAnimationFrame(applyTilt)
+  // 离开后抬起唱针（模拟暂停），再次进入时重新落下
+  if (dropTimer) clearTimeout(dropTimer)
+  if (raiseTimer) clearTimeout(raiseTimer)
+  raiseTimer = window.setTimeout(raiseArm, 2200)
+}
+function onAreaEnter() {
+  startSlow()
+  if (raiseTimer) clearTimeout(raiseTimer)
+  if (!dropped.value) dropTimer = window.setTimeout(dropArm, 450)
+}
+
 onMounted(() => {
   if (REDUCED) {
     dropped.value = true
     return
   }
+  // 初次落针：延迟执行，让"唱针放上去"的动作可见
+  const tryInView = () => {
+    const r = deckEl.value?.getBoundingClientRect()
+    if (r && r.top < window.innerHeight * 0.9 && r.bottom > 0) {
+      dropTimer = window.setTimeout(dropArm, 900)
+      return true
+    }
+    return false
+  }
+  if (tryInView()) return
   if (deckEl.value && "IntersectionObserver" in window) {
     observer = new IntersectionObserver((entries) => {
       if (entries.some((e) => e.isIntersecting)) {
         observer?.disconnect()
-        dropArm()
+        dropTimer = window.setTimeout(dropArm, 900)
       }
-    }, { threshold: 0.25 })
+    }, { threshold: 0.15 })
     observer.observe(deckEl.value)
   } else {
-    dropArm()
+    dropTimer = window.setTimeout(dropArm, 900)
   }
 })
 
@@ -83,6 +140,9 @@ onBeforeUnmount(() => {
   if (switchTimer) clearTimeout(switchTimer)
   if (liftTimer) clearTimeout(liftTimer)
   if (slowTimer) clearTimeout(slowTimer)
+  if (raiseTimer) clearTimeout(raiseTimer)
+  if (dropTimer) clearTimeout(dropTimer)
+  if (tiltRaf) cancelAnimationFrame(tiltRaf)
   observer?.disconnect()
 })
 </script>
@@ -104,7 +164,7 @@ onBeforeUnmount(() => {
           <span v-if="m.badge" :class="['mod-badge', { live: m.live }]">{{ m.badge }}</span>
         </button>
       </div>
-      <div class="turntable-area" @mouseenter="startSlow" @mouseleave="stopSlow">
+      <div ref="areaEl" class="turntable-area" @mouseenter="onAreaEnter" @mousemove="onAreaMove" @mouseleave="onAreaLeave">
         <div
           ref="deckEl"
           class="deck"
@@ -118,7 +178,7 @@ onBeforeUnmount(() => {
 
             <!-- 底座：顶面 + 6 层挤出厚度 -->
             <div class="plinth">
-              <div v-for="n in 6" :key="n" class="plinth__layer" :style="{ '--i': n }"></div>
+              <div v-for="n in 8" :key="n" class="plinth__layer" :style="{ '--i': n }"></div>
               <div class="plinth__top"></div>
             </div>
 
@@ -182,6 +242,7 @@ onBeforeUnmount(() => {
                   <span class="label-dot d3"></span>
                 </div>
                 <div class="vinyl__hole"><i></i></div>
+                <i class="vinyl__shimmer"></i>
               </div>
             </div>
 

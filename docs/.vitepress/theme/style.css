@@ -318,7 +318,7 @@ a:hover { color: var(--accent); }
 .deck__scene {
   position: absolute; inset: 0;
   transform-style: preserve-3d;
-  transform: translateY(56px) rotateX(58deg) rotate(-5deg);
+  transform: translateY(56px) rotateX(calc(52deg + var(--tilt-x, 0deg))) rotate(calc(-5deg + var(--tilt-y, 0deg)));
 }
 /* 材质切换过渡：只走颜色/投影/滤镜，绝不碰 transform */
 .plinth__top, .plinth__layer, .platter, .platter__mat, .platter__ring,
@@ -337,12 +337,13 @@ a:hover { color: var(--accent); }
 }
 
 /* 底座：顶面 + 6 层挤出 */
-.plinth { position: absolute; inset: 0; }
+.plinth { position: absolute; inset: 0; transform-style: preserve-3d; }
 .plinth__layer {
   position: absolute; inset: 0;
   border-radius: 16px;
   background: var(--dk-fascia);
-  transform: translateZ(calc(var(--i, 1) * -2.4px));
+  filter: brightness(calc(1 - var(--i) * 0.05));
+  transform: translateZ(calc(var(--i, 1) * -2.6px));
 }
 .plinth__layer:nth-child(2) { inset: 2px; background: var(--dk-waist); }
 .plinth__top {
@@ -388,7 +389,7 @@ a:hover { color: var(--accent); }
 }
 .vinyl__spin {
   position: absolute; inset: 0; border-radius: 50%; overflow: hidden;
-  animation: deck-spin 1.8s linear infinite;
+  animation: deck-spin 10s linear infinite;
   background:
     radial-gradient(circle at 50% 50%,
       transparent 0 61%, rgba(255,255,255,.05) 61.2% 61.6%, transparent 61.8%,
@@ -397,7 +398,7 @@ a:hover { color: var(--accent); }
     repeating-radial-gradient(circle at 50% 50%, var(--dk-groove2) 0 1px, transparent 1px 4px);
 }
 @keyframes deck-spin { to { transform: rotate(360deg); } }
-.deck:not(.is-dropped) .vinyl__spin { animation-play-state: paused; }
+.deck.is-dropped .vinyl__spin { animation-duration: 2.2s; }
 .deck.is-slow .vinyl__spin { animation-duration: 14s; }
 
 /* 唱片标签（双缓冲切换，随盘自转） */
@@ -423,6 +424,10 @@ a:hover { color: var(--accent); }
 .label-dot.d1 { left: 16px; top: 13px; }
 .label-dot.d2 { left: 65px; top: 61px; }
 .label-dot.d3 { left: 71px; top: 22px; }
+.vinyl__shimmer {
+  position: absolute; inset: 0; border-radius: 50%;
+  background: conic-gradient(from 12deg, transparent 0deg, rgba(255,255,255,.055) 12deg, transparent 24deg);
+}
 
 /* 中心孔：独立置顶，不参与切换 */
 .vinyl__hole {
@@ -447,11 +452,13 @@ a:hover { color: var(--accent); }
 .tonearm {
   position: absolute; left: 352px; top: 72px; width: 0; height: 0;
   transform: translateZ(26px);
+  transform-style: preserve-3d;
 }
 .tonearm__swing {
   position: absolute; width: 0; height: 0;
   transform-origin: 0 0;
   transform: rotate(0deg);
+  transform-style: preserve-3d;
 }
 .deck__scene .tonearm__swing { transition: transform .55s cubic-bezier(.45, .05, .55, .95); }
 .deck:not(.is-dropped) .tonearm__swing { transform: rotate(12deg); }
@@ -478,6 +485,15 @@ a:hover { color: var(--accent); }
   border-radius: 2px;
   background: linear-gradient(180deg, var(--dk-m3), var(--dk-m5));
   box-shadow: 0 1px 2px rgba(0,0,0,.4);
+}
+.deck.is-dropped .tonearm__stylus {
+  animation: stylus-drop .55s cubic-bezier(.22,.9,.3,1.12) .05s both;
+}
+@keyframes stylus-drop {
+  0% { transform: translateZ(0) translateY(-6px); }
+  55% { transform: translateZ(-4.5px) translateY(1px); }
+  78% { transform: translateZ(-4.5px) translateY(-0.8px); }
+  100% { transform: translateZ(-4.5px) translateY(0); }
 }
 .tonearm__counterweight {
   position: absolute; left: 0; top: -4px; width: 22px; height: 8px;
