@@ -6,12 +6,34 @@ import moodMorning from "../art/mood-morning.jpg"
 import moodNoon from "../art/mood-noon.jpg"
 import moodDusk from "../art/mood-dusk.jpg"
 import moodNight from "../art/mood-night.jpg"
+import cover01 from "../art/covers/cover-01.jpg"
+import cover02 from "../art/covers/cover-02.jpg"
+import cover03 from "../art/covers/cover-03.jpg"
+import cover04 from "../art/covers/cover-04.jpg"
+import cover05 from "../art/covers/cover-05.jpg"
+import cover06 from "../art/covers/cover-06.jpg"
+import cover07 from "../art/covers/cover-07.jpg"
+import cover08 from "../art/covers/cover-08.jpg"
+import cover09 from "../art/covers/cover-09.jpg"
+import cover10 from "../art/covers/cover-10.jpg"
 
 const time = ref("--:--:--")
 const dateStr = ref("")
 const period = ref("晨")
 const NAMES: Record<string, string> = { morning: "晨", noon: "午", dusk: "暮", night: "夜" }
 const MOOD: Record<string, string> = { morning: moodMorning, noon: moodNoon, dusk: moodDusk, night: moodNight }
+const ALBUMS = [
+  { year: "2016", name: "飞行器的执行周期", art: cover01 },
+  { year: "2017", name: "逆輸入 〜航空局〜", art: cover02 },
+  { year: "2018", name: "寻宝游戏", art: cover03 },
+  { year: "2019", name: "爱的呼唤", art: cover04 },
+  { year: "2020", name: "STRAY SHEEP", art: cover05 },
+  { year: "2021", name: "Fresh Soul", art: cover06 },
+  { year: "2022", name: "马拉美的星期二", art: cover07 },
+  { year: "2023", name: "裘德", art: cover08 },
+  { year: "2024", name: "珍珠刑", art: cover09 },
+  { year: "2025", name: "过客", art: cover10 },
+]
 const RECOMMENDED = [
   { title: "22岁 | 2026年度OKR", url: "growth/okr-2026.html", meta: "上升清单" },
   { title: "第 07 周复盘 · 记忆管理师环评", url: "weekly/review-2026-W07.html", meta: "2026-08-09" },
@@ -55,6 +77,11 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
+  <section class="epigraph">
+    <span class="epigraph-kicker">卷首语 · FOREWORD</span>
+    <p class="epigraph-fr">Ah Je me réveille à peine<br />Je suis encore toute décoiffée<br />Ma fleur est là quelque part</p>
+  </section>
+
   <section class="bento">
     <div class="section-head"><span class="sh-cn">此刻</span><span class="sh-en">NOW PLAYING</span></div>
     <div class="bento-grid">
@@ -74,20 +101,21 @@ onBeforeUnmount(() => {
           </a>
         </div>
       </article>
-      <article class="cell cell-quote glass">
-        <span class="cell-kicker">卷首语 · FOREWORD</span>
-        <p class="quote-fr">Ah Je me réveille à peine<br />Je suis encore toute décoiffée<br />Ma fleur est là quelque part</p>
-        <div class="quote-rule" aria-hidden="true"></div>
-      </article>
-      <article class="cell cell-stats glass">
-        <span class="cell-kicker">ARCHIVE STATUS</span>
-        <div class="stat-grid">
-          <div><b>{{ data.totalPages }}</b><span>收录页面</span></div>
-          <div><b>06</b><span>已归档卷宗</span></div>
-          <div><b>{{ data.dailyCount }}</b><span>雷达期数</span></div>
-          <div><b>{{ data.weeklyCount }}</b><span>周报复盘</span></div>
+      <article class="cell cell-covers glass">
+        <span class="cell-kicker">人生专辑 · 2016–2025</span>
+        <div class="covers-grid">
+          <div v-for="a in ALBUMS" :key="a.year" class="cover-item">
+            <img class="cover-art" :src="a.art" :alt="a.year + ' ' + a.name" loading="lazy" />
+            <span class="cover-label"><span class="cover-year">{{ a.year }}</span><span class="cover-name">{{ a.name }}</span></span>
+          </div>
         </div>
       </article>
+      <div class="stats-bar glass">
+        <div class="stat-cell"><b>{{ data.totalPages }}</b><span>收录页面</span></div>
+        <div class="stat-cell"><b>06</b><span>已归档卷宗</span></div>
+        <div class="stat-cell"><b>{{ data.dailyCount }}</b><span>雷达期数</span></div>
+        <div class="stat-cell"><b>{{ data.weeklyCount }}</b><span>周报复盘</span></div>
+      </div>
     </div>
   </section>
 
