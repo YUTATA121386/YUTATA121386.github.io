@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 84,
+      "trust": 90,
       "trend": "improving",
       "history": [
         {
@@ -198,6 +198,11 @@
           "date": "2026-08-13",
           "event": "冲突 9次",
           "trustDelta": -6
+        },
+        {
+          "date": "2026-08-14",
+          "event": "合作 8次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -499,103 +504,17 @@
           "date": "2026-08-13",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-14",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-09",
-      "type": "标杆案例",
-      "title": "【速レポ】＜LuckyFes’26＞超能力戦士ドリアン、初日HILLS STAGEトリ「自慢できるバンドになるから！」",
-      "source": "BARKS",
-      "summary": "通过: 【速レポ】＜LuckyFes’26＞超能力戦士ドリアン、初日HILLS STAGEトリ「自慢できるバンドになるから！」",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-09",
-      "type": "标杆案例",
-      "title": "【速レポ】＜LuckyFes’26＞初日のWING STAGEトリはNEWS。「また来年ここで会いましょう！」",
-      "source": "BARKS",
-      "summary": "通过: 【速レポ】＜LuckyFes’26＞初日のWING STAGEトリはNEWS。「また来年ここで会いましょう！」",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-09",
-      "type": "标杆案例",
-      "title": "【速レポ】＜LuckyFes’26＞FRUITS ZIPPER、賑やかでカラフルな7人が魅せた“レインボー”なステージ",
-      "source": "BARKS",
-      "summary": "通过: 【速レポ】＜LuckyFes’26＞FRUITS ZIPPER、賑やかでカラフルな7人が魅せた“レインボー”なステージ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-09",
-      "type": "标杆案例",
-      "title": "DEZERT、メンバー全員が作曲した初の作品『Alternate4』をホールツアー会場限定で発売決定",
-      "source": "BARKS",
-      "summary": "通过: DEZERT、メンバー全員が作曲した初の作品『Alternate4』をホールツアー会場限定で発売決定",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-09",
-      "type": "标杆案例",
-      "title": "SUPER EIGHT、来春アリーナツアー開催＆ニューアルバム発売決定げるEP『ダンダーラ』本日リリース",
-      "source": "BARKS",
-      "summary": "通过: SUPER EIGHT、来春アリーナツアー開催＆ニューアルバム発売決定げるEP『ダンダーラ』本日リリース",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-09",
-      "type": "每日统计",
-      "summary": "今日通过率: 59% (47/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-08-10",
-      "type": "被拒案例",
-      "title": "#刘宇宁一诺上线#| #腾讯音乐由你榜#｜#摩登兄弟[超话]#“那就做一阵晚风吧浪漫又自由听世间万物讲动人的情话” 《见山河》http://t.cn/AXCPsfWr《来我的岛》http://t.cn",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News黑名单源污染，且为粉丝微博转发内容，非新闻素材",
-      "summary": "被拒: #刘宇宁一诺上线#| #腾讯音乐由你榜#｜#摩登兄弟[超话]#“那就做一阵晚风吧浪漫又自由听世间万物讲动人的情话” 《见山河》http://t.cn/AXCPs",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，且为粉丝微博转发内容，非新闻素材"
-    },
-    {
-      "date": "2026-08-10",
-      "type": "被拒案例",
-      "title": "新浪网· - sina.cn",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News黑名单源污染，内容为空/无效",
-      "summary": "被拒: 新浪网· - sina.cn",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为空/无效"
-    },
-    {
-      "date": "2026-08-10",
-      "type": "被拒案例",
-      "title": "MD-一直走下去 - sina.cn",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News黑名单源污染，内容为空/无效",
-      "summary": "被拒: MD-一直走下去 - sina.cn",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为空/无效"
-    },
-    {
-      "date": "2026-08-10",
-      "type": "被拒案例",
-      "title": "新浪网· - sina.cn",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News黑名单源污染，内容为空/无效",
-      "summary": "被拒: 新浪网· - sina.cn",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为空/无效"
-    },
-    {
-      "date": "2026-08-10",
-      "type": "被拒案例",
-      "title": "#王俊凯首张同名专辑WJK#🩵#腾讯音乐由你榜# 落叶写满秋意，风一吹，便寄往远方，无人签收。@TFBOYS-王俊凯http://t.cn/AXSJEUFZ【三字王俊凯新歌王俊凯专辑wjk 王俊凯公",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News黑名单源污染，且为粉丝微博转发内容，非新闻素材",
-      "summary": "被拒: #王俊凯首张同名专辑WJK#🩵#腾讯音乐由你榜# 落叶写满秋意，风一吹，便寄往远方，无人签收。@TFBOYS-王俊凯http://t.cn/AXSJEUFZ【",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，且为粉丝微博转发内容，非新闻素材"
-    },
     {
       "date": "2026-08-10",
       "type": "标杆案例",
@@ -913,6 +832,97 @@
       "date": "2026-08-13",
       "type": "每日统计",
       "summary": "今日通过率: 65% (39/60)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-08-14",
+      "type": "被拒案例",
+      "title": "Trump White House says it's losing $19B-$26 billion a year in revenue as countries dodge tariffs - P",
+      "source": "Google News Music Industry",
+      "reason": "黑名单源（Google News）污染，内容为美国政治新闻，与音乐产业无关。",
+      "summary": "被拒: Trump White House says it's losing $19B-$26 billion a year in revenue as countri",
+      "lesson": "避免采集此类素材: 黑名单源（Google News）污染，内容为美国政治新闻，与音乐产业无关。"
+    },
+    {
+      "date": "2026-08-14",
+      "type": "被拒案例",
+      "title": "'Super' El Niño is super likely as California braces for impact - Los Angeles Times",
+      "source": "Google News Music Industry",
+      "reason": "黑名单源（Google News）污染，内容为气象新闻，与音乐产业无关。",
+      "summary": "被拒: 'Super' El Niño is super likely as California braces for impact - Los Angeles Ti",
+      "lesson": "避免采集此类素材: 黑名单源（Google News）污染，内容为气象新闻，与音乐产业无关。"
+    },
+    {
+      "date": "2026-08-14",
+      "type": "被拒案例",
+      "title": "Trump Gives Green Light to U.S. Companies to Aim Hacks at Cybercriminals - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "黑名单源（Google News）污染，内容为美国政治新闻，与音乐产业无关。",
+      "summary": "被拒: Trump Gives Green Light to U.S. Companies to Aim Hacks at Cybercriminals - The N",
+      "lesson": "避免采集此类素材: 黑名单源（Google News）污染，内容为美国政治新闻，与音乐产业无关。"
+    },
+    {
+      "date": "2026-08-14",
+      "type": "被拒案例",
+      "title": "Alabama man put to death for the murder of a 5-year-old girl in last of three US executions in a day",
+      "source": "Google News Music Industry",
+      "reason": "黑名单源（Google News）污染，内容为社会新闻，与音乐产业无关。",
+      "summary": "被拒: Alabama man put to death for the murder of a 5-year-old girl in last of three US",
+      "lesson": "避免采集此类素材: 黑名单源（Google News）污染，内容为社会新闻，与音乐产业无关。"
+    },
+    {
+      "date": "2026-08-14",
+      "type": "被拒案例",
+      "title": "Before killing her kids, Lindsay Clancy searched about hallucinations, psychosis and ways to die - A",
+      "source": "Google News Music Industry",
+      "reason": "黑名单源（Google News）污染，内容为社会新闻，与音乐产业无关。",
+      "summary": "被拒: Before killing her kids, Lindsay Clancy searched about hallucinations, psychosis",
+      "lesson": "避免采集此类素材: 黑名单源（Google News）污染，内容为社会新闻，与音乐产业无关。"
+    },
+    {
+      "date": "2026-08-14",
+      "type": "标杆案例",
+      "title": "MathSynth is a free iOS synth that turns mathematical equations into instruments",
+      "source": "MusicTech",
+      "summary": "通过: MathSynth is a free iOS synth that turns mathematical equations into instruments",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-14",
+      "type": "标杆案例",
+      "title": "Pittsburgh Modular’s Lifeforms SV-2 arrives after a decade of research on synthesis",
+      "source": "MusicTech",
+      "summary": "通过: Pittsburgh Modular’s Lifeforms SV-2 arrives after a decade of research on synthe",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-14",
+      "type": "标杆案例",
+      "title": "Suno forms “global alliance” with BMG giving musicians “real choice” over AI use",
+      "source": "MusicTech",
+      "summary": "通过: Suno forms “global alliance” with BMG giving musicians “real choice” over AI use",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-14",
+      "type": "标杆案例",
+      "title": "The best new music plugins this week, free and paid",
+      "source": "MusicTech",
+      "summary": "通过: The best new music plugins this week, free and paid",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-14",
+      "type": "标杆案例",
+      "title": "How we remixed Duran Duran and Nile Rodgers: Tips and tricks from Harrison, Trixie Mattel, and Aliss",
+      "source": "MusicTech",
+      "summary": "通过: How we remixed Duran Duran and Nile Rodgers: Tips and tricks from Harrison, Trix",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-14",
+      "type": "每日统计",
+      "summary": "今日通过率: 69% (55/80)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],

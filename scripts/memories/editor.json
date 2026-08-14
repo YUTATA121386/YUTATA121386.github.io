@@ -142,12 +142,17 @@
           "date": "2026-08-13",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-08-14",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 94,
+      "trust": 96,
       "trend": "improving",
       "history": [
         {
@@ -262,6 +267,11 @@
         },
         {
           "date": "2026-08-13",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-14",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -449,6 +459,13 @@
       "date": "2026-08-13",
       "type": "正向反馈",
       "summary": "收到编辑师的APPROVE: 编辑师处理日报草稿中遇到技术问题，消息内容暂缺。",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-14",
+      "type": "正向反馈",
+      "summary": "收到编辑师的APPROVE: 今日工作总结（2026-08-14）：完成第5轮日报编辑。今日面临极端素材质量分层——前两批40条白名单源素材通过率100%，但第三批起Google News黑",
       "lesson": "",
       "impact": ""
     }
