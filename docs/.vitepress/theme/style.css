@@ -294,351 +294,136 @@ a:hover { color: var(--accent); }
 .mod-title { flex: 1; }
 .mod-badge { margin-left: auto; font-size: .58rem; letter-spacing: .1em; padding: .25em .7em; border-radius: 999px; border: 1px solid var(--glass-brd); color: var(--ink3); }
 .mod-badge.live { color: var(--live); border-color: rgba(192, 57, 47, .3); }
-.turntable-area { display: flex; flex-direction: column; align-items: center; gap: 2.4rem; perspective: 1400px; }
-/* ---------- 唱片机：SVG 插画，椭圆透视 + 四时段材质 ---------- */
+
+/* ---------- 唱片机：千问素材实拍质感 + 分层动画 ---------- */
+.turntable-area { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; perspective: 1500px; }
 .deck {
   position: relative;
-  width: 440px;
-  max-width: 100%;
+  width: min(460px, 100%);
   margin: 0 auto;
-  /* 晨：米纸水彩（默认） */
-  --dk-plinth-top-hi: #f5f1e8; --dk-plinth-top: #ece7dc; --dk-plinth-top-lo: #d9d2c3;
-  --dk-plinth-fascia-hi: #e2dccb; --dk-plinth-fascia: #d6cfbf; --dk-plinth-fascia-lo: #b8af9c; --dk-plinth-fascia-base: #a89f8b;
-  --dk-plinth-edge: #faf7f0;
-  --dk-platter-hi: #e6e8ea; --dk-platter: #c9ccd0; --dk-platter-lo: #a9adb2; --dk-platter-edge: #8f939a;
-  --dk-platter-edge-hi: #f2f4f5; --dk-platter-groove: #7d8187;
-  --dk-platter-side-hi: #b4b8bd; --dk-platter-side-lo: #84888e;
-  --dk-vinyl-hi: #33363d; --dk-vinyl: #22242a; --dk-vinyl-lo: #121317;
-  --dk-vinyl-groove-hi: #4a4e57; --dk-vinyl-groove-lo: #0a0b0e;
-  --dk-vinyl-edge-hi: #3c4048; --dk-vinyl-edge-lo: #0e0f12;
-  --dk-vinyl-deadwax: #1c1e23;
-  --dk-vinyl-sheen: #ffffff;
-  --dk-label-hi: #f8f4ea; --dk-label: #f4efe4; --dk-label-lo: #ddd5c4; --dk-label-ink: #6b6357;
-  --dk-metal-hi: #dfe2e5; --dk-metal: #b9bdc3; --dk-metal-lo: #8f939a;
-  --dk-arm-hi: #e8ebee; --dk-arm: #c3c7cc; --dk-arm-lo: #868a91; --dk-arm-bounce: #f2efe6;
-  --dk-foot: #8f887a; --dk-foot-lo: #6e685c;
-  --dk-shadow: #4a4438; --dk-shadow-op: .30;
-  --dk-knob: #c9c2b2; --dk-led: #d8b36a; --dk-art: #c07a3e;
-  --dk-top-wash: rgba(214,196,160,.30);
-  --dk-band: rgba(255,255,255,.35); --dk-groove2: rgba(0,0,0,.30);
-  /* 旧变量别名（兼容既有选择器） */
-  --dk-top-hi: var(--dk-plinth-top-hi); --dk-top: var(--dk-plinth-top); --dk-top-lo: var(--dk-plinth-top-lo);
-  --dk-waist: var(--dk-plinth-fascia-hi); --dk-fascia: var(--dk-plinth-fascia);
-  --dk-mat: var(--dk-platter-lo);
-  --dk-groove: var(--dk-vinyl-groove-hi);
-  --dk-sheen: var(--dk-vinyl-sheen);
-  --dk-m1: var(--dk-arm-lo); --dk-m2: var(--dk-arm); --dk-m3: var(--dk-arm-hi); --dk-m4: var(--dk-arm); --dk-m5: var(--dk-arm-lo);
-  --dk-knob1: var(--dk-metal-lo); --dk-knob2: var(--dk-metal-hi); --dk-knob3: var(--dk-metal-lo); --dk-knob4: var(--dk-metal);
-}
-.deck-svg { display: block; width: 100%; height: auto; shape-rendering: geometricPrecision; }
-
-/* 3D 跟随：消费 JS 写入的 --tilt-x / --tilt-y，像观察实物般轻转视角 */
-.deck {
-  transform: rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
   transform-style: preserve-3d;
+  transform: rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
   will-change: transform;
+  --dk-shadow: rgba(84, 60, 32, .5);
+  --dk-shadow-op: .30;
+}
+.deck-stage { position: relative; width: 100%; aspect-ratio: 1 / 1; }
+.deck-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; user-select: none; pointer-events: none; }
+
+/* 四时段：机身材质氛围（滤镜 + 柔光层） */
+.deck-tint { position: absolute; inset: 0; mix-blend-mode: overlay; opacity: 0; pointer-events: none; }
+:root[data-palette="noon"] .deck-img { filter: brightness(1.03) saturate(1.05) hue-rotate(-4deg); }
+:root[data-palette="noon"] .deck-tint { opacity: .16; background: radial-gradient(60% 55% at 32% 18%, rgba(165,205,235,.5), transparent 72%); }
+:root[data-palette="dusk"] .deck-img { filter: sepia(.24) saturate(1.1) brightness(.93); }
+:root[data-palette="dusk"] .deck-tint { opacity: .30; mix-blend-mode: soft-light; background: radial-gradient(75% 65% at 40% 28%, rgba(255,140,80,.38), rgba(120,40,18,.28) 78%); }
+:root[data-palette="night"] .deck-img { filter: brightness(.78) saturate(.9) contrast(1.06) hue-rotate(-10deg); }
+:root[data-palette="night"] .deck-tint { opacity: .40; mix-blend-mode: soft-light; background: radial-gradient(75% 65% at 36% 24%, rgba(80,140,255,.30), rgba(8,14,42,.5) 82%); }
+:root[data-palette="night"] .deck .platter { filter: drop-shadow(0 0 14px rgba(100,220,255,.22)); }
+
+/* 地面投影：随鼠标反向移动 + 横向形变 */
+.floor-shadow {
+  position: absolute; left: 50%; top: 87%; width: 88%; height: 6%;
+  transform: translate(-50%, -50%) translate(calc(var(--px, 0) * -6px), calc(var(--py, 0) * -2px)) scaleX(calc(1 + var(--abs-px, 0) * .03));
+  background: radial-gradient(50% 50% at 50% 50%, var(--dk-shadow), transparent 72%);
+  filter: blur(7px); opacity: var(--dk-shadow-op); pointer-events: none;
 }
 
-/* SVG 渐变与材质变量绑定（四时段自动换肤） */
-.deck-svg .st-plinth-hi { stop-color: var(--dk-plinth-top-hi); }
-.deck-svg .st-plinth { stop-color: var(--dk-plinth-top); }
-.deck-svg .st-plinth-lo { stop-color: var(--dk-plinth-top-lo); }
-.deck-svg .st-side-hi { stop-color: var(--dk-plinth-fascia-hi); }
-.deck-svg .st-side-lo { stop-color: var(--dk-plinth-fascia); }
-.deck-svg .st-fascia-hi { stop-color: var(--dk-plinth-fascia-hi); }
-.deck-svg .st-fascia { stop-color: var(--dk-plinth-fascia); }
-.deck-svg .st-fascia-lo { stop-color: var(--dk-plinth-fascia-lo); }
-.deck-svg .st-fascia-base { stop-color: var(--dk-plinth-fascia-base); }
-.deck-svg .st-platter-hi { stop-color: var(--dk-platter-hi); }
-.deck-svg .st-platter { stop-color: var(--dk-platter); }
-.deck-svg .st-platter-lo { stop-color: var(--dk-platter-lo); }
-.deck-svg .st-platter-edge { stop-color: var(--dk-platter-edge); }
-.deck-svg .st-platter-side-hi { stop-color: var(--dk-platter-side-hi); }
-.deck-svg .st-platter-side-lo { stop-color: var(--dk-platter-side-lo); }
-.deck-svg .st-vinyl-hi { stop-color: var(--dk-vinyl-hi); }
-.deck-svg .st-vinyl { stop-color: var(--dk-vinyl); }
-.deck-svg .st-vinyl-lo { stop-color: var(--dk-vinyl-lo); }
-.deck-svg .st-vinyl-edge-hi { stop-color: var(--dk-vinyl-edge-hi); }
-.deck-svg .st-vinyl-edge-lo { stop-color: var(--dk-vinyl-edge-lo); }
-.deck-svg .st-m1 { stop-color: var(--dk-arm-lo); }
-.deck-svg .st-m2 { stop-color: var(--dk-arm); }
-.deck-svg .st-m3 { stop-color: var(--dk-arm-hi); }
-.deck-svg .st-m4 { stop-color: var(--dk-arm); }
-.deck-svg .st-m5 { stop-color: var(--dk-arm-lo); }
-.deck-svg .st-knob-hi { stop-color: var(--dk-metal-hi); }
-.deck-svg .st-knob-lo { stop-color: var(--dk-metal-lo); }
-.deck-svg .st-metal-hi { stop-color: var(--dk-metal-hi); }
-.deck-svg .st-metal { stop-color: var(--dk-metal); }
-.deck-svg .st-metal-lo { stop-color: var(--dk-metal-lo); }
-.deck-svg .st-sheen { stop-color: var(--dk-vinyl-sheen); }
-.deck-svg .st-sweep { stop-color: rgba(255,255,255,.07); }
-
-/* 地面投影：随鼠标反向移动 + 横向形变，制造镜头移动错觉 */
-.deck-svg .floor-shadow {
-  fill: var(--dk-shadow);
-  opacity: var(--dk-shadow-op);
-  filter: blur(12px);
-  transform: translate(calc(var(--px, 0) * -5px), calc(var(--py, 0) * -2px)) scaleX(calc(1 + var(--abs-px, 0) * .03));
-}
-
-/* 脚垫：圆柱支撑 */
-.foot-side { fill: var(--dk-foot-lo); }
-.foot-top { fill: var(--dk-foot); stroke: rgba(0,0,0,.3); stroke-width: .75; }
-.foot-cast { fill: var(--dk-shadow); opacity: .30; }
-.foot-gap { fill: none; stroke: rgba(255,255,255,.25); stroke-width: .75; }
-.foot-seam { fill: rgba(0,0,0,.35); }
-
-/* 底座：fascia 侧壁（明暗分层）+ 顶面 */
-.plinth-fascia { fill: url(#fasciaGrad); }
-.plinth-fascia-side { fill: url(#fasciaSide); }
-.corner-shade { opacity: .8; }
-.plinth-edge { fill: none; stroke: var(--dk-plinth-edge); stroke-width: 1; opacity: .5; }
-.plinth-ao { fill: none; stroke: var(--dk-shadow); stroke-width: 1; opacity: .3; }
-.plinth-base-hi { fill: none; stroke: var(--dk-plinth-edge); stroke-width: 1; opacity: .35; }
-.plinth-top { filter: drop-shadow(0 12px 18px var(--dk-shadow)); }
-.plinth-brush {
-  fill: radial-gradient(120% 90% at 30% 18%, var(--dk-top-wash), transparent 62%);
-  pointer-events: none;
-}
-.plinth-hi { fill: rgba(255,255,255,.26); }
-.plinth-lo { fill: rgba(0,0,0,.10); }
-
-/* 转盘：哑光铝 + 车削纹 + bezel 双线 */
-.platter-side { fill: url(#platterSideGrad); }
-.platter-face { filter: drop-shadow(0 5px 9px rgba(0,0,0,.22)); }
-.platter-turns ellipse { fill: none; stroke: var(--dk-platter-groove); stroke-width: .6; }
-.platter-turns ellipse:nth-child(odd) { opacity: .12; }
-.platter-turns ellipse:nth-child(even) { opacity: .07; }
-.platter-bezel-hi { fill: none; stroke: var(--dk-platter-edge-hi); stroke-width: 1; opacity: .55; }
-.platter-bezel-lo { fill: none; stroke: var(--dk-shadow); stroke-width: 1; opacity: .4; }
-.platter-inset { fill: none; stroke: #000; stroke-width: 1; opacity: .22; }
-.platter-ao { fill: none; stroke: var(--dk-shadow); stroke-width: 1; opacity: .25; }
-
-/* 黑胶：厚度挤出 + 哑光盘面 + 边缘倒角 */
-.vinyl-edge { fill: url(#vinylEdgeGrad); }
-.vinyl-edge-hi { fill: none; stroke: var(--dk-vinyl-edge-hi); stroke-width: 1.2; opacity: .75; }
-.vinyl-bevel-hi { fill: none; stroke: rgba(255,255,255,.35); stroke-width: 1; }
-.vinyl-bevel-lo { fill: none; stroke: var(--dk-shadow); stroke-width: 1; opacity: .4; }
-.vinyl-body { filter: drop-shadow(0 4px 7px rgba(0,0,0,.30)); }
-.vinyl-ao { fill: none; stroke: var(--dk-shadow); stroke-width: 1; opacity: .35; }
-
-/* 自转：内层恒定 linear 不停，外层 spool 负责启动加速 */
-.vinyl-spool, .vinyl-rot { transform-box: view-box; transform-origin: 220px 192px; }
-.vinyl-rot { animation: vinyl-spin 5.5s linear infinite; animation-play-state: paused; will-change: transform; }
+/* 黑胶覆盖层：与素材内黑胶同椭圆（scaleY .563），spool 一次性加速 + rot 匀速自转 */
+.platter { position: absolute; left: 46.8%; top: 37.3%; width: 52.5%; aspect-ratio: 1 / 1; transform: translate(-50%, -50%) scaleY(.563); transform-origin: center; pointer-events: none; }
+.vinyl-spool, .vinyl-rot { position: absolute; inset: 0; }
+.vinyl-spool { will-change: transform; }
+.vinyl-rot { animation: vinyl-spin 5s linear infinite; animation-play-state: paused; will-change: transform; }
 .deck.is-spinning .vinyl-rot { animation-play-state: running; }
 @keyframes vinyl-spin { to { transform: rotate(360deg); } }
+.vinyl-img { position: absolute; inset: 0; width: 100%; height: 100%; }
 
-/* 沟槽 / 死蜡环 / lead-in（随盘旋转） */
-.vinyl-grooves ellipse { fill: none; stroke-width: .6; }
-.vinyl-grooves ellipse:nth-child(odd) { stroke: var(--dk-vinyl-groove-hi); opacity: .10; }
-.vinyl-grooves ellipse:nth-child(even) { stroke: var(--dk-vinyl-groove-lo); opacity: .16; }
-.vinyl-deadwax { fill: none; stroke: var(--dk-vinyl-deadwax); stroke-width: 5; opacity: .9; }
-.vinyl-lead ellipse { fill: none; stroke: var(--dk-vinyl-groove-hi); stroke-width: .5; opacity: .18; }
-
-/* 标签与卷宗图案 */
-.label-base ellipse:first-child { fill: var(--dk-label); }
-.label-base .label-ring { fill: none; stroke: rgba(255,255,255,.16); stroke-width: 1; }
-.label-art .glyph { fill: none; stroke: currentColor; stroke-width: 2.3; stroke-linecap: round; stroke-linejoin: round; }
-.label-art .glyph-dot { fill: currentColor; stroke: none; }
-.vol-glyph { color: var(--dk-label-ink); opacity: 0; transition: opacity .4s; }
+/* 卷宗标签：叠在素材黑胶的米纸圆签上 */
+.vinyl-label { position: absolute; left: 50%; top: 50%; width: 26%; height: 26%; transform: translate(-50%, -50%); overflow: visible; }
+.vinyl-label .label-ring { fill: none; stroke: currentColor; stroke-width: 1; opacity: .5; }
+.vinyl-label .label-ring-in { fill: none; stroke: currentColor; stroke-width: .5; opacity: .22; }
+.vinyl-label .glyph { fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.vinyl-label .glyph-dot { fill: currentColor; stroke: none; }
+.vol-glyph { opacity: 0; transition: opacity .45s; }
 .deck[data-vol="0"] .glyph-i,
 .deck[data-vol="1"] .glyph-ii,
 .deck[data-vol="2"] .glyph-iii,
 .deck[data-vol="3"] .glyph-iv,
 .deck[data-vol="4"] .glyph-v,
 .deck[data-vol="5"] .glyph-vi { opacity: 1; }
-.label-dot { fill: rgba(0,0,0,.28); }
-.spin-glint { fill: none; stroke: rgba(255,255,255,.22); stroke-width: 3; stroke-linecap: round; }
+/* 主轴凸起：黄铜小柱 */
+.spindle-hole { fill: rgba(38, 26, 15, .92); }
+.spindle-cap { fill: rgba(214, 172, 92, .95); }
+.spindle-cap-hi { fill: rgba(255, 235, 190, .9); }
+/* 六卷主题色 */
+.deck[data-vol="0"] .vinyl-label { color: #b0862f; }
+.deck[data-vol="1"] .vinyl-label { color: #3d7ea6; }
+.deck[data-vol="2"] .vinyl-label { color: #c03434; }
+.deck[data-vol="3"] .vinyl-label { color: #5f7a5a; }
+.deck[data-vol="4"] .vinyl-label { color: #c76b3f; }
+.deck[data-vol="5"] .vinyl-label { color: #46537e; }
+:root[data-palette="night"] .deck .vinyl-label { filter: drop-shadow(0 0 4px rgba(120,235,215,.65)); }
 
-/* 固定光斑：楔形高光 + 纵向反射，screen 混合，不随自转 */
-.layer-sheen { isolation: isolate; }
-.sheen-wedge { mix-blend-mode: screen; }
-.sheen-arc { fill: none; stroke: var(--dk-vinyl-sheen); stroke-width: 3; opacity: .08; }
-.vinyl-hole { fill: #141210; }
-.vinyl-hole-rim { fill: none; stroke: rgba(255,255,255,.22); stroke-width: 1; }
-
-/* 视差层：越高的物体位移越大，光源光斑反向旋转 */
-.deck-svg .layer-disc { transform: translate(calc(var(--px, 0) * .7px), calc(var(--py, 0) * .5px)); }
-.deck-svg .layer-arm { transform: translate(calc(var(--px, 0) * 2.8px), calc(var(--py, 0) * 2px)); }
-.deck-svg .layer-sheen { transform-box: view-box; transform-origin: 220px 192px; transform: rotate(calc(var(--px, 0) * 3deg)); }
-
-/* 唱臂：S 形管身四线叠加 + 圆柱配重 + 轴心柱 */
-.tonearm-group { transform-box: view-box; transform-origin: 368px 140px; transform: rotate(-38deg); }
-.wand-lo { fill: none; stroke: var(--dk-arm-lo); stroke-width: 8.5; stroke-linecap: round; }
-.wand-mid { fill: none; stroke: var(--dk-arm); stroke-width: 6; stroke-linecap: round; }
-.wand-hi { fill: none; stroke: var(--dk-arm-hi); stroke-width: 1.6; opacity: .8; transform: translate(0, -2.2); }
-.wand-bounce { fill: none; stroke: var(--dk-arm-bounce); stroke-width: 1; opacity: .3; transform: translate(0, 3); }
-.arm-shell { fill: var(--dk-metal); stroke: rgba(0,0,0,.3); stroke-width: .8; }
-.arm-shell-hi { fill: none; stroke: rgba(255,255,255,.45); stroke-width: 1.4; stroke-linecap: round; }
-.arm-shell-lo { fill: none; stroke: rgba(0,0,0,.4); stroke-width: 1.8; stroke-linecap: round; }
-.arm-cart { fill: var(--dk-vinyl); stroke: rgba(0,0,0,.3); stroke-width: .8; }
-.arm-cart-hi { fill: rgba(255,255,255,.35); }
-.arm-stylus { fill: none; stroke: var(--dk-arm-hi); stroke-width: 2; stroke-linecap: round; }
-.stylus-tip { fill: var(--dk-arm-hi); }
-.stylus-glint { fill: rgba(255,255,255,.8); }
-.arm-cw { fill: none; stroke: url(#g-arm); stroke-width: 12; stroke-linecap: round; }
-.arm-cw-hi { fill: none; stroke: rgba(255,255,255,.3); stroke-width: 2.6; stroke-linecap: round; }
-.arm-cw-weight { fill: var(--dk-metal); stroke: rgba(0,0,0,.3); stroke-width: .9; filter: drop-shadow(0 1px 1.5px rgba(0,0,0,.3)); }
-.arm-cw-weight-hi { fill: rgba(255,255,255,.38); }
-.arm-cw-weight-shade { fill: rgba(0,0,0,.30); }
-.arm-cw-cast { fill: rgba(0,0,0,.22); filter: blur(1px); }
-.arm-lift { fill: var(--dk-metal); stroke: rgba(0,0,0,.3); stroke-width: .8; }
-.arm-lift-hi { fill: rgba(255,255,255,.3); }
-.arm-lift-shade { fill: rgba(0,0,0,.35); }
-.pivot-side { fill: url(#metalSide); }
-.pivot-hi { fill: var(--dk-metal-hi); opacity: .6; }
-.pivot-top { fill: url(#metalTop); }
-.pivot-cap-side { fill: var(--dk-metal-lo); }
-.pivot-cap { fill: var(--dk-metal-hi); }
-.pivot-shade { fill: rgba(0,0,0,.18); }
-
-/* 唱臂悬空投影：双形交叉淡化，落针后近影变实 */
-.arm-shadow { transform-box: view-box; transform-origin: 368px 140px; transform: rotate(-38deg); }
-.shadow-far { fill: none; stroke: var(--dk-shadow); stroke-width: 8; transform: translate(-20, 26); filter: url(#blur4); opacity: .12; }
-.shadow-near { fill: none; stroke: var(--dk-shadow); stroke-width: 8; transform: translate(-6, 8); filter: url(#blur1); opacity: 0; }
-@keyframes shadow-near-in { 0%, 38% { opacity: 0; } 66%, 100% { opacity: .30; } }
-@keyframes shadow-far-out { 0%, 38% { opacity: .12; } 66%, 100% { opacity: 0; } }
-
-/* 落针：抬起-横移-下降-过冲-回弹，全程 animation（both 填充） */
+/* 唱臂：枢轴对齐机身金色底座（67.4%,21.5%），素材枢轴在 (83.3%,20.5%)，播放角 0°、抬起角 -65° */
+.arm-wrap, .arm-shadow { position: absolute; left: 39.2%; top: 14.6%; width: 33.9%; aspect-ratio: 1 / 1; transform-origin: 83.3% 20.5%; pointer-events: none; }
+.arm-img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.arm-wrap { transform: rotate(-65deg); will-change: transform; }
+.arm-shadow { transform: translate(2.5%, 3.5%) rotate(-65deg); filter: blur(5px); opacity: .22; }
 @keyframes arm-drop {
-  0%   { transform: rotate(-38deg); animation-timing-function: cubic-bezier(.45,.05,.25,1); }
-  38%  { transform: rotate(2.2deg); animation-timing-function: cubic-bezier(.5,.02,.4,1); }
-  66%  { transform: rotate(-1.8deg); animation-timing-function: cubic-bezier(.3,1.35,.45,1); }
-  76%  { transform: rotate(.5deg); animation-timing-function: cubic-bezier(.4,0,.3,1); }
-  84%  { transform: rotate(-.15deg); animation-timing-function: cubic-bezier(.4,0,.3,1); }
-  92%, 100% { transform: rotate(0deg); }
+  0%   { transform: rotate(-65deg); animation-timing-function: cubic-bezier(.45,.05,.25,1); }
+  34%  { transform: rotate(-8deg); animation-timing-function: cubic-bezier(.5,.02,.4,1); }
+  58%  { transform: rotate(3.5deg); animation-timing-function: cubic-bezier(.3,1.25,.45,1); }
+  68%  { transform: rotate(-1.5deg); animation-timing-function: cubic-bezier(.4,0,.3,1); }
+  76%  { transform: rotate(0.6deg); animation-timing-function: cubic-bezier(.4,0,.3,1); }
+  84%, 100% { transform: rotate(0deg); }
 }
 @keyframes arm-lift {
   0%   { transform: rotate(0deg); animation-timing-function: cubic-bezier(.5,.05,.3,1); }
-  18%  { transform: rotate(-2.5deg); animation-timing-function: cubic-bezier(.45,.05,.25,1); }
-  100% { transform: rotate(-38deg); }
+  22%  { transform: rotate(-8deg); animation-timing-function: cubic-bezier(.45,.05,.25,1); }
+  100% { transform: rotate(-65deg); }
 }
-.deck.is-dropping .tonearm-group { animation: arm-drop 2.2s both; }
-.deck.is-playing .tonearm-group { transform: rotate(0deg); }
-.deck.is-lifting .tonearm-group { animation: arm-lift .9s both; }
+.deck.is-dropping .arm-wrap { animation: arm-drop 2.2s both; }
+.deck.is-playing .arm-wrap { transform: rotate(0deg); }
+.deck.is-lifting .arm-wrap { animation: arm-lift .9s both; }
 .deck.is-dropping .arm-shadow { animation: arm-drop 2.2s both; }
-.deck.is-playing .arm-shadow { transform: rotate(0deg); }
+.deck.is-playing .arm-shadow { transform: translate(2.5%, 3.5%) rotate(0deg); }
 .deck.is-lifting .arm-shadow { animation: arm-lift .9s both; }
-.deck.is-dropping .shadow-near { animation: shadow-near-in 2.2s both; }
-.deck.is-dropping .shadow-far { animation: shadow-far-out 2.2s both; }
-.deck.is-playing .shadow-near { opacity: .30; }
-.deck.is-playing .shadow-far { opacity: 0; }
 
-/* 针尖震颤：接触后一次衰减抖动 */
-.deck.is-playing .stylus-tip {
-  transform-box: view-box;
-  transform-origin: 252px 223px;
-  animation: stylus-vibe .38s 1.45s 1 both;
+/* 针尖接触影：落针后浮现（对齐针尖落点 44.6%,41.3%） */
+.stylus-shadow {
+  position: absolute; left: 44.6%; top: 41.3%; width: 3.8%; height: 2%;
+  transform: translate(-50%, -50%) rotate(-8deg);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(14, 7, 3, .62), transparent 72%);
+  filter: blur(1px); border-radius: 50%;
+  opacity: 0; transition: opacity .7s ease .2s; pointer-events: none;
 }
-@keyframes stylus-vibe {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(.28deg); }
-  50% { transform: rotate(-.18deg); }
-  75% { transform: rotate(.09deg); }
-  100% { transform: rotate(0deg); }
+.deck.is-playing .stylus-shadow { opacity: 1; }
+.stylus-glint {
+  position: absolute; left: 44.6%; top: 41.3%; width: 1.4%; height: .8%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, .95), transparent 70%);
+  border-radius: 50%;
+  opacity: 0; transition: opacity .8s ease .35s; pointer-events: none;
 }
-.stylus-cast { fill: rgba(0,0,0,.38); opacity: 0; transition: opacity .5s .12s; }
-.deck.is-playing .stylus-cast { opacity: 1; }
-.stylus-contact { fill: rgba(0,0,0,.5); opacity: 0; transition: opacity .5s .3s; }
+.deck.is-playing .stylus-glint { opacity: .95; }
+/* 针尖接触点：极小暗点压住盘面，强化“针已落下” */
+.stylus-contact {
+  position: absolute; left: 44.6%; top: 41.3%; width: 1.1%; height: .6%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(6, 3, 1, .85), transparent 75%);
+  border-radius: 50%;
+  opacity: 0; transition: opacity .5s ease .25s; pointer-events: none;
+}
 .deck.is-playing .stylus-contact { opacity: 1; }
 
-/* 面板点缀 */
-.knob { fill: var(--dk-metal); }
-.knob-hi { fill: none; stroke: rgba(255,255,255,.3); stroke-width: 1; }
-.led { fill: var(--dk-led); filter: drop-shadow(0 0 5px var(--dk-led)); }
-.led-halo { fill: var(--dk-led); opacity: .28; filter: url(#blur2); }
-.led-core { fill: rgba(255,255,255,.85); }
-
-/* 环境光扫过：缓慢旋转的光带，营造时间感 */
-.deck-sweep {
-  transform-box: view-box;
-  transform-origin: 220px 178px;
-  animation: deck-sweep 18s linear infinite;
-  pointer-events: none;
+/* 轴承座接触影：唱臂轴承坐入底座 */
+.pivot-socket {
+  position: absolute; left: 67.4%; top: 21.5%; width: 6%; height: 3.6%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(26, 14, 5, .55), transparent 72%);
+  filter: blur(1.6px); border-radius: 50%;
+  pointer-events: none; opacity: .85;
 }
-@keyframes deck-sweep { to { transform: rotate(360deg); } }
-
-/* 系统开启"减少动态效果"时保留必要动效（转盘/落针/扫光） */
-@media (prefers-reduced-motion: reduce) {
-  .deck .vinyl-rot { animation-duration: 5.5s !important; animation-iteration-count: infinite !important; animation-delay: 0s !important; }
-  .deck .deck-sweep { animation-duration: 18s !important; animation-iteration-count: infinite !important; animation-delay: 0s !important; }
-}
-
-/* ---------- 四时段材质映射 ---------- */
-:root[data-palette="noon"] .deck {
-  --dk-plinth-top-hi: #2e3850; --dk-plinth-top: #232b3d; --dk-plinth-top-lo: #161c2b;
-  --dk-plinth-fascia-hi: #242c40; --dk-plinth-fascia: #1a2133; --dk-plinth-fascia-lo: #0f1420; --dk-plinth-fascia-base: #0a0e17;
-  --dk-plinth-edge: #3d4a6b;
-  --dk-platter-hi: #a8b3c7; --dk-platter: #7f8ba3; --dk-platter-lo: #5b6579; --dk-platter-edge: #454e60;
-  --dk-platter-edge-hi: #c2cbdb; --dk-platter-groove: #68738a;
-  --dk-platter-side-hi: #6b7590; --dk-platter-side-lo: #3a4254;
-  --dk-vinyl-hi: #262a33; --dk-vinyl: #14161c; --dk-vinyl-lo: #0a0b0f;
-  --dk-vinyl-groove-hi: #3d4350; --dk-vinyl-groove-lo: #060709;
-  --dk-vinyl-edge-hi: #31363f; --dk-vinyl-edge-lo: #08090c;
-  --dk-vinyl-deadwax: #191c22;
-  --dk-vinyl-sheen: #dce8ff;
-  --dk-label-hi: #d6deee; --dk-label: #c6cede; --dk-label-lo: #a3adc4; --dk-label-ink: #2a3247;
-  --dk-metal-hi: #c9d2e2; --dk-metal: #9aa5ba; --dk-metal-lo: #6b7590;
-  --dk-arm-hi: #d4dce8; --dk-arm: #a4aec2; --dk-arm-lo: #5f6980; --dk-arm-bounce: #8a94a8;
-  --dk-foot: #141a28; --dk-foot-lo: #0b0f18;
-  --dk-shadow: #05070c; --dk-shadow-op: .50;
-  --dk-knob: #3a4459; --dk-led: #7fd4ff; --dk-art: #8fb3d9;
-  --dk-top-wash: rgba(255,255,255,.05);
-  --dk-band: rgba(140,180,210,.25); --dk-groove2: rgba(0,0,0,.30);
-}
-:root[data-palette="noon"] .deck .plinth-brush {
-  fill: repeating-linear-gradient(94deg, rgba(255,255,255,.06) 0 1px, transparent 1px 3px);
-}
-:root[data-palette="dusk"] .deck {
-  --dk-plinth-top-hi: #8f5240; --dk-plinth-top: #7a4436; --dk-plinth-top-lo: #5c3328;
-  --dk-plinth-fascia-hi: #6e3f31; --dk-plinth-fascia: #63382c; --dk-plinth-fascia-lo: #46261d; --dk-plinth-fascia-base: #371d15;
-  --dk-plinth-edge: #a5654e;
-  --dk-platter-hi: #cba584; --dk-platter: #b08a6d; --dk-platter-lo: #8a6a52; --dk-platter-edge: #6f5540;
-  --dk-platter-edge-hi: #dcbd9b; --dk-platter-groove: #96765c;
-  --dk-platter-side-hi: #9a7a5e; --dk-platter-side-lo: #5f4936;
-  --dk-vinyl-hi: #2b241f; --dk-vinyl: #1a1512; --dk-vinyl-lo: #0d0a08;
-  --dk-vinyl-groove-hi: #453a31; --dk-vinyl-groove-lo: #070504;
-  --dk-vinyl-edge-hi: #372e26; --dk-vinyl-edge-lo: #0a0806;
-  --dk-vinyl-deadwax: #211a15;
-  --dk-vinyl-sheen: #ffe8d0;
-  --dk-label-hi: #f2e4c8; --dk-label: #e8d9bd; --dk-label-lo: #c9b795; --dk-label-ink: #5c4030;
-  --dk-metal-hi: #cdb277; --dk-metal: #a98f5f; --dk-metal-lo: #7d6845;
-  --dk-arm-hi: #d8bf85; --dk-arm: #b3986a; --dk-arm-lo: #6f5c3e; --dk-arm-bounce: #c9a97e;
-  --dk-foot: #3a241b; --dk-foot-lo: #281710;
-  --dk-shadow: #2a140c; --dk-shadow-op: .45;
-  --dk-knob: #8a5a42; --dk-led: #ff9a5c; --dk-art: #a34e2e;
-  --dk-top-wash: rgba(0,0,0,.35);
-  --dk-band: rgba(230,170,120,.28); --dk-groove2: rgba(0,0,0,.32);
-}
-:root[data-palette="night"] .deck {
-  --dk-plinth-top-hi: #1a1c21; --dk-plinth-top: #101114; --dk-plinth-top-lo: #07080a;
-  --dk-plinth-fascia-hi: #14161a; --dk-plinth-fascia: #0b0c0f; --dk-plinth-fascia-lo: #040405; --dk-plinth-fascia-base: #020203;
-  --dk-plinth-edge: #2a2e36;
-  --dk-platter-hi: #454b58; --dk-platter: #2b2f38; --dk-platter-lo: #191c22; --dk-platter-edge: #101216;
-  --dk-platter-edge-hi: #5a6272; --dk-platter-groove: #3a4149;
-  --dk-platter-side-hi: #23262d; --dk-platter-side-lo: #0c0e11;
-  --dk-vinyl-hi: #16181d; --dk-vinyl: #0b0c0f; --dk-vinyl-lo: #050608;
-  --dk-vinyl-groove-hi: #6fe0cf; --dk-vinyl-groove-lo: #020304;
-  --dk-vinyl-edge-hi: #3d434f; --dk-vinyl-edge-lo: #040506;
-  --dk-vinyl-deadwax: #101216;
-  --dk-vinyl-sheen: #b8fff2;
-  --dk-label-hi: #454b59; --dk-label: #3a3f4d; --dk-label-lo: #2b303c; --dk-label-ink: #9df2e3;
-  --dk-metal-hi: #8b93a3; --dk-metal: #565d6b; --dk-metal-lo: #33373f;
-  --dk-arm-hi: #9aa2b2; --dk-arm: #606775; --dk-arm-lo: #2e323b; --dk-arm-bounce: #4d5360;
-  --dk-foot: #08090b; --dk-foot-lo: #030304;
-  --dk-shadow: #000000; --dk-shadow-op: .65;
-  --dk-knob: #23262d; --dk-led: #64ffd9; --dk-art: #5cf2dc;
-  --dk-top-wash: rgba(90,150,255,.06);
-  --dk-band: rgba(87,242,214,.25); --dk-groove2: rgba(0,0,0,.35);
-}
-:root[data-palette="night"] .deck .vinyl-grooves ellipse { opacity: .20; }
-:root[data-palette="night"] .deck .vinyl-grooves ellipse:nth-child(odd) { opacity: .28; }
-:root[data-palette="night"] .deck .sheen-wedge { opacity: .8; }
-:root[data-palette="night"] .deck .label-base ellipse:first-child {
-  filter: drop-shadow(0 0 10px rgba(87,242,214,.35));
-}
-:root[data-palette="night"] .deck .vol-glyph { filter: drop-shadow(0 0 5px rgba(92,242,220,.6)); }
-
+:root[data-palette="night"] .pivot-socket { background: radial-gradient(50% 50% at 50% 50%, rgba(0,0,0,.7), transparent 72%); }
 
 /* 唱机容器降级：不支持 preserve-3d 时回退静态平面 */
 @media (max-width: 720px) {
