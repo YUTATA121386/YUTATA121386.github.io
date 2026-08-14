@@ -195,6 +195,7 @@ onBeforeUnmount(() => {
                 <div class="vinyl-rot">
                   <img class="vinyl-img" :src="vinylImg" alt="" draggable="false" />
                   <svg class="vinyl-label" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                    <circle class="label-paper" cx="24" cy="24" r="19" />
                     <circle class="label-ring" cx="24" cy="24" r="19" />
                     <circle class="label-ring-in" cx="24" cy="24" r="15.5" />
                     <g
