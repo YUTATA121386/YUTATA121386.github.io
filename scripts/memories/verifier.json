@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 90,
+      "trust": 94,
       "trend": "improving",
       "history": [
         {
@@ -203,6 +203,11 @@
           "date": "2026-08-14",
           "event": "合作 8次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-08-15",
+          "event": "合作 9次",
+          "trustDelta": 4
         }
       ],
       "summary": "关系良好"
@@ -262,8 +267,8 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 84,
-      "trend": "stable",
+      "trust": 86,
+      "trend": "improving",
       "history": [
         {
           "date": "2026-07-19",
@@ -434,26 +439,17 @@
           "date": "2026-08-14",
           "event": "合作 3次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-15",
+          "event": "合作 5次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-19",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: 首批20条素材审核完成：通过7条，拒绝13条。通过率35%。发现严重问题：大量非音乐行业素材被提交。",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-07-19",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 首批20条素材审核完成：通过19条，拒绝1条。通过率95%。",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-07-20",
       "type": "重大挛折",
@@ -787,6 +783,20 @@
       "date": "2026-08-14",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 首批20条素材全部通过，通过率100%！来源全部为白名单源（Music Business Worldwide + Music Ally），质量优秀",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-15",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 第三批素材（RAW-0041至0060）发现12条Google News黑名单源污染素材（RAW-0049至0060），你的'零Google News系列源残留",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-15",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 前20条素材全部通过（通过率100%），来源全部为白名单源（Music Business Worldwide + Music Ally），质量优秀",
       "lesson": "",
       "impact": ""
     }

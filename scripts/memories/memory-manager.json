@@ -158,13 +158,18 @@
           "date": "2026-08-14",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-15",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "verifier": {
-      "trust": 84,
-      "trend": "stable",
+      "trust": 86,
+      "trend": "improving",
       "history": [
         {
           "date": "2026-07-19",
@@ -335,12 +340,17 @@
           "date": "2026-08-14",
           "event": "合作 3次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-15",
+          "event": "合作 5次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "analyst": {
-      "trust": 90,
+      "trust": 92,
       "trend": "improving",
       "history": [
         {
@@ -447,12 +457,17 @@
           "date": "2026-08-14",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-15",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "editor": {
-      "trust": 96,
+      "trust": 98,
       "trend": "improving",
       "history": [
         {
@@ -572,6 +587,11 @@
         },
         {
           "date": "2026-08-14",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-15",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -808,6 +828,13 @@
       "date": "2026-08-14",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日工作总结：前两批共40条素材（MBW/Music Ally/Digital Music News）全部通过审核，通过率100%，覆盖版权交易、流媒体定价、A",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-15",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日工作总结：完成两轮采集，共提交173条素材。前40条素材全部通过（通过率100%），来源均为白名单源（MBW、Music Ally、Digital Musi",
       "lesson": "",
       "impact": ""
     }

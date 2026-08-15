@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 90,
+      "trust": 94,
       "trend": "improving",
       "history": [
         {
@@ -203,6 +203,11 @@
           "date": "2026-08-14",
           "event": "合作 8次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-08-15",
+          "event": "合作 9次",
+          "trustDelta": 4
         }
       ],
       "summary": "关系良好"
@@ -509,103 +514,17 @@
           "date": "2026-08-14",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-15",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-10",
-      "type": "标杆案例",
-      "title": "Taylor Swift Song ‘August’ Removed From Trump TikTok Video",
-      "source": "Variety Music",
-      "summary": "通过: Taylor Swift Song ‘August’ Removed From Trump TikTok Video",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-10",
-      "type": "标杆案例",
-      "title": "Rufus Wainwright, Kathleen Hanna, Yo La Tengo Celebrate the Radical Music of Yoko Ono",
-      "source": "Rolling Stone Music",
-      "summary": "通过: Rufus Wainwright, Kathleen Hanna, Yo La Tengo Celebrate the Radical Music of Yok",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-10",
-      "type": "标杆案例",
-      "title": "Inaugural L.A. Jazz Festival Canceled at Last Minute",
-      "source": "Rolling Stone Music",
-      "summary": "通过: Inaugural L.A. Jazz Festival Canceled at Last Minute",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-10",
-      "type": "标杆案例",
-      "title": "See Charli XCX Join the Strokes for ‘Take It or Leave It’ at Outside Lands",
-      "source": "Rolling Stone Music",
-      "summary": "通过: See Charli XCX Join the Strokes for ‘Take It or Leave It’ at Outside Lands",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-10",
-      "type": "标杆案例",
-      "title": "Drake Turns Kick Stream Into a 20-v-1 Dating Show, Warns Rap Rivals His ‘Pen Isn’t Dry’",
-      "source": "Rolling Stone Music",
-      "summary": "通过: Drake Turns Kick Stream Into a 20-v-1 Dating Show, Warns Rap Rivals His ‘Pen Isn",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-10",
-      "type": "每日统计",
-      "summary": "今日通过率: 44% (35/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-08-11",
-      "type": "被拒案例",
-      "title": "A股四大股指集体低开，油气、贵金属、煤炭板块走高 - 第一财经",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染——A股股指内容与音乐产业完全无关",
-      "summary": "被拒: A股四大股指集体低开，油气、贵金属、煤炭板块走高 - 第一财经",
-      "lesson": "避免采集此类素材: Google News黑名单源污染——A股股指内容与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-11",
-      "type": "被拒案例",
-      "title": "暑期档热门影片来袭 概念股集体走强 - 搜狐网",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染——暑期档影视股内容与音乐产业完全无关",
-      "summary": "被拒: 暑期档热门影片来袭 概念股集体走强 - 搜狐网",
-      "lesson": "避免采集此类素材: Google News黑名单源污染——暑期档影视股内容与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-11",
-      "type": "被拒案例",
-      "title": "美股收盘：三大指数集体收跌；光通信概念重挫，Coherent跌超14%；存储、半导体多数下跌，海力士、美光科技齐跌，英特尔跌超4%；油金齐涨 - 21财经",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染——美股收盘内容与音乐产业完全无关",
-      "summary": "被拒: 美股收盘：三大指数集体收跌；光通信概念重挫，Coherent跌超14%；存储、半导体多数下跌，海力士、美光科技齐跌，英特尔跌超4%；油金齐涨 - 21财经",
-      "lesson": "避免采集此类素材: Google News黑名单源污染——美股收盘内容与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-11",
-      "type": "被拒案例",
-      "title": "MLCC概念，集体走强！3只新股大幅高开 - 东方财富",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染——MLCC概念股内容与音乐产业完全无关",
-      "summary": "被拒: MLCC概念，集体走强！3只新股大幅高开 - 东方财富",
-      "lesson": "避免采集此类素材: Google News黑名单源污染——MLCC概念股内容与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-11",
-      "type": "被拒案例",
-      "title": "创新药“中国首发”密集落地 新靶点、新机制、新疗法加速向中国集聚 - 东方财富",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染——创新药概念内容与音乐产业完全无关",
-      "summary": "被拒: 创新药“中国首发”密集落地 新靶点、新机制、新疗法加速向中国集聚 - 东方财富",
-      "lesson": "避免采集此类素材: Google News黑名单源污染——创新药概念内容与音乐产业完全无关"
-    },
     {
       "date": "2026-08-11",
       "type": "标杆案例",
@@ -923,6 +842,97 @@
       "date": "2026-08-14",
       "type": "每日统计",
       "summary": "今日通过率: 69% (55/80)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-08-15",
+      "type": "被拒案例",
+      "title": "Jason Arday, ex-Cambridge professor at centre of plagiarism row, found dead - bbc.com",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，且内容（剑桥教授抄袭）与音乐行业完全无关",
+      "summary": "被拒: Jason Arday, ex-Cambridge professor at centre of plagiarism row, found dead - bb",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，且内容（剑桥教授抄袭）与音乐行业完全无关"
+    },
+    {
+      "date": "2026-08-15",
+      "type": "被拒案例",
+      "title": "Trump seeks to boost New York Republicans with tough-on-crime message - Politico",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，且内容（特朗普/共和党）与音乐行业完全无关",
+      "summary": "被拒: Trump seeks to boost New York Republicans with tough-on-crime message - Politico",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，且内容（特朗普/共和党）与音乐行业完全无关"
+    },
+    {
+      "date": "2026-08-15",
+      "type": "被拒案例",
+      "title": "DFW Airport scraps controversial Islamic footwashing station plan as Texas Gov. Abbott takes aim - F",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，且内容（机场伊斯兰洗脚站）与音乐行业完全无关",
+      "summary": "被拒: DFW Airport scraps controversial Islamic footwashing station plan as Texas Gov. ",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，且内容（机场伊斯兰洗脚站）与音乐行业完全无关"
+    },
+    {
+      "date": "2026-08-15",
+      "type": "被拒案例",
+      "title": "Trump threatens to declare strait of Hormuz ‘territory of the United States’ - The Guardian",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，且内容（特朗普/霍尔木兹海峡）与音乐行业完全无关",
+      "summary": "被拒: Trump threatens to declare strait of Hormuz ‘territory of the United States’ - T",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，且内容（特朗普/霍尔木兹海峡）与音乐行业完全无关"
+    },
+    {
+      "date": "2026-08-15",
+      "type": "被拒案例",
+      "title": "Trump asks Supreme Court to let White House ballroom construction continue during appeal - AP News",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，且内容（特朗普/白宫舞厅）与音乐行业完全无关",
+      "summary": "被拒: Trump asks Supreme Court to let White House ballroom construction continue durin",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，且内容（特朗普/白宫舞厅）与音乐行业完全无关"
+    },
+    {
+      "date": "2026-08-15",
+      "type": "标杆案例",
+      "title": "Spotify to label AI-generated artists and exclude them from editorial or algorithmic recommendations",
+      "source": "MusicTech",
+      "summary": "通过: Spotify to label AI-generated artists and exclude them from editorial or algorit",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-15",
+      "type": "标杆案例",
+      "title": "MathSynth is a free iOS synth that turns mathematical equations into instruments",
+      "source": "MusicTech",
+      "summary": "通过: MathSynth is a free iOS synth that turns mathematical equations into instruments",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-15",
+      "type": "标杆案例",
+      "title": "Pittsburgh Modular’s Lifeforms SV-2 arrives after a decade of research on synthesis",
+      "source": "MusicTech",
+      "summary": "通过: Pittsburgh Modular’s Lifeforms SV-2 arrives after a decade of research on synthe",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-15",
+      "type": "标杆案例",
+      "title": "Suno forms “global alliance” with BMG giving musicians “real choice” over AI use",
+      "source": "MusicTech",
+      "summary": "通过: Suno forms “global alliance” with BMG giving musicians “real choice” over AI use",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-15",
+      "type": "标杆案例",
+      "title": "The best new music plugins this week, free and paid",
+      "source": "MusicTech",
+      "summary": "通过: The best new music plugins this week, free and paid",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-15",
+      "type": "每日统计",
+      "summary": "今日通过率: 70% (56/80)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],
