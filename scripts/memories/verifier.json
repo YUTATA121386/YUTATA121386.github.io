@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 94,
+      "trust": 90,
       "trend": "improving",
       "history": [
         {
@@ -208,6 +208,11 @@
           "date": "2026-08-15",
           "event": "合作 9次",
           "trustDelta": 4
+        },
+        {
+          "date": "2026-08-16",
+          "event": "冲突 8次",
+          "trustDelta": -4
         }
       ],
       "summary": "关系良好"
@@ -267,7 +272,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 86,
+      "trust": 88,
       "trend": "improving",
       "history": [
         {
@@ -444,26 +449,17 @@
           "date": "2026-08-15",
           "event": "合作 5次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-16",
+          "event": "合作 3次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-20",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: 本批次106条素材初步审核完成，已处理前20条。通过12条，拒绝8条，当前通过率60%。",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-07-20",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: BARKS源的素材质量很高，全部通过。",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-07-20",
       "type": "重大挛折",
@@ -797,6 +793,20 @@
       "date": "2026-08-15",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 前20条素材全部通过（通过率100%），来源全部为白名单源（Music Business Worldwide + Music Ally），质量优秀",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-16",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 本批10条素材中，16条通过、5条因Google News黑名单源污染被拒绝、2条因内容相关性不足被拒绝。你的'无黑名单源混入'承诺严重失实",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-16",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 前20条素材全部通过（通过率100%），来源全部为白名单源（MBW×4、Music Ally×8、Billboard×8），内容覆盖AI音乐、票务监管、版权法律",
       "lesson": "",
       "impact": ""
     }

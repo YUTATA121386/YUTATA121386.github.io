@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 94,
+      "trust": 90,
       "trend": "improving",
       "history": [
         {
@@ -208,6 +208,11 @@
           "date": "2026-08-15",
           "event": "合作 9次",
           "trustDelta": 4
+        },
+        {
+          "date": "2026-08-16",
+          "event": "冲突 8次",
+          "trustDelta": -4
         }
       ],
       "summary": "关系良好"
@@ -290,6 +295,11 @@
           "date": "2026-08-13",
           "event": "合作 2次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-08-16",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
@@ -357,6 +367,11 @@
           "date": "2026-08-13",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-16",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系良好"
@@ -519,103 +534,17 @@
           "date": "2026-08-15",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-16",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-11",
-      "type": "标杆案例",
-      "title": "Time for an Intervention? Morrissey Abruptly Cancels Entire Vegas Residency Just One Week Before Kic",
-      "source": "Digital Music News",
-      "summary": "通过: Time for an Intervention? Morrissey Abruptly Cancels Entire Vegas Residency Just",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-11",
-      "type": "标杆案例",
-      "title": "Los Angeles Jazz Fest Abruptly Canceled — Organizers Cite ‘Significant, Unanticipated Last-Minute’ P",
-      "source": "Digital Music News",
-      "summary": "通过: Los Angeles Jazz Fest Abruptly Canceled — Organizers Cite ‘Significant, Unantici",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-11",
-      "type": "标杆案例",
-      "title": "Boy George Slams Bandcamp After Platform Removes ‘We Will Dance Again’ — But Why Did He Use AI?",
-      "source": "Digital Music News",
-      "summary": "通过: Boy George Slams Bandcamp After Platform Removes ‘We Will Dance Again’ — But Why",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-11",
-      "type": "标杆案例",
-      "title": "Daft Punk’s Thomas Bangalter explains why he’s “not interested in the creative use of AI”",
-      "source": "MusicTech",
-      "summary": "通过: Daft Punk’s Thomas Bangalter explains why he’s “not interested in the creative u",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-11",
-      "type": "标杆案例",
-      "title": "InMusic has allegedly shut down Native Instruments UK",
-      "source": "MusicTech",
-      "summary": "通过: InMusic has allegedly shut down Native Instruments UK",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-11",
-      "type": "每日统计",
-      "summary": "今日通过率: 68% (41/60)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-08-12",
-      "type": "被拒案例",
-      "title": "8月12日人民币兑美元中间价上调18个基点 - Sohu",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染，内容为人民币汇率，与音乐产业完全无关",
-      "summary": "被拒: 8月12日人民币兑美元中间价上调18个基点 - Sohu",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为人民币汇率，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-12",
-      "type": "被拒案例",
-      "title": "创新药板块短线拉升，百花医药触及涨停 - 新浪网",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染，内容为创新药板块，与音乐产业完全无关",
-      "summary": "被拒: 创新药板块短线拉升，百花医药触及涨停 - 新浪网",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为创新药板块，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-12",
-      "type": "被拒案例",
-      "title": "8月11日沪深两市融资余额较前一交易日增加12.99亿元 - 央广财经",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染，内容为两融余额数据，与音乐产业完全无关",
-      "summary": "被拒: 8月11日沪深两市融资余额较前一交易日增加12.99亿元 - 央广财经",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为两融余额数据，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-12",
-      "type": "被拒案例",
-      "title": "美股高开低走，存储芯片强势光通信企稳，SK海力士涨近5%，布油冲击90美元 - 东方财富",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染，内容为美股/存储芯片行情，与音乐产业完全无关",
-      "summary": "被拒: 美股高开低走，存储芯片强势光通信企稳，SK海力士涨近5%，布油冲击90美元 - 东方财富",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为美股/存储芯片行情，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-12",
-      "type": "被拒案例",
-      "title": "【开盘】A股三大股指集体小幅低开，算力租赁题材活跃 - 21财经",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染，内容为A股开盘行情，与音乐产业完全无关",
-      "summary": "被拒: 【开盘】A股三大股指集体小幅低开，算力租赁题材活跃 - 21财经",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为A股开盘行情，与音乐产业完全无关"
-    },
     {
       "date": "2026-08-12",
       "type": "标杆案例",
@@ -933,6 +862,97 @@
       "date": "2026-08-15",
       "type": "每日统计",
       "summary": "今日通过率: 70% (56/80)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-08-16",
+      "type": "被拒案例",
+      "title": "Iran War Commander Visits the USS Abraham Lincoln - wsj.com",
+      "source": "Google News Music Industry",
+      "reason": "来源为'Google News Music Industry'，属于黑名单源，且内容为军事新闻，与音乐行业无关",
+      "summary": "被拒: Iran War Commander Visits the USS Abraham Lincoln - wsj.com",
+      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'，属于黑名单源，且内容为军事新闻，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-16",
+      "type": "被拒案例",
+      "title": "Navy looking into warship redesigns as part of Trump requests - The Hill",
+      "source": "Google News Music Industry",
+      "reason": "来源为'Google News Music Industry'，属于黑名单源，且内容为海军舰艇设计新闻，与音乐行业无关",
+      "summary": "被拒: Navy looking into warship redesigns as part of Trump requests - The Hill",
+      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'，属于黑名单源，且内容为海军舰艇设计新闻，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-16",
+      "type": "被拒案例",
+      "title": "Police have arrested a 19-year-old in connection with Virginia State University shooting - WTOP",
+      "source": "Google News Music Industry",
+      "reason": "来源为'Google News Music Industry'，属于黑名单源，且内容为枪击案新闻，与音乐行业无关",
+      "summary": "被拒: Police have arrested a 19-year-old in connection with Virginia State University ",
+      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'，属于黑名单源，且内容为枪击案新闻，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-16",
+      "type": "被拒案例",
+      "title": "The Midwest braces for more heavy flooding, as Indiana seeks federal aid - NPR",
+      "source": "Google News Music Industry",
+      "reason": "来源为'Google News Music Industry'，属于黑名单源，且内容为洪水灾害新闻，与音乐行业无关",
+      "summary": "被拒: The Midwest braces for more heavy flooding, as Indiana seeks federal aid - NPR",
+      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'，属于黑名单源，且内容为洪水灾害新闻，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-16",
+      "type": "被拒案例",
+      "title": "US Democrats finalise major shakeup to 2028 presidential primary calendar - Al Jazeera",
+      "source": "Google News Music Industry",
+      "reason": "来源为'Google News Music Industry'，属于黑名单源，且内容为美国政治新闻，与音乐行业无关",
+      "summary": "被拒: US Democrats finalise major shakeup to 2028 presidential primary calendar - Al J",
+      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'，属于黑名单源，且内容为美国政治新闻，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-16",
+      "type": "标杆案例",
+      "title": "StubHub Wins Big as California’s Ticket Resale Cap Bill Dies In Committee",
+      "source": "Digital Music News",
+      "summary": "通过: StubHub Wins Big as California’s Ticket Resale Cap Bill Dies In Committee",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-16",
+      "type": "标杆案例",
+      "title": "Beatport Confirms Ban on ‘Fully or Majority AI-Generated Music,’ Adds AI Tags Under Expanded Beatdap",
+      "source": "Digital Music News",
+      "summary": "通过: Beatport Confirms Ban on ‘Fully or Majority AI-Generated Music,’ Adds AI Tags Un",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-16",
+      "type": "标杆案例",
+      "title": "2026爵士上海音乐节10月启幕 打造音乐产业策源地 - 新浪财经",
+      "source": "Google News 中国音乐产业（搜索）",
+      "summary": "通过: 2026爵士上海音乐节10月启幕 打造音乐产业策源地 - 新浪财经",
+      "lesson": "此类素材值得采集: 命中关键词 演出现场"
+    },
+    {
+      "date": "2026-08-16",
+      "type": "标杆案例",
+      "title": "KRK’s V Series Five studio monitors feature wireless control, so you can tweak them without leaving ",
+      "source": "MusicTech",
+      "summary": "通过: KRK’s V Series Five studio monitors feature wireless control, so you can tweak t",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-16",
+      "type": "标杆案例",
+      "title": "Vibe coding has come for music plugins – are we witnessing a revolution?",
+      "source": "MusicTech",
+      "summary": "通过: Vibe coding has come for music plugins – are we witnessing a revolution?",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-16",
+      "type": "每日统计",
+      "summary": "今日通过率: 60% (36/60)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],
