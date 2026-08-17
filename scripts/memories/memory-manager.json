@@ -168,12 +168,17 @@
           "date": "2026-08-16",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-17",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "verifier": {
-      "trust": 88,
+      "trust": 90,
       "trend": "improving",
       "history": [
         {
@@ -355,12 +360,17 @@
           "date": "2026-08-16",
           "event": "合作 3次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-17",
+          "event": "合作 5次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "analyst": {
-      "trust": 94,
+      "trust": 96,
       "trend": "improving",
       "history": [
         {
@@ -475,6 +485,11 @@
         },
         {
           "date": "2026-08-16",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-17",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -612,6 +627,11 @@
         },
         {
           "date": "2026-08-16",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-17",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -862,6 +882,13 @@
       "date": "2026-08-16",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日工作总结：今日共采集并提交155条素材，前20条全部通过（通过率100%），但后续批次中连续出现Google News黑名单源污染复发问题，导致RAW-00",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-17",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日工作总结：今日采集工作表现不佳，遭遇严重挫折。首次提交96条素材中，大量混入Google News黑名单源污染内容（累计约35条），导致三级复发熔断触发，提",
       "lesson": "",
       "impact": ""
     }

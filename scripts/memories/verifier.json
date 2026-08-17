@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 90,
+      "trust": 82,
       "trend": "improving",
       "history": [
         {
@@ -213,6 +213,11 @@
           "date": "2026-08-16",
           "event": "冲突 8次",
           "trustDelta": -4
+        },
+        {
+          "date": "2026-08-17",
+          "event": "冲突 10次",
+          "trustDelta": -8
         }
       ],
       "summary": "关系良好"
@@ -272,7 +277,7 @@
       "summary": "关系一般"
     },
     "memory-manager": {
-      "trust": 88,
+      "trust": 90,
       "trend": "improving",
       "history": [
         {
@@ -454,26 +459,17 @@
           "date": "2026-08-16",
           "event": "合作 3次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-17",
+          "event": "合作 5次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-20",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: RAW-2026-07-20-0003, RAW-2026-07-20-0006, RAW-2026-07-20-0008, RAW-2026-07-20-00",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-07-20",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 第一批20条素材审核完成：通过16条，拒绝4条。通过率80%。",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-07-21",
       "type": "重大挛折",
@@ -807,6 +803,20 @@
       "date": "2026-08-16",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 前20条素材全部通过（通过率100%），来源全部为白名单源（MBW×4、Music Ally×8、Billboard×8），内容覆盖AI音乐、票务监管、版权法律",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-17",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 严重警告：第11-20条素材中发现10条Google News黑名单源污染，已连续多日复发",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-17",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 今日工作总结：今日完成四批次审核（RAW-0021至0080），累计审核约60条素材，拒绝约35条（30条Google News黑名单源污染+4条NME游戏内容",
       "lesson": "",
       "impact": ""
     }

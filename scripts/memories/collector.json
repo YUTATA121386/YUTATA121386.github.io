@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 90,
+      "trust": 82,
       "trend": "improving",
       "history": [
         {
@@ -213,6 +213,11 @@
           "date": "2026-08-16",
           "event": "冲突 8次",
           "trustDelta": -4
+        },
+        {
+          "date": "2026-08-17",
+          "event": "冲突 10次",
+          "trustDelta": -8
         }
       ],
       "summary": "关系良好"
@@ -370,6 +375,11 @@
         },
         {
           "date": "2026-08-16",
+          "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-08-17",
           "event": "合作 1次",
           "trustDelta": 0
         }
@@ -539,103 +549,17 @@
           "date": "2026-08-16",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-17",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-12",
-      "type": "标杆案例",
-      "title": "Indie-Focused Exceleration Music Inks Partnership with Christian Hip-Hop Label Reach Records",
-      "source": "Digital Music News",
-      "summary": "通过: Indie-Focused Exceleration Music Inks Partnership with Christian Hip-Hop Label R",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-12",
-      "type": "标杆案例",
-      "title": "Ibiza Considers a Ban on New Clubs and Venues to ‘Contain Existing Nightlife’",
-      "source": "Digital Music News",
-      "summary": "通过: Ibiza Considers a Ban on New Clubs and Venues to ‘Contain Existing Nightlife’",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-12",
-      "type": "标杆案例",
-      "title": "Irving Azoff’s GMR Resolves $14 Million Licensing Beef With Music Choice",
-      "source": "Digital Music News",
-      "summary": "通过: Irving Azoff’s GMR Resolves $14 Million Licensing Beef With Music Choice",
-      "lesson": "此类素材值得采集: 命中关键词 音乐版权"
-    },
-    {
-      "date": "2026-08-12",
-      "type": "标杆案例",
-      "title": "Last Week, Suno Promised To Clamp-Down on Slop by Limiting Downloads—Now, We Have Details",
-      "source": "Digital Music News",
-      "summary": "通过: Last Week, Suno Promised To Clamp-Down on Slop by Limiting Downloads—Now, We Hav",
-      "lesson": "此类素材值得采集: 命中关键词 AI音乐"
-    },
-    {
-      "date": "2026-08-12",
-      "type": "标杆案例",
-      "title": "Apple Fires Back Against Boomcloud 360’s Spatial Audio Patent Infringement Allegations in Declarator",
-      "source": "Digital Music News",
-      "summary": "通过: Apple Fires Back Against Boomcloud 360’s Spatial Audio Patent Infringement Alleg",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-12",
-      "type": "每日统计",
-      "summary": "今日通过率: 83% (50/60)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-08-13",
-      "type": "被拒案例",
-      "title": "CIA had ‘low confidence’ in Iranian threat before Trump switched planes in Turkey - The Washington P",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为CIA情报评估，与音乐产业完全无关",
-      "summary": "被拒: CIA had ‘low confidence’ in Iranian threat before Trump switched planes in Turke",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为CIA情报评估，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-13",
-      "type": "被拒案例",
-      "title": "ICE’s plan to give officers electric shock gloves draws outrage and fears of misuse - AP News",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为ICE执法设备争议，与音乐产业完全无关",
-      "summary": "被拒: ICE’s plan to give officers electric shock gloves draws outrage and fears of mis",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为ICE执法设备争议，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-13",
-      "type": "被拒案例",
-      "title": "Wisconsin Gubernatorial Race Moves to Leans Democratic After the Establishment’s Great Escape; Other",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为美国州长初选，与音乐产业完全无关",
-      "summary": "被拒: Wisconsin Gubernatorial Race Moves to Leans Democratic After the Establishment’s",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为美国州长初选，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-13",
-      "type": "被拒案例",
-      "title": "Major Russian grain export terminals hit in Ukraine Black Sea port attack - BBC",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为俄乌冲突中的粮食出口，与音乐产业完全无关",
-      "summary": "被拒: Major Russian grain export terminals hit in Ukraine Black Sea port attack - BBC",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为俄乌冲突中的粮食出口，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-13",
-      "type": "被拒案例",
-      "title": "South Carolina Senate Runoff Kicks Off With Chick-fil-A and Trump Calls - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为美国参议院初选，与音乐产业完全无关",
-      "summary": "被拒: South Carolina Senate Runoff Kicks Off With Chick-fil-A and Trump Calls - The Ne",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为美国参议院初选，与音乐产业完全无关"
-    },
     {
       "date": "2026-08-13",
       "type": "标杆案例",
@@ -954,6 +878,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 60% (36/60)",
       "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-08-17",
+      "type": "被拒案例",
+      "title": "任嘉伦TMEA狂揽多项荣誉 - 新浪网",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "Google News黑名单源污染——与RAW-0070内容完全重复，来源为黑名单源",
+      "summary": "被拒: 任嘉伦TMEA狂揽多项荣誉 - 新浪网",
+      "lesson": "避免采集此类素材: Google News黑名单源污染——与RAW-0070内容完全重复，来源为黑名单源"
+    },
+    {
+      "date": "2026-08-17",
+      "type": "被拒案例",
+      "title": "张靓颖的《野心家》获得什么奖项？ - 新浪网",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "Google News黑名单源污染——来源标注为Google News 腾讯音乐/网易云",
+      "summary": "被拒: 张靓颖的《野心家》获得什么奖项？ - 新浪网",
+      "lesson": "避免采集此类素材: Google News黑名单源污染——来源标注为Google News 腾讯音乐/网易云"
+    },
+    {
+      "date": "2026-08-17",
+      "type": "被拒案例",
+      "title": "周深在TME峰会即兴演示大鱼唱法技巧 - 新浪网",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "Google News黑名单源污染——来源标注为Google News 腾讯音乐/网易云",
+      "summary": "被拒: 周深在TME峰会即兴演示大鱼唱法技巧 - 新浪网",
+      "lesson": "避免采集此类素材: Google News黑名单源污染——来源标注为Google News 腾讯音乐/网易云"
+    },
+    {
+      "date": "2026-08-17",
+      "type": "被拒案例",
+      "title": "彭迦信买来了喜马拉雅，腾讯音乐如何买来转型的信心？ - t.cj.sina.cn",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "Google News黑名单源污染——来源为t.cj.sina.cn，属于Google News黑名单源关联域名",
+      "summary": "被拒: 彭迦信买来了喜马拉雅，腾讯音乐如何买来转型的信心？ - t.cj.sina.cn",
+      "lesson": "避免采集此类素材: Google News黑名单源污染——来源为t.cj.sina.cn，属于Google News黑名单源关联域名"
+    },
+    {
+      "date": "2026-08-17",
+      "type": "被拒案例",
+      "title": "Matthew McConaughey’s Life in Songs Has Taken Him Everywhere",
+      "source": "Rolling Stone Music",
+      "reason": "内容为演员个人音乐回忆录，与音乐行业核心动态关联度低，偏向娱乐人物特写",
+      "summary": "被拒: Matthew McConaughey’s Life in Songs Has Taken Him Everywhere",
+      "lesson": "避免采集此类素材: 内容为演员个人音乐回忆录，与音乐行业核心动态关联度低，偏向娱乐人物特写"
+    },
+    {
+      "date": "2026-08-17",
+      "type": "标杆案例",
+      "title": "Jay Weinberg Reveals He Didn’t Have ‘Legal Ability’ to Work With Other Artists: Part of Him ‘Was Dyi",
+      "source": "Rolling Stone Music",
+      "summary": "通过: Jay Weinberg Reveals He Didn’t Have ‘Legal Ability’ to Work With Other Artists: ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-17",
+      "type": "标杆案例",
+      "title": "Watch Noah Kahan and Surprise Guest Chappell Roan Perform ‘California’ at Rose Bowl Stadium",
+      "source": "Rolling Stone Music",
+      "summary": "通过: Watch Noah Kahan and Surprise Guest Chappell Roan Perform ‘California’ at Rose B",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-17",
+      "type": "标杆案例",
+      "title": "Selena Gomez’s Lawyer Calls Wondermind Suit ‘Meritless,’ Will File Motion to Dismiss ‘Baseless Claim",
+      "source": "Rolling Stone Music",
+      "summary": "通过: Selena Gomez’s Lawyer Calls Wondermind Suit ‘Meritless,’ Will File Motion to Dis",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-17",
+      "type": "标杆案例",
+      "title": "Frankie Valli Says ‘I Am Not Retired,’ His Brother Bobby Apologizes for Being ‘Misinformed’",
+      "source": "Rolling Stone Music",
+      "summary": "通过: Frankie Valli Says ‘I Am Not Retired,’ His Brother Bobby Apologizes for Being ‘M",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-17",
+      "type": "标杆案例",
+      "title": "Dave Marsh, Legendary Rock Biographer and Critic, Dead at 76",
+      "source": "Rolling Stone Music",
+      "summary": "通过: Dave Marsh, Legendary Rock Biographer and Critic, Dead at 76",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-17",
+      "type": "每日统计",
+      "summary": "今日通过率: 45% (36/80)",
+      "lesson": ""
     }
   ],
   "selfReview": {
