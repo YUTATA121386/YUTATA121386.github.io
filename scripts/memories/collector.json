@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 82,
+      "trust": 76,
       "trend": "improving",
       "history": [
         {
@@ -218,6 +218,11 @@
           "date": "2026-08-17",
           "event": "冲突 10次",
           "trustDelta": -8
+        },
+        {
+          "date": "2026-08-18",
+          "event": "冲突 8次",
+          "trustDelta": -6
         }
       ],
       "summary": "关系良好"
@@ -304,6 +309,11 @@
         {
           "date": "2026-08-16",
           "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-08-18",
+          "event": "合作 2次",
           "trustDelta": 0
         }
       ],
@@ -554,103 +564,17 @@
           "date": "2026-08-17",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-18",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-13",
-      "type": "标杆案例",
-      "title": "The best new music plugins this week, free and paid",
-      "source": "MusicTech",
-      "summary": "通过: The best new music plugins this week, free and paid",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-13",
-      "type": "标杆案例",
-      "title": "How we remixed Duran Duran and Nile Rodgers: Tips and tricks from Harrison, Trixie Mattel, and Aliss",
-      "source": "MusicTech",
-      "summary": "通过: How we remixed Duran Duran and Nile Rodgers: Tips and tricks from Harrison, Trix",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-13",
-      "type": "标杆案例",
-      "title": "Reflecting on the genius of Madonna’s “otherworldly” producer, William Orbit",
-      "source": "MusicTech",
-      "summary": "通过: Reflecting on the genius of Madonna’s “otherworldly” producer, William Orbit",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-13",
-      "type": "标杆案例",
-      "title": "Meet London’s hottest new outdoor dance venue, Magazine Open-Air",
-      "source": "MusicTech",
-      "summary": "通过: Meet London’s hottest new outdoor dance venue, Magazine Open-Air",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-13",
-      "type": "标杆案例",
-      "title": "How Daniel Caesar’s executive producers, Matthew Burnett and Jordan Evans, bring his grand ideas int",
-      "source": "MusicTech",
-      "summary": "通过: How Daniel Caesar’s executive producers, Matthew Burnett and Jordan Evans, bring",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-13",
-      "type": "每日统计",
-      "summary": "今日通过率: 65% (39/60)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-08-14",
-      "type": "被拒案例",
-      "title": "Trump White House says it's losing $19B-$26 billion a year in revenue as countries dodge tariffs - P",
-      "source": "Google News Music Industry",
-      "reason": "黑名单源（Google News）污染，内容为美国政治新闻，与音乐产业无关。",
-      "summary": "被拒: Trump White House says it's losing $19B-$26 billion a year in revenue as countri",
-      "lesson": "避免采集此类素材: 黑名单源（Google News）污染，内容为美国政治新闻，与音乐产业无关。"
-    },
-    {
-      "date": "2026-08-14",
-      "type": "被拒案例",
-      "title": "'Super' El Niño is super likely as California braces for impact - Los Angeles Times",
-      "source": "Google News Music Industry",
-      "reason": "黑名单源（Google News）污染，内容为气象新闻，与音乐产业无关。",
-      "summary": "被拒: 'Super' El Niño is super likely as California braces for impact - Los Angeles Ti",
-      "lesson": "避免采集此类素材: 黑名单源（Google News）污染，内容为气象新闻，与音乐产业无关。"
-    },
-    {
-      "date": "2026-08-14",
-      "type": "被拒案例",
-      "title": "Trump Gives Green Light to U.S. Companies to Aim Hacks at Cybercriminals - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "黑名单源（Google News）污染，内容为美国政治新闻，与音乐产业无关。",
-      "summary": "被拒: Trump Gives Green Light to U.S. Companies to Aim Hacks at Cybercriminals - The N",
-      "lesson": "避免采集此类素材: 黑名单源（Google News）污染，内容为美国政治新闻，与音乐产业无关。"
-    },
-    {
-      "date": "2026-08-14",
-      "type": "被拒案例",
-      "title": "Alabama man put to death for the murder of a 5-year-old girl in last of three US executions in a day",
-      "source": "Google News Music Industry",
-      "reason": "黑名单源（Google News）污染，内容为社会新闻，与音乐产业无关。",
-      "summary": "被拒: Alabama man put to death for the murder of a 5-year-old girl in last of three US",
-      "lesson": "避免采集此类素材: 黑名单源（Google News）污染，内容为社会新闻，与音乐产业无关。"
-    },
-    {
-      "date": "2026-08-14",
-      "type": "被拒案例",
-      "title": "Before killing her kids, Lindsay Clancy searched about hallucinations, psychosis and ways to die - A",
-      "source": "Google News Music Industry",
-      "reason": "黑名单源（Google News）污染，内容为社会新闻，与音乐产业无关。",
-      "summary": "被拒: Before killing her kids, Lindsay Clancy searched about hallucinations, psychosis",
-      "lesson": "避免采集此类素材: 黑名单源（Google News）污染，内容为社会新闻，与音乐产业无关。"
-    },
     {
       "date": "2026-08-14",
       "type": "标杆案例",
@@ -968,6 +892,97 @@
       "date": "2026-08-17",
       "type": "每日统计",
       "summary": "今日通过率: 45% (36/80)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-08-18",
+      "type": "被拒案例",
+      "title": "Part of a key firearms law lapsed following a federal court decision. What happens now? - NPR",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为枪支法律，与音乐产业无关",
+      "summary": "被拒: Part of a key firearms law lapsed following a federal court decision. What happe",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为枪支法律，与音乐产业无关"
+    },
+    {
+      "date": "2026-08-18",
+      "type": "被拒案例",
+      "title": "60 days after signing Iran deal, Trump stuck in quagmire as war drags on - The Washington Post",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为外交政策，与音乐产业无关",
+      "summary": "被拒: 60 days after signing Iran deal, Trump stuck in quagmire as war drags on - The W",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为外交政策，与音乐产业无关"
+    },
+    {
+      "date": "2026-08-18",
+      "type": "被拒案例",
+      "title": "What We Know About Damages From Hurricane Lala in Hawaii - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为飓风灾害，与音乐产业无关",
+      "summary": "被拒: What We Know About Damages From Hurricane Lala in Hawaii - The New York Times",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为飓风灾害，与音乐产业无关"
+    },
+    {
+      "date": "2026-08-18",
+      "type": "被拒案例",
+      "title": "Kushner urges Netanyahu to test Hamas disarmament in Gaza - Axios",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为中东外交，与音乐产业无关",
+      "summary": "被拒: Kushner urges Netanyahu to test Hamas disarmament in Gaza - Axios",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为中东外交，与音乐产业无关"
+    },
+    {
+      "date": "2026-08-18",
+      "type": "被拒案例",
+      "title": "Trump administration briefly pauses contentious border project in Texas' Big Bend National Park - AP",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为边境项目，与音乐产业无关",
+      "summary": "被拒: Trump administration briefly pauses contentious border project in Texas' Big Ben",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为边境项目，与音乐产业无关"
+    },
+    {
+      "date": "2026-08-18",
+      "type": "标杆案例",
+      "title": "＜FLAKE RECORDS 20TH＞タイムテーブル発表、トリはAge FactoryとASIAN KUNG-FU GENERATION",
+      "source": "BARKS",
+      "summary": "通过: ＜FLAKE RECORDS 20TH＞タイムテーブル発表、トリはAge FactoryとASIAN KUNG-FU GENERATION",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-18",
+      "type": "标杆案例",
+      "title": "【俺の楽器・私の愛機】2064「いきなり沼った！」",
+      "source": "BARKS",
+      "summary": "通过: 【俺の楽器・私の愛機】2064「いきなり沼った！」",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-18",
+      "type": "标杆案例",
+      "title": "SHEN、新曲「Choose To Be Happy」MVに自然体のグルーヴ",
+      "source": "BARKS",
+      "summary": "通过: SHEN、新曲「Choose To Be Happy」MVに自然体のグルーヴ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-18",
+      "type": "标杆案例",
+      "title": "【ライブレポート】YOASOBI、自身最大規模の北米ツアー完走。国境を紡がれる新たな物語「絶対にまたもっと大きくなって返ってきます」",
+      "source": "BARKS",
+      "summary": "通过: 【ライブレポート】YOASOBI、自身最大規模の北米ツアー完走。国境を紡がれる新たな物語「絶対にまたもっと大きくなって返ってきます」",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-18",
+      "type": "标杆案例",
+      "title": "sumika、NHK「みんなのうた」で放送中の「Umm」明日配信リリース決定",
+      "source": "BARKS",
+      "summary": "通过: sumika、NHK「みんなのうた」で放送中の「Umm」明日配信リリース決定",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-18",
+      "type": "每日统计",
+      "summary": "今日通过率: 57% (46/80)",
       "lesson": ""
     }
   ],

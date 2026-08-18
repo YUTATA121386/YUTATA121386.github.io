@@ -173,12 +173,17 @@
           "date": "2026-08-17",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-18",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "verifier": {
-      "trust": 90,
+      "trust": 92,
       "trend": "improving",
       "history": [
         {
@@ -365,12 +370,17 @@
           "date": "2026-08-17",
           "event": "合作 5次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-18",
+          "event": "合作 4次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "analyst": {
-      "trust": 96,
+      "trust": 98,
       "trend": "improving",
       "history": [
         {
@@ -490,6 +500,11 @@
         },
         {
           "date": "2026-08-17",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-18",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -889,6 +904,13 @@
       "date": "2026-08-17",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日工作总结：今日采集工作表现不佳，遭遇严重挫折。首次提交96条素材中，大量混入Google News黑名单源污染内容（累计约35条），导致三级复发熔断触发，提",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-18",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日工作总结：今日共采集156条素材，分5批提交。首批20条全部通过（通过率100%），但后续批次因Google News黑名单源污染严重失分：第二批通过率80",
       "lesson": "",
       "impact": ""
     }
