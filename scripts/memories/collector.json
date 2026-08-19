@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 76,
+      "trust": 82,
       "trend": "improving",
       "history": [
         {
@@ -223,6 +223,11 @@
           "date": "2026-08-18",
           "event": "冲突 8次",
           "trustDelta": -6
+        },
+        {
+          "date": "2026-08-19",
+          "event": "合作 9次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -569,103 +574,17 @@
           "date": "2026-08-18",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-19",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-14",
-      "type": "标杆案例",
-      "title": "MathSynth is a free iOS synth that turns mathematical equations into instruments",
-      "source": "MusicTech",
-      "summary": "通过: MathSynth is a free iOS synth that turns mathematical equations into instruments",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-14",
-      "type": "标杆案例",
-      "title": "Pittsburgh Modular’s Lifeforms SV-2 arrives after a decade of research on synthesis",
-      "source": "MusicTech",
-      "summary": "通过: Pittsburgh Modular’s Lifeforms SV-2 arrives after a decade of research on synthe",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-14",
-      "type": "标杆案例",
-      "title": "Suno forms “global alliance” with BMG giving musicians “real choice” over AI use",
-      "source": "MusicTech",
-      "summary": "通过: Suno forms “global alliance” with BMG giving musicians “real choice” over AI use",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-14",
-      "type": "标杆案例",
-      "title": "The best new music plugins this week, free and paid",
-      "source": "MusicTech",
-      "summary": "通过: The best new music plugins this week, free and paid",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-14",
-      "type": "标杆案例",
-      "title": "How we remixed Duran Duran and Nile Rodgers: Tips and tricks from Harrison, Trixie Mattel, and Aliss",
-      "source": "MusicTech",
-      "summary": "通过: How we remixed Duran Duran and Nile Rodgers: Tips and tricks from Harrison, Trix",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-14",
-      "type": "每日统计",
-      "summary": "今日通过率: 69% (55/80)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-08-15",
-      "type": "被拒案例",
-      "title": "Jason Arday, ex-Cambridge professor at centre of plagiarism row, found dead - bbc.com",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，且内容（剑桥教授抄袭）与音乐行业完全无关",
-      "summary": "被拒: Jason Arday, ex-Cambridge professor at centre of plagiarism row, found dead - bb",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，且内容（剑桥教授抄袭）与音乐行业完全无关"
-    },
-    {
-      "date": "2026-08-15",
-      "type": "被拒案例",
-      "title": "Trump seeks to boost New York Republicans with tough-on-crime message - Politico",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，且内容（特朗普/共和党）与音乐行业完全无关",
-      "summary": "被拒: Trump seeks to boost New York Republicans with tough-on-crime message - Politico",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，且内容（特朗普/共和党）与音乐行业完全无关"
-    },
-    {
-      "date": "2026-08-15",
-      "type": "被拒案例",
-      "title": "DFW Airport scraps controversial Islamic footwashing station plan as Texas Gov. Abbott takes aim - F",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，且内容（机场伊斯兰洗脚站）与音乐行业完全无关",
-      "summary": "被拒: DFW Airport scraps controversial Islamic footwashing station plan as Texas Gov. ",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，且内容（机场伊斯兰洗脚站）与音乐行业完全无关"
-    },
-    {
-      "date": "2026-08-15",
-      "type": "被拒案例",
-      "title": "Trump threatens to declare strait of Hormuz ‘territory of the United States’ - The Guardian",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，且内容（特朗普/霍尔木兹海峡）与音乐行业完全无关",
-      "summary": "被拒: Trump threatens to declare strait of Hormuz ‘territory of the United States’ - T",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，且内容（特朗普/霍尔木兹海峡）与音乐行业完全无关"
-    },
-    {
-      "date": "2026-08-15",
-      "type": "被拒案例",
-      "title": "Trump asks Supreme Court to let White House ballroom construction continue during appeal - AP News",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，且内容（特朗普/白宫舞厅）与音乐行业完全无关",
-      "summary": "被拒: Trump asks Supreme Court to let White House ballroom construction continue durin",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，且内容（特朗普/白宫舞厅）与音乐行业完全无关"
-    },
     {
       "date": "2026-08-15",
       "type": "标杆案例",
@@ -981,6 +900,97 @@
     },
     {
       "date": "2026-08-18",
+      "type": "每日统计",
+      "summary": "今日通过率: 57% (46/80)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-08-19",
+      "type": "被拒案例",
+      "title": "2026 Wyoming Primary Election Results Live: US House/Senate and statewide races - Oil City News",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为政治选举结果，与音乐行业完全无关",
+      "summary": "被拒: 2026 Wyoming Primary Election Results Live: US House/Senate and statewide races ",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为政治选举结果，与音乐行业完全无关"
+    },
+    {
+      "date": "2026-08-19",
+      "type": "被拒案例",
+      "title": "Disney and ABC sue Trump's media regulator to stop early licence renewal - BBC",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为Disney与FCC诉讼新闻，虽涉及媒体行业但与音乐行业核心关联度低",
+      "summary": "被拒: Disney and ABC sue Trump's media regulator to stop early licence renewal - BBC",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为Disney与FCC诉讼新闻，虽涉及媒体行业但与音乐行业核心关联度低"
+    },
+    {
+      "date": "2026-08-19",
+      "type": "被拒案例",
+      "title": "Trump says US has no talks planned with Iran and other news from the Middle East - AP News",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为国际政治新闻，与音乐行业完全无关",
+      "summary": "被拒: Trump says US has no talks planned with Iran and other news from the Middle East",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为国际政治新闻，与音乐行业完全无关"
+    },
+    {
+      "date": "2026-08-19",
+      "type": "被拒案例",
+      "title": "Trump’s threats to Seoul may be worse than their bite - Politico",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为国际关系新闻，与音乐行业完全无关",
+      "summary": "被拒: Trump’s threats to Seoul may be worse than their bite - Politico",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为国际关系新闻，与音乐行业完全无关"
+    },
+    {
+      "date": "2026-08-19",
+      "type": "被拒案例",
+      "title": "DOJ issues grand jury subpoenas in dueling Dan Sullivans’ Republican Senate saga - NBC News",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为政治调查新闻，与音乐行业完全无关",
+      "summary": "被拒: DOJ issues grand jury subpoenas in dueling Dan Sullivans’ Republican Senate saga",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为政治调查新闻，与音乐行业完全无关"
+    },
+    {
+      "date": "2026-08-19",
+      "type": "标杆案例",
+      "title": "Five synths Tom Oberheim couldn’t release under his own name",
+      "source": "MusicTech",
+      "summary": "通过: Five synths Tom Oberheim couldn’t release under his own name",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-19",
+      "type": "标杆案例",
+      "title": "Reintroducing Dahi: “As a producer, you’re servicing other artists and helping uplift their ideas. T",
+      "source": "MusicTech",
+      "summary": "通过: Reintroducing Dahi: “As a producer, you’re servicing other artists and helping u",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-19",
+      "type": "标杆案例",
+      "title": "Age Factory、『静脈/ERROR』リリースツアーの最終公演となる台湾ワンマンを発表",
+      "source": "BARKS",
+      "summary": "通过: Age Factory、『静脈/ERROR』リリースツアーの最終公演となる台湾ワンマンを発表",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-19",
+      "type": "标杆案例",
+      "title": "浜崎あゆみ、“『レコードの日』Day2”の12月5日にアルバム6作のアナログ盤リリース決定",
+      "source": "BARKS",
+      "summary": "通过: 浜崎あゆみ、“『レコードの日』Day2”の12月5日にアルバム6作のアナログ盤リリース決定",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-19",
+      "type": "标杆案例",
+      "title": "BURNOUT SYNDROMES、歴代主題歌のカバーアルバム『ハイキュー!!×BOS – 主題歌たちの宴 -』本日発売。JUMP MV「PHOENIX」＆最新アー写公開も",
+      "source": "BARKS",
+      "summary": "通过: BURNOUT SYNDROMES、歴代主題歌のカバーアルバム『ハイキュー!!×BOS – 主題歌たちの宴 -』本日発売。JUMP MV「PHOENIX」＆最新",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-19",
       "type": "每日统计",
       "summary": "今日通过率: 57% (46/80)",
       "lesson": ""

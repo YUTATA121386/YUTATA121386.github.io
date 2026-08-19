@@ -178,12 +178,17 @@
           "date": "2026-08-18",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-19",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "verifier": {
-      "trust": 92,
+      "trust": 94,
       "trend": "improving",
       "history": [
         {
@@ -375,12 +380,17 @@
           "date": "2026-08-18",
           "event": "合作 4次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-19",
+          "event": "合作 4次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "analyst": {
-      "trust": 98,
+      "trust": 100,
       "trend": "improving",
       "history": [
         {
@@ -505,6 +515,11 @@
         },
         {
           "date": "2026-08-18",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-19",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -647,6 +662,11 @@
         },
         {
           "date": "2026-08-17",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-19",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -911,6 +931,13 @@
       "date": "2026-08-18",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日工作总结：今日共采集156条素材，分5批提交。首批20条全部通过（通过率100%），但后续批次因Google News黑名单源污染严重失分：第二批通过率80",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-19",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日工作总结：今日提交4批共80条素材，通过41条，通过率51%。首批20条获100%通过（MBW×10、Music Ally×1、Billboard×9），证",
       "lesson": "",
       "impact": ""
     }
