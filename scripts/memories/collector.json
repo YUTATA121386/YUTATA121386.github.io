@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 82,
+      "trust": 86,
       "trend": "improving",
       "history": [
         {
@@ -228,6 +228,11 @@
           "date": "2026-08-19",
           "event": "合作 9次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-08-20",
+          "event": "合作 8次",
+          "trustDelta": 4
         }
       ],
       "summary": "关系良好"
@@ -395,6 +400,11 @@
         },
         {
           "date": "2026-08-17",
+          "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-08-20",
           "event": "合作 1次",
           "trustDelta": 0
         }
@@ -579,103 +589,17 @@
           "date": "2026-08-19",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-20",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-15",
-      "type": "标杆案例",
-      "title": "Spotify to label AI-generated artists and exclude them from editorial or algorithmic recommendations",
-      "source": "MusicTech",
-      "summary": "通过: Spotify to label AI-generated artists and exclude them from editorial or algorit",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-15",
-      "type": "标杆案例",
-      "title": "MathSynth is a free iOS synth that turns mathematical equations into instruments",
-      "source": "MusicTech",
-      "summary": "通过: MathSynth is a free iOS synth that turns mathematical equations into instruments",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-15",
-      "type": "标杆案例",
-      "title": "Pittsburgh Modular’s Lifeforms SV-2 arrives after a decade of research on synthesis",
-      "source": "MusicTech",
-      "summary": "通过: Pittsburgh Modular’s Lifeforms SV-2 arrives after a decade of research on synthe",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-15",
-      "type": "标杆案例",
-      "title": "Suno forms “global alliance” with BMG giving musicians “real choice” over AI use",
-      "source": "MusicTech",
-      "summary": "通过: Suno forms “global alliance” with BMG giving musicians “real choice” over AI use",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-15",
-      "type": "标杆案例",
-      "title": "The best new music plugins this week, free and paid",
-      "source": "MusicTech",
-      "summary": "通过: The best new music plugins this week, free and paid",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-15",
-      "type": "每日统计",
-      "summary": "今日通过率: 70% (56/80)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-08-16",
-      "type": "被拒案例",
-      "title": "Iran War Commander Visits the USS Abraham Lincoln - wsj.com",
-      "source": "Google News Music Industry",
-      "reason": "来源为'Google News Music Industry'，属于黑名单源，且内容为军事新闻，与音乐行业无关",
-      "summary": "被拒: Iran War Commander Visits the USS Abraham Lincoln - wsj.com",
-      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'，属于黑名单源，且内容为军事新闻，与音乐行业无关"
-    },
-    {
-      "date": "2026-08-16",
-      "type": "被拒案例",
-      "title": "Navy looking into warship redesigns as part of Trump requests - The Hill",
-      "source": "Google News Music Industry",
-      "reason": "来源为'Google News Music Industry'，属于黑名单源，且内容为海军舰艇设计新闻，与音乐行业无关",
-      "summary": "被拒: Navy looking into warship redesigns as part of Trump requests - The Hill",
-      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'，属于黑名单源，且内容为海军舰艇设计新闻，与音乐行业无关"
-    },
-    {
-      "date": "2026-08-16",
-      "type": "被拒案例",
-      "title": "Police have arrested a 19-year-old in connection with Virginia State University shooting - WTOP",
-      "source": "Google News Music Industry",
-      "reason": "来源为'Google News Music Industry'，属于黑名单源，且内容为枪击案新闻，与音乐行业无关",
-      "summary": "被拒: Police have arrested a 19-year-old in connection with Virginia State University ",
-      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'，属于黑名单源，且内容为枪击案新闻，与音乐行业无关"
-    },
-    {
-      "date": "2026-08-16",
-      "type": "被拒案例",
-      "title": "The Midwest braces for more heavy flooding, as Indiana seeks federal aid - NPR",
-      "source": "Google News Music Industry",
-      "reason": "来源为'Google News Music Industry'，属于黑名单源，且内容为洪水灾害新闻，与音乐行业无关",
-      "summary": "被拒: The Midwest braces for more heavy flooding, as Indiana seeks federal aid - NPR",
-      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'，属于黑名单源，且内容为洪水灾害新闻，与音乐行业无关"
-    },
-    {
-      "date": "2026-08-16",
-      "type": "被拒案例",
-      "title": "US Democrats finalise major shakeup to 2028 presidential primary calendar - Al Jazeera",
-      "source": "Google News Music Industry",
-      "reason": "来源为'Google News Music Industry'，属于黑名单源，且内容为美国政治新闻，与音乐行业无关",
-      "summary": "被拒: US Democrats finalise major shakeup to 2028 presidential primary calendar - Al J",
-      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'，属于黑名单源，且内容为美国政治新闻，与音乐行业无关"
-    },
     {
       "date": "2026-08-16",
       "type": "标杆案例",
@@ -994,6 +918,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 57% (46/80)",
       "lesson": ""
+    },
+    {
+      "date": "2026-08-20",
+      "type": "被拒案例",
+      "title": "港股异动丨mRNA领域重大突破！创新药概念股飙升，云顶新耀飙升55%，晶泰控股、金斯瑞大涨超12% - 21财经",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染——港股mRNA医药新闻，与音乐产业完全无关",
+      "summary": "被拒: 港股异动丨mRNA领域重大突破！创新药概念股飙升，云顶新耀飙升55%，晶泰控股、金斯瑞大涨超12% - 21财经",
+      "lesson": "避免采集此类素材: Google News黑名单源污染——港股mRNA医药新闻，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-20",
+      "type": "被拒案例",
+      "title": "港股早评：三大指数高开逾1.1%，生物科技股、黄金股大涨 - jrj.com.cn",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染——港股行情新闻，与音乐产业完全无关",
+      "summary": "被拒: 港股早评：三大指数高开逾1.1%，生物科技股、黄金股大涨 - jrj.com.cn",
+      "lesson": "避免采集此类素材: Google News黑名单源污染——港股行情新闻，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-20",
+      "type": "被拒案例",
+      "title": "护航“七夕花路” 南航物流上海鲜花出港量劲增近200% - 中国民航网",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染——南航物流鲜花运输新闻，与音乐产业完全无关",
+      "summary": "被拒: 护航“七夕花路” 南航物流上海鲜花出港量劲增近200% - 中国民航网",
+      "lesson": "避免采集此类素材: Google News黑名单源污染——南航物流鲜花运输新闻，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-20",
+      "type": "被拒案例",
+      "title": "投资“含科量”增加 中国经济新旧动能转换加速 - 中青网",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染——中国经济新闻，与音乐产业完全无关",
+      "summary": "被拒: 投资“含科量”增加 中国经济新旧动能转换加速 - 中青网",
+      "lesson": "避免采集此类素材: Google News黑名单源污染——中国经济新闻，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-20",
+      "type": "被拒案例",
+      "title": "韩国KOSPI指数涨幅扩大至5%，科技股领涨 - 紫荆网",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染——韩国股市新闻，与音乐产业完全无关",
+      "summary": "被拒: 韩国KOSPI指数涨幅扩大至5%，科技股领涨 - 紫荆网",
+      "lesson": "避免采集此类素材: Google News黑名单源污染——韩国股市新闻，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-20",
+      "type": "标杆案例",
+      "title": "AI Remix and Mashup Platform Hook Scores ‘Landmark’ Universal Music Licensing Agreement — With Attri",
+      "source": "Digital Music News",
+      "summary": "通过: AI Remix and Mashup Platform Hook Scores ‘Landmark’ Universal Music Licensing Ag",
+      "lesson": "此类素材值得采集: 命中关键词 音乐版权"
+    },
+    {
+      "date": "2026-08-20",
+      "type": "标杆案例",
+      "title": "Music Streaming Has Increased Traffic Deaths In the US, Study Finds — With New Album Release Days Ca",
+      "source": "Digital Music News",
+      "summary": "通过: Music Streaming Has Increased Traffic Deaths In the US, Study Finds — With New A",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-20",
+      "type": "标杆案例",
+      "title": "Universal Music Repurchased Over $160 Million Worth of Its Own Stock Last Week — But Shares Are Stil",
+      "source": "Digital Music News",
+      "summary": "通过: Universal Music Repurchased Over $160 Million Worth of Its Own Stock Last Week —",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-20",
+      "type": "标杆案例",
+      "title": "Paramount Pictures and Romans Officially Settle Their ‘Smurfs’ Songs Lawsuit — Studio Allegedly ‘Dec",
+      "source": "Digital Music News",
+      "summary": "通过: Paramount Pictures and Romans Officially Settle Their ‘Smurfs’ Songs Lawsuit — S",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-20",
+      "type": "标杆案例",
+      "title": "Merlin and Jamen Capital Formally Wrap Their Curve Acquisition — Royalty Processor Says It’ll ‘Accel",
+      "source": "Digital Music News",
+      "summary": "通过: Merlin and Jamen Capital Formally Wrap Their Curve Acquisition — Royalty Process",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-20",
+      "type": "每日统计",
+      "summary": "今日通过率: 62% (28/45)",
+      "lesson": "通过率良好，保持当前标准"
     }
   ],
   "selfReview": {
