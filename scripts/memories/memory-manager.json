@@ -188,12 +188,17 @@
           "date": "2026-08-20",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-21",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "verifier": {
-      "trust": 96,
+      "trust": 98,
       "trend": "improving",
       "history": [
         {
@@ -395,6 +400,11 @@
           "date": "2026-08-20",
           "event": "合作 4次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-21",
+          "event": "合作 4次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
@@ -535,6 +545,11 @@
         },
         {
           "date": "2026-08-20",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-21",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -687,6 +702,11 @@
         },
         {
           "date": "2026-08-20",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-21",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -965,6 +985,13 @@
       "date": "2026-08-20",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日工作总结：今日共提交3批素材（首批20条、14条精选、17条常规+补采），前两批通过率80%且来源合规，但第三批提交时工作区仍存在9条Google News",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-21",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日工作总结（2026-08-21）：今日共提交4批素材，通过率呈波浪式变化——首批20条全部通过（100%），但随后两批因Google News黑名单源污染分",
       "lesson": "",
       "impact": ""
     }

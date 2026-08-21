@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 86,
+      "trust": 94,
       "trend": "improving",
       "history": [
         {
@@ -233,6 +233,11 @@
           "date": "2026-08-20",
           "event": "合作 8次",
           "trustDelta": 4
+        },
+        {
+          "date": "2026-08-21",
+          "event": "合作 11次",
+          "trustDelta": 8
         }
       ],
       "summary": "关系良好"
@@ -594,103 +599,17 @@
           "date": "2026-08-20",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-21",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-16",
-      "type": "标杆案例",
-      "title": "StubHub Wins Big as California’s Ticket Resale Cap Bill Dies In Committee",
-      "source": "Digital Music News",
-      "summary": "通过: StubHub Wins Big as California’s Ticket Resale Cap Bill Dies In Committee",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-16",
-      "type": "标杆案例",
-      "title": "Beatport Confirms Ban on ‘Fully or Majority AI-Generated Music,’ Adds AI Tags Under Expanded Beatdap",
-      "source": "Digital Music News",
-      "summary": "通过: Beatport Confirms Ban on ‘Fully or Majority AI-Generated Music,’ Adds AI Tags Un",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-16",
-      "type": "标杆案例",
-      "title": "2026爵士上海音乐节10月启幕 打造音乐产业策源地 - 新浪财经",
-      "source": "Google News 中国音乐产业（搜索）",
-      "summary": "通过: 2026爵士上海音乐节10月启幕 打造音乐产业策源地 - 新浪财经",
-      "lesson": "此类素材值得采集: 命中关键词 演出现场"
-    },
-    {
-      "date": "2026-08-16",
-      "type": "标杆案例",
-      "title": "KRK’s V Series Five studio monitors feature wireless control, so you can tweak them without leaving ",
-      "source": "MusicTech",
-      "summary": "通过: KRK’s V Series Five studio monitors feature wireless control, so you can tweak t",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-16",
-      "type": "标杆案例",
-      "title": "Vibe coding has come for music plugins – are we witnessing a revolution?",
-      "source": "MusicTech",
-      "summary": "通过: Vibe coding has come for music plugins – are we witnessing a revolution?",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-16",
-      "type": "每日统计",
-      "summary": "今日通过率: 60% (36/60)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-08-17",
-      "type": "被拒案例",
-      "title": "任嘉伦TMEA狂揽多项荣誉 - 新浪网",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News黑名单源污染——与RAW-0070内容完全重复，来源为黑名单源",
-      "summary": "被拒: 任嘉伦TMEA狂揽多项荣誉 - 新浪网",
-      "lesson": "避免采集此类素材: Google News黑名单源污染——与RAW-0070内容完全重复，来源为黑名单源"
-    },
-    {
-      "date": "2026-08-17",
-      "type": "被拒案例",
-      "title": "张靓颖的《野心家》获得什么奖项？ - 新浪网",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News黑名单源污染——来源标注为Google News 腾讯音乐/网易云",
-      "summary": "被拒: 张靓颖的《野心家》获得什么奖项？ - 新浪网",
-      "lesson": "避免采集此类素材: Google News黑名单源污染——来源标注为Google News 腾讯音乐/网易云"
-    },
-    {
-      "date": "2026-08-17",
-      "type": "被拒案例",
-      "title": "周深在TME峰会即兴演示大鱼唱法技巧 - 新浪网",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News黑名单源污染——来源标注为Google News 腾讯音乐/网易云",
-      "summary": "被拒: 周深在TME峰会即兴演示大鱼唱法技巧 - 新浪网",
-      "lesson": "避免采集此类素材: Google News黑名单源污染——来源标注为Google News 腾讯音乐/网易云"
-    },
-    {
-      "date": "2026-08-17",
-      "type": "被拒案例",
-      "title": "彭迦信买来了喜马拉雅，腾讯音乐如何买来转型的信心？ - t.cj.sina.cn",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News黑名单源污染——来源为t.cj.sina.cn，属于Google News黑名单源关联域名",
-      "summary": "被拒: 彭迦信买来了喜马拉雅，腾讯音乐如何买来转型的信心？ - t.cj.sina.cn",
-      "lesson": "避免采集此类素材: Google News黑名单源污染——来源为t.cj.sina.cn，属于Google News黑名单源关联域名"
-    },
-    {
-      "date": "2026-08-17",
-      "type": "被拒案例",
-      "title": "Matthew McConaughey’s Life in Songs Has Taken Him Everywhere",
-      "source": "Rolling Stone Music",
-      "reason": "内容为演员个人音乐回忆录，与音乐行业核心动态关联度低，偏向娱乐人物特写",
-      "summary": "被拒: Matthew McConaughey’s Life in Songs Has Taken Him Everywhere",
-      "lesson": "避免采集此类素材: 内容为演员个人音乐回忆录，与音乐行业核心动态关联度低，偏向娱乐人物特写"
-    },
     {
       "date": "2026-08-17",
       "type": "标杆案例",
@@ -1009,6 +928,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 62% (28/45)",
       "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-08-21",
+      "type": "被拒案例",
+      "title": "Man in creepy Chucky-style mask wanted by Philadelphia police is on the run - NBC News",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News Music Industry（黑名单源），内容为犯罪新闻，与音乐行业无关",
+      "summary": "被拒: Man in creepy Chucky-style mask wanted by Philadelphia police is on the run - NB",
+      "lesson": "避免采集此类素材: 来源为Google News Music Industry（黑名单源），内容为犯罪新闻，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-21",
+      "type": "被拒案例",
+      "title": "Today’s Wordle answer and hints for #1889 on August 21",
+      "source": "NME",
+      "reason": "来源为NME但内容为Wordle游戏答案，与音乐行业完全无关",
+      "summary": "被拒: Today’s Wordle answer and hints for #1889 on August 21",
+      "lesson": "避免采集此类素材: 来源为NME但内容为Wordle游戏答案，与音乐行业完全无关"
+    },
+    {
+      "date": "2026-08-21",
+      "type": "被拒案例",
+      "title": "‘Connections’ answers and hints for today, August 21",
+      "source": "NME",
+      "reason": "来源为NME但内容为Connections游戏答案，与音乐行业完全无关",
+      "summary": "被拒: ‘Connections’ answers and hints for today, August 21",
+      "lesson": "避免采集此类素材: 来源为NME但内容为Connections游戏答案，与音乐行业完全无关"
+    },
+    {
+      "date": "2026-08-21",
+      "type": "被拒案例",
+      "title": "Globle answer today – here’s the answer and hints for August 21",
+      "source": "NME",
+      "reason": "来源为NME但内容为Globle游戏答案，与音乐行业完全无关",
+      "summary": "被拒: Globle answer today – here’s the answer and hints for August 21",
+      "lesson": "避免采集此类素材: 来源为NME但内容为Globle游戏答案，与音乐行业完全无关"
+    },
+    {
+      "date": "2026-08-21",
+      "type": "被拒案例",
+      "title": "Framed answer today – here’s the solution for August 21",
+      "source": "NME",
+      "reason": "来源为NME但内容为Framed游戏答案，与音乐行业完全无关",
+      "summary": "被拒: Framed answer today – here’s the solution for August 21",
+      "lesson": "避免采集此类素材: 来源为NME但内容为Framed游戏答案，与音乐行业完全无关"
+    },
+    {
+      "date": "2026-08-21",
+      "type": "标杆案例",
+      "title": "SHANK主催＜BLAZE UP NAGASAKI 2026＞、第1弾出演者発表にラスベガス、Hump Back、ハルカミライ、フォーリミ、HEY-SMITH、KUZIRA",
+      "source": "BARKS",
+      "summary": "通过: SHANK主催＜BLAZE UP NAGASAKI 2026＞、第1弾出演者発表にラスベガス、Hump Back、ハルカミライ、フォーリミ、HEY-SMITH、",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-21",
+      "type": "标杆案例",
+      "title": "Trevor Nelson reveals brain tumour diagnosis after undergoing “very serious surgery”",
+      "source": "NME",
+      "summary": "通过: Trevor Nelson reveals brain tumour diagnosis after undergoing “very serious surg",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-21",
+      "type": "标杆案例",
+      "title": "Bleech 9:3 share brooding new single ‘Figure 8’: “The product of crying quietly so your flatmates do",
+      "source": "NME",
+      "summary": "通过: Bleech 9:3 share brooding new single ‘Figure 8’: “The product of crying quietly ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-21",
+      "type": "标杆案例",
+      "title": "Lily Allen responds to critics of her lack of audience interaction on ‘West End Girl’ tour",
+      "source": "NME",
+      "summary": "通过: Lily Allen responds to critics of her lack of audience interaction on ‘West End ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-21",
+      "type": "标杆案例",
+      "title": "Noah Kahan announces huge 2027 ‘The Last Of The Bugs’ UK and Ireland stadium shows",
+      "source": "NME",
+      "summary": "通过: Noah Kahan announces huge 2027 ‘The Last Of The Bugs’ UK and Ireland stadium sho",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-21",
+      "type": "每日统计",
+      "summary": "今日通过率: 57% (46/80)",
+      "lesson": ""
     }
   ],
   "selfReview": {
