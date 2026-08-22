@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 94,
+      "trust": 88,
       "trend": "improving",
       "history": [
         {
@@ -238,6 +238,11 @@
           "date": "2026-08-21",
           "event": "合作 11次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-08-22",
+          "event": "冲突 9次",
+          "trustDelta": -6
         }
       ],
       "summary": "关系良好"
@@ -330,6 +335,11 @@
           "date": "2026-08-18",
           "event": "合作 2次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-08-22",
+          "event": "合作 2次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
@@ -410,6 +420,11 @@
         },
         {
           "date": "2026-08-20",
+          "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-08-22",
           "event": "合作 1次",
           "trustDelta": 0
         }
@@ -604,103 +619,17 @@
           "date": "2026-08-21",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-22",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-17",
-      "type": "标杆案例",
-      "title": "Jay Weinberg Reveals He Didn’t Have ‘Legal Ability’ to Work With Other Artists: Part of Him ‘Was Dyi",
-      "source": "Rolling Stone Music",
-      "summary": "通过: Jay Weinberg Reveals He Didn’t Have ‘Legal Ability’ to Work With Other Artists: ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-17",
-      "type": "标杆案例",
-      "title": "Watch Noah Kahan and Surprise Guest Chappell Roan Perform ‘California’ at Rose Bowl Stadium",
-      "source": "Rolling Stone Music",
-      "summary": "通过: Watch Noah Kahan and Surprise Guest Chappell Roan Perform ‘California’ at Rose B",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-17",
-      "type": "标杆案例",
-      "title": "Selena Gomez’s Lawyer Calls Wondermind Suit ‘Meritless,’ Will File Motion to Dismiss ‘Baseless Claim",
-      "source": "Rolling Stone Music",
-      "summary": "通过: Selena Gomez’s Lawyer Calls Wondermind Suit ‘Meritless,’ Will File Motion to Dis",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-17",
-      "type": "标杆案例",
-      "title": "Frankie Valli Says ‘I Am Not Retired,’ His Brother Bobby Apologizes for Being ‘Misinformed’",
-      "source": "Rolling Stone Music",
-      "summary": "通过: Frankie Valli Says ‘I Am Not Retired,’ His Brother Bobby Apologizes for Being ‘M",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-17",
-      "type": "标杆案例",
-      "title": "Dave Marsh, Legendary Rock Biographer and Critic, Dead at 76",
-      "source": "Rolling Stone Music",
-      "summary": "通过: Dave Marsh, Legendary Rock Biographer and Critic, Dead at 76",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-17",
-      "type": "每日统计",
-      "summary": "今日通过率: 45% (36/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-08-18",
-      "type": "被拒案例",
-      "title": "Part of a key firearms law lapsed following a federal court decision. What happens now? - NPR",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为枪支法律，与音乐产业无关",
-      "summary": "被拒: Part of a key firearms law lapsed following a federal court decision. What happe",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为枪支法律，与音乐产业无关"
-    },
-    {
-      "date": "2026-08-18",
-      "type": "被拒案例",
-      "title": "60 days after signing Iran deal, Trump stuck in quagmire as war drags on - The Washington Post",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为外交政策，与音乐产业无关",
-      "summary": "被拒: 60 days after signing Iran deal, Trump stuck in quagmire as war drags on - The W",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为外交政策，与音乐产业无关"
-    },
-    {
-      "date": "2026-08-18",
-      "type": "被拒案例",
-      "title": "What We Know About Damages From Hurricane Lala in Hawaii - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为飓风灾害，与音乐产业无关",
-      "summary": "被拒: What We Know About Damages From Hurricane Lala in Hawaii - The New York Times",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为飓风灾害，与音乐产业无关"
-    },
-    {
-      "date": "2026-08-18",
-      "type": "被拒案例",
-      "title": "Kushner urges Netanyahu to test Hamas disarmament in Gaza - Axios",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为中东外交，与音乐产业无关",
-      "summary": "被拒: Kushner urges Netanyahu to test Hamas disarmament in Gaza - Axios",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为中东外交，与音乐产业无关"
-    },
-    {
-      "date": "2026-08-18",
-      "type": "被拒案例",
-      "title": "Trump administration briefly pauses contentious border project in Texas' Big Bend National Park - AP",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为边境项目，与音乐产业无关",
-      "summary": "被拒: Trump administration briefly pauses contentious border project in Texas' Big Ben",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为边境项目，与音乐产业无关"
-    },
     {
       "date": "2026-08-18",
       "type": "标杆案例",
@@ -1019,6 +948,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 57% (46/80)",
       "lesson": ""
+    },
+    {
+      "date": "2026-08-22",
+      "type": "被拒案例",
+      "title": "DHS confirms just 185 non-citizens on Nevada voter rolls after claiming there were thousands more - ",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为美国选民登记新闻，与音乐行业无关",
+      "summary": "被拒: DHS confirms just 185 non-citizens on Nevada voter rolls after claiming there we",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为美国选民登记新闻，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-22",
+      "type": "被拒案例",
+      "title": "Ed Martin leaving Justice Dept. after tumultuous tenure that alienated colleagues - The Washington P",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为司法部人事变动新闻，与音乐行业无关",
+      "summary": "被拒: Ed Martin leaving Justice Dept. after tumultuous tenure that alienated colleague",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为司法部人事变动新闻，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-22",
+      "type": "被拒案例",
+      "title": "Court Slashes Award Alex Jones Was Ordered to Pay Sandy Hook Parents - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为Alex Jones诽谤案判决新闻，虽涉及法律但与音乐行业无关",
+      "summary": "被拒: Court Slashes Award Alex Jones Was Ordered to Pay Sandy Hook Parents - The New Y",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为Alex Jones诽谤案判决新闻，虽涉及法律但与音乐行业无关"
+    },
+    {
+      "date": "2026-08-22",
+      "type": "被拒案例",
+      "title": "Russian 'double-tap' strike on shopping centre in Ukraine kills 16 and wounds 130 - Reuters",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为乌克兰战争新闻，与音乐行业无关",
+      "summary": "被拒: Russian 'double-tap' strike on shopping centre in Ukraine kills 16 and wounds 13",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为乌克兰战争新闻，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-22",
+      "type": "被拒案例",
+      "title": "From Australia to Germany: Growing global pressure on Israel - Ynetnews",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为国际政治新闻，与音乐行业无关",
+      "summary": "被拒: From Australia to Germany: Growing global pressure on Israel - Ynetnews",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为国际政治新闻，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-22",
+      "type": "标杆案例",
+      "title": "【ライブレポート】SCANDAL、結成20年目のアニバーサリーライブ「感謝しかないし、愛しかないです」",
+      "source": "BARKS",
+      "summary": "通过: 【ライブレポート】SCANDAL、結成20年目のアニバーサリーライブ「感謝しかないし、愛しかないです」",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-22",
+      "type": "标杆案例",
+      "title": "『ユイカ』、デジタルEP『翠色に贈る』より「残酷になりますように」MV公開",
+      "source": "BARKS",
+      "summary": "通过: 『ユイカ』、デジタルEP『翠色に贈る』より「残酷になりますように」MV公開",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-22",
+      "type": "标杆案例",
+      "title": "Sadie、新たな物語の幕開けを告げる新曲「悪の花」。新ビジュアル公開",
+      "source": "BARKS",
+      "summary": "通过: Sadie、新たな物語の幕開けを告げる新曲「悪の花」。新ビジュアル公開",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-22",
+      "type": "标杆案例",
+      "title": "ヒグチアイ、自主企画＜好きな人の好きな人＞バンド編にHakubi、Cö shu Nie、鈴木実貴子ズ",
+      "source": "BARKS",
+      "summary": "通过: ヒグチアイ、自主企画＜好きな人の好きな人＞バンド編にHakubi、Cö shu Nie、鈴木実貴子ズ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-22",
+      "type": "标杆案例",
+      "title": "G-FREAK FACTORY、アコースティックアルバム付属DVD収録＜山人音楽祭2025��のティザー公開",
+      "source": "BARKS",
+      "summary": "通过: G-FREAK FACTORY、アコースティックアルバム付属DVD収録＜山人音楽祭2025��のティザー公開",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-22",
+      "type": "每日统计",
+      "summary": "今日通过率: 61% (49/80)",
+      "lesson": "通过率良好，保持当前标准"
     }
   ],
   "selfReview": {

@@ -193,12 +193,17 @@
           "date": "2026-08-21",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-22",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     },
     "verifier": {
-      "trust": 98,
+      "trust": 100,
       "trend": "improving",
       "history": [
         {
@@ -405,6 +410,11 @@
           "date": "2026-08-21",
           "event": "合作 4次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-22",
+          "event": "合作 5次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
@@ -550,6 +560,11 @@
         },
         {
           "date": "2026-08-21",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-22",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -707,6 +722,11 @@
         },
         {
           "date": "2026-08-21",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-22",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -992,6 +1012,13 @@
       "date": "2026-08-21",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日工作总结（2026-08-21）：今日共提交4批素材，通过率呈波浪式变化——首批20条全部通过（100%），但随后两批因Google News黑名单源污染分",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-22",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日工作总结：共提交5批素材，首批20条通过率100%（MBW/Music Ally/Billboard），但后续批次出现严重问题——连续第14天Google ",
       "lesson": "",
       "impact": ""
     }
