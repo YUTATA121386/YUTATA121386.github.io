@@ -198,6 +198,11 @@
           "date": "2026-08-22",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-23",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
@@ -415,6 +420,11 @@
           "date": "2026-08-22",
           "event": "合作 5次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-23",
+          "event": "合作 5次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
@@ -565,6 +575,11 @@
         },
         {
           "date": "2026-08-22",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-23",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -727,6 +742,11 @@
         },
         {
           "date": "2026-08-22",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-23",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -1019,6 +1039,13 @@
       "date": "2026-08-22",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日工作总结：共提交5批素材，首批20条通过率100%（MBW/Music Ally/Billboard），但后续批次出现严重问题——连续第14天Google ",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-23",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日工作总结：今日共提交128+15+15+20+20条素材，但质量表现极差。前20条通过率95%，但后续批次中Google News黑名单源污染连续第15天复",
       "lesson": "",
       "impact": ""
     }

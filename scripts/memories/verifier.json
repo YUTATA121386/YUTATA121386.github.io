@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 88,
+      "trust": 82,
       "trend": "improving",
       "history": [
         {
@@ -242,6 +242,11 @@
         {
           "date": "2026-08-22",
           "event": "冲突 9次",
+          "trustDelta": -6
+        },
+        {
+          "date": "2026-08-23",
+          "event": "冲突 8次",
           "trustDelta": -6
         }
       ],
@@ -519,26 +524,17 @@
           "date": "2026-08-22",
           "event": "合作 5次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-23",
+          "event": "合作 5次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-29",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: 10条Google News源素材（0051-0060）全部拒绝。你在[MSG-COL-2026-07-29-004]中承诺'本轮171条素材保证零污染'，但工",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-07-29",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 首批20条素材审核完成，全部通过！通过率100%！",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-07-30",
       "type": "重大挛折",
@@ -872,6 +868,20 @@
       "date": "2026-08-22",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 首批20条素材全部通过，通过率100%，来源全部为白名单源（MBW×8、Music Ally×5、Billboard×7），内容覆盖高管变动、收购、AI音乐、法",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-23",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 本批15条素材中，前8条Digital Music News源素材通过，但当前队列RAW-0029至0040共12条Google News黑名单源污染素材被拒绝",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-23",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 前20条素材审核完成：19条通过，1条拒绝（通过率95%），来源全部为白名单源，无Google News污染",
       "lesson": "",
       "impact": ""
     }

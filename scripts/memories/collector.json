@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 88,
+      "trust": 82,
       "trend": "improving",
       "history": [
         {
@@ -243,6 +243,11 @@
           "date": "2026-08-22",
           "event": "冲突 9次",
           "trustDelta": -6
+        },
+        {
+          "date": "2026-08-23",
+          "event": "冲突 8次",
+          "trustDelta": -6
         }
       ],
       "summary": "关系良好"
@@ -425,6 +430,11 @@
         },
         {
           "date": "2026-08-22",
+          "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-08-23",
           "event": "合作 1次",
           "trustDelta": 0
         }
@@ -624,103 +634,17 @@
           "date": "2026-08-22",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-23",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-18",
-      "type": "标杆案例",
-      "title": "＜FLAKE RECORDS 20TH＞タイムテーブル発表、トリはAge FactoryとASIAN KUNG-FU GENERATION",
-      "source": "BARKS",
-      "summary": "通过: ＜FLAKE RECORDS 20TH＞タイムテーブル発表、トリはAge FactoryとASIAN KUNG-FU GENERATION",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-18",
-      "type": "标杆案例",
-      "title": "【俺の楽器・私の愛機】2064「いきなり沼った！」",
-      "source": "BARKS",
-      "summary": "通过: 【俺の楽器・私の愛機】2064「いきなり沼った！」",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-18",
-      "type": "标杆案例",
-      "title": "SHEN、新曲「Choose To Be Happy」MVに自然体のグルーヴ",
-      "source": "BARKS",
-      "summary": "通过: SHEN、新曲「Choose To Be Happy」MVに自然体のグルーヴ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-18",
-      "type": "标杆案例",
-      "title": "【ライブレポート】YOASOBI、自身最大規模の北米ツアー完走。国境を紡がれる新たな物語「絶対にまたもっと大きくなって返ってきます」",
-      "source": "BARKS",
-      "summary": "通过: 【ライブレポート】YOASOBI、自身最大規模の北米ツアー完走。国境を紡がれる新たな物語「絶対にまたもっと大きくなって返ってきます」",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-18",
-      "type": "标杆案例",
-      "title": "sumika、NHK「みんなのうた」で放送中の「Umm」明日配信リリース決定",
-      "source": "BARKS",
-      "summary": "通过: sumika、NHK「みんなのうた」で放送中の「Umm」明日配信リリース決定",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-18",
-      "type": "每日统计",
-      "summary": "今日通过率: 57% (46/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-08-19",
-      "type": "被拒案例",
-      "title": "2026 Wyoming Primary Election Results Live: US House/Senate and statewide races - Oil City News",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为政治选举结果，与音乐行业完全无关",
-      "summary": "被拒: 2026 Wyoming Primary Election Results Live: US House/Senate and statewide races ",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为政治选举结果，与音乐行业完全无关"
-    },
-    {
-      "date": "2026-08-19",
-      "type": "被拒案例",
-      "title": "Disney and ABC sue Trump's media regulator to stop early licence renewal - BBC",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为Disney与FCC诉讼新闻，虽涉及媒体行业但与音乐行业核心关联度低",
-      "summary": "被拒: Disney and ABC sue Trump's media regulator to stop early licence renewal - BBC",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为Disney与FCC诉讼新闻，虽涉及媒体行业但与音乐行业核心关联度低"
-    },
-    {
-      "date": "2026-08-19",
-      "type": "被拒案例",
-      "title": "Trump says US has no talks planned with Iran and other news from the Middle East - AP News",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为国际政治新闻，与音乐行业完全无关",
-      "summary": "被拒: Trump says US has no talks planned with Iran and other news from the Middle East",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为国际政治新闻，与音乐行业完全无关"
-    },
-    {
-      "date": "2026-08-19",
-      "type": "被拒案例",
-      "title": "Trump’s threats to Seoul may be worse than their bite - Politico",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为国际关系新闻，与音乐行业完全无关",
-      "summary": "被拒: Trump’s threats to Seoul may be worse than their bite - Politico",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为国际关系新闻，与音乐行业完全无关"
-    },
-    {
-      "date": "2026-08-19",
-      "type": "被拒案例",
-      "title": "DOJ issues grand jury subpoenas in dueling Dan Sullivans’ Republican Senate saga - NBC News",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为政治调查新闻，与音乐行业完全无关",
-      "summary": "被拒: DOJ issues grand jury subpoenas in dueling Dan Sullivans’ Republican Senate saga",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为政治调查新闻，与音乐行业完全无关"
-    },
     {
       "date": "2026-08-19",
       "type": "标杆案例",
@@ -1039,6 +963,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 61% (49/80)",
       "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-08-23",
+      "type": "被拒案例",
+      "title": "Today’s Wordle answer and hints for #1891 on August 23",
+      "source": "NME",
+      "reason": "NME源但内容为Wordle游戏答案，与音乐行业无关",
+      "summary": "被拒: Today’s Wordle answer and hints for #1891 on August 23",
+      "lesson": "避免采集此类素材: NME源但内容为Wordle游戏答案，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-23",
+      "type": "被拒案例",
+      "title": "‘Connections’ answers and hints for today, August 23",
+      "source": "NME",
+      "reason": "NME源但内容为Connections游戏答案，与音乐行业无关",
+      "summary": "被拒: ‘Connections’ answers and hints for today, August 23",
+      "lesson": "避免采集此类素材: NME源但内容为Connections游戏答案，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-23",
+      "type": "被拒案例",
+      "title": "Globle answer today – here’s the answer and hints for August 23",
+      "source": "NME",
+      "reason": "NME源但内容为Globle游戏答案，与音乐行业无关",
+      "summary": "被拒: Globle answer today – here’s the answer and hints for August 23",
+      "lesson": "避免采集此类素材: NME源但内容为Globle游戏答案，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-23",
+      "type": "被拒案例",
+      "title": "Framed answer today – here’s the solution for August 23",
+      "source": "NME",
+      "reason": "NME源但内容为Framed游戏答案，与音乐行业无关",
+      "summary": "被拒: Framed answer today – here’s the solution for August 23",
+      "lesson": "避免采集此类素材: NME源但内容为Framed游戏答案，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-23",
+      "type": "被拒案例",
+      "title": "PS Plus August 2026 games – what to expect on PS5 and PS4",
+      "source": "NME",
+      "reason": "NME源但内容为PS Plus游戏月免游戏，与音乐行业无关",
+      "summary": "被拒: PS Plus August 2026 games – what to expect on PS5 and PS4",
+      "lesson": "避免采集此类素材: NME源但内容为PS Plus游戏月免游戏，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-23",
+      "type": "标杆案例",
+      "title": "9Lana、TVアニメ『BLEACH 千年血戦篇-禍進譚-』EDテーマ「螺旋」アコースティックVer.をサプライズリリース",
+      "source": "BARKS",
+      "summary": "通过: 9Lana、TVアニメ『BLEACH 千年血戦篇-禍進譚-』EDテーマ「螺旋」アコースティックVer.をサプライズリリース",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-23",
+      "type": "标杆案例",
+      "title": "羊文学、2025年の日本武道館ライブ映像を夏休み期間限定で公開",
+      "source": "BARKS",
+      "summary": "通过: 羊文学、2025年の日本武道館ライブ映像を夏休み期間限定で公開",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-23",
+      "type": "标杆案例",
+      "title": "AIRFLIP、活動休止前ラストライブの第1弾ゲストにFOUR GET ME A NOTS、See You Smile、SWANKY DANKら",
+      "source": "BARKS",
+      "summary": "通过: AIRFLIP、活動休止前ラストライブの第1弾ゲストにFOUR GET ME A NOTS、See You Smile、SWANKY DANKら",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-23",
+      "type": "标杆案例",
+      "title": "vistlip主催イベント＜[Party On] -Deluxe-＞出演者発表にAzavana、アルルカン、GUMMY、MUCC、Royz",
+      "source": "BARKS",
+      "summary": "通过: vistlip主催イベント＜[Party On] -Deluxe-＞出演者発表にAzavana、アルルカン、GUMMY、MUCC、Royz",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-23",
+      "type": "标杆案例",
+      "title": "Watch Rosalía sing Bad Bunny’s ‘Safaera’ with tequila shot in Monterrey",
+      "source": "NME",
+      "summary": "通过: Watch Rosalía sing Bad Bunny’s ‘Safaera’ with tequila shot in Monterrey",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-23",
+      "type": "每日统计",
+      "summary": "今日通过率: 51% (41/80)",
+      "lesson": ""
     }
   ],
   "selfReview": {
