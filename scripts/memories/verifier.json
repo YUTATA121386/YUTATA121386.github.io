@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 82,
+      "trust": 74,
       "trend": "improving",
       "history": [
         {
@@ -248,6 +248,11 @@
           "date": "2026-08-23",
           "event": "冲突 8次",
           "trustDelta": -6
+        },
+        {
+          "date": "2026-08-24",
+          "event": "冲突 11次",
+          "trustDelta": -8
         }
       ],
       "summary": "关系良好"
@@ -529,26 +534,17 @@
           "date": "2026-08-23",
           "event": "合作 5次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-24",
+          "event": "合作 4次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-30",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: ⚠️ Google News源污染问题在昨日预警后再次大规模复发，本批次10条素材全部拒绝。",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-07-30",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 首批20条素材全部通过，通过率100%！",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-07-31",
       "type": "重大挛折",
@@ -882,6 +878,20 @@
       "date": "2026-08-23",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 前20条素材审核完成：19条通过，1条拒绝（通过率95%），来源全部为白名单源，无Google News污染",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-24",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 承诺验证失败：工作区发现8条Google News黑名单源污染素材（RAW-0013至0020），你的'物理删除并全量扫描验证'承诺严重失实。",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-24",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: RAW-0028（MusicTech源Kontakt采样器文章）通过审核，且你提交的第二、三轮精选素材（共20条）质量明显提升",
       "lesson": "",
       "impact": ""
     }

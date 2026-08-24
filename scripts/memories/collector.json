@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 82,
+      "trust": 74,
       "trend": "improving",
       "history": [
         {
@@ -248,6 +248,11 @@
           "date": "2026-08-23",
           "event": "冲突 8次",
           "trustDelta": -6
+        },
+        {
+          "date": "2026-08-24",
+          "event": "冲突 11次",
+          "trustDelta": -8
         }
       ],
       "summary": "关系良好"
@@ -435,6 +440,11 @@
         },
         {
           "date": "2026-08-23",
+          "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-08-24",
           "event": "合作 1次",
           "trustDelta": 0
         }
@@ -639,103 +649,17 @@
           "date": "2026-08-23",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-24",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-19",
-      "type": "标杆案例",
-      "title": "Five synths Tom Oberheim couldn’t release under his own name",
-      "source": "MusicTech",
-      "summary": "通过: Five synths Tom Oberheim couldn’t release under his own name",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-19",
-      "type": "标杆案例",
-      "title": "Reintroducing Dahi: “As a producer, you’re servicing other artists and helping uplift their ideas. T",
-      "source": "MusicTech",
-      "summary": "通过: Reintroducing Dahi: “As a producer, you’re servicing other artists and helping u",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-19",
-      "type": "标杆案例",
-      "title": "Age Factory、『静脈/ERROR』リリースツアーの最終公演となる台湾ワンマンを発表",
-      "source": "BARKS",
-      "summary": "通过: Age Factory、『静脈/ERROR』リリースツアーの最終公演となる台湾ワンマンを発表",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-19",
-      "type": "标杆案例",
-      "title": "浜崎あゆみ、“『レコードの日』Day2”の12月5日にアルバム6作のアナログ盤リリース決定",
-      "source": "BARKS",
-      "summary": "通过: 浜崎あゆみ、“『レコードの日』Day2”の12月5日にアルバム6作のアナログ盤リリース決定",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-19",
-      "type": "标杆案例",
-      "title": "BURNOUT SYNDROMES、歴代主題歌のカバーアルバム『ハイキュー!!×BOS – 主題歌たちの宴 -』本日発売。JUMP MV「PHOENIX」＆最新アー写公開も",
-      "source": "BARKS",
-      "summary": "通过: BURNOUT SYNDROMES、歴代主題歌のカバーアルバム『ハイキュー!!×BOS – 主題歌たちの宴 -』本日発売。JUMP MV「PHOENIX」＆最新",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-19",
-      "type": "每日统计",
-      "summary": "今日通过率: 57% (46/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-08-20",
-      "type": "被拒案例",
-      "title": "港股异动丨mRNA领域重大突破！创新药概念股飙升，云顶新耀飙升55%，晶泰控股、金斯瑞大涨超12% - 21财经",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染——港股mRNA医药新闻，与音乐产业完全无关",
-      "summary": "被拒: 港股异动丨mRNA领域重大突破！创新药概念股飙升，云顶新耀飙升55%，晶泰控股、金斯瑞大涨超12% - 21财经",
-      "lesson": "避免采集此类素材: Google News黑名单源污染——港股mRNA医药新闻，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-20",
-      "type": "被拒案例",
-      "title": "港股早评：三大指数高开逾1.1%，生物科技股、黄金股大涨 - jrj.com.cn",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染——港股行情新闻，与音乐产业完全无关",
-      "summary": "被拒: 港股早评：三大指数高开逾1.1%，生物科技股、黄金股大涨 - jrj.com.cn",
-      "lesson": "避免采集此类素材: Google News黑名单源污染——港股行情新闻，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-20",
-      "type": "被拒案例",
-      "title": "护航“七夕花路” 南航物流上海鲜花出港量劲增近200% - 中国民航网",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染——南航物流鲜花运输新闻，与音乐产业完全无关",
-      "summary": "被拒: 护航“七夕花路” 南航物流上海鲜花出港量劲增近200% - 中国民航网",
-      "lesson": "避免采集此类素材: Google News黑名单源污染——南航物流鲜花运输新闻，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-20",
-      "type": "被拒案例",
-      "title": "投资“含科量”增加 中国经济新旧动能转换加速 - 中青网",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染——中国经济新闻，与音乐产业完全无关",
-      "summary": "被拒: 投资“含科量”增加 中国经济新旧动能转换加速 - 中青网",
-      "lesson": "避免采集此类素材: Google News黑名单源污染——中国经济新闻，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-20",
-      "type": "被拒案例",
-      "title": "韩国KOSPI指数涨幅扩大至5%，科技股领涨 - 紫荆网",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染——韩国股市新闻，与音乐产业完全无关",
-      "summary": "被拒: 韩国KOSPI指数涨幅扩大至5%，科技股领涨 - 紫荆网",
-      "lesson": "避免采集此类素材: Google News黑名单源污染——韩国股市新闻，与音乐产业完全无关"
-    },
     {
       "date": "2026-08-20",
       "type": "标杆案例",
@@ -1053,6 +977,97 @@
       "date": "2026-08-23",
       "type": "每日统计",
       "summary": "今日通过率: 51% (41/80)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-08-24",
+      "type": "被拒案例",
+      "title": "Tropical Storm Moke set to dump more heavy rain on hurricane-stricken Hawaii - AP News",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为夏威夷热带风暴新闻，与音乐产业完全无关",
+      "summary": "被拒: Tropical Storm Moke set to dump more heavy rain on hurricane-stricken Hawaii - A",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为夏威夷热带风暴新闻，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-24",
+      "type": "被拒案例",
+      "title": "Today’s Wordle answer and hints for #1892 on August 24",
+      "source": "NME",
+      "reason": "NME源主题漂移，Wordle游戏答案，与音乐产业完全无关",
+      "summary": "被拒: Today’s Wordle answer and hints for #1892 on August 24",
+      "lesson": "避免采集此类素材: NME源主题漂移，Wordle游戏答案，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-24",
+      "type": "被拒案例",
+      "title": "‘Connections’ answers and hints for today, August 24",
+      "source": "NME",
+      "reason": "NME源主题漂移，Connections游戏答案，与音乐产业完全无关",
+      "summary": "被拒: ‘Connections’ answers and hints for today, August 24",
+      "lesson": "避免采集此类素材: NME源主题漂移，Connections游戏答案，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-24",
+      "type": "被拒案例",
+      "title": "Globle answer today – here’s the answer and hints for August 24",
+      "source": "NME",
+      "reason": "NME源主题漂移，Globle游戏答案，与音乐产业完全无关",
+      "summary": "被拒: Globle answer today – here’s the answer and hints for August 24",
+      "lesson": "避免采集此类素材: NME源主题漂移，Globle游戏答案，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-24",
+      "type": "被拒案例",
+      "title": "Framed answer today – here’s the solution for August 24",
+      "source": "NME",
+      "reason": "NME源主题漂移，Framed游戏答案，与音乐产业完全无关",
+      "summary": "被拒: Framed answer today – here’s the solution for August 24",
+      "lesson": "避免采集此类素材: NME源主题漂移，Framed游戏答案，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-24",
+      "type": "标杆案例",
+      "title": "GOOD BYE APRIL、 夏の終わりの余韻を閉じ込めたラブソング「She’s Summer Blue」リリース決定",
+      "source": "BARKS",
+      "summary": "通过: GOOD BYE APRIL、 夏の終わりの余韻を閉じ込めたラブソング「She’s Summer Blue」リリース決定",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-24",
+      "type": "标杆案例",
+      "title": "tuki.、新曲「バブル」で『ハニーレモンソーダ』作者・村田真優とコラボ。描き下ろし漫画がMVに",
+      "source": "BARKS",
+      "summary": "通过: tuki.、新曲「バブル」で『ハニーレモンソーダ』作者・村田真優とコラボ。描き下ろし漫画がMVに",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-24",
+      "type": "标杆案例",
+      "title": "Suge Knight claims that Tupac Shakur’s friends and family smoked his ashes",
+      "source": "NME",
+      "summary": "通过: Suge Knight claims that Tupac Shakur’s friends and family smoked his ashes",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-24",
+      "type": "标杆案例",
+      "title": "New “Letterboxd for clubbing” app lets you rate DJs after a night out",
+      "source": "NME",
+      "summary": "通过: New “Letterboxd for clubbing” app lets you rate DJs after a night out",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-24",
+      "type": "标杆案例",
+      "title": "BBC Introducing announce ‘LIVE’ events across the UK for young artists after being axed from Reading",
+      "source": "NME",
+      "summary": "通过: BBC Introducing announce ‘LIVE’ events across the UK for young artists after bei",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-24",
+      "type": "每日统计",
+      "summary": "今日通过率: 40% (24/60)",
       "lesson": ""
     }
   ],
