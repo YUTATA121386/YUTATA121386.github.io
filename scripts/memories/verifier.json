@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 74,
+      "trust": 78,
       "trend": "improving",
       "history": [
         {
@@ -253,6 +253,11 @@
           "date": "2026-08-24",
           "event": "冲突 11次",
           "trustDelta": -8
+        },
+        {
+          "date": "2026-08-25",
+          "event": "合作 7次",
+          "trustDelta": 4
         }
       ],
       "summary": "关系良好"
@@ -539,26 +544,17 @@
           "date": "2026-08-24",
           "event": "合作 4次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-08-25",
+          "event": "合作 3次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-31",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: 严重问题：本批20条素材中，后10条（0051-0060）全部为Google News黑名单源残留，且内容均为财经/股市/政策新闻，与音乐行业零关联。",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-07-31",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 首批20条审核完成：通过19条，拒绝1条，通过率95%。整体质量极高，未发现Google News源污染问题。",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-08-01",
       "type": "重大挛折",
@@ -892,6 +888,20 @@
       "date": "2026-08-24",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: RAW-0028（MusicTech源Kontakt采样器文章）通过审核，且你提交的第二、三轮精选素材（共20条）质量明显提升",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-25",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: ❌ 你的'0污染'承诺验证失败：待审核队列中RAW-0031至0040共10条素材为Google News黑名单源，内容全部为非音乐话题（股市/期货/机器人/央",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-25",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 首批20条素材全部通过，通过率100%，来源全部为白名单源（MBW×5、Music Ally×2、Billboard×10、Digital Music News",
       "lesson": "",
       "impact": ""
     }

@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 74,
+      "trust": 78,
       "trend": "improving",
       "history": [
         {
@@ -253,6 +253,11 @@
           "date": "2026-08-24",
           "event": "冲突 11次",
           "trustDelta": -8
+        },
+        {
+          "date": "2026-08-25",
+          "event": "合作 7次",
+          "trustDelta": 4
         }
       ],
       "summary": "关系良好"
@@ -355,7 +360,7 @@
       "summary": "关系一般"
     },
     "editor": {
-      "trust": 70,
+      "trust": 72,
       "trend": "improving",
       "history": [
         {
@@ -447,6 +452,11 @@
           "date": "2026-08-24",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-08-25",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
@@ -654,103 +664,17 @@
           "date": "2026-08-24",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-25",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-20",
-      "type": "标杆案例",
-      "title": "AI Remix and Mashup Platform Hook Scores ‘Landmark’ Universal Music Licensing Agreement — With Attri",
-      "source": "Digital Music News",
-      "summary": "通过: AI Remix and Mashup Platform Hook Scores ‘Landmark’ Universal Music Licensing Ag",
-      "lesson": "此类素材值得采集: 命中关键词 音乐版权"
-    },
-    {
-      "date": "2026-08-20",
-      "type": "标杆案例",
-      "title": "Music Streaming Has Increased Traffic Deaths In the US, Study Finds — With New Album Release Days Ca",
-      "source": "Digital Music News",
-      "summary": "通过: Music Streaming Has Increased Traffic Deaths In the US, Study Finds — With New A",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-20",
-      "type": "标杆案例",
-      "title": "Universal Music Repurchased Over $160 Million Worth of Its Own Stock Last Week — But Shares Are Stil",
-      "source": "Digital Music News",
-      "summary": "通过: Universal Music Repurchased Over $160 Million Worth of Its Own Stock Last Week —",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-20",
-      "type": "标杆案例",
-      "title": "Paramount Pictures and Romans Officially Settle Their ‘Smurfs’ Songs Lawsuit — Studio Allegedly ‘Dec",
-      "source": "Digital Music News",
-      "summary": "通过: Paramount Pictures and Romans Officially Settle Their ‘Smurfs’ Songs Lawsuit — S",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-20",
-      "type": "标杆案例",
-      "title": "Merlin and Jamen Capital Formally Wrap Their Curve Acquisition — Royalty Processor Says It’ll ‘Accel",
-      "source": "Digital Music News",
-      "summary": "通过: Merlin and Jamen Capital Formally Wrap Their Curve Acquisition — Royalty Process",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-20",
-      "type": "每日统计",
-      "summary": "今日通过率: 62% (28/45)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-08-21",
-      "type": "被拒案例",
-      "title": "Man in creepy Chucky-style mask wanted by Philadelphia police is on the run - NBC News",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News Music Industry（黑名单源），内容为犯罪新闻，与音乐行业无关",
-      "summary": "被拒: Man in creepy Chucky-style mask wanted by Philadelphia police is on the run - NB",
-      "lesson": "避免采集此类素材: 来源为Google News Music Industry（黑名单源），内容为犯罪新闻，与音乐行业无关"
-    },
-    {
-      "date": "2026-08-21",
-      "type": "被拒案例",
-      "title": "Today’s Wordle answer and hints for #1889 on August 21",
-      "source": "NME",
-      "reason": "来源为NME但内容为Wordle游戏答案，与音乐行业完全无关",
-      "summary": "被拒: Today’s Wordle answer and hints for #1889 on August 21",
-      "lesson": "避免采集此类素材: 来源为NME但内容为Wordle游戏答案，与音乐行业完全无关"
-    },
-    {
-      "date": "2026-08-21",
-      "type": "被拒案例",
-      "title": "‘Connections’ answers and hints for today, August 21",
-      "source": "NME",
-      "reason": "来源为NME但内容为Connections游戏答案，与音乐行业完全无关",
-      "summary": "被拒: ‘Connections’ answers and hints for today, August 21",
-      "lesson": "避免采集此类素材: 来源为NME但内容为Connections游戏答案，与音乐行业完全无关"
-    },
-    {
-      "date": "2026-08-21",
-      "type": "被拒案例",
-      "title": "Globle answer today – here’s the answer and hints for August 21",
-      "source": "NME",
-      "reason": "来源为NME但内容为Globle游戏答案，与音乐行业完全无关",
-      "summary": "被拒: Globle answer today – here’s the answer and hints for August 21",
-      "lesson": "避免采集此类素材: 来源为NME但内容为Globle游戏答案，与音乐行业完全无关"
-    },
-    {
-      "date": "2026-08-21",
-      "type": "被拒案例",
-      "title": "Framed answer today – here’s the solution for August 21",
-      "source": "NME",
-      "reason": "来源为NME但内容为Framed游戏答案，与音乐行业完全无关",
-      "summary": "被拒: Framed answer today – here’s the solution for August 21",
-      "lesson": "避免采集此类素材: 来源为NME但内容为Framed游戏答案，与音乐行业完全无关"
-    },
     {
       "date": "2026-08-21",
       "type": "标杆案例",
@@ -1068,6 +992,97 @@
       "date": "2026-08-24",
       "type": "每日统计",
       "summary": "今日通过率: 40% (24/60)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-08-25",
+      "type": "被拒案例",
+      "title": "'A hard night.' Hawk Fire sparks frenzied evacuation in Reno, Nevada, area - USA Today",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源，内容为山火/疏散新闻，完全非音乐话题",
+      "summary": "被拒: 'A hard night.' Hawk Fire sparks frenzied evacuation in Reno, Nevada, area - USA",
+      "lesson": "避免采集此类素材: Google News黑名单源，内容为山火/疏散新闻，完全非音乐话题"
+    },
+    {
+      "date": "2026-08-25",
+      "type": "被拒案例",
+      "title": "Massachusetts woman suspected of killing police officer husband found dead - The Guardian",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源，内容为谋杀案/警方调查，完全非音乐话题",
+      "summary": "被拒: Massachusetts woman suspected of killing police officer husband found dead - The",
+      "lesson": "避免采集此类素材: Google News黑名单源，内容为谋杀案/警方调查，完全非音乐话题"
+    },
+    {
+      "date": "2026-08-25",
+      "type": "被拒案例",
+      "title": "European leaders mark Ukraine’s 35th Independence Day as Russian invasion pushes on - AP News",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源，内容为乌克兰独立日/俄乌冲突，完全非音乐话题",
+      "summary": "被拒: European leaders mark Ukraine’s 35th Independence Day as Russian invasion pushes",
+      "lesson": "避免采集此类素材: Google News黑名单源，内容为乌克兰独立日/俄乌冲突，完全非音乐话题"
+    },
+    {
+      "date": "2026-08-25",
+      "type": "被拒案例",
+      "title": "Trump administration proposes $103,000 fee for H-1B visas after legal setback - The Washington Post",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源，内容为H-1B签证费用提案，完全非音乐话题",
+      "summary": "被拒: Trump administration proposes $103,000 fee for H-1B visas after legal setback - ",
+      "lesson": "避免采集此类素材: Google News黑名单源，内容为H-1B签证费用提案，完全非音乐话题"
+    },
+    {
+      "date": "2026-08-25",
+      "type": "被拒案例",
+      "title": "Victims in quintuple homicide near Forest Grove include 3 generations of women, friends - Oregon Pub",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源，内容为五重谋杀案/受害者报道，完全非音乐话题",
+      "summary": "被拒: Victims in quintuple homicide near Forest Grove include 3 generations of women, ",
+      "lesson": "避免采集此类素材: Google News黑名单源，内容为五重谋杀案/受害者报道，完全非音乐话题"
+    },
+    {
+      "date": "2026-08-25",
+      "type": "标杆案例",
+      "title": "Dr. Dre says he is “embracing” AI in music: “It’s a new tool for creativity”",
+      "source": "MusicTech",
+      "summary": "通过: Dr. Dre says he is “embracing” AI in music: “It’s a new tool for creativity”",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-25",
+      "type": "标杆案例",
+      "title": "Get 84% off the SSL Native X-Echo plugin in this limited-time sale at Plugin Boutique",
+      "source": "MusicTech",
+      "summary": "通过: Get 84% off the SSL Native X-Echo plugin in this limited-time sale at Plugin Bou",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-25",
+      "type": "标杆案例",
+      "title": "How Jeff Mills brought his true vision for his 1995 Liquid Room mix to life with Spatial Audio",
+      "source": "MusicTech",
+      "summary": "通过: How Jeff Mills brought his true vision for his 1995 Liquid Room mix to life with",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-25",
+      "type": "标杆案例",
+      "title": "The Sony headphones we rated 10/10 are now $78 off",
+      "source": "MusicTech",
+      "summary": "通过: The Sony headphones we rated 10/10 are now $78 off",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-25",
+      "type": "标杆案例",
+      "title": "Kontakt’s future is uncertain — these samplers might be your backup plan",
+      "source": "MusicTech",
+      "summary": "通过: Kontakt’s future is uncertain — these samplers might be your backup plan",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-25",
+      "type": "每日统计",
+      "summary": "今日通过率: 58% (35/60)",
       "lesson": ""
     }
   ],
