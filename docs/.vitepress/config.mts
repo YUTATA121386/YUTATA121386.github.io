@@ -18,6 +18,7 @@ export default defineConfig({
   description: "通识 · 产品 · 思考 · 记录",
   appearance: false,
   head: [
+    ["meta", { name: "robots", content: "noindex, nofollow" }],
     ["link", { rel: "icon", href: KB_BASE + "favicon.svg" }],
     ["link", { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" }],
     ["script", { src: KB_BASE + "lightbox.js" }],
