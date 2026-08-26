@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 78,
+      "trust": 86,
       "trend": "improving",
       "history": [
         {
@@ -258,6 +258,11 @@
           "date": "2026-08-25",
           "event": "合作 7次",
           "trustDelta": 4
+        },
+        {
+          "date": "2026-08-26",
+          "event": "合作 12次",
+          "trustDelta": 8
         }
       ],
       "summary": "关系良好"
@@ -457,6 +462,11 @@
           "date": "2026-08-25",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-26",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系良好"
@@ -669,103 +679,17 @@
           "date": "2026-08-25",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-26",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-21",
-      "type": "标杆案例",
-      "title": "SHANK主催＜BLAZE UP NAGASAKI 2026＞、第1弾出演者発表にラスベガス、Hump Back、ハルカミライ、フォーリミ、HEY-SMITH、KUZIRA",
-      "source": "BARKS",
-      "summary": "通过: SHANK主催＜BLAZE UP NAGASAKI 2026＞、第1弾出演者発表にラスベガス、Hump Back、ハルカミライ、フォーリミ、HEY-SMITH、",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-21",
-      "type": "标杆案例",
-      "title": "Trevor Nelson reveals brain tumour diagnosis after undergoing “very serious surgery”",
-      "source": "NME",
-      "summary": "通过: Trevor Nelson reveals brain tumour diagnosis after undergoing “very serious surg",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-21",
-      "type": "标杆案例",
-      "title": "Bleech 9:3 share brooding new single ‘Figure 8’: “The product of crying quietly so your flatmates do",
-      "source": "NME",
-      "summary": "通过: Bleech 9:3 share brooding new single ‘Figure 8’: “The product of crying quietly ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-21",
-      "type": "标杆案例",
-      "title": "Lily Allen responds to critics of her lack of audience interaction on ‘West End Girl’ tour",
-      "source": "NME",
-      "summary": "通过: Lily Allen responds to critics of her lack of audience interaction on ‘West End ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-21",
-      "type": "标杆案例",
-      "title": "Noah Kahan announces huge 2027 ‘The Last Of The Bugs’ UK and Ireland stadium shows",
-      "source": "NME",
-      "summary": "通过: Noah Kahan announces huge 2027 ‘The Last Of The Bugs’ UK and Ireland stadium sho",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-21",
-      "type": "每日统计",
-      "summary": "今日通过率: 57% (46/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-08-22",
-      "type": "被拒案例",
-      "title": "DHS confirms just 185 non-citizens on Nevada voter rolls after claiming there were thousands more - ",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为美国选民登记新闻，与音乐行业无关",
-      "summary": "被拒: DHS confirms just 185 non-citizens on Nevada voter rolls after claiming there we",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为美国选民登记新闻，与音乐行业无关"
-    },
-    {
-      "date": "2026-08-22",
-      "type": "被拒案例",
-      "title": "Ed Martin leaving Justice Dept. after tumultuous tenure that alienated colleagues - The Washington P",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为司法部人事变动新闻，与音乐行业无关",
-      "summary": "被拒: Ed Martin leaving Justice Dept. after tumultuous tenure that alienated colleague",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为司法部人事变动新闻，与音乐行业无关"
-    },
-    {
-      "date": "2026-08-22",
-      "type": "被拒案例",
-      "title": "Court Slashes Award Alex Jones Was Ordered to Pay Sandy Hook Parents - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为Alex Jones诽谤案判决新闻，虽涉及法律但与音乐行业无关",
-      "summary": "被拒: Court Slashes Award Alex Jones Was Ordered to Pay Sandy Hook Parents - The New Y",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为Alex Jones诽谤案判决新闻，虽涉及法律但与音乐行业无关"
-    },
-    {
-      "date": "2026-08-22",
-      "type": "被拒案例",
-      "title": "Russian 'double-tap' strike on shopping centre in Ukraine kills 16 and wounds 130 - Reuters",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为乌克兰战争新闻，与音乐行业无关",
-      "summary": "被拒: Russian 'double-tap' strike on shopping centre in Ukraine kills 16 and wounds 13",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为乌克兰战争新闻，与音乐行业无关"
-    },
-    {
-      "date": "2026-08-22",
-      "type": "被拒案例",
-      "title": "From Australia to Germany: Growing global pressure on Israel - Ynetnews",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为国际政治新闻，与音乐行业无关",
-      "summary": "被拒: From Australia to Germany: Growing global pressure on Israel - Ynetnews",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为国际政治新闻，与音乐行业无关"
-    },
     {
       "date": "2026-08-22",
       "type": "标杆案例",
@@ -1083,6 +1007,97 @@
       "date": "2026-08-25",
       "type": "每日统计",
       "summary": "今日通过率: 58% (35/60)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-08-26",
+      "type": "被拒案例",
+      "title": "Trump says all mines cleared from Strait of Hormuz - BBC",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为国际军事政治（霍尔木兹海峡），与音乐产业完全无关",
+      "summary": "被拒: Trump says all mines cleared from Strait of Hormuz - BBC",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为国际军事政治（霍尔木兹海峡），与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-26",
+      "type": "被拒案例",
+      "title": "The Next Tropical Storm Will Share Dolly’s Name - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为天气预报，与音乐产业完全无关",
+      "summary": "被拒: The Next Tropical Storm Will Share Dolly’s Name - The New York Times",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为天气预报，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-26",
+      "type": "被拒案例",
+      "title": "Billings, Montana shooting, house fire today: Alan Smith killed 8 relatives, including 4 kids, in mu",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为刑事案件，与音乐产业完全无关",
+      "summary": "被拒: Billings, Montana shooting, house fire today: Alan Smith killed 8 relatives, inc",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为刑事案件，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-26",
+      "type": "被拒案例",
+      "title": "Record-breaking heat dome expected to bring dangerous temperatures to US south-west - The Guardian",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为极端天气，与音乐产业完全无关",
+      "summary": "被拒: Record-breaking heat dome expected to bring dangerous temperatures to US south-w",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为极端天气，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-26",
+      "type": "被拒案例",
+      "title": "Democratic socialists notch another win in the Oklahoma Senate primary runoff - NBC News",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为美国政治选举，与音乐产业完全无关",
+      "summary": "被拒: Democratic socialists notch another win in the Oklahoma Senate primary runoff - ",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为美国政治选举，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-08-26",
+      "type": "标杆案例",
+      "title": "What is EQ in music production and mixing?",
+      "source": "MusicTech",
+      "summary": "通过: What is EQ in music production and mixing?",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-26",
+      "type": "标杆案例",
+      "title": "Core Sampler is “the sampler Pro Tools should already have” – this is how it works",
+      "source": "MusicTech",
+      "summary": "通过: Core Sampler is “the sampler Pro Tools should already have” – this is how it wor",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-26",
+      "type": "标杆案例",
+      "title": "It’s been 60 years since Jimi Hendrix first plugged into a Marshall – and the brand is celebrating w",
+      "source": "MusicTech",
+      "summary": "通过: It’s been 60 years since Jimi Hendrix first plugged into a Marshall – and the br",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-26",
+      "type": "标杆案例",
+      "title": "Dr. Dre says he is “embracing” AI in music: “It’s a new tool for creativity”",
+      "source": "MusicTech",
+      "summary": "通过: Dr. Dre says he is “embracing” AI in music: “It’s a new tool for creativity”",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-26",
+      "type": "标杆案例",
+      "title": "How Jeff Mills brought his true vision for his 1995 Liquid Room mix to life with Spatial Audio",
+      "source": "MusicTech",
+      "summary": "通过: How Jeff Mills brought his true vision for his 1995 Liquid Room mix to life with",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-26",
+      "type": "每日统计",
+      "summary": "今日通过率: 42% (25/60)",
       "lesson": ""
     }
   ],
