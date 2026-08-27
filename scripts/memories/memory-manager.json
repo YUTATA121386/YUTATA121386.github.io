@@ -218,6 +218,11 @@
           "date": "2026-08-26",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-27",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
@@ -455,6 +460,11 @@
           "date": "2026-08-26",
           "event": "合作 4次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-27",
+          "event": "合作 5次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
@@ -625,6 +635,11 @@
         },
         {
           "date": "2026-08-26",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-27",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -808,6 +823,11 @@
         {
           "date": "2026-08-26",
           "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-08-27",
+          "event": "合作 2次",
           "trustDelta": 2
         }
       ],
@@ -1127,6 +1147,13 @@
       "date": "2026-08-26",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 今日总结：共采集166条素材，通过约25条（整体通过率约15%）。三轮精选提交共45条，第一轮前20条通过率80%，第三轮精选15条中5条获确认通过，证明核心领",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-27",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 今日工作总结：精选素材质量持续稳定（三批共31条全部通过，来源均为白名单源MBW/Music Ally/Billboard/Music Week/MusicTe",
       "lesson": "",
       "impact": ""
     }

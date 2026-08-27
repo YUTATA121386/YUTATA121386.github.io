@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 86,
+      "trust": 94,
       "trend": "improving",
       "history": [
         {
@@ -263,6 +263,11 @@
           "date": "2026-08-26",
           "event": "合作 12次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-08-27",
+          "event": "合作 10次",
+          "trustDelta": 8
         }
       ],
       "summary": "关系良好"
@@ -359,6 +364,11 @@
         {
           "date": "2026-08-22",
           "event": "合作 2次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-08-27",
+          "event": "合作 1次",
           "trustDelta": 0
         }
       ],
@@ -684,103 +694,17 @@
           "date": "2026-08-26",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-27",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-22",
-      "type": "标杆案例",
-      "title": "【ライブレポート】SCANDAL、結成20年目のアニバーサリーライブ「感謝しかないし、愛しかないです」",
-      "source": "BARKS",
-      "summary": "通过: 【ライブレポート】SCANDAL、結成20年目のアニバーサリーライブ「感謝しかないし、愛しかないです」",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-22",
-      "type": "标杆案例",
-      "title": "『ユイカ』、デジタルEP『翠色に贈る』より「残酷になりますように」MV公開",
-      "source": "BARKS",
-      "summary": "通过: 『ユイカ』、デジタルEP『翠色に贈る』より「残酷になりますように」MV公開",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-22",
-      "type": "标杆案例",
-      "title": "Sadie、新たな物語の幕開けを告げる新曲「悪の花」。新ビジュアル公開",
-      "source": "BARKS",
-      "summary": "通过: Sadie、新たな物語の幕開けを告げる新曲「悪の花」。新ビジュアル公開",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-22",
-      "type": "标杆案例",
-      "title": "ヒグチアイ、自主企画＜好きな人の好きな人＞バンド編にHakubi、Cö shu Nie、鈴木実貴子ズ",
-      "source": "BARKS",
-      "summary": "通过: ヒグチアイ、自主企画＜好きな人の好きな人＞バンド編にHakubi、Cö shu Nie、鈴木実貴子ズ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-22",
-      "type": "标杆案例",
-      "title": "G-FREAK FACTORY、アコースティックアルバム付属DVD収録＜山人音楽祭2025��のティザー公開",
-      "source": "BARKS",
-      "summary": "通过: G-FREAK FACTORY、アコースティックアルバム付属DVD収録＜山人音楽祭2025��のティザー公開",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-22",
-      "type": "每日统计",
-      "summary": "今日通过率: 61% (49/80)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-08-23",
-      "type": "被拒案例",
-      "title": "Today’s Wordle answer and hints for #1891 on August 23",
-      "source": "NME",
-      "reason": "NME源但内容为Wordle游戏答案，与音乐行业无关",
-      "summary": "被拒: Today’s Wordle answer and hints for #1891 on August 23",
-      "lesson": "避免采集此类素材: NME源但内容为Wordle游戏答案，与音乐行业无关"
-    },
-    {
-      "date": "2026-08-23",
-      "type": "被拒案例",
-      "title": "‘Connections’ answers and hints for today, August 23",
-      "source": "NME",
-      "reason": "NME源但内容为Connections游戏答案，与音乐行业无关",
-      "summary": "被拒: ‘Connections’ answers and hints for today, August 23",
-      "lesson": "避免采集此类素材: NME源但内容为Connections游戏答案，与音乐行业无关"
-    },
-    {
-      "date": "2026-08-23",
-      "type": "被拒案例",
-      "title": "Globle answer today – here’s the answer and hints for August 23",
-      "source": "NME",
-      "reason": "NME源但内容为Globle游戏答案，与音乐行业无关",
-      "summary": "被拒: Globle answer today – here’s the answer and hints for August 23",
-      "lesson": "避免采集此类素材: NME源但内容为Globle游戏答案，与音乐行业无关"
-    },
-    {
-      "date": "2026-08-23",
-      "type": "被拒案例",
-      "title": "Framed answer today – here’s the solution for August 23",
-      "source": "NME",
-      "reason": "NME源但内容为Framed游戏答案，与音乐行业无关",
-      "summary": "被拒: Framed answer today – here’s the solution for August 23",
-      "lesson": "避免采集此类素材: NME源但内容为Framed游戏答案，与音乐行业无关"
-    },
-    {
-      "date": "2026-08-23",
-      "type": "被拒案例",
-      "title": "PS Plus August 2026 games – what to expect on PS5 and PS4",
-      "source": "NME",
-      "reason": "NME源但内容为PS Plus游戏月免游戏，与音乐行业无关",
-      "summary": "被拒: PS Plus August 2026 games – what to expect on PS5 and PS4",
-      "lesson": "避免采集此类素材: NME源但内容为PS Plus游戏月免游戏，与音乐行业无关"
-    },
     {
       "date": "2026-08-23",
       "type": "标杆案例",
@@ -1099,6 +1023,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 42% (25/60)",
       "lesson": ""
+    },
+    {
+      "date": "2026-08-27",
+      "type": "被拒案例",
+      "title": "ICE arrested a record number of people without criminal records in summer enforcement surge, new dat",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为ICE执法新闻，与音乐行业无关",
+      "summary": "被拒: ICE arrested a record number of people without criminal records in summer enforc",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为ICE执法新闻，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-27",
+      "type": "被拒案例",
+      "title": "CIA chief John Ratcliffe reportedly made secretive Moscow trip to warn Russia against attacking NATO",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为CIA情报新闻，与音乐行业无关",
+      "summary": "被拒: CIA chief John Ratcliffe reportedly made secretive Moscow trip to warn Russia ag",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为CIA情报新闻，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-27",
+      "type": "被拒案例",
+      "title": "Ratko Mladic, Murderous ‘Butcher of Bosnia,’ Dies at 83 - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为战争罪犯逝世新闻，与音乐行业无关",
+      "summary": "被拒: Ratko Mladic, Murderous ‘Butcher of Bosnia,’ Dies at 83 - The New York Times",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为战争罪犯逝世新闻，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-27",
+      "type": "被拒案例",
+      "title": "Republicans Caught in a Bind With Trump as Midterms Near - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为美国政治新闻，与音乐行业无关",
+      "summary": "被拒: Republicans Caught in a Bind With Trump as Midterms Near - The New York Times",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为美国政治新闻，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-27",
+      "type": "被拒案例",
+      "title": "Trump visa restrictions will worsen strains on the economy, experts say - The Washington Post",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为签证政策新闻，与音乐行业无关",
+      "summary": "被拒: Trump visa restrictions will worsen strains on the economy, experts say - The Wa",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为签证政策新闻，与音乐行业无关"
+    },
+    {
+      "date": "2026-08-27",
+      "type": "标杆案例",
+      "title": "BALLISTIK BOYZ、NEW EP『BLAST』CD収録内容解禁。ライブ初披露されたユニット曲も収録",
+      "source": "BARKS",
+      "summary": "通过: BALLISTIK BOYZ、NEW EP『BLAST』CD収録内容解禁。ライブ初披露されたユニット曲も収録",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-27",
+      "type": "标杆案例",
+      "title": "えむにみに、1stアルバム『あんろっく』配信決定。『鉄鍋のジャン!』ED主題歌「泣いた悪魔」など収録",
+      "source": "BARKS",
+      "summary": "通过: えむにみに、1stアルバム『あんろっく』配信決定。『鉄鍋のジャン!』ED主題歌「泣いた悪魔」など収録",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-27",
+      "type": "标杆案例",
+      "title": "【ライブレポート】福山雅治、ドームツアーファイナルで見せた“龍”の現在地",
+      "source": "BARKS",
+      "summary": "通过: 【ライブレポート】福山雅治、ドームツアーファイナルで見せた“龍”の現在地",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-27",
+      "type": "标杆案例",
+      "title": "【ライヴレポート】DIV主催＜夏の行方FES2026 -TOKYO FINAL-＞11組がつないだ夏の終幕と笑顔「またやろう」",
+      "source": "BARKS",
+      "summary": "通过: 【ライヴレポート】DIV主催＜夏の行方FES2026 -TOKYO FINAL-＞11組がつないだ夏の終幕と笑顔「またやろう」",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-27",
+      "type": "标杆案例",
+      "title": "【ライブレポート】つばきファクトリー、河口湖で今年も届けた“灼熱ライブ”「皆さんが純粋に楽しんでいる姿が幸せ」",
+      "source": "BARKS",
+      "summary": "通过: 【ライブレポート】つばきファクトリー、河口湖で今年も届けた“灼熱ライブ”「皆さんが純粋に楽しんでいる姿が幸せ」",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-27",
+      "type": "每日统计",
+      "summary": "今日通过率: 61% (49/80)",
+      "lesson": "通过率良好，保持当前标准"
     }
   ],
   "selfReview": {
