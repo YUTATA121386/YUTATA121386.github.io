@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 94,
+      "trust": 100,
       "trend": "improving",
       "history": [
         {
@@ -268,6 +268,11 @@
           "date": "2026-08-27",
           "event": "合作 10次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-08-28",
+          "event": "合作 11次",
+          "trustDelta": 10
         }
       ],
       "summary": "关系良好"
@@ -369,6 +374,11 @@
         {
           "date": "2026-08-27",
           "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-08-28",
+          "event": "合作 2次",
           "trustDelta": 0
         }
       ],
@@ -699,103 +709,17 @@
           "date": "2026-08-27",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-28",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-23",
-      "type": "标杆案例",
-      "title": "9Lana、TVアニメ『BLEACH 千年血戦篇-禍進譚-』EDテーマ「螺旋」アコースティックVer.をサプライズリリース",
-      "source": "BARKS",
-      "summary": "通过: 9Lana、TVアニメ『BLEACH 千年血戦篇-禍進譚-』EDテーマ「螺旋」アコースティックVer.をサプライズリリース",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-23",
-      "type": "标杆案例",
-      "title": "羊文学、2025年の日本武道館ライブ映像を夏休み期間限定で公開",
-      "source": "BARKS",
-      "summary": "通过: 羊文学、2025年の日本武道館ライブ映像を夏休み期間限定で公開",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-23",
-      "type": "标杆案例",
-      "title": "AIRFLIP、活動休止前ラストライブの第1弾ゲストにFOUR GET ME A NOTS、See You Smile、SWANKY DANKら",
-      "source": "BARKS",
-      "summary": "通过: AIRFLIP、活動休止前ラストライブの第1弾ゲストにFOUR GET ME A NOTS、See You Smile、SWANKY DANKら",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-23",
-      "type": "标杆案例",
-      "title": "vistlip主催イベント＜[Party On] -Deluxe-＞出演者発表にAzavana、アルルカン、GUMMY、MUCC、Royz",
-      "source": "BARKS",
-      "summary": "通过: vistlip主催イベント＜[Party On] -Deluxe-＞出演者発表にAzavana、アルルカン、GUMMY、MUCC、Royz",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-23",
-      "type": "标杆案例",
-      "title": "Watch Rosalía sing Bad Bunny’s ‘Safaera’ with tequila shot in Monterrey",
-      "source": "NME",
-      "summary": "通过: Watch Rosalía sing Bad Bunny’s ‘Safaera’ with tequila shot in Monterrey",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-23",
-      "type": "每日统计",
-      "summary": "今日通过率: 51% (41/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-08-24",
-      "type": "被拒案例",
-      "title": "Tropical Storm Moke set to dump more heavy rain on hurricane-stricken Hawaii - AP News",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为夏威夷热带风暴新闻，与音乐产业完全无关",
-      "summary": "被拒: Tropical Storm Moke set to dump more heavy rain on hurricane-stricken Hawaii - A",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为夏威夷热带风暴新闻，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-24",
-      "type": "被拒案例",
-      "title": "Today’s Wordle answer and hints for #1892 on August 24",
-      "source": "NME",
-      "reason": "NME源主题漂移，Wordle游戏答案，与音乐产业完全无关",
-      "summary": "被拒: Today’s Wordle answer and hints for #1892 on August 24",
-      "lesson": "避免采集此类素材: NME源主题漂移，Wordle游戏答案，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-24",
-      "type": "被拒案例",
-      "title": "‘Connections’ answers and hints for today, August 24",
-      "source": "NME",
-      "reason": "NME源主题漂移，Connections游戏答案，与音乐产业完全无关",
-      "summary": "被拒: ‘Connections’ answers and hints for today, August 24",
-      "lesson": "避免采集此类素材: NME源主题漂移，Connections游戏答案，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-24",
-      "type": "被拒案例",
-      "title": "Globle answer today – here’s the answer and hints for August 24",
-      "source": "NME",
-      "reason": "NME源主题漂移，Globle游戏答案，与音乐产业完全无关",
-      "summary": "被拒: Globle answer today – here’s the answer and hints for August 24",
-      "lesson": "避免采集此类素材: NME源主题漂移，Globle游戏答案，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-24",
-      "type": "被拒案例",
-      "title": "Framed answer today – here’s the solution for August 24",
-      "source": "NME",
-      "reason": "NME源主题漂移，Framed游戏答案，与音乐产业完全无关",
-      "summary": "被拒: Framed answer today – here’s the solution for August 24",
-      "lesson": "避免采集此类素材: NME源主题漂移，Framed游戏答案，与音乐产业完全无关"
-    },
     {
       "date": "2026-08-24",
       "type": "标杆案例",
@@ -1113,6 +1037,97 @@
       "date": "2026-08-27",
       "type": "每日统计",
       "summary": "今日通过率: 61% (49/80)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-08-28",
+      "type": "被拒案例",
+      "title": "工业和信息化部曝光一批新能源汽车监督检查典型案例 - 人民网",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源，内容为非音乐话题（新能源汽车）",
+      "summary": "被拒: 工业和信息化部曝光一批新能源汽车监督检查典型案例 - 人民网",
+      "lesson": "避免采集此类素材: Google News黑名单源，内容为非音乐话题（新能源汽车）"
+    },
+    {
+      "date": "2026-08-28",
+      "type": "被拒案例",
+      "title": "昔日“彩电一哥”康佳宣布主动申请退市 告别A股舞台 - 中华网",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源，内容为非音乐话题（彩电退市/股市）",
+      "summary": "被拒: 昔日“彩电一哥”康佳宣布主动申请退市 告别A股舞台 - 中华网",
+      "lesson": "避免采集此类素材: Google News黑名单源，内容为非音乐话题（彩电退市/股市）"
+    },
+    {
+      "date": "2026-08-28",
+      "type": "被拒案例",
+      "title": "英伟达，市值一夜暴增2.97万亿元 - 京报网",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源，内容为非音乐话题（英伟达/股市）",
+      "summary": "被拒: 英伟达，市值一夜暴增2.97万亿元 - 京报网",
+      "lesson": "避免采集此类素材: Google News黑名单源，内容为非音乐话题（英伟达/股市）"
+    },
+    {
+      "date": "2026-08-28",
+      "type": "被拒案例",
+      "title": "南向资金丨中国人寿逆势遭净卖出8.78亿港元 - 东方财富",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源，内容为非音乐话题（南向资金/股市）",
+      "summary": "被拒: 南向资金丨中国人寿逆势遭净卖出8.78亿港元 - 东方财富",
+      "lesson": "避免采集此类素材: Google News黑名单源，内容为非音乐话题（南向资金/股市）"
+    },
+    {
+      "date": "2026-08-28",
+      "type": "被拒案例",
+      "title": "日经225指数8月28日（周五）收盘上涨273.58点，涨幅0.41%，报66405.56点。 - 金融界",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源，内容为非音乐话题（日经指数/股市）",
+      "summary": "被拒: 日经225指数8月28日（周五）收盘上涨273.58点，涨幅0.41%，报66405.56点。 - 金融界",
+      "lesson": "避免采集此类素材: Google News黑名单源，内容为非音乐话题（日经指数/股市）"
+    },
+    {
+      "date": "2026-08-28",
+      "type": "标杆案例",
+      "title": "A free version of the acclaimed Reason Rack has just launched – here’s everything you need to know",
+      "source": "MusicTech",
+      "summary": "通过: A free version of the acclaimed Reason Rack has just launched – here’s everythin",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-28",
+      "type": "标杆案例",
+      "title": "SoundCloud is finally letting artists sell music directly to fans – with zero commission",
+      "source": "MusicTech",
+      "summary": "通过: SoundCloud is finally letting artists sell music directly to fans – with zero co",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-28",
+      "type": "标杆案例",
+      "title": "Master the drop with Arturia’s new Pure SUB soft bass synthesizer",
+      "source": "MusicTech",
+      "summary": "通过: Master the drop with Arturia’s new Pure SUB soft bass synthesizer",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-28",
+      "type": "标杆案例",
+      "title": "Polyend has unveiled a new MIDI controller – and it looks an awful lot like a QWERTY keyboard",
+      "source": "MusicTech",
+      "summary": "通过: Polyend has unveiled a new MIDI controller – and it looks an awful lot like a QW",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-28",
+      "type": "标杆案例",
+      "title": "Dreamtonics’ Instrument X can create a digital orchestra that sounds like real musicians",
+      "source": "MusicTech",
+      "summary": "通过: Dreamtonics’ Instrument X can create a digital orchestra that sounds like real m",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-28",
+      "type": "每日统计",
+      "summary": "今日通过率: 77% (54/70)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],

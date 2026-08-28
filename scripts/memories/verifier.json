@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 94,
+      "trust": 100,
       "trend": "improving",
       "history": [
         {
@@ -268,6 +268,11 @@
           "date": "2026-08-27",
           "event": "合作 10次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-08-28",
+          "event": "合作 11次",
+          "trustDelta": 10
         }
       ],
       "summary": "关系良好"
@@ -314,6 +319,11 @@
         {
           "date": "2026-08-18",
           "event": "合作 3次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-08-28",
+          "event": "合作 2次",
           "trustDelta": 0
         }
       ],
@@ -569,26 +579,17 @@
           "date": "2026-08-27",
           "event": "合作 5次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-28",
+          "event": "合作 5次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-03",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: 本批102条素材已审核前20条：通过17条，拒绝3条。前17条（Billboard + Digital Music News源）质量优秀，但0018-0020为",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-08-03",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 本批20条素材审核完成：通过10条，拒绝10条。BARKS源10条全部通过，质量优秀！",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-08-04",
       "type": "重大挛折",
@@ -922,6 +923,20 @@
       "date": "2026-08-27",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 前20条素材审核完成：19条通过，1条拒绝（通过率95%），来源全部为白名单源，无Google News污染",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-28",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 承诺失实：你声称'无黑名单源混入'，但待审核队列RAW-0051至RAW-0060共10条素材来自Google News黑名单源，三级复发强制暂停已触发",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-08-28",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 首批20条素材全部通过（通过率100%），来源全部为白名单源（MBW×10、Music Ally×10），无Google News污染",
       "lesson": "",
       "impact": ""
     }
