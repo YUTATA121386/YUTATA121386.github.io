@@ -273,6 +273,11 @@
           "date": "2026-08-28",
           "event": "合作 11次",
           "trustDelta": 10
+        },
+        {
+          "date": "2026-08-29",
+          "event": "合作 9次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -380,12 +385,17 @@
           "date": "2026-08-28",
           "event": "合作 2次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-08-29",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
     },
     "editor": {
-      "trust": 72,
+      "trust": 74,
       "trend": "improving",
       "history": [
         {
@@ -487,6 +497,11 @@
           "date": "2026-08-26",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-08-29",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
@@ -714,103 +729,17 @@
           "date": "2026-08-28",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-29",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-24",
-      "type": "标杆案例",
-      "title": "GOOD BYE APRIL、 夏の終わりの余韻を閉じ込めたラブソング「She’s Summer Blue」リリース決定",
-      "source": "BARKS",
-      "summary": "通过: GOOD BYE APRIL、 夏の終わりの余韻を閉じ込めたラブソング「She’s Summer Blue」リリース決定",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-24",
-      "type": "标杆案例",
-      "title": "tuki.、新曲「バブル」で『ハニーレモンソーダ』作者・村田真優とコラボ。描き下ろし漫画がMVに",
-      "source": "BARKS",
-      "summary": "通过: tuki.、新曲「バブル」で『ハニーレモンソーダ』作者・村田真優とコラボ。描き下ろし漫画がMVに",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-24",
-      "type": "标杆案例",
-      "title": "Suge Knight claims that Tupac Shakur’s friends and family smoked his ashes",
-      "source": "NME",
-      "summary": "通过: Suge Knight claims that Tupac Shakur’s friends and family smoked his ashes",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-24",
-      "type": "标杆案例",
-      "title": "New “Letterboxd for clubbing” app lets you rate DJs after a night out",
-      "source": "NME",
-      "summary": "通过: New “Letterboxd for clubbing” app lets you rate DJs after a night out",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-24",
-      "type": "标杆案例",
-      "title": "BBC Introducing announce ‘LIVE’ events across the UK for young artists after being axed from Reading",
-      "source": "NME",
-      "summary": "通过: BBC Introducing announce ‘LIVE’ events across the UK for young artists after bei",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-24",
-      "type": "每日统计",
-      "summary": "今日通过率: 40% (24/60)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-08-25",
-      "type": "被拒案例",
-      "title": "'A hard night.' Hawk Fire sparks frenzied evacuation in Reno, Nevada, area - USA Today",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源，内容为山火/疏散新闻，完全非音乐话题",
-      "summary": "被拒: 'A hard night.' Hawk Fire sparks frenzied evacuation in Reno, Nevada, area - USA",
-      "lesson": "避免采集此类素材: Google News黑名单源，内容为山火/疏散新闻，完全非音乐话题"
-    },
-    {
-      "date": "2026-08-25",
-      "type": "被拒案例",
-      "title": "Massachusetts woman suspected of killing police officer husband found dead - The Guardian",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源，内容为谋杀案/警方调查，完全非音乐话题",
-      "summary": "被拒: Massachusetts woman suspected of killing police officer husband found dead - The",
-      "lesson": "避免采集此类素材: Google News黑名单源，内容为谋杀案/警方调查，完全非音乐话题"
-    },
-    {
-      "date": "2026-08-25",
-      "type": "被拒案例",
-      "title": "European leaders mark Ukraine’s 35th Independence Day as Russian invasion pushes on - AP News",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源，内容为乌克兰独立日/俄乌冲突，完全非音乐话题",
-      "summary": "被拒: European leaders mark Ukraine’s 35th Independence Day as Russian invasion pushes",
-      "lesson": "避免采集此类素材: Google News黑名单源，内容为乌克兰独立日/俄乌冲突，完全非音乐话题"
-    },
-    {
-      "date": "2026-08-25",
-      "type": "被拒案例",
-      "title": "Trump administration proposes $103,000 fee for H-1B visas after legal setback - The Washington Post",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源，内容为H-1B签证费用提案，完全非音乐话题",
-      "summary": "被拒: Trump administration proposes $103,000 fee for H-1B visas after legal setback - ",
-      "lesson": "避免采集此类素材: Google News黑名单源，内容为H-1B签证费用提案，完全非音乐话题"
-    },
-    {
-      "date": "2026-08-25",
-      "type": "被拒案例",
-      "title": "Victims in quintuple homicide near Forest Grove include 3 generations of women, friends - Oregon Pub",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源，内容为五重谋杀案/受害者报道，完全非音乐话题",
-      "summary": "被拒: Victims in quintuple homicide near Forest Grove include 3 generations of women, ",
-      "lesson": "避免采集此类素材: Google News黑名单源，内容为五重谋杀案/受害者报道，完全非音乐话题"
-    },
     {
       "date": "2026-08-25",
       "type": "标杆案例",
@@ -1129,6 +1058,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 77% (54/70)",
       "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-08-29",
+      "type": "被拒案例",
+      "title": "White House teleprompter operator ordered to pay $172K for placing prediction market bets on Trump’s",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为白宫政治新闻，与音乐产业无关",
+      "summary": "被拒: White House teleprompter operator ordered to pay $172K for placing prediction ma",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为白宫政治新闻，与音乐产业无关"
+    },
+    {
+      "date": "2026-08-29",
+      "type": "被拒案例",
+      "title": "Gov. Abbott blocks state agencies from spending money on Flock cameras - The Texas Tribune",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为德州政府新闻，与音乐产业无关",
+      "summary": "被拒: Gov. Abbott blocks state agencies from spending money on Flock cameras - The Tex",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为德州政府新闻，与音乐产业无关"
+    },
+    {
+      "date": "2026-08-29",
+      "type": "被拒案例",
+      "title": "No verdict in Lindsay Clancy trial Friday after jury deliberates all day - NBC Boston",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为法律审判新闻，与音乐产业无关",
+      "summary": "被拒: No verdict in Lindsay Clancy trial Friday after jury deliberates all day - NBC B",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为法律审判新闻，与音乐产业无关"
+    },
+    {
+      "date": "2026-08-29",
+      "type": "被拒案例",
+      "title": "Trump Assails NY’s Hochul After She Rejects ‘Lake America’ Name - Bloomberg.com",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为美国政治新闻，与音乐产业无关",
+      "summary": "被拒: Trump Assails NY’s Hochul After She Rejects ‘Lake America’ Name - Bloomberg.com",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为美国政治新闻，与音乐产业无关"
+    },
+    {
+      "date": "2026-08-29",
+      "type": "被拒案例",
+      "title": "Right-wing commentator Milo Yiannopoulos detained by ICE - BBC",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为移民政策新闻，与音乐产业无关",
+      "summary": "被拒: Right-wing commentator Milo Yiannopoulos detained by ICE - BBC",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为移民政策新闻，与音乐产业无关"
+    },
+    {
+      "date": "2026-08-29",
+      "type": "标杆案例",
+      "title": "Master the drop with Arturia’s new Pure SUB soft bass synthesizer",
+      "source": "MusicTech",
+      "summary": "通过: Master the drop with Arturia’s new Pure SUB soft bass synthesizer",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-29",
+      "type": "标杆案例",
+      "title": "Polyend has unveiled a new MIDI controller – and it looks an awful lot like a QWERTY keyboard",
+      "source": "MusicTech",
+      "summary": "通过: Polyend has unveiled a new MIDI controller – and it looks an awful lot like a QW",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-29",
+      "type": "标杆案例",
+      "title": "Dreamtonics’ Instrument X can create a digital orchestra that sounds like real musicians",
+      "source": "MusicTech",
+      "summary": "通过: Dreamtonics’ Instrument X can create a digital orchestra that sounds like real m",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-29",
+      "type": "标杆案例",
+      "title": "A colouring book for Ableton: meet Stencils – the tool designed to help you master musical arrangeme",
+      "source": "MusicTech",
+      "summary": "通过: A colouring book for Ableton: meet Stencils – the tool designed to help you mast",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-29",
+      "type": "标杆案例",
+      "title": "The best new music plugins this week, free and paid",
+      "source": "MusicTech",
+      "summary": "通过: The best new music plugins this week, free and paid",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-29",
+      "type": "每日统计",
+      "summary": "今日通过率: 59% (47/80)",
+      "lesson": ""
     }
   ],
   "selfReview": {
