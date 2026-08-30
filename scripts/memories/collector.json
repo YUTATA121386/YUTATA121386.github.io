@@ -278,6 +278,11 @@
           "date": "2026-08-29",
           "event": "合作 9次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-08-30",
+          "event": "合作 8次",
+          "trustDelta": 4
         }
       ],
       "summary": "关系良好"
@@ -734,103 +739,17 @@
           "date": "2026-08-29",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-30",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-25",
-      "type": "标杆案例",
-      "title": "Dr. Dre says he is “embracing” AI in music: “It’s a new tool for creativity”",
-      "source": "MusicTech",
-      "summary": "通过: Dr. Dre says he is “embracing” AI in music: “It’s a new tool for creativity”",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-25",
-      "type": "标杆案例",
-      "title": "Get 84% off the SSL Native X-Echo plugin in this limited-time sale at Plugin Boutique",
-      "source": "MusicTech",
-      "summary": "通过: Get 84% off the SSL Native X-Echo plugin in this limited-time sale at Plugin Bou",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-25",
-      "type": "标杆案例",
-      "title": "How Jeff Mills brought his true vision for his 1995 Liquid Room mix to life with Spatial Audio",
-      "source": "MusicTech",
-      "summary": "通过: How Jeff Mills brought his true vision for his 1995 Liquid Room mix to life with",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-25",
-      "type": "标杆案例",
-      "title": "The Sony headphones we rated 10/10 are now $78 off",
-      "source": "MusicTech",
-      "summary": "通过: The Sony headphones we rated 10/10 are now $78 off",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-25",
-      "type": "标杆案例",
-      "title": "Kontakt’s future is uncertain — these samplers might be your backup plan",
-      "source": "MusicTech",
-      "summary": "通过: Kontakt’s future is uncertain — these samplers might be your backup plan",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-25",
-      "type": "每日统计",
-      "summary": "今日通过率: 58% (35/60)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-08-26",
-      "type": "被拒案例",
-      "title": "Trump says all mines cleared from Strait of Hormuz - BBC",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为国际军事政治（霍尔木兹海峡），与音乐产业完全无关",
-      "summary": "被拒: Trump says all mines cleared from Strait of Hormuz - BBC",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为国际军事政治（霍尔木兹海峡），与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-26",
-      "type": "被拒案例",
-      "title": "The Next Tropical Storm Will Share Dolly’s Name - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为天气预报，与音乐产业完全无关",
-      "summary": "被拒: The Next Tropical Storm Will Share Dolly’s Name - The New York Times",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为天气预报，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-26",
-      "type": "被拒案例",
-      "title": "Billings, Montana shooting, house fire today: Alan Smith killed 8 relatives, including 4 kids, in mu",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为刑事案件，与音乐产业完全无关",
-      "summary": "被拒: Billings, Montana shooting, house fire today: Alan Smith killed 8 relatives, inc",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为刑事案件，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-26",
-      "type": "被拒案例",
-      "title": "Record-breaking heat dome expected to bring dangerous temperatures to US south-west - The Guardian",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为极端天气，与音乐产业完全无关",
-      "summary": "被拒: Record-breaking heat dome expected to bring dangerous temperatures to US south-w",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为极端天气，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-08-26",
-      "type": "被拒案例",
-      "title": "Democratic socialists notch another win in the Oklahoma Senate primary runoff - NBC News",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为美国政治选举，与音乐产业完全无关",
-      "summary": "被拒: Democratic socialists notch another win in the Oklahoma Senate primary runoff - ",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为美国政治选举，与音乐产业完全无关"
-    },
     {
       "date": "2026-08-26",
       "type": "标杆案例",
@@ -1148,6 +1067,97 @@
       "date": "2026-08-29",
       "type": "每日统计",
       "summary": "今日通过率: 59% (47/80)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-08-30",
+      "type": "被拒案例",
+      "title": "New US sanctions will hit ordinary Iranians hard as crashing economy stirs fresh protests - Fortune",
+      "source": "Google News Music Industry",
+      "reason": "来源为'Google News Music Industry'黑名单源，内容为美国制裁伊朗，完全与音乐行业无关",
+      "summary": "被拒: New US sanctions will hit ordinary Iranians hard as crashing economy stirs fresh",
+      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'黑名单源，内容为美国制裁伊朗，完全与音乐行业无关"
+    },
+    {
+      "date": "2026-08-30",
+      "type": "被拒案例",
+      "title": "Beatty on Trump admin threats to demolish Kennedy Center: ‘Who’s going to stop them?’ - The Hill",
+      "source": "Google News Music Industry",
+      "reason": "来源为'Google News Music Industry'黑名单源，内容为肯尼迪中心政治争议，虽涉及文化机构但与曲库行业核心议题关联度低",
+      "summary": "被拒: Beatty on Trump admin threats to demolish Kennedy Center: ‘Who’s going to stop t",
+      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'黑名单源，内容为肯尼迪中心政治争议，虽涉及文化机构但与曲库行业核心议题关联度低"
+    },
+    {
+      "date": "2026-08-30",
+      "type": "被拒案例",
+      "title": "CIA director floated Trump-Putin-Zelensky summit during Moscow visit, sources say - Axios",
+      "source": "Google News Music Industry",
+      "reason": "来源为'Google News Music Industry'黑名单源，内容为CIA外交活动，完全与音乐行业无关",
+      "summary": "被拒: CIA director floated Trump-Putin-Zelensky summit during Moscow visit, sources sa",
+      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'黑名单源，内容为CIA外交活动，完全与音乐行业无关"
+    },
+    {
+      "date": "2026-08-30",
+      "type": "被拒案例",
+      "title": "ReoNa、デビュー8周年当日に＜animate Theater LIVE 2026 ～summer～＞出演。最新曲「Amore」「それは魔法でした」をアコースティック初披露",
+      "source": "BARKS",
+      "reason": "BARKS虽为白名单源，但内容为日本艺人ReoNa出道8周年演唱会报道，与曲库行业核心议题（版权、版税、发行、行业趋势）相关性不足",
+      "summary": "被拒: ReoNa、デビュー8周年当日に＜animate Theater LIVE 2026 ～summer～＞出演。最新曲「Amore」「それは魔法でした」をアコース",
+      "lesson": "避免采集此类素材: BARKS虽为白名单源，但内容为日本艺人ReoNa出道8周年演唱会报道，与曲库行业核心议题（版权、版税、发行、行业趋势）相关性不足"
+    },
+    {
+      "date": "2026-08-30",
+      "type": "被拒案例",
+      "title": "CANDY TUNE、全国ツアー開幕。ライブ初披露の新曲「総意♡So Free」を先行配信＆MV公開",
+      "source": "BARKS",
+      "reason": "BARKS虽为白名单源，但内容为日本偶像团体CANDY TUNE巡演和新曲发布，与曲库行业核心议题相关性不足",
+      "summary": "被拒: CANDY TUNE、全国ツアー開幕。ライブ初披露の新曲「総意♡So Free」を先行配信＆MV公開",
+      "lesson": "避免采集此类素材: BARKS虽为白名单源，但内容为日本偶像团体CANDY TUNE巡演和新曲发布，与曲库行业核心议题相关性不足"
+    },
+    {
+      "date": "2026-08-30",
+      "type": "标杆案例",
+      "title": "Nashville Airport to Be Renamed for Dolly Parton, Tennessee Governor Announces",
+      "source": "Billboard",
+      "summary": "通过: Nashville Airport to Be Renamed for Dolly Parton, Tennessee Governor Announces",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-30",
+      "type": "标杆案例",
+      "title": "Charli xcx Makes a Striking Statement With Reading Festival Headline Set: 5 Best Moments",
+      "source": "Billboard",
+      "summary": "通过: Charli xcx Makes a Striking Statement With Reading Festival Headline Set: 5 Best",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-30",
+      "type": "标杆案例",
+      "title": "Tyler, The Creator, Turnstile and Clipse Conquer London’s All Points East: 7 Best Moments",
+      "source": "Billboard",
+      "summary": "通过: Tyler, The Creator, Turnstile and Clipse Conquer London’s All Points East: 7 Bes",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-30",
+      "type": "标杆案例",
+      "title": "Juanes, Alejandro Sanz & More Launch Marea Viva to Rebuild Chocó After Earthquake & More Uplifting M",
+      "source": "Billboard",
+      "summary": "通过: Juanes, Alejandro Sanz & More Launch Marea Viva to Rebuild Chocó After Earthquak",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-30",
+      "type": "标杆案例",
+      "title": "SoundCloud is finally letting artists sell music directly to fans – with zero commission",
+      "source": "MusicTech",
+      "summary": "通过: SoundCloud is finally letting artists sell music directly to fans – with zero co",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-30",
+      "type": "每日统计",
+      "summary": "今日通过率: 43% (26/60)",
       "lesson": ""
     }
   ],
