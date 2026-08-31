@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 100,
+      "trust": 94,
       "trend": "improving",
       "history": [
         {
@@ -283,6 +283,11 @@
           "date": "2026-08-30",
           "event": "合作 8次",
           "trustDelta": 4
+        },
+        {
+          "date": "2026-08-31",
+          "event": "冲突 9次",
+          "trustDelta": -6
         }
       ],
       "summary": "关系良好"
@@ -744,103 +749,17 @@
           "date": "2026-08-30",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-08-31",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-26",
-      "type": "标杆案例",
-      "title": "What is EQ in music production and mixing?",
-      "source": "MusicTech",
-      "summary": "通过: What is EQ in music production and mixing?",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-26",
-      "type": "标杆案例",
-      "title": "Core Sampler is “the sampler Pro Tools should already have” – this is how it works",
-      "source": "MusicTech",
-      "summary": "通过: Core Sampler is “the sampler Pro Tools should already have” – this is how it wor",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-26",
-      "type": "标杆案例",
-      "title": "It’s been 60 years since Jimi Hendrix first plugged into a Marshall – and the brand is celebrating w",
-      "source": "MusicTech",
-      "summary": "通过: It’s been 60 years since Jimi Hendrix first plugged into a Marshall – and the br",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-26",
-      "type": "标杆案例",
-      "title": "Dr. Dre says he is “embracing” AI in music: “It’s a new tool for creativity”",
-      "source": "MusicTech",
-      "summary": "通过: Dr. Dre says he is “embracing” AI in music: “It’s a new tool for creativity”",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-26",
-      "type": "标杆案例",
-      "title": "How Jeff Mills brought his true vision for his 1995 Liquid Room mix to life with Spatial Audio",
-      "source": "MusicTech",
-      "summary": "通过: How Jeff Mills brought his true vision for his 1995 Liquid Room mix to life with",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-26",
-      "type": "每日统计",
-      "summary": "今日通过率: 42% (25/60)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-08-27",
-      "type": "被拒案例",
-      "title": "ICE arrested a record number of people without criminal records in summer enforcement surge, new dat",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为ICE执法新闻，与音乐行业无关",
-      "summary": "被拒: ICE arrested a record number of people without criminal records in summer enforc",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为ICE执法新闻，与音乐行业无关"
-    },
-    {
-      "date": "2026-08-27",
-      "type": "被拒案例",
-      "title": "CIA chief John Ratcliffe reportedly made secretive Moscow trip to warn Russia against attacking NATO",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为CIA情报新闻，与音乐行业无关",
-      "summary": "被拒: CIA chief John Ratcliffe reportedly made secretive Moscow trip to warn Russia ag",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为CIA情报新闻，与音乐行业无关"
-    },
-    {
-      "date": "2026-08-27",
-      "type": "被拒案例",
-      "title": "Ratko Mladic, Murderous ‘Butcher of Bosnia,’ Dies at 83 - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为战争罪犯逝世新闻，与音乐行业无关",
-      "summary": "被拒: Ratko Mladic, Murderous ‘Butcher of Bosnia,’ Dies at 83 - The New York Times",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为战争罪犯逝世新闻，与音乐行业无关"
-    },
-    {
-      "date": "2026-08-27",
-      "type": "被拒案例",
-      "title": "Republicans Caught in a Bind With Trump as Midterms Near - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为美国政治新闻，与音乐行业无关",
-      "summary": "被拒: Republicans Caught in a Bind With Trump as Midterms Near - The New York Times",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为美国政治新闻，与音乐行业无关"
-    },
-    {
-      "date": "2026-08-27",
-      "type": "被拒案例",
-      "title": "Trump visa restrictions will worsen strains on the economy, experts say - The Washington Post",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为签证政策新闻，与音乐行业无关",
-      "summary": "被拒: Trump visa restrictions will worsen strains on the economy, experts say - The Wa",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为签证政策新闻，与音乐行业无关"
-    },
     {
       "date": "2026-08-27",
       "type": "标杆案例",
@@ -1158,6 +1077,97 @@
       "date": "2026-08-30",
       "type": "每日统计",
       "summary": "今日通过率: 43% (26/60)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-08-31",
+      "type": "被拒案例",
+      "title": "Trump returns from golf club to gripe on Truth Social about Kennedy Center judge and ‘VANDALS’ - The",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为特朗普对肯尼迪中心的评论，与音乐产业无关",
+      "summary": "被拒: Trump returns from golf club to gripe on Truth Social about Kennedy Center judge",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为特朗普对肯尼迪中心的评论，与音乐产业无关"
+    },
+    {
+      "date": "2026-08-31",
+      "type": "被拒案例",
+      "title": "竞品上架两年后，网易云音乐鸿蒙版终于要来了 - 观察者",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "Google News黑名单源污染，来源为'Google News 腾讯音乐/网易云'",
+      "summary": "被拒: 竞品上架两年后，网易云音乐鸿蒙版终于要来了 - 观察者",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，来源为'Google News 腾讯音乐/网易云'"
+    },
+    {
+      "date": "2026-08-31",
+      "type": "被拒案例",
+      "title": "网易云音乐鸿蒙版9月上线 内测版本先行开放 - 观点网",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "Google News黑名单源污染，来源为'Google News 腾讯音乐/网易云'",
+      "summary": "被拒: 网易云音乐鸿蒙版9月上线 内测版本先行开放 - 观点网",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，来源为'Google News 腾讯音乐/网易云'"
+    },
+    {
+      "date": "2026-08-31",
+      "type": "被拒案例",
+      "title": "迟到900多天后，网易云音乐鸿蒙版要来了 - Jiemian.com",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "Google News黑名单源污染，来源为'Google News 腾讯音乐/网易云'",
+      "summary": "被拒: 迟到900多天后，网易云音乐鸿蒙版要来了 - Jiemian.com",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，来源为'Google News 腾讯音乐/网易云'"
+    },
+    {
+      "date": "2026-08-31",
+      "type": "被拒案例",
+      "title": "净利润腰斩，网易云音乐需要一首治愈歌 - 21财经",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "Google News黑名单源污染，来源为'Google News 腾讯音乐/网易云'",
+      "summary": "被拒: 净利润腰斩，网易云音乐需要一首治愈歌 - 21财经",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，来源为'Google News 腾讯音乐/网易云'"
+    },
+    {
+      "date": "2026-08-31",
+      "type": "标杆案例",
+      "title": "Olivia Rodrigo Raises $20 Million With Daisy Chain Fields Festival Thanks to Matching Commitment Fro",
+      "source": "Variety Music",
+      "summary": "通过: Olivia Rodrigo Raises $20 Million With Daisy Chain Fields Festival Thanks to Mat",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-31",
+      "type": "标杆案例",
+      "title": "Katseye’s Sophia to Sit Out European Leg of ‘Wildworld’ Tour to Focus on Her Mental Health: ‘You Can",
+      "source": "Variety Music",
+      "summary": "通过: Katseye’s Sophia to Sit Out European Leg of ‘Wildworld’ Tour to Focus on Her Men",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-31",
+      "type": "标杆案例",
+      "title": "Harry Styles Pokes Fun at Ex Taylor Swift’s Wedding During Madison Square Garden Show",
+      "source": "Variety Music",
+      "summary": "通过: Harry Styles Pokes Fun at Ex Taylor Swift’s Wedding During Madison Square Garden",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-31",
+      "type": "标杆案例",
+      "title": "Sara Bareilles Sings About Loss — and It’s Our Gain — in the Beautifully Bittersweet ‘Good Grief’: A",
+      "source": "Variety Music",
+      "summary": "通过: Sara Bareilles Sings About Loss — and It’s Our Gain — in the Beautifully Bitters",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-31",
+      "type": "标杆案例",
+      "title": "Zak Starkey and the Who Have Kissed and Made Up, as Rehearsal Reunion Is Revealed",
+      "source": "Variety Music",
+      "summary": "通过: Zak Starkey and the Who Have Kissed and Made Up, as Rehearsal Reunion Is Reveale",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-08-31",
+      "type": "每日统计",
+      "summary": "今日通过率: 57% (46/80)",
       "lesson": ""
     }
   ],
