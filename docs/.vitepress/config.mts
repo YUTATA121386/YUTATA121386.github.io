@@ -29,11 +29,12 @@ export default defineConfig({
     nav: [
       { text: "首页", link: "/" },
       { text: "上升清单", link: "/growth/" },
-      { text: "行业雷达", link: "/daily/" },
+      { text: "行业雷达 V2", link: "/radar-v2/" },
       { text: "云音乐产品", link: "/music-product/" },
       { text: "通识积累", link: "/general/" },
       { text: "圣地巡礼", link: "/pilgrimage/" },
       { text: "面试话术", link: "/interview/" },
+      { text: "历史档案", link: "/archive/" },
     ],
 
     sidebar: {
@@ -163,6 +164,25 @@ export default defineConfig({
         ]
       }],
       "/growth/": [{ text: "上升清单", items: [{ text: "概述", link: "/growth/" }, { text: "22岁 | 2026年度OKR", link: "/growth/okr-2026" }] }],
+      "/radar-v2/": [{
+        text: "行业雷达 V2",
+        items: [
+          { text: "雷达概览", link: "/radar-v2/" },
+          { text: "本周多Agent周报", link: "/weekly/" },
+          { text: "统一关键词（12类）", link: "/radar-v2/keywords" },
+          { text: "过程日志（证据链）", link: "/logs/" },
+          { text: "历史档案", link: "/archive/" },
+        ],
+      }],
+      "/archive/": [{
+        text: "历史档案",
+        items: [
+          { text: "历史档案", link: "/archive/" },
+          { text: "旧日报", link: "/daily/" },
+          { text: "旧周报", link: "/weekly/" },
+          { text: "过程日志", link: "/logs/" },
+        ],
+      }],
       "/pilgrimage/": [{ text: "圣地巡礼", items: [{ text: "概述", link: "/pilgrimage/" }] }],
     },
 
