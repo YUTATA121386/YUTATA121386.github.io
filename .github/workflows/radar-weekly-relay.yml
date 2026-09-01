@@ -1,0 +1,59 @@
+name: Radar Weekly Relay (server -> GitHub)
+
+on:
+  schedule:
+    - cron: "30 1 * * 1"        # 周一 01:30 UTC = 北京 09:30（服务器 09:00 生成之后）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: radar-relay
+  cancel-in-progress: true
+
+jobs:
+  relay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install sshpass
+        run: sudo apt-get update -y && sudo apt-get install -y sshpass
+
+      - name: Pull weekly report from Aliyun server
+        env:
+          RADAR_PASS: ${{ secrets.RADAR_SERVER_PASS }}
+        run: |
+          mkdir -p docs/weekly
+          SCP="sshpass -p \"$RADAR_PASS\" scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+          $SCP root@59.110.224.189:/opt/radar-weekly/docs/weekly/review-*.md docs/weekly/ || echo "no report on server"
+          $SCP root@59.110.224.189:/opt/radar-weekly/docs/weekly/index.md docs/weekly/ || true
+          ls -la docs/weekly || true
+
+      - name: Commit
+        run: |
+          git config user.name "Radar Relay Bot"
+          git config user.email "radar-relay@yutata.dev"
+          git add docs/weekly
+          git diff --cached --quiet || (git commit -m "auto: radar weekly relay $(date +%F)" && git push origin HEAD:main || echo "Push failed")
+
+      - name: Build site
+        run: npm run docs:build
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/.vitepress/dist
+      - name: Deploy to GitHub Pages
+        id: deployment
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+      - name: Retry deploy if failed
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v5
+        timeout-minutes: 10
