@@ -17,6 +17,7 @@ outline: [2, 3]
 <li><a href="./review-2026-W02">2026年第2周</a></li>
 
 <li><a href=./review-2026-W01>2026年第1周</a></li>
+<li><a href="./review-2026-W36">2026年第36周</a></li>
 </ul>
 
 </div>
