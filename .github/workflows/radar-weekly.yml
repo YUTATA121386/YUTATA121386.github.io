@@ -1,0 +1,67 @@
+name: Radar Weekly V2
+
+on:
+  schedule:
+    - cron: "0 7 * * 1"        # 周一 07:00 UTC（北京 15:00）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: radar-weekly
+  cancel-in-progress: true
+
+jobs:
+  radar-weekly:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate API Key
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          if [ -z "$DEEPSEEK_API_KEY" ]; then echo "::error::DEEPSEEK_API_KEY not set"; exit 1; fi
+
+      - name: Run Radar Weekly (multi-agent V2)
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: node scripts/radar-weekly.js
+
+      - name: Commit outputs
+        run: |
+          git config user.name "Radar Weekly Bot"
+          git config user.email "radar-weekly@yutata.dev"
+          git add docs/weekly docs/logs docs/rules docs/radar-v2 scripts/memories scripts/reputation-v2.json
+          git diff --cached --quiet || (git commit -m "auto: radar weekly $(date +%F)" && git push origin HEAD:main || echo "Push failed")
+
+      - name: Build site
+        run: npm run docs:build
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/.vitepress/dist
+      - name: Deploy to GitHub Pages
+        id: deployment
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+      - name: Retry deploy if failed
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v5
+        timeout-minutes: 10
+
+      # 同步到阿里 /kb/ 门户：复用现有 deploy-server 流程（可选）
+      # 若需要，可在此步骤调用 .github/scripts/deploy-kb.py 或触发 deploy-server.yml。
