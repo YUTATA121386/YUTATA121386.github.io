@@ -1,0 +1,5 @@
+# 行业雷达 V2 周报/月评 cron（挂到服务器 crontab，替换占位路径）
+# 周一 08:00 生成本周周报
+0 8 * * 1  bash /opt/yutata-kb/deploy/radar-weekly/run-weekly.sh >> /opt/yutata-kb/deploy/radar-weekly/run-weekly.log 2>&1
+# 每月第一个周一 09:00 跑月度评审（每 4 份周报后）
+0 9 * * 1  [ "$(date +\%d)" -le 7 ] && bash /opt/yutata-kb/deploy/radar-weekly/run-monthly.sh >> /opt/yutata-kb/deploy/radar-weekly/run-monthly.log 2>&1
