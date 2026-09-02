@@ -4,6 +4,18 @@ const KB_BASE = process.env.KB_BASE || "/"
 
 const paletteScript = `(function(){try{var p=localStorage.getItem('yutata-palette')||'auto';var h=new Date().getHours();var q=p==='auto'?(h<11?'morning':h<17?'noon':h<21?'dusk':'night'):p;document.documentElement.setAttribute('data-palette',q);document.documentElement.classList.toggle('dark',q==='night')}catch(e){}})()`
 
+// 行业雷达统一侧边栏：模块内所有子页共用，避免跳转时侧边栏乱换
+const radarSidebar = [{
+  text: "行业雷达",
+  items: [
+    { text: "雷达概览", link: "/radar/" },
+    { text: "本周周报", link: "/weekly/" },
+    { text: "关键词覆盖", link: "/radar/keywords" },
+    { text: "过程日志", link: "/logs/" },
+    { text: "历史档案", link: "/archive/" },
+  ],
+}]
+
 export default defineConfig({
   vite: {
     css: {
@@ -129,24 +141,8 @@ export default defineConfig({
           { text: "知识缺口报告", link: "/daily/knowledge-gap-report" },
         ],
       }],
-      "/logs/": [{
-        text: "行业雷达",
-        items: [
-          { text: "日报概览", link: "/daily/" },
-          { text: "过程日志概览", link: "/logs/" },
-          { text: "周报", link: "/weekly/" },
-          { text: "规则体系", link: "/rules/" },
-        ],
-      }],
-      "/weekly/": [{
-        text: "行业雷达",
-        items: [
-          { text: "日报概览", link: "/daily/" },
-          { text: "过程日志", link: "/logs/" },
-          { text: "周报概览", link: "/weekly/" },
-          { text: "规则体系", link: "/rules/" },
-        ],
-      }],
+      "/logs/": radarSidebar,
+      "/weekly/": radarSidebar,
       "/rules/": [{
         text: "行业雷达",
         items: [
@@ -163,23 +159,8 @@ export default defineConfig({
         ]
       }],
       "/growth/": [{ text: "上升清单", items: [{ text: "概述", link: "/growth/" }, { text: "22岁 | 2026年度OKR", link: "/growth/okr-2026" }] }],
-      "/radar/": [{
-        text: "行业雷达",
-        items: [
-          { text: "雷达概览", link: "/radar/" },
-          { text: "本周多Agent周报", link: "/weekly/" },
-          { text: "统一关键词（12类）", link: "/radar/keywords" },
-          { text: "过程日志（证据链）", link: "/logs/" },
-        ],
-      }, {
-        text: "历史档案",
-        items: [
-          { text: "历史档案", link: "/archive/" },
-          { text: "旧日报", link: "/daily/" },
-          { text: "旧周报", link: "/weekly/" },
-          { text: "过程日志", link: "/logs/" },
-        ],
-      }],
+      "/radar/": radarSidebar,
+      "/archive/": radarSidebar,
       "/pilgrimage/": [{ text: "圣地巡礼", items: [{ text: "概述", link: "/pilgrimage/" }] }],
     },
 
