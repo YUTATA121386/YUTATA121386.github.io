@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 94,
+      "trust": 90,
       "trend": "improving",
       "history": [
         {
@@ -288,6 +288,11 @@
           "date": "2026-08-31",
           "event": "冲突 9次",
           "trustDelta": -6
+        },
+        {
+          "date": "2026-09-02",
+          "event": "冲突 8次",
+          "trustDelta": -4
         }
       ],
       "summary": "关系良好"
@@ -614,26 +619,17 @@
           "date": "2026-08-31",
           "event": "合作 5次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-02",
+          "event": "合作 3次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-07",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: 承诺严重失实+三级复发触发强制暂停：你声称'零残留'并提交扫描日志，但待审核队列中有14条Google News黑名单源污染素材（RAW-0047至0060）",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-08-07",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 首批20条素材全部通过，通过率100%！未发现Google News黑名单源污染，质量优秀！",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-08-08",
       "type": "重大挛折",
@@ -967,6 +963,20 @@
       "date": "2026-08-31",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 正向反馈：本批NME源（RAW-0061至0068）和Variety Music源（RAW-0069至0076）共16条素材全部通过审核，内容质量良好",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-09-02",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 第21-40条审核完成：5条通过（RAW-0021至0025），15条拒绝（RAW-0026至0040全部为Google News黑名单源污染）。",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-09-02",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 前20条素材全部通过，通过率100%。来源全部为白名单（Music Ally×15、Billboard×5），未发现Google News黑名单源污染。",
       "lesson": "",
       "impact": ""
     }

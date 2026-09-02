@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 94,
+      "trust": 90,
       "trend": "improving",
       "history": [
         {
@@ -288,6 +288,11 @@
           "date": "2026-08-31",
           "event": "冲突 9次",
           "trustDelta": -6
+        },
+        {
+          "date": "2026-09-02",
+          "event": "冲突 8次",
+          "trustDelta": -4
         }
       ],
       "summary": "关系良好"
@@ -512,6 +517,11 @@
           "date": "2026-08-29",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-02",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系良好"
@@ -754,103 +764,17 @@
           "date": "2026-08-31",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-02",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-27",
-      "type": "标杆案例",
-      "title": "BALLISTIK BOYZ、NEW EP『BLAST』CD収録内容解禁。ライブ初披露されたユニット曲も収録",
-      "source": "BARKS",
-      "summary": "通过: BALLISTIK BOYZ、NEW EP『BLAST』CD収録内容解禁。ライブ初披露されたユニット曲も収録",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-27",
-      "type": "标杆案例",
-      "title": "えむにみに、1stアルバム『あんろっく』配信決定。『鉄鍋のジャン!』ED主題歌「泣いた悪魔」など収録",
-      "source": "BARKS",
-      "summary": "通过: えむにみに、1stアルバム『あんろっく』配信決定。『鉄鍋のジャン!』ED主題歌「泣いた悪魔」など収録",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-27",
-      "type": "标杆案例",
-      "title": "【ライブレポート】福山雅治、ドームツアーファイナルで見せた“龍”の現在地",
-      "source": "BARKS",
-      "summary": "通过: 【ライブレポート】福山雅治、ドームツアーファイナルで見せた“龍”の現在地",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-27",
-      "type": "标杆案例",
-      "title": "【ライヴレポート】DIV主催＜夏の行方FES2026 -TOKYO FINAL-＞11組がつないだ夏の終幕と笑顔「またやろう」",
-      "source": "BARKS",
-      "summary": "通过: 【ライヴレポート】DIV主催＜夏の行方FES2026 -TOKYO FINAL-＞11組がつないだ夏の終幕と笑顔「またやろう」",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-27",
-      "type": "标杆案例",
-      "title": "【ライブレポート】つばきファクトリー、河口湖で今年も届けた“灼熱ライブ”「皆さんが純粋に楽しんでいる姿が幸せ」",
-      "source": "BARKS",
-      "summary": "通过: 【ライブレポート】つばきファクトリー、河口湖で今年も届けた“灼熱ライブ”「皆さんが純粋に楽しんでいる姿が幸せ」",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-27",
-      "type": "每日统计",
-      "summary": "今日通过率: 61% (49/80)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-08-28",
-      "type": "被拒案例",
-      "title": "工业和信息化部曝光一批新能源汽车监督检查典型案例 - 人民网",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源，内容为非音乐话题（新能源汽车）",
-      "summary": "被拒: 工业和信息化部曝光一批新能源汽车监督检查典型案例 - 人民网",
-      "lesson": "避免采集此类素材: Google News黑名单源，内容为非音乐话题（新能源汽车）"
-    },
-    {
-      "date": "2026-08-28",
-      "type": "被拒案例",
-      "title": "昔日“彩电一哥”康佳宣布主动申请退市 告别A股舞台 - 中华网",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源，内容为非音乐话题（彩电退市/股市）",
-      "summary": "被拒: 昔日“彩电一哥”康佳宣布主动申请退市 告别A股舞台 - 中华网",
-      "lesson": "避免采集此类素材: Google News黑名单源，内容为非音乐话题（彩电退市/股市）"
-    },
-    {
-      "date": "2026-08-28",
-      "type": "被拒案例",
-      "title": "英伟达，市值一夜暴增2.97万亿元 - 京报网",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源，内容为非音乐话题（英伟达/股市）",
-      "summary": "被拒: 英伟达，市值一夜暴增2.97万亿元 - 京报网",
-      "lesson": "避免采集此类素材: Google News黑名单源，内容为非音乐话题（英伟达/股市）"
-    },
-    {
-      "date": "2026-08-28",
-      "type": "被拒案例",
-      "title": "南向资金丨中国人寿逆势遭净卖出8.78亿港元 - 东方财富",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源，内容为非音乐话题（南向资金/股市）",
-      "summary": "被拒: 南向资金丨中国人寿逆势遭净卖出8.78亿港元 - 东方财富",
-      "lesson": "避免采集此类素材: Google News黑名单源，内容为非音乐话题（南向资金/股市）"
-    },
-    {
-      "date": "2026-08-28",
-      "type": "被拒案例",
-      "title": "日经225指数8月28日（周五）收盘上涨273.58点，涨幅0.41%，报66405.56点。 - 金融界",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源，内容为非音乐话题（日经指数/股市）",
-      "summary": "被拒: 日经225指数8月28日（周五）收盘上涨273.58点，涨幅0.41%，报66405.56点。 - 金融界",
-      "lesson": "避免采集此类素材: Google News黑名单源，内容为非音乐话题（日经指数/股市）"
-    },
     {
       "date": "2026-08-28",
       "type": "标杆案例",
@@ -1168,6 +1092,97 @@
       "date": "2026-08-31",
       "type": "每日统计",
       "summary": "今日通过率: 57% (46/80)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-09-02",
+      "type": "被拒案例",
+      "title": "Vulnerable Democrats vote to denounce socialism amid midterm pressure - thehill.com",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，政治新闻，非音乐话题",
+      "summary": "被拒: Vulnerable Democrats vote to denounce socialism amid midterm pressure - thehill.",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，政治新闻，非音乐话题"
+    },
+    {
+      "date": "2026-09-02",
+      "type": "被拒案例",
+      "title": "Germany accuses Russia of failed drone attack on Leipzig airport in August - Al Jazeera",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，地缘政治新闻，非音乐话题",
+      "summary": "被拒: Germany accuses Russia of failed drone attack on Leipzig airport in August - Al ",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，地缘政治新闻，非音乐话题"
+    },
+    {
+      "date": "2026-09-02",
+      "type": "被拒案例",
+      "title": "Bessent says 19 finance ministers agreed 'cheap exports' are unsustainable, but China dissented - ap",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，财经新闻，非音乐话题",
+      "summary": "被拒: Bessent says 19 finance ministers agreed 'cheap exports' are unsustainable, but ",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，财经新闻，非音乐话题"
+    },
+    {
+      "date": "2026-09-02",
+      "type": "被拒案例",
+      "title": "‘Who knows if it will survive’: Experts question how long Trump’s Venezuela oil deal will last - pol",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，政治新闻，非音乐话题",
+      "summary": "被拒: ‘Who knows if it will survive’: Experts question how long Trump’s Venezuela oil ",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，政治新闻，非音乐话题"
+    },
+    {
+      "date": "2026-09-02",
+      "type": "被拒案例",
+      "title": "US farmer pushes for one major change as imported beef debate heats up - foxbusiness.com",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，农业贸易新闻，非音乐话题",
+      "summary": "被拒: US farmer pushes for one major change as imported beef debate heats up - foxbusi",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，农业贸易新闻，非音乐话题"
+    },
+    {
+      "date": "2026-09-02",
+      "type": "标杆案例",
+      "title": "Logic Pro 12.3, as reviewed by a Cubase version 1 user",
+      "source": "MusicTech",
+      "summary": "通过: Logic Pro 12.3, as reviewed by a Cubase version 1 user",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-02",
+      "type": "标杆案例",
+      "title": "Job openings in music tech this month: Major label studios, Star Wars, AV repairs, and more",
+      "source": "MusicTech",
+      "summary": "通过: Job openings in music tech this month: Major label studios, Star Wars, AV repair",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-02",
+      "type": "标杆案例",
+      "title": "Snow Man、6thアルバム『AMENITY』より「show time…」ダンスパフォーマンス映像公開",
+      "source": "BARKS",
+      "summary": "通过: Snow Man、6thアルバム『AMENITY』より「show time…」ダンスパフォーマンス映像公開",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-02",
+      "type": "标杆案例",
+      "title": "fav me、あざとかわいさが爆発した2ndシングルCD「にゃんてずるいの！」本日発売。収録曲「ワタシイロ」のライブ映像公開も",
+      "source": "BARKS",
+      "summary": "通过: fav me、あざとかわいさが爆発した2ndシングルCD「にゃんてずるいの！」本日発売。収録曲「ワタシイロ」のライブ映像公開も",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-02",
+      "type": "标杆案例",
+      "title": "LIL LEAGUE、「真夏ノ花火 – Piano Version」配信スタート＆スタジオセッション映像公開",
+      "source": "BARKS",
+      "summary": "通过: LIL LEAGUE、「真夏ノ花火 – Piano Version」配信スタート＆スタジオセッション映像公開",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-02",
+      "type": "每日统计",
+      "summary": "今日通过率: 50% (30/60)",
       "lesson": ""
     }
   ],
