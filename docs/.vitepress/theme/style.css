@@ -911,3 +911,22 @@ figure.poster img { width:100%; display:block; cursor:zoom-in; }
 /* ---------- Vol hero wrapper (SectionHero) ---------- */
 .vol-hero { position: relative; padding-top: .4rem; margin-bottom: 1.6rem; }
 .vp-doc .vol-hero .back-link { margin-bottom: 1.1rem; display: inline-flex; align-items: center; gap: .45em; }
+
+/* ── 行业雷达：VitePress 警示块（自定义主题补样式） ── */
+.custom-block { padding: 14px 18px; margin: 16px 0; border-radius: 10px; border-left: 3px solid; font-size: .95em; line-height: 1.6; }
+.custom-block + .custom-block { margin-top: 8px; }
+.custom-block .custom-block-title { font-weight: 700; margin-bottom: 4px; }
+.custom-block p { margin: 4px 0; }
+.custom-block.tip { background: rgba(74,125,90,.09); border-color: #4a7d5a; }
+.custom-block.tip .custom-block-title { color: #37624a; }
+.custom-block.info { background: rgba(65,105,170,.09); border-color: #4169aa; }
+.custom-block.info .custom-block-title { color: #35548c; }
+.custom-block.warning { background: rgba(200,150,40,.11); border-color: #c89628; }
+.custom-block.warning .custom-block-title { color: #8a6a1e; }
+.custom-block.danger { background: rgba(180,60,50,.10); border-color: #b43c32; }
+.custom-block.danger .custom-block-title { color: #93342c; }
+.custom-block table { margin: 6px 0; }
+
+/* ── 行业雷达：国内外占比进度条 ── */
+.domestic-bar { display:block; width:100%; max-width:360px; height:10px; background:#e7e0d3; border-radius:999px; overflow:hidden; margin:8px 0 6px; }
+.domestic-bar > span { display:block; height:100%; background:linear-gradient(90deg,#c89628,#e2541b); border-radius:999px; }

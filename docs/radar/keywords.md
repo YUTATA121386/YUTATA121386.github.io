@@ -6,7 +6,12 @@ outline: [2, 3]
 # 🏷️ 关键词覆盖（统一 12 类）
 
 > 行业雷达按以下 **12 类** 过滤与分类（合并原 `sources.json` 关键词与旧 `keywords.md` 的两套口径）。
-> **国内内容占比目标：60-70%**（采集师据此加权中文/国内源）。
+
+::: info 国内内容占比目标
+**目标：60-70%**（采集师据此加权中文/国内源；每周实际占比见当周周报"素材质量"）。
+
+<div class="domestic-bar"><span style="width:65%"></span></div>
+:::
 
 ## ©️ 音乐版权
 `copyright` `music copyright` `licensing` `music licensing` `rights` `music rights` `publishing deal` `IP` `royalty` `infringement` `版权` `授权` `侵权` `著作权` `词曲著作权` `录音制作权` `邻接权` `集体管理` `音著协` `音集协` `ASCAP` `BMI` `SESAC` `PRS` `GEMA` `SACEM` `JASRAC` `KOMCA` `The MLC` `Harry Fox` `compulsory/mechanical/sync/master` `MMA` `copyright office`
