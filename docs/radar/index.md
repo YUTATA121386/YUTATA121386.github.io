@@ -1,9 +1,9 @@
 ---
-title: 行业雷达 V2
+title: 行业雷达
 outline: [2, 3]
 ---
 
-<SectionHero vol="X" en="RADAR V2" title="行业雷达 V2" desc="真·多 Agent 协作 · 整库联动 · 周报 + 月度评审" />
+<SectionHero vol="X" en="RADAR" title="行业雷达" desc="真·多 Agent 协作 · 整库联动 · 周报 + 月度评审" />
 
 > 由 5 个角色（采集师·核查师·分析师·编辑师·记忆管理师）协作产出。每个 Agent **自决**本周是否发言、在哪里发言。
 
@@ -14,11 +14,11 @@ outline: [2, 3]
 - [统一关键词页（12 类 + 国内外占比）](./keywords)
 
 ## 🧠 月度评审
-- [每月评审页](../radar-v2/monthly)（每 4 份周报后，记忆管理师主持 + 回喂）
+- [每月评审页](./monthly)（每 4 份周报后，记忆管理师主持 + 回喂）
 
 ## 🔬 过程日志（证据链）
 - [daily 原始过程日志](../logs/)
 - 每份周报可回溯到对应日期的日志，证明多 Agent 的真实工作过程。
 
-## 说明
-- 旧版 daily/weekly/logs/关键词 → 见[历史档案](../archive/)。
+## 📁 历史档案
+- 旧版 daily/weekly/logs/关键词 → [历史档案](../archive/)。
