@@ -9,7 +9,7 @@ const radarSidebar = [{
   text: "行业雷达",
   items: [
     { text: "雷达概览", link: "/radar/" },
-    { text: "本周周报", link: "/weekly/" },
+    { text: "周报", link: "/weekly/" },
     { text: "关键词覆盖", link: "/radar/keywords" },
     { text: "过程日志", link: "/logs/" },
     { text: "历史档案", link: "/archive/" },
