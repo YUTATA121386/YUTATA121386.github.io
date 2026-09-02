@@ -11,7 +11,7 @@ const radarSidebar = [{
     { text: "雷达概览", link: "/radar/" },
     { text: "周报", link: "/weekly/" },
     { text: "关键词覆盖", link: "/radar/keywords" },
-    { text: "过程日志", link: "/logs/" },
+    { text: "月度评审", link: "/radar/monthly" },
     { text: "历史档案", link: "/archive/" },
   ],
 }]
