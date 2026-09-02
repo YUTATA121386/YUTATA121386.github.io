@@ -5,6 +5,8 @@ outline: [2, 3]
 
 <SectionHero vol="VII" en="PROCESS LOGS" title="过程日志" desc="每日五个 AI 角色的博弈、沟通、辩论全过程记录" />
 
+> ⚠️ 以下为**旧版日常系统**（已下线）的每日过程日志，属[历史档案](../archive/)。新版「行业雷达」为**周报制**，其多 Agent 工作过程见[周报](../weekly/)内 采集/核查/分析/编辑 各分块。
+
 <div class="scroll-list">
 <ul>
 <li><a href="./2026-08-31">2026-08-31</a> — 采集师·核查师·分析师·编辑师·记忆管理师</li>
