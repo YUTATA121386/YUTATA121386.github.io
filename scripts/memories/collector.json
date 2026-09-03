@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 90,
+      "trust": 94,
       "trend": "improving",
       "history": [
         {
@@ -293,6 +293,11 @@
           "date": "2026-09-02",
           "event": "冲突 8次",
           "trustDelta": -4
+        },
+        {
+          "date": "2026-09-03",
+          "event": "合作 8次",
+          "trustDelta": 4
         }
       ],
       "summary": "关系良好"
@@ -410,7 +415,7 @@
       "summary": "关系一般"
     },
     "editor": {
-      "trust": 74,
+      "trust": 76,
       "trend": "improving",
       "history": [
         {
@@ -522,6 +527,11 @@
           "date": "2026-09-02",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-09-03",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
@@ -769,103 +779,17 @@
           "date": "2026-09-02",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-03",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-28",
-      "type": "标杆案例",
-      "title": "A free version of the acclaimed Reason Rack has just launched – here’s everything you need to know",
-      "source": "MusicTech",
-      "summary": "通过: A free version of the acclaimed Reason Rack has just launched – here’s everythin",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-28",
-      "type": "标杆案例",
-      "title": "SoundCloud is finally letting artists sell music directly to fans – with zero commission",
-      "source": "MusicTech",
-      "summary": "通过: SoundCloud is finally letting artists sell music directly to fans – with zero co",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-28",
-      "type": "标杆案例",
-      "title": "Master the drop with Arturia’s new Pure SUB soft bass synthesizer",
-      "source": "MusicTech",
-      "summary": "通过: Master the drop with Arturia’s new Pure SUB soft bass synthesizer",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-28",
-      "type": "标杆案例",
-      "title": "Polyend has unveiled a new MIDI controller – and it looks an awful lot like a QWERTY keyboard",
-      "source": "MusicTech",
-      "summary": "通过: Polyend has unveiled a new MIDI controller – and it looks an awful lot like a QW",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-28",
-      "type": "标杆案例",
-      "title": "Dreamtonics’ Instrument X can create a digital orchestra that sounds like real musicians",
-      "source": "MusicTech",
-      "summary": "通过: Dreamtonics’ Instrument X can create a digital orchestra that sounds like real m",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-28",
-      "type": "每日统计",
-      "summary": "今日通过率: 77% (54/70)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-08-29",
-      "type": "被拒案例",
-      "title": "White House teleprompter operator ordered to pay $172K for placing prediction market bets on Trump’s",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为白宫政治新闻，与音乐产业无关",
-      "summary": "被拒: White House teleprompter operator ordered to pay $172K for placing prediction ma",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为白宫政治新闻，与音乐产业无关"
-    },
-    {
-      "date": "2026-08-29",
-      "type": "被拒案例",
-      "title": "Gov. Abbott blocks state agencies from spending money on Flock cameras - The Texas Tribune",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为德州政府新闻，与音乐产业无关",
-      "summary": "被拒: Gov. Abbott blocks state agencies from spending money on Flock cameras - The Tex",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为德州政府新闻，与音乐产业无关"
-    },
-    {
-      "date": "2026-08-29",
-      "type": "被拒案例",
-      "title": "No verdict in Lindsay Clancy trial Friday after jury deliberates all day - NBC Boston",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为法律审判新闻，与音乐产业无关",
-      "summary": "被拒: No verdict in Lindsay Clancy trial Friday after jury deliberates all day - NBC B",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为法律审判新闻，与音乐产业无关"
-    },
-    {
-      "date": "2026-08-29",
-      "type": "被拒案例",
-      "title": "Trump Assails NY’s Hochul After She Rejects ‘Lake America’ Name - Bloomberg.com",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为美国政治新闻，与音乐产业无关",
-      "summary": "被拒: Trump Assails NY’s Hochul After She Rejects ‘Lake America’ Name - Bloomberg.com",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为美国政治新闻，与音乐产业无关"
-    },
-    {
-      "date": "2026-08-29",
-      "type": "被拒案例",
-      "title": "Right-wing commentator Milo Yiannopoulos detained by ICE - BBC",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为移民政策新闻，与音乐产业无关",
-      "summary": "被拒: Right-wing commentator Milo Yiannopoulos detained by ICE - BBC",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为移民政策新闻，与音乐产业无关"
-    },
     {
       "date": "2026-08-29",
       "type": "标杆案例",
@@ -1184,6 +1108,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 50% (30/60)",
       "lesson": ""
+    },
+    {
+      "date": "2026-09-03",
+      "type": "被拒案例",
+      "title": "长债收益率持续走高 海外债市掀抛售潮 - 央广财经",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染素材，内容为债券收益率/海外债市新闻，与音乐产业完全无关",
+      "summary": "被拒: 长债收益率持续走高 海外债市掀抛售潮 - 央广财经",
+      "lesson": "避免采集此类素材: Google News黑名单源污染素材，内容为债券收益率/海外债市新闻，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-09-03",
+      "type": "被拒案例",
+      "title": "高位人气股下挫！003032、605179跌停 - 东方财富",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染素材，内容为A股个股跌停新闻，与音乐产业完全无关",
+      "summary": "被拒: 高位人气股下挫！003032、605179跌停 - 东方财富",
+      "lesson": "避免采集此类素材: Google News黑名单源污染素材，内容为A股个股跌停新闻，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-09-03",
+      "type": "被拒案例",
+      "title": "国内商品期货早盘开盘 主力合约涨跌不一 - 东方财富",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染素材，内容为国内商品期货开盘新闻，与音乐产业完全无关",
+      "summary": "被拒: 国内商品期货早盘开盘 主力合约涨跌不一 - 东方财富",
+      "lesson": "避免采集此类素材: Google News黑名单源污染素材，内容为国内商品期货开盘新闻，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-09-03",
+      "type": "被拒案例",
+      "title": "星宇股份外包时薪再涨，外包公司称自掏腰包补贴依然招聘难 - 新京报",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染素材，内容为星宇股份外包招聘新闻，与音乐产业完全无关",
+      "summary": "被拒: 星宇股份外包时薪再涨，外包公司称自掏腰包补贴依然招聘难 - 新京报",
+      "lesson": "避免采集此类素材: Google News黑名单源污染素材，内容为星宇股份外包招聘新闻，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-09-03",
+      "type": "被拒案例",
+      "title": "日元再现异动拉涨 亚洲首富加码个人云电脑业务 | 环球市场 - cls.cn",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染素材，内容为日元汇率/个人云电脑新闻，与音乐产业完全无关",
+      "summary": "被拒: 日元再现异动拉涨 亚洲首富加码个人云电脑业务 | 环球市场 - cls.cn",
+      "lesson": "避免采集此类素材: Google News黑名单源污染素材，内容为日元汇率/个人云电脑新闻，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-09-03",
+      "type": "标杆案例",
+      "title": "RCN Moves to Toss the Major Labels’ Marathon Lawsuit, Claiming They’ve Already ‘Dismissed Every Othe",
+      "source": "Digital Music News",
+      "summary": "通过: RCN Moves to Toss the Major Labels’ Marathon Lawsuit, Claiming They’ve Already ‘",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-03",
+      "type": "标杆案例",
+      "title": "Bad Bunny Scores a Huge Victory in ‘Frankenstein’ Reggaeton Infringement Lawsuit",
+      "source": "Digital Music News",
+      "summary": "通过: Bad Bunny Scores a Huge Victory in ‘Frankenstein’ Reggaeton Infringement Lawsuit",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-03",
+      "type": "标杆案例",
+      "title": "Alanis Morissette Sues Former Tour Manager for Extortion and Fraud After Ugly Blackmailing Campaign",
+      "source": "Digital Music News",
+      "summary": "通过: Alanis Morissette Sues Former Tour Manager for Extortion and Fraud After Ugly Bl",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-03",
+      "type": "标杆案例",
+      "title": "Suno Faces Yet Another Multimillion-Dollar Copyright Lawsuit — This Time from Latin and Regional Mex",
+      "source": "Digital Music News",
+      "summary": "通过: Suno Faces Yet Another Multimillion-Dollar Copyright Lawsuit — This Time from La",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-03",
+      "type": "标杆案例",
+      "title": "Jason Isbell, Activist Artist David Lowery, and Others Fire Off Suno Class Action Alleging Likeness ",
+      "source": "Digital Music News",
+      "summary": "通过: Jason Isbell, Activist Artist David Lowery, and Others Fire Off Suno Class Actio",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-03",
+      "type": "每日统计",
+      "summary": "今日通过率: 77% (46/60)",
+      "lesson": "通过率良好，保持当前标准"
     }
   ],
   "selfReview": {
