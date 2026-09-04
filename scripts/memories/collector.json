@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 94,
+      "trust": 100,
       "trend": "improving",
       "history": [
         {
@@ -298,6 +298,11 @@
           "date": "2026-09-03",
           "event": "合作 8次",
           "trustDelta": 4
+        },
+        {
+          "date": "2026-09-04",
+          "event": "合作 8次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -784,103 +789,17 @@
           "date": "2026-09-03",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-04",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-29",
-      "type": "标杆案例",
-      "title": "Master the drop with Arturia’s new Pure SUB soft bass synthesizer",
-      "source": "MusicTech",
-      "summary": "通过: Master the drop with Arturia’s new Pure SUB soft bass synthesizer",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-29",
-      "type": "标杆案例",
-      "title": "Polyend has unveiled a new MIDI controller – and it looks an awful lot like a QWERTY keyboard",
-      "source": "MusicTech",
-      "summary": "通过: Polyend has unveiled a new MIDI controller – and it looks an awful lot like a QW",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-29",
-      "type": "标杆案例",
-      "title": "Dreamtonics’ Instrument X can create a digital orchestra that sounds like real musicians",
-      "source": "MusicTech",
-      "summary": "通过: Dreamtonics’ Instrument X can create a digital orchestra that sounds like real m",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-29",
-      "type": "标杆案例",
-      "title": "A colouring book for Ableton: meet Stencils – the tool designed to help you master musical arrangeme",
-      "source": "MusicTech",
-      "summary": "通过: A colouring book for Ableton: meet Stencils – the tool designed to help you mast",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-29",
-      "type": "标杆案例",
-      "title": "The best new music plugins this week, free and paid",
-      "source": "MusicTech",
-      "summary": "通过: The best new music plugins this week, free and paid",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-29",
-      "type": "每日统计",
-      "summary": "今日通过率: 59% (47/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-08-30",
-      "type": "被拒案例",
-      "title": "New US sanctions will hit ordinary Iranians hard as crashing economy stirs fresh protests - Fortune",
-      "source": "Google News Music Industry",
-      "reason": "来源为'Google News Music Industry'黑名单源，内容为美国制裁伊朗，完全与音乐行业无关",
-      "summary": "被拒: New US sanctions will hit ordinary Iranians hard as crashing economy stirs fresh",
-      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'黑名单源，内容为美国制裁伊朗，完全与音乐行业无关"
-    },
-    {
-      "date": "2026-08-30",
-      "type": "被拒案例",
-      "title": "Beatty on Trump admin threats to demolish Kennedy Center: ‘Who’s going to stop them?’ - The Hill",
-      "source": "Google News Music Industry",
-      "reason": "来源为'Google News Music Industry'黑名单源，内容为肯尼迪中心政治争议，虽涉及文化机构但与曲库行业核心议题关联度低",
-      "summary": "被拒: Beatty on Trump admin threats to demolish Kennedy Center: ‘Who’s going to stop t",
-      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'黑名单源，内容为肯尼迪中心政治争议，虽涉及文化机构但与曲库行业核心议题关联度低"
-    },
-    {
-      "date": "2026-08-30",
-      "type": "被拒案例",
-      "title": "CIA director floated Trump-Putin-Zelensky summit during Moscow visit, sources say - Axios",
-      "source": "Google News Music Industry",
-      "reason": "来源为'Google News Music Industry'黑名单源，内容为CIA外交活动，完全与音乐行业无关",
-      "summary": "被拒: CIA director floated Trump-Putin-Zelensky summit during Moscow visit, sources sa",
-      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'黑名单源，内容为CIA外交活动，完全与音乐行业无关"
-    },
-    {
-      "date": "2026-08-30",
-      "type": "被拒案例",
-      "title": "ReoNa、デビュー8周年当日に＜animate Theater LIVE 2026 ～summer～＞出演。最新曲「Amore」「それは魔法でした」をアコースティック初披露",
-      "source": "BARKS",
-      "reason": "BARKS虽为白名单源，但内容为日本艺人ReoNa出道8周年演唱会报道，与曲库行业核心议题（版权、版税、发行、行业趋势）相关性不足",
-      "summary": "被拒: ReoNa、デビュー8周年当日に＜animate Theater LIVE 2026 ～summer～＞出演。最新曲「Amore」「それは魔法でした」をアコース",
-      "lesson": "避免采集此类素材: BARKS虽为白名单源，但内容为日本艺人ReoNa出道8周年演唱会报道，与曲库行业核心议题（版权、版税、发行、行业趋势）相关性不足"
-    },
-    {
-      "date": "2026-08-30",
-      "type": "被拒案例",
-      "title": "CANDY TUNE、全国ツアー開幕。ライブ初披露の新曲「総意♡So Free」を先行配信＆MV公開",
-      "source": "BARKS",
-      "reason": "BARKS虽为白名单源，但内容为日本偶像团体CANDY TUNE巡演和新曲发布，与曲库行业核心议题相关性不足",
-      "summary": "被拒: CANDY TUNE、全国ツアー開幕。ライブ初披露の新曲「総意♡So Free」を先行配信＆MV公開",
-      "lesson": "避免采集此类素材: BARKS虽为白名单源，但内容为日本偶像团体CANDY TUNE巡演和新曲发布，与曲库行业核心议题相关性不足"
-    },
     {
       "date": "2026-08-30",
       "type": "标杆案例",
@@ -1198,6 +1117,97 @@
       "date": "2026-09-03",
       "type": "每日统计",
       "summary": "今日通过率: 77% (46/60)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-09-04",
+      "type": "被拒案例",
+      "title": "Lindsay Clancy Trial: Defense Blames Single Juror for Deadlock - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为Lindsay Clancy法庭审判，与音乐产业完全无关",
+      "summary": "被拒: Lindsay Clancy Trial: Defense Blames Single Juror for Deadlock - The New York Ti",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为Lindsay Clancy法庭审判，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-09-04",
+      "type": "被拒案例",
+      "title": "Live updates: Rescues underway as two workers pulled alive more than a week after Nepal-China floods",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为尼泊尔-中国洪水救援，与音乐产业完全无关",
+      "summary": "被拒: Live updates: Rescues underway as two workers pulled alive more than a week afte",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为尼泊尔-中国洪水救援，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-09-04",
+      "type": "被拒案例",
+      "title": "Trump administration asks Supreme Court to allow mail-in ballot restrictions - The Washington Post",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为特朗普政府邮寄选票限制，与音乐产业完全无关",
+      "summary": "被拒: Trump administration asks Supreme Court to allow mail-in ballot restrictions - T",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为特朗普政府邮寄选票限制，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-09-04",
+      "type": "被拒案例",
+      "title": "Fox News Media abruptly ousts longtime anchor Maria Bartiromo - The Guardian",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为Fox News主播被解雇，与音乐产业完全无关",
+      "summary": "被拒: Fox News Media abruptly ousts longtime anchor Maria Bartiromo - The Guardian",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为Fox News主播被解雇，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-09-04",
+      "type": "被拒案例",
+      "title": "Work on Trump-backed Triumphal Arch will start in coming weeks, Burgum says - CBS News",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为特朗普凯旋门项目，与音乐产业完全无关",
+      "summary": "被拒: Work on Trump-backed Triumphal Arch will start in coming weeks, Burgum says - CB",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为特朗普凯旋门项目，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-09-04",
+      "type": "标杆案例",
+      "title": "Denon DJ’s new Prime 4 G2 is an all-in-one DJ controller with MPCe pads",
+      "source": "MusicTech",
+      "summary": "通过: Denon DJ’s new Prime 4 G2 is an all-in-one DJ controller with MPCe pads",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-04",
+      "type": "标杆案例",
+      "title": "I got hands-on with Reason Free and its remarkably addictive modular patching environment",
+      "source": "MusicTech",
+      "summary": "通过: I got hands-on with Reason Free and its remarkably addictive modular patching en",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-04",
+      "type": "标杆案例",
+      "title": "The best new music plugins this week, free and paid",
+      "source": "MusicTech",
+      "summary": "通过: The best new music plugins this week, free and paid",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-04",
+      "type": "标杆案例",
+      "title": "Stoic’s 9-to-5 routine has helped him release over 1,000 beats",
+      "source": "MusicTech",
+      "summary": "通过: Stoic’s 9-to-5 routine has helped him release over 1,000 beats",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-04",
+      "type": "标杆案例",
+      "title": "Logic Pro 12.3, as reviewed by a Cubase version 1 user",
+      "source": "MusicTech",
+      "summary": "通过: Logic Pro 12.3, as reviewed by a Cubase version 1 user",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-04",
+      "type": "每日统计",
+      "summary": "今日通过率: 67% (40/60)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],
