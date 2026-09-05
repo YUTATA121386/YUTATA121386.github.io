@@ -303,6 +303,11 @@
           "date": "2026-09-04",
           "event": "合作 8次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-09-05",
+          "event": "合作 10次",
+          "trustDelta": 4
         }
       ],
       "summary": "关系良好"
@@ -413,6 +418,11 @@
         },
         {
           "date": "2026-08-29",
+          "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-09-05",
           "event": "合作 1次",
           "trustDelta": 0
         }
@@ -801,97 +811,6 @@
   },
   "experiences": [
     {
-      "date": "2026-08-30",
-      "type": "标杆案例",
-      "title": "Nashville Airport to Be Renamed for Dolly Parton, Tennessee Governor Announces",
-      "source": "Billboard",
-      "summary": "通过: Nashville Airport to Be Renamed for Dolly Parton, Tennessee Governor Announces",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-30",
-      "type": "标杆案例",
-      "title": "Charli xcx Makes a Striking Statement With Reading Festival Headline Set: 5 Best Moments",
-      "source": "Billboard",
-      "summary": "通过: Charli xcx Makes a Striking Statement With Reading Festival Headline Set: 5 Best",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-30",
-      "type": "标杆案例",
-      "title": "Tyler, The Creator, Turnstile and Clipse Conquer London’s All Points East: 7 Best Moments",
-      "source": "Billboard",
-      "summary": "通过: Tyler, The Creator, Turnstile and Clipse Conquer London’s All Points East: 7 Bes",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-30",
-      "type": "标杆案例",
-      "title": "Juanes, Alejandro Sanz & More Launch Marea Viva to Rebuild Chocó After Earthquake & More Uplifting M",
-      "source": "Billboard",
-      "summary": "通过: Juanes, Alejandro Sanz & More Launch Marea Viva to Rebuild Chocó After Earthquak",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-30",
-      "type": "标杆案例",
-      "title": "SoundCloud is finally letting artists sell music directly to fans – with zero commission",
-      "source": "MusicTech",
-      "summary": "通过: SoundCloud is finally letting artists sell music directly to fans – with zero co",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-30",
-      "type": "每日统计",
-      "summary": "今日通过率: 43% (26/60)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-08-31",
-      "type": "被拒案例",
-      "title": "Trump returns from golf club to gripe on Truth Social about Kennedy Center judge and ‘VANDALS’ - The",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为特朗普对肯尼迪中心的评论，与音乐产业无关",
-      "summary": "被拒: Trump returns from golf club to gripe on Truth Social about Kennedy Center judge",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为特朗普对肯尼迪中心的评论，与音乐产业无关"
-    },
-    {
-      "date": "2026-08-31",
-      "type": "被拒案例",
-      "title": "竞品上架两年后，网易云音乐鸿蒙版终于要来了 - 观察者",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News黑名单源污染，来源为'Google News 腾讯音乐/网易云'",
-      "summary": "被拒: 竞品上架两年后，网易云音乐鸿蒙版终于要来了 - 观察者",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，来源为'Google News 腾讯音乐/网易云'"
-    },
-    {
-      "date": "2026-08-31",
-      "type": "被拒案例",
-      "title": "网易云音乐鸿蒙版9月上线 内测版本先行开放 - 观点网",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News黑名单源污染，来源为'Google News 腾讯音乐/网易云'",
-      "summary": "被拒: 网易云音乐鸿蒙版9月上线 内测版本先行开放 - 观点网",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，来源为'Google News 腾讯音乐/网易云'"
-    },
-    {
-      "date": "2026-08-31",
-      "type": "被拒案例",
-      "title": "迟到900多天后，网易云音乐鸿蒙版要来了 - Jiemian.com",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News黑名单源污染，来源为'Google News 腾讯音乐/网易云'",
-      "summary": "被拒: 迟到900多天后，网易云音乐鸿蒙版要来了 - Jiemian.com",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，来源为'Google News 腾讯音乐/网易云'"
-    },
-    {
-      "date": "2026-08-31",
-      "type": "被拒案例",
-      "title": "净利润腰斩，网易云音乐需要一首治愈歌 - 21财经",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News黑名单源污染，来源为'Google News 腾讯音乐/网易云'",
-      "summary": "被拒: 净利润腰斩，网易云音乐需要一首治愈歌 - 21财经",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，来源为'Google News 腾讯音乐/网易云'"
-    },
-    {
       "date": "2026-08-31",
       "type": "标杆案例",
       "title": "Olivia Rodrigo Raises $20 Million With Daisy Chain Fields Festival Thanks to Matching Commitment Fro",
@@ -1208,6 +1127,97 @@
       "date": "2026-09-04",
       "type": "每日统计",
       "summary": "今日通过率: 67% (40/60)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-09-05",
+      "type": "被拒案例",
+      "title": "Corie A. Walsh, mother of Barrett, killed in domestic homicide in Brook Stone Court home, charged wi",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为家庭凶杀案新闻，与音乐产业完全无关",
+      "summary": "被拒: Corie A. Walsh, mother of Barrett, killed in domestic homicide in Brook Stone Co",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为家庭凶杀案新闻，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-09-05",
+      "type": "被拒案例",
+      "title": "Maria Bartiromo’s Lawyer Denies She Was Fired By Fox - Forbes",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为Fox新闻主持人解雇新闻，与音乐产业完全无关",
+      "summary": "被拒: Maria Bartiromo’s Lawyer Denies She Was Fired By Fox - Forbes",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为Fox新闻主持人解雇新闻，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-09-05",
+      "type": "被拒案例",
+      "title": "In Major Leak Hunt, Pentagon Gives Polygraph Tests to Joint Staff Members - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为五角大楼测谎新闻，与音乐产业完全无关",
+      "summary": "被拒: In Major Leak Hunt, Pentagon Gives Polygraph Tests to Joint Staff Members - The ",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为五角大楼测谎新闻，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-09-05",
+      "type": "被拒案例",
+      "title": "Retired general calls Trump's proposed arch near Arlington a 'sacrilege' - pbs.org",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为特朗普纪念碑争议新闻，与音乐产业完全无关",
+      "summary": "被拒: Retired general calls Trump's proposed arch near Arlington a 'sacrilege' - pbs.o",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为特朗普纪念碑争议新闻，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-09-05",
+      "type": "被拒案例",
+      "title": "Judge orders DOJ to disclose who conceived of now-defunct payout fund - The Washington Post",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为司法部基金披露新闻，与音乐产业完全无关",
+      "summary": "被拒: Judge orders DOJ to disclose who conceived of now-defunct payout fund - The Wash",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为司法部基金披露新闻，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-09-05",
+      "type": "标杆案例",
+      "title": "Cubase 15 is currently 40% off, with bigger discounts across Steinberg’s catalogue",
+      "source": "MusicTech",
+      "summary": "通过: Cubase 15 is currently 40% off, with bigger discounts across Steinberg’s catalog",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-05",
+      "type": "标杆案例",
+      "title": "Audacity 4 is its biggest update in 25 years",
+      "source": "MusicTech",
+      "summary": "通过: Audacity 4 is its biggest update in 25 years",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-05",
+      "type": "标杆案例",
+      "title": "Denon DJ’s new Prime 4 G2 is an all-in-one DJ controller with MPCe pads",
+      "source": "MusicTech",
+      "summary": "通过: Denon DJ’s new Prime 4 G2 is an all-in-one DJ controller with MPCe pads",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-05",
+      "type": "标杆案例",
+      "title": "I got hands-on with Reason Free and its remarkably addictive modular patching environment",
+      "source": "MusicTech",
+      "summary": "通过: I got hands-on with Reason Free and its remarkably addictive modular patching en",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-05",
+      "type": "标杆案例",
+      "title": "The best new music plugins this week, free and paid",
+      "source": "MusicTech",
+      "summary": "通过: The best new music plugins this week, free and paid",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-05",
+      "type": "每日统计",
+      "summary": "今日通过率: 65% (49/75)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],
