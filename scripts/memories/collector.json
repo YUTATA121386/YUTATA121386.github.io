@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 100,
+      "trust": 96,
       "trend": "improving",
       "history": [
         {
@@ -308,6 +308,11 @@
           "date": "2026-09-05",
           "event": "合作 10次",
           "trustDelta": 4
+        },
+        {
+          "date": "2026-09-06",
+          "event": "冲突 5次",
+          "trustDelta": -4
         }
       ],
       "summary": "关系良好"
@@ -425,12 +430,17 @@
           "date": "2026-09-05",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-09-06",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
     },
     "editor": {
-      "trust": 76,
+      "trust": 78,
       "trend": "improving",
       "history": [
         {
@@ -545,6 +555,11 @@
         },
         {
           "date": "2026-09-03",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-09-06",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -804,103 +819,17 @@
           "date": "2026-09-04",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-06",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-31",
-      "type": "标杆案例",
-      "title": "Olivia Rodrigo Raises $20 Million With Daisy Chain Fields Festival Thanks to Matching Commitment Fro",
-      "source": "Variety Music",
-      "summary": "通过: Olivia Rodrigo Raises $20 Million With Daisy Chain Fields Festival Thanks to Mat",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-31",
-      "type": "标杆案例",
-      "title": "Katseye’s Sophia to Sit Out European Leg of ‘Wildworld’ Tour to Focus on Her Mental Health: ‘You Can",
-      "source": "Variety Music",
-      "summary": "通过: Katseye’s Sophia to Sit Out European Leg of ‘Wildworld’ Tour to Focus on Her Men",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-31",
-      "type": "标杆案例",
-      "title": "Harry Styles Pokes Fun at Ex Taylor Swift’s Wedding During Madison Square Garden Show",
-      "source": "Variety Music",
-      "summary": "通过: Harry Styles Pokes Fun at Ex Taylor Swift’s Wedding During Madison Square Garden",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-31",
-      "type": "标杆案例",
-      "title": "Sara Bareilles Sings About Loss — and It’s Our Gain — in the Beautifully Bittersweet ‘Good Grief’: A",
-      "source": "Variety Music",
-      "summary": "通过: Sara Bareilles Sings About Loss — and It’s Our Gain — in the Beautifully Bitters",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-31",
-      "type": "标杆案例",
-      "title": "Zak Starkey and the Who Have Kissed and Made Up, as Rehearsal Reunion Is Revealed",
-      "source": "Variety Music",
-      "summary": "通过: Zak Starkey and the Who Have Kissed and Made Up, as Rehearsal Reunion Is Reveale",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-08-31",
-      "type": "每日统计",
-      "summary": "今日通过率: 57% (46/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-09-02",
-      "type": "被拒案例",
-      "title": "Vulnerable Democrats vote to denounce socialism amid midterm pressure - thehill.com",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，政治新闻，非音乐话题",
-      "summary": "被拒: Vulnerable Democrats vote to denounce socialism amid midterm pressure - thehill.",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，政治新闻，非音乐话题"
-    },
-    {
-      "date": "2026-09-02",
-      "type": "被拒案例",
-      "title": "Germany accuses Russia of failed drone attack on Leipzig airport in August - Al Jazeera",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，地缘政治新闻，非音乐话题",
-      "summary": "被拒: Germany accuses Russia of failed drone attack on Leipzig airport in August - Al ",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，地缘政治新闻，非音乐话题"
-    },
-    {
-      "date": "2026-09-02",
-      "type": "被拒案例",
-      "title": "Bessent says 19 finance ministers agreed 'cheap exports' are unsustainable, but China dissented - ap",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，财经新闻，非音乐话题",
-      "summary": "被拒: Bessent says 19 finance ministers agreed 'cheap exports' are unsustainable, but ",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，财经新闻，非音乐话题"
-    },
-    {
-      "date": "2026-09-02",
-      "type": "被拒案例",
-      "title": "‘Who knows if it will survive’: Experts question how long Trump’s Venezuela oil deal will last - pol",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，政治新闻，非音乐话题",
-      "summary": "被拒: ‘Who knows if it will survive’: Experts question how long Trump’s Venezuela oil ",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，政治新闻，非音乐话题"
-    },
-    {
-      "date": "2026-09-02",
-      "type": "被拒案例",
-      "title": "US farmer pushes for one major change as imported beef debate heats up - foxbusiness.com",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，农业贸易新闻，非音乐话题",
-      "summary": "被拒: US farmer pushes for one major change as imported beef debate heats up - foxbusi",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，农业贸易新闻，非音乐话题"
-    },
     {
       "date": "2026-09-02",
       "type": "标杆案例",
@@ -1219,6 +1148,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 65% (49/75)",
       "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-09-06",
+      "type": "被拒案例",
+      "title": "14 people sent to hospital during The Chainsmokers concert at Discovery Meadow in San Jose, authorit",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为音乐会现场事故的社会新闻，非行业分析素材。",
+      "summary": "被拒: 14 people sent to hospital during The Chainsmokers concert at Discovery Meadow i",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为音乐会现场事故的社会新闻，非行业分析素材。"
+    },
+    {
+      "date": "2026-09-06",
+      "type": "被拒案例",
+      "title": "Maria Bartiromo’s downfall at an increasingly cautious Fox News - The Seattle Times",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为媒体行业人事变动，非音乐行业核心话题。",
+      "summary": "被拒: Maria Bartiromo’s downfall at an increasingly cautious Fox News - The Seattle Ti",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为媒体行业人事变动，非音乐行业核心话题。"
+    },
+    {
+      "date": "2026-09-06",
+      "type": "被拒案例",
+      "title": "LAPD busts massive street takeover in South Bay, impounding more than 100 cars - Los Angeles Times",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为街头赛车执法新闻，非音乐行业话题。",
+      "summary": "被拒: LAPD busts massive street takeover in South Bay, impounding more than 100 cars -",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为街头赛车执法新闻，非音乐行业话题。"
+    },
+    {
+      "date": "2026-09-06",
+      "type": "被拒案例",
+      "title": "Trump shakes up RNC midterm convention schedule, says he’ll speak on night one - The Hill",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为美国政治新闻，非音乐行业话题。",
+      "summary": "被拒: Trump shakes up RNC midterm convention schedule, says he’ll speak on night one -",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为美国政治新闻，非音乐行业话题。"
+    },
+    {
+      "date": "2026-09-06",
+      "type": "被拒案例",
+      "title": "El-Sayed split Michigan Democrats. Whether they unify could decide Senate control - NPR",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为美国政治新闻，非音乐行业话题。",
+      "summary": "被拒: El-Sayed split Michigan Democrats. Whether they unify could decide Senate contro",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为美国政治新闻，非音乐行业话题。"
+    },
+    {
+      "date": "2026-09-06",
+      "type": "标杆案例",
+      "title": "sis、未知なる世界へ飛び込む疾走ダンスチューン「DIVER」配信リリース決定",
+      "source": "BARKS",
+      "summary": "通过: sis、未知なる世界へ飛び込む疾走ダンスチューン「DIVER」配信リリース決定",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-06",
+      "type": "标杆案例",
+      "title": "SPYAIR、＜JUST LIKE THIS＞初の海外公演を韓国で完遂。歴代アニメソング収録のベスト盤も発売決定",
+      "source": "BARKS",
+      "summary": "通过: SPYAIR、＜JUST LIKE THIS＞初の海外公演を韓国で完遂。歴代アニメソング収録のベスト盤も発売決定",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-06",
+      "type": "标杆案例",
+      "title": "Vaundy、初のアジアアリーナツアー開幕。韓国公演のYouTube生配信も発表",
+      "source": "BARKS",
+      "summary": "通过: Vaundy、初のアジアアリーナツアー開幕。韓国公演のYouTube生配信も発表",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-06",
+      "type": "标杆案例",
+      "title": "【インタビュー】DEZERT、結成15周年とバンド初の試み『Alternate4』を語る「どう音楽と向き合うか、今からをどう生きていくか」",
+      "source": "BARKS",
+      "summary": "通过: 【インタビュー】DEZERT、結成15周年とバンド初の試み『Alternate4』を語る「どう音楽と向き合うか、今からをどう生きていくか」",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-06",
+      "type": "标杆案例",
+      "title": "TiDE、ニューEP『Dialogue』リリース決定。バンド初のCD発売＆リリース記念イベント開催も",
+      "source": "BARKS",
+      "summary": "通过: TiDE、ニューEP『Dialogue』リリース決定。バンド初のCD発売＆リリース記念イベント開催も",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-06",
+      "type": "每日统计",
+      "summary": "今日通过率: 50% (30/60)",
+      "lesson": ""
     }
   ],
   "selfReview": {
