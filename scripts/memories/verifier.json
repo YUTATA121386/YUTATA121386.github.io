@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 96,
+      "trust": 100,
       "trend": "improving",
       "history": [
         {
@@ -313,6 +313,11 @@
           "date": "2026-09-06",
           "event": "冲突 5次",
           "trustDelta": -4
+        },
+        {
+          "date": "2026-09-07",
+          "event": "合作 13次",
+          "trustDelta": 8
         }
       ],
       "summary": "关系良好"
@@ -669,26 +674,17 @@
           "date": "2026-09-06",
           "event": "合作 3次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-07",
+          "event": "合作 5次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-12",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: ⚠️ 重大违规：待审核队列中发现10条Google News黑名单源污染素材（RAW-2026-08-12-0051至0060），且全部为财经/股票新闻，与音乐",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-08-12",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 首批20条素材全部通过，通过率100%！来源全部为白名单源（Music Business Worldwide + Music Ally），未发现Google N",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-08-13",
       "type": "重大挛折",
@@ -1022,6 +1018,20 @@
       "date": "2026-09-06",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 首批20条素材全部通过，通过率100%",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-09-07",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 首批20条素材审核完成：10条通过，10条拒绝。通过素材全部来自Billboard白名单源；拒绝的10条全部为Google News黑名单源污染。",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-09-07",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 正向反馈：前10条素材（RAW-0001至0010）全部来自Billboard白名单源，内容质量良好，覆盖现场演出、榜单动态、行业奖项、艺人新闻等多元话题，均通",
       "lesson": "",
       "impact": ""
     }

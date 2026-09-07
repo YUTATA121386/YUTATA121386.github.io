@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 96,
+      "trust": 100,
       "trend": "improving",
       "history": [
         {
@@ -313,6 +313,11 @@
           "date": "2026-09-06",
           "event": "冲突 5次",
           "trustDelta": -4
+        },
+        {
+          "date": "2026-09-07",
+          "event": "合作 13次",
+          "trustDelta": 8
         }
       ],
       "summary": "关系良好"
@@ -824,103 +829,17 @@
           "date": "2026-09-06",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-07",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-02",
-      "type": "标杆案例",
-      "title": "Logic Pro 12.3, as reviewed by a Cubase version 1 user",
-      "source": "MusicTech",
-      "summary": "通过: Logic Pro 12.3, as reviewed by a Cubase version 1 user",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-02",
-      "type": "标杆案例",
-      "title": "Job openings in music tech this month: Major label studios, Star Wars, AV repairs, and more",
-      "source": "MusicTech",
-      "summary": "通过: Job openings in music tech this month: Major label studios, Star Wars, AV repair",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-02",
-      "type": "标杆案例",
-      "title": "Snow Man、6thアルバム『AMENITY』より「show time…」ダンスパフォーマンス映像公開",
-      "source": "BARKS",
-      "summary": "通过: Snow Man、6thアルバム『AMENITY』より「show time…」ダンスパフォーマンス映像公開",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-02",
-      "type": "标杆案例",
-      "title": "fav me、あざとかわいさが爆発した2ndシングルCD「にゃんてずるいの！」本日発売。収録曲「ワタシイロ」のライブ映像公開も",
-      "source": "BARKS",
-      "summary": "通过: fav me、あざとかわいさが爆発した2ndシングルCD「にゃんてずるいの！」本日発売。収録曲「ワタシイロ」のライブ映像公開も",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-02",
-      "type": "标杆案例",
-      "title": "LIL LEAGUE、「真夏ノ花火 – Piano Version」配信スタート＆スタジオセッション映像公開",
-      "source": "BARKS",
-      "summary": "通过: LIL LEAGUE、「真夏ノ花火 – Piano Version」配信スタート＆スタジオセッション映像公開",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-02",
-      "type": "每日统计",
-      "summary": "今日通过率: 50% (30/60)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-09-03",
-      "type": "被拒案例",
-      "title": "长债收益率持续走高 海外债市掀抛售潮 - 央广财经",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染素材，内容为债券收益率/海外债市新闻，与音乐产业完全无关",
-      "summary": "被拒: 长债收益率持续走高 海外债市掀抛售潮 - 央广财经",
-      "lesson": "避免采集此类素材: Google News黑名单源污染素材，内容为债券收益率/海外债市新闻，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-09-03",
-      "type": "被拒案例",
-      "title": "高位人气股下挫！003032、605179跌停 - 东方财富",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染素材，内容为A股个股跌停新闻，与音乐产业完全无关",
-      "summary": "被拒: 高位人气股下挫！003032、605179跌停 - 东方财富",
-      "lesson": "避免采集此类素材: Google News黑名单源污染素材，内容为A股个股跌停新闻，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-09-03",
-      "type": "被拒案例",
-      "title": "国内商品期货早盘开盘 主力合约涨跌不一 - 东方财富",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染素材，内容为国内商品期货开盘新闻，与音乐产业完全无关",
-      "summary": "被拒: 国内商品期货早盘开盘 主力合约涨跌不一 - 东方财富",
-      "lesson": "避免采集此类素材: Google News黑名单源污染素材，内容为国内商品期货开盘新闻，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-09-03",
-      "type": "被拒案例",
-      "title": "星宇股份外包时薪再涨，外包公司称自掏腰包补贴依然招聘难 - 新京报",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染素材，内容为星宇股份外包招聘新闻，与音乐产业完全无关",
-      "summary": "被拒: 星宇股份外包时薪再涨，外包公司称自掏腰包补贴依然招聘难 - 新京报",
-      "lesson": "避免采集此类素材: Google News黑名单源污染素材，内容为星宇股份外包招聘新闻，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-09-03",
-      "type": "被拒案例",
-      "title": "日元再现异动拉涨 亚洲首富加码个人云电脑业务 | 环球市场 - cls.cn",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染素材，内容为日元汇率/个人云电脑新闻，与音乐产业完全无关",
-      "summary": "被拒: 日元再现异动拉涨 亚洲首富加码个人云电脑业务 | 环球市场 - cls.cn",
-      "lesson": "避免采集此类素材: Google News黑名单源污染素材，内容为日元汇率/个人云电脑新闻，与音乐产业完全无关"
-    },
     {
       "date": "2026-09-03",
       "type": "标杆案例",
@@ -1238,6 +1157,97 @@
       "date": "2026-09-06",
       "type": "每日统计",
       "summary": "今日通过率: 50% (30/60)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-09-07",
+      "type": "被拒案例",
+      "title": "Virginia mom placed on child abuse registry for 7 years after letting 5-year-old walk alone - New Yo",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News Music Industry（黑名单源），内容为美国社会法律新闻，与音乐产业完全无关",
+      "summary": "被拒: Virginia mom placed on child abuse registry for 7 years after letting 5-year-old",
+      "lesson": "避免采集此类素材: 来源为Google News Music Industry（黑名单源），内容为美国社会法律新闻，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-09-07",
+      "type": "被拒案例",
+      "title": "Trump posts map labeling New Mexico as ‘New America’ after online hoax - The Hill",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News Music Industry，属于黑名单源污染，且内容为政治新闻（Trump相关），与音乐行业无关",
+      "summary": "被拒: Trump posts map labeling New Mexico as ‘New America’ after online hoax - The Hil",
+      "lesson": "避免采集此类素材: 来源为Google News Music Industry，属于黑名单源污染，且内容为政治新闻（Trump相关），与音乐行业无关"
+    },
+    {
+      "date": "2026-09-07",
+      "type": "被拒案例",
+      "title": "Will ‘GTA 6’ have a first-person mode?",
+      "source": "NME",
+      "reason": "来源为NME但与音乐行业无关——内容为GTA 6游戏功能讨论，属于纯游戏新闻",
+      "summary": "被拒: Will ‘GTA 6’ have a first-person mode?",
+      "lesson": "避免采集此类素材: 来源为NME但与音乐行业无关——内容为GTA 6游戏功能讨论，属于纯游戏新闻"
+    },
+    {
+      "date": "2026-09-07",
+      "type": "被拒案例",
+      "title": "‘Marvel Tokon Fighting Souls’ Phoenix Cyclops release date, gameplay, more",
+      "source": "NME",
+      "reason": "来源为NME但与音乐行业无关——内容为Marvel游戏角色发布，属于纯游戏新闻",
+      "summary": "被拒: ‘Marvel Tokon Fighting Souls’ Phoenix Cyclops release date, gameplay, more",
+      "lesson": "避免采集此类素材: 来源为NME但与音乐行业无关——内容为Marvel游戏角色发布，属于纯游戏新闻"
+    },
+    {
+      "date": "2026-09-07",
+      "type": "被拒案例",
+      "title": "PS Plus October 2026 games – what to expect",
+      "source": "NME",
+      "reason": "来源为NME但与音乐行业无关——内容为PS Plus游戏阵容预测，属于纯游戏新闻",
+      "summary": "被拒: PS Plus October 2026 games – what to expect",
+      "lesson": "避免采集此类素材: 来源为NME但与音乐行业无关——内容为PS Plus游戏阵容预测，属于纯游戏新闻"
+    },
+    {
+      "date": "2026-09-07",
+      "type": "标杆案例",
+      "title": "Feel the funk with Gabriel Jacoby’s exclusive playlist for The Cover",
+      "source": "NME",
+      "summary": "通过: Feel the funk with Gabriel Jacoby’s exclusive playlist for The Cover",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-07",
+      "type": "标杆案例",
+      "title": "It’s time to get in Gabriel Jacoby’s corner",
+      "source": "NME",
+      "summary": "通过: It’s time to get in Gabriel Jacoby’s corner",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-07",
+      "type": "标杆案例",
+      "title": "Radiohead announce long run of 2027 residency shows in Australia and Japan",
+      "source": "NME",
+      "summary": "通过: Radiohead announce long run of 2027 residency shows in Australia and Japan",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-07",
+      "type": "标杆案例",
+      "title": "Two deaths reported at Burning Man 2026",
+      "source": "NME",
+      "summary": "通过: Two deaths reported at Burning Man 2026",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-07",
+      "type": "标杆案例",
+      "title": "When will the ‘Just Dance Decades of Hits’ track list and song list be announced?",
+      "source": "NME",
+      "summary": "通过: When will the ‘Just Dance Decades of Hits’ track list and song list be announced",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-07",
+      "type": "每日统计",
+      "summary": "今日通过率: 45% (27/60)",
       "lesson": ""
     }
   ],
