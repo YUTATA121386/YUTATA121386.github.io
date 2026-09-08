@@ -318,6 +318,11 @@
           "date": "2026-09-07",
           "event": "合作 13次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-09-08",
+          "event": "合作 8次",
+          "trustDelta": 4
         }
       ],
       "summary": "关系良好"
@@ -445,7 +450,7 @@
       "summary": "关系一般"
     },
     "editor": {
-      "trust": 78,
+      "trust": 80,
       "trend": "improving",
       "history": [
         {
@@ -565,6 +570,11 @@
         },
         {
           "date": "2026-09-06",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-09-08",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -834,103 +844,17 @@
           "date": "2026-09-07",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-08",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-03",
-      "type": "标杆案例",
-      "title": "RCN Moves to Toss the Major Labels’ Marathon Lawsuit, Claiming They’ve Already ‘Dismissed Every Othe",
-      "source": "Digital Music News",
-      "summary": "通过: RCN Moves to Toss the Major Labels’ Marathon Lawsuit, Claiming They’ve Already ‘",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-03",
-      "type": "标杆案例",
-      "title": "Bad Bunny Scores a Huge Victory in ‘Frankenstein’ Reggaeton Infringement Lawsuit",
-      "source": "Digital Music News",
-      "summary": "通过: Bad Bunny Scores a Huge Victory in ‘Frankenstein’ Reggaeton Infringement Lawsuit",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-03",
-      "type": "标杆案例",
-      "title": "Alanis Morissette Sues Former Tour Manager for Extortion and Fraud After Ugly Blackmailing Campaign",
-      "source": "Digital Music News",
-      "summary": "通过: Alanis Morissette Sues Former Tour Manager for Extortion and Fraud After Ugly Bl",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-03",
-      "type": "标杆案例",
-      "title": "Suno Faces Yet Another Multimillion-Dollar Copyright Lawsuit — This Time from Latin and Regional Mex",
-      "source": "Digital Music News",
-      "summary": "通过: Suno Faces Yet Another Multimillion-Dollar Copyright Lawsuit — This Time from La",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-03",
-      "type": "标杆案例",
-      "title": "Jason Isbell, Activist Artist David Lowery, and Others Fire Off Suno Class Action Alleging Likeness ",
-      "source": "Digital Music News",
-      "summary": "通过: Jason Isbell, Activist Artist David Lowery, and Others Fire Off Suno Class Actio",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-03",
-      "type": "每日统计",
-      "summary": "今日通过率: 77% (46/60)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-09-04",
-      "type": "被拒案例",
-      "title": "Lindsay Clancy Trial: Defense Blames Single Juror for Deadlock - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为Lindsay Clancy法庭审判，与音乐产业完全无关",
-      "summary": "被拒: Lindsay Clancy Trial: Defense Blames Single Juror for Deadlock - The New York Ti",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为Lindsay Clancy法庭审判，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-09-04",
-      "type": "被拒案例",
-      "title": "Live updates: Rescues underway as two workers pulled alive more than a week after Nepal-China floods",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为尼泊尔-中国洪水救援，与音乐产业完全无关",
-      "summary": "被拒: Live updates: Rescues underway as two workers pulled alive more than a week afte",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为尼泊尔-中国洪水救援，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-09-04",
-      "type": "被拒案例",
-      "title": "Trump administration asks Supreme Court to allow mail-in ballot restrictions - The Washington Post",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为特朗普政府邮寄选票限制，与音乐产业完全无关",
-      "summary": "被拒: Trump administration asks Supreme Court to allow mail-in ballot restrictions - T",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为特朗普政府邮寄选票限制，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-09-04",
-      "type": "被拒案例",
-      "title": "Fox News Media abruptly ousts longtime anchor Maria Bartiromo - The Guardian",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为Fox News主播被解雇，与音乐产业完全无关",
-      "summary": "被拒: Fox News Media abruptly ousts longtime anchor Maria Bartiromo - The Guardian",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为Fox News主播被解雇，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-09-04",
-      "type": "被拒案例",
-      "title": "Work on Trump-backed Triumphal Arch will start in coming weeks, Burgum says - CBS News",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为特朗普凯旋门项目，与音乐产业完全无关",
-      "summary": "被拒: Work on Trump-backed Triumphal Arch will start in coming weeks, Burgum says - CB",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为特朗普凯旋门项目，与音乐产业完全无关"
-    },
     {
       "date": "2026-09-04",
       "type": "标杆案例",
@@ -1248,6 +1172,97 @@
       "date": "2026-09-07",
       "type": "每日统计",
       "summary": "今日通过率: 45% (27/60)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-09-08",
+      "type": "被拒案例",
+      "title": "Wild drone video shows cops drop hammer on LA street takeover - New York Post",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为美国洛杉矶街头事件，与音乐产业完全无关。",
+      "summary": "被拒: Wild drone video shows cops drop hammer on LA street takeover - New York Post",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为美国洛杉矶街头事件，与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-09-08",
+      "type": "被拒案例",
+      "title": "As Nepal identifies those killed in the floods, questions grow over China's reporting - npr.org",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为尼泊尔洪水与中国报道，与音乐产业完全无关。",
+      "summary": "被拒: As Nepal identifies those killed in the floods, questions grow over China's repo",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为尼泊尔洪水与中国报道，与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-09-08",
+      "type": "被拒案例",
+      "title": "Israeli airstrikes on a village in southern Lebanon kill 12 people, including 2 children - AP News",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为以色列与黎巴嫩冲突，与音乐产业完全无关。",
+      "summary": "被拒: Israeli airstrikes on a village in southern Lebanon kill 12 people, including 2 ",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为以色列与黎巴嫩冲突，与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-09-08",
+      "type": "被拒案例",
+      "title": "Democratic Senate Seat at Risk in New Hampshire as Sununu Gains - Bloomberg.com",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为美国参议院选举政治新闻，与音乐产业完全无关。",
+      "summary": "被拒: Democratic Senate Seat at Risk in New Hampshire as Sununu Gains - Bloomberg.com",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为美国参议院选举政治新闻，与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-09-08",
+      "type": "被拒案例",
+      "title": "Republican midterm convention will be ‘Trumpist pageantry’ – at the party’s own risk - The Guardian",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News黑名单源，内容为美国共和党政治新闻，与音乐产业完全无关。",
+      "summary": "被拒: Republican midterm convention will be ‘Trumpist pageantry’ – at the party’s own ",
+      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为美国共和党政治新闻，与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-09-08",
+      "type": "标杆案例",
+      "title": "Pink Slams Macklemore After Politically Charged Ed Sheeran Opener Divides Fans",
+      "source": "Digital Music News",
+      "summary": "通过: Pink Slams Macklemore After Politically Charged Ed Sheeran Opener Divides Fans",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-08",
+      "type": "标杆案例",
+      "title": "The Quiet Death of Playlist Chasing",
+      "source": "Digital Music News",
+      "summary": "通过: The Quiet Death of Playlist Chasing",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-08",
+      "type": "标杆案例",
+      "title": "Tracktion Waveform 14 Pro, as reviewed by an Ableton Live user",
+      "source": "MusicTech",
+      "summary": "通过: Tracktion Waveform 14 Pro, as reviewed by an Ableton Live user",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-08",
+      "type": "标杆案例",
+      "title": "New ZERO9 plugins have a gloriously simple UI: “We’ve removed anything that doesn’t need to be there",
+      "source": "MusicTech",
+      "summary": "通过: New ZERO9 plugins have a gloriously simple UI: “We’ve removed anything that does",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-08",
+      "type": "标杆案例",
+      "title": "Sony launches ULT TOWER bass-powered speakers: here’s everything you need to know – features, pricin",
+      "source": "MusicTech",
+      "summary": "通过: Sony launches ULT TOWER bass-powered speakers: here’s everything you need to kno",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-08",
+      "type": "每日统计",
+      "summary": "今日通过率: 50% (30/60)",
       "lesson": ""
     }
   ],
