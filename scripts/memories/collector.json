@@ -323,6 +323,11 @@
           "date": "2026-09-08",
           "event": "合作 8次",
           "trustDelta": 4
+        },
+        {
+          "date": "2026-09-09",
+          "event": "合作 11次",
+          "trustDelta": 8
         }
       ],
       "summary": "关系良好"
@@ -849,103 +854,17 @@
           "date": "2026-09-08",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-09",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-04",
-      "type": "标杆案例",
-      "title": "Denon DJ’s new Prime 4 G2 is an all-in-one DJ controller with MPCe pads",
-      "source": "MusicTech",
-      "summary": "通过: Denon DJ’s new Prime 4 G2 is an all-in-one DJ controller with MPCe pads",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-04",
-      "type": "标杆案例",
-      "title": "I got hands-on with Reason Free and its remarkably addictive modular patching environment",
-      "source": "MusicTech",
-      "summary": "通过: I got hands-on with Reason Free and its remarkably addictive modular patching en",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-04",
-      "type": "标杆案例",
-      "title": "The best new music plugins this week, free and paid",
-      "source": "MusicTech",
-      "summary": "通过: The best new music plugins this week, free and paid",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-04",
-      "type": "标杆案例",
-      "title": "Stoic’s 9-to-5 routine has helped him release over 1,000 beats",
-      "source": "MusicTech",
-      "summary": "通过: Stoic’s 9-to-5 routine has helped him release over 1,000 beats",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-04",
-      "type": "标杆案例",
-      "title": "Logic Pro 12.3, as reviewed by a Cubase version 1 user",
-      "source": "MusicTech",
-      "summary": "通过: Logic Pro 12.3, as reviewed by a Cubase version 1 user",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-04",
-      "type": "每日统计",
-      "summary": "今日通过率: 67% (40/60)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-09-05",
-      "type": "被拒案例",
-      "title": "Corie A. Walsh, mother of Barrett, killed in domestic homicide in Brook Stone Court home, charged wi",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为家庭凶杀案新闻，与音乐产业完全无关",
-      "summary": "被拒: Corie A. Walsh, mother of Barrett, killed in domestic homicide in Brook Stone Co",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为家庭凶杀案新闻，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-09-05",
-      "type": "被拒案例",
-      "title": "Maria Bartiromo’s Lawyer Denies She Was Fired By Fox - Forbes",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为Fox新闻主持人解雇新闻，与音乐产业完全无关",
-      "summary": "被拒: Maria Bartiromo’s Lawyer Denies She Was Fired By Fox - Forbes",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为Fox新闻主持人解雇新闻，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-09-05",
-      "type": "被拒案例",
-      "title": "In Major Leak Hunt, Pentagon Gives Polygraph Tests to Joint Staff Members - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为五角大楼测谎新闻，与音乐产业完全无关",
-      "summary": "被拒: In Major Leak Hunt, Pentagon Gives Polygraph Tests to Joint Staff Members - The ",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为五角大楼测谎新闻，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-09-05",
-      "type": "被拒案例",
-      "title": "Retired general calls Trump's proposed arch near Arlington a 'sacrilege' - pbs.org",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为特朗普纪念碑争议新闻，与音乐产业完全无关",
-      "summary": "被拒: Retired general calls Trump's proposed arch near Arlington a 'sacrilege' - pbs.o",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为特朗普纪念碑争议新闻，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-09-05",
-      "type": "被拒案例",
-      "title": "Judge orders DOJ to disclose who conceived of now-defunct payout fund - The Washington Post",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为司法部基金披露新闻，与音乐产业完全无关",
-      "summary": "被拒: Judge orders DOJ to disclose who conceived of now-defunct payout fund - The Wash",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为司法部基金披露新闻，与音乐产业完全无关"
-    },
     {
       "date": "2026-09-05",
       "type": "标杆案例",
@@ -1264,6 +1183,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 50% (30/60)",
       "lesson": ""
+    },
+    {
+      "date": "2026-09-09",
+      "type": "被拒案例",
+      "title": "收评：科创50指数高开低走跌0.69% 煤炭股逆势走强 - 东方财富网",
+      "source": "Google News 音乐产业",
+      "reason": "A股收评新闻，来源为Google News黑名单源，内容与音乐产业完全无关。",
+      "summary": "被拒: 收评：科创50指数高开低走跌0.69% 煤炭股逆势走强 - 东方财富网",
+      "lesson": "避免采集此类素材: A股收评新闻，来源为Google News黑名单源，内容与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-09-09",
+      "type": "被拒案例",
+      "title": "十万卡集群将越来越多！工信部：加大力度适配国产算力芯片 - 凤凰网科技",
+      "source": "Google News 音乐产业",
+      "reason": "算力芯片新闻，来源为Google News黑名单源，内容与音乐产业完全无关。",
+      "summary": "被拒: 十万卡集群将越来越多！工信部：加大力度适配国产算力芯片 - 凤凰网科技",
+      "lesson": "避免采集此类素材: 算力芯片新闻，来源为Google News黑名单源，内容与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-09-09",
+      "type": "被拒案例",
+      "title": "伦敦股市8日下跌 - 新华网客户端",
+      "source": "Google News 音乐产业",
+      "reason": "伦敦股市新闻，来源为Google News黑名单源，内容与音乐产业完全无关。",
+      "summary": "被拒: 伦敦股市8日下跌 - 新华网客户端",
+      "lesson": "避免采集此类素材: 伦敦股市新闻，来源为Google News黑名单源，内容与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-09-09",
+      "type": "被拒案例",
+      "title": "年内发债、增资逾650亿元 中小险企“自我造血”待破题 - Sohu",
+      "source": "Google News 音乐产业",
+      "reason": "保险业发债新闻，来源为Google News黑名单源，内容与音乐产业完全无关。",
+      "summary": "被拒: 年内发债、增资逾650亿元 中小险企“自我造血”待破题 - Sohu",
+      "lesson": "避免采集此类素材: 保险业发债新闻，来源为Google News黑名单源，内容与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-09-09",
+      "type": "被拒案例",
+      "title": "江波龙港股上市首日破发，收盘微跌1.02% - thepaper.cn",
+      "source": "Google News 音乐产业",
+      "reason": "江波龙港股新闻，来源为Google News黑名单源，内容与音乐产业完全无关。",
+      "summary": "被拒: 江波龙港股上市首日破发，收盘微跌1.02% - thepaper.cn",
+      "lesson": "避免采集此类素材: 江波龙港股新闻，来源为Google News黑名单源，内容与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-09-09",
+      "type": "标杆案例",
+      "title": "AFM v. Universal Music and Warner Music Legal Battle Continues — Union Fires Back Against the Majors",
+      "source": "Digital Music News",
+      "summary": "通过: AFM v. Universal Music and Warner Music Legal Battle Continues — Union Fires Bac",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-09",
+      "type": "标杆案例",
+      "title": "Federal Judge Rejects MLC’s Interlocutory Appeal Push in Spotify Bundling Battle — While Striking On",
+      "source": "Digital Music News",
+      "summary": "通过: Federal Judge Rejects MLC’s Interlocutory Appeal Push in Spotify Bundling Battle",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-09",
+      "type": "标杆案例",
+      "title": "Tencent Music’s Billion-Dollar Bond Offering Officially Sets Sail as TME Stock Continues to Get Batt",
+      "source": "Digital Music News",
+      "summary": "通过: Tencent Music’s Billion-Dollar Bond Offering Officially Sets Sail as TME Stock C",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-09",
+      "type": "标杆案例",
+      "title": "100+ Hours of Early Oasis Recordings and Outtakes Are Being Auctioned Without Band’s Permission",
+      "source": "Digital Music News",
+      "summary": "通过: 100+ Hours of Early Oasis Recordings and Outtakes Are Being Auctioned Without Ba",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-09",
+      "type": "标杆案例",
+      "title": "Live Nation, AEG, Radiohead’s Philip Selway Back New $370,000 Touring Mental Health Fund",
+      "source": "Digital Music News",
+      "summary": "通过: Live Nation, AEG, Radiohead’s Philip Selway Back New $370,000 Touring Mental Hea",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-09",
+      "type": "每日统计",
+      "summary": "今日通过率: 75% (45/60)",
+      "lesson": "通过率良好，保持当前标准"
     }
   ],
   "selfReview": {
