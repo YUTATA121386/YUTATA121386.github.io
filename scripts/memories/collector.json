@@ -328,6 +328,11 @@
           "date": "2026-09-09",
           "event": "合作 11次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-09-10",
+          "event": "合作 10次",
+          "trustDelta": 8
         }
       ],
       "summary": "关系良好"
@@ -448,6 +453,11 @@
         },
         {
           "date": "2026-09-06",
+          "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-09-10",
           "event": "合作 1次",
           "trustDelta": 0
         }
@@ -859,103 +869,17 @@
           "date": "2026-09-09",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-10",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-05",
-      "type": "标杆案例",
-      "title": "Cubase 15 is currently 40% off, with bigger discounts across Steinberg’s catalogue",
-      "source": "MusicTech",
-      "summary": "通过: Cubase 15 is currently 40% off, with bigger discounts across Steinberg’s catalog",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-05",
-      "type": "标杆案例",
-      "title": "Audacity 4 is its biggest update in 25 years",
-      "source": "MusicTech",
-      "summary": "通过: Audacity 4 is its biggest update in 25 years",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-05",
-      "type": "标杆案例",
-      "title": "Denon DJ’s new Prime 4 G2 is an all-in-one DJ controller with MPCe pads",
-      "source": "MusicTech",
-      "summary": "通过: Denon DJ’s new Prime 4 G2 is an all-in-one DJ controller with MPCe pads",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-05",
-      "type": "标杆案例",
-      "title": "I got hands-on with Reason Free and its remarkably addictive modular patching environment",
-      "source": "MusicTech",
-      "summary": "通过: I got hands-on with Reason Free and its remarkably addictive modular patching en",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-05",
-      "type": "标杆案例",
-      "title": "The best new music plugins this week, free and paid",
-      "source": "MusicTech",
-      "summary": "通过: The best new music plugins this week, free and paid",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-05",
-      "type": "每日统计",
-      "summary": "今日通过率: 65% (49/75)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-09-06",
-      "type": "被拒案例",
-      "title": "14 people sent to hospital during The Chainsmokers concert at Discovery Meadow in San Jose, authorit",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为音乐会现场事故的社会新闻，非行业分析素材。",
-      "summary": "被拒: 14 people sent to hospital during The Chainsmokers concert at Discovery Meadow i",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为音乐会现场事故的社会新闻，非行业分析素材。"
-    },
-    {
-      "date": "2026-09-06",
-      "type": "被拒案例",
-      "title": "Maria Bartiromo’s downfall at an increasingly cautious Fox News - The Seattle Times",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为媒体行业人事变动，非音乐行业核心话题。",
-      "summary": "被拒: Maria Bartiromo’s downfall at an increasingly cautious Fox News - The Seattle Ti",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为媒体行业人事变动，非音乐行业核心话题。"
-    },
-    {
-      "date": "2026-09-06",
-      "type": "被拒案例",
-      "title": "LAPD busts massive street takeover in South Bay, impounding more than 100 cars - Los Angeles Times",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为街头赛车执法新闻，非音乐行业话题。",
-      "summary": "被拒: LAPD busts massive street takeover in South Bay, impounding more than 100 cars -",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为街头赛车执法新闻，非音乐行业话题。"
-    },
-    {
-      "date": "2026-09-06",
-      "type": "被拒案例",
-      "title": "Trump shakes up RNC midterm convention schedule, says he’ll speak on night one - The Hill",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为美国政治新闻，非音乐行业话题。",
-      "summary": "被拒: Trump shakes up RNC midterm convention schedule, says he’ll speak on night one -",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为美国政治新闻，非音乐行业话题。"
-    },
-    {
-      "date": "2026-09-06",
-      "type": "被拒案例",
-      "title": "El-Sayed split Michigan Democrats. Whether they unify could decide Senate control - NPR",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为美国政治新闻，非音乐行业话题。",
-      "summary": "被拒: El-Sayed split Michigan Democrats. Whether they unify could decide Senate contro",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为美国政治新闻，非音乐行业话题。"
-    },
     {
       "date": "2026-09-06",
       "type": "标杆案例",
@@ -1273,6 +1197,97 @@
       "date": "2026-09-09",
       "type": "每日统计",
       "summary": "今日通过率: 75% (45/60)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-09-10",
+      "type": "被拒案例",
+      "title": "Rhode Island’s Democratic governor loses primary amid anger over bridge - The Guardian",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为罗德岛州长初选新闻，与音乐产业完全无关。",
+      "summary": "被拒: Rhode Island’s Democratic governor loses primary amid anger over bridge - The Gu",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为罗德岛州长初选新闻，与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-09-10",
+      "type": "被拒案例",
+      "title": "Live fact check: Night 1 of the Republican Midterm Convention - PBS",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为共和党大会事实核查，与音乐产业完全无关。",
+      "summary": "被拒: Live fact check: Night 1 of the Republican Midterm Convention - PBS",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为共和党大会事实核查，与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-09-10",
+      "type": "被拒案例",
+      "title": "Mother demands answers, weeks after black woman found hanging from Mississippi tree - BBC",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为密西西比社会案件新闻，与音乐产业完全无关，且含敏感社会议题。",
+      "summary": "被拒: Mother demands answers, weeks after black woman found hanging from Mississippi t",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为密西西比社会案件新闻，与音乐产业完全无关，且含敏感社会议题。"
+    },
+    {
+      "date": "2026-09-10",
+      "type": "被拒案例",
+      "title": "Missouri fight over gerrymandered congressional map heading back to US Supreme Court - Missouri Inde",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为密苏里选区诉讼新闻，与音乐产业完全无关。",
+      "summary": "被拒: Missouri fight over gerrymandered congressional map heading back to US Supreme C",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为密苏里选区诉讼新闻，与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-09-10",
+      "type": "被拒案例",
+      "title": "Man who died in Sacramento County Highway 50 standoff had stalked woman he executed, sheriff says - ",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为萨克拉门托枪击案新闻，与音乐产业完全无关，且含暴力敏感内容。",
+      "summary": "被拒: Man who died in Sacramento County Highway 50 standoff had stalked woman he execu",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为萨克拉门托枪击案新闻，与音乐产业完全无关，且含暴力敏感内容。"
+    },
+    {
+      "date": "2026-09-10",
+      "type": "标杆案例",
+      "title": "VinylCon attendees tell us why “proper ownership and proper preservation” keep them hooked on physic",
+      "source": "MusicTech",
+      "summary": "通过: VinylCon attendees tell us why “proper ownership and proper preservation” keep t",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-10",
+      "type": "标杆案例",
+      "title": "It’s Synth Month at Plugin Boutique, and you can save BIG on instruments from Native Instruments, Mi",
+      "source": "MusicTech",
+      "summary": "通过: It’s Synth Month at Plugin Boutique, and you can save BIG on instruments from Na",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-10",
+      "type": "标杆案例",
+      "title": "Inside Embassy Studios, where the rooms become part of the signal chain",
+      "source": "MusicTech",
+      "summary": "通过: Inside Embassy Studios, where the rooms become part of the signal chain",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-10",
+      "type": "标杆案例",
+      "title": "You next over-ear headphones? Sony launches a trio of models aimed at premium, mid-range and entry-l",
+      "source": "MusicTech",
+      "summary": "通过: You next over-ear headphones? Sony launches a trio of models aimed at premium, m",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-10",
+      "type": "标杆案例",
+      "title": "Tracktion Waveform 14 Pro, as reviewed by an Ableton Live user",
+      "source": "MusicTech",
+      "summary": "通过: Tracktion Waveform 14 Pro, as reviewed by an Ableton Live user",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-10",
+      "type": "每日统计",
+      "summary": "今日通过率: 71% (57/80)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],

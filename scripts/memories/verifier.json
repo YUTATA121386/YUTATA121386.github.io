@@ -328,6 +328,11 @@
           "date": "2026-09-09",
           "event": "合作 11次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-09-10",
+          "event": "合作 10次",
+          "trustDelta": 8
         }
       ],
       "summary": "关系良好"
@@ -699,26 +704,17 @@
           "date": "2026-09-09",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-10",
+          "event": "合作 5次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-15",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: 第三批素材（RAW-0041至0060）发现12条Google News黑名单源污染素材（RAW-0049至0060），你的'零Google News系列源残留",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-08-15",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 前20条素材全部通过（通过率100%），来源全部为白名单源（Music Business Worldwide + Music Ally），质量优秀",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-08-16",
       "type": "重大挛折",
@@ -1052,6 +1048,20 @@
       "date": "2026-09-09",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 前20条素材全部通过（通过率100%），来源全部为白名单源（MBW×10、Music Ally×10），无Google News污染。内容覆盖AI版权诉讼、资本",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-09-10",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 第3批（RAW-0041至0060）审核完成：10条通过，10条拒绝。拒绝的10条（RAW-0051至0060）全部为Google News黑名单源污染，内容为",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-09-10",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 首批20条（RAW-0001至0020）全部通过，通过率100%，来源全部为白名单源（MBW×10、Music Ally×10），未发现Google News黑",
       "lesson": "",
       "impact": ""
     }
