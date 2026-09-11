@@ -333,6 +333,11 @@
           "date": "2026-09-10",
           "event": "合作 10次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-09-11",
+          "event": "合作 9次",
+          "trustDelta": 8
         }
       ],
       "summary": "关系良好"
@@ -874,103 +879,17 @@
           "date": "2026-09-10",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-11",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-06",
-      "type": "标杆案例",
-      "title": "sis、未知なる世界へ飛び込む疾走ダンスチューン「DIVER」配信リリース決定",
-      "source": "BARKS",
-      "summary": "通过: sis、未知なる世界へ飛び込む疾走ダンスチューン「DIVER」配信リリース決定",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-06",
-      "type": "标杆案例",
-      "title": "SPYAIR、＜JUST LIKE THIS＞初の海外公演を韓国で完遂。歴代アニメソング収録のベスト盤も発売決定",
-      "source": "BARKS",
-      "summary": "通过: SPYAIR、＜JUST LIKE THIS＞初の海外公演を韓国で完遂。歴代アニメソング収録のベスト盤も発売決定",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-06",
-      "type": "标杆案例",
-      "title": "Vaundy、初のアジアアリーナツアー開幕。韓国公演のYouTube生配信も発表",
-      "source": "BARKS",
-      "summary": "通过: Vaundy、初のアジアアリーナツアー開幕。韓国公演のYouTube生配信も発表",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-06",
-      "type": "标杆案例",
-      "title": "【インタビュー】DEZERT、結成15周年とバンド初の試み『Alternate4』を語る「どう音楽と向き合うか、今からをどう生きていくか」",
-      "source": "BARKS",
-      "summary": "通过: 【インタビュー】DEZERT、結成15周年とバンド初の試み『Alternate4』を語る「どう音楽と向き合うか、今からをどう生きていくか」",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-06",
-      "type": "标杆案例",
-      "title": "TiDE、ニューEP『Dialogue』リリース決定。バンド初のCD発売＆リリース記念イベント開催も",
-      "source": "BARKS",
-      "summary": "通过: TiDE、ニューEP『Dialogue』リリース決定。バンド初のCD発売＆リリース記念イベント開催も",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-06",
-      "type": "每日统计",
-      "summary": "今日通过率: 50% (30/60)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-09-07",
-      "type": "被拒案例",
-      "title": "Virginia mom placed on child abuse registry for 7 years after letting 5-year-old walk alone - New Yo",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News Music Industry（黑名单源），内容为美国社会法律新闻，与音乐产业完全无关",
-      "summary": "被拒: Virginia mom placed on child abuse registry for 7 years after letting 5-year-old",
-      "lesson": "避免采集此类素材: 来源为Google News Music Industry（黑名单源），内容为美国社会法律新闻，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-09-07",
-      "type": "被拒案例",
-      "title": "Trump posts map labeling New Mexico as ‘New America’ after online hoax - The Hill",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News Music Industry，属于黑名单源污染，且内容为政治新闻（Trump相关），与音乐行业无关",
-      "summary": "被拒: Trump posts map labeling New Mexico as ‘New America’ after online hoax - The Hil",
-      "lesson": "避免采集此类素材: 来源为Google News Music Industry，属于黑名单源污染，且内容为政治新闻（Trump相关），与音乐行业无关"
-    },
-    {
-      "date": "2026-09-07",
-      "type": "被拒案例",
-      "title": "Will ‘GTA 6’ have a first-person mode?",
-      "source": "NME",
-      "reason": "来源为NME但与音乐行业无关——内容为GTA 6游戏功能讨论，属于纯游戏新闻",
-      "summary": "被拒: Will ‘GTA 6’ have a first-person mode?",
-      "lesson": "避免采集此类素材: 来源为NME但与音乐行业无关——内容为GTA 6游戏功能讨论，属于纯游戏新闻"
-    },
-    {
-      "date": "2026-09-07",
-      "type": "被拒案例",
-      "title": "‘Marvel Tokon Fighting Souls’ Phoenix Cyclops release date, gameplay, more",
-      "source": "NME",
-      "reason": "来源为NME但与音乐行业无关——内容为Marvel游戏角色发布，属于纯游戏新闻",
-      "summary": "被拒: ‘Marvel Tokon Fighting Souls’ Phoenix Cyclops release date, gameplay, more",
-      "lesson": "避免采集此类素材: 来源为NME但与音乐行业无关——内容为Marvel游戏角色发布，属于纯游戏新闻"
-    },
-    {
-      "date": "2026-09-07",
-      "type": "被拒案例",
-      "title": "PS Plus October 2026 games – what to expect",
-      "source": "NME",
-      "reason": "来源为NME但与音乐行业无关——内容为PS Plus游戏阵容预测，属于纯游戏新闻",
-      "summary": "被拒: PS Plus October 2026 games – what to expect",
-      "lesson": "避免采集此类素材: 来源为NME但与音乐行业无关——内容为PS Plus游戏阵容预测，属于纯游戏新闻"
-    },
     {
       "date": "2026-09-07",
       "type": "标杆案例",
@@ -1286,6 +1205,97 @@
     },
     {
       "date": "2026-09-10",
+      "type": "每日统计",
+      "summary": "今日通过率: 71% (57/80)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-09-11",
+      "type": "被拒案例",
+      "title": "'We let down Lindsay,' says juror who served in Clancy trial - WCVB",
+      "source": "Google News Music Industry",
+      "reason": "来源为'Google News Music Industry'黑名单源，内容为'Clancy案审判陪审员访谈'，属司法新闻，与音乐产业无关。",
+      "summary": "被拒: 'We let down Lindsay,' says juror who served in Clancy trial - WCVB",
+      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'黑名单源，内容为'Clancy案审判陪审员访谈'，属司法新闻，与音乐产业无关。"
+    },
+    {
+      "date": "2026-09-11",
+      "type": "被拒案例",
+      "title": "James Talarico blasts Trump FCC’s ‘dangerous’ cancel culture over Kimmel interview ordeal - cnn.com",
+      "source": "Google News Music Industry",
+      "reason": "来源为'Google News Music Industry'黑名单源，内容为'James Talarico抨击FCC取消文化/Kimmel访谈'，属美国政治新闻，与音乐产业无关。",
+      "summary": "被拒: James Talarico blasts Trump FCC’s ‘dangerous’ cancel culture over Kimmel intervi",
+      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'黑名单源，内容为'James Talarico抨击FCC取消文化/Kimmel访谈'，属美国政治新"
+    },
+    {
+      "date": "2026-09-11",
+      "type": "被拒案例",
+      "title": "California coast braces for another battering as new El Niño-related wave emerges in Pacific - Los A",
+      "source": "Google News Music Industry",
+      "reason": "来源为'Google News Music Industry'黑名单源，内容为'加州海岸应对厄尔尼诺海浪'，属气象灾害新闻，与音乐产业无关。",
+      "summary": "被拒: California coast braces for another battering as new El Niño-related wave emerge",
+      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'黑名单源，内容为'加州海岸应对厄尔尼诺海浪'，属气象灾害新闻，与音乐产业无关。"
+    },
+    {
+      "date": "2026-09-11",
+      "type": "被拒案例",
+      "title": "Bombshell Leak Reveals Vance Kept Trump’s Ugly War Reality Under Wraps - The Daily Beast",
+      "source": "Google News Music Industry",
+      "reason": "来源为'Google News Music Industry'黑名单源，内容为'万斯隐瞒特朗普战争现实泄密'，属美国政治新闻，与音乐产业无关。",
+      "summary": "被拒: Bombshell Leak Reveals Vance Kept Trump’s Ugly War Reality Under Wraps - The Dai",
+      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'黑名单源，内容为'万斯隐瞒特朗普战争现实泄密'，属美国政治新闻，与音乐产业无关。"
+    },
+    {
+      "date": "2026-09-11",
+      "type": "被拒案例",
+      "title": "Iran-backed Houthi rebels take strategic port city in Yemen, raising threat to Red Sea shipping - AP",
+      "source": "Google News Music Industry",
+      "reason": "来源为'Google News Music Industry'黑名单源，内容为'胡塞武装占领也门港口威胁红海航运'，属国际军事新闻，与音乐产业无关。",
+      "summary": "被拒: Iran-backed Houthi rebels take strategic port city in Yemen, raising threat to R",
+      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'黑名单源，内容为'胡塞武装占领也门港口威胁红海航运'，属国际军事新闻，与音乐产业无关。"
+    },
+    {
+      "date": "2026-09-11",
+      "type": "标杆案例",
+      "title": "“These mixers set the bar for the perfect intersection of performance and value”: Soundcraft unveils",
+      "source": "MusicTech",
+      "summary": "通过: “These mixers set the bar for the perfect intersection of performance and value”",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-11",
+      "type": "标杆案例",
+      "title": "Korg Nu:Tekt NTS-4 is a small mixer with big ideas",
+      "source": "MusicTech",
+      "summary": "通过: Korg Nu:Tekt NTS-4 is a small mixer with big ideas",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-11",
+      "type": "标杆案例",
+      "title": "Soundcraft Signature Plus 22 mixer review: “Analogue mixers are back, baby!”",
+      "source": "MusicTech",
+      "summary": "通过: Soundcraft Signature Plus 22 mixer review: “Analogue mixers are back, baby!”",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-11",
+      "type": "标杆案例",
+      "title": "VinylCon attendees tell us why “proper ownership and proper preservation” keep them hooked on physic",
+      "source": "MusicTech",
+      "summary": "通过: VinylCon attendees tell us why “proper ownership and proper preservation” keep t",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-11",
+      "type": "标杆案例",
+      "title": "It’s Synth Month at Plugin Boutique, and you can save BIG on instruments from Native Instruments, Mi",
+      "source": "MusicTech",
+      "summary": "通过: It’s Synth Month at Plugin Boutique, and you can save BIG on instruments from Na",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-11",
       "type": "每日统计",
       "summary": "今日通过率: 71% (57/80)",
       "lesson": "通过率良好，保持当前标准"

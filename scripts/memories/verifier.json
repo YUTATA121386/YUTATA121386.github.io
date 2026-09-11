@@ -333,6 +333,11 @@
           "date": "2026-09-10",
           "event": "合作 10次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-09-11",
+          "event": "合作 9次",
+          "trustDelta": 8
         }
       ],
       "summary": "关系良好"
@@ -709,26 +714,17 @@
           "date": "2026-09-10",
           "event": "合作 5次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-11",
+          "event": "合作 5次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-16",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: 本批10条素材中，16条通过、5条因Google News黑名单源污染被拒绝、2条因内容相关性不足被拒绝。你的'无黑名单源混入'承诺严重失实",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-08-16",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 前20条素材全部通过（通过率100%），来源全部为白名单源（MBW×4、Music Ally×8、Billboard×8），内容覆盖AI音乐、票务监管、版权法律",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-08-17",
       "type": "重大挛折",
@@ -1062,6 +1058,20 @@
       "date": "2026-09-10",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 首批20条（RAW-0001至0020）全部通过，通过率100%，来源全部为白名单源（MBW×10、Music Ally×10），未发现Google News黑",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-09-11",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 第3批（RAW-0041至0060）审核完成：10条通过，10条拒绝（通过率50%）。拒绝的RAW-0051至0060全部为'Google News 音乐产业'",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-09-11",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 首批20条素材全部通过，通过率100%。来源全部为白名单源（MBW×10、Music Ally×10），未发现Google News污染。",
       "lesson": "",
       "impact": ""
     }
