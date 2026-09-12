@@ -338,6 +338,11 @@
           "date": "2026-09-11",
           "event": "合作 9次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-09-12",
+          "event": "合作 9次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -597,6 +602,11 @@
           "date": "2026-09-08",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-12",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系良好"
@@ -884,103 +894,17 @@
           "date": "2026-09-11",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-12",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-07",
-      "type": "标杆案例",
-      "title": "Feel the funk with Gabriel Jacoby’s exclusive playlist for The Cover",
-      "source": "NME",
-      "summary": "通过: Feel the funk with Gabriel Jacoby’s exclusive playlist for The Cover",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-07",
-      "type": "标杆案例",
-      "title": "It’s time to get in Gabriel Jacoby’s corner",
-      "source": "NME",
-      "summary": "通过: It’s time to get in Gabriel Jacoby’s corner",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-07",
-      "type": "标杆案例",
-      "title": "Radiohead announce long run of 2027 residency shows in Australia and Japan",
-      "source": "NME",
-      "summary": "通过: Radiohead announce long run of 2027 residency shows in Australia and Japan",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-07",
-      "type": "标杆案例",
-      "title": "Two deaths reported at Burning Man 2026",
-      "source": "NME",
-      "summary": "通过: Two deaths reported at Burning Man 2026",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-07",
-      "type": "标杆案例",
-      "title": "When will the ‘Just Dance Decades of Hits’ track list and song list be announced?",
-      "source": "NME",
-      "summary": "通过: When will the ‘Just Dance Decades of Hits’ track list and song list be announced",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-07",
-      "type": "每日统计",
-      "summary": "今日通过率: 45% (27/60)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-09-08",
-      "type": "被拒案例",
-      "title": "Wild drone video shows cops drop hammer on LA street takeover - New York Post",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为美国洛杉矶街头事件，与音乐产业完全无关。",
-      "summary": "被拒: Wild drone video shows cops drop hammer on LA street takeover - New York Post",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为美国洛杉矶街头事件，与音乐产业完全无关。"
-    },
-    {
-      "date": "2026-09-08",
-      "type": "被拒案例",
-      "title": "As Nepal identifies those killed in the floods, questions grow over China's reporting - npr.org",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为尼泊尔洪水与中国报道，与音乐产业完全无关。",
-      "summary": "被拒: As Nepal identifies those killed in the floods, questions grow over China's repo",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为尼泊尔洪水与中国报道，与音乐产业完全无关。"
-    },
-    {
-      "date": "2026-09-08",
-      "type": "被拒案例",
-      "title": "Israeli airstrikes on a village in southern Lebanon kill 12 people, including 2 children - AP News",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为以色列与黎巴嫩冲突，与音乐产业完全无关。",
-      "summary": "被拒: Israeli airstrikes on a village in southern Lebanon kill 12 people, including 2 ",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为以色列与黎巴嫩冲突，与音乐产业完全无关。"
-    },
-    {
-      "date": "2026-09-08",
-      "type": "被拒案例",
-      "title": "Democratic Senate Seat at Risk in New Hampshire as Sununu Gains - Bloomberg.com",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为美国参议院选举政治新闻，与音乐产业完全无关。",
-      "summary": "被拒: Democratic Senate Seat at Risk in New Hampshire as Sununu Gains - Bloomberg.com",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为美国参议院选举政治新闻，与音乐产业完全无关。"
-    },
-    {
-      "date": "2026-09-08",
-      "type": "被拒案例",
-      "title": "Republican midterm convention will be ‘Trumpist pageantry’ – at the party’s own risk - The Guardian",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News黑名单源，内容为美国共和党政治新闻，与音乐产业完全无关。",
-      "summary": "被拒: Republican midterm convention will be ‘Trumpist pageantry’ – at the party’s own ",
-      "lesson": "避免采集此类素材: 来源为Google News黑名单源，内容为美国共和党政治新闻，与音乐产业完全无关。"
-    },
     {
       "date": "2026-09-08",
       "type": "标杆案例",
@@ -1298,6 +1222,97 @@
       "date": "2026-09-11",
       "type": "每日统计",
       "summary": "今日通过率: 71% (57/80)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-09-12",
+      "type": "被拒案例",
+      "title": "Trump Wanted a New House Map in Missouri. Voters Got Chaos Instead. - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为密苏里州众议院地图/特朗普，与音乐产业无关",
+      "summary": "被拒: Trump Wanted a New House Map in Missouri. Voters Got Chaos Instead. - The New Yo",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为密苏里州众议院地图/特朗普，与音乐产业无关"
+    },
+    {
+      "date": "2026-09-12",
+      "type": "被拒案例",
+      "title": "Immigration officials say man who stalked, executed woman at Panera bread was in the country illegal",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为移民官员/Panera案件，与音乐产业无关",
+      "summary": "被拒: Immigration officials say man who stalked, executed woman at Panera bread was in",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为移民官员/Panera案件，与音乐产业无关"
+    },
+    {
+      "date": "2026-09-12",
+      "type": "被拒案例",
+      "title": "Congresswoman who helped create 9/11 health fund says she has a 9/11-related illness - wbur.org",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为9/11健康基金/国会议员，与音乐产业无关",
+      "summary": "被拒: Congresswoman who helped create 9/11 health fund says she has a 9/11-related ill",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为9/11健康基金/国会议员，与音乐产业无关"
+    },
+    {
+      "date": "2026-09-12",
+      "type": "被拒案例",
+      "title": "Donald Trump: Protests expected as US president visits Ireland - bbc.com",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为特朗普访问爱尔兰/抗议，与音乐产业无关",
+      "summary": "被拒: Donald Trump: Protests expected as US president visits Ireland - bbc.com",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为特朗普访问爱尔兰/抗议，与音乐产业无关"
+    },
+    {
+      "date": "2026-09-12",
+      "type": "被拒案例",
+      "title": "Federal court rejects Trump order keeping Michigan coal plant open - AP News",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为联邦法院/密歇根煤电厂，与音乐产业无关",
+      "summary": "被拒: Federal court rejects Trump order keeping Michigan coal plant open - AP News",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为联邦法院/密歇根煤电厂，与音乐产业无关"
+    },
+    {
+      "date": "2026-09-12",
+      "type": "标杆案例",
+      "title": "【俺の楽器・私の愛機】2071「出血必須！トンガリ猫ちゃん」",
+      "source": "BARKS",
+      "summary": "通过: 【俺の楽器・私の愛機】2071「出血必須！トンガリ猫ちゃん」",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-12",
+      "type": "标杆案例",
+      "title": "WATWING、八村倫太郎主演映画『ホーム スイート ホーム』×主題歌「My Sweet Place」リリックビデオ公開",
+      "source": "BARKS",
+      "summary": "通过: WATWING、八村倫太郎主演映画『ホーム スイート ホーム』×主題歌「My Sweet Place」リリックビデオ公開",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-12",
+      "type": "标杆案例",
+      "title": "BAND-MAID、ワールドツアーファイナル・武道館2daysの2日目公演がソールドアウト。初日公演の最新先行開始＋新ツアービジュアル公開",
+      "source": "BARKS",
+      "summary": "通过: BAND-MAID、ワールドツアーファイナル・武道館2daysの2日目公演がソールドアウト。初日公演の最新先行開始＋新ツアービジュアル公開",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-12",
+      "type": "标杆案例",
+      "title": "平井 大、田中 圭主演舞台『母さん、ラブソングです。』劇中歌「あなた」のセルフカバー音源を配信",
+      "source": "BARKS",
+      "summary": "通过: 平井 大、田中 圭主演舞台『母さん、ラブソングです。』劇中歌「あなた」のセルフカバー音源を配信",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-12",
+      "type": "标杆案例",
+      "title": "尾崎豊、生誕60周年記念に公式YouTubeチャンネル＆TikTokアカウント開設へ",
+      "source": "BARKS",
+      "summary": "通过: 尾崎豊、生誕60周年記念に公式YouTubeチャンネル＆TikTokアカウント開設へ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-12",
+      "type": "每日统计",
+      "summary": "今日通过率: 63% (50/80)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],
