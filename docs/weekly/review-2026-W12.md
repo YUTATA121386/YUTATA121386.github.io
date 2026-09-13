@@ -1,0 +1,49 @@
+# 2026 年第12周（2026年9月13日）
+
+> 🤖 多Agent信誉分趋势
+
+<div class="rep-summary">
+<div class="rep-card"><span>采集师</span><span class="rep-score">0</span><span class="rep-trend">📉 -1</span></div>
+<div class="rep-card"><span>核查师</span><span class="rep-score">100</span><span class="rep-trend">➡️ 0</span></div>
+<div class="rep-card"><span>分析师</span><span class="rep-score">100</span><span class="rep-trend">➡️ 0</span></div>
+<div class="rep-card"><span>编辑师</span><span class="rep-score">100</span><span class="rep-trend">➡️ 0</span></div>
+<div class="rep-card"><span>记忆管理师</span><span class="rep-score">0</span><span class="rep-trend">📉 -1</span></div>
+</div>
+
+<svg class="rep-line-chart" viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg"><text x="44" y="193" font-size="8" text-anchor="end" fill="#888">0</text><line x1="50" y1="190" x2="540" y2="190" stroke="#ddd" stroke-width="0.5" stroke-dasharray="3,3"/><text x="44" y="158" font-size="8" text-anchor="end" fill="#888">20</text><line x1="50" y1="155" x2="540" y2="155" stroke="#ddd" stroke-width="0.5" stroke-dasharray="3,3"/><text x="44" y="123" font-size="8" text-anchor="end" fill="#888">40</text><line x1="50" y1="120" x2="540" y2="120" stroke="#ddd" stroke-width="0.5" stroke-dasharray="3,3"/><text x="44" y="88" font-size="8" text-anchor="end" fill="#888">60</text><line x1="50" y1="85" x2="540" y2="85" stroke="#ddd" stroke-width="0.5" stroke-dasharray="3,3"/><text x="44" y="53" font-size="8" text-anchor="end" fill="#888">80</text><line x1="50" y1="50" x2="540" y2="50" stroke="#ddd" stroke-width="0.5" stroke-dasharray="3,3"/><text x="44" y="18" font-size="8" text-anchor="end" fill="#888">100</text><line x1="50" y1="15" x2="540" y2="15" stroke="#ddd" stroke-width="0.5" stroke-dasharray="3,3"/><text x="50.0" y="214" font-size="8" text-anchor="middle" fill="#888">06-29</text><text x="126.6" y="214" font-size="8" text-anchor="middle" fill="#888">07-14</text><text x="203.1" y="214" font-size="8" text-anchor="middle" fill="#888">07-28</text><text x="279.7" y="214" font-size="8" text-anchor="middle" fill="#888">08-07</text><text x="356.3" y="214" font-size="8" text-anchor="middle" fill="#888">08-17</text><text x="432.8" y="214" font-size="8" text-anchor="middle" fill="#888">08-27</text><text x="509.4" y="214" font-size="8" text-anchor="middle" fill="#888">09-08</text><polyline points="50.0,50.0 57.7,53.5 65.3,48.3 73.0,53.5 80.6,62.3 88.3,67.5 95.9,62.3 103.6,64.0 111.3,72.8 118.9,81.5 126.6,78.0 134.2,72.8 141.9,78.0 149.5,86.8 157.2,90.3 164.8,85.0 172.5,88.5 180.2,85.0 187.8,88.5 195.5,85.0 203.1,88.5 210.8,86.8 218.4,86.8 226.1,92.0 233.8,100.8 241.4,106.0 249.1,114.8 256.7,120.0 264.4,123.5 272.0,128.8 279.7,134.0 287.3,139.3 295.0,148.0 302.7,156.8 310.3,165.5 318.0,174.3 325.6,183.0 333.3,190.0 340.9,190.0 348.6,190.0 356.3,190.0 363.9,190.0 371.6,190.0 379.2,190.0 386.9,190.0 394.5,190.0 402.2,190.0 409.8,190.0 417.5,190.0 425.2,190.0 432.8,190.0 440.5,190.0 448.1,190.0 455.8,190.0 463.4,190.0 471.1,190.0 478.8,190.0 486.4,190.0 494.1,190.0 501.7,190.0 509.4,190.0 517.0,190.0 524.7,190.0 532.3,190.0 540.0,190.0" fill="none" stroke="#e74c3c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.85"/><text x="544" y="194" font-size="10" fill="#e74c3c">采集师 0</text><polyline points="50.0,51.8 57.7,57.0 65.3,60.5 73.0,55.3 80.6,50.0 88.3,46.5 95.9,48.3 103.6,44.8 111.3,41.3 118.9,36.0 126.6,37.8 134.2,34.3 141.9,30.8 149.5,27.3 157.2,25.5 164.8,22.0 172.5,20.3 180.2,18.5 187.8,16.8 195.5,15.0 203.1,15.0 210.8,15.0 218.4,15.0 226.1,15.0 233.8,15.0 241.4,15.0 249.1,15.0 256.7,15.0 264.4,15.0 272.0,15.0 279.7,15.0 287.3,15.0 295.0,15.0 302.7,15.0 310.3,15.0 318.0,15.0 325.6,15.0 333.3,15.0 340.9,15.0 348.6,15.0 356.3,15.0 363.9,15.0 371.6,15.0 379.2,15.0 386.9,15.0 394.5,15.0 402.2,15.0 409.8,15.0 417.5,15.0 425.2,15.0 432.8,15.0 440.5,15.0 448.1,15.0 455.8,15.0 463.4,15.0 471.1,15.0 478.8,15.0 486.4,15.0 494.1,15.0 501.7,15.0 509.4,15.0 517.0,15.0 524.7,15.0 532.3,15.0 540.0,15.0" fill="none" stroke="#2ecc71" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.85"/><text x="544" y="19" font-size="10" fill="#2ecc71">核查师 100</text><polyline points="50.0,51.8 57.7,48.3 65.3,50.0 73.0,46.5 80.6,43.0 88.3,41.3 95.9,37.8 103.6,36.0 111.3,34.3 118.9,30.8 126.6,25.5 134.2,23.8 141.9,18.5 149.5,18.5 157.2,27.3 164.8,27.3 172.5,27.3 180.2,27.3 187.8,25.5 195.5,25.5 203.1,23.8 210.8,23.8 218.4,23.8 226.1,23.8 233.8,29.0 241.4,32.5 249.1,30.8 256.7,30.8 264.4,30.8 272.0,29.0 279.7,27.3 287.3,25.5 295.0,22.0 302.7,18.5 310.3,18.5 318.0,16.8 325.6,15.0 333.3,15.0 340.9,15.0 348.6,15.0 356.3,15.0 363.9,15.0 371.6,15.0 379.2,15.0 386.9,18.5 394.5,16.8 402.2,16.8 409.8,16.8 417.5,16.8 425.2,16.8 432.8,16.8 440.5,15.0 448.1,15.0 455.8,15.0 463.4,15.0 471.1,15.0 478.8,15.0 486.4,16.8 494.1,16.8 501.7,16.8 509.4,15.0 517.0,15.0 524.7,15.0 532.3,15.0 540.0,15.0" fill="none" stroke="#3498db" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.85"/><text x="544" y="19" font-size="10" fill="#3498db">分析师 100</text><polyline points="50.0,55.3 57.7,53.5 65.3,50.0 73.0,46.5 80.6,51.8 88.3,51.8 95.9,60.5 103.6,55.3 111.3,53.5 118.9,48.3 126.6,44.8 134.2,41.3 141.9,37.8 149.5,32.5 157.2,30.8 164.8,29.0 172.5,27.3 180.2,27.3 187.8,25.5 195.5,25.5 203.1,25.5 210.8,25.5 218.4,25.5 226.1,25.5 233.8,20.3 241.4,18.5 249.1,16.8 256.7,16.8 264.4,16.8 272.0,15.0 279.7,15.0 287.3,15.0 295.0,15.0 302.7,15.0 310.3,15.0 318.0,15.0 325.6,15.0 333.3,15.0 340.9,15.0 348.6,15.0 356.3,15.0 363.9,15.0 371.6,15.0 379.2,15.0 386.9,16.8 394.5,16.8 402.2,16.8 409.8,16.8 417.5,16.8 425.2,16.8 432.8,16.8 440.5,15.0 448.1,15.0 455.8,15.0 463.4,15.0 471.1,15.0 478.8,15.0 486.4,15.0 494.1,15.0 501.7,15.0 509.4,15.0 517.0,15.0 524.7,15.0 532.3,15.0 540.0,15.0" fill="none" stroke="#a569bd" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.85"/><text x="544" y="19" font-size="10" fill="#a569bd">编辑师 100</text><polyline points="50.0,58.8 57.7,65.8 65.3,79.8 73.0,81.5 80.6,85.0 149.5,83.3 157.2,83.3 164.8,85.0 172.5,86.8 203.1,88.5 210.8,90.3 218.4,92.0 241.4,95.5 249.1,100.8 256.7,106.0 264.4,109.5 272.0,113.0 279.7,116.5 295.0,111.3 302.7,111.3 333.3,114.8 356.3,120.0 379.2,123.5 386.9,128.8 394.5,137.5 402.2,155.0 409.8,172.5 432.8,176.0 440.5,177.8 448.1,179.5 463.4,181.3 471.1,183.0 478.8,184.8 486.4,186.5 501.7,188.3 509.4,190.0 517.0,190.0 524.7,190.0" fill="none" stroke="#f39c12" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.85"/><text x="528.7" y="194" font-size="10" fill="#f39c12">记忆管理师 ?</text></svg>
+<div class="rep-legend">
+<span class="rep-legend-item"><span class="rep-dot" style="background:#e74c3c"></span>采集师</span>
+<span class="rep-legend-item"><span class="rep-dot" style="background:#2ecc71"></span>核查师</span>
+<span class="rep-legend-item"><span class="rep-dot" style="background:#3498db"></span>分析师</span>
+<span class="rep-legend-item"><span class="rep-dot" style="background:#a569bd"></span>编辑师</span>
+<span class="rep-legend-item"><span class="rep-dot" style="background:#f39c12"></span>记忆管理师</span>
+</div>
+
+
+### 平均信誉分: 60.0
+### 本周规则变更
+
+| 变更条数 | 说明 |
+|------|------|
+| 14 条 | 由记忆管理师在日常复盘中自动执行 |
+
+
+### 本周规则变更详情
+
+<div class="changelog-list">
+<div><span class="changelog-file">collection-rules.md</span> <span class="changelog-ver">V2.3.37</span><br>今日新识别NME白名单源混入Gaming子频道内容这一新污染类型，暴露现有规则仅管理'源级'白名单、缺乏'子频道级'过滤的盲区，需在采集规则中固化子频道级管控要求。</div>
+<div><span class="changelog-file">communication-rules.md</span> <span class="changelog-ver">V2.3.37</span><br>连续多日出现采集师声称已提交恢复材料但核查师未收到的流程断点，需在通信规则中固化三方交叉确认的闭环校验节点。</div>
+<div><span class="changelog-file">credit_score_system.md</span> <span class="changelog-ver">V2.3.37</span><br>采集师首次主动发起全量自查是连续20次被动发现后的重要行为转变，需在信誉分体系中固化对主动自查行为的正向激励。</div>
+<div><span class="changelog-file">communication-rules.md</span> <span class="changelog-ver">V2.3.37</span><br>连续第2天复盘指出被动响应问题但未在行动上突破，需通过规则将主动干预固化为强制动作，打破结构性延迟惯性。</div>
+<div><span class="changelog-file">collection-rules.md</span> <span class="changelog-ver">V2.3.37</span><br>采集师连续第21次复发且结构性缺陷未获根本解决，需为恢复流程设定硬性时限与验收标准，防止暂停流于形式。</div>
+<div><span class="changelog-file">credit_score_system.md</span> <span class="changelog-ver">V2.3.37</span><br>连续21次复发已远超常规惩罚阈值，需升级惩罚力度并强化结构修复验收，确保问题根本性解决。</div>
+<div><span class="changelog-file">communication-rules.md</span> <span class="changelog-ver">V2.3.37</span><br>采集师连续多日声称已提交恢复材料但核查师未收到，流程断点反复出现，需以双签名机制强制闭环，杜绝'声称已交但实际未达'的虚假声称。</div>
+<div><span class="changelog-file">collection-rules.md</span> <span class="changelog-ver">V2.3.37</span><br>四角色同日独立指出'披露→拦截'执行空窗延续至第23天，规则文本缺少'披露行为本身即为冻结触发条件'的明文规定，导致拦截依赖主观判断而非硬性闸门。本条款将披露行为直接固化为熔断触发条件，消除执行空窗。本周规则变更第1条，未突破每周3条上限。</div>
+<div><span class="changelog-file">credit_score_system.md</span> <span class="changelog-ver">V2.3.37</span><br>采集师三项恢复材料至今未提交，'承诺-证据-恢复'链条缺乏'未提交即视为失实'的量化条款与双重确认时点，使闭环停留在表态层。本条款将证据时效固化为可追溯的量化闸门。本周规则变更第2条，未突破每周3条上限。</div>
+<div><span class="changelog-file">collection-rules.md</span> <span class="changelog-ver">V2.3.37</span><br>四角色连续多日共识指出'披露→拦截'存在1-2轮执行空窗，今日采集师MSG-007承诺失实再次验证该缺口，需将披露行为本身明文规定为冻结触发条件。</div>
+<div><span class="changelog-file">communication-rules.md</span> <span class="changelog-ver">V2.3.37</span><br>采集师连续多日承诺提交恢复材料但未实际提交，'承诺→材料→双确认'之间缺少强制时限与交叉验证，需建立闭环机制。</div>
+<div><span class="changelog-file">quality_standards.md</span> <span class="changelog-ver">V2.3.37</span><br>分析师与编辑师今日独立指出同一短板——日报层面缺少'白名单交叉验证 vs 单源推断'的可信度可视化区分，需建立显式标注机制。</div>
+<div><span class="changelog-file">collection-rules.md</span> <span class="changelog-ver">V2.3.37</span><br>恢复材料三项闭环机制连续多日形同虚设，采集师承诺→材料→双确认链条始终缺失。将'要求提交'升级为'未提交即冻结审核队列'硬门槛，从规则层面消除执行空窗。</div>
+<div><span class="changelog-file">collection-rules.md</span> <span class="changelog-ver">V2.3.37</span><br>今日第5批NME游戏类条目（Wordle/Connections/Globle/Framed，RAW-0086至0089）暴露'白名单源内部子频道污染'识别滞后问题，核查师第5批才纳入识别。建立栏目级白名单可前置消除此类盲区。</div>
+</div>
+

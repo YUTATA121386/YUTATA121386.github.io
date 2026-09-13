@@ -343,6 +343,11 @@
           "date": "2026-09-12",
           "event": "合作 9次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-09-13",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系良好"
