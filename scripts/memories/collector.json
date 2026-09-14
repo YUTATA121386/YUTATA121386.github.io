@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 100,
+      "trust": 92,
       "trend": "improving",
       "history": [
         {
@@ -348,6 +348,11 @@
           "date": "2026-09-13",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-09-14",
+          "event": "冲突 10次",
+          "trustDelta": -8
         }
       ],
       "summary": "关系良好"
@@ -904,103 +909,17 @@
           "date": "2026-09-12",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-14",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-08",
-      "type": "标杆案例",
-      "title": "Pink Slams Macklemore After Politically Charged Ed Sheeran Opener Divides Fans",
-      "source": "Digital Music News",
-      "summary": "通过: Pink Slams Macklemore After Politically Charged Ed Sheeran Opener Divides Fans",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-08",
-      "type": "标杆案例",
-      "title": "The Quiet Death of Playlist Chasing",
-      "source": "Digital Music News",
-      "summary": "通过: The Quiet Death of Playlist Chasing",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-08",
-      "type": "标杆案例",
-      "title": "Tracktion Waveform 14 Pro, as reviewed by an Ableton Live user",
-      "source": "MusicTech",
-      "summary": "通过: Tracktion Waveform 14 Pro, as reviewed by an Ableton Live user",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-08",
-      "type": "标杆案例",
-      "title": "New ZERO9 plugins have a gloriously simple UI: “We’ve removed anything that doesn’t need to be there",
-      "source": "MusicTech",
-      "summary": "通过: New ZERO9 plugins have a gloriously simple UI: “We’ve removed anything that does",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-08",
-      "type": "标杆案例",
-      "title": "Sony launches ULT TOWER bass-powered speakers: here’s everything you need to know – features, pricin",
-      "source": "MusicTech",
-      "summary": "通过: Sony launches ULT TOWER bass-powered speakers: here’s everything you need to kno",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-08",
-      "type": "每日统计",
-      "summary": "今日通过率: 50% (30/60)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-09-09",
-      "type": "被拒案例",
-      "title": "收评：科创50指数高开低走跌0.69% 煤炭股逆势走强 - 东方财富网",
-      "source": "Google News 音乐产业",
-      "reason": "A股收评新闻，来源为Google News黑名单源，内容与音乐产业完全无关。",
-      "summary": "被拒: 收评：科创50指数高开低走跌0.69% 煤炭股逆势走强 - 东方财富网",
-      "lesson": "避免采集此类素材: A股收评新闻，来源为Google News黑名单源，内容与音乐产业完全无关。"
-    },
-    {
-      "date": "2026-09-09",
-      "type": "被拒案例",
-      "title": "十万卡集群将越来越多！工信部：加大力度适配国产算力芯片 - 凤凰网科技",
-      "source": "Google News 音乐产业",
-      "reason": "算力芯片新闻，来源为Google News黑名单源，内容与音乐产业完全无关。",
-      "summary": "被拒: 十万卡集群将越来越多！工信部：加大力度适配国产算力芯片 - 凤凰网科技",
-      "lesson": "避免采集此类素材: 算力芯片新闻，来源为Google News黑名单源，内容与音乐产业完全无关。"
-    },
-    {
-      "date": "2026-09-09",
-      "type": "被拒案例",
-      "title": "伦敦股市8日下跌 - 新华网客户端",
-      "source": "Google News 音乐产业",
-      "reason": "伦敦股市新闻，来源为Google News黑名单源，内容与音乐产业完全无关。",
-      "summary": "被拒: 伦敦股市8日下跌 - 新华网客户端",
-      "lesson": "避免采集此类素材: 伦敦股市新闻，来源为Google News黑名单源，内容与音乐产业完全无关。"
-    },
-    {
-      "date": "2026-09-09",
-      "type": "被拒案例",
-      "title": "年内发债、增资逾650亿元 中小险企“自我造血”待破题 - Sohu",
-      "source": "Google News 音乐产业",
-      "reason": "保险业发债新闻，来源为Google News黑名单源，内容与音乐产业完全无关。",
-      "summary": "被拒: 年内发债、增资逾650亿元 中小险企“自我造血”待破题 - Sohu",
-      "lesson": "避免采集此类素材: 保险业发债新闻，来源为Google News黑名单源，内容与音乐产业完全无关。"
-    },
-    {
-      "date": "2026-09-09",
-      "type": "被拒案例",
-      "title": "江波龙港股上市首日破发，收盘微跌1.02% - thepaper.cn",
-      "source": "Google News 音乐产业",
-      "reason": "江波龙港股新闻，来源为Google News黑名单源，内容与音乐产业完全无关。",
-      "summary": "被拒: 江波龙港股上市首日破发，收盘微跌1.02% - thepaper.cn",
-      "lesson": "避免采集此类素材: 江波龙港股新闻，来源为Google News黑名单源，内容与音乐产业完全无关。"
-    },
     {
       "date": "2026-09-09",
       "type": "标杆案例",
@@ -1319,6 +1238,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 63% (50/80)",
       "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-09-14",
+      "type": "被拒案例",
+      "title": "Second federal judge freezes Trump mail ballot order with US Supreme Court poised to weigh in - AP N",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染。美国最高法院/邮寄选票，时政类污染。",
+      "summary": "被拒: Second federal judge freezes Trump mail ballot order with US Supreme Court poise",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染。美国最高法院/邮寄选票，时政类污染。"
+    },
+    {
+      "date": "2026-09-14",
+      "type": "被拒案例",
+      "title": "‘Diablo 5’, Netflix adaptation and all the big announcements from BlizzCon 2026",
+      "source": "NME",
+      "reason": "NME源但内容为BlizzCon游戏发布（Diablo 5/魔兽/星际争霸），属游戏类污染，命中'游戏类'黑名单特征。NME虽为白名单源，但该条为游戏板块内容，不符合音乐产业标准。",
+      "summary": "被拒: ‘Diablo 5’, Netflix adaptation and all the big announcements from BlizzCon 2026",
+      "lesson": "避免采集此类素材: NME源但内容为BlizzCon游戏发布（Diablo 5/魔兽/星际争霸），属游戏类污染，命中'游戏类'黑名单特征。NME虽为白名单源，但该条为游戏板块内容，"
+    },
+    {
+      "date": "2026-09-14",
+      "type": "被拒案例",
+      "title": "‘Overwatch’ planning “diverse” artist collabs to follow YOASOBI and LE SSERAFIM content",
+      "source": "NME",
+      "reason": "NME源但属游戏板块（'Overwatch'游戏联动），虽提及艺人合作但主体为游戏内容，偏离音乐产业核心",
+      "summary": "被拒: ‘Overwatch’ planning “diverse” artist collabs to follow YOASOBI and LE SSERAFIM ",
+      "lesson": "避免采集此类素材: NME源但属游戏板块（'Overwatch'游戏联动），虽提及艺人合作但主体为游戏内容，偏离音乐产业核心"
+    },
+    {
+      "date": "2026-09-14",
+      "type": "被拒案例",
+      "title": "网易UU远程被指“阴阳”鸿蒙，相关动态已删除 - Sohu",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "Google News腾讯音乐/网易云黑名单源污染。内容为'网易UU远程阴阳鸿蒙'，属科技/时政类，与音乐产业零关联。命中黑名单源特征",
+      "summary": "被拒: 网易UU远程被指“阴阳”鸿蒙，相关动态已删除 - Sohu",
+      "lesson": "避免采集此类素材: Google News腾讯音乐/网易云黑名单源污染。内容为'网易UU远程阴阳鸿蒙'，属科技/时政类，与音乐产业零关联。命中黑名单源特征"
+    },
+    {
+      "date": "2026-09-14",
+      "type": "被拒案例",
+      "title": "#周深[超话]# 2️⃣#腾讯音乐由你榜#🏵️#周深献唱兰香如故主题曲#就让爱破碎，恨成灰，往事都作废周深《大梦归》酷狗:http://t.cn/AX0FybbW @卡布叻_周深​ - 新浪网",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "Google News腾讯音乐/网易云黑名单源污染。内容为'周深超话粉丝打榜'类，命中粉丝打榜类黑名单特征（超话、打榜、酷狗链接），非原创音乐报道",
+      "summary": "被拒: #周深[超话]# 2️⃣#腾讯音乐由你榜#🏵️#周深献唱兰香如故主题曲#就让爱破碎，恨成灰，往事都作废周深《大梦归》酷狗:http://t.cn/AX0Fyb",
+      "lesson": "避免采集此类素材: Google News腾讯音乐/网易云黑名单源污染。内容为'周深超话粉丝打榜'类，命中粉丝打榜类黑名单特征（超话、打榜、酷狗链接），非原创音乐报道"
+    },
+    {
+      "date": "2026-09-14",
+      "type": "标杆案例",
+      "title": "Lucy Dacus on Doing a Hollywood Bowl Orchestra Show to End Her ‘Forever Is a Feeling’ Cycle, After P",
+      "source": "Variety Music",
+      "summary": "通过: Lucy Dacus on Doing a Hollywood Bowl Orchestra Show to End Her ‘Forever Is a Fee",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-14",
+      "type": "标杆案例",
+      "title": "Camera-Shy Chrissie Hynde on Finally Allowing a Definitive Doc to Be Made About the Pretenders, Bowi",
+      "source": "Variety Music",
+      "summary": "通过: Camera-Shy Chrissie Hynde on Finally Allowing a Definitive Doc to Be Made About ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-14",
+      "type": "标杆案例",
+      "title": "Celine Dion Delivers Tearful Speech on Opening Night of Paris Residency: ‘I Had Promised Myself Not ",
+      "source": "Variety Music",
+      "summary": "通过: Celine Dion Delivers Tearful Speech on Opening Night of Paris Residency: ‘I Had ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-14",
+      "type": "标杆案例",
+      "title": "Drake Reveals ‘Fear of Missing Out’ Teaser, Says Project Is a ‘Not So Short Film’",
+      "source": "Variety Music",
+      "summary": "通过: Drake Reveals ‘Fear of Missing Out’ Teaser, Says Project Is a ‘Not So Short Film",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-14",
+      "type": "标杆案例",
+      "title": "Love Has Everything to Do With It: Darlene Love, Producer Taraji P. Henson and Director Barry Avrich",
+      "source": "Variety Music",
+      "summary": "通过: Love Has Everything to Do With It: Darlene Love, Producer Taraji P. Henson and D",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-14",
+      "type": "每日统计",
+      "summary": "今日通过率: 57% (46/80)",
+      "lesson": ""
     }
   ],
   "selfReview": {

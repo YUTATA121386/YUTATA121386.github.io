@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 100,
+      "trust": 92,
       "trend": "improving",
       "history": [
         {
@@ -348,6 +348,11 @@
           "date": "2026-09-13",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-09-14",
+          "event": "冲突 10次",
+          "trustDelta": -8
         }
       ],
       "summary": "关系良好"
@@ -734,19 +739,17 @@
           "date": "2026-09-12",
           "event": "合作 5次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-14",
+          "event": "合作 5次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-18",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: 你的'零污染'承诺严重失实——我扫描发现4条Google News黑名单源素材（RAW-0037至0040）",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-08-18",
       "type": "正向反馈",
@@ -1087,6 +1090,13 @@
       "date": "2026-09-12",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 【核查师9/12复盘】今日共审核148条素材，分5批推进：前20条通过率100%，第2批75%，第3批40%，第4批35%，第5批（RAW-0081至0100）",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-09-14",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 第2批20条审核完成：仅3条通过（15%），17条拒绝。RAW-0021~0030（Google News音乐产业中文源）+RAW-0034~0040（Goog",
       "lesson": "",
       "impact": ""
     }
