@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 92,
+      "trust": 98,
       "trend": "improving",
       "history": [
         {
@@ -353,6 +353,11 @@
           "date": "2026-09-14",
           "event": "冲突 10次",
           "trustDelta": -8
+        },
+        {
+          "date": "2026-09-15",
+          "event": "合作 11次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -914,103 +919,17 @@
           "date": "2026-09-14",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-15",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-09",
-      "type": "标杆案例",
-      "title": "AFM v. Universal Music and Warner Music Legal Battle Continues — Union Fires Back Against the Majors",
-      "source": "Digital Music News",
-      "summary": "通过: AFM v. Universal Music and Warner Music Legal Battle Continues — Union Fires Bac",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-09",
-      "type": "标杆案例",
-      "title": "Federal Judge Rejects MLC’s Interlocutory Appeal Push in Spotify Bundling Battle — While Striking On",
-      "source": "Digital Music News",
-      "summary": "通过: Federal Judge Rejects MLC’s Interlocutory Appeal Push in Spotify Bundling Battle",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-09",
-      "type": "标杆案例",
-      "title": "Tencent Music’s Billion-Dollar Bond Offering Officially Sets Sail as TME Stock Continues to Get Batt",
-      "source": "Digital Music News",
-      "summary": "通过: Tencent Music’s Billion-Dollar Bond Offering Officially Sets Sail as TME Stock C",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-09",
-      "type": "标杆案例",
-      "title": "100+ Hours of Early Oasis Recordings and Outtakes Are Being Auctioned Without Band’s Permission",
-      "source": "Digital Music News",
-      "summary": "通过: 100+ Hours of Early Oasis Recordings and Outtakes Are Being Auctioned Without Ba",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-09",
-      "type": "标杆案例",
-      "title": "Live Nation, AEG, Radiohead’s Philip Selway Back New $370,000 Touring Mental Health Fund",
-      "source": "Digital Music News",
-      "summary": "通过: Live Nation, AEG, Radiohead’s Philip Selway Back New $370,000 Touring Mental Hea",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-09",
-      "type": "每日统计",
-      "summary": "今日通过率: 75% (45/60)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-09-10",
-      "type": "被拒案例",
-      "title": "Rhode Island’s Democratic governor loses primary amid anger over bridge - The Guardian",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为罗德岛州长初选新闻，与音乐产业完全无关。",
-      "summary": "被拒: Rhode Island’s Democratic governor loses primary amid anger over bridge - The Gu",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为罗德岛州长初选新闻，与音乐产业完全无关。"
-    },
-    {
-      "date": "2026-09-10",
-      "type": "被拒案例",
-      "title": "Live fact check: Night 1 of the Republican Midterm Convention - PBS",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为共和党大会事实核查，与音乐产业完全无关。",
-      "summary": "被拒: Live fact check: Night 1 of the Republican Midterm Convention - PBS",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为共和党大会事实核查，与音乐产业完全无关。"
-    },
-    {
-      "date": "2026-09-10",
-      "type": "被拒案例",
-      "title": "Mother demands answers, weeks after black woman found hanging from Mississippi tree - BBC",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为密西西比社会案件新闻，与音乐产业完全无关，且含敏感社会议题。",
-      "summary": "被拒: Mother demands answers, weeks after black woman found hanging from Mississippi t",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为密西西比社会案件新闻，与音乐产业完全无关，且含敏感社会议题。"
-    },
-    {
-      "date": "2026-09-10",
-      "type": "被拒案例",
-      "title": "Missouri fight over gerrymandered congressional map heading back to US Supreme Court - Missouri Inde",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为密苏里选区诉讼新闻，与音乐产业完全无关。",
-      "summary": "被拒: Missouri fight over gerrymandered congressional map heading back to US Supreme C",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为密苏里选区诉讼新闻，与音乐产业完全无关。"
-    },
-    {
-      "date": "2026-09-10",
-      "type": "被拒案例",
-      "title": "Man who died in Sacramento County Highway 50 standoff had stalked woman he executed, sheriff says - ",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为萨克拉门托枪击案新闻，与音乐产业完全无关，且含暴力敏感内容。",
-      "summary": "被拒: Man who died in Sacramento County Highway 50 standoff had stalked woman he execu",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为萨克拉门托枪击案新闻，与音乐产业完全无关，且含暴力敏感内容。"
-    },
     {
       "date": "2026-09-10",
       "type": "标杆案例",
@@ -1328,6 +1247,97 @@
       "date": "2026-09-14",
       "type": "每日统计",
       "summary": "今日通过率: 57% (46/80)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-09-15",
+      "type": "被拒案例",
+      "title": "Space Force has ‘space control weapons’ on orbit, Air Force secretary reveals - Breaking Defense",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为太空军武器，纯军事新闻",
+      "summary": "被拒: Space Force has ‘space control weapons’ on orbit, Air Force secretary reveals - ",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为太空军武器，纯军事新闻"
+    },
+    {
+      "date": "2026-09-15",
+      "type": "被拒案例",
+      "title": "Trump administration suffers double legal setback over immigration policy - Al Jazeera",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为移民政策法律挫折，纯政治新闻",
+      "summary": "被拒: Trump administration suffers double legal setback over immigration policy - Al J",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为移民政策法律挫折，纯政治新闻"
+    },
+    {
+      "date": "2026-09-15",
+      "type": "被拒案例",
+      "title": "Saudi pipeline hit by drones will be out of service for weeks, further restricting oil flow - Politi",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为沙特石油管道无人机袭击，纯能源/地缘政治新闻",
+      "summary": "被拒: Saudi pipeline hit by drones will be out of service for weeks, further restricti",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为沙特石油管道无人机袭击，纯能源/地缘政治新闻"
+    },
+    {
+      "date": "2026-09-15",
+      "type": "被拒案例",
+      "title": "Trump’s EPA repeals pollution limits on fossil fuel power plants - NPR",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为EPA环保法规，纯政治新闻",
+      "summary": "被拒: Trump’s EPA repeals pollution limits on fossil fuel power plants - NPR",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为EPA环保法规，纯政治新闻"
+    },
+    {
+      "date": "2026-09-15",
+      "type": "被拒案例",
+      "title": "Houthis seize 2 strategic Red Sea islands, and other Mideast developments - AP News",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为胡塞武装红海岛屿，纯中东地缘政治新闻",
+      "summary": "被拒: Houthis seize 2 strategic Red Sea islands, and other Mideast developments - AP N",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为胡塞武装红海岛屿，纯中东地缘政治新闻"
+    },
+    {
+      "date": "2026-09-15",
+      "type": "标杆案例",
+      "title": "10-FEET、TVアニメ『アオアシ Season2』第1クールオープニングテーマ「Fortress Defense」を10月配信リリース",
+      "source": "BARKS",
+      "summary": "通过: 10-FEET、TVアニメ『アオアシ Season2』第1クールオープニングテーマ「Fortress Defense」を10月配信リリース",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-15",
+      "type": "标杆案例",
+      "title": "TOMORROW X TOGETHER、3度目の日本ドームツアー＜「STEAL THE WIND」IN JAPAN＞詳細発表",
+      "source": "BARKS",
+      "summary": "通过: TOMORROW X TOGETHER、3度目の日本ドームツアー＜「STEAL THE WIND」IN JAPAN＞詳細発表",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-15",
+      "type": "标杆案例",
+      "title": "【ライブレポート】MONGOL800、＜-etc.works- TOUR 2026＞ファイナルに進化するモンパチの姿「あと2年で30周年！」",
+      "source": "BARKS",
+      "summary": "通过: 【ライブレポート】MONGOL800、＜-etc.works- TOUR 2026＞ファイナルに進化するモンパチの姿「あと2年で30周年！」",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-15",
+      "type": "标杆案例",
+      "title": "キタニタツヤ書き下ろし「天才てれびくんgrow」テーマソングの、てれび戦士「リンガ・フランカ」配信決定",
+      "source": "BARKS",
+      "summary": "通过: キタニタツヤ書き下ろし「天才てれびくんgrow」テーマソングの、てれび戦士「リンガ・フランカ」配信決定",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-15",
+      "type": "标杆案例",
+      "title": "MAN WITH A MISSION、映画『藁にもすがる獣たち』主題歌の新曲「The Animals」先行配信決定。今夜最速オンエア",
+      "source": "BARKS",
+      "summary": "通过: MAN WITH A MISSION、映画『藁にもすがる獣たち』主題歌の新曲「The Animals」先行配信決定。今夜最速オンエア",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-15",
+      "type": "每日统计",
+      "summary": "今日通过率: 50% (40/80)",
       "lesson": ""
     }
   ],
