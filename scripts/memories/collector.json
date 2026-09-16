@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 98,
+      "trust": 92,
       "trend": "improving",
       "history": [
         {
@@ -358,6 +358,11 @@
           "date": "2026-09-15",
           "event": "合作 11次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-09-16",
+          "event": "冲突 8次",
+          "trustDelta": -6
         }
       ],
       "summary": "关系良好"
@@ -924,103 +929,17 @@
           "date": "2026-09-15",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-16",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-10",
-      "type": "标杆案例",
-      "title": "VinylCon attendees tell us why “proper ownership and proper preservation” keep them hooked on physic",
-      "source": "MusicTech",
-      "summary": "通过: VinylCon attendees tell us why “proper ownership and proper preservation” keep t",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-10",
-      "type": "标杆案例",
-      "title": "It’s Synth Month at Plugin Boutique, and you can save BIG on instruments from Native Instruments, Mi",
-      "source": "MusicTech",
-      "summary": "通过: It’s Synth Month at Plugin Boutique, and you can save BIG on instruments from Na",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-10",
-      "type": "标杆案例",
-      "title": "Inside Embassy Studios, where the rooms become part of the signal chain",
-      "source": "MusicTech",
-      "summary": "通过: Inside Embassy Studios, where the rooms become part of the signal chain",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-10",
-      "type": "标杆案例",
-      "title": "You next over-ear headphones? Sony launches a trio of models aimed at premium, mid-range and entry-l",
-      "source": "MusicTech",
-      "summary": "通过: You next over-ear headphones? Sony launches a trio of models aimed at premium, m",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-10",
-      "type": "标杆案例",
-      "title": "Tracktion Waveform 14 Pro, as reviewed by an Ableton Live user",
-      "source": "MusicTech",
-      "summary": "通过: Tracktion Waveform 14 Pro, as reviewed by an Ableton Live user",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-10",
-      "type": "每日统计",
-      "summary": "今日通过率: 71% (57/80)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-09-11",
-      "type": "被拒案例",
-      "title": "'We let down Lindsay,' says juror who served in Clancy trial - WCVB",
-      "source": "Google News Music Industry",
-      "reason": "来源为'Google News Music Industry'黑名单源，内容为'Clancy案审判陪审员访谈'，属司法新闻，与音乐产业无关。",
-      "summary": "被拒: 'We let down Lindsay,' says juror who served in Clancy trial - WCVB",
-      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'黑名单源，内容为'Clancy案审判陪审员访谈'，属司法新闻，与音乐产业无关。"
-    },
-    {
-      "date": "2026-09-11",
-      "type": "被拒案例",
-      "title": "James Talarico blasts Trump FCC’s ‘dangerous’ cancel culture over Kimmel interview ordeal - cnn.com",
-      "source": "Google News Music Industry",
-      "reason": "来源为'Google News Music Industry'黑名单源，内容为'James Talarico抨击FCC取消文化/Kimmel访谈'，属美国政治新闻，与音乐产业无关。",
-      "summary": "被拒: James Talarico blasts Trump FCC’s ‘dangerous’ cancel culture over Kimmel intervi",
-      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'黑名单源，内容为'James Talarico抨击FCC取消文化/Kimmel访谈'，属美国政治新"
-    },
-    {
-      "date": "2026-09-11",
-      "type": "被拒案例",
-      "title": "California coast braces for another battering as new El Niño-related wave emerges in Pacific - Los A",
-      "source": "Google News Music Industry",
-      "reason": "来源为'Google News Music Industry'黑名单源，内容为'加州海岸应对厄尔尼诺海浪'，属气象灾害新闻，与音乐产业无关。",
-      "summary": "被拒: California coast braces for another battering as new El Niño-related wave emerge",
-      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'黑名单源，内容为'加州海岸应对厄尔尼诺海浪'，属气象灾害新闻，与音乐产业无关。"
-    },
-    {
-      "date": "2026-09-11",
-      "type": "被拒案例",
-      "title": "Bombshell Leak Reveals Vance Kept Trump’s Ugly War Reality Under Wraps - The Daily Beast",
-      "source": "Google News Music Industry",
-      "reason": "来源为'Google News Music Industry'黑名单源，内容为'万斯隐瞒特朗普战争现实泄密'，属美国政治新闻，与音乐产业无关。",
-      "summary": "被拒: Bombshell Leak Reveals Vance Kept Trump’s Ugly War Reality Under Wraps - The Dai",
-      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'黑名单源，内容为'万斯隐瞒特朗普战争现实泄密'，属美国政治新闻，与音乐产业无关。"
-    },
-    {
-      "date": "2026-09-11",
-      "type": "被拒案例",
-      "title": "Iran-backed Houthi rebels take strategic port city in Yemen, raising threat to Red Sea shipping - AP",
-      "source": "Google News Music Industry",
-      "reason": "来源为'Google News Music Industry'黑名单源，内容为'胡塞武装占领也门港口威胁红海航运'，属国际军事新闻，与音乐产业无关。",
-      "summary": "被拒: Iran-backed Houthi rebels take strategic port city in Yemen, raising threat to R",
-      "lesson": "避免采集此类素材: 来源为'Google News Music Industry'黑名单源，内容为'胡塞武装占领也门港口威胁红海航运'，属国际军事新闻，与音乐产业无关。"
-    },
     {
       "date": "2026-09-11",
       "type": "标杆案例",
@@ -1338,6 +1257,97 @@
       "date": "2026-09-15",
       "type": "每日统计",
       "summary": "今日通过率: 50% (40/80)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-09-16",
+      "type": "被拒案例",
+      "title": "仮想世界と現実を行き来する新歌姫・LAYRAが新曲「わたしはLAYRA」をリリース。歌唱にmiwa・昆 夏美・鈴木このみ・みきまりあ・ASCAら参加",
+      "source": "BARKS",
+      "reason": "BARKS非白名单源，内容为虚拟歌手企划宣传",
+      "summary": "被拒: 仮想世界と現実を行き来する新歌姫・LAYRAが新曲「わたしはLAYRA」をリリース。歌唱にmiwa・昆 夏美・鈴木このみ・みきまりあ・ASCAら参加",
+      "lesson": "避免采集此类素材: BARKS非白名单源，内容为虚拟歌手企划宣传"
+    },
+    {
+      "date": "2026-09-16",
+      "type": "被拒案例",
+      "title": "CROWN HEAD、仲間と共に駆け抜けていく新曲「東京ショートスリーパー」本日リリース",
+      "source": "BARKS",
+      "reason": "BARKS非白名单源，内容为乐队单曲发行公告",
+      "summary": "被拒: CROWN HEAD、仲間と共に駆け抜けていく新曲「東京ショートスリーパー」本日リリース",
+      "lesson": "避免采集此类素材: BARKS非白名单源，内容为乐队单曲发行公告"
+    },
+    {
+      "date": "2026-09-16",
+      "type": "被拒案例",
+      "title": "【ライブレポート】MIYAVI、“原点回帰”を掲げたバースデーライブ開催。HYDEもサプライズで駆け付け",
+      "source": "BARKS",
+      "reason": "BARKS非白名单源，内容为艺人生日演唱会报道",
+      "summary": "被拒: 【ライブレポート】MIYAVI、“原点回帰”を掲げたバースデーライブ開催。HYDEもサプライズで駆け付け",
+      "lesson": "避免采集此类素材: BARKS非白名单源，内容为艺人生日演唱会报道"
+    },
+    {
+      "date": "2026-09-16",
+      "type": "被拒案例",
+      "title": "Paledusk、新曲「GOLDEN GOAL」リリース決定。Johnが正式加入",
+      "source": "BARKS",
+      "reason": "BARKS非白名单源，内容为乐队新曲+成员加入公告",
+      "summary": "被拒: Paledusk、新曲「GOLDEN GOAL」リリース決定。Johnが正式加入",
+      "lesson": "避免采集此类素材: BARKS非白名单源，内容为乐队新曲+成员加入公告"
+    },
+    {
+      "date": "2026-09-16",
+      "type": "被拒案例",
+      "title": "Beck – ‘Ride Lonesome’ review: a drop-dead gorgeous meditation on heartache and solitude",
+      "source": "NME",
+      "reason": "NME非白名单源，内容为专辑评论，相关性一般",
+      "summary": "被拒: Beck – ‘Ride Lonesome’ review: a drop-dead gorgeous meditation on heartache and ",
+      "lesson": "避免采集此类素材: NME非白名单源，内容为专辑评论，相关性一般"
+    },
+    {
+      "date": "2026-09-16",
+      "type": "标杆案例",
+      "title": "Chris Brown Thanks U.S. Rep. Jasmine Crockett for Congressional Honor & Aplogizes for ‘Any Backlash ",
+      "source": "Billboard",
+      "summary": "通过: Chris Brown Thanks U.S. Rep. Jasmine Crockett for Congressional Honor & Aplogize",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-16",
+      "type": "标杆案例",
+      "title": "音乐出海，中国平台与技术大有可为丨思想耀岭南 - 21财经",
+      "source": "Google News 中国音乐产业（搜索）",
+      "summary": "通过: 音乐出海，中国平台与技术大有可为丨思想耀岭南 - 21财经",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-16",
+      "type": "标杆案例",
+      "title": "当中文说唱不再需要翻译，RCA唱片中国选择签下揽佬 - thepaper.cn",
+      "source": "Google News 中国音乐产业（搜索）",
+      "summary": "通过: 当中文说唱不再需要翻译，RCA唱片中国选择签下揽佬 - thepaper.cn",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-16",
+      "type": "标杆案例",
+      "title": "AutoTune is now available in FL Studio – even to free users",
+      "source": "MusicTech",
+      "summary": "通过: AutoTune is now available in FL Studio – even to free users",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-16",
+      "type": "标杆案例",
+      "title": "BandLab’s mastering capabilities just got an upgrade – here’s what’s new",
+      "source": "MusicTech",
+      "summary": "通过: BandLab’s mastering capabilities just got an upgrade – here’s what’s new",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-16",
+      "type": "每日统计",
+      "summary": "今日通过率: 39% (31/80)",
       "lesson": ""
     }
   ],

@@ -303,6 +303,11 @@
           "date": "2026-09-15",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-16",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
@@ -630,6 +635,11 @@
           "date": "2026-09-15",
           "event": "合作 5次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-16",
+          "event": "合作 5次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
@@ -880,6 +890,11 @@
         },
         {
           "date": "2026-09-15",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-09-16",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -1144,19 +1159,17 @@
           "date": "2026-09-14",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-16",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-07-27",
-      "type": "正向反馈",
-      "summary": "收到采集师的APPROVE: 今日工作总结：首次采集104条，其中前10条Billboard英文源全部通过，BARKS日文源2条通过，但来自'Google News 音乐产业'源的28条素材",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-07-28",
       "type": "正向反馈",
@@ -1497,6 +1510,13 @@
       "date": "2026-09-15",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 【采集师9/15复盘】今日共提交约150条素材，首批20条通过率70%（MBW×10、Music Ally×4全通过），第2批65%，第3批25%，第4批25%",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-09-16",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 【采集师9/16复盘】今日采集约150条素材，首批20条通过率95%（19/20，MBW×10+Music Ally×9），但第2批起急剧下滑：40%→20%→",
       "lesson": "",
       "impact": ""
     }
