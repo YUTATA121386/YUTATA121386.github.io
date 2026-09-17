@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 92,
+      "trust": 100,
       "trend": "improving",
       "history": [
         {
@@ -363,6 +363,11 @@
           "date": "2026-09-16",
           "event": "冲突 8次",
           "trustDelta": -6
+        },
+        {
+          "date": "2026-09-17",
+          "event": "合作 11次",
+          "trustDelta": 8
         }
       ],
       "summary": "关系良好"
@@ -488,6 +493,11 @@
         },
         {
           "date": "2026-09-10",
+          "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-09-17",
           "event": "合作 1次",
           "trustDelta": 0
         }
@@ -934,103 +944,17 @@
           "date": "2026-09-16",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-17",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-11",
-      "type": "标杆案例",
-      "title": "“These mixers set the bar for the perfect intersection of performance and value”: Soundcraft unveils",
-      "source": "MusicTech",
-      "summary": "通过: “These mixers set the bar for the perfect intersection of performance and value”",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-11",
-      "type": "标杆案例",
-      "title": "Korg Nu:Tekt NTS-4 is a small mixer with big ideas",
-      "source": "MusicTech",
-      "summary": "通过: Korg Nu:Tekt NTS-4 is a small mixer with big ideas",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-11",
-      "type": "标杆案例",
-      "title": "Soundcraft Signature Plus 22 mixer review: “Analogue mixers are back, baby!”",
-      "source": "MusicTech",
-      "summary": "通过: Soundcraft Signature Plus 22 mixer review: “Analogue mixers are back, baby!”",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-11",
-      "type": "标杆案例",
-      "title": "VinylCon attendees tell us why “proper ownership and proper preservation” keep them hooked on physic",
-      "source": "MusicTech",
-      "summary": "通过: VinylCon attendees tell us why “proper ownership and proper preservation” keep t",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-11",
-      "type": "标杆案例",
-      "title": "It’s Synth Month at Plugin Boutique, and you can save BIG on instruments from Native Instruments, Mi",
-      "source": "MusicTech",
-      "summary": "通过: It’s Synth Month at Plugin Boutique, and you can save BIG on instruments from Na",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-11",
-      "type": "每日统计",
-      "summary": "今日通过率: 71% (57/80)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-09-12",
-      "type": "被拒案例",
-      "title": "Trump Wanted a New House Map in Missouri. Voters Got Chaos Instead. - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为密苏里州众议院地图/特朗普，与音乐产业无关",
-      "summary": "被拒: Trump Wanted a New House Map in Missouri. Voters Got Chaos Instead. - The New Yo",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为密苏里州众议院地图/特朗普，与音乐产业无关"
-    },
-    {
-      "date": "2026-09-12",
-      "type": "被拒案例",
-      "title": "Immigration officials say man who stalked, executed woman at Panera bread was in the country illegal",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为移民官员/Panera案件，与音乐产业无关",
-      "summary": "被拒: Immigration officials say man who stalked, executed woman at Panera bread was in",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为移民官员/Panera案件，与音乐产业无关"
-    },
-    {
-      "date": "2026-09-12",
-      "type": "被拒案例",
-      "title": "Congresswoman who helped create 9/11 health fund says she has a 9/11-related illness - wbur.org",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为9/11健康基金/国会议员，与音乐产业无关",
-      "summary": "被拒: Congresswoman who helped create 9/11 health fund says she has a 9/11-related ill",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为9/11健康基金/国会议员，与音乐产业无关"
-    },
-    {
-      "date": "2026-09-12",
-      "type": "被拒案例",
-      "title": "Donald Trump: Protests expected as US president visits Ireland - bbc.com",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为特朗普访问爱尔兰/抗议，与音乐产业无关",
-      "summary": "被拒: Donald Trump: Protests expected as US president visits Ireland - bbc.com",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为特朗普访问爱尔兰/抗议，与音乐产业无关"
-    },
-    {
-      "date": "2026-09-12",
-      "type": "被拒案例",
-      "title": "Federal court rejects Trump order keeping Michigan coal plant open - AP News",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为联邦法院/密歇根煤电厂，与音乐产业无关",
-      "summary": "被拒: Federal court rejects Trump order keeping Michigan coal plant open - AP News",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为联邦法院/密歇根煤电厂，与音乐产业无关"
-    },
     {
       "date": "2026-09-12",
       "type": "标杆案例",
@@ -1349,6 +1273,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 39% (31/80)",
       "lesson": ""
+    },
+    {
+      "date": "2026-09-17",
+      "type": "被拒案例",
+      "title": "Carney to address EU Parliament after Trump calls Canada associate membership a possible hostile act",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为加拿大/特朗普政治新闻",
+      "summary": "被拒: Carney to address EU Parliament after Trump calls Canada associate membership a ",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为加拿大/特朗普政治新闻"
+    },
+    {
+      "date": "2026-09-17",
+      "type": "被拒案例",
+      "title": "Trump says Kennedy Center could be ‘ripped down’ without his intervention - The Washington Post",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为肯尼迪中心政治新闻",
+      "summary": "被拒: Trump says Kennedy Center could be ‘ripped down’ without his intervention - The ",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为肯尼迪中心政治新闻"
+    },
+    {
+      "date": "2026-09-17",
+      "type": "被拒案例",
+      "title": "Congress passes sweeping US sanctions bill targeting Russia - Al Jazeera",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为对俄制裁政治新闻",
+      "summary": "被拒: Congress passes sweeping US sanctions bill targeting Russia - Al Jazeera",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为对俄制裁政治新闻"
+    },
+    {
+      "date": "2026-09-17",
+      "type": "被拒案例",
+      "title": "House passes bill to shield Americans from data center energy costs - CBS News",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为数据中心能源法案",
+      "summary": "被拒: House passes bill to shield Americans from data center energy costs - CBS News",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为数据中心能源法案"
+    },
+    {
+      "date": "2026-09-17",
+      "type": "被拒案例",
+      "title": "Dramatic recording could help answer why NBC4 helicopter crashed - Los Angeles Times",
+      "source": "Google News Music Industry",
+      "reason": "Google News黑名单源污染，内容为直升机坠毁事故新闻",
+      "summary": "被拒: Dramatic recording could help answer why NBC4 helicopter crashed - Los Angeles T",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为直升机坠毁事故新闻"
+    },
+    {
+      "date": "2026-09-17",
+      "type": "标杆案例",
+      "title": "LUNA 3.0: the next generation of Universal Audio’s flagship DAW has arrived – here’s everything that",
+      "source": "MusicTech",
+      "summary": "通过: LUNA 3.0: the next generation of Universal Audio’s flagship DAW has arrived – he",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-17",
+      "type": "标杆案例",
+      "title": "At £225, is the Omnitronic PM-404F the best four-channel DJ mixer at its price range?",
+      "source": "MusicTech",
+      "summary": "通过: At £225, is the Omnitronic PM-404F the best four-channel DJ mixer at its price r",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-17",
+      "type": "标杆案例",
+      "title": "AutoTune is now available in FL Studio – even to free users",
+      "source": "MusicTech",
+      "summary": "通过: AutoTune is now available in FL Studio – even to free users",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-17",
+      "type": "标杆案例",
+      "title": "BandLab’s mastering capabilities just got an upgrade – here’s what’s new",
+      "source": "MusicTech",
+      "summary": "通过: BandLab’s mastering capabilities just got an upgrade – here’s what’s new",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-17",
+      "type": "标杆案例",
+      "title": "My Forever Studio: Nick Hakim has your gear on long-term loan",
+      "source": "MusicTech",
+      "summary": "通过: My Forever Studio: Nick Hakim has your gear on long-term loan",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-17",
+      "type": "每日统计",
+      "summary": "今日通过率: 68% (54/80)",
+      "lesson": "通过率良好，保持当前标准"
     }
   ],
   "selfReview": {
