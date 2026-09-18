@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 100,
+      "trust": 96,
       "trend": "improving",
       "history": [
         {
@@ -368,6 +368,11 @@
           "date": "2026-09-17",
           "event": "合作 11次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-09-18",
+          "event": "冲突 5次",
+          "trustDelta": -4
         }
       ],
       "summary": "关系良好"
@@ -635,6 +640,11 @@
         },
         {
           "date": "2026-09-12",
+          "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-09-18",
           "event": "合作 1次",
           "trustDelta": 0
         }
@@ -949,103 +959,17 @@
           "date": "2026-09-17",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-18",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-12",
-      "type": "标杆案例",
-      "title": "【俺の楽器・私の愛機】2071「出血必須！トンガリ猫ちゃん」",
-      "source": "BARKS",
-      "summary": "通过: 【俺の楽器・私の愛機】2071「出血必須！トンガリ猫ちゃん」",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-12",
-      "type": "标杆案例",
-      "title": "WATWING、八村倫太郎主演映画『ホーム スイート ホーム』×主題歌「My Sweet Place」リリックビデオ公開",
-      "source": "BARKS",
-      "summary": "通过: WATWING、八村倫太郎主演映画『ホーム スイート ホーム』×主題歌「My Sweet Place」リリックビデオ公開",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-12",
-      "type": "标杆案例",
-      "title": "BAND-MAID、ワールドツアーファイナル・武道館2daysの2日目公演がソールドアウト。初日公演の最新先行開始＋新ツアービジュアル公開",
-      "source": "BARKS",
-      "summary": "通过: BAND-MAID、ワールドツアーファイナル・武道館2daysの2日目公演がソールドアウト。初日公演の最新先行開始＋新ツアービジュアル公開",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-12",
-      "type": "标杆案例",
-      "title": "平井 大、田中 圭主演舞台『母さん、ラブソングです。』劇中歌「あなた」のセルフカバー音源を配信",
-      "source": "BARKS",
-      "summary": "通过: 平井 大、田中 圭主演舞台『母さん、ラブソングです。』劇中歌「あなた」のセルフカバー音源を配信",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-12",
-      "type": "标杆案例",
-      "title": "尾崎豊、生誕60周年記念に公式YouTubeチャンネル＆TikTokアカウント開設へ",
-      "source": "BARKS",
-      "summary": "通过: 尾崎豊、生誕60周年記念に公式YouTubeチャンネル＆TikTokアカウント開設へ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-12",
-      "type": "每日统计",
-      "summary": "今日通过率: 63% (50/80)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-09-14",
-      "type": "被拒案例",
-      "title": "Second federal judge freezes Trump mail ballot order with US Supreme Court poised to weigh in - AP N",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染。美国最高法院/邮寄选票，时政类污染。",
-      "summary": "被拒: Second federal judge freezes Trump mail ballot order with US Supreme Court poise",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染。美国最高法院/邮寄选票，时政类污染。"
-    },
-    {
-      "date": "2026-09-14",
-      "type": "被拒案例",
-      "title": "‘Diablo 5’, Netflix adaptation and all the big announcements from BlizzCon 2026",
-      "source": "NME",
-      "reason": "NME源但内容为BlizzCon游戏发布（Diablo 5/魔兽/星际争霸），属游戏类污染，命中'游戏类'黑名单特征。NME虽为白名单源，但该条为游戏板块内容，不符合音乐产业标准。",
-      "summary": "被拒: ‘Diablo 5’, Netflix adaptation and all the big announcements from BlizzCon 2026",
-      "lesson": "避免采集此类素材: NME源但内容为BlizzCon游戏发布（Diablo 5/魔兽/星际争霸），属游戏类污染，命中'游戏类'黑名单特征。NME虽为白名单源，但该条为游戏板块内容，"
-    },
-    {
-      "date": "2026-09-14",
-      "type": "被拒案例",
-      "title": "‘Overwatch’ planning “diverse” artist collabs to follow YOASOBI and LE SSERAFIM content",
-      "source": "NME",
-      "reason": "NME源但属游戏板块（'Overwatch'游戏联动），虽提及艺人合作但主体为游戏内容，偏离音乐产业核心",
-      "summary": "被拒: ‘Overwatch’ planning “diverse” artist collabs to follow YOASOBI and LE SSERAFIM ",
-      "lesson": "避免采集此类素材: NME源但属游戏板块（'Overwatch'游戏联动），虽提及艺人合作但主体为游戏内容，偏离音乐产业核心"
-    },
-    {
-      "date": "2026-09-14",
-      "type": "被拒案例",
-      "title": "网易UU远程被指“阴阳”鸿蒙，相关动态已删除 - Sohu",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News腾讯音乐/网易云黑名单源污染。内容为'网易UU远程阴阳鸿蒙'，属科技/时政类，与音乐产业零关联。命中黑名单源特征",
-      "summary": "被拒: 网易UU远程被指“阴阳”鸿蒙，相关动态已删除 - Sohu",
-      "lesson": "避免采集此类素材: Google News腾讯音乐/网易云黑名单源污染。内容为'网易UU远程阴阳鸿蒙'，属科技/时政类，与音乐产业零关联。命中黑名单源特征"
-    },
-    {
-      "date": "2026-09-14",
-      "type": "被拒案例",
-      "title": "#周深[超话]# 2️⃣#腾讯音乐由你榜#🏵️#周深献唱兰香如故主题曲#就让爱破碎，恨成灰，往事都作废周深《大梦归》酷狗:http://t.cn/AX0FybbW @卡布叻_周深​ - 新浪网",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News腾讯音乐/网易云黑名单源污染。内容为'周深超话粉丝打榜'类，命中粉丝打榜类黑名单特征（超话、打榜、酷狗链接），非原创音乐报道",
-      "summary": "被拒: #周深[超话]# 2️⃣#腾讯音乐由你榜#🏵️#周深献唱兰香如故主题曲#就让爱破碎，恨成灰，往事都作废周深《大梦归》酷狗:http://t.cn/AX0Fyb",
-      "lesson": "避免采集此类素材: Google News腾讯音乐/网易云黑名单源污染。内容为'周深超话粉丝打榜'类，命中粉丝打榜类黑名单特征（超话、打榜、酷狗链接），非原创音乐报道"
-    },
     {
       "date": "2026-09-14",
       "type": "标杆案例",
@@ -1363,6 +1287,97 @@
       "date": "2026-09-17",
       "type": "每日统计",
       "summary": "今日通过率: 68% (54/80)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-09-18",
+      "type": "被拒案例",
+      "title": "Iran War Updates: U.N. panel cites possible U.S. war crimes as Trump again says Iran wants a deal - ",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry英文源污染：内容为伊朗战争/美国战争罪指控，与音乐产业无关。",
+      "summary": "被拒: Iran War Updates: U.N. panel cites possible U.S. war crimes as Trump again says ",
+      "lesson": "避免采集此类素材: Google News Music Industry英文源污染：内容为伊朗战争/美国战争罪指控，与音乐产业无关。"
+    },
+    {
+      "date": "2026-09-18",
+      "type": "被拒案例",
+      "title": "The driver who slammed into an LA bus before helicopter crash is charged with murder - NPR",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry英文源污染：内容为LA巴士车祸谋杀指控，与音乐产业无关。",
+      "summary": "被拒: The driver who slammed into an LA bus before helicopter crash is charged with mu",
+      "lesson": "避免采集此类素材: Google News Music Industry英文源污染：内容为LA巴士车祸谋杀指控，与音乐产业无关。"
+    },
+    {
+      "date": "2026-09-18",
+      "type": "被拒案例",
+      "title": "Trump admin must provide 30 day notice for ‘demolition,’ major changes to Kennedy Center amid shutdo",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry英文源污染：内容为肯尼迪中心拆除通知争议，与音乐产业无关。",
+      "summary": "被拒: Trump admin must provide 30 day notice for ‘demolition,’ major changes to Kenned",
+      "lesson": "避免采集此类素材: Google News Music Industry英文源污染：内容为肯尼迪中心拆除通知争议，与音乐产业无关。"
+    },
+    {
+      "date": "2026-09-18",
+      "type": "被拒案例",
+      "title": "RFK Jr. Assures Vaccine Skeptics They Have a ‘Friend at the White House’ - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry英文源污染：内容为RFK Jr.疫苗言论，与音乐产业无关。",
+      "summary": "被拒: RFK Jr. Assures Vaccine Skeptics They Have a ‘Friend at the White House’ - The N",
+      "lesson": "避免采集此类素材: Google News Music Industry英文源污染：内容为RFK Jr.疫苗言论，与音乐产业无关。"
+    },
+    {
+      "date": "2026-09-18",
+      "type": "被拒案例",
+      "title": "SoCal family of 3 found dead in their home. Family looks for answers - Los Angeles Times",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry英文源污染：内容为SoCal家庭命案，与音乐产业无关。",
+      "summary": "被拒: SoCal family of 3 found dead in their home. Family looks for answers - Los Angel",
+      "lesson": "避免采集此类素材: Google News Music Industry英文源污染：内容为SoCal家庭命案，与音乐产业无关。"
+    },
+    {
+      "date": "2026-09-18",
+      "type": "标杆案例",
+      "title": "Best Budget Synthesizers Under $250",
+      "source": "MusicTech",
+      "summary": "通过: Best Budget Synthesizers Under $250",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-18",
+      "type": "标杆案例",
+      "title": "What’s the relationship between pitch and frequency? A beginner’s guide for music producers",
+      "source": "MusicTech",
+      "summary": "通过: What’s the relationship between pitch and frequency? A beginner’s guide for musi",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-18",
+      "type": "标杆案例",
+      "title": "Nopia is open now for pre-orders – and it might just give the Telepathic Orchid a run for its money",
+      "source": "MusicTech",
+      "summary": "通过: Nopia is open now for pre-orders – and it might just give the Telepathic Orchid ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-18",
+      "type": "标杆案例",
+      "title": "Arturia’s MiniFreak gets a free 5.0 update: here’s everything you need to know",
+      "source": "MusicTech",
+      "summary": "通过: Arturia’s MiniFreak gets a free 5.0 update: here’s everything you need to know",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-18",
+      "type": "标杆案例",
+      "title": "LUNA 3.0: the next generation of Universal Audio’s flagship DAW has arrived – here’s everything that",
+      "source": "MusicTech",
+      "summary": "通过: LUNA 3.0: the next generation of Universal Audio’s flagship DAW has arrived – he",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-18",
+      "type": "每日统计",
+      "summary": "今日通过率: 69% (55/80)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],
