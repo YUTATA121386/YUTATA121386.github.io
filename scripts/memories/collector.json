@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 96,
+      "trust": 100,
       "trend": "improving",
       "history": [
         {
@@ -373,6 +373,11 @@
           "date": "2026-09-18",
           "event": "冲突 5次",
           "trustDelta": -4
+        },
+        {
+          "date": "2026-09-19",
+          "event": "合作 7次",
+          "trustDelta": 4
         }
       ],
       "summary": "关系良好"
@@ -503,6 +508,11 @@
         },
         {
           "date": "2026-09-17",
+          "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-09-19",
           "event": "合作 1次",
           "trustDelta": 0
         }
@@ -964,103 +974,17 @@
           "date": "2026-09-18",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-19",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-14",
-      "type": "标杆案例",
-      "title": "Lucy Dacus on Doing a Hollywood Bowl Orchestra Show to End Her ‘Forever Is a Feeling’ Cycle, After P",
-      "source": "Variety Music",
-      "summary": "通过: Lucy Dacus on Doing a Hollywood Bowl Orchestra Show to End Her ‘Forever Is a Fee",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-14",
-      "type": "标杆案例",
-      "title": "Camera-Shy Chrissie Hynde on Finally Allowing a Definitive Doc to Be Made About the Pretenders, Bowi",
-      "source": "Variety Music",
-      "summary": "通过: Camera-Shy Chrissie Hynde on Finally Allowing a Definitive Doc to Be Made About ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-14",
-      "type": "标杆案例",
-      "title": "Celine Dion Delivers Tearful Speech on Opening Night of Paris Residency: ‘I Had Promised Myself Not ",
-      "source": "Variety Music",
-      "summary": "通过: Celine Dion Delivers Tearful Speech on Opening Night of Paris Residency: ‘I Had ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-14",
-      "type": "标杆案例",
-      "title": "Drake Reveals ‘Fear of Missing Out’ Teaser, Says Project Is a ‘Not So Short Film’",
-      "source": "Variety Music",
-      "summary": "通过: Drake Reveals ‘Fear of Missing Out’ Teaser, Says Project Is a ‘Not So Short Film",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-14",
-      "type": "标杆案例",
-      "title": "Love Has Everything to Do With It: Darlene Love, Producer Taraji P. Henson and Director Barry Avrich",
-      "source": "Variety Music",
-      "summary": "通过: Love Has Everything to Do With It: Darlene Love, Producer Taraji P. Henson and D",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-14",
-      "type": "每日统计",
-      "summary": "今日通过率: 57% (46/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-09-15",
-      "type": "被拒案例",
-      "title": "Space Force has ‘space control weapons’ on orbit, Air Force secretary reveals - Breaking Defense",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为太空军武器，纯军事新闻",
-      "summary": "被拒: Space Force has ‘space control weapons’ on orbit, Air Force secretary reveals - ",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为太空军武器，纯军事新闻"
-    },
-    {
-      "date": "2026-09-15",
-      "type": "被拒案例",
-      "title": "Trump administration suffers double legal setback over immigration policy - Al Jazeera",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为移民政策法律挫折，纯政治新闻",
-      "summary": "被拒: Trump administration suffers double legal setback over immigration policy - Al J",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为移民政策法律挫折，纯政治新闻"
-    },
-    {
-      "date": "2026-09-15",
-      "type": "被拒案例",
-      "title": "Saudi pipeline hit by drones will be out of service for weeks, further restricting oil flow - Politi",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为沙特石油管道无人机袭击，纯能源/地缘政治新闻",
-      "summary": "被拒: Saudi pipeline hit by drones will be out of service for weeks, further restricti",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为沙特石油管道无人机袭击，纯能源/地缘政治新闻"
-    },
-    {
-      "date": "2026-09-15",
-      "type": "被拒案例",
-      "title": "Trump’s EPA repeals pollution limits on fossil fuel power plants - NPR",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为EPA环保法规，纯政治新闻",
-      "summary": "被拒: Trump’s EPA repeals pollution limits on fossil fuel power plants - NPR",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为EPA环保法规，纯政治新闻"
-    },
-    {
-      "date": "2026-09-15",
-      "type": "被拒案例",
-      "title": "Houthis seize 2 strategic Red Sea islands, and other Mideast developments - AP News",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为胡塞武装红海岛屿，纯中东地缘政治新闻",
-      "summary": "被拒: Houthis seize 2 strategic Red Sea islands, and other Mideast developments - AP N",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为胡塞武装红海岛屿，纯中东地缘政治新闻"
-    },
     {
       "date": "2026-09-15",
       "type": "标杆案例",
@@ -1378,6 +1302,97 @@
       "date": "2026-09-18",
       "type": "每日统计",
       "summary": "今日通过率: 69% (55/80)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-09-19",
+      "type": "被拒案例",
+      "title": "沈鼓集团上市两日股价暴涨12倍，上交所出手：相关异常账户暂停交易 - thepaper.cn",
+      "source": "Google News 音乐产业",
+      "reason": "Google News音乐产业黑名单源污染，内容为沈鼓集团股价异动，与音乐产业完全无关。",
+      "summary": "被拒: 沈鼓集团上市两日股价暴涨12倍，上交所出手：相关异常账户暂停交易 - thepaper.cn",
+      "lesson": "避免采集此类素材: Google News音乐产业黑名单源污染，内容为沈鼓集团股价异动，与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-09-19",
+      "type": "被拒案例",
+      "title": "盘活工业遗产 黄金博物馆今日开馆 - 新华网",
+      "source": "Google News 音乐产业",
+      "reason": "Google News音乐产业黑名单源污染，内容为黄金博物馆开馆，与音乐产业完全无关。",
+      "summary": "被拒: 盘活工业遗产 黄金博物馆今日开馆 - 新华网",
+      "lesson": "避免采集此类素材: Google News音乐产业黑名单源污染，内容为黄金博物馆开馆，与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-09-19",
+      "type": "被拒案例",
+      "title": "黄仁勋唱反调 呼吁加快人工智能研发进程 - Sohu",
+      "source": "Google News 音乐产业",
+      "reason": "Google News音乐产业黑名单源污染，内容为黄仁勋呼吁加快AI研发（非音乐AI），与音乐产业无关。",
+      "summary": "被拒: 黄仁勋唱反调 呼吁加快人工智能研发进程 - Sohu",
+      "lesson": "避免采集此类素材: Google News音乐产业黑名单源污染，内容为黄仁勋呼吁加快AI研发（非音乐AI），与音乐产业无关。"
+    },
+    {
+      "date": "2026-09-19",
+      "type": "被拒案例",
+      "title": "鲲鹏超节点重磅升级，风冷、液冷双旗舰全新亮相 - 中华网",
+      "source": "Google News 音乐产业",
+      "reason": "Google News音乐产业黑名单源污染，内容为鲲鹏超节点服务器发布，与音乐产业完全无关。",
+      "summary": "被拒: 鲲鹏超节点重磅升级，风冷、液冷双旗舰全新亮相 - 中华网",
+      "lesson": "避免采集此类素材: Google News音乐产业黑名单源污染，内容为鲲鹏超节点服务器发布，与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-09-19",
+      "type": "被拒案例",
+      "title": "美股收盘：AI芯片股爆发推动纳指走高 华尔街告别动荡一周 - 财联社",
+      "source": "Google News 音乐产业",
+      "reason": "Google News音乐产业黑名单源污染，内容为美股收盘/AI芯片股，与音乐产业完全无关。",
+      "summary": "被拒: 美股收盘：AI芯片股爆发推动纳指走高 华尔街告别动荡一周 - 财联社",
+      "lesson": "避免采集此类素材: Google News音乐产业黑名单源污染，内容为美股收盘/AI芯片股，与音乐产业完全无关。"
+    },
+    {
+      "date": "2026-09-19",
+      "type": "标杆案例",
+      "title": "Apollo Craftily Scores a $1.25 Billion Ownership Chunk of BMG+Concord",
+      "source": "Digital Music News",
+      "summary": "通过: Apollo Craftily Scores a $1.25 Billion Ownership Chunk of BMG+Concord",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-19",
+      "type": "标杆案例",
+      "title": "Fever Scores $250 Million Equity Raise, Says Its Revenue Has ‘More Than Tripled’ During the Past Thr",
+      "source": "Digital Music News",
+      "summary": "通过: Fever Scores $250 Million Equity Raise, Says Its Revenue Has ‘More Than Tripled’",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-19",
+      "type": "标杆案例",
+      "title": "SubmitHub Bans AI Music Submissions: ‘We Don’t Need More Noise’",
+      "source": "Digital Music News",
+      "summary": "通过: SubmitHub Bans AI Music Submissions: ‘We Don’t Need More Noise’",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-19",
+      "type": "标杆案例",
+      "title": "Two Years Later, Congress Sends the ‘American Music Tourism Act’ to the President’s Desk — NIVA Appl",
+      "source": "Digital Music News",
+      "summary": "通过: Two Years Later, Congress Sends the ‘American Music Tourism Act’ to the Presiden",
+      "lesson": "此类素材值得采集: 命中关键词 演出现场"
+    },
+    {
+      "date": "2026-09-19",
+      "type": "标杆案例",
+      "title": "Suno Faces Yet Another Class Action Lawsuit Over Alleged November 2025 Data Breach — Plus a Separate",
+      "source": "Digital Music News",
+      "summary": "通过: Suno Faces Yet Another Class Action Lawsuit Over Alleged November 2025 Data Brea",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-19",
+      "type": "每日统计",
+      "summary": "今日通过率: 75% (45/60)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],

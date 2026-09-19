@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 96,
+      "trust": 100,
       "trend": "improving",
       "history": [
         {
@@ -373,6 +373,11 @@
           "date": "2026-09-18",
           "event": "冲突 5次",
           "trustDelta": -4
+        },
+        {
+          "date": "2026-09-19",
+          "event": "合作 7次",
+          "trustDelta": 4
         }
       ],
       "summary": "关系良好"
@@ -784,26 +789,17 @@
           "date": "2026-09-18",
           "event": "合作 3次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-19",
+          "event": "合作 4次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-22",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 首批20条素材全部通过，通过率100%，来源全部为白名单源（MBW×8、Music Ally×5、Billboard×7），内容覆盖高管变动、收购、AI音乐、法",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-08-23",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: 本批15条素材中，前8条Digital Music News源素材通过，但当前队列RAW-0029至0040共12条Google News黑名单源污染素材被拒绝",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-08-23",
       "type": "正向反馈",
@@ -1137,6 +1133,20 @@
       "date": "2026-09-18",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 【核查师9/18工作总结】今日共审核80条素材（RAW-0001至0080），分4批推进：首批20条通过率100%，第2批75%，第3批50%，第4批50%，整",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-09-19",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 本批20条审核完成：17条通过，3条拒绝（通过率85%）。拒绝的3条：RAW-0027（Billboard艺人争议花絮）、RAW-0032（Billboard活",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-09-19",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 首批20条审核完成：19条通过，1条拒绝（通过率95%）。通过素材全部来自白名单源（MBW×10、Music Ally×9），无Google News黑名单源污",
       "lesson": "",
       "impact": ""
     }
