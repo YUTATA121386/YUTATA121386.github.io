@@ -378,6 +378,11 @@
           "date": "2026-09-19",
           "event": "合作 7次",
           "trustDelta": 4
+        },
+        {
+          "date": "2026-09-20",
+          "event": "合作 9次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -513,6 +518,11 @@
         },
         {
           "date": "2026-09-19",
+          "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-09-20",
           "event": "合作 1次",
           "trustDelta": 0
         }
@@ -979,103 +989,17 @@
           "date": "2026-09-19",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-20",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-15",
-      "type": "标杆案例",
-      "title": "10-FEET、TVアニメ『アオアシ Season2』第1クールオープニングテーマ「Fortress Defense」を10月配信リリース",
-      "source": "BARKS",
-      "summary": "通过: 10-FEET、TVアニメ『アオアシ Season2』第1クールオープニングテーマ「Fortress Defense」を10月配信リリース",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-15",
-      "type": "标杆案例",
-      "title": "TOMORROW X TOGETHER、3度目の日本ドームツアー＜「STEAL THE WIND」IN JAPAN＞詳細発表",
-      "source": "BARKS",
-      "summary": "通过: TOMORROW X TOGETHER、3度目の日本ドームツアー＜「STEAL THE WIND」IN JAPAN＞詳細発表",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-15",
-      "type": "标杆案例",
-      "title": "【ライブレポート】MONGOL800、＜-etc.works- TOUR 2026＞ファイナルに進化するモンパチの姿「あと2年で30周年！」",
-      "source": "BARKS",
-      "summary": "通过: 【ライブレポート】MONGOL800、＜-etc.works- TOUR 2026＞ファイナルに進化するモンパチの姿「あと2年で30周年！」",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-15",
-      "type": "标杆案例",
-      "title": "キタニタツヤ書き下ろし「天才てれびくんgrow」テーマソングの、てれび戦士「リンガ・フランカ」配信決定",
-      "source": "BARKS",
-      "summary": "通过: キタニタツヤ書き下ろし「天才てれびくんgrow」テーマソングの、てれび戦士「リンガ・フランカ」配信決定",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-15",
-      "type": "标杆案例",
-      "title": "MAN WITH A MISSION、映画『藁にもすがる獣たち』主題歌の新曲「The Animals」先行配信決定。今夜最速オンエア",
-      "source": "BARKS",
-      "summary": "通过: MAN WITH A MISSION、映画『藁にもすがる獣たち』主題歌の新曲「The Animals」先行配信決定。今夜最速オンエア",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-15",
-      "type": "每日统计",
-      "summary": "今日通过率: 50% (40/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-09-16",
-      "type": "被拒案例",
-      "title": "仮想世界と現実を行き来する新歌姫・LAYRAが新曲「わたしはLAYRA」をリリース。歌唱にmiwa・昆 夏美・鈴木このみ・みきまりあ・ASCAら参加",
-      "source": "BARKS",
-      "reason": "BARKS非白名单源，内容为虚拟歌手企划宣传",
-      "summary": "被拒: 仮想世界と現実を行き来する新歌姫・LAYRAが新曲「わたしはLAYRA」をリリース。歌唱にmiwa・昆 夏美・鈴木このみ・みきまりあ・ASCAら参加",
-      "lesson": "避免采集此类素材: BARKS非白名单源，内容为虚拟歌手企划宣传"
-    },
-    {
-      "date": "2026-09-16",
-      "type": "被拒案例",
-      "title": "CROWN HEAD、仲間と共に駆け抜けていく新曲「東京ショートスリーパー」本日リリース",
-      "source": "BARKS",
-      "reason": "BARKS非白名单源，内容为乐队单曲发行公告",
-      "summary": "被拒: CROWN HEAD、仲間と共に駆け抜けていく新曲「東京ショートスリーパー」本日リリース",
-      "lesson": "避免采集此类素材: BARKS非白名单源，内容为乐队单曲发行公告"
-    },
-    {
-      "date": "2026-09-16",
-      "type": "被拒案例",
-      "title": "【ライブレポート】MIYAVI、“原点回帰”を掲げたバースデーライブ開催。HYDEもサプライズで駆け付け",
-      "source": "BARKS",
-      "reason": "BARKS非白名单源，内容为艺人生日演唱会报道",
-      "summary": "被拒: 【ライブレポート】MIYAVI、“原点回帰”を掲げたバースデーライブ開催。HYDEもサプライズで駆け付け",
-      "lesson": "避免采集此类素材: BARKS非白名单源，内容为艺人生日演唱会报道"
-    },
-    {
-      "date": "2026-09-16",
-      "type": "被拒案例",
-      "title": "Paledusk、新曲「GOLDEN GOAL」リリース決定。Johnが正式加入",
-      "source": "BARKS",
-      "reason": "BARKS非白名单源，内容为乐队新曲+成员加入公告",
-      "summary": "被拒: Paledusk、新曲「GOLDEN GOAL」リリース決定。Johnが正式加入",
-      "lesson": "避免采集此类素材: BARKS非白名单源，内容为乐队新曲+成员加入公告"
-    },
-    {
-      "date": "2026-09-16",
-      "type": "被拒案例",
-      "title": "Beck – ‘Ride Lonesome’ review: a drop-dead gorgeous meditation on heartache and solitude",
-      "source": "NME",
-      "reason": "NME非白名单源，内容为专辑评论，相关性一般",
-      "summary": "被拒: Beck – ‘Ride Lonesome’ review: a drop-dead gorgeous meditation on heartache and ",
-      "lesson": "避免采集此类素材: NME非白名单源，内容为专辑评论，相关性一般"
-    },
     {
       "date": "2026-09-16",
       "type": "标杆案例",
@@ -1393,6 +1317,97 @@
       "date": "2026-09-19",
       "type": "每日统计",
       "summary": "今日通过率: 75% (45/60)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-09-20",
+      "type": "被拒案例",
+      "title": "9月LPR继续按兵不动 房贷利率还有下调空间吗？ - 新京报",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染，内容为LPR房贷利率，与音乐产业完全无关",
+      "summary": "被拒: 9月LPR继续按兵不动 房贷利率还有下调空间吗？ - 新京报",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为LPR房贷利率，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-09-20",
+      "type": "被拒案例",
+      "title": "加快构建房地产发展新模式 - 中国经济网",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染，内容为房地产发展模式，与音乐产业完全无关",
+      "summary": "被拒: 加快构建房地产发展新模式 - 中国经济网",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为房地产发展模式，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-09-20",
+      "type": "被拒案例",
+      "title": "市场监管总局：加快完善与超大规模市场相适应的���管体系 - 同花顺财经",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染，内容为市场监管体系，与音乐产业完全无关",
+      "summary": "被拒: 市场监管总局：加快完善与超大规模市场相适应的���管体系 - 同花顺财经",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为市场监管体系，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-09-20",
+      "type": "被拒案例",
+      "title": "9月20日动力煤CCI指数环比上涨 - 同花顺",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染，内容为动力煤CCI指数，与音乐产业完全无关",
+      "summary": "被拒: 9月20日动力煤CCI指数环比上涨 - 同花顺",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为动力煤CCI指数，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-09-20",
+      "type": "被拒案例",
+      "title": "AI陷阱大揭秘丨骗取人脸信息的诈骗套路要认清 - 中央网络安全和信息化委员会办公室",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染，内容为AI诈骗防范，与音乐产业完全无关",
+      "summary": "被拒: AI陷阱大揭秘丨骗取人脸信息的诈骗套路要认清 - 中央网络安全和信息化委员会办公室",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为AI诈骗防范，与音乐产业完全无关"
+    },
+    {
+      "date": "2026-09-20",
+      "type": "标杆案例",
+      "title": "Two Years Later, Congress Sends the ‘American Music Tourism Act’ to the President’s Desk — NIVA Appl",
+      "source": "Digital Music News",
+      "summary": "通过: Two Years Later, Congress Sends the ‘American Music Tourism Act’ to the Presiden",
+      "lesson": "此类素材值得采集: 命中关键词 演出现场"
+    },
+    {
+      "date": "2026-09-20",
+      "type": "标杆案例",
+      "title": "Serum 2 vs Vital: Do you need to pay for pro-grade synthesis?",
+      "source": "MusicTech",
+      "summary": "通过: Serum 2 vs Vital: Do you need to pay for pro-grade synthesis?",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-20",
+      "type": "标杆案例",
+      "title": "“It’s so important”: Nick Hakim explains why every producer should learn their DAW’s key commands",
+      "source": "MusicTech",
+      "summary": "通过: “It’s so important”: Nick Hakim explains why every producer should learn their D",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-20",
+      "type": "标杆案例",
+      "title": "With an 800 nanometer diamond-coated diaphragm, FiiO’s new FT15 headphones are for the serious audio",
+      "source": "MusicTech",
+      "summary": "通过: With an 800 nanometer diamond-coated diaphragm, FiiO’s new FT15 headphones are f",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-20",
+      "type": "标杆案例",
+      "title": "Six of the best earplugs for hearing protection at gigs and festivals",
+      "source": "MusicTech",
+      "summary": "通过: Six of the best earplugs for hearing protection at gigs and festivals",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-20",
+      "type": "每日统计",
+      "summary": "今日通过率: 63% (38/60)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],

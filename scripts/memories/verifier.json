@@ -378,6 +378,11 @@
           "date": "2026-09-19",
           "event": "合作 7次",
           "trustDelta": 4
+        },
+        {
+          "date": "2026-09-20",
+          "event": "合作 9次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -794,19 +799,17 @@
           "date": "2026-09-19",
           "event": "合作 4次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-20",
+          "event": "合作 4次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-23",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 前20条素材审核完成：19条通过，1条拒绝（通过率95%），来源全部为白名单源，无Google News污染",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-08-24",
       "type": "重大挛折",
@@ -1147,6 +1150,13 @@
       "date": "2026-09-19",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 首批20条审核完成：19条通过，1条拒绝（通过率95%）。通过素材全部来自白名单源（MBW×10、Music Ally×9），无Google News黑名单源污",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-09-20",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 首批20条审核完成：19条通过，1条拒绝（通过率95%）。零Google News污染，为7天来首批提交首次实现",
       "lesson": "",
       "impact": ""
     }
