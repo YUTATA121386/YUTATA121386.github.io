@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 100,
+      "trust": 94,
       "trend": "improving",
       "history": [
         {
@@ -383,6 +383,11 @@
           "date": "2026-09-20",
           "event": "合作 9次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-09-21",
+          "event": "冲突 12次",
+          "trustDelta": -6
         }
       ],
       "summary": "关系良好"
@@ -525,6 +530,11 @@
           "date": "2026-09-20",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-09-21",
+          "event": "合作 1次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系一般"
@@ -665,6 +675,11 @@
         },
         {
           "date": "2026-09-18",
+          "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-09-21",
           "event": "合作 1次",
           "trustDelta": 0
         }
@@ -994,103 +1009,17 @@
           "date": "2026-09-20",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-21",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-16",
-      "type": "标杆案例",
-      "title": "Chris Brown Thanks U.S. Rep. Jasmine Crockett for Congressional Honor & Aplogizes for ‘Any Backlash ",
-      "source": "Billboard",
-      "summary": "通过: Chris Brown Thanks U.S. Rep. Jasmine Crockett for Congressional Honor & Aplogize",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-16",
-      "type": "标杆案例",
-      "title": "音乐出海，中国平台与技术大有可为丨思想耀岭南 - 21财经",
-      "source": "Google News 中国音乐产业（搜索）",
-      "summary": "通过: 音乐出海，中国平台与技术大有可为丨思想耀岭南 - 21财经",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-16",
-      "type": "标杆案例",
-      "title": "当中文说唱不再需要翻译，RCA唱片中国选择签下揽佬 - thepaper.cn",
-      "source": "Google News 中国音乐产业（搜索）",
-      "summary": "通过: 当中文说唱不再需要翻译，RCA唱片中国选择签下揽佬 - thepaper.cn",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-16",
-      "type": "标杆案例",
-      "title": "AutoTune is now available in FL Studio – even to free users",
-      "source": "MusicTech",
-      "summary": "通过: AutoTune is now available in FL Studio – even to free users",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-16",
-      "type": "标杆案例",
-      "title": "BandLab’s mastering capabilities just got an upgrade – here’s what’s new",
-      "source": "MusicTech",
-      "summary": "通过: BandLab’s mastering capabilities just got an upgrade – here’s what’s new",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-16",
-      "type": "每日统计",
-      "summary": "今日通过率: 39% (31/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-09-17",
-      "type": "被拒案例",
-      "title": "Carney to address EU Parliament after Trump calls Canada associate membership a possible hostile act",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为加拿大/特朗普政治新闻",
-      "summary": "被拒: Carney to address EU Parliament after Trump calls Canada associate membership a ",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为加拿大/特朗普政治新闻"
-    },
-    {
-      "date": "2026-09-17",
-      "type": "被拒案例",
-      "title": "Trump says Kennedy Center could be ‘ripped down’ without his intervention - The Washington Post",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为肯尼迪中心政治新闻",
-      "summary": "被拒: Trump says Kennedy Center could be ‘ripped down’ without his intervention - The ",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为肯尼迪中心政治新闻"
-    },
-    {
-      "date": "2026-09-17",
-      "type": "被拒案例",
-      "title": "Congress passes sweeping US sanctions bill targeting Russia - Al Jazeera",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为对俄制裁政治新闻",
-      "summary": "被拒: Congress passes sweeping US sanctions bill targeting Russia - Al Jazeera",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为对俄制裁政治新闻"
-    },
-    {
-      "date": "2026-09-17",
-      "type": "被拒案例",
-      "title": "House passes bill to shield Americans from data center energy costs - CBS News",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为数据中心能源法案",
-      "summary": "被拒: House passes bill to shield Americans from data center energy costs - CBS News",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为数据中心能源法案"
-    },
-    {
-      "date": "2026-09-17",
-      "type": "被拒案例",
-      "title": "Dramatic recording could help answer why NBC4 helicopter crashed - Los Angeles Times",
-      "source": "Google News Music Industry",
-      "reason": "Google News黑名单源污染，内容为直升机坠毁事故新闻",
-      "summary": "被拒: Dramatic recording could help answer why NBC4 helicopter crashed - Los Angeles T",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为直升机坠毁事故新闻"
-    },
     {
       "date": "2026-09-17",
       "type": "标杆案例",
@@ -1409,6 +1338,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 63% (38/60)",
       "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-09-21",
+      "type": "被拒案例",
+      "title": "Miley’s ‘Bass Persuades’ Is Pretty and Passable, but Surprisingly Light on Bass… or Persuasion: Albu",
+      "source": "Variety Music",
+      "reason": "Variety Music：Miley单曲乐评，属乐评内容，非产业议题",
+      "summary": "被拒: Miley’s ‘Bass Persuades’ Is Pretty and Passable, but Surprisingly Light on Bass…",
+      "lesson": "避免采集此类素材: Variety Music：Miley单曲乐评，属乐评内容，非产业议题"
+    },
+    {
+      "date": "2026-09-21",
+      "type": "被拒案例",
+      "title": "梓渝腾讯音乐实体专辑榜年冠 - 手机新浪网",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "Google News腾讯音乐/网易云黑名单源污染（梓渝腾讯音乐实体专辑榜），V2.3.41永久拉黑源",
+      "summary": "被拒: 梓渝腾讯音乐实体专辑榜年冠 - 手机新浪网",
+      "lesson": "避免采集此类素材: Google News腾讯音乐/网易云黑名单源污染（梓渝腾讯音乐实体专辑榜），V2.3.41永久拉黑源"
+    },
+    {
+      "date": "2026-09-21",
+      "type": "被拒案例",
+      "title": "郝熠然MyFondest断层领跑锋芒之星 - 新浪财经_金融信息服务商",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "Google News腾讯音乐/网易云黑名单源污染（郝熠然MyFondest），V2.3.41永久拉黑源",
+      "summary": "被拒: 郝熠然MyFondest断层领跑锋芒之星 - 新浪财经_金融信息服务商",
+      "lesson": "避免采集此类素材: Google News腾讯音乐/网易云黑名单源污染（郝熠然MyFondest），V2.3.41永久拉黑源"
+    },
+    {
+      "date": "2026-09-21",
+      "type": "被拒案例",
+      "title": "对话大湾区智造力量！TME 受邀参加工厂数字化转型巡回研讨会广州站 - gongkong.com",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "Google News腾讯音乐/网易云黑名单源污染（TME工厂数字化转型），V2.3.41永久拉黑源",
+      "summary": "被拒: 对话大湾区智造力量！TME 受邀参加工厂数字化转型巡回研讨会广州站 - gongkong.com",
+      "lesson": "避免采集此类素材: Google News腾讯音乐/网易云黑名单源污染（TME工厂数字化转型），V2.3.41永久拉黑源"
+    },
+    {
+      "date": "2026-09-21",
+      "type": "被拒案例",
+      "title": "网易云音乐推出AI智能体小宝 专注歌曲讲解、音乐推荐、品味解读等音乐体验 - 中华网",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "Google News腾讯音乐/网易云黑名单源污染（网易云AI智能体小宝），V2.3.41永久拉黑源",
+      "summary": "被拒: 网易云音乐推出AI智能体小宝 专注歌曲讲解、音乐推荐、品味解读等音乐体验 - 中华网",
+      "lesson": "避免采集此类素材: Google News腾讯音乐/网易云黑名单源污染（网易云AI智能体小宝），V2.3.41永久拉黑源"
+    },
+    {
+      "date": "2026-09-21",
+      "type": "标杆案例",
+      "title": "Music’s Big Week in Congress: Three Bills Pass House, Addressing AM Radio, Online Ticketing, and Int",
+      "source": "Digital Music News",
+      "summary": "通过: Music’s Big Week in Congress: Three Bills Pass House, Addressing AM Radio, Onlin",
+      "lesson": "此类素材值得采集: 命中关键词 演出现场, 音乐产业政策"
+    },
+    {
+      "date": "2026-09-21",
+      "type": "标杆案例",
+      "title": "Suno Subscribers Have a Big Problem with v6",
+      "source": "Digital Music News",
+      "summary": "通过: Suno Subscribers Have a Big Problem with v6",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-21",
+      "type": "标杆案例",
+      "title": "Jhené Aiko Scores First No. 1 on Albums Chart With ‘Westside Whimsy’",
+      "source": "Variety Music",
+      "summary": "通过: Jhené Aiko Scores First No. 1 on Albums Chart With ‘Westside Whimsy’",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-21",
+      "type": "标杆案例",
+      "title": "Edward Morris, Nashville Music Editor and Columnist Who Steered Billboard’s Country Coverage, Dies a",
+      "source": "Variety Music",
+      "summary": "通过: Edward Morris, Nashville Music Editor and Columnist Who Steered Billboard’s Coun",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-21",
+      "type": "标杆案例",
+      "title": "Ed Sheeran Addresses Macklemore Controversy While on Stage at First Concert Since Rapper Dropped Fro",
+      "source": "Variety Music",
+      "summary": "通过: Ed Sheeran Addresses Macklemore Controversy While on Stage at First Concert Sinc",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-21",
+      "type": "每日统计",
+      "summary": "今日通过率: 19% (15/80)",
+      "lesson": "通过率偏低，需收紧采集标准"
     }
   ],
   "selfReview": {
