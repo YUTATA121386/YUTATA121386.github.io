@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 94,
+      "trust": 98,
       "trend": "improving",
       "history": [
         {
@@ -388,6 +388,11 @@
           "date": "2026-09-21",
           "event": "冲突 12次",
           "trustDelta": -6
+        },
+        {
+          "date": "2026-09-22",
+          "event": "合作 9次",
+          "trustDelta": 4
         }
       ],
       "summary": "关系良好"
@@ -533,6 +538,11 @@
         },
         {
           "date": "2026-09-21",
+          "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-09-22",
           "event": "合作 1次",
           "trustDelta": 0
         }
@@ -1014,103 +1024,17 @@
           "date": "2026-09-21",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-22",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-17",
-      "type": "标杆案例",
-      "title": "LUNA 3.0: the next generation of Universal Audio’s flagship DAW has arrived – here’s everything that",
-      "source": "MusicTech",
-      "summary": "通过: LUNA 3.0: the next generation of Universal Audio’s flagship DAW has arrived – he",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-17",
-      "type": "标杆案例",
-      "title": "At £225, is the Omnitronic PM-404F the best four-channel DJ mixer at its price range?",
-      "source": "MusicTech",
-      "summary": "通过: At £225, is the Omnitronic PM-404F the best four-channel DJ mixer at its price r",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-17",
-      "type": "标杆案例",
-      "title": "AutoTune is now available in FL Studio – even to free users",
-      "source": "MusicTech",
-      "summary": "通过: AutoTune is now available in FL Studio – even to free users",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-17",
-      "type": "标杆案例",
-      "title": "BandLab’s mastering capabilities just got an upgrade – here’s what’s new",
-      "source": "MusicTech",
-      "summary": "通过: BandLab’s mastering capabilities just got an upgrade – here’s what’s new",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-17",
-      "type": "标杆案例",
-      "title": "My Forever Studio: Nick Hakim has your gear on long-term loan",
-      "source": "MusicTech",
-      "summary": "通过: My Forever Studio: Nick Hakim has your gear on long-term loan",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-17",
-      "type": "每日统计",
-      "summary": "今日通过率: 68% (54/80)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-09-18",
-      "type": "被拒案例",
-      "title": "Iran War Updates: U.N. panel cites possible U.S. war crimes as Trump again says Iran wants a deal - ",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry英文源污染：内容为伊朗战争/美国战争罪指控，与音乐产业无关。",
-      "summary": "被拒: Iran War Updates: U.N. panel cites possible U.S. war crimes as Trump again says ",
-      "lesson": "避免采集此类素材: Google News Music Industry英文源污染：内容为伊朗战争/美国战争罪指控，与音乐产业无关。"
-    },
-    {
-      "date": "2026-09-18",
-      "type": "被拒案例",
-      "title": "The driver who slammed into an LA bus before helicopter crash is charged with murder - NPR",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry英文源污染：内容为LA巴士车祸谋杀指控，与音乐产业无关。",
-      "summary": "被拒: The driver who slammed into an LA bus before helicopter crash is charged with mu",
-      "lesson": "避免采集此类素材: Google News Music Industry英文源污染：内容为LA巴士车祸谋杀指控，与音乐产业无关。"
-    },
-    {
-      "date": "2026-09-18",
-      "type": "被拒案例",
-      "title": "Trump admin must provide 30 day notice for ‘demolition,’ major changes to Kennedy Center amid shutdo",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry英文源污染：内容为肯尼迪中心拆除通知争议，与音乐产业无关。",
-      "summary": "被拒: Trump admin must provide 30 day notice for ‘demolition,’ major changes to Kenned",
-      "lesson": "避免采集此类素材: Google News Music Industry英文源污染：内容为肯尼迪中心拆除通知争议，与音乐产业无关。"
-    },
-    {
-      "date": "2026-09-18",
-      "type": "被拒案例",
-      "title": "RFK Jr. Assures Vaccine Skeptics They Have a ‘Friend at the White House’ - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry英文源污染：内容为RFK Jr.疫苗言论，与音乐产业无关。",
-      "summary": "被拒: RFK Jr. Assures Vaccine Skeptics They Have a ‘Friend at the White House’ - The N",
-      "lesson": "避免采集此类素材: Google News Music Industry英文源污染：内容为RFK Jr.疫苗言论，与音乐产业无关。"
-    },
-    {
-      "date": "2026-09-18",
-      "type": "被拒案例",
-      "title": "SoCal family of 3 found dead in their home. Family looks for answers - Los Angeles Times",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry英文源污染：内容为SoCal家庭命案，与音乐产业无关。",
-      "summary": "被拒: SoCal family of 3 found dead in their home. Family looks for answers - Los Angel",
-      "lesson": "避免采集此类素材: Google News Music Industry英文源污染：内容为SoCal家庭命案，与音乐产业无关。"
-    },
     {
       "date": "2026-09-18",
       "type": "标杆案例",
@@ -1429,6 +1353,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 19% (15/80)",
       "lesson": "通过率偏低，需收紧采集标准"
+    },
+    {
+      "date": "2026-09-22",
+      "type": "被拒案例",
+      "title": "California declares statewide emergency ahead of projected epic El Niño storms - Los Angeles Times",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry黑名单源，加州紧急状态，非音乐",
+      "summary": "被拒: California declares statewide emergency ahead of projected epic El Niño storms -",
+      "lesson": "避免采集此类素材: Google News Music Industry黑名单源，加州紧急状态，非音乐"
+    },
+    {
+      "date": "2026-09-22",
+      "type": "被拒案例",
+      "title": "Latest German election humiliation puts Merz on borrowed time as CDU unrest grows - The Guardian",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry黑名单源，德国选举，非音乐",
+      "summary": "被拒: Latest German election humiliation puts Merz on borrowed time as CDU unrest grow",
+      "lesson": "避免采集此类素材: Google News Music Industry黑名单源，德国选举，非音乐"
+    },
+    {
+      "date": "2026-09-22",
+      "type": "被拒案例",
+      "title": "War, runaway AI and climate shocks to take center stage as world leaders meet at UN - AP News",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry黑名单源，联合国峰会，非音乐",
+      "summary": "被拒: War, runaway AI and climate shocks to take center stage as world leaders meet at",
+      "lesson": "避免采集此类素材: Google News Music Industry黑名单源，联合国峰会，非音乐"
+    },
+    {
+      "date": "2026-09-22",
+      "type": "被拒案例",
+      "title": "Appeals court favors Trump-backed Missouri congressional map, but Supreme Court will have final say ",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry黑名单源，密苏里选区地图，非音乐",
+      "summary": "被拒: Appeals court favors Trump-backed Missouri congressional map, but Supreme Court ",
+      "lesson": "避免采集此类素材: Google News Music Industry黑名单源，密苏里选区地图，非音乐"
+    },
+    {
+      "date": "2026-09-22",
+      "type": "被拒案例",
+      "title": "Placer County deputies kill man after hourslong gunbattle, manhunt near Mineral Fire - KCRA",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry黑名单源，警匪枪战，非音乐",
+      "summary": "被拒: Placer County deputies kill man after hourslong gunbattle, manhunt near Mineral ",
+      "lesson": "避免采集此类素材: Google News Music Industry黑名单源，警匪枪战，非音乐"
+    },
+    {
+      "date": "2026-09-22",
+      "type": "标杆案例",
+      "title": "What is Gain Staging?",
+      "source": "MusicTech",
+      "summary": "通过: What is Gain Staging?",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-22",
+      "type": "标杆案例",
+      "title": "What is phantom power and why do I need it?",
+      "source": "MusicTech",
+      "summary": "通过: What is phantom power and why do I need it?",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-22",
+      "type": "标杆案例",
+      "title": "“The death of Suno”: Reddit users have turned against Suno after v6 model update",
+      "source": "MusicTech",
+      "summary": "通过: “The death of Suno”: Reddit users have turned against Suno after v6 model update",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-22",
+      "type": "标杆案例",
+      "title": "BUDDiiS、ミニライブにてメジャー2ndシングル「無限大LOVE!!!」を初披露。「無限大LOVE!!! (short ver. )」が各SNSにて配信も",
+      "source": "BARKS",
+      "summary": "通过: BUDDiiS、ミニライブにてメジャー2ndシングル「無限大LOVE!!!」を初披露。「無限大LOVE!!! (short ver. )」が各SNSにて配信も",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-22",
+      "type": "标杆案例",
+      "title": "【ライブレポート】西川貴教、＜イナズマロック フェス＞から新たな形で生まれ変わった＜FEST. INAZUMA＞開催「また＜イナズマ＞で会おうぜ！」",
+      "source": "BARKS",
+      "summary": "通过: 【ライブレポート】西川貴教、＜イナズマロック フェス＞から新たな形で生まれ変わった＜FEST. INAZUMA＞開催「また＜イナズマ＞で会おうぜ！」",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-22",
+      "type": "每日统计",
+      "summary": "今日通过率: 43% (26/60)",
+      "lesson": ""
     }
   ],
   "selfReview": {

@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 94,
+      "trust": 98,
       "trend": "improving",
       "history": [
         {
@@ -388,6 +388,11 @@
           "date": "2026-09-21",
           "event": "冲突 12次",
           "trustDelta": -6
+        },
+        {
+          "date": "2026-09-22",
+          "event": "合作 9次",
+          "trustDelta": 4
         }
       ],
       "summary": "关系良好"
@@ -814,26 +819,17 @@
           "date": "2026-09-21",
           "event": "合作 4次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-22",
+          "event": "合作 4次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-25",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: ❌ 你的'0污染'承诺验证失败：待审核队列中RAW-0031至0040共10条素材为Google News黑名单源，内容全部为非音乐话题（股市/期货/机器人/央",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-08-25",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 首批20条素材全部通过，通过率100%，来源全部为白名单源（MBW×5、Music Ally×2、Billboard×10、Digital Music News",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-08-26",
       "type": "重大挛折",
@@ -1167,6 +1163,20 @@
       "date": "2026-09-21",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 【核查师9/21复盘】今日共审核约207条素材，分5批推进：首批15条精选批次通过率约95%（白名单源质量良好），随后第4批20条骤降至20%，第5批76条仅3",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-09-22",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 第2批20条审核完成：5条通过，15条拒绝（通过率25%）。15条拒绝中14条为Google News音乐产业源污染（RAW-0024至0038），1条为Bil",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-09-22",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 首批20条审核完成：18条通过，2条拒绝（通过率90%）。拒绝的RAW-0017/0018为Billboard娱乐消费类（The Voice观看指南、MNF观看",
       "lesson": "",
       "impact": ""
     }
