@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 98,
+      "trust": 94,
       "trend": "improving",
       "history": [
         {
@@ -393,6 +393,11 @@
           "date": "2026-09-22",
           "event": "合作 9次",
           "trustDelta": 4
+        },
+        {
+          "date": "2026-09-23",
+          "event": "冲突 9次",
+          "trustDelta": -4
         }
       ],
       "summary": "关系良好"
@@ -1029,103 +1034,17 @@
           "date": "2026-09-22",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-23",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-18",
-      "type": "标杆案例",
-      "title": "Best Budget Synthesizers Under $250",
-      "source": "MusicTech",
-      "summary": "通过: Best Budget Synthesizers Under $250",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-18",
-      "type": "标杆案例",
-      "title": "What’s the relationship between pitch and frequency? A beginner’s guide for music producers",
-      "source": "MusicTech",
-      "summary": "通过: What’s the relationship between pitch and frequency? A beginner’s guide for musi",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-18",
-      "type": "标杆案例",
-      "title": "Nopia is open now for pre-orders – and it might just give the Telepathic Orchid a run for its money",
-      "source": "MusicTech",
-      "summary": "通过: Nopia is open now for pre-orders – and it might just give the Telepathic Orchid ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-18",
-      "type": "标杆案例",
-      "title": "Arturia’s MiniFreak gets a free 5.0 update: here’s everything you need to know",
-      "source": "MusicTech",
-      "summary": "通过: Arturia’s MiniFreak gets a free 5.0 update: here’s everything you need to know",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-18",
-      "type": "标杆案例",
-      "title": "LUNA 3.0: the next generation of Universal Audio’s flagship DAW has arrived – here’s everything that",
-      "source": "MusicTech",
-      "summary": "通过: LUNA 3.0: the next generation of Universal Audio’s flagship DAW has arrived – he",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-18",
-      "type": "每日统计",
-      "summary": "今日通过率: 69% (55/80)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-09-19",
-      "type": "被拒案例",
-      "title": "沈鼓集团上市两日股价暴涨12倍，上交所出手：相关异常账户暂停交易 - thepaper.cn",
-      "source": "Google News 音乐产业",
-      "reason": "Google News音乐产业黑名单源污染，内容为沈鼓集团股价异动，与音乐产业完全无关。",
-      "summary": "被拒: 沈鼓集团上市两日股价暴涨12倍，上交所出手：相关异常账户暂停交易 - thepaper.cn",
-      "lesson": "避免采集此类素材: Google News音乐产业黑名单源污染，内容为沈鼓集团股价异动，与音乐产业完全无关。"
-    },
-    {
-      "date": "2026-09-19",
-      "type": "被拒案例",
-      "title": "盘活工业遗产 黄金博物馆今日开馆 - 新华网",
-      "source": "Google News 音乐产业",
-      "reason": "Google News音乐产业黑名单源污染，内容为黄金博物馆开馆，与音乐产业完全无关。",
-      "summary": "被拒: 盘活工业遗产 黄金博物馆今日开馆 - 新华网",
-      "lesson": "避免采集此类素材: Google News音乐产业黑名单源污染，内容为黄金博物馆开馆，与音乐产业完全无关。"
-    },
-    {
-      "date": "2026-09-19",
-      "type": "被拒案例",
-      "title": "黄仁勋唱反调 呼吁加快人工智能研发进程 - Sohu",
-      "source": "Google News 音乐产业",
-      "reason": "Google News音乐产业黑名单源污染，内容为黄仁勋呼吁加快AI研发（非音乐AI），与音乐产业无关。",
-      "summary": "被拒: 黄仁勋唱反调 呼吁加快人工智能研发进程 - Sohu",
-      "lesson": "避免采集此类素材: Google News音乐产业黑名单源污染，内容为黄仁勋呼吁加快AI研发（非音乐AI），与音乐产业无关。"
-    },
-    {
-      "date": "2026-09-19",
-      "type": "被拒案例",
-      "title": "鲲鹏超节点重磅升级，风冷、液冷双旗舰全新亮相 - 中华网",
-      "source": "Google News 音乐产业",
-      "reason": "Google News音乐产业黑名单源污染，内容为鲲鹏超节点服务器发布，与音乐产业完全无关。",
-      "summary": "被拒: 鲲鹏超节点重磅升级，风冷、液冷双旗舰全新亮相 - 中华网",
-      "lesson": "避免采集此类素材: Google News音乐产业黑名单源污染，内容为鲲鹏超节点服务器发布，与音乐产业完全无关。"
-    },
-    {
-      "date": "2026-09-19",
-      "type": "被拒案例",
-      "title": "美股收盘：AI芯片股爆发推动纳指走高 华尔街告别动荡一周 - 财联社",
-      "source": "Google News 音乐产业",
-      "reason": "Google News音乐产业黑名单源污染，内容为美股收盘/AI芯片股，与音乐产业完全无关。",
-      "summary": "被拒: 美股收盘：AI芯片股爆发推动纳指走高 华尔街告别动荡一周 - 财联社",
-      "lesson": "避免采集此类素材: Google News音乐产业黑名单源污染，内容为美股收盘/AI芯片股，与音乐产业完全无关。"
-    },
     {
       "date": "2026-09-19",
       "type": "标杆案例",
@@ -1443,6 +1362,97 @@
       "date": "2026-09-22",
       "type": "每日统计",
       "summary": "今日通过率: 43% (26/60)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-09-23",
+      "type": "被拒案例",
+      "title": "人民币市场汇价（9月23日） - 新华网",
+      "source": "Google News 音乐产业",
+      "reason": "Google News音乐产业黑名单源污染。内容为人民币市场汇价（新华网），非音乐产业内容。",
+      "summary": "被拒: 人民币市场汇价（9月23日） - 新华网",
+      "lesson": "避免采集此类素材: Google News音乐产业黑名单源污染。内容为人民币市场汇价（新华网），非音乐产业内容。"
+    },
+    {
+      "date": "2026-09-23",
+      "type": "被拒案例",
+      "title": "Trump Threatens Annihilation in Iran in UN Speech and Lays Out Winner-Takes-All Vision - The New Yor",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry黑名单源污染。内容为特朗普联大演讲（纽约时报），纯政治新闻，与音乐产业零关联。",
+      "summary": "被拒: Trump Threatens Annihilation in Iran in UN Speech and Lays Out Winner-Takes-All ",
+      "lesson": "避免采集此类素材: Google News Music Industry黑名单源污染。内容为特朗普联大演讲（纽约时报），纯政治新闻，与音乐产业零关联。"
+    },
+    {
+      "date": "2026-09-23",
+      "type": "被拒案例",
+      "title": "Trump cites national security, midterms coverage to defend press ban - Politico",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry黑名单源污染。内容为特朗普新闻禁令（Politico），纯政治新闻。",
+      "summary": "被拒: Trump cites national security, midterms coverage to defend press ban - Politico",
+      "lesson": "避免采集此类素材: Google News Music Industry黑名单源污染。内容为特朗普新闻禁令（Politico），纯政治新闻。"
+    },
+    {
+      "date": "2026-09-23",
+      "type": "被拒案例",
+      "title": "Trump berates CNN’s Kaitlan Collins after ban: ‘You shouldn’t be covering me’ - The Washington Post",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry黑名单源污染。内容为特朗普与CNN记者冲突（华盛顿邮报），纯政治新闻。",
+      "summary": "被拒: Trump berates CNN’s Kaitlan Collins after ban: ‘You shouldn’t be covering me’ - ",
+      "lesson": "避免采集此类素材: Google News Music Industry黑名单源污染。内容为特朗普与CNN记者冲突（华盛顿邮报），纯政治新闻。"
+    },
+    {
+      "date": "2026-09-23",
+      "type": "被拒案例",
+      "title": "Category 5 Hurricane Polo is 'one of the strongest storms ever' - NPR",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry黑名单源污染。内容为五级飓风Polo（NPR），纯灾害新闻。",
+      "summary": "被拒: Category 5 Hurricane Polo is 'one of the strongest storms ever' - NPR",
+      "lesson": "避免采集此类素材: Google News Music Industry黑名单源污染。内容为五级飓风Polo（NPR），纯灾害新闻。"
+    },
+    {
+      "date": "2026-09-23",
+      "type": "标杆案例",
+      "title": "My Forever Studio: UNIIQU3’s favela studio has mass appeal",
+      "source": "MusicTech",
+      "summary": "通过: My Forever Studio: UNIIQU3’s favela studio has mass appeal",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-23",
+      "type": "标杆案例",
+      "title": "What is Gain Staging?",
+      "source": "MusicTech",
+      "summary": "通过: What is Gain Staging?",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-23",
+      "type": "标杆案例",
+      "title": "What is phantom power and why do I need it?",
+      "source": "MusicTech",
+      "summary": "通过: What is phantom power and why do I need it?",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-23",
+      "type": "标杆案例",
+      "title": "“The death of Suno”: Reddit users have turned against Suno after v6 model update",
+      "source": "MusicTech",
+      "summary": "通过: “The death of Suno”: Reddit users have turned against Suno after v6 model update",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-23",
+      "type": "标杆案例",
+      "title": "Sendy Audio’s Apollo Pro offers class, comfort and smooth tones",
+      "source": "MusicTech",
+      "summary": "通过: Sendy Audio’s Apollo Pro offers class, comfort and smooth tones",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-23",
+      "type": "每日统计",
+      "summary": "今日通过率: 53% (32/60)",
       "lesson": ""
     }
   ],
