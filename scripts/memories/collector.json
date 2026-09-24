@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 94,
+      "trust": 98,
       "trend": "improving",
       "history": [
         {
@@ -398,6 +398,11 @@
           "date": "2026-09-23",
           "event": "冲突 9次",
           "trustDelta": -4
+        },
+        {
+          "date": "2026-09-24",
+          "event": "合作 5次",
+          "trustDelta": 4
         }
       ],
       "summary": "关系良好"
@@ -548,6 +553,11 @@
         },
         {
           "date": "2026-09-22",
+          "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-09-24",
           "event": "合作 1次",
           "trustDelta": 0
         }
@@ -1046,97 +1056,6 @@
   },
   "experiences": [
     {
-      "date": "2026-09-19",
-      "type": "标杆案例",
-      "title": "Apollo Craftily Scores a $1.25 Billion Ownership Chunk of BMG+Concord",
-      "source": "Digital Music News",
-      "summary": "通过: Apollo Craftily Scores a $1.25 Billion Ownership Chunk of BMG+Concord",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-19",
-      "type": "标杆案例",
-      "title": "Fever Scores $250 Million Equity Raise, Says Its Revenue Has ‘More Than Tripled’ During the Past Thr",
-      "source": "Digital Music News",
-      "summary": "通过: Fever Scores $250 Million Equity Raise, Says Its Revenue Has ‘More Than Tripled’",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-19",
-      "type": "标杆案例",
-      "title": "SubmitHub Bans AI Music Submissions: ‘We Don’t Need More Noise’",
-      "source": "Digital Music News",
-      "summary": "通过: SubmitHub Bans AI Music Submissions: ‘We Don’t Need More Noise’",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-19",
-      "type": "标杆案例",
-      "title": "Two Years Later, Congress Sends the ‘American Music Tourism Act’ to the President’s Desk — NIVA Appl",
-      "source": "Digital Music News",
-      "summary": "通过: Two Years Later, Congress Sends the ‘American Music Tourism Act’ to the Presiden",
-      "lesson": "此类素材值得采集: 命中关键词 演出现场"
-    },
-    {
-      "date": "2026-09-19",
-      "type": "标杆案例",
-      "title": "Suno Faces Yet Another Class Action Lawsuit Over Alleged November 2025 Data Breach — Plus a Separate",
-      "source": "Digital Music News",
-      "summary": "通过: Suno Faces Yet Another Class Action Lawsuit Over Alleged November 2025 Data Brea",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-19",
-      "type": "每日统计",
-      "summary": "今日通过率: 75% (45/60)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-09-20",
-      "type": "被拒案例",
-      "title": "9月LPR继续按兵不动 房贷利率还有下调空间吗？ - 新京报",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染，内容为LPR房贷利率，与音乐产业完全无关",
-      "summary": "被拒: 9月LPR继续按兵不动 房贷利率还有下调空间吗？ - 新京报",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为LPR房贷利率，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-09-20",
-      "type": "被拒案例",
-      "title": "加快构建房地产发展新模式 - 中国经济网",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染，内容为房地产发展模式，与音乐产业完全无关",
-      "summary": "被拒: 加快构建房地产发展新模式 - 中国经济网",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为房地产发展模式，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-09-20",
-      "type": "被拒案例",
-      "title": "市场监管总局：加快完善与超大规模市场相适应的���管体系 - 同花顺财经",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染，内容为市场监管体系，与音乐产业完全无关",
-      "summary": "被拒: 市场监管总局：加快完善与超大规模市场相适应的���管体系 - 同花顺财经",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为市场监管体系，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-09-20",
-      "type": "被拒案例",
-      "title": "9月20日动力煤CCI指数环比上涨 - 同花顺",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染，内容为动力煤CCI指数，与音乐产业完全无关",
-      "summary": "被拒: 9月20日动力煤CCI指数环比上涨 - 同花顺",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为动力煤CCI指数，与音乐产业完全无关"
-    },
-    {
-      "date": "2026-09-20",
-      "type": "被拒案例",
-      "title": "AI陷阱大揭秘丨骗取人脸信息的诈骗套路要认清 - 中央网络安全和信息化委员会办公室",
-      "source": "Google News 音乐产业",
-      "reason": "Google News黑名单源污染，内容为AI诈骗防范，与音乐产业完全无关",
-      "summary": "被拒: AI陷阱大揭秘丨骗取人脸信息的诈骗套路要认清 - 中央网络安全和信息化委员会办公室",
-      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为AI诈骗防范，与音乐产业完全无关"
-    },
-    {
       "date": "2026-09-20",
       "type": "标杆案例",
       "title": "Two Years Later, Congress Sends the ‘American Music Tourism Act’ to the President’s Desk — NIVA Appl",
@@ -1454,6 +1373,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 53% (32/60)",
       "lesson": ""
+    },
+    {
+      "date": "2026-09-24",
+      "type": "被拒案例",
+      "title": "‘There Is No Feud’: Dolly Parton’s Sister Freida Weighs In on Family Drama",
+      "source": "Billboard",
+      "reason": "Billboard娱乐花絮——Dolly Parton家庭纠纷回应，纯名人八卦，无音乐产业价值",
+      "summary": "被拒: ‘There Is No Feud’: Dolly Parton’s Sister Freida Weighs In on Family Drama",
+      "lesson": "避免采集此类素材: Billboard娱乐花絮——Dolly Parton家庭纠纷回应，纯名人八卦，无音乐产业价值"
+    },
+    {
+      "date": "2026-09-24",
+      "type": "被拒案例",
+      "title": "‘America’s Got Talent’ Crowns Season 21 Champion",
+      "source": "Billboard",
+      "reason": "Billboard，America's Got Talent冠军揭晓，综艺节目内容，非音乐产业",
+      "summary": "被拒: ‘America’s Got Talent’ Crowns Season 21 Champion",
+      "lesson": "避免采集此类素材: Billboard，America's Got Talent冠军揭晓，综艺节目内容，非音乐产业"
+    },
+    {
+      "date": "2026-09-24",
+      "type": "被拒案例",
+      "title": "Ciara Says Her 9-Year-Old Daughter Nearly Spoiled Baby No. 5 Surprise: ‘She’s Got This Sixth Sense’",
+      "source": "Billboard",
+      "reason": "Billboard娱乐花絮——Ciara女儿泄露怀孕消息，纯私人生活八卦",
+      "summary": "被拒: Ciara Says Her 9-Year-Old Daughter Nearly Spoiled Baby No. 5 Surprise: ‘She’s Go",
+      "lesson": "避免采集此类素材: Billboard娱乐花絮——Ciara女儿泄露怀孕消息，纯私人生活八卦"
+    },
+    {
+      "date": "2026-09-24",
+      "type": "被拒案例",
+      "title": "KATSEYE’s Lara Raj Shares Sweet Selfie With Camila Cabello: ‘My Big Sissy Forever’",
+      "source": "Billboard",
+      "reason": "Billboard娱乐花絮——KATSEYE成员与Camila Cabello合影，社交媒体互动，无产业价值",
+      "summary": "被拒: KATSEYE’s Lara Raj Shares Sweet Selfie With Camila Cabello: ‘My Big Sissy Foreve",
+      "lesson": "避免采集此类素材: Billboard娱乐花絮——KATSEYE成员与Camila Cabello合影，社交媒体互动，无产业价值"
+    },
+    {
+      "date": "2026-09-24",
+      "type": "被拒案例",
+      "title": "Fender’s Latest Studio Must-Have Isn’t an Instrument — It’s a Candle: Shop the Guitar-Inspired Colle",
+      "source": "Billboard",
+      "reason": "Billboard，Fender联名蜡烛产品，消费电子/周边商品推销，非音乐产业内容",
+      "summary": "被拒: Fender’s Latest Studio Must-Have Isn’t an Instrument — It’s a Candle: Shop the G",
+      "lesson": "避免采集此类素材: Billboard，Fender联名蜡烛产品，消费电子/周边商品推销，非音乐产业内容"
+    },
+    {
+      "date": "2026-09-24",
+      "type": "标杆案例",
+      "title": "Site-Blocking Push Continues With ‘Operation Lumen’ — Nearly 300 Stream-Ripping Domains Targeted in ",
+      "source": "Digital Music News",
+      "summary": "通过: Site-Blocking Push Continues With ‘Operation Lumen’ — Nearly 300 Stream-Ripping ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-24",
+      "type": "标杆案例",
+      "title": "UMG and Lady Gaga Demand $230,000+ in Legal Fees from Lost International — As Surf Brand Kicks Off N",
+      "source": "Digital Music News",
+      "summary": "通过: UMG and Lady Gaga Demand $230,000+ in Legal Fees from Lost International — As Su",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-24",
+      "type": "标杆案例",
+      "title": "Build Them (Globally), And They Will Come: Coliseo GNP Seguros Opens 30,000 Cap Stadium In Guadalaja",
+      "source": "Digital Music News",
+      "summary": "通过: Build Them (Globally), And They Will Come: Coliseo GNP Seguros Opens 30,000 Cap ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-24",
+      "type": "标杆案例",
+      "title": "Sphere and Disguise Announce Multi-Year Technology Partnership to Further Advance Immersive Live Ent",
+      "source": "Digital Music News",
+      "summary": "通过: Sphere and Disguise Announce Multi-Year Technology Partnership to Further Advanc",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-24",
+      "type": "标杆案例",
+      "title": "Kakao Founder Faces 15 Years in Prison Over SM Entertainment Stock Manipulation",
+      "source": "Digital Music News",
+      "summary": "通过: Kakao Founder Faces 15 Years in Prison Over SM Entertainment Stock Manipulation",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-24",
+      "type": "每日统计",
+      "summary": "今日通过率: 88% (35/40)",
+      "lesson": "通过率良好，保持当前标准"
     }
   ],
   "selfReview": {
