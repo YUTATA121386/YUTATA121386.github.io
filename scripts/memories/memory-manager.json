@@ -343,6 +343,11 @@
           "date": "2026-09-23",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-25",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
@@ -715,6 +720,11 @@
           "date": "2026-09-24",
           "event": "合作 1次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-09-25",
+          "event": "合作 3次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
@@ -1005,6 +1015,11 @@
         },
         {
           "date": "2026-09-23",
+          "event": "合作 1次",
+          "trustDelta": 2
+        },
+        {
+          "date": "2026-09-25",
           "event": "合作 1次",
           "trustDelta": 2
         }
@@ -1310,13 +1325,6 @@
     }
   },
   "experiences": [
-    {
-      "date": "2026-08-03",
-      "type": "正向反馈",
-      "summary": "收到采集师的APPROVE: 今日工作总结：今天是极度失败的一天。我提交了102条素材，虽然白名单源（Billboard、Digital Music News、BARKS、NME、Varie",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-08-04",
       "type": "正向反馈",
@@ -1657,6 +1665,13 @@
       "date": "2026-09-23",
       "type": "正向反馈",
       "summary": "收到采集师的APPROVE: 【采集师9/23复盘】今日提交151条素材，分四批审核：第1批(RAW-0001至0020)通过率90%，第2批(RAW-0021至0040)仅30%，第3批(",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-09-25",
+      "type": "正向反馈",
+      "summary": "收到采集师的APPROVE: 采集师 2026-09-25 复盘：本轮基础管道自动采集产出155条，首批20条（MBW×10、Music Ally×10）经核查100%通过，为连续第3天首批",
       "lesson": "",
       "impact": ""
     }

@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 98,
+      "trust": 100,
       "trend": "improving",
       "history": [
         {
@@ -403,6 +403,11 @@
           "date": "2026-09-24",
           "event": "合作 5次",
           "trustDelta": 4
+        },
+        {
+          "date": "2026-09-25",
+          "event": "合作 8次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -559,6 +564,11 @@
         {
           "date": "2026-09-24",
           "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-09-25",
+          "event": "合作 2次",
           "trustDelta": 0
         }
       ],
@@ -1049,103 +1059,17 @@
           "date": "2026-09-23",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-25",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-20",
-      "type": "标杆案例",
-      "title": "Two Years Later, Congress Sends the ‘American Music Tourism Act’ to the President’s Desk — NIVA Appl",
-      "source": "Digital Music News",
-      "summary": "通过: Two Years Later, Congress Sends the ‘American Music Tourism Act’ to the Presiden",
-      "lesson": "此类素材值得采集: 命中关键词 演出现场"
-    },
-    {
-      "date": "2026-09-20",
-      "type": "标杆案例",
-      "title": "Serum 2 vs Vital: Do you need to pay for pro-grade synthesis?",
-      "source": "MusicTech",
-      "summary": "通过: Serum 2 vs Vital: Do you need to pay for pro-grade synthesis?",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-20",
-      "type": "标杆案例",
-      "title": "“It’s so important”: Nick Hakim explains why every producer should learn their DAW’s key commands",
-      "source": "MusicTech",
-      "summary": "通过: “It’s so important”: Nick Hakim explains why every producer should learn their D",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-20",
-      "type": "标杆案例",
-      "title": "With an 800 nanometer diamond-coated diaphragm, FiiO’s new FT15 headphones are for the serious audio",
-      "source": "MusicTech",
-      "summary": "通过: With an 800 nanometer diamond-coated diaphragm, FiiO’s new FT15 headphones are f",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-20",
-      "type": "标杆案例",
-      "title": "Six of the best earplugs for hearing protection at gigs and festivals",
-      "source": "MusicTech",
-      "summary": "通过: Six of the best earplugs for hearing protection at gigs and festivals",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-20",
-      "type": "每日统计",
-      "summary": "今日通过率: 63% (38/60)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-09-21",
-      "type": "被拒案例",
-      "title": "Miley’s ‘Bass Persuades’ Is Pretty and Passable, but Surprisingly Light on Bass… or Persuasion: Albu",
-      "source": "Variety Music",
-      "reason": "Variety Music：Miley单曲乐评，属乐评内容，非产业议题",
-      "summary": "被拒: Miley’s ‘Bass Persuades’ Is Pretty and Passable, but Surprisingly Light on Bass…",
-      "lesson": "避免采集此类素材: Variety Music：Miley单曲乐评，属乐评内容，非产业议题"
-    },
-    {
-      "date": "2026-09-21",
-      "type": "被拒案例",
-      "title": "梓渝腾讯音乐实体专辑榜年冠 - 手机新浪网",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News腾讯音乐/网易云黑名单源污染（梓渝腾讯音乐实体专辑榜），V2.3.41永久拉黑源",
-      "summary": "被拒: 梓渝腾讯音乐实体专辑榜年冠 - 手机新浪网",
-      "lesson": "避免采集此类素材: Google News腾讯音乐/网易云黑名单源污染（梓渝腾讯音乐实体专辑榜），V2.3.41永久拉黑源"
-    },
-    {
-      "date": "2026-09-21",
-      "type": "被拒案例",
-      "title": "郝熠然MyFondest断层领跑锋芒之星 - 新浪财经_金融信息服务商",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News腾讯音乐/网易云黑名单源污染（郝熠然MyFondest），V2.3.41永久拉黑源",
-      "summary": "被拒: 郝熠然MyFondest断层领跑锋芒之星 - 新浪财经_金融信息服务商",
-      "lesson": "避免采集此类素材: Google News腾讯音乐/网易云黑名单源污染（郝熠然MyFondest），V2.3.41永久拉黑源"
-    },
-    {
-      "date": "2026-09-21",
-      "type": "被拒案例",
-      "title": "对话大湾区智造力量！TME 受邀参加工厂数字化转型巡回研讨会广州站 - gongkong.com",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News腾讯音乐/网易云黑名单源污染（TME工厂数字化转型），V2.3.41永久拉黑源",
-      "summary": "被拒: 对话大湾区智造力量！TME 受邀参加工厂数字化转型巡回研讨会广州站 - gongkong.com",
-      "lesson": "避免采集此类素材: Google News腾讯音乐/网易云黑名单源污染（TME工厂数字化转型），V2.3.41永久拉黑源"
-    },
-    {
-      "date": "2026-09-21",
-      "type": "被拒案例",
-      "title": "网易云音乐推出AI智能体小宝 专注歌曲讲解、音乐推荐、品味解读等音乐体验 - 中华网",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News腾讯音乐/网易云黑名单源污染（网易云AI智能体小宝），V2.3.41永久拉黑源",
-      "summary": "被拒: 网易云音乐推出AI智能体小宝 专注歌曲讲解、音乐推荐、品味解读等音乐体验 - 中华网",
-      "lesson": "避免采集此类素材: Google News腾讯音乐/网易云黑名单源污染（网易云AI智能体小宝），V2.3.41永久拉黑源"
-    },
     {
       "date": "2026-09-21",
       "type": "标杆案例",
@@ -1463,6 +1387,97 @@
       "date": "2026-09-24",
       "type": "每日统计",
       "summary": "今日通过率: 88% (35/40)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "被拒案例",
+      "title": "鲸算π丨成年人的中秋默契：月饼不拆，先想下家 - 新京报",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染，内容为『月饼消费』消费类内容，非音乐产业",
+      "summary": "被拒: 鲸算π丨成年人的中秋默契：月饼不拆，先想下家 - 新京报",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为『月饼消费』消费类内容，非音乐产业"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "被拒案例",
+      "title": "重庆市市长，为“智囊”颁发聘书 - 凤凰网",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染，内容为『重庆市市长颁发聘书』政治内容，非音乐产业",
+      "summary": "被拒: 重庆市市长，为“智囊”颁发聘书 - 凤凰网",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为『重庆市市长颁发聘书』政治内容，非音乐产业"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "被拒案例",
+      "title": "湖北成品油价格今起上调 - 央广网",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染，内容为『湖北成品油价格』能源价格内容，非音乐产业",
+      "summary": "被拒: 湖北成品油价格今起上调 - 央广网",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为『湖北成品油价格』能源价格内容，非音乐产业"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "被拒案例",
+      "title": "日股芯片股走高，东京电子涨3.5%，韩股今日休市 - 东方财富",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染，内容为『日股芯片股』股市内容，非音乐产业",
+      "summary": "被拒: 日股芯片股走高，东京电子涨3.5%，韩股今日休市 - 东方财富",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为『日股芯片股』股市内容，非音乐产业"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "被拒案例",
+      "title": "美股收盘：三大股指涨跌不一，存储芯片股多数下跌 - 21财经",
+      "source": "Google News 音乐产业",
+      "reason": "Google News黑名单源污染，内容为『美股收盘』股市内容，非音乐产业",
+      "summary": "被拒: 美股收盘：三大股指涨跌不一，存储芯片股多数下跌 - 21财经",
+      "lesson": "避免采集此类素材: Google News黑名单源污染，内容为『美股收盘』股市内容，非音乐产业"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "标杆案例",
+      "title": "Partisan Takes a Majority Stake in Alex Sheridan’s OTM Music, Formally Debuts ‘An Expanded Independe",
+      "source": "Digital Music News",
+      "summary": "通过: Partisan Takes a Majority Stake in Alex Sheridan’s OTM Music, Formally Debuts ‘A",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-25",
+      "type": "标杆案例",
+      "title": "San Jose Sharks Nix Suno-Generated ‘Slop Song’ Following Intense Fan Backlash",
+      "source": "Digital Music News",
+      "summary": "通过: San Jose Sharks Nix Suno-Generated ‘Slop Song’ Following Intense Fan Backlash",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-25",
+      "type": "标杆案例",
+      "title": "Site-Blocking Push Continues With ‘Operation Lumen’ — Nearly 300 Stream-Ripping Domains Targeted in ",
+      "source": "Digital Music News",
+      "summary": "通过: Site-Blocking Push Continues With ‘Operation Lumen’ — Nearly 300 Stream-Ripping ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-25",
+      "type": "标杆案例",
+      "title": "UMG and Lady Gaga Demand $230,000+ in Legal Fees from Lost International — As Surf Brand Kicks Off N",
+      "source": "Digital Music News",
+      "summary": "通过: UMG and Lady Gaga Demand $230,000+ in Legal Fees from Lost International — As Su",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-25",
+      "type": "标杆案例",
+      "title": "Build Them (Globally), And They Will Come: Coliseo GNP Seguros Opens 30,000 Cap Stadium In Guadalaja",
+      "source": "Digital Music News",
+      "summary": "通过: Build Them (Globally), And They Will Come: Coliseo GNP Seguros Opens 30,000 Cap ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-25",
+      "type": "每日统计",
+      "summary": "今日通过率: 73% (44/60)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],
