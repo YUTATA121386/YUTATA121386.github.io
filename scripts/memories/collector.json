@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 100,
+      "trust": 90,
       "trend": "improving",
       "history": [
         {
@@ -408,6 +408,11 @@
           "date": "2026-09-25",
           "event": "合作 8次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-09-26",
+          "event": "冲突 14次",
+          "trustDelta": -10
         }
       ],
       "summary": "关系良好"
@@ -715,6 +720,11 @@
         },
         {
           "date": "2026-09-21",
+          "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-09-26",
           "event": "合作 1次",
           "trustDelta": 0
         }
@@ -1064,103 +1074,17 @@
           "date": "2026-09-25",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-26",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-21",
-      "type": "标杆案例",
-      "title": "Music’s Big Week in Congress: Three Bills Pass House, Addressing AM Radio, Online Ticketing, and Int",
-      "source": "Digital Music News",
-      "summary": "通过: Music’s Big Week in Congress: Three Bills Pass House, Addressing AM Radio, Onlin",
-      "lesson": "此类素材值得采集: 命中关键词 演出现场, 音乐产业政策"
-    },
-    {
-      "date": "2026-09-21",
-      "type": "标杆案例",
-      "title": "Suno Subscribers Have a Big Problem with v6",
-      "source": "Digital Music News",
-      "summary": "通过: Suno Subscribers Have a Big Problem with v6",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-21",
-      "type": "标杆案例",
-      "title": "Jhené Aiko Scores First No. 1 on Albums Chart With ‘Westside Whimsy’",
-      "source": "Variety Music",
-      "summary": "通过: Jhené Aiko Scores First No. 1 on Albums Chart With ‘Westside Whimsy’",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-21",
-      "type": "标杆案例",
-      "title": "Edward Morris, Nashville Music Editor and Columnist Who Steered Billboard’s Country Coverage, Dies a",
-      "source": "Variety Music",
-      "summary": "通过: Edward Morris, Nashville Music Editor and Columnist Who Steered Billboard’s Coun",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-21",
-      "type": "标杆案例",
-      "title": "Ed Sheeran Addresses Macklemore Controversy While on Stage at First Concert Since Rapper Dropped Fro",
-      "source": "Variety Music",
-      "summary": "通过: Ed Sheeran Addresses Macklemore Controversy While on Stage at First Concert Sinc",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-21",
-      "type": "每日统计",
-      "summary": "今日通过率: 19% (15/80)",
-      "lesson": "通过率偏低，需收紧采集标准"
-    },
-    {
-      "date": "2026-09-22",
-      "type": "被拒案例",
-      "title": "California declares statewide emergency ahead of projected epic El Niño storms - Los Angeles Times",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry黑名单源，加州紧急状态，非音乐",
-      "summary": "被拒: California declares statewide emergency ahead of projected epic El Niño storms -",
-      "lesson": "避免采集此类素材: Google News Music Industry黑名单源，加州紧急状态，非音乐"
-    },
-    {
-      "date": "2026-09-22",
-      "type": "被拒案例",
-      "title": "Latest German election humiliation puts Merz on borrowed time as CDU unrest grows - The Guardian",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry黑名单源，德国选举，非音乐",
-      "summary": "被拒: Latest German election humiliation puts Merz on borrowed time as CDU unrest grow",
-      "lesson": "避免采集此类素材: Google News Music Industry黑名单源，德国选举，非音乐"
-    },
-    {
-      "date": "2026-09-22",
-      "type": "被拒案例",
-      "title": "War, runaway AI and climate shocks to take center stage as world leaders meet at UN - AP News",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry黑名单源，联合国峰会，非音乐",
-      "summary": "被拒: War, runaway AI and climate shocks to take center stage as world leaders meet at",
-      "lesson": "避免采集此类素材: Google News Music Industry黑名单源，联合国峰会，非音乐"
-    },
-    {
-      "date": "2026-09-22",
-      "type": "被拒案例",
-      "title": "Appeals court favors Trump-backed Missouri congressional map, but Supreme Court will have final say ",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry黑名单源，密苏里选区地图，非音乐",
-      "summary": "被拒: Appeals court favors Trump-backed Missouri congressional map, but Supreme Court ",
-      "lesson": "避免采集此类素材: Google News Music Industry黑名单源，密苏里选区地图，非音乐"
-    },
-    {
-      "date": "2026-09-22",
-      "type": "被拒案例",
-      "title": "Placer County deputies kill man after hourslong gunbattle, manhunt near Mineral Fire - KCRA",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry黑名单源，警匪枪战，非音乐",
-      "summary": "被拒: Placer County deputies kill man after hourslong gunbattle, manhunt near Mineral ",
-      "lesson": "避免采集此类素材: Google News Music Industry黑名单源，警匪枪战，非音乐"
-    },
     {
       "date": "2026-09-22",
       "type": "标杆案例",
@@ -1479,13 +1403,106 @@
       "type": "每日统计",
       "summary": "今日通过率: 73% (44/60)",
       "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-09-26",
+      "type": "被拒案例",
+      "title": "Takeaways from the Trump-Xi state visit: Pageantry and pandas - NPR",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染：特朗普-习近平国事访问为外交新闻",
+      "summary": "被拒: Takeaways from the Trump-Xi state visit: Pageantry and pandas - NPR",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染：特朗普-习近平国事访问为外交新闻"
+    },
+    {
+      "date": "2026-09-26",
+      "type": "被拒案例",
+      "title": "Iran War Updates: Tehran proposes 7-day plan to reopen Strait of Hormuz as it seeks deal before U.S.",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染：伊朗战争/霍尔木兹海峡为地缘政治新闻",
+      "summary": "被拒: Iran War Updates: Tehran proposes 7-day plan to reopen Strait of Hormuz as it se",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染：伊朗战争/霍尔木兹海峡为地缘政治新闻"
+    },
+    {
+      "date": "2026-09-26",
+      "type": "被拒案例",
+      "title": "Roads flood in New Jersey, inundate some homes, as first major signs of nor'easter take shape - AP N",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染：新泽西道路洪水/东北风暴为天气新闻",
+      "summary": "被拒: Roads flood in New Jersey, inundate some homes, as first major signs of nor'east",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染：新泽西道路洪水/东北风暴为天气新闻"
+    },
+    {
+      "date": "2026-09-26",
+      "type": "被拒案例",
+      "title": "White House blocks CNN from trip on Air Force One - The Washington Post",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染：白宫阻止CNN登上空军一号为媒体政治新闻",
+      "summary": "被拒: White House blocks CNN from trip on Air Force One - The Washington Post",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染：白宫阻止CNN登上空军一号为媒体政治新闻"
+    },
+    {
+      "date": "2026-09-26",
+      "type": "被拒案例",
+      "title": "Trump cancels nearly $1bn in funding approved by Congress - The Guardian",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染：特朗普取消国会拨款为政治财政新闻",
+      "summary": "被拒: Trump cancels nearly $1bn in funding approved by Congress - The Guardian",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染：特朗普取消国会拨款为政治财政新闻"
+    },
+    {
+      "date": "2026-09-26",
+      "type": "标杆案例",
+      "title": "What is compression, and why do we use it in music?",
+      "source": "MusicTech",
+      "summary": "通过: What is compression, and why do we use it in music?",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-26",
+      "type": "标杆案例",
+      "title": "“This is one of the biggest weeks for Maschine sound content we’ve ever had”: Native Instruments rol",
+      "source": "MusicTech",
+      "summary": "通过: “This is one of the biggest weeks for Maschine sound content we’ve ever had”: Na",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-26",
+      "type": "标杆案例",
+      "title": "The best new music plugins this week, free and paid",
+      "source": "MusicTech",
+      "summary": "通过: The best new music plugins this week, free and paid",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-26",
+      "type": "标杆案例",
+      "title": "“He said, ‘Okay, just keep playing it over and over again’”: Rick Rubin on Jay-Z’s insane ability to",
+      "source": "MusicTech",
+      "summary": "通过: “He said, ‘Okay, just keep playing it over and over again’”: Rick Rubin on Jay-Z",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-26",
+      "type": "标杆案例",
+      "title": "Inside 5 of Los Angeles’s best hi-fi bars: Where they are and why they sound so good",
+      "source": "MusicTech",
+      "summary": "通过: Inside 5 of Los Angeles’s best hi-fi bars: Where they are and why they sound so ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-26",
+      "type": "每日统计",
+      "summary": "今日通过率: 64% (51/80)",
+      "lesson": "通过率良好，保持当前标准"
     }
   ],
   "selfReview": {
     "strengths": [
       "得到认可"
     ],
-    "weaknesses": [],
+    "weaknesses": [
+      "质量不稳定"
+    ],
     "ongoingIssues": [],
     "improvementPlan": ""
   }
