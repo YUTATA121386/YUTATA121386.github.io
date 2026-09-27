@@ -1,3 +1,6 @@
+# collection-rules.md - V2.3.40
+> 归档: 2026-09-27
+
 ---
 title: collection-rules
 version: V2.3.40
@@ -874,13 +877,3 @@ Variety Music与Rolling Stone Music源存在大量与曲库行业无关的演出
 3. **对账证据要求**：配置层落地须附配置截图或配置diff，口头确认无效。
 4. **断层升级**：同一规则连续2轮对账未落地，自动触发信誉分扣减并计入结构性失信。
 5. **本条为流程性条款**，不新增源级黑名单条目本身，仅约束落地核验机制。
-
-## NME games子路径与Billboard娱乐花絮源级过滤条款（新增于V2.3.50）
-
-**背景**：今日第4批识别NME games子频道污染（RAW-0077至0080，Wordle/Connections/Globle/Framed游戏答案），第2批识别Billboard娱乐花絮污染（RAW-0023/0026/0029/0031，含SNL观看指南）。
-
-**条款内容**：
-1. **NME源配置**：在NME源配置中排除games子路径（/games/、Wordle、Connections、Globle、Framed），NME主频道内容保持可用。
-2. **Billboard源子类别过滤**：将『Where to Watch』『Livestream』『SNL』『观看指南』加入Billboard源子类别过滤关键词清单。
-3. **验证要求**：配置层落地须附删除前后配置截图，口头确认无效。
-4. **本条与V2.3.50规则-配置双清单对账条款联动执行**。

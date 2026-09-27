@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 90,
+      "trust": 84,
       "trend": "improving",
       "history": [
         {
@@ -413,6 +413,11 @@
           "date": "2026-09-26",
           "event": "冲突 14次",
           "trustDelta": -10
+        },
+        {
+          "date": "2026-09-27",
+          "event": "冲突 9次",
+          "trustDelta": -6
         }
       ],
       "summary": "关系良好"
@@ -1079,103 +1084,17 @@
           "date": "2026-09-26",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-27",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-22",
-      "type": "标杆案例",
-      "title": "What is Gain Staging?",
-      "source": "MusicTech",
-      "summary": "通过: What is Gain Staging?",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-22",
-      "type": "标杆案例",
-      "title": "What is phantom power and why do I need it?",
-      "source": "MusicTech",
-      "summary": "通过: What is phantom power and why do I need it?",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-22",
-      "type": "标杆案例",
-      "title": "“The death of Suno”: Reddit users have turned against Suno after v6 model update",
-      "source": "MusicTech",
-      "summary": "通过: “The death of Suno”: Reddit users have turned against Suno after v6 model update",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-22",
-      "type": "标杆案例",
-      "title": "BUDDiiS、ミニライブにてメジャー2ndシングル「無限大LOVE!!!」を初披露。「無限大LOVE!!! (short ver. )」が各SNSにて配信も",
-      "source": "BARKS",
-      "summary": "通过: BUDDiiS、ミニライブにてメジャー2ndシングル「無限大LOVE!!!」を初披露。「無限大LOVE!!! (short ver. )」が各SNSにて配信も",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-22",
-      "type": "标杆案例",
-      "title": "【ライブレポート】西川貴教、＜イナズマロック フェス＞から新たな形で生まれ変わった＜FEST. INAZUMA＞開催「また＜イナズマ＞で会おうぜ！」",
-      "source": "BARKS",
-      "summary": "通过: 【ライブレポート】西川貴教、＜イナズマロック フェス＞から新たな形で生まれ変わった＜FEST. INAZUMA＞開催「また＜イナズマ＞で会おうぜ！」",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-22",
-      "type": "每日统计",
-      "summary": "今日通过率: 43% (26/60)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-09-23",
-      "type": "被拒案例",
-      "title": "人民币市场汇价（9月23日） - 新华网",
-      "source": "Google News 音乐产业",
-      "reason": "Google News音乐产业黑名单源污染。内容为人民币市场汇价（新华网），非音乐产业内容。",
-      "summary": "被拒: 人民币市场汇价（9月23日） - 新华网",
-      "lesson": "避免采集此类素材: Google News音乐产业黑名单源污染。内容为人民币市场汇价（新华网），非音乐产业内容。"
-    },
-    {
-      "date": "2026-09-23",
-      "type": "被拒案例",
-      "title": "Trump Threatens Annihilation in Iran in UN Speech and Lays Out Winner-Takes-All Vision - The New Yor",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry黑名单源污染。内容为特朗普联大演讲（纽约时报），纯政治新闻，与音乐产业零关联。",
-      "summary": "被拒: Trump Threatens Annihilation in Iran in UN Speech and Lays Out Winner-Takes-All ",
-      "lesson": "避免采集此类素材: Google News Music Industry黑名单源污染。内容为特朗普联大演讲（纽约时报），纯政治新闻，与音乐产业零关联。"
-    },
-    {
-      "date": "2026-09-23",
-      "type": "被拒案例",
-      "title": "Trump cites national security, midterms coverage to defend press ban - Politico",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry黑名单源污染。内容为特朗普新闻禁令（Politico），纯政治新闻。",
-      "summary": "被拒: Trump cites national security, midterms coverage to defend press ban - Politico",
-      "lesson": "避免采集此类素材: Google News Music Industry黑名单源污染。内容为特朗普新闻禁令（Politico），纯政治新闻。"
-    },
-    {
-      "date": "2026-09-23",
-      "type": "被拒案例",
-      "title": "Trump berates CNN’s Kaitlan Collins after ban: ‘You shouldn’t be covering me’ - The Washington Post",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry黑名单源污染。内容为特朗普与CNN记者冲突（华盛顿邮报），纯政治新闻。",
-      "summary": "被拒: Trump berates CNN’s Kaitlan Collins after ban: ‘You shouldn’t be covering me’ - ",
-      "lesson": "避免采集此类素材: Google News Music Industry黑名单源污染。内容为特朗普与CNN记者冲突（华盛顿邮报），纯政治新闻。"
-    },
-    {
-      "date": "2026-09-23",
-      "type": "被拒案例",
-      "title": "Category 5 Hurricane Polo is 'one of the strongest storms ever' - NPR",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry黑名单源污染。内容为五级飓风Polo（NPR），纯灾害新闻。",
-      "summary": "被拒: Category 5 Hurricane Polo is 'one of the strongest storms ever' - NPR",
-      "lesson": "避免采集此类素材: Google News Music Industry黑名单源污染。内容为五级飓风Polo（NPR），纯灾害新闻。"
-    },
     {
       "date": "2026-09-23",
       "type": "标杆案例",
@@ -1494,6 +1413,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 64% (51/80)",
       "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-09-27",
+      "type": "被拒案例",
+      "title": "Trump administration considers building baseball park in Grand Teton National Park - washingtonpost.",
+      "source": "Google News Music Industry",
+      "reason": "Google News音乐产业源污染——大提顿国家公园棒球场政治新闻。",
+      "summary": "被拒: Trump administration considers building baseball park in Grand Teton National Pa",
+      "lesson": "避免采集此类素材: Google News音乐产业源污染——大提顿国家公园棒球场政治新闻。"
+    },
+    {
+      "date": "2026-09-27",
+      "type": "被拒案例",
+      "title": "Mother of woman found hanging in tree shocked as police say body was staged - BBC",
+      "source": "Google News Music Industry",
+      "reason": "Google News音乐产业源污染——BBC社会案件新闻。",
+      "summary": "被拒: Mother of woman found hanging in tree shocked as police say body was staged - BB",
+      "lesson": "避免采集此类素材: Google News音乐产业源污染——BBC社会案件新闻。"
+    },
+    {
+      "date": "2026-09-27",
+      "type": "被拒案例",
+      "title": "Trump administration uses rare authority to claw back nearly $1B in spending approved by Congress - ",
+      "source": "Google News Music Industry",
+      "reason": "Google News音乐产业源污染——美国财政支出政治新闻。",
+      "summary": "被拒: Trump administration uses rare authority to claw back nearly $1B in spending app",
+      "lesson": "避免采集此类素材: Google News音乐产业源污染——美国财政支出政治新闻。"
+    },
+    {
+      "date": "2026-09-27",
+      "type": "被拒案例",
+      "title": "Hurricane Nolo skirts Hawaii but powerful winds and flooding remain threats - NBC News",
+      "source": "Google News Music Industry",
+      "reason": "Google News音乐产业源污染——飓风Nolo天气新闻。",
+      "summary": "被拒: Hurricane Nolo skirts Hawaii but powerful winds and flooding remain threats - NB",
+      "lesson": "避免采集此类素材: Google News音乐产业源污染——飓风Nolo天气新闻。"
+    },
+    {
+      "date": "2026-09-27",
+      "type": "被拒案例",
+      "title": "Trump and Xi to meet twice more after summit fails to resolve tensions - Financial Times",
+      "source": "Google News Music Industry",
+      "reason": "Google News音乐产业源污染——中美峰会地缘政治新闻。",
+      "summary": "被拒: Trump and Xi to meet twice more after summit fails to resolve tensions - Financi",
+      "lesson": "避免采集此类素材: Google News音乐产业源污染——中美峰会地缘政治新闻。"
+    },
+    {
+      "date": "2026-09-27",
+      "type": "标杆案例",
+      "title": "Kenny Chesney Welcomes Fans Into ‘Silver Sands Marina’ During Intimate Nashville Show: 5 Best Moment",
+      "source": "Billboard",
+      "summary": "通过: Kenny Chesney Welcomes Fans Into ‘Silver Sands Marina’ During Intimate Nashville",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-27",
+      "type": "标杆案例",
+      "title": "‘JAŸ-Z in 8’: 4 Things We Learned From Episode Four",
+      "source": "Billboard",
+      "summary": "通过: ‘JAŸ-Z in 8’: 4 Things We Learned From Episode Four",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-27",
+      "type": "标杆案例",
+      "title": "Apple Music is livestreaming the upcoming Head Trip festival, with sets from Calvin Harris, Skrillex",
+      "source": "MusicTech",
+      "summary": "通过: Apple Music is livestreaming the upcoming Head Trip festival, with sets from Cal",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-27",
+      "type": "标杆案例",
+      "title": "Polyend takes aim at guitarists with a new looper and multi-FX pedal, Loop",
+      "source": "MusicTech",
+      "summary": "通过: Polyend takes aim at guitarists with a new looper and multi-FX pedal, Loop",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-27",
+      "type": "标杆案例",
+      "title": "Ableton CEO and co-founder Gerhard Behles on independence, longevity and community",
+      "source": "MusicTech",
+      "summary": "通过: Ableton CEO and co-founder Gerhard Behles on independence, longevity and communi",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-27",
+      "type": "每日统计",
+      "summary": "今日通过率: 48% (29/60)",
+      "lesson": ""
     }
   ],
   "selfReview": {
