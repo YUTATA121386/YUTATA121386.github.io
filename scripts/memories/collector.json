@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 84,
+      "trust": 90,
       "trend": "improving",
       "history": [
         {
@@ -428,6 +428,11 @@
           "date": "2026-09-29",
           "event": "冲突 7次",
           "trustDelta": -6
+        },
+        {
+          "date": "2026-09-30",
+          "event": "合作 9次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -1114,103 +1119,17 @@
           "date": "2026-09-29",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-09-30",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-25",
-      "type": "标杆案例",
-      "title": "Partisan Takes a Majority Stake in Alex Sheridan’s OTM Music, Formally Debuts ‘An Expanded Independe",
-      "source": "Digital Music News",
-      "summary": "通过: Partisan Takes a Majority Stake in Alex Sheridan’s OTM Music, Formally Debuts ‘A",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-25",
-      "type": "标杆案例",
-      "title": "San Jose Sharks Nix Suno-Generated ‘Slop Song’ Following Intense Fan Backlash",
-      "source": "Digital Music News",
-      "summary": "通过: San Jose Sharks Nix Suno-Generated ‘Slop Song’ Following Intense Fan Backlash",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-25",
-      "type": "标杆案例",
-      "title": "Site-Blocking Push Continues With ‘Operation Lumen’ — Nearly 300 Stream-Ripping Domains Targeted in ",
-      "source": "Digital Music News",
-      "summary": "通过: Site-Blocking Push Continues With ‘Operation Lumen’ — Nearly 300 Stream-Ripping ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-25",
-      "type": "标杆案例",
-      "title": "UMG and Lady Gaga Demand $230,000+ in Legal Fees from Lost International — As Surf Brand Kicks Off N",
-      "source": "Digital Music News",
-      "summary": "通过: UMG and Lady Gaga Demand $230,000+ in Legal Fees from Lost International — As Su",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-25",
-      "type": "标杆案例",
-      "title": "Build Them (Globally), And They Will Come: Coliseo GNP Seguros Opens 30,000 Cap Stadium In Guadalaja",
-      "source": "Digital Music News",
-      "summary": "通过: Build Them (Globally), And They Will Come: Coliseo GNP Seguros Opens 30,000 Cap ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-25",
-      "type": "每日统计",
-      "summary": "今日通过率: 73% (44/60)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-09-26",
-      "type": "被拒案例",
-      "title": "Takeaways from the Trump-Xi state visit: Pageantry and pandas - NPR",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染：特朗普-习近平国事访问为外交新闻",
-      "summary": "被拒: Takeaways from the Trump-Xi state visit: Pageantry and pandas - NPR",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染：特朗普-习近平国事访问为外交新闻"
-    },
-    {
-      "date": "2026-09-26",
-      "type": "被拒案例",
-      "title": "Iran War Updates: Tehran proposes 7-day plan to reopen Strait of Hormuz as it seeks deal before U.S.",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染：伊朗战争/霍尔木兹海峡为地缘政治新闻",
-      "summary": "被拒: Iran War Updates: Tehran proposes 7-day plan to reopen Strait of Hormuz as it se",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染：伊朗战争/霍尔木兹海峡为地缘政治新闻"
-    },
-    {
-      "date": "2026-09-26",
-      "type": "被拒案例",
-      "title": "Roads flood in New Jersey, inundate some homes, as first major signs of nor'easter take shape - AP N",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染：新泽西道路洪水/东北风暴为天气新闻",
-      "summary": "被拒: Roads flood in New Jersey, inundate some homes, as first major signs of nor'east",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染：新泽西道路洪水/东北风暴为天气新闻"
-    },
-    {
-      "date": "2026-09-26",
-      "type": "被拒案例",
-      "title": "White House blocks CNN from trip on Air Force One - The Washington Post",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染：白宫阻止CNN登上空军一号为媒体政治新闻",
-      "summary": "被拒: White House blocks CNN from trip on Air Force One - The Washington Post",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染：白宫阻止CNN登上空军一号为媒体政治新闻"
-    },
-    {
-      "date": "2026-09-26",
-      "type": "被拒案例",
-      "title": "Trump cancels nearly $1bn in funding approved by Congress - The Guardian",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染：特朗普取消国会拨款为政治财政新闻",
-      "summary": "被拒: Trump cancels nearly $1bn in funding approved by Congress - The Guardian",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染：特朗普取消国会拨款为政治财政新闻"
-    },
     {
       "date": "2026-09-26",
       "type": "标杆案例",
@@ -1528,6 +1447,97 @@
       "date": "2026-09-29",
       "type": "每日统计",
       "summary": "今日通过率: 49% (39/80)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-09-30",
+      "type": "被拒案例",
+      "title": "Supreme Court lets Trump resume third-country deportations - Politico",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染，内容为『最高法院恢复第三国遣返』，司法政治类，与音乐无关",
+      "summary": "被拒: Supreme Court lets Trump resume third-country deportations - Politico",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染，内容为『最高法院恢复第三国遣返』，司法政治类，与音乐无关"
+    },
+    {
+      "date": "2026-09-30",
+      "type": "被拒案例",
+      "title": "Former Music Pastor Is Convicted of His Wife’s Murder - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染，内容为『前音乐牧师谋杀妻子定罪』，虽含'music'字样但为犯罪新闻，与音乐产业无关",
+      "summary": "被拒: Former Music Pastor Is Convicted of His Wife’s Murder - The New York Times",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染，内容为『前音乐牧师谋杀妻子定罪』，虽含'music'字样但为犯罪新闻，与音乐产业无关"
+    },
+    {
+      "date": "2026-09-30",
+      "type": "被拒案例",
+      "title": "Six Flags shuts down X2 rollercoaster after more than 100 allege brain injuries - BBC",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染，内容为『Six Flags过山车停运』，社会新闻类，与音乐无关",
+      "summary": "被拒: Six Flags shuts down X2 rollercoaster after more than 100 allege brain injuries ",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染，内容为『Six Flags过山车停运』，社会新闻类，与音乐无关"
+    },
+    {
+      "date": "2026-09-30",
+      "type": "被拒案例",
+      "title": "Jewish settlers clash with Israeli security forces to prevent Palestinian family’s return to West Ba",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染，内容为『犹太定居者与以军冲突』，国际新闻类，与音乐无关",
+      "summary": "被拒: Jewish settlers clash with Israeli security forces to prevent Palestinian family",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染，内容为『犹太定居者与以军冲突』，国际新闻类，与音乐无关"
+    },
+    {
+      "date": "2026-09-30",
+      "type": "被拒案例",
+      "title": "Christa Pike out of appeals after Supreme Court denies execution stay - USA Today",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染，内容为『Christa Pike死刑上诉』，司法新闻类，与音乐无关",
+      "summary": "被拒: Christa Pike out of appeals after Supreme Court denies execution stay - USA Toda",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染，内容为『Christa Pike死刑上诉』，司法新闻类，与音乐无关"
+    },
+    {
+      "date": "2026-09-30",
+      "type": "标杆案例",
+      "title": "Spitfire Audio once again teams up with BT on Phoenix, a hybrid synth built from the producer’s priv",
+      "source": "MusicTech",
+      "summary": "通过: Spitfire Audio once again teams up with BT on Phoenix, a hybrid synth built from",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-30",
+      "type": "标杆案例",
+      "title": "My Forever Studio: Hazel Mills invents a new instrument",
+      "source": "MusicTech",
+      "summary": "通过: My Forever Studio: Hazel Mills invents a new instrument",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-30",
+      "type": "标杆案例",
+      "title": "Nothing Headphone (1) Pro: price, Metropolis Studios collab, studio features and specs",
+      "source": "MusicTech",
+      "summary": "通过: Nothing Headphone (1) Pro: price, Metropolis Studios collab, studio features and",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-30",
+      "type": "标杆案例",
+      "title": "“I don’t hear too many women using that effect”: The mystery number one item UNIIQU3 would have in h",
+      "source": "MusicTech",
+      "summary": "通过: “I don’t hear too many women using that effect”: The mystery number one item UNI",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-30",
+      "type": "标杆案例",
+      "title": "VocAlign 7: Syncing vocals has never been easier",
+      "source": "MusicTech",
+      "summary": "通过: VocAlign 7: Syncing vocals has never been easier",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-09-30",
+      "type": "每日统计",
+      "summary": "今日通过率: 55% (44/80)",
       "lesson": ""
     }
   ],
