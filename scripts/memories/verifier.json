@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 90,
+      "trust": 94,
       "trend": "improving",
       "history": [
         {
@@ -433,6 +433,11 @@
           "date": "2026-09-30",
           "event": "合作 9次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-10-01",
+          "event": "合作 10次",
+          "trustDelta": 4
         }
       ],
       "summary": "关系良好"
@@ -904,26 +909,17 @@
           "date": "2026-09-30",
           "event": "合作 5次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-10-01",
+          "event": "合作 3次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-03",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 前20条素材审核完成：19条通过，1条拒绝（通过率95%）。来源全部为白名单源（MBW×10、Music Ally×10），未发现Google News污染。",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-09-04",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: 批次0021-0040审核完成：15条通过，5条拒绝（RAW-0036至0040全部为Google News黑名单源污染，内容为动力电池、日元汇率、创业投资、A",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-09-04",
       "type": "正向反馈",
@@ -1257,6 +1253,20 @@
       "date": "2026-09-30",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 前20条审核完成：20条全部通过（通过率100%），零Google News污染，零Billboard娱乐花絮，连续第5天首批实现干净提交",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-10-01",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: RAW-0061~0080审核完成：通过8条，拒绝12条（通过率40%），触发单轮<50%低通过率预警。12条拒绝全部为Google News源污染：中文版『G",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-10-01",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 【2026-10-01核查师工作复盘】今日共审核素材约80条（RAW-0001~0080），分4批推进：首批（RAW-0001~0020）通过率约95%，延续连",
       "lesson": "",
       "impact": ""
     }

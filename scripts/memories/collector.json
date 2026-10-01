@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 90,
+      "trust": 94,
       "trend": "improving",
       "history": [
         {
@@ -433,6 +433,11 @@
           "date": "2026-09-30",
           "event": "合作 9次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-10-01",
+          "event": "合作 10次",
+          "trustDelta": 4
         }
       ],
       "summary": "关系良好"
@@ -1124,103 +1129,17 @@
           "date": "2026-09-30",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-10-01",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-26",
-      "type": "标杆案例",
-      "title": "What is compression, and why do we use it in music?",
-      "source": "MusicTech",
-      "summary": "通过: What is compression, and why do we use it in music?",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-26",
-      "type": "标杆案例",
-      "title": "“This is one of the biggest weeks for Maschine sound content we’ve ever had”: Native Instruments rol",
-      "source": "MusicTech",
-      "summary": "通过: “This is one of the biggest weeks for Maschine sound content we’ve ever had”: Na",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-26",
-      "type": "标杆案例",
-      "title": "The best new music plugins this week, free and paid",
-      "source": "MusicTech",
-      "summary": "通过: The best new music plugins this week, free and paid",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-26",
-      "type": "标杆案例",
-      "title": "“He said, ‘Okay, just keep playing it over and over again’”: Rick Rubin on Jay-Z’s insane ability to",
-      "source": "MusicTech",
-      "summary": "通过: “He said, ‘Okay, just keep playing it over and over again’”: Rick Rubin on Jay-Z",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-26",
-      "type": "标杆案例",
-      "title": "Inside 5 of Los Angeles’s best hi-fi bars: Where they are and why they sound so good",
-      "source": "MusicTech",
-      "summary": "通过: Inside 5 of Los Angeles’s best hi-fi bars: Where they are and why they sound so ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-26",
-      "type": "每日统计",
-      "summary": "今日通过率: 64% (51/80)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-09-27",
-      "type": "被拒案例",
-      "title": "Trump administration considers building baseball park in Grand Teton National Park - washingtonpost.",
-      "source": "Google News Music Industry",
-      "reason": "Google News音乐产业源污染——大提顿国家公园棒球场政治新闻。",
-      "summary": "被拒: Trump administration considers building baseball park in Grand Teton National Pa",
-      "lesson": "避免采集此类素材: Google News音乐产业源污染——大提顿国家公园棒球场政治新闻。"
-    },
-    {
-      "date": "2026-09-27",
-      "type": "被拒案例",
-      "title": "Mother of woman found hanging in tree shocked as police say body was staged - BBC",
-      "source": "Google News Music Industry",
-      "reason": "Google News音乐产业源污染——BBC社会案件新闻。",
-      "summary": "被拒: Mother of woman found hanging in tree shocked as police say body was staged - BB",
-      "lesson": "避免采集此类素材: Google News音乐产业源污染——BBC社会案件新闻。"
-    },
-    {
-      "date": "2026-09-27",
-      "type": "被拒案例",
-      "title": "Trump administration uses rare authority to claw back nearly $1B in spending approved by Congress - ",
-      "source": "Google News Music Industry",
-      "reason": "Google News音乐产业源污染——美国财政支出政治新闻。",
-      "summary": "被拒: Trump administration uses rare authority to claw back nearly $1B in spending app",
-      "lesson": "避免采集此类素材: Google News音乐产业源污染——美国财政支出政治新闻。"
-    },
-    {
-      "date": "2026-09-27",
-      "type": "被拒案例",
-      "title": "Hurricane Nolo skirts Hawaii but powerful winds and flooding remain threats - NBC News",
-      "source": "Google News Music Industry",
-      "reason": "Google News音乐产业源污染——飓风Nolo天气新闻。",
-      "summary": "被拒: Hurricane Nolo skirts Hawaii but powerful winds and flooding remain threats - NB",
-      "lesson": "避免采集此类素材: Google News音乐产业源污染——飓风Nolo天气新闻。"
-    },
-    {
-      "date": "2026-09-27",
-      "type": "被拒案例",
-      "title": "Trump and Xi to meet twice more after summit fails to resolve tensions - Financial Times",
-      "source": "Google News Music Industry",
-      "reason": "Google News音乐产业源污染——中美峰会地缘政治新闻。",
-      "summary": "被拒: Trump and Xi to meet twice more after summit fails to resolve tensions - Financi",
-      "lesson": "避免采集此类素材: Google News音乐产业源污染——中美峰会地缘政治新闻。"
-    },
     {
       "date": "2026-09-27",
       "type": "标杆案例",
@@ -1538,6 +1457,97 @@
       "date": "2026-09-30",
       "type": "每日统计",
       "summary": "今日通过率: 55% (44/80)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-10-01",
+      "type": "被拒案例",
+      "title": "Exclusive: Cornell rape allegations fuel House Democratic women's Title IX push - Axios",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染，内容为康奈尔大学性侵指控与Title IX，属社会/法律新闻，与音乐无关。",
+      "summary": "被拒: Exclusive: Cornell rape allegations fuel House Democratic women's Title IX push ",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染，内容为康奈尔大学性侵指控与Title IX，属社会/法律新闻，与音乐无关。"
+    },
+    {
+      "date": "2026-10-01",
+      "type": "被拒案例",
+      "title": "CA couple accused of killing son-in-law at park charged with murder: New details on arrest revealed ",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染，内容为加州夫妇谋杀案，属社会新闻，与音乐无关。",
+      "summary": "被拒: CA couple accused of killing son-in-law at park charged with murder: New details",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染，内容为加州夫妇谋杀案，属社会新闻，与音乐无关。"
+    },
+    {
+      "date": "2026-10-01",
+      "type": "被拒案例",
+      "title": "Inside Zuckerberg, Huang’s push for White House AI pact - Politico",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染，内容为扎克伯格与黄仁勋推动白宫AI协议，属科技政治新闻，与音乐无关。",
+      "summary": "被拒: Inside Zuckerberg, Huang’s push for White House AI pact - Politico",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染，内容为扎克伯格与黄仁勋推动白宫AI协议，属科技政治新闻，与音乐无关。"
+    },
+    {
+      "date": "2026-10-01",
+      "type": "被拒案例",
+      "title": "Hegseth confirms plan to cut 20% of US top military brass and rails at ‘beardos, weirdos and wimps’ ",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染，内容为Hegseth裁减军方高层，属军事新闻，与音乐无关。",
+      "summary": "被拒: Hegseth confirms plan to cut 20% of US top military brass and rails at ‘beardos,",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染，内容为Hegseth裁减军方高层，属军事新闻，与音乐无关。"
+    },
+    {
+      "date": "2026-10-01",
+      "type": "被拒案例",
+      "title": "‘Blowout’: Here’s who won the Hilton-Becerra debate for California governor - Los Angeles Times",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染，内容为加州州长辩论，属政治新闻，与音乐无关。",
+      "summary": "被拒: ‘Blowout’: Here’s who won the Hilton-Becerra debate for California governor - Lo",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染，内容为加州州长辩论，属政治新闻，与音乐无关。"
+    },
+    {
+      "date": "2026-10-01",
+      "type": "标杆案例",
+      "title": "Technics continues its commitment to premium sound fidelity with new flagship EAH-A1000 wireless hea",
+      "source": "MusicTech",
+      "summary": "通过: Technics continues its commitment to premium sound fidelity with new flagship EA",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-01",
+      "type": "标杆案例",
+      "title": "Which software is best for recording and creating DJ mixes?",
+      "source": "MusicTech",
+      "summary": "通过: Which software is best for recording and creating DJ mixes?",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-01",
+      "type": "标杆案例",
+      "title": "Spitfire Audio once again teams up with BT on Phoenix, a hybrid synth built from the producer’s priv",
+      "source": "MusicTech",
+      "summary": "通过: Spitfire Audio once again teams up with BT on Phoenix, a hybrid synth built from",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-01",
+      "type": "标杆案例",
+      "title": "My Forever Studio: Hazel Mills invents a new instrument",
+      "source": "MusicTech",
+      "summary": "通过: My Forever Studio: Hazel Mills invents a new instrument",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-01",
+      "type": "标杆案例",
+      "title": "Nothing Headphone (1) Pro: price, Metropolis Studios collab, studio features and specs",
+      "source": "MusicTech",
+      "summary": "通过: Nothing Headphone (1) Pro: price, Metropolis Studios collab, studio features and",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-01",
+      "type": "每日统计",
+      "summary": "今日通过率: 59% (47/80)",
       "lesson": ""
     }
   ],

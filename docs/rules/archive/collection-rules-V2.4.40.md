@@ -1,3 +1,6 @@
+# collection-rules.md - V2.4.40
+> 归档: 2026-10-01
+
 ---
 title: collection-rules
 version: V2.4.40
@@ -964,24 +967,3 @@ Variety Music与Rolling Stone Music源存在大量与曲库行业无关的演出
 - 连续3个采集日四节点未闭环，触发记忆管理师信誉分-5并启动规则评审会
 
 **黑名单源无观察期、无申诉通道，仅可通过季度规则评审会评估解除。**
-
-## Billboard源子类别过滤强制条款（新增于V2.3.49，强制执行于V2.3.54）
-
-**背景**：Billboard娱乐花絮7天内第3次复发（9/22、9/23、9/29、10/1），已达二级复发标准，当前依赖人工判断导致重复踩坑。
-
-**强制过滤关键词清单（须写入采集端配置层，非人工判断）**：
-- setlist
-- headline
-- tease
-- statement
-- won't be playing
-- billion views
-- weighed in
-- Where to Watch
-- Livestream
-- SNL
-
-**执行要求**：
-- 采集师须在下一采集日开工前将上述关键词写入Billboard源过滤规则，并提交配置截图作为证据
-- 核查师在下一轮次主动核验配置层是否落地，形成『写入→证据→核验』闭环
-- 未在配置层落地前，Billboard源所有含上述关键词条目一律预拒绝，不再进入人工判断环节
