@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 94,
+      "trust": 100,
       "trend": "improving",
       "history": [
         {
@@ -438,6 +438,11 @@
           "date": "2026-10-01",
           "event": "合作 10次",
           "trustDelta": 4
+        },
+        {
+          "date": "2026-10-02",
+          "event": "合作 12次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -914,26 +919,17 @@
           "date": "2026-10-01",
           "event": "合作 3次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-10-02",
+          "event": "合作 5次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-04",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 首批20条素材全部通过，通过率100%，来源全部为白名单源（MBW×10、Music Ally×10），未发现Google News黑名单源污染",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-09-05",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: 第2轮提交的15条素材中，仅5条通过（RAW-0041至0045），10条被拒（RAW-0046至0055全部为Google News黑名单源污染）",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-09-05",
       "type": "正向反馈",
@@ -1267,6 +1263,20 @@
       "date": "2026-10-01",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 【2026-10-01核查师工作复盘】今日共审核素材约80条（RAW-0001~0080），分4批推进：首批（RAW-0001~0020）通过率约95%，延续连",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-10-02",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: RAW-0021~0040审核完成：通过11条，拒绝9条（通过率55%）。9条拒绝全部为Billboard娱乐花絮类（RAW-0027~0035）",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-10-02",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 【核查师2026-10-02复盘】今日共审核素材80条（RAW-0001~0080），分四批推进，全天通过率100%→55%→40%→10%断崖式下滑。首批20",
       "lesson": "",
       "impact": ""
     }

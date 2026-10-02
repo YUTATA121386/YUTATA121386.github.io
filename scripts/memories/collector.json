@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 94,
+      "trust": 100,
       "trend": "improving",
       "history": [
         {
@@ -438,6 +438,11 @@
           "date": "2026-10-01",
           "event": "合作 10次",
           "trustDelta": 4
+        },
+        {
+          "date": "2026-10-02",
+          "event": "合作 12次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -1134,103 +1139,17 @@
           "date": "2026-10-01",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-10-02",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-27",
-      "type": "标杆案例",
-      "title": "Kenny Chesney Welcomes Fans Into ‘Silver Sands Marina’ During Intimate Nashville Show: 5 Best Moment",
-      "source": "Billboard",
-      "summary": "通过: Kenny Chesney Welcomes Fans Into ‘Silver Sands Marina’ During Intimate Nashville",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-27",
-      "type": "标杆案例",
-      "title": "‘JAŸ-Z in 8’: 4 Things We Learned From Episode Four",
-      "source": "Billboard",
-      "summary": "通过: ‘JAŸ-Z in 8’: 4 Things We Learned From Episode Four",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-27",
-      "type": "标杆案例",
-      "title": "Apple Music is livestreaming the upcoming Head Trip festival, with sets from Calvin Harris, Skrillex",
-      "source": "MusicTech",
-      "summary": "通过: Apple Music is livestreaming the upcoming Head Trip festival, with sets from Cal",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-27",
-      "type": "标杆案例",
-      "title": "Polyend takes aim at guitarists with a new looper and multi-FX pedal, Loop",
-      "source": "MusicTech",
-      "summary": "通过: Polyend takes aim at guitarists with a new looper and multi-FX pedal, Loop",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-27",
-      "type": "标杆案例",
-      "title": "Ableton CEO and co-founder Gerhard Behles on independence, longevity and community",
-      "source": "MusicTech",
-      "summary": "通过: Ableton CEO and co-founder Gerhard Behles on independence, longevity and communi",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-27",
-      "type": "每日统计",
-      "summary": "今日通过率: 48% (29/60)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-09-28",
-      "type": "被拒案例",
-      "title": "早报｜网易云音乐鸿蒙版正式上线/任正非重申「华为不造车」/腾讯QClaw将停运 - 爱范儿",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News腾讯音乐/网易云源污染，黑名单源残留，且内容为华为/腾讯综合早报与音乐无关",
-      "summary": "被拒: 早报｜网易云音乐鸿蒙版正式上线/任正非重申「华为不造车」/腾讯QClaw将停运 - 爱范儿",
-      "lesson": "避免采集此类素材: Google News腾讯音乐/网易云源污染，黑名单源残留，且内容为华为/腾讯综合早报与音乐无关"
-    },
-    {
-      "date": "2026-09-28",
-      "type": "被拒案例",
-      "title": "【12315投诉公示】腾讯音乐娱乐（深圳）有限公司新增10件投诉公示，涉及其他售后服务问题等_曝光台_财经 - 证券之星",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News腾讯音乐/网易云源污染，12315投诉公示财经类内容",
-      "summary": "被拒: 【12315投诉公示】腾讯音乐娱乐（深圳）有限公司新增10件投诉公示，涉及其他售后服务问题等_曝光台_财经 - 证券之星",
-      "lesson": "避免采集此类素材: Google News腾讯音乐/网易云源污染，12315投诉公示财经类内容"
-    },
-    {
-      "date": "2026-09-28",
-      "type": "被拒案例",
-      "title": "唱响中秋！网易云音乐原创音乐校园巡演计划走进复旦大学 - 中华网",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News腾讯音乐/网易云源污染，网易云校园巡演软文",
-      "summary": "被拒: 唱响中秋！网易云音乐原创音乐校园巡演计划走进复旦大学 - 中华网",
-      "lesson": "避免采集此类素材: Google News腾讯音乐/网易云源污染，网易云校园巡演软文"
-    },
-    {
-      "date": "2026-09-28",
-      "type": "被拒案例",
-      "title": "#刘宇宁新歌我想﻿﻿# ｜#腾讯音乐由你榜# ｜#摩登兄弟[超话]#刘宇宁🌹期待你有更多优秀的作品。目光所及皆舞台，追光而行刘宇宁！@摩登兄弟刘宇宁http://t.cn/AXp0Lt6W http",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News腾讯音乐/网易云源污染，微博超话粉丝应援内容，非音乐产业",
-      "summary": "被拒: #刘宇宁新歌我想﻿﻿# ｜#腾讯音乐由你榜# ｜#摩登兄弟[超话]#刘宇宁🌹期待你有更多优秀的作品。目光所及皆舞台，追光而行刘宇宁！@摩登兄弟刘宇宁http:",
-      "lesson": "避免采集此类素材: Google News腾讯音乐/网易云源污染，微博超话粉丝应援内容，非音乐产业"
-    },
-    {
-      "date": "2026-09-28",
-      "type": "被拒案例",
-      "title": "#刘宇宁献唱我不是大师#| #腾讯音乐由你榜# | #摩登兄弟[超话]#你只要一回首，我便在你身后； 你只要一微笑，我便会为你着迷； 你只要一伤心，我便不安心。你就是我的所有，@摩登兄弟刘宇宁http",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "Google News腾讯音乐/网易云源污染，粉丝应援超话内容",
-      "summary": "被拒: #刘宇宁献唱我不是大师#| #腾讯音乐由你榜# | #摩登兄弟[超话]#你只要一回首，我便在你身后； 你只要一微笑，我便会为你着迷； 你只要一伤心，我便不安心。",
-      "lesson": "避免采集此类素材: Google News腾讯音乐/网易云源污染，粉丝应援超话内容"
-    },
     {
       "date": "2026-09-28",
       "type": "标杆案例",
@@ -1548,6 +1467,97 @@
       "date": "2026-10-01",
       "type": "每日统计",
       "summary": "今日通过率: 59% (47/80)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-10-02",
+      "type": "被拒案例",
+      "title": "Indian pilot tells PM Modi he opened flydubai cockpit door during attack - Reuters",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染——印度飞行员新闻，完全非音乐内容",
+      "summary": "被拒: Indian pilot tells PM Modi he opened flydubai cockpit door during attack - Reute",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染——印度飞行员新闻，完全非音乐内容"
+    },
+    {
+      "date": "2026-10-02",
+      "type": "被拒案例",
+      "title": "Letitia James appointed special prosecutor in alleged gang-rape at Cornell - The Guardian",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染——检察官任命新闻，完全非音乐内容",
+      "summary": "被拒: Letitia James appointed special prosecutor in alleged gang-rape at Cornell - The",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染——检察官任命新闻，完全非音乐内容"
+    },
+    {
+      "date": "2026-10-02",
+      "type": "被拒案例",
+      "title": "Christa Pike is in critical condition after failed execution in Tennessee, her lawyers say - NBC New",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染——死刑犯新闻，完全非音乐内容",
+      "summary": "被拒: Christa Pike is in critical condition after failed execution in Tennessee, her l",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染——死刑犯新闻，完全非音乐内容"
+    },
+    {
+      "date": "2026-10-02",
+      "type": "被拒案例",
+      "title": "Judge denies motion asking for Lindsay Clancy to be found not guilty due to lack of evidence - pbs.o",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染——法官裁决新闻，完全非音乐内容",
+      "summary": "被拒: Judge denies motion asking for Lindsay Clancy to be found not guilty due to lack",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染——法官裁决新闻，完全非音乐内容"
+    },
+    {
+      "date": "2026-10-02",
+      "type": "被拒案例",
+      "title": "Fires break out at French schools as students protest nationwide - BBC",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染——法国学校火灾，完全非音乐内容",
+      "summary": "被拒: Fires break out at French schools as students protest nationwide - BBC",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染——法国学校火灾，完全非音乐内容"
+    },
+    {
+      "date": "2026-10-02",
+      "type": "标杆案例",
+      "title": "Thomson Reuters Scores Appeals Court Win In Closely-Watched ‘Fair Use’ Copyright Case — Defendant’s ",
+      "source": "Digital Music News",
+      "summary": "通过: Thomson Reuters Scores Appeals Court Win In Closely-Watched ‘Fair Use’ Copyright",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-02",
+      "type": "标杆案例",
+      "title": "Voice Intelligence Startup Modulate Raises $25 Million, Says Its AI Music Detector ‘Achieved 95% Pre",
+      "source": "Digital Music News",
+      "summary": "通过: Voice Intelligence Startup Modulate Raises $25 Million, Says Its AI Music Detect",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-02",
+      "type": "标杆案例",
+      "title": "Rita Ora Slapped With $4.2 Million Lawsuit from Former Manager Over Missing Earnings",
+      "source": "Digital Music News",
+      "summary": "通过: Rita Ora Slapped With $4.2 Million Lawsuit from Former Manager Over Missing Earn",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-02",
+      "type": "标杆案例",
+      "title": "BandLab Technologies appoints new CEO, Ivan Chen",
+      "source": "MusicTech",
+      "summary": "通过: BandLab Technologies appoints new CEO, Ivan Chen",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-02",
+      "type": "标杆案例",
+      "title": "GamesSoundCon 2026: Your chance to network with the composers for Call of Duty, Assassin’s Creed and",
+      "source": "MusicTech",
+      "summary": "通过: GamesSoundCon 2026: Your chance to network with the composers for Call of Duty, ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-02",
+      "type": "每日统计",
+      "summary": "今日通过率: 50% (40/80)",
       "lesson": ""
     }
   ],
