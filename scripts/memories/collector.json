@@ -448,6 +448,11 @@
           "date": "2026-10-03",
           "event": "合作 8次",
           "trustDelta": 4
+        },
+        {
+          "date": "2026-10-04",
+          "event": "合作 10次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -1154,103 +1159,17 @@
           "date": "2026-10-03",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-10-04",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-29",
-      "type": "标杆案例",
-      "title": "My Forever Studio: Hazel Mills invents a new instrument",
-      "source": "MusicTech",
-      "summary": "通过: My Forever Studio: Hazel Mills invents a new instrument",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-29",
-      "type": "标杆案例",
-      "title": "Nothing Headphone (1) Pro: price, Metropolis Studios collab, studio features and specs",
-      "source": "MusicTech",
-      "summary": "通过: Nothing Headphone (1) Pro: price, Metropolis Studios collab, studio features and",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-29",
-      "type": "标杆案例",
-      "title": "小泉今日子、沖縄公演のアンコールビューイングより「バディ」のライブ映像公開",
-      "source": "BARKS",
-      "summary": "通过: 小泉今日子、沖縄公演のアンコールビューイングより「バディ」のライブ映像公開",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-29",
-      "type": "标杆案例",
-      "title": "暴動クラブ、新体制初の新曲「I LOVE YOU」MV公開",
-      "source": "BARKS",
-      "summary": "通过: 暴動クラブ、新体制初の新曲「I LOVE YOU」MV公開",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-29",
-      "type": "标杆案例",
-      "title": "原因は自分にある。、5thシングルリリース記念に1万人規模のフリーライブ開催決定",
-      "source": "BARKS",
-      "summary": "通过: 原因は自分にある。、5thシングルリリース記念に1万人規模のフリーライブ開催決定",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-29",
-      "type": "每日统计",
-      "summary": "今日通过率: 49% (39/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-09-30",
-      "type": "被拒案例",
-      "title": "Supreme Court lets Trump resume third-country deportations - Politico",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染，内容为『最高法院恢复第三国遣返』，司法政治类，与音乐无关",
-      "summary": "被拒: Supreme Court lets Trump resume third-country deportations - Politico",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染，内容为『最高法院恢复第三国遣返』，司法政治类，与音乐无关"
-    },
-    {
-      "date": "2026-09-30",
-      "type": "被拒案例",
-      "title": "Former Music Pastor Is Convicted of His Wife’s Murder - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染，内容为『前音乐牧师谋杀妻子定罪』，虽含'music'字样但为犯罪新闻，与音乐产业无关",
-      "summary": "被拒: Former Music Pastor Is Convicted of His Wife’s Murder - The New York Times",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染，内容为『前音乐牧师谋杀妻子定罪』，虽含'music'字样但为犯罪新闻，与音乐产业无关"
-    },
-    {
-      "date": "2026-09-30",
-      "type": "被拒案例",
-      "title": "Six Flags shuts down X2 rollercoaster after more than 100 allege brain injuries - BBC",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染，内容为『Six Flags过山车停运』，社会新闻类，与音乐无关",
-      "summary": "被拒: Six Flags shuts down X2 rollercoaster after more than 100 allege brain injuries ",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染，内容为『Six Flags过山车停运』，社会新闻类，与音乐无关"
-    },
-    {
-      "date": "2026-09-30",
-      "type": "被拒案例",
-      "title": "Jewish settlers clash with Israeli security forces to prevent Palestinian family’s return to West Ba",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染，内容为『犹太定居者与以军冲突』，国际新闻类，与音乐无关",
-      "summary": "被拒: Jewish settlers clash with Israeli security forces to prevent Palestinian family",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染，内容为『犹太定居者与以军冲突』，国际新闻类，与音乐无关"
-    },
-    {
-      "date": "2026-09-30",
-      "type": "被拒案例",
-      "title": "Christa Pike out of appeals after Supreme Court denies execution stay - USA Today",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染，内容为『Christa Pike死刑上诉』，司法新闻类，与音乐无关",
-      "summary": "被拒: Christa Pike out of appeals after Supreme Court denies execution stay - USA Toda",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染，内容为『Christa Pike死刑上诉』，司法新闻类，与音乐无关"
-    },
     {
       "date": "2026-09-30",
       "type": "标杆案例",
@@ -1568,6 +1487,97 @@
       "date": "2026-10-03",
       "type": "每日统计",
       "summary": "今日通过率: 56% (45/80)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-10-04",
+      "type": "被拒案例",
+      "title": "France’s violent student protests raise warning for America: ‘A cautionary tale’ - Fox News",
+      "source": "Google News Music Industry",
+      "reason": "Google News音乐产业源污染，内容为法国学生抗议（'violent student protests'/'cautionary tale'），与音乐产业零相关。触发V2.3.41源级黑名单自动",
+      "summary": "被拒: France’s violent student protests raise warning for America: ‘A cautionary tale’",
+      "lesson": "避免采集此类素材: Google News音乐产业源污染，内容为法国学生抗议（'violent student protests'/'cautionary tale'），与音乐产业"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "被拒案例",
+      "title": "Today’s Wordle answer and hints for #1923 on October 04",
+      "source": "NME",
+      "reason": "NME，Wordle答案与提示，游戏类非音乐产业内容，明显污染。",
+      "summary": "被拒: Today’s Wordle answer and hints for #1923 on October 04",
+      "lesson": "避免采集此类素材: NME，Wordle答案与提示，游戏类非音乐产业内容，明显污染。"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "被拒案例",
+      "title": "‘Connections’ answers and hints for today, October 04",
+      "source": "NME",
+      "reason": "NME，Connections答案与提示，游戏类非音乐产业内容，明显污染。",
+      "summary": "被拒: ‘Connections’ answers and hints for today, October 04",
+      "lesson": "避免采集此类素材: NME，Connections答案与提示，游戏类非音乐产业内容，明显污染。"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "被拒案例",
+      "title": "Globle answer today – here’s the answer and hints for October 04",
+      "source": "NME",
+      "reason": "NME，Globle答案与提示，游戏类非音乐产业内容，明显污染。",
+      "summary": "被拒: Globle answer today – here’s the answer and hints for October 04",
+      "lesson": "避免采集此类素材: NME，Globle答案与提示，游戏类非音乐产业内容，明显污染。"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "被拒案例",
+      "title": "Framed answer today – here’s the solution for October 04",
+      "source": "NME",
+      "reason": "NME，Framed答案与提示，游戏类非音乐产业内容，明显污染。",
+      "summary": "被拒: Framed answer today – here’s the solution for October 04",
+      "lesson": "避免采集此类素材: NME，Framed答案与提示，游戏类非音乐产业内容，明显污染。"
+    },
+    {
+      "date": "2026-10-04",
+      "type": "标杆案例",
+      "title": "Watch Dave Grohl join AC/DC for ‘Highway To Hell’ at final ‘Power Up’ tour show",
+      "source": "NME",
+      "summary": "通过: Watch Dave Grohl join AC/DC for ‘Highway To Hell’ at final ‘Power Up’ tour show",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-04",
+      "type": "标杆案例",
+      "title": "Fans react as Glastonbury 2027 general tickets sell out in 42 minutes",
+      "source": "NME",
+      "summary": "通过: Fans react as Glastonbury 2027 general tickets sell out in 42 minutes",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-04",
+      "type": "标杆案例",
+      "title": "Kings Of Leon announce huge London O2 show for 2027",
+      "source": "NME",
+      "summary": "通过: Kings Of Leon announce huge London O2 show for 2027",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-04",
+      "type": "标杆案例",
+      "title": "Every song on the ‘Kill Jackie’ soundtrack",
+      "source": "NME",
+      "summary": "通过: Every song on the ‘Kill Jackie’ soundtrack",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-04",
+      "type": "标杆案例",
+      "title": "Greta Van Fleet announce 2027 ‘Into The Beginning’ UK, European and North American tour",
+      "source": "NME",
+      "summary": "通过: Greta Van Fleet announce 2027 ‘Into The Beginning’ UK, European and North Americ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-04",
+      "type": "每日统计",
+      "summary": "今日通过率: 45% (36/80)",
       "lesson": ""
     }
   ],
