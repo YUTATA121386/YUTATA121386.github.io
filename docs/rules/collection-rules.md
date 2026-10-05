@@ -1,7 +1,7 @@
 ---
 title: collection-rules
 version: V2.4.41
-updated: 2026-10-04
+updated: 2026-10-05
 outline: [2, 3]
 ---
 
@@ -1053,3 +1053,54 @@ Variety Music与Rolling Stone Music源存在大量与曲库行业无关的演出
 2. 核查端须将NME games子路径纳入审核前预检清单，与Billboard子类别过滤并列执行。
 3. 凡NME源条目命中上述关键词，采集端预拒绝、核查端直接预拒绝，无需逐条判断。
 4. 本条为配置层强制条款，须在下一轮开工前完成落地并截图存档。
+
+## 规则-配置双轨台账与配置层落地闭环强制条款（新增于V2.4.43）
+
+**背景**：截止2026-10-05，『规则生效≠配置生效』执行断层已连续第8天未闭合。V2.3.41/V2.3.53/V2.3.55源级黑名单条款文本已生效多日，但collection-rules.md源级黑名单章节始终未真正写入Google News音乐产业双源，RSS配置层物理删除从未落地，直接导致今日87条拒绝、二批25%、三批10%断崖式下滑。
+
+**条款内容**：
+1. **双轨台账强制建立**：记忆管理师须维护『规则-配置双轨台账』，每一条源级黑名单/子类别过滤规则必须同时记录两个字段：①文本版本号（如V2.3.55）②配置层落地状态（未落地/已落地待验证/已验证）。未落地项须在每日状态中明确标注。
+2. **配置层落地状态位定义**：
+   - 未落地：规则文本已生效，但配置层无任何动作
+   - 已落地待验证：配置层已执行（如RSS源物理删除、过滤词写入），但未提交证据
+   - 已验证：采集师提交删除前后双截图+全量扫描日志+逐条核验清单，经核查师双签确认
+3. **落地操作路径标准化**：记忆管理师须在收到采集师配置层操作请求后的同一轮次内，提供：①RSS配置层操作路径说明；②截图工具说明；③『提交-核验-双签』闭环流程模板。
+4. **闭环时限**：任一条款进入『未落地』状态超过3天，记忆管理师须主动降级为紧急事项并公开说明原因；超过7天，触发记忆管理师信誉分扣减（按credit_score_system『规则守护者执行断层问责条款』执行）。
+5. **落地验收**：采集师完成配置层操作后须提交三项证据（删除前后双截图+全量扫描日志+逐条核验清单），核查师须在收到后同一轮次内完成双签确认，未确认前该条款不得标记为『已验证』。
+
+**生效时间**：2026-10-05起立即生效。
+
+## Google News系列源统一黑名单扩展条款（新增于V2.4.43）
+
+**背景**：2026-10-05核查师MSG-012发现，Google News腾讯音乐/网易云源（RAW-0078~0080）为新增污染源，污染模式与Google News音乐产业源完全一致（肿瘤论文/粉丝刷屏/投诉公示）。
+
+**条款内容**：
+1. 将源级黑名单从『Google News音乐产业双源』扩展为『Google News音乐产业+腾讯音乐/网易云共10源』统一处理。
+2. 具体黑名单源清单：
+   - Google News 音乐产业(zh)
+   - Google News 中国音乐产业（搜索）(zh)
+   - Google News Music Industry(en)
+   - Google News 腾讯音乐/网易云(zh)
+   - Google News Japan Music Business(en)
+   - Google News Korea Music Business(en)
+   - Google News India Music Industry(en)
+   - Google News SEA Music Industry(en)
+   - （其余Google News系列源一并纳入，共10源）
+3. 采集端须在RSS配置层完成上述10源的物理删除，并提交删除前后双截图。
+4. 删除完成前，采集师不得提交任何Google News系列源素材。
+
+**生效时间**：2026-10-05起立即生效。
+
+## Billboard/NME/Variety/Rolling Stone/Soompi子类别过滤统一条款（新增于V2.4.43）
+
+**背景**：Billboard娱乐花絮类7天内第6次复发（09-22/09-26/09-29/10-02/10-03/10-04），已达三级复发标准；NME/Variety/Rolling Stone娱乐花絮子类别污染已形成稳定流；Soompi源韩剧内容与音乐产业零相关。
+
+**条款内容**：
+1. **Billboard子类别过滤关键词**：setlist / headline / tease / statement / SNL / Where to Watch / Livestream / 家暴 / 私生活 / 红毯。
+2. **NME games子路径过滤**：Wordle / Connections / Globle / Framed。
+3. **NME/Variety Music子类别过滤关键词**：SNL / monologue / cameo / film score / composer / blind-rank / quiz / stadium record / attendance。
+4. **Rolling Stone Music源子类别过滤**：娱乐花絮/政治花絮（SNL/wedding/festival现场/政治表态）。
+5. **Soompi源限制采集范围**：仅保留韩娱产业动态（广告模特品牌声誉、经纪公司防诈骗、偶像团签约变更等），过滤韩剧内容。
+6. 上述过滤词须在RSS配置层过滤规则文件中物理写入，采集师提交写入前后双截图。
+
+**生效时间**：2026-10-05起立即生效。

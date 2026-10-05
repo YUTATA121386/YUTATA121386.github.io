@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 100,
+      "trust": 92,
       "trend": "improving",
       "history": [
         {
@@ -453,6 +453,11 @@
           "date": "2026-10-04",
           "event": "合作 10次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-10-05",
+          "event": "冲突 10次",
+          "trustDelta": -8
         }
       ],
       "summary": "关系良好"
@@ -1164,103 +1169,17 @@
           "date": "2026-10-04",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-10-05",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-30",
-      "type": "标杆案例",
-      "title": "Spitfire Audio once again teams up with BT on Phoenix, a hybrid synth built from the producer’s priv",
-      "source": "MusicTech",
-      "summary": "通过: Spitfire Audio once again teams up with BT on Phoenix, a hybrid synth built from",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-30",
-      "type": "标杆案例",
-      "title": "My Forever Studio: Hazel Mills invents a new instrument",
-      "source": "MusicTech",
-      "summary": "通过: My Forever Studio: Hazel Mills invents a new instrument",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-30",
-      "type": "标杆案例",
-      "title": "Nothing Headphone (1) Pro: price, Metropolis Studios collab, studio features and specs",
-      "source": "MusicTech",
-      "summary": "通过: Nothing Headphone (1) Pro: price, Metropolis Studios collab, studio features and",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-30",
-      "type": "标杆案例",
-      "title": "“I don’t hear too many women using that effect”: The mystery number one item UNIIQU3 would have in h",
-      "source": "MusicTech",
-      "summary": "通过: “I don’t hear too many women using that effect”: The mystery number one item UNI",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-30",
-      "type": "标杆案例",
-      "title": "VocAlign 7: Syncing vocals has never been easier",
-      "source": "MusicTech",
-      "summary": "通过: VocAlign 7: Syncing vocals has never been easier",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-09-30",
-      "type": "每日统计",
-      "summary": "今日通过率: 55% (44/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-10-01",
-      "type": "被拒案例",
-      "title": "Exclusive: Cornell rape allegations fuel House Democratic women's Title IX push - Axios",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染，内容为康奈尔大学性侵指控与Title IX，属社会/法律新闻，与音乐无关。",
-      "summary": "被拒: Exclusive: Cornell rape allegations fuel House Democratic women's Title IX push ",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染，内容为康奈尔大学性侵指控与Title IX，属社会/法律新闻，与音乐无关。"
-    },
-    {
-      "date": "2026-10-01",
-      "type": "被拒案例",
-      "title": "CA couple accused of killing son-in-law at park charged with murder: New details on arrest revealed ",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染，内容为加州夫妇谋杀案，属社会新闻，与音乐无关。",
-      "summary": "被拒: CA couple accused of killing son-in-law at park charged with murder: New details",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染，内容为加州夫妇谋杀案，属社会新闻，与音乐无关。"
-    },
-    {
-      "date": "2026-10-01",
-      "type": "被拒案例",
-      "title": "Inside Zuckerberg, Huang’s push for White House AI pact - Politico",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染，内容为扎克伯格与黄仁勋推动白宫AI协议，属科技政治新闻，与音乐无关。",
-      "summary": "被拒: Inside Zuckerberg, Huang’s push for White House AI pact - Politico",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染，内容为扎克伯格与黄仁勋推动白宫AI协议，属科技政治新闻，与音乐无关。"
-    },
-    {
-      "date": "2026-10-01",
-      "type": "被拒案例",
-      "title": "Hegseth confirms plan to cut 20% of US top military brass and rails at ‘beardos, weirdos and wimps’ ",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染，内容为Hegseth裁减军方高层，属军事新闻，与音乐无关。",
-      "summary": "被拒: Hegseth confirms plan to cut 20% of US top military brass and rails at ‘beardos,",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染，内容为Hegseth裁减军方高层，属军事新闻，与音乐无关。"
-    },
-    {
-      "date": "2026-10-01",
-      "type": "被拒案例",
-      "title": "‘Blowout’: Here’s who won the Hilton-Becerra debate for California governor - Los Angeles Times",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染，内容为加州州长辩论，属政治新闻，与音乐无关。",
-      "summary": "被拒: ‘Blowout’: Here’s who won the Hilton-Becerra debate for California governor - Lo",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染，内容为加州州长辩论，属政治新闻，与音乐无关。"
-    },
     {
       "date": "2026-10-01",
       "type": "标杆案例",
@@ -1578,6 +1497,97 @@
       "date": "2026-10-04",
       "type": "每日统计",
       "summary": "今日通过率: 45% (36/80)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-10-05",
+      "type": "被拒案例",
+      "title": "Taylor Swift Crashes Dakota Johnson’s ‘SNL’ Monologue as Her Breakup Therapist, Shows Travis Kelce L",
+      "source": "Variety Music",
+      "reason": "Taylor Swift SNL花絮，与RAW-0067同主题重复",
+      "summary": "被拒: Taylor Swift Crashes Dakota Johnson’s ‘SNL’ Monologue as Her Breakup Therapist, ",
+      "lesson": "避免采集此类素材: Taylor Swift SNL花絮，与RAW-0067同主题重复"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "被拒案例",
+      "title": "‘Behemoth!’: Why Tony Gilroy Needed Nine Composers to Score His Latest Film, and a Guide to Who Did ",
+      "source": "Variety Music",
+      "reason": "Behemoth电影配乐花絮，偏影视产业",
+      "summary": "被拒: ‘Behemoth!’: Why Tony Gilroy Needed Nine Composers to Score His Latest Film, and",
+      "lesson": "避免采集此类素材: Behemoth电影配乐花絮，偏影视产业"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "被拒案例",
+      "title": "【12315投诉公示】腾讯音乐娱乐（深圳）有限公司新增105件投诉公示，涉及其他售后服务问题等_曝光台_财经 - 证券之星",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "🔴Google News腾讯音乐/网易云黑名单源，12315投诉公示非音乐产业",
+      "summary": "被拒: 【12315投诉公示】腾讯音乐娱乐（深圳）有限公司新增105件投诉公示，涉及其他售后服务问题等_曝光台_财经 - 证券之星",
+      "lesson": "避免采集此类素材: 🔴Google News腾讯音乐/网易云黑名单源，12315投诉公示非音乐产业"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "被拒案例",
+      "title": "肿瘤微环境（TME）中免疫细胞动态与治疗失败模式：FOSL2/Fra-2作为激活蛋白-1（AP-1）情境依赖节点的生物标志物导向视角 - 生物通",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "🔴黑名单源，肿瘤免疫学论文，源级污染典型样本",
+      "summary": "被拒: 肿瘤微环境（TME）中免疫细胞动态与治疗失败模式：FOSL2/Fra-2作为激活蛋白-1（AP-1）情境依赖节点的生物标志物导向视角 - 生物通",
+      "lesson": "避免采集此类素材: 🔴黑名单源，肿瘤免疫学论文，源级污染典型样本"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "被拒案例",
+      "title": "#摩登兄弟[超话]##刘宇宁新歌我想# | #腾讯音乐由你榜# | #摩登兄弟[超话]#刘宇宁新歌上线恭喜🎉每天清晨听歌开始，好听的歌声来自刘宇宁刘宇宁铁证，刘宇宁高原，好期待啊#摩登兄弟刘宇宁[超",
+      "source": "Google News 腾讯音乐/网易云",
+      "reason": "🔴黑名单源，粉丝超话刷屏，零产业价值",
+      "summary": "被拒: #摩登兄弟[超话]##刘宇宁新歌我想# | #腾讯音乐由你榜# | #摩登兄弟[超话]#刘宇宁新歌上线恭喜🎉每天清晨听歌开始，好听的歌声来自刘宇宁刘宇宁铁证，",
+      "lesson": "避免采集此类素材: 🔴黑名单源，粉丝超话刷屏，零产业价值"
+    },
+    {
+      "date": "2026-10-05",
+      "type": "标杆案例",
+      "title": "Is ‘Rubber Soul’ the Beatles’ Best Album? The Answer to That is as Malleable as the Shifting Track L",
+      "source": "Variety Music",
+      "summary": "通过: Is ‘Rubber Soul’ the Beatles’ Best Album? The Answer to That is as Malleable as ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-05",
+      "type": "标杆案例",
+      "title": "Taylor Swift’s ‘Encore’ Edition Boosts ‘The Life of a Showgirl’ Back to No. 1 for First Time Since J",
+      "source": "Variety Music",
+      "summary": "通过: Taylor Swift’s ‘Encore’ Edition Boosts ‘The Life of a Showgirl’ Back to No. 1 fo",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-05",
+      "type": "标杆案例",
+      "title": "Sass Jordan, Singer and Longtime ‘Canadian Idol’ Judge, Dies at 65",
+      "source": "Variety Music",
+      "summary": "通过: Sass Jordan, Singer and Longtime ‘Canadian Idol’ Judge, Dies at 65",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-05",
+      "type": "标杆案例",
+      "title": "Lawrence Rothman on Their New Album, ‘Here Lives Love/Sawdust to Stardust,’ a Growing Legacy Produci",
+      "source": "Variety Music",
+      "summary": "通过: Lawrence Rothman on Their New Album, ‘Here Lives Love/Sawdust to Stardust,’ a Gr",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-05",
+      "type": "标杆案例",
+      "title": "Zach Bryan Wears ‘Free Palestine’ Shirt While Headlining Robert Kraft’s Gillette Stadium; Drummer Ho",
+      "source": "Variety Music",
+      "summary": "通过: Zach Bryan Wears ‘Free Palestine’ Shirt While Headlining Robert Kraft’s Gillette",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-05",
+      "type": "每日统计",
+      "summary": "今日通过率: 39% (31/80)",
       "lesson": ""
     }
   ],

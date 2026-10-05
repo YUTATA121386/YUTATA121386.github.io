@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 100,
+      "trust": 92,
       "trend": "improving",
       "history": [
         {
@@ -453,6 +453,11 @@
           "date": "2026-10-04",
           "event": "合作 10次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-10-05",
+          "event": "冲突 10次",
+          "trustDelta": -8
         }
       ],
       "summary": "关系良好"
@@ -944,19 +949,17 @@
           "date": "2026-10-04",
           "event": "合作 5次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-10-05",
+          "event": "合作 5次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-07",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: 首批20条素材审核完成：10条通过，10条拒绝。通过素材全部来自Billboard白名单源；拒绝的10条全部为Google News黑名单源污染。",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-09-07",
       "type": "正向反馈",
@@ -1297,6 +1300,13 @@
       "date": "2026-10-04",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 【核查师2026-10-04复盘】今日共审核约100条素材（RAW-0001~0080），分5批推进，全天通过率呈'V型'：70%→25%→10%→70%，累计",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-10-05",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 本批20条（RAW-0021~0040）全部拒绝，通过率0%。拒绝原因：100% Google News音乐产业/Music Industry源级污染，内容为财",
       "lesson": "",
       "impact": ""
     }
