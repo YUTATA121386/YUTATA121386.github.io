@@ -1,10 +1,10 @@
 # collection-rules.md - V2.4.41
-> 归档: 2026-10-05
+> 归档: 2026-10-06
 
 ---
 title: collection-rules
 version: V2.4.41
-updated: 2026-10-05
+updated: 2026-10-06
 outline: [2, 3]
 ---
 
@@ -1093,3 +1093,46 @@ Variety Music与Rolling Stone Music源存在大量与曲库行业无关的演出
 4. 删除完成前，采集师不得提交任何Google News系列源素材。
 
 **生效时间**：2026-10-05起立即生效。
+
+## Billboard/NME/Variety/Rolling Stone/Soompi子类别过滤统一条款（新增于V2.4.43）
+
+**背景**：Billboard娱乐花絮类7天内第6次复发（09-22/09-26/09-29/10-02/10-03/10-04），已达三级复发标准；NME/Variety/Rolling Stone娱乐花絮子类别污染已形成稳定流；Soompi源韩剧内容与音乐产业零相关。
+
+**条款内容**：
+1. **Billboard子类别过滤关键词**：setlist / headline / tease / statement / SNL / Where to Watch / Livestream / 家暴 / 私生活 / 红毯。
+2. **NME games子路径过滤**：Wordle / Connections / Globle / Framed。
+3. **NME/Variety Music子类别过滤关键词**：SNL / monologue / cameo / film score / composer / blind-rank / quiz / stadium record / attendance。
+4. **Rolling Stone Music源子类别过滤**：娱乐花絮/政治花絮（SNL/wedding/festival现场/政治表态）。
+5. **Soompi源限制采集范围**：仅保留韩娱产业动态（广告模特品牌声誉、经纪公司防诈骗、偶像团签约变更等），过滤韩剧内容。
+6. 上述过滤词须在RSS配置层过滤规则文件中物理写入，采集师提交写入前后双截图。
+
+**生效时间**：2026-10-05起立即生效。
+
+## 源级黑名单配置层物理落地清单（新增于V2.4.44，强制闭环）
+
+**一、强制黑名单源清单（物理删除，非加过滤词）**
+1. Google News 音乐产业(zh) — 物理删除整个源
+2. Google News Music Industry(en) — 物理删除整个源
+3. Google News 中国音乐产业（搜索）(zh) — 物理删除整个源
+4. Google News 腾讯音乐/网易云(zh) — 物理删除整个源
+5. Google News Japan/Korea/India/SEA Music Business — 逐源评估，达三级复发即删除
+
+**二、强制子类别过滤源清单（写入<excludeKeywords>字段）**
+1. Billboard — 娱乐花絮子类别：Surprises Fans / brings out / show in / opener / tour dates / setlist / headline / tease / SNL / Where to Watch / re-released / expanded form / anniversary edition / amid the controversy
+2. BARKS — 娱乐花絮子类别：同上关键词集
+3. NME — games子路径（Wordle/Connections/Globle/Framed）+ 影视娱乐板块
+4. Variety Music — 娱乐花絮类关键词
+5. Rolling Stone Music / Soompi — 娱乐花絮类关键词
+
+**三、配置层落地闭环（强制）**
+任何源级黑名单条款文本生效后72小时内，必须完成以下四步，否则该条款自动标记为『未生效』：
+① 操作：按上述清单在RSS配置层执行物理删除或过滤词写入
+② 证据：提交『操作前截图 + 操作后截图』，截图须含源URL + 过滤词列表/源列表状态 + 保存时间戳
+③ 核验：核查师独立验证截图真实性，与配置层实际状态比对
+④ 双签：操作人 + 核验人在『配置层落地核验表』（源名/操作类型/操作人/截图证据/核验人/时间戳）签字
+
+**四、恢复材料标准化（采集师强制暂停恢复唯一依据）**
+1. RSS配置删除前后双截图（含时间戳）
+2. 全量扫描日志（含扫描范围+时间+结果）
+3. 逐条核验清单（源名→内容→判定）
+三项材料缺一不可，经核查师独立验证+记忆管理师双签后方可恢复。

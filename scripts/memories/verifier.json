@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 92,
+      "trust": 84,
       "trend": "improving",
       "history": [
         {
@@ -457,6 +457,11 @@
         {
           "date": "2026-10-05",
           "event": "冲突 10次",
+          "trustDelta": -8
+        },
+        {
+          "date": "2026-10-06",
+          "event": "冲突 11次",
           "trustDelta": -8
         }
       ],
@@ -954,26 +959,17 @@
           "date": "2026-10-05",
           "event": "合作 5次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-10-06",
+          "event": "合作 5次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-07",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 正向反馈：前10条素材（RAW-0001至0010）全部来自Billboard白名单源，内容质量良好，覆盖现场演出、榜单动态、行业奖项、艺人新闻等多元话题，均通",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-09-08",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: RAW-0028至0040共13条素材全部为Google News黑名单源污染，内容与音乐产业完全无关。",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-09-08",
       "type": "正向反馈",
@@ -1307,6 +1303,20 @@
       "date": "2026-10-05",
       "type": "重大挛折",
       "summary": "被采集师 REJECT: 本批20条（RAW-0021~0040）全部拒绝，通过率0%。拒绝原因：100% Google News音乐产业/Music Industry源级污染，内容为财",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-10-06",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 本批20条：通过14条，拒绝6条（通过率70%）。Billboard娱乐花絮类三级复发，触发V2.3.41强制暂停前置条件",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-10-06",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 【核查师2026-10-06工作复盘】今日共审核5批约90条素材，全天通过率呈断崖式下滑：首批70%（14/20）→二批60%（12/20）→三批10%（2/2",
       "lesson": "",
       "impact": ""
     }
