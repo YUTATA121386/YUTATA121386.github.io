@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 84,
+      "trust": 78,
       "trend": "improving",
       "history": [
         {
@@ -463,6 +463,11 @@
           "date": "2026-10-06",
           "event": "冲突 11次",
           "trustDelta": -8
+        },
+        {
+          "date": "2026-10-07",
+          "event": "冲突 6次",
+          "trustDelta": -6
         }
       ],
       "summary": "关系良好"
@@ -636,7 +641,7 @@
     },
     "editor": {
       "trust": 80,
-      "trend": "improving",
+      "trend": "stable",
       "history": [
         {
           "date": "2026-07-19",
@@ -780,6 +785,11 @@
         },
         {
           "date": "2026-09-26",
+          "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-10-07",
           "event": "合作 1次",
           "trustDelta": 0
         }
@@ -1184,103 +1194,17 @@
           "date": "2026-10-06",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-10-07",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-10-02",
-      "type": "标杆案例",
-      "title": "Thomson Reuters Scores Appeals Court Win In Closely-Watched ‘Fair Use’ Copyright Case — Defendant’s ",
-      "source": "Digital Music News",
-      "summary": "通过: Thomson Reuters Scores Appeals Court Win In Closely-Watched ‘Fair Use’ Copyright",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-02",
-      "type": "标杆案例",
-      "title": "Voice Intelligence Startup Modulate Raises $25 Million, Says Its AI Music Detector ‘Achieved 95% Pre",
-      "source": "Digital Music News",
-      "summary": "通过: Voice Intelligence Startup Modulate Raises $25 Million, Says Its AI Music Detect",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-02",
-      "type": "标杆案例",
-      "title": "Rita Ora Slapped With $4.2 Million Lawsuit from Former Manager Over Missing Earnings",
-      "source": "Digital Music News",
-      "summary": "通过: Rita Ora Slapped With $4.2 Million Lawsuit from Former Manager Over Missing Earn",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-02",
-      "type": "标杆案例",
-      "title": "BandLab Technologies appoints new CEO, Ivan Chen",
-      "source": "MusicTech",
-      "summary": "通过: BandLab Technologies appoints new CEO, Ivan Chen",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-02",
-      "type": "标杆案例",
-      "title": "GamesSoundCon 2026: Your chance to network with the composers for Call of Duty, Assassin’s Creed and",
-      "source": "MusicTech",
-      "summary": "通过: GamesSoundCon 2026: Your chance to network with the composers for Call of Duty, ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-02",
-      "type": "每日统计",
-      "summary": "今日通过率: 50% (40/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-10-03",
-      "type": "被拒案例",
-      "title": "G7 to release 100 million barrels of oil and diesel after Trump export ban threat - BBC",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry(en)源污染，内容为G7石油释放，与音乐产业零相关",
-      "summary": "被拒: G7 to release 100 million barrels of oil and diesel after Trump export ban threa",
-      "lesson": "避免采集此类素材: Google News Music Industry(en)源污染，内容为G7石油释放，与音乐产业零相关"
-    },
-    {
-      "date": "2026-10-03",
-      "type": "被拒案例",
-      "title": "Trump to travel to at least 10 states before the midterms, including traditional battlegrounds - Pol",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry(en)源污染，内容为特朗普中期选举行程，与音乐产业零相关",
-      "summary": "被拒: Trump to travel to at least 10 states before the midterms, including traditional",
-      "lesson": "避免采集此类素材: Google News Music Industry(en)源污染，内容为特朗普中期选举行程，与音乐产业零相关"
-    },
-    {
-      "date": "2026-10-03",
-      "type": "被拒案例",
-      "title": "Trump promises 'nearly $100' to 20M seniors in latest cash giveaway - USA Today",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry(en)源污染，内容为特朗普现金发放政策，与音乐产业零相关",
-      "summary": "被拒: Trump promises 'nearly $100' to 20M seniors in latest cash giveaway - USA Today",
-      "lesson": "避免采集此类素材: Google News Music Industry(en)源污染，内容为特朗普现金发放政策，与音乐产业零相关"
-    },
-    {
-      "date": "2026-10-03",
-      "type": "被拒案例",
-      "title": "Saudis plan major offensive against the Houthis, but U.S. won't join for now - Axios",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry(en)源污染，内容为沙特对胡塞武装军事行动，与音乐产业零相关",
-      "summary": "被拒: Saudis plan major offensive against the Houthis, but U.S. won't join for now - A",
-      "lesson": "避免采集此类素材: Google News Music Industry(en)源污染，内容为沙特对胡塞武装军事行动，与音乐产业零相关"
-    },
-    {
-      "date": "2026-10-03",
-      "type": "被拒案例",
-      "title": "New aircraft carrier, 10,000 US troops: Is the Iran war about to escalate? - Al Jazeera",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry(en)源污染，内容为伊朗战争升级，与音乐产业零相关",
-      "summary": "被拒: New aircraft carrier, 10,000 US troops: Is the Iran war about to escalate? - Al ",
-      "lesson": "避免采集此类素材: Google News Music Industry(en)源污染，内容为伊朗战争升级，与音乐产业零相关"
-    },
     {
       "date": "2026-10-03",
       "type": "标杆案例",
@@ -1598,6 +1522,97 @@
       "date": "2026-10-06",
       "type": "每日统计",
       "summary": "今日通过率: 35% (28/80)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-10-07",
+      "type": "被拒案例",
+      "title": "Trump says Iran could ‘take’ San Diego, Los Angeles; draws cross-party ire - Al Jazeera",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News Music Industry源，内容为特朗普涉伊朗言论，政治新闻，非音乐内容。",
+      "summary": "被拒: Trump says Iran could ‘take’ San Diego, Los Angeles; draws cross-party ire - Al ",
+      "lesson": "避免采集此类素材: 来源为Google News Music Industry源，内容为特朗普涉伊朗言论，政治新闻，非音乐内容。"
+    },
+    {
+      "date": "2026-10-07",
+      "type": "被拒案例",
+      "title": "Russian Plague Scare: WHO Seeks Details About Reported Second Illness As Trump Plans Putin Call - Fo",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News Music Industry源，内容为俄罗斯瘟疫/WHO，公共卫生新闻，非音乐内容。",
+      "summary": "被拒: Russian Plague Scare: WHO Seeks Details About Reported Second Illness As Trump P",
+      "lesson": "避免采集此类素材: 来源为Google News Music Industry源，内容为俄罗斯瘟疫/WHO，公共卫生新闻，非音乐内容。"
+    },
+    {
+      "date": "2026-10-07",
+      "type": "被拒案例",
+      "title": "Over 1,000 children are buried at juvenile detention centers nationwide - NPR",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News Music Industry源，内容为少年拘留所儿童埋葬事件，社会新闻，非音乐内容。",
+      "summary": "被拒: Over 1,000 children are buried at juvenile detention centers nationwide - NPR",
+      "lesson": "避免采集此类素材: 来源为Google News Music Industry源，内容为少年拘留所儿童埋葬事件，社会新闻，非音乐内容。"
+    },
+    {
+      "date": "2026-10-07",
+      "type": "被拒案例",
+      "title": "Fuel industry warns truck stops not to sell red dye diesel after Trump lifts restrictions - NBC News",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News Music Industry源，内容为红色柴油销售/特朗普政策，能源政策新闻，非音乐内容。",
+      "summary": "被拒: Fuel industry warns truck stops not to sell red dye diesel after Trump lifts res",
+      "lesson": "避免采集此类素材: 来源为Google News Music Industry源，内容为红色柴油销售/特朗普政策，能源政策新闻，非音乐内容。"
+    },
+    {
+      "date": "2026-10-07",
+      "type": "被拒案例",
+      "title": "California pair charged with abusing at least 14 surrogate-born children - BBC",
+      "source": "Google News Music Industry",
+      "reason": "来源为Google News Music Industry源，内容为加州代孕儿童虐待案，社会新闻，非音乐内容。",
+      "summary": "被拒: California pair charged with abusing at least 14 surrogate-born children - BBC",
+      "lesson": "避免采集此类素材: 来源为Google News Music Industry源，内容为加州代孕儿童虐待案，社会新闻，非音乐内容。"
+    },
+    {
+      "date": "2026-10-07",
+      "type": "标杆案例",
+      "title": "WMG’s Re-Org Reaches MENA, Pairing a Promotion With a Sony Hire",
+      "source": "Digital Music News",
+      "summary": "通过: WMG’s Re-Org Reaches MENA, Pairing a Promotion With a Sony Hire",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-07",
+      "type": "标杆案例",
+      "title": "Why festivals are booking hi-fi sound systems on their lineups",
+      "source": "MusicTech",
+      "summary": "通过: Why festivals are booking hi-fi sound systems on their lineups",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-07",
+      "type": "标杆案例",
+      "title": "The LARYNX – a new feature-packed hard synth from AnalogFX – is available now",
+      "source": "MusicTech",
+      "summary": "通过: The LARYNX – a new feature-packed hard synth from AnalogFX – is available now",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-07",
+      "type": "标杆案例",
+      "title": "Fancy a free Minimoog Model D emulation plugin? Idle Foundry’s CA-72 has got you covered",
+      "source": "MusicTech",
+      "summary": "通过: Fancy a free Minimoog Model D emulation plugin? Idle Foundry’s CA-72 has got you",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-07",
+      "type": "标杆案例",
+      "title": "My Forever Studio: Kaelin Ellis is guided by video games",
+      "source": "MusicTech",
+      "summary": "通过: My Forever Studio: Kaelin Ellis is guided by video games",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-07",
+      "type": "每日统计",
+      "summary": "今日通过率: 55% (44/80)",
       "lesson": ""
     }
   ],
