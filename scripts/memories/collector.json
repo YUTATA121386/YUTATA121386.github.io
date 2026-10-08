@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 78,
+      "trust": 74,
       "trend": "improving",
       "history": [
         {
@@ -468,6 +468,11 @@
           "date": "2026-10-07",
           "event": "冲突 6次",
           "trustDelta": -6
+        },
+        {
+          "date": "2026-10-08",
+          "event": "冲突 7次",
+          "trustDelta": -4
         }
       ],
       "summary": "关系良好"
@@ -1199,103 +1204,17 @@
           "date": "2026-10-07",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-10-08",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-10-03",
-      "type": "标杆案例",
-      "title": "Is too much gear a bad thing? Hazel Mills says “option paralysis is very real” – and it could be kil",
-      "source": "MusicTech",
-      "summary": "通过: Is too much gear a bad thing? Hazel Mills says “option paralysis is very real” –",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-03",
-      "type": "标杆案例",
-      "title": "Meet the FLpad – a Novation 8×8 grid controller designed specifically for FL Studio",
-      "source": "MusicTech",
-      "summary": "通过: Meet the FLpad – a Novation 8×8 grid controller designed specifically for FL Stu",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-03",
-      "type": "标杆案例",
-      "title": "The best new music plugins this week, free and paid",
-      "source": "MusicTech",
-      "summary": "通过: The best new music plugins this week, free and paid",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-03",
-      "type": "标杆案例",
-      "title": "Job openings in music tech this month: Las Vegas theater productions, analogue experience curation, ",
-      "source": "MusicTech",
-      "summary": "通过: Job openings in music tech this month: Las Vegas theater productions, analogue e",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-03",
-      "type": "标杆案例",
-      "title": "All of the best deals on Plugin Boutique right now: UJAM, Soundtoys, XLN Audio and more",
-      "source": "MusicTech",
-      "summary": "通过: All of the best deals on Plugin Boutique right now: UJAM, Soundtoys, XLN Audio a",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-03",
-      "type": "每日统计",
-      "summary": "今日通过率: 56% (45/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-10-04",
-      "type": "被拒案例",
-      "title": "France’s violent student protests raise warning for America: ‘A cautionary tale’ - Fox News",
-      "source": "Google News Music Industry",
-      "reason": "Google News音乐产业源污染，内容为法国学生抗议（'violent student protests'/'cautionary tale'），与音乐产业零相关。触发V2.3.41源级黑名单自动",
-      "summary": "被拒: France’s violent student protests raise warning for America: ‘A cautionary tale’",
-      "lesson": "避免采集此类素材: Google News音乐产业源污染，内容为法国学生抗议（'violent student protests'/'cautionary tale'），与音乐产业"
-    },
-    {
-      "date": "2026-10-04",
-      "type": "被拒案例",
-      "title": "Today’s Wordle answer and hints for #1923 on October 04",
-      "source": "NME",
-      "reason": "NME，Wordle答案与提示，游戏类非音乐产业内容，明显污染。",
-      "summary": "被拒: Today’s Wordle answer and hints for #1923 on October 04",
-      "lesson": "避免采集此类素材: NME，Wordle答案与提示，游戏类非音乐产业内容，明显污染。"
-    },
-    {
-      "date": "2026-10-04",
-      "type": "被拒案例",
-      "title": "‘Connections’ answers and hints for today, October 04",
-      "source": "NME",
-      "reason": "NME，Connections答案与提示，游戏类非音乐产业内容，明显污染。",
-      "summary": "被拒: ‘Connections’ answers and hints for today, October 04",
-      "lesson": "避免采集此类素材: NME，Connections答案与提示，游戏类非音乐产业内容，明显污染。"
-    },
-    {
-      "date": "2026-10-04",
-      "type": "被拒案例",
-      "title": "Globle answer today – here’s the answer and hints for October 04",
-      "source": "NME",
-      "reason": "NME，Globle答案与提示，游戏类非音乐产业内容，明显污染。",
-      "summary": "被拒: Globle answer today – here’s the answer and hints for October 04",
-      "lesson": "避免采集此类素材: NME，Globle答案与提示，游戏类非音乐产业内容，明显污染。"
-    },
-    {
-      "date": "2026-10-04",
-      "type": "被拒案例",
-      "title": "Framed answer today – here’s the solution for October 04",
-      "source": "NME",
-      "reason": "NME，Framed答案与提示，游戏类非音乐产业内容，明显污染。",
-      "summary": "被拒: Framed answer today – here’s the solution for October 04",
-      "lesson": "避免采集此类素材: NME，Framed答案与提示，游戏类非音乐产业内容，明显污染。"
-    },
     {
       "date": "2026-10-04",
       "type": "标杆案例",
@@ -1614,6 +1533,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 55% (44/80)",
       "lesson": ""
+    },
+    {
+      "date": "2026-10-08",
+      "type": "被拒案例",
+      "title": "Kimberly Guilfoyle’s Demand for Cash Off the Books Exposed - The Daily Beast",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染：Kimberly Guilfoyle政治，零音乐相关性",
+      "summary": "被拒: Kimberly Guilfoyle’s Demand for Cash Off the Books Exposed - The Daily Beast",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染：Kimberly Guilfoyle政治，零音乐相关性"
+    },
+    {
+      "date": "2026-10-08",
+      "type": "被拒案例",
+      "title": "Trump says he is not keen on a deal with Iran as U.S. reportedly prepares for 'massive bombing' - CN",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染：Trump伊朗政策，零音乐相关性",
+      "summary": "被拒: Trump says he is not keen on a deal with Iran as U.S. reportedly prepares for 'm",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染：Trump伊朗政策，零音乐相关性"
+    },
+    {
+      "date": "2026-10-08",
+      "type": "被拒案例",
+      "title": "Maricarmen, the 87-year-old woman whose eviction shook Spain, has died - NPR",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染：西班牙驱逐案Maricarmen，零音乐相关性",
+      "summary": "被拒: Maricarmen, the 87-year-old woman whose eviction shook Spain, has died - NPR",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染：西班牙驱逐案Maricarmen，零音乐相关性"
+    },
+    {
+      "date": "2026-10-08",
+      "type": "被拒案例",
+      "title": "Army Sets Date for First Military Execution by Firing Squad Since 1945 - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染：军队枪决执行，零音乐相关性",
+      "summary": "被拒: Army Sets Date for First Military Execution by Firing Squad Since 1945 - The New",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染：军队枪决执行，零音乐相关性"
+    },
+    {
+      "date": "2026-10-08",
+      "type": "被拒案例",
+      "title": "Israelis mourn 7 October attack victims as Gaza lies in ruins three years on - BBC",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染：以色列-巴勒斯坦冲突，零音乐相关性",
+      "summary": "被拒: Israelis mourn 7 October attack victims as Gaza lies in ruins three years on - B",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染：以色列-巴勒斯坦冲突，零音乐相关性"
+    },
+    {
+      "date": "2026-10-08",
+      "type": "标杆案例",
+      "title": "Step aside Sonos – JBL’s new Cove line offers a new solution to multi-room listening",
+      "source": "MusicTech",
+      "summary": "通过: Step aside Sonos – JBL’s new Cove line offers a new solution to multi-room liste",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-08",
+      "type": "标杆案例",
+      "title": "Why festivals are booking hi-fi sound systems on their lineups",
+      "source": "MusicTech",
+      "summary": "通过: Why festivals are booking hi-fi sound systems on their lineups",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-08",
+      "type": "标杆案例",
+      "title": "The LARYNX – a new feature-packed hard synth from AnalogFX – is available now",
+      "source": "MusicTech",
+      "summary": "通过: The LARYNX – a new feature-packed hard synth from AnalogFX – is available now",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-08",
+      "type": "标杆案例",
+      "title": "Fancy a free Minimoog Model D emulation plugin? Idle Foundry’s CA-72 has got you covered",
+      "source": "MusicTech",
+      "summary": "通过: Fancy a free Minimoog Model D emulation plugin? Idle Foundry’s CA-72 has got you",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-08",
+      "type": "标杆案例",
+      "title": "My Forever Studio: Kaelin Ellis is guided by video games",
+      "source": "MusicTech",
+      "summary": "通过: My Forever Studio: Kaelin Ellis is guided by video games",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-08",
+      "type": "每日统计",
+      "summary": "今日通过率: 64% (51/80)",
+      "lesson": "通过率良好，保持当前标准"
     }
   ],
   "selfReview": {
