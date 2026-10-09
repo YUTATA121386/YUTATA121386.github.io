@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 74,
+      "trust": 70,
       "trend": "improving",
       "history": [
         {
@@ -472,6 +472,11 @@
         {
           "date": "2026-10-08",
           "event": "冲突 7次",
+          "trustDelta": -4
+        },
+        {
+          "date": "2026-10-09",
+          "event": "冲突 9次",
           "trustDelta": -4
         }
       ],
@@ -1209,103 +1214,17 @@
           "date": "2026-10-08",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-10-09",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-10-04",
-      "type": "标杆案例",
-      "title": "Watch Dave Grohl join AC/DC for ‘Highway To Hell’ at final ‘Power Up’ tour show",
-      "source": "NME",
-      "summary": "通过: Watch Dave Grohl join AC/DC for ‘Highway To Hell’ at final ‘Power Up’ tour show",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-04",
-      "type": "标杆案例",
-      "title": "Fans react as Glastonbury 2027 general tickets sell out in 42 minutes",
-      "source": "NME",
-      "summary": "通过: Fans react as Glastonbury 2027 general tickets sell out in 42 minutes",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-04",
-      "type": "标杆案例",
-      "title": "Kings Of Leon announce huge London O2 show for 2027",
-      "source": "NME",
-      "summary": "通过: Kings Of Leon announce huge London O2 show for 2027",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-04",
-      "type": "标杆案例",
-      "title": "Every song on the ‘Kill Jackie’ soundtrack",
-      "source": "NME",
-      "summary": "通过: Every song on the ‘Kill Jackie’ soundtrack",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-04",
-      "type": "标杆案例",
-      "title": "Greta Van Fleet announce 2027 ‘Into The Beginning’ UK, European and North American tour",
-      "source": "NME",
-      "summary": "通过: Greta Van Fleet announce 2027 ‘Into The Beginning’ UK, European and North Americ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-04",
-      "type": "每日统计",
-      "summary": "今日通过率: 45% (36/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-10-05",
-      "type": "被拒案例",
-      "title": "Taylor Swift Crashes Dakota Johnson’s ‘SNL’ Monologue as Her Breakup Therapist, Shows Travis Kelce L",
-      "source": "Variety Music",
-      "reason": "Taylor Swift SNL花絮，与RAW-0067同主题重复",
-      "summary": "被拒: Taylor Swift Crashes Dakota Johnson’s ‘SNL’ Monologue as Her Breakup Therapist, ",
-      "lesson": "避免采集此类素材: Taylor Swift SNL花絮，与RAW-0067同主题重复"
-    },
-    {
-      "date": "2026-10-05",
-      "type": "被拒案例",
-      "title": "‘Behemoth!’: Why Tony Gilroy Needed Nine Composers to Score His Latest Film, and a Guide to Who Did ",
-      "source": "Variety Music",
-      "reason": "Behemoth电影配乐花絮，偏影视产业",
-      "summary": "被拒: ‘Behemoth!’: Why Tony Gilroy Needed Nine Composers to Score His Latest Film, and",
-      "lesson": "避免采集此类素材: Behemoth电影配乐花絮，偏影视产业"
-    },
-    {
-      "date": "2026-10-05",
-      "type": "被拒案例",
-      "title": "【12315投诉公示】腾讯音乐娱乐（深圳）有限公司新增105件投诉公示，涉及其他售后服务问题等_曝光台_财经 - 证券之星",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "🔴Google News腾讯音乐/网易云黑名单源，12315投诉公示非音乐产业",
-      "summary": "被拒: 【12315投诉公示】腾讯音乐娱乐（深圳）有限公司新增105件投诉公示，涉及其他售后服务问题等_曝光台_财经 - 证券之星",
-      "lesson": "避免采集此类素材: 🔴Google News腾讯音乐/网易云黑名单源，12315投诉公示非音乐产业"
-    },
-    {
-      "date": "2026-10-05",
-      "type": "被拒案例",
-      "title": "肿瘤微环境（TME）中免疫细胞动态与治疗失败模式：FOSL2/Fra-2作为激活蛋白-1（AP-1）情境依赖节点的生物标志物导向视角 - 生物通",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "🔴黑名单源，肿瘤免疫学论文，源级污染典型样本",
-      "summary": "被拒: 肿瘤微环境（TME）中免疫细胞动态与治疗失败模式：FOSL2/Fra-2作为激活蛋白-1（AP-1）情境依赖节点的生物标志物导向视角 - 生物通",
-      "lesson": "避免采集此类素材: 🔴黑名单源，肿瘤免疫学论文，源级污染典型样本"
-    },
-    {
-      "date": "2026-10-05",
-      "type": "被拒案例",
-      "title": "#摩登兄弟[超话]##刘宇宁新歌我想# | #腾讯音乐由你榜# | #摩登兄弟[超话]#刘宇宁新歌上线恭喜🎉每天清晨听歌开始，好听的歌声来自刘宇宁刘宇宁铁证，刘宇宁高原，好期待啊#摩登兄弟刘宇宁[超",
-      "source": "Google News 腾讯音乐/网易云",
-      "reason": "🔴黑名单源，粉丝超话刷屏，零产业价值",
-      "summary": "被拒: #摩登兄弟[超话]##刘宇宁新歌我想# | #腾讯音乐由你榜# | #摩登兄弟[超话]#刘宇宁新歌上线恭喜🎉每天清晨听歌开始，好听的歌声来自刘宇宁刘宇宁铁证，",
-      "lesson": "避免采集此类素材: 🔴黑名单源，粉丝超话刷屏，零产业价值"
-    },
     {
       "date": "2026-10-05",
       "type": "标杆案例",
@@ -1623,6 +1542,97 @@
       "date": "2026-10-08",
       "type": "每日统计",
       "summary": "今日通过率: 64% (51/80)",
+      "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-10-09",
+      "type": "被拒案例",
+      "title": "Fiery Senate Debates in Maine, Michigan and Georgia: Five Takeaways - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染，参议院辩论新闻",
+      "summary": "被拒: Fiery Senate Debates in Maine, Michigan and Georgia: Five Takeaways - The New Yo",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染，参议院辩论新闻"
+    },
+    {
+      "date": "2026-10-09",
+      "type": "被拒案例",
+      "title": "Christa Pike is walking with help and eating after failed execution attempt, her attorneys say - AP ",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染，死刑执行新闻",
+      "summary": "被拒: Christa Pike is walking with help and eating after failed execution attempt, her",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染，死刑执行新闻"
+    },
+    {
+      "date": "2026-10-09",
+      "type": "被拒案例",
+      "title": "Exclusive: House Democrats ask Kimberly Guilfoyle for records related to alleged pay-to-play scheme ",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染，政治调查新闻",
+      "summary": "被拒: Exclusive: House Democrats ask Kimberly Guilfoyle for records related to alleged",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染，政治调查新闻"
+    },
+    {
+      "date": "2026-10-09",
+      "type": "被拒案例",
+      "title": "Russian operation that used ChatGPT tricked schools, a politician and media, OpenAI says - NBC News",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染，俄罗斯ChatGPT操作新闻",
+      "summary": "被拒: Russian operation that used ChatGPT tricked schools, a politician and media, Ope",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染，俄罗斯ChatGPT操作新闻"
+    },
+    {
+      "date": "2026-10-09",
+      "type": "被拒案例",
+      "title": "The long-deployed USS Lincoln returns home to San Diego Bay - NPR",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染，军舰返港新闻",
+      "summary": "被拒: The long-deployed USS Lincoln returns home to San Diego Bay - NPR",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染，军舰返港新闻"
+    },
+    {
+      "date": "2026-10-09",
+      "type": "标杆案例",
+      "title": "Teenage Engineering to stop making synths – but what does it mean for the future of the cult brand?",
+      "source": "MusicTech",
+      "summary": "通过: Teenage Engineering to stop making synths – but what does it mean for the future",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-09",
+      "type": "标杆案例",
+      "title": "The best new music plugins this week, free and paid",
+      "source": "MusicTech",
+      "summary": "通过: The best new music plugins this week, free and paid",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-09",
+      "type": "标杆案例",
+      "title": "The perfect snare sound is the holy grail – and Kaelin Ellis thinks he’s found it",
+      "source": "MusicTech",
+      "summary": "通过: The perfect snare sound is the holy grail – and Kaelin Ellis thinks he’s found i",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-09",
+      "type": "标杆案例",
+      "title": "Step aside Sonos – JBL’s new Cove line offers a new solution to multi-room listening",
+      "source": "MusicTech",
+      "summary": "通过: Step aside Sonos – JBL’s new Cove line offers a new solution to multi-room liste",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-09",
+      "type": "标杆案例",
+      "title": "Why festivals are booking hi-fi sound systems on their lineups",
+      "source": "MusicTech",
+      "summary": "通过: Why festivals are booking hi-fi sound systems on their lineups",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-09",
+      "type": "每日统计",
+      "summary": "今日通过率: 63% (50/80)",
       "lesson": "通过率良好，保持当前标准"
     }
   ],

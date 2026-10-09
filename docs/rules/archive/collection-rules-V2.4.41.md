@@ -1,10 +1,10 @@
 # collection-rules.md - V2.4.41
-> 归档: 2026-10-08
+> 归档: 2026-10-09
 
 ---
 title: collection-rules
 version: V2.4.41
-updated: 2026-10-07
+updated: 2026-10-08
 outline: [2, 3]
 ---
 
@@ -1175,3 +1175,16 @@ Variety Music与Rolling Stone Music源存在大量与曲库行业无关的演出
 **第三条 有效性审查**：每条存量条款须标注『可执行性状态』（已落地/待落地/无法执行），无法执行的条款须在7日内转化为可执行条款或废止。
 
 **第四条 断层优先**：当新增规则冲动与存量断层修复冲突时，优先修复断层。规则数量不是团队效能的度量，规则落地率才是。
+
+## 规则数量冻结与存量断层优先闭合条款（新增于V2.4.46，强制执行）
+
+**背景**：截至2026-10-08，collection-rules.md已累积超过60个章节，其中『Google News音乐产业源永久黑名单封存条款』重复出现5次以上，『源级黑名单配置层落地强制闭环条款』『配置层物理删除确认强制闭环条款』『规则-配置双轨台账与配置层落地闭环强制条款』等条款内容高度重叠。规则数量在增加，但配置层落地率在下降——『规则生效≠配置生效』执行断层已连续第10天未闭合。
+
+**强制条款**：
+1. **规则数量冻结**：自本条款生效起，collection-rules.md暂停新增任何『源级黑名单』『配置层落地』『物理删除』『子类别过滤』类新章节，直至存量断层全部闭合。
+2. **存量断层优先闭合**：以下三项为最高优先级，必须在下一轮开工前完成配置层物理落地并提交双截图：
+   - ① Google News系列8个源（Google News 音乐产业/Google News Music Industry/Google News Japan Music Business/Google News Korea Music Business/Google News India Music Industry/Google News SEA Music Industry/Google News 腾讯音乐/网易云/Google News 中国音乐产业）在RSS配置层物理删除，提交删除前后双截图；
+   - ② Billboard/NME/Variety/Rolling Stone/Soompi子类别过滤词（setlist/SNL/Where to Watch/headline/tease/Wordle/Connections/Globle/Framed）写入配置层过滤规则文件并截图；
+   - ③ 购物促销类关键词（促销/折扣/优惠/限时/购买链接/Black Friday/Cyber Monday等）补入污染特征库并截图。
+3. **提交-核验-双签闭环**：上述三项动作完成后，采集师提交配置截图，核查师逐一验收确认，记忆管理师归档——缺一不算生效。
+4. **违规后果**：若下一轮开工前上述三项仍未闭合，记忆管理师将按credit_score_system『规则守护者配置层落地问责条款』对自身追加扣分，并对采集师触发『结构性防线建设验收强制条款』。
