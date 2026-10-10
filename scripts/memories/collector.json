@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 70,
+      "trust": 78,
       "trend": "improving",
       "history": [
         {
@@ -478,6 +478,11 @@
           "date": "2026-10-09",
           "event": "冲突 9次",
           "trustDelta": -4
+        },
+        {
+          "date": "2026-10-10",
+          "event": "合作 12次",
+          "trustDelta": 8
         }
       ],
       "summary": "关系良好"
@@ -1219,103 +1224,17 @@
           "date": "2026-10-09",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-10-10",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-10-05",
-      "type": "标杆案例",
-      "title": "Is ‘Rubber Soul’ the Beatles’ Best Album? The Answer to That is as Malleable as the Shifting Track L",
-      "source": "Variety Music",
-      "summary": "通过: Is ‘Rubber Soul’ the Beatles’ Best Album? The Answer to That is as Malleable as ",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-05",
-      "type": "标杆案例",
-      "title": "Taylor Swift’s ‘Encore’ Edition Boosts ‘The Life of a Showgirl’ Back to No. 1 for First Time Since J",
-      "source": "Variety Music",
-      "summary": "通过: Taylor Swift’s ‘Encore’ Edition Boosts ‘The Life of a Showgirl’ Back to No. 1 fo",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-05",
-      "type": "标杆案例",
-      "title": "Sass Jordan, Singer and Longtime ‘Canadian Idol’ Judge, Dies at 65",
-      "source": "Variety Music",
-      "summary": "通过: Sass Jordan, Singer and Longtime ‘Canadian Idol’ Judge, Dies at 65",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-05",
-      "type": "标杆案例",
-      "title": "Lawrence Rothman on Their New Album, ‘Here Lives Love/Sawdust to Stardust,’ a Growing Legacy Produci",
-      "source": "Variety Music",
-      "summary": "通过: Lawrence Rothman on Their New Album, ‘Here Lives Love/Sawdust to Stardust,’ a Gr",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-05",
-      "type": "标杆案例",
-      "title": "Zach Bryan Wears ‘Free Palestine’ Shirt While Headlining Robert Kraft’s Gillette Stadium; Drummer Ho",
-      "source": "Variety Music",
-      "summary": "通过: Zach Bryan Wears ‘Free Palestine’ Shirt While Headlining Robert Kraft’s Gillette",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-05",
-      "type": "每日统计",
-      "summary": "今日通过率: 39% (31/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-10-06",
-      "type": "被拒案例",
-      "title": "Snow Man、6thアルバム『AMENITY』発売まであと1日。「マドラー」全収録内容が明らかに",
-      "source": "BARKS",
-      "reason": "BARKS娱乐花絮类，Snow Man专辑发售倒计时与收录内容解禁，属作品营销，非产业分析。",
-      "summary": "被拒: Snow Man、6thアルバム『AMENITY』発売まであと1日。「マドラー」全収録内容が明らかに",
-      "lesson": "避免采集此类素材: BARKS娱乐花絮类，Snow Man专辑发售倒计时与收录内容解禁，属作品营销，非产业分析。"
-    },
-    {
-      "date": "2026-10-06",
-      "type": "被拒案例",
-      "title": "M!LK、TVアニメ『超巡！超条先輩』OPテーマ「ザッツ！超常」配信決定",
-      "source": "BARKS",
-      "reason": "BARKS娱乐花絮类，M!LK动画OP主题曲配信决定，属作品营销。",
-      "summary": "被拒: M!LK、TVアニメ『超巡！超条先輩』OPテーマ「ザッツ！超常」配信決定",
-      "lesson": "避免采集此类素材: BARKS娱乐花絮类，M!LK动画OP主题曲配信决定，属作品营销。"
-    },
-    {
-      "date": "2026-10-06",
-      "type": "被拒案例",
-      "title": "【インタビュー】10-FEET、『アオアシ』オープニングテーマ「Fortress Defense」が物語るサウンドへの旺盛な好奇心「情熱とモチベーションに溢れている」",
-      "source": "BARKS",
-      "reason": "BARKS娱乐花絮类，10-FEET乐队访谈与单曲宣传，属艺人宣传。",
-      "summary": "被拒: 【インタビュー】10-FEET、『アオアシ』オープニングテーマ「Fortress Defense」が物語るサウンドへの旺盛な好奇心「情熱とモチベーションに溢れて",
-      "lesson": "避免采集此类素材: BARKS娱乐花絮类，10-FEET乐队访谈与单曲宣传，属艺人宣传。"
-    },
-    {
-      "date": "2026-10-06",
-      "type": "被拒案例",
-      "title": "【インタビュー】大貫憲章主宰＜LONDON NITE EXTRA＞、2026年10月17日に原宿で開催へ「奇跡の溜まり場」を振り返る",
-      "source": "BARKS",
-      "reason": "BARKS娱乐花絮类，LONDON NITE EXTRA活动回顾，属线下活动通知。",
-      "summary": "被拒: 【インタビュー】大貫憲章主宰＜LONDON NITE EXTRA＞、2026年10月17日に原宿で開催へ「奇跡の溜まり場」を振り返る",
-      "lesson": "避免采集此类素材: BARKS娱乐花絮类，LONDON NITE EXTRA活动回顾，属线下活动通知。"
-    },
-    {
-      "date": "2026-10-06",
-      "type": "被拒案例",
-      "title": "SEVENTEENのJxJ (SEVENTEEN)、1stミニアルバムのトレーラーに夢幻的サスペンス",
-      "source": "BARKS",
-      "reason": "BARKS娱乐花絮类，SEVENTEEN小分队专辑预告，属作品营销/艺人动态。",
-      "summary": "被拒: SEVENTEENのJxJ (SEVENTEEN)、1stミニアルバムのトレーラーに夢幻的サスペンス",
-      "lesson": "避免采集此类素材: BARKS娱乐花絮类，SEVENTEEN小分队专辑预告，属作品营销/艺人动态。"
-    },
     {
       "date": "2026-10-06",
       "type": "标杆案例",
@@ -1634,6 +1553,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 63% (50/80)",
       "lesson": "通过率良好，保持当前标准"
+    },
+    {
+      "date": "2026-10-10",
+      "type": "被拒案例",
+      "title": "3 men found guilty of killing American and Australian brothers on surfing trip in Mexico - CBS News",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry(en)源，墨西哥冲浪游客凶杀案，非音乐内容",
+      "summary": "被拒: 3 men found guilty of killing American and Australian brothers on surfing trip i",
+      "lesson": "避免采集此类素材: Google News Music Industry(en)源，墨西哥冲浪游客凶杀案，非音乐内容"
+    },
+    {
+      "date": "2026-10-10",
+      "type": "被拒案例",
+      "title": "Trump hits International Criminal Court with sanctions after Nobel goes to former judge - The Washin",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry(en)源，特朗普制裁ICC/诺贝尔奖新闻，非音乐内容",
+      "summary": "被拒: Trump hits International Criminal Court with sanctions after Nobel goes to forme",
+      "lesson": "避免采集此类素材: Google News Music Industry(en)源，特朗普制裁ICC/诺贝尔奖新闻，非音乐内容"
+    },
+    {
+      "date": "2026-10-10",
+      "type": "被拒案例",
+      "title": "DHS officials defend their actions in shooting of NYC immigrant amid outcry - NBC News",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry(en)源，DHS枪击移民事件新闻，非音乐内容",
+      "summary": "被拒: DHS officials defend their actions in shooting of NYC immigrant amid outcry - NB",
+      "lesson": "避免采集此类素材: Google News Music Industry(en)源，DHS枪击移民事件新闻，非音乐内容"
+    },
+    {
+      "date": "2026-10-10",
+      "type": "被拒案例",
+      "title": "Trump boosts a New York ally in a tough race - Politico",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry(en)源，纽约选举政治新闻，非音乐内容",
+      "summary": "被拒: Trump boosts a New York ally in a tough race - Politico",
+      "lesson": "避免采集此类素材: Google News Music Industry(en)源，纽约选举政治新闻，非音乐内容"
+    },
+    {
+      "date": "2026-10-10",
+      "type": "被拒案例",
+      "title": "Donor Says Kimberly Guilfoyle Sought Money From Him to Cover Debt - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry(en)源，Kimberly Guilfoyle捐款债务新闻，非音乐内容",
+      "summary": "被拒: Donor Says Kimberly Guilfoyle Sought Money From Him to Cover Debt - The New York",
+      "lesson": "避免采集此类素材: Google News Music Industry(en)源，Kimberly Guilfoyle捐款债务新闻，非音乐内容"
+    },
+    {
+      "date": "2026-10-10",
+      "type": "标杆案例",
+      "title": "Wanna give your mixes a little analogue flavour? We’ve rounded up the best deals at Plugin Boutique ",
+      "source": "MusicTech",
+      "summary": "通过: Wanna give your mixes a little analogue flavour? We’ve rounded up the best deals",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-10",
+      "type": "标杆案例",
+      "title": "Colapso is a synth that plays the periodic table – somehow",
+      "source": "MusicTech",
+      "summary": "通过: Colapso is a synth that plays the periodic table – somehow",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-10",
+      "type": "标杆案例",
+      "title": "ADAM Audio reveals Sub8 PRO and Sub10 PRO, designed for precise low-ends in the studio",
+      "source": "MusicTech",
+      "summary": "通过: ADAM Audio reveals Sub8 PRO and Sub10 PRO, designed for precise low-ends in the ",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-10",
+      "type": "标杆案例",
+      "title": "Teenage Engineering to stop making synths – but what does it mean for the future of the cult brand?",
+      "source": "MusicTech",
+      "summary": "通过: Teenage Engineering to stop making synths – but what does it mean for the future",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-10",
+      "type": "标杆案例",
+      "title": "The best new music plugins this week, free and paid",
+      "source": "MusicTech",
+      "summary": "通过: The best new music plugins this week, free and paid",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-10",
+      "type": "每日统计",
+      "summary": "今日通过率: 51% (41/80)",
+      "lesson": ""
     }
   ],
   "selfReview": {
