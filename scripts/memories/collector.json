@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 78,
+      "trust": 84,
       "trend": "improving",
       "history": [
         {
@@ -483,6 +483,11 @@
           "date": "2026-10-10",
           "event": "合作 12次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-10-11",
+          "event": "合作 8次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -1229,103 +1234,17 @@
           "date": "2026-10-10",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-10-11",
+          "event": "合作 1次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-10-06",
-      "type": "标杆案例",
-      "title": "Beatport Scores a Square Nine-Led Investment, Targets Expansions ‘Across Its Platform, Products and ",
-      "source": "Digital Music News",
-      "summary": "通过: Beatport Scores a Square Nine-Led Investment, Targets Expansions ‘Across Its Pla",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-06",
-      "type": "标杆案例",
-      "title": "Erica Campbell Quickly Settles Litigation Against SRG Over Alleged Non-Payments",
-      "source": "Digital Music News",
-      "summary": "通过: Erica Campbell Quickly Settles Litigation Against SRG Over Alleged Non-Payments",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-06",
-      "type": "标杆案例",
-      "title": "Best Services for Independent Artists Ready to Go Beyond Basic Distribution",
-      "source": "Digital Music News",
-      "summary": "通过: Best Services for Independent Artists Ready to Go Beyond Basic Distribution",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-06",
-      "type": "标杆案例",
-      "title": "Sony Music’s AI Slop and Deepfakes Crackdown Intensifies — Soundalike Track Removal Requests Reporte",
-      "source": "Digital Music News",
-      "summary": "通过: Sony Music’s AI Slop and Deepfakes Crackdown Intensifies — Soundalike Track Remo",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-06",
-      "type": "标杆案例",
-      "title": "My Forever Studio: Kaelin Ellis is guided by video games",
-      "source": "MusicTech",
-      "summary": "通过: My Forever Studio: Kaelin Ellis is guided by video games",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-06",
-      "type": "每日统计",
-      "summary": "今日通过率: 35% (28/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-10-07",
-      "type": "被拒案例",
-      "title": "Trump says Iran could ‘take’ San Diego, Los Angeles; draws cross-party ire - Al Jazeera",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News Music Industry源，内容为特朗普涉伊朗言论，政治新闻，非音乐内容。",
-      "summary": "被拒: Trump says Iran could ‘take’ San Diego, Los Angeles; draws cross-party ire - Al ",
-      "lesson": "避免采集此类素材: 来源为Google News Music Industry源，内容为特朗普涉伊朗言论，政治新闻，非音乐内容。"
-    },
-    {
-      "date": "2026-10-07",
-      "type": "被拒案例",
-      "title": "Russian Plague Scare: WHO Seeks Details About Reported Second Illness As Trump Plans Putin Call - Fo",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News Music Industry源，内容为俄罗斯瘟疫/WHO，公共卫生新闻，非音乐内容。",
-      "summary": "被拒: Russian Plague Scare: WHO Seeks Details About Reported Second Illness As Trump P",
-      "lesson": "避免采集此类素材: 来源为Google News Music Industry源，内容为俄罗斯瘟疫/WHO，公共卫生新闻，非音乐内容。"
-    },
-    {
-      "date": "2026-10-07",
-      "type": "被拒案例",
-      "title": "Over 1,000 children are buried at juvenile detention centers nationwide - NPR",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News Music Industry源，内容为少年拘留所儿童埋葬事件，社会新闻，非音乐内容。",
-      "summary": "被拒: Over 1,000 children are buried at juvenile detention centers nationwide - NPR",
-      "lesson": "避免采集此类素材: 来源为Google News Music Industry源，内容为少年拘留所儿童埋葬事件，社会新闻，非音乐内容。"
-    },
-    {
-      "date": "2026-10-07",
-      "type": "被拒案例",
-      "title": "Fuel industry warns truck stops not to sell red dye diesel after Trump lifts restrictions - NBC News",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News Music Industry源，内容为红色柴油销售/特朗普政策，能源政策新闻，非音乐内容。",
-      "summary": "被拒: Fuel industry warns truck stops not to sell red dye diesel after Trump lifts res",
-      "lesson": "避免采集此类素材: 来源为Google News Music Industry源，内容为红色柴油销售/特朗普政策，能源政策新闻，非音乐内容。"
-    },
-    {
-      "date": "2026-10-07",
-      "type": "被拒案例",
-      "title": "California pair charged with abusing at least 14 surrogate-born children - BBC",
-      "source": "Google News Music Industry",
-      "reason": "来源为Google News Music Industry源，内容为加州代孕儿童虐待案，社会新闻，非音乐内容。",
-      "summary": "被拒: California pair charged with abusing at least 14 surrogate-born children - BBC",
-      "lesson": "避免采集此类素材: 来源为Google News Music Industry源，内容为加州代孕儿童虐待案，社会新闻，非音乐内容。"
-    },
     {
       "date": "2026-10-07",
       "type": "标杆案例",
@@ -1643,6 +1562,97 @@
       "date": "2026-10-10",
       "type": "每日统计",
       "summary": "今日通过率: 51% (41/80)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-10-11",
+      "type": "被拒案例",
+      "title": "Trump Says He Should Have Won ‘8 Nobel Peace Prizes’ After Being Snubbed - The New York Times",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染：特朗普诺贝尔和平奖政治新闻，非音乐内容。",
+      "summary": "被拒: Trump Says He Should Have Won ‘8 Nobel Peace Prizes’ After Being Snubbed - The N",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染：特朗普诺贝尔和平奖政治新闻，非音乐内容。"
+    },
+    {
+      "date": "2026-10-11",
+      "type": "被拒案例",
+      "title": "Today’s Wordle answer and hints for #1930 on October 11",
+      "source": "NME",
+      "reason": "Wordle游戏谜题，非音乐内容，属NME games子路径污染（规则V2.3.40黑名单特征词'Wordle'明确命中）",
+      "summary": "被拒: Today’s Wordle answer and hints for #1930 on October 11",
+      "lesson": "避免采集此类素材: Wordle游戏谜题，非音乐内容，属NME games子路径污染（规则V2.3.40黑名单特征词'Wordle'明确命中）"
+    },
+    {
+      "date": "2026-10-11",
+      "type": "被拒案例",
+      "title": "‘Connections’ answers and hints for today, October 11",
+      "source": "NME",
+      "reason": "Connections游戏谜题，非音乐内容，NME games子路径污染",
+      "summary": "被拒: ‘Connections’ answers and hints for today, October 11",
+      "lesson": "避免采集此类素材: Connections游戏谜题，非音乐内容，NME games子路径污染"
+    },
+    {
+      "date": "2026-10-11",
+      "type": "被拒案例",
+      "title": "Globle answer today – here’s the answer and hints for October 11",
+      "source": "NME",
+      "reason": "Globle游戏谜题，非音乐内容，NME games子路径污染",
+      "summary": "被拒: Globle answer today – here’s the answer and hints for October 11",
+      "lesson": "避免采集此类素材: Globle游戏谜题，非音乐内容，NME games子路径污染"
+    },
+    {
+      "date": "2026-10-11",
+      "type": "被拒案例",
+      "title": "Framed answer today – here’s the solution for October 11",
+      "source": "NME",
+      "reason": "Framed游戏谜题，非音乐内容，NME games子路径污染",
+      "summary": "被拒: Framed answer today – here’s the solution for October 11",
+      "lesson": "避免采集此类素材: Framed游戏谜题，非音乐内容，NME games子路径污染"
+    },
+    {
+      "date": "2026-10-11",
+      "type": "标杆案例",
+      "title": "Radiohead’s Thom Yorke shares most important piece of advice given to him by R.E.M.’s Michael Stipe",
+      "source": "NME",
+      "summary": "通过: Radiohead’s Thom Yorke shares most important piece of advice given to him by R.E",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-11",
+      "type": "标杆案例",
+      "title": "Journey Drummer Deen Castronovo Returns to the Stage to Play Full Show, Two Nights After Medical Sca",
+      "source": "Variety Music",
+      "summary": "通过: Journey Drummer Deen Castronovo Returns to the Stage to Play Full Show, Two Nigh",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-11",
+      "type": "标杆案例",
+      "title": "Rosalía Performs an Entire Number En Pointe on ‘SNL,’ Then Cools Off With a Nice Shower",
+      "source": "Variety Music",
+      "summary": "通过: Rosalía Performs an Entire Number En Pointe on ‘SNL,’ Then Cools Off With a Nice",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-11",
+      "type": "标杆案例",
+      "title": "‘Project Hail Mary’ Composer Daniel Pemberton, ‘KPop Demon Hunters’ Songwriter EJAE Triumph at World",
+      "source": "Variety Music",
+      "summary": "通过: ‘Project Hail Mary’ Composer Daniel Pemberton, ‘KPop Demon Hunters’ Songwriter E",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-11",
+      "type": "标杆案例",
+      "title": "Barry Manilow Makes Early Exit From Second Night of Vegas Residency Comeback, Cancels Saturday Night",
+      "source": "Variety Music",
+      "summary": "通过: Barry Manilow Makes Early Exit From Second Night of Vegas Residency Comeback, Ca",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-11",
+      "type": "每日统计",
+      "summary": "今日通过率: 44% (35/80)",
       "lesson": ""
     }
   ],

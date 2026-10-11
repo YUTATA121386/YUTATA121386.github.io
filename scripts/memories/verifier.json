@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 78,
+      "trust": 84,
       "trend": "improving",
       "history": [
         {
@@ -483,6 +483,11 @@
           "date": "2026-10-10",
           "event": "合作 12次",
           "trustDelta": 8
+        },
+        {
+          "date": "2026-10-11",
+          "event": "合作 8次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -1004,26 +1009,17 @@
           "date": "2026-10-10",
           "event": "合作 7次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-10-11",
+          "event": "合作 5次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-12",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: 第2批（RAW-0021至0040）审核完成：15条通过，5条拒绝（通过率75%）。拒绝的RAW-0036至0040全部为Google News黑名单源污染，内",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-09-12",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 【核查师9/12复盘】今日共审核148条素材，分5批推进：前20条通过率100%，第2批75%，第3批40%，第4批35%，第5批（RAW-0081至0100）",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-09-14",
       "type": "重大挛折",
@@ -1357,6 +1353,20 @@
       "date": "2026-10-10",
       "type": "重大挛折",
       "summary": "被采集师 REJECT: 本批20条审核完成：通过10条（RAW-0041~0050，全部Digital Music News），拒绝10条（RAW-0051~0060，全部Google",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-10-11",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 首批20条中7条被拒，核心问题：Billboard娱乐花絮过滤词缺失（6条）+ Music Ally games子栏目未过滤（1条）。",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-10-11",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 本批RAW-0061~0080审核完成：通过16条，拒绝4条（RAW-0071~0074全部为NME games子路径污染），通过率80%。BARKS源6条全通",
       "lesson": "",
       "impact": ""
     }
