@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 84,
+      "trust": 78,
       "trend": "improving",
       "history": [
         {
@@ -488,6 +488,11 @@
           "date": "2026-10-11",
           "event": "合作 8次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-10-12",
+          "event": "冲突 6次",
+          "trustDelta": -6
         }
       ],
       "summary": "关系良好"
@@ -653,6 +658,11 @@
         },
         {
           "date": "2026-09-28",
+          "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-10-12",
           "event": "合作 1次",
           "trustDelta": 0
         }
@@ -1239,103 +1249,17 @@
           "date": "2026-10-11",
           "event": "合作 1次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-10-12",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-10-07",
-      "type": "标杆案例",
-      "title": "WMG’s Re-Org Reaches MENA, Pairing a Promotion With a Sony Hire",
-      "source": "Digital Music News",
-      "summary": "通过: WMG’s Re-Org Reaches MENA, Pairing a Promotion With a Sony Hire",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-07",
-      "type": "标杆案例",
-      "title": "Why festivals are booking hi-fi sound systems on their lineups",
-      "source": "MusicTech",
-      "summary": "通过: Why festivals are booking hi-fi sound systems on their lineups",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-07",
-      "type": "标杆案例",
-      "title": "The LARYNX – a new feature-packed hard synth from AnalogFX – is available now",
-      "source": "MusicTech",
-      "summary": "通过: The LARYNX – a new feature-packed hard synth from AnalogFX – is available now",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-07",
-      "type": "标杆案例",
-      "title": "Fancy a free Minimoog Model D emulation plugin? Idle Foundry’s CA-72 has got you covered",
-      "source": "MusicTech",
-      "summary": "通过: Fancy a free Minimoog Model D emulation plugin? Idle Foundry’s CA-72 has got you",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-07",
-      "type": "标杆案例",
-      "title": "My Forever Studio: Kaelin Ellis is guided by video games",
-      "source": "MusicTech",
-      "summary": "通过: My Forever Studio: Kaelin Ellis is guided by video games",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-07",
-      "type": "每日统计",
-      "summary": "今日通过率: 55% (44/80)",
-      "lesson": ""
-    },
-    {
-      "date": "2026-10-08",
-      "type": "被拒案例",
-      "title": "Kimberly Guilfoyle’s Demand for Cash Off the Books Exposed - The Daily Beast",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染：Kimberly Guilfoyle政治，零音乐相关性",
-      "summary": "被拒: Kimberly Guilfoyle’s Demand for Cash Off the Books Exposed - The Daily Beast",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染：Kimberly Guilfoyle政治，零音乐相关性"
-    },
-    {
-      "date": "2026-10-08",
-      "type": "被拒案例",
-      "title": "Trump says he is not keen on a deal with Iran as U.S. reportedly prepares for 'massive bombing' - CN",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染：Trump伊朗政策，零音乐相关性",
-      "summary": "被拒: Trump says he is not keen on a deal with Iran as U.S. reportedly prepares for 'm",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染：Trump伊朗政策，零音乐相关性"
-    },
-    {
-      "date": "2026-10-08",
-      "type": "被拒案例",
-      "title": "Maricarmen, the 87-year-old woman whose eviction shook Spain, has died - NPR",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染：西班牙驱逐案Maricarmen，零音乐相关性",
-      "summary": "被拒: Maricarmen, the 87-year-old woman whose eviction shook Spain, has died - NPR",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染：西班牙驱逐案Maricarmen，零音乐相关性"
-    },
-    {
-      "date": "2026-10-08",
-      "type": "被拒案例",
-      "title": "Army Sets Date for First Military Execution by Firing Squad Since 1945 - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染：军队枪决执行，零音乐相关性",
-      "summary": "被拒: Army Sets Date for First Military Execution by Firing Squad Since 1945 - The New",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染：军队枪决执行，零音乐相关性"
-    },
-    {
-      "date": "2026-10-08",
-      "type": "被拒案例",
-      "title": "Israelis mourn 7 October attack victims as Gaza lies in ruins three years on - BBC",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染：以色列-巴勒斯坦冲突，零音乐相关性",
-      "summary": "被拒: Israelis mourn 7 October attack victims as Gaza lies in ruins three years on - B",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染：以色列-巴勒斯坦冲突，零音乐相关性"
-    },
     {
       "date": "2026-10-08",
       "type": "标杆案例",
@@ -1654,6 +1578,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 44% (35/80)",
       "lesson": ""
+    },
+    {
+      "date": "2026-10-12",
+      "type": "被拒案例",
+      "title": "Whether Tennessee tries to execute Christa Pike again is an open question. Here’s why - CNN",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry en源污染，内容为死刑执行司法新闻，零音乐相关性",
+      "summary": "被拒: Whether Tennessee tries to execute Christa Pike again is an open question. Here’",
+      "lesson": "避免采集此类素材: Google News Music Industry en源污染，内容为死刑执行司法新闻，零音乐相关性"
+    },
+    {
+      "date": "2026-10-12",
+      "type": "被拒案例",
+      "title": "Takeaways from first S.C. Senate debate between Darline Graham, Annie Andrews - The Washington Post",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry en源污染，内容为参议院辩论政治新闻，零音乐相关性",
+      "summary": "被拒: Takeaways from first S.C. Senate debate between Darline Graham, Annie Andrews - ",
+      "lesson": "避免采集此类素材: Google News Music Industry en源污染，内容为参议院辩论政治新闻，零音乐相关性"
+    },
+    {
+      "date": "2026-10-12",
+      "type": "被拒案例",
+      "title": "Judge halts Trump administration's taxpayer-funded ads - Axios",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry en源污染，内容为税务广告司法新闻，零音乐相关性",
+      "summary": "被拒: Judge halts Trump administration's taxpayer-funded ads - Axios",
+      "lesson": "避免采集此类素材: Google News Music Industry en源污染，内容为税务广告司法新闻，零音乐相关性"
+    },
+    {
+      "date": "2026-10-12",
+      "type": "被拒案例",
+      "title": "‘I just had the flu’: James Talarico shoots down conservative speculation about his absence from the",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry en源污染，内容为政治家健康新闻，零音乐相关性",
+      "summary": "被拒: ‘I just had the flu’: James Talarico shoots down conservative speculation about ",
+      "lesson": "避免采集此类素材: Google News Music Industry en源污染，内容为政治家健康新闻，零音乐相关性"
+    },
+    {
+      "date": "2026-10-12",
+      "type": "被拒案例",
+      "title": "AP source: Trump, Rubio weigh firing US envoy to Greece after mounting reports of improper conduct -",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry en源污染，内容为驻希腊大使政治新闻，零音乐相关性",
+      "summary": "被拒: AP source: Trump, Rubio weigh firing US envoy to Greece after mounting reports o",
+      "lesson": "避免采集此类素材: Google News Music Industry en源污染，内容为驻希腊大使政治新闻，零音乐相关性"
+    },
+    {
+      "date": "2026-10-12",
+      "type": "标杆案例",
+      "title": "The Beatles, Drake & Taylor Swift Are Together in Top 10 on Billboard 200 for First Time",
+      "source": "Billboard",
+      "summary": "通过: The Beatles, Drake & Taylor Swift Are Together in Top 10 on Billboard 200 for Fi",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-12",
+      "type": "标杆案例",
+      "title": "Taylor Swift Joins The Beatles as Only Acts With 100 Weeks at No. 1 on Billboard 200 Albums Chart",
+      "source": "Billboard",
+      "summary": "通过: Taylor Swift Joins The Beatles as Only Acts With 100 Weeks at No. 1 on Billboard",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-12",
+      "type": "标杆案例",
+      "title": "Man who made $8 million in AI streaming fraud scheme given 18-month prison sentence",
+      "source": "MusicTech",
+      "summary": "通过: Man who made $8 million in AI streaming fraud scheme given 18-month prison sente",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-12",
+      "type": "标杆案例",
+      "title": "No, Kenneth Blume won’t stay in his lane",
+      "source": "MusicTech",
+      "summary": "通过: No, Kenneth Blume won’t stay in his lane",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-12",
+      "type": "标杆案例",
+      "title": "CRSSD Lab has been hosting music-making workshops for years — why?",
+      "source": "MusicTech",
+      "summary": "通过: CRSSD Lab has been hosting music-making workshops for years — why?",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-12",
+      "type": "每日统计",
+      "summary": "今日通过率: 23% (9/40)",
+      "lesson": "通过率偏低，需收紧采集标准"
     }
   ],
   "selfReview": {

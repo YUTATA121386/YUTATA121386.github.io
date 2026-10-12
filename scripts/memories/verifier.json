@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 84,
+      "trust": 78,
       "trend": "improving",
       "history": [
         {
@@ -488,6 +488,11 @@
           "date": "2026-10-11",
           "event": "合作 8次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-10-12",
+          "event": "冲突 6次",
+          "trustDelta": -6
         }
       ],
       "summary": "关系良好"
@@ -555,6 +560,11 @@
       "history": [
         {
           "date": "2026-07-19",
+          "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-10-12",
           "event": "合作 1次",
           "trustDelta": 0
         }
@@ -1014,19 +1024,17 @@
           "date": "2026-10-11",
           "event": "合作 5次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-10-12",
+          "event": "合作 3次",
+          "trustDelta": 0
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-14",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: 第2批20条审核完成：仅3条通过（15%），17条拒绝。RAW-0021~0030（Google News音乐产业中文源）+RAW-0034~0040（Goog",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-09-15",
       "type": "重大挛折",
@@ -1367,6 +1375,13 @@
       "date": "2026-10-11",
       "type": "正向反馈",
       "summary": "收到核查师的APPROVE: 本批RAW-0061~0080审核完成：通过16条，拒绝4条（RAW-0071~0074全部为NME games子路径污染），通过率80%。BARKS源6条全通",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-10-12",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 首批20条审核完成：通过6条（RAW-0001~0004, 0013, 0014），拒绝14条（通过率30%），触发单轮<50%低通过率预警。拒绝分布：①Goo",
       "lesson": "",
       "impact": ""
     }
