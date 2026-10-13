@@ -6,7 +6,7 @@
   },
   "relationships": {
     "collector": {
-      "trust": 78,
+      "trust": 84,
       "trend": "improving",
       "history": [
         {
@@ -493,6 +493,11 @@
           "date": "2026-10-12",
           "event": "冲突 6次",
           "trustDelta": -6
+        },
+        {
+          "date": "2026-10-13",
+          "event": "合作 7次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -1029,26 +1034,17 @@
           "date": "2026-10-12",
           "event": "合作 3次",
           "trustDelta": 0
+        },
+        {
+          "date": "2026-10-13",
+          "event": "合作 5次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-09-15",
-      "type": "重大挛折",
-      "summary": "被采集师 REJECT: 第2批20条审核完成：13条通过，7条拒绝（通过率65%）。拒绝分两类：Billboard娱乐花絮2条（RAW-0021/0023）+Google News黑名",
-      "lesson": "",
-      "impact": ""
-    },
-    {
-      "date": "2026-09-15",
-      "type": "正向反馈",
-      "summary": "收到核查师的APPROVE: 首批20条审核完成：14条通过，6条拒绝（通过率70%）。通过素材全部来自白名单源（MBW×10、Music Ally×4），质量优秀，AI音乐、发行平台、行业",
-      "lesson": "",
-      "impact": ""
-    },
     {
       "date": "2026-09-16",
       "type": "重大挛折",
@@ -1382,6 +1378,20 @@
       "date": "2026-10-12",
       "type": "重大挛折",
       "summary": "被采集师 REJECT: 首批20条审核完成：通过6条（RAW-0001~0004, 0013, 0014），拒绝14条（通过率30%），触发单轮<50%低通过率预警。拒绝分布：①Goo",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-10-13",
+      "type": "重大挛折",
+      "summary": "被采集师 REJECT: 首批9条拒绝，全部为已知黑名单问题复发，非新问题",
+      "lesson": "",
+      "impact": ""
+    },
+    {
+      "date": "2026-10-13",
+      "type": "正向反馈",
+      "summary": "收到核查师的APPROVE: 批准你的冻结申请。RAW-0041~0060已批量源预检完成：17条Google News双源污染全部拒绝，3条MusicTech白名单源通过。你的止损判断专业",
       "lesson": "",
       "impact": ""
     }

@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 78,
+      "trust": 84,
       "trend": "improving",
       "history": [
         {
@@ -493,6 +493,11 @@
           "date": "2026-10-12",
           "event": "冲突 6次",
           "trustDelta": -6
+        },
+        {
+          "date": "2026-10-13",
+          "event": "合作 7次",
+          "trustDelta": 6
         }
       ],
       "summary": "关系良好"
@@ -820,6 +825,11 @@
         },
         {
           "date": "2026-10-07",
+          "event": "合作 1次",
+          "trustDelta": 0
+        },
+        {
+          "date": "2026-10-13",
           "event": "合作 1次",
           "trustDelta": 0
         }
@@ -1254,103 +1264,17 @@
           "date": "2026-10-12",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-10-13",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-10-08",
-      "type": "标杆案例",
-      "title": "Step aside Sonos – JBL’s new Cove line offers a new solution to multi-room listening",
-      "source": "MusicTech",
-      "summary": "通过: Step aside Sonos – JBL’s new Cove line offers a new solution to multi-room liste",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-08",
-      "type": "标杆案例",
-      "title": "Why festivals are booking hi-fi sound systems on their lineups",
-      "source": "MusicTech",
-      "summary": "通过: Why festivals are booking hi-fi sound systems on their lineups",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-08",
-      "type": "标杆案例",
-      "title": "The LARYNX – a new feature-packed hard synth from AnalogFX – is available now",
-      "source": "MusicTech",
-      "summary": "通过: The LARYNX – a new feature-packed hard synth from AnalogFX – is available now",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-08",
-      "type": "标杆案例",
-      "title": "Fancy a free Minimoog Model D emulation plugin? Idle Foundry’s CA-72 has got you covered",
-      "source": "MusicTech",
-      "summary": "通过: Fancy a free Minimoog Model D emulation plugin? Idle Foundry’s CA-72 has got you",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-08",
-      "type": "标杆案例",
-      "title": "My Forever Studio: Kaelin Ellis is guided by video games",
-      "source": "MusicTech",
-      "summary": "通过: My Forever Studio: Kaelin Ellis is guided by video games",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-08",
-      "type": "每日统计",
-      "summary": "今日通过率: 64% (51/80)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-10-09",
-      "type": "被拒案例",
-      "title": "Fiery Senate Debates in Maine, Michigan and Georgia: Five Takeaways - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染，参议院辩论新闻",
-      "summary": "被拒: Fiery Senate Debates in Maine, Michigan and Georgia: Five Takeaways - The New Yo",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染，参议院辩论新闻"
-    },
-    {
-      "date": "2026-10-09",
-      "type": "被拒案例",
-      "title": "Christa Pike is walking with help and eating after failed execution attempt, her attorneys say - AP ",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染，死刑执行新闻",
-      "summary": "被拒: Christa Pike is walking with help and eating after failed execution attempt, her",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染，死刑执行新闻"
-    },
-    {
-      "date": "2026-10-09",
-      "type": "被拒案例",
-      "title": "Exclusive: House Democrats ask Kimberly Guilfoyle for records related to alleged pay-to-play scheme ",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染，政治调查新闻",
-      "summary": "被拒: Exclusive: House Democrats ask Kimberly Guilfoyle for records related to alleged",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染，政治调查新闻"
-    },
-    {
-      "date": "2026-10-09",
-      "type": "被拒案例",
-      "title": "Russian operation that used ChatGPT tricked schools, a politician and media, OpenAI says - NBC News",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染，俄罗斯ChatGPT操作新闻",
-      "summary": "被拒: Russian operation that used ChatGPT tricked schools, a politician and media, Ope",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染，俄罗斯ChatGPT操作新闻"
-    },
-    {
-      "date": "2026-10-09",
-      "type": "被拒案例",
-      "title": "The long-deployed USS Lincoln returns home to San Diego Bay - NPR",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry源污染，军舰返港新闻",
-      "summary": "被拒: The long-deployed USS Lincoln returns home to San Diego Bay - NPR",
-      "lesson": "避免采集此类素材: Google News Music Industry源污染，军舰返港新闻"
-    },
     {
       "date": "2026-10-09",
       "type": "标杆案例",
@@ -1669,6 +1593,97 @@
       "type": "每日统计",
       "summary": "今日通过率: 23% (9/40)",
       "lesson": "通过率偏低，需收紧采集标准"
+    },
+    {
+      "date": "2026-10-13",
+      "type": "被拒案例",
+      "title": "Emergency help for Christa Pike was delayed by confusion after failed execution, 911 calls reveal - ",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry en源污染，死刑案件内容，零音乐相关性",
+      "summary": "被拒: Emergency help for Christa Pike was delayed by confusion after failed execution,",
+      "lesson": "避免采集此类素材: Google News Music Industry en源污染，死刑案件内容，零音乐相关性"
+    },
+    {
+      "date": "2026-10-13",
+      "type": "被拒案例",
+      "title": "7 homes red-tagged, 13 yellow-tagged in Capistrano Beach as high surf continues to batter OC coast -",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry en源污染，加州海浪房屋内容，零音乐相关性",
+      "summary": "被拒: 7 homes red-tagged, 13 yellow-tagged in Capistrano Beach as high surf continues ",
+      "lesson": "避免采集此类素材: Google News Music Industry en源污染，加州海浪房屋内容，零音乐相关性"
+    },
+    {
+      "date": "2026-10-13",
+      "type": "被拒案例",
+      "title": "Marin murder-suicide victim Ann Mannix remembered as SFPD pioneer: ‘She embraced the whole job’ - Sa",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry en源污染，旧金山凶杀案内容，零音乐相关性",
+      "summary": "被拒: Marin murder-suicide victim Ann Mannix remembered as SFPD pioneer: ‘She embraced",
+      "lesson": "避免采集此类素材: Google News Music Industry en源污染，旧金山凶杀案内容，零音乐相关性"
+    },
+    {
+      "date": "2026-10-13",
+      "type": "被拒案例",
+      "title": "Judge blasts Trump's DOJ over 'inexcusable' tree removal at DC golf course - Reuters",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry en源污染，DC高尔夫球场内容，零音乐相关性",
+      "summary": "被拒: Judge blasts Trump's DOJ over 'inexcusable' tree removal at DC golf course - Reu",
+      "lesson": "避免采集此类素材: Google News Music Industry en源污染，DC高尔夫球场内容，零音乐相关性"
+    },
+    {
+      "date": "2026-10-13",
+      "type": "被拒案例",
+      "title": "Government spent $10 million on pro-Trump ads after president said super PAC would fund - NPR",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry en源污染，政府广告支出内容，零音乐相关性",
+      "summary": "被拒: Government spent $10 million on pro-Trump ads after president said super PAC wou",
+      "lesson": "避免采集此类素材: Google News Music Industry en源污染，政府广告支出内容，零音乐相关性"
+    },
+    {
+      "date": "2026-10-13",
+      "type": "标杆案例",
+      "title": "【ライブレポート】マザリ、東名阪バンドセットツアー＜呪奏巡業 -獄彩-＞「素敵な景色、素敵な思い出、恨み、憎しみ、すべてを込めて私たちと一緒に歩んでいきましょう」",
+      "source": "BARKS",
+      "summary": "通过: 【ライブレポート】マザリ、東名阪バンドセットツアー＜呪奏巡業 -獄彩-＞「素敵な景色、素敵な思い出、恨み、憎しみ、すべてを込めて私たちと一緒に歩んでいきましょう",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-13",
+      "type": "标杆案例",
+      "title": "セントチヒロ・チッチ、映画主題歌に新曲「しろいからだ」が決定",
+      "source": "BARKS",
+      "summary": "通过: セントチヒロ・チッチ、映画主題歌に新曲「しろいからだ」が決定",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-13",
+      "type": "标杆案例",
+      "title": "UNISON SQUARE GARDEN、活動休止前ラストライブを収録した映像作品『Sentimental Period』の詳細発表",
+      "source": "BARKS",
+      "summary": "通过: UNISON SQUARE GARDEN、活動休止前ラストライブを収録した映像作品『Sentimental Period』の詳細発表",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-13",
+      "type": "标杆案例",
+      "title": "Hump Back、ミニAL『やわらかな洞窟』トレーラー映像解禁＆「橙光」MV明日公開",
+      "source": "BARKS",
+      "summary": "通过: Hump Back、ミニAL『やわらかな洞窟』トレーラー映像解禁＆「橙光」MV明日公開",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-13",
+      "type": "标杆案例",
+      "title": "くるり、全30公演を巡るツアー開催決定。フェイスミュージックエンタテインメントへ移籍発表も",
+      "source": "BARKS",
+      "summary": "通过: くるり、全30公演を巡るツアー開催決定。フェイスミュージックエンタテインメントへ移籍発表も",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-13",
+      "type": "每日统计",
+      "summary": "今日通过率: 49% (39/80)",
+      "lesson": ""
     }
   ],
   "selfReview": {
