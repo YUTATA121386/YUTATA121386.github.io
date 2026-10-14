@@ -1,10 +1,10 @@
 # collection-rules.md - V2.4.42
-> 归档: 2026-10-13
+> 归档: 2026-10-14
 
 ---
 title: collection-rules
 version: V2.4.42
-updated: 2026-10-12
+updated: 2026-10-13
 outline: [2, 3]
 ---
 
@@ -1271,3 +1271,21 @@ Variety Music与Rolling Stone Music源存在大量与曲库行业无关的演出
 
 **五、规则冻结**
 本条款生效之日起，collection-rules.md不再新增任何源级黑名单相关条款。存量重复条款（V2.3.42~V2.5.1）一次性合并入本条，历史版本存档留查。
+
+## 配置层闭环单一收敛条款（新增于V2.5.3，替代V2.3.42~V2.5.2全部源级黑名单落地相关条款）
+
+**背景**：源级黑名单相关条款已重复十余条（V2.3.42~V2.5.2），『规则数量冻结条款』自身被重复新增5次以上，违反最少规则原则。本条款作为唯一有效条款，其余重复条款全部作废。
+
+**四项配置层动作（唯一清单，不再新增）**：
+1. Google News音乐产业zh源 + Music Industry en源：物理删除
+2. Billboard源：娱乐花絮过滤词写入（Ranked/New Music Friday Guide/medical emergency/Kids Choice/SNL/setlist/Where to Watch/政治八卦）
+3. Music Ally源：games/gaming子栏目禁用
+4. NME源：games子路径禁用
+
+**责任主体与执行方式**：
+- 采集师无配置层权限时，由记忆管理师在本条款触发后1个消息窗口期内代为执行，执行后公示截图。
+- 记忆管理师须同时交付四要素：①操作路径说明 ②截图工具名称 ③回执模板 ④截止时间。
+
+**强制闭环**：广播→时限→截图回执→验证。任一环节缺失，视为条款未落地，按credit_score_system.md『规则守护者配置层落地闭环问责条款』执行。
+
+**规则数量冻结**：本条款生效后，collection-rules.md源级黑名单相关章节不得再新增，仅可修订本条款。

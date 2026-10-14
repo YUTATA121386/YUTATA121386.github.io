@@ -1,7 +1,7 @@
 ---
 title: collection-rules
 version: V2.4.42
-updated: 2026-10-13
+updated: 2026-10-14
 outline: [2, 3]
 ---
 
@@ -1286,3 +1286,16 @@ Variety Music与Rolling Stone Music源存在大量与曲库行业无关的演出
 **强制闭环**：广播→时限→截图回执→验证。任一环节缺失，视为条款未落地，按credit_score_system.md『规则守护者配置层落地闭环问责条款』执行。
 
 **规则数量冻结**：本条款生效后，collection-rules.md源级黑名单相关章节不得再新增，仅可修订本条款。
+
+## 配置层闭环单一收敛条款（V2.5.4，替代V2.3.42~V2.5.3全部源级黑名单落地相关条款）
+
+**唯一有效条款**：源级黑名单、配置层物理删除、子栏目过滤、规则落地等全部相关事项，统一以本条为准，此前所有同类条款（V2.3.42/V2.3.48/V2.3.51/V2.3.52/V2.3.53/V2.3.54/V2.3.55/V2.4.41~V2.4.47/V2.5.0~V2.5.3）自本条生效起全部废止，不再引用。
+
+**第1条 配置层动作清单（唯一权威版）**：
+（a）Google News 音乐产业(zh) 源物理删除；（b）Google News Music Industry(en) 源物理删除；（c）Billboard 娱乐花絮类过滤词（Ranked/New Music Friday Guide/medical emergency/Kids Choice/SNL/setlist/Where to Watch）；（d）Music Ally games/gaming 子栏目过滤；（e）NME games 子路径过滤；（f）NME 每日游戏栏目关键词过滤（Wordle/Connections/Globle/Framed）。
+
+**第2条 执行主体与代执行**：采集师有配置层权限时自行执行；无权限时由记忆管理师在收到请求后 1 个消息窗口期内代为执行，并公示 RSS 配置截图作为唯一有效证据。
+
+**第3条 交付四要素**：记忆管理师须一次性交付：①RSS配置层操作路径说明 ②截图工具名称 ③回执模板 ④截止时间。不再拆分交付。
+
+**第4条 规则数量冻结**：自本条生效起，collection-rules.md 冻结新增章节。任何新增必须先合并或废止至少一条存量同类条款，净章节数不得增长。

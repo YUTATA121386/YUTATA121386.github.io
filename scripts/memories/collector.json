@@ -6,7 +6,7 @@
   },
   "relationships": {
     "verifier": {
-      "trust": 84,
+      "trust": 88,
       "trend": "improving",
       "history": [
         {
@@ -498,6 +498,11 @@
           "date": "2026-10-13",
           "event": "合作 7次",
           "trustDelta": 6
+        },
+        {
+          "date": "2026-10-14",
+          "event": "合作 10次",
+          "trustDelta": 4
         }
       ],
       "summary": "关系良好"
@@ -1269,103 +1274,17 @@
           "date": "2026-10-13",
           "event": "合作 2次",
           "trustDelta": 2
+        },
+        {
+          "date": "2026-10-14",
+          "event": "合作 2次",
+          "trustDelta": 2
         }
       ],
       "summary": "关系良好"
     }
   },
   "experiences": [
-    {
-      "date": "2026-10-09",
-      "type": "标杆案例",
-      "title": "Teenage Engineering to stop making synths – but what does it mean for the future of the cult brand?",
-      "source": "MusicTech",
-      "summary": "通过: Teenage Engineering to stop making synths – but what does it mean for the future",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-09",
-      "type": "标杆案例",
-      "title": "The best new music plugins this week, free and paid",
-      "source": "MusicTech",
-      "summary": "通过: The best new music plugins this week, free and paid",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-09",
-      "type": "标杆案例",
-      "title": "The perfect snare sound is the holy grail – and Kaelin Ellis thinks he’s found it",
-      "source": "MusicTech",
-      "summary": "通过: The perfect snare sound is the holy grail – and Kaelin Ellis thinks he’s found i",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-09",
-      "type": "标杆案例",
-      "title": "Step aside Sonos – JBL’s new Cove line offers a new solution to multi-room listening",
-      "source": "MusicTech",
-      "summary": "通过: Step aside Sonos – JBL’s new Cove line offers a new solution to multi-room liste",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-09",
-      "type": "标杆案例",
-      "title": "Why festivals are booking hi-fi sound systems on their lineups",
-      "source": "MusicTech",
-      "summary": "通过: Why festivals are booking hi-fi sound systems on their lineups",
-      "lesson": "此类素材值得采集: 命中关键词 "
-    },
-    {
-      "date": "2026-10-09",
-      "type": "每日统计",
-      "summary": "今日通过率: 63% (50/80)",
-      "lesson": "通过率良好，保持当前标准"
-    },
-    {
-      "date": "2026-10-10",
-      "type": "被拒案例",
-      "title": "3 men found guilty of killing American and Australian brothers on surfing trip in Mexico - CBS News",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry(en)源，墨西哥冲浪游客凶杀案，非音乐内容",
-      "summary": "被拒: 3 men found guilty of killing American and Australian brothers on surfing trip i",
-      "lesson": "避免采集此类素材: Google News Music Industry(en)源，墨西哥冲浪游客凶杀案，非音乐内容"
-    },
-    {
-      "date": "2026-10-10",
-      "type": "被拒案例",
-      "title": "Trump hits International Criminal Court with sanctions after Nobel goes to former judge - The Washin",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry(en)源，特朗普制裁ICC/诺贝尔奖新闻，非音乐内容",
-      "summary": "被拒: Trump hits International Criminal Court with sanctions after Nobel goes to forme",
-      "lesson": "避免采集此类素材: Google News Music Industry(en)源，特朗普制裁ICC/诺贝尔奖新闻，非音乐内容"
-    },
-    {
-      "date": "2026-10-10",
-      "type": "被拒案例",
-      "title": "DHS officials defend their actions in shooting of NYC immigrant amid outcry - NBC News",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry(en)源，DHS枪击移民事件新闻，非音乐内容",
-      "summary": "被拒: DHS officials defend their actions in shooting of NYC immigrant amid outcry - NB",
-      "lesson": "避免采集此类素材: Google News Music Industry(en)源，DHS枪击移民事件新闻，非音乐内容"
-    },
-    {
-      "date": "2026-10-10",
-      "type": "被拒案例",
-      "title": "Trump boosts a New York ally in a tough race - Politico",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry(en)源，纽约选举政治新闻，非音乐内容",
-      "summary": "被拒: Trump boosts a New York ally in a tough race - Politico",
-      "lesson": "避免采集此类素材: Google News Music Industry(en)源，纽约选举政治新闻，非音乐内容"
-    },
-    {
-      "date": "2026-10-10",
-      "type": "被拒案例",
-      "title": "Donor Says Kimberly Guilfoyle Sought Money From Him to Cover Debt - The New York Times",
-      "source": "Google News Music Industry",
-      "reason": "Google News Music Industry(en)源，Kimberly Guilfoyle捐款债务新闻，非音乐内容",
-      "summary": "被拒: Donor Says Kimberly Guilfoyle Sought Money From Him to Cover Debt - The New York",
-      "lesson": "避免采集此类素材: Google News Music Industry(en)源，Kimberly Guilfoyle捐款债务新闻，非音乐内容"
-    },
     {
       "date": "2026-10-10",
       "type": "标杆案例",
@@ -1683,6 +1602,97 @@
       "date": "2026-10-13",
       "type": "每日统计",
       "summary": "今日通过率: 49% (39/80)",
+      "lesson": ""
+    },
+    {
+      "date": "2026-10-14",
+      "type": "被拒案例",
+      "title": "Man who died after being ‘ejected’ from Goliath coaster at Six Flags Over Georgia was cherished teac",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染——Six Flags过山车事故新闻，社会新闻非音乐内容。",
+      "summary": "被拒: Man who died after being ‘ejected’ from Goliath coaster at Six Flags Over Georgi",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染——Six Flags过山车事故新闻，社会新闻非音乐内容。"
+    },
+    {
+      "date": "2026-10-14",
+      "type": "被拒案例",
+      "title": "Cornell suspends fraternity parties, gives state police role in investigating campus assault reports",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染——康奈尔大学兄弟会暂停新闻，校园社会新闻非音乐内容。",
+      "summary": "被拒: Cornell suspends fraternity parties, gives state police role in investigating ca",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染——康奈尔大学兄弟会暂停新闻，校园社会新闻非音乐内容。"
+    },
+    {
+      "date": "2026-10-14",
+      "type": "被拒案例",
+      "title": "'Not a USA deal': Trump downplays Russian diesel plan in the face of GOP criticism - Yahoo Finance",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染——特朗普俄罗斯柴油计划新闻，政治经济类非音乐内容。",
+      "summary": "被拒: 'Not a USA deal': Trump downplays Russian diesel plan in the face of GOP critici",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染——特朗普俄罗斯柴油计划新闻，政治经济类非音乐内容。"
+    },
+    {
+      "date": "2026-10-14",
+      "type": "被拒案例",
+      "title": "Trump officials now leaning against livestream of execution, sources say - CBS News",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染——死刑执行直播新闻，社会新闻非音乐内容。",
+      "summary": "被拒: Trump officials now leaning against livestream of execution, sources say - CBS N",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染——死刑执行直播新闻，社会新闻非音乐内容。"
+    },
+    {
+      "date": "2026-10-14",
+      "type": "被拒案例",
+      "title": "Commentary: Bass vs. Raman: Here's who won the L.A. mayoral debate - Los Angeles Times",
+      "source": "Google News Music Industry",
+      "reason": "Google News Music Industry源污染——洛杉矶市长辩论新闻，政治类非音乐内容。",
+      "summary": "被拒: Commentary: Bass vs. Raman: Here's who won the L.A. mayoral debate - Los Angeles",
+      "lesson": "避免采集此类素材: Google News Music Industry源污染——洛杉矶市长辩论新闻，政治类非音乐内容。"
+    },
+    {
+      "date": "2026-10-14",
+      "type": "标杆案例",
+      "title": "Don’t be fooled by the bland looks of Lewitt LW6 wireless studio headphones",
+      "source": "MusicTech",
+      "summary": "通过: Don’t be fooled by the bland looks of Lewitt LW6 wireless studio headphones",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-14",
+      "type": "标杆案例",
+      "title": "My Forever Studio: Caesar Edmunds already has a Forever Studio",
+      "source": "MusicTech",
+      "summary": "通过: My Forever Studio: Caesar Edmunds already has a Forever Studio",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-14",
+      "type": "标杆案例",
+      "title": "Man who made $8 million in AI streaming fraud scheme given 18-month prison sentence",
+      "source": "MusicTech",
+      "summary": "通过: Man who made $8 million in AI streaming fraud scheme given 18-month prison sente",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-14",
+      "type": "标杆案例",
+      "title": "No, Kenneth Blume won’t stay in his lane",
+      "source": "MusicTech",
+      "summary": "通过: No, Kenneth Blume won’t stay in his lane",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-14",
+      "type": "标杆案例",
+      "title": "【インタビュー】KiiiKiii、初の日本ワンマン直前に語る「素晴らしい音楽とコンセプトを持って活動できることがとても幸せ」",
+      "source": "BARKS",
+      "summary": "通过: 【インタビュー】KiiiKiii、初の日本ワンマン直前に語る「素晴らしい音楽とコンセプトを持って活動できることがとても幸せ」",
+      "lesson": "此类素材值得采集: 命中关键词 "
+    },
+    {
+      "date": "2026-10-14",
+      "type": "每日统计",
+      "summary": "今日通过率: 51% (41/80)",
       "lesson": ""
     }
   ],
